@@ -1,7 +1,9 @@
+@import "./variable.module.scss";
+
 .header{
     width: 100vw;
     height: 20vh;
-    background-color: green;
+    background-color: $primary__color;
 
     &:hover{
         background-color: red;
