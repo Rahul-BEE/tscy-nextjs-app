@@ -1,11 +1,87 @@
 @import "./variable.module.scss";
 
-.header{
-    width: 100vw;
-    height: 20vh;
-    background-color: $primary__color;
+.app__header {
+  background-color: transparent;
+  color: $primary__color;
+  padding: 3.125rem 6.25rem;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.25) 50.13%, rgba(217, 217, 217, 0) 100%);
+  @media(max-width:745px){
+    padding:  1rem 0.5rem;
+  }
+}
 
-    &:hover{
-        background-color: red;
+.app__header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  span span img{
+    min-width: 140px;
+    min-height: 60px;
+  }
+  button{
+    width: fit-content;
+    padding: 0.1rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color:$primary__button_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    
+  }
+  @media(max-width:745px){
+    gap:0.5rem;
+
+  }
+}
+
+.app__header_middle {
+  min-width: 50%;
+  margin: 0 3rem;
+  ul {
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4rem;
+    margin: 0;
+
+    li a {
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+      font-weight: 400;
+      letter-spacing: 1px;
     }
+  }
+}
+
+.app__header_left {
+  button {
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: .3rem 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    @media(max-width:745px){
+      padding: 0.2rem 0.6rem ;
+      font-size: 0.8rem;
+      
+    }
+  }
 }
