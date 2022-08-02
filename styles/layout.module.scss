@@ -1,0 +1,9 @@
+.header{
+    width: 100vw;
+    height: 20vh;
+    background-color: green;
+
+    &:hover{
+        background-color: red;
+    }
+}

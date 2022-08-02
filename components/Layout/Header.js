@@ -1,9 +1,7 @@
-import styles from "../../styles/layout.module.css"
+import styles from "../../styles/layout.module.scss";
 
 const Header = () => {
-  return (
-    <div className={styles.header}>header</div>
-  )
-}
+  return <div className={styles.header}>header</div>;
+};
 
-export default Header
+export default Header;

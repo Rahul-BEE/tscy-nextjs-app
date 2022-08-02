@@ -1,10 +1,7 @@
-import styles from "../../styles/layout.module.css"
-
+import styles from "../../styles/layout.module.scss";
 
 const Footer = () => {
-  return (
-    <div className={`${styles.footer}`}>Footer</div>
-  )
-}
+  return <div className={`${styles.footer}`}>Footer</div>;
+};
 
-export default Footer
+export default Footer;
