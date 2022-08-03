@@ -9,7 +9,8 @@ function Footer() {
     <div>
       <div className={`${styles.footer}`}>
       <div className={styles.logo}>
-      <img src="/Logos/Group.png" alt="" />
+      <img src="/Logos/logo.png" alt="logo" />
+      <img src="/Logos/logotext.png" alt="" />
       </div>
         <div className={styles.items}>
 
