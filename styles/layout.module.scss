@@ -220,6 +220,40 @@
     display: block;
   }
 }
+// Accord
+
+.mobile_dropdown{
+
+  color: $font_color_gray;
+  justify-content: space-between;
+  background-color: transparent;
+
+  h4{
+    color: $font_color_gray;
+  }
+}
+.bg_transparent{
+  background-color: transparent !important;
+}
+
+.accord{
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin: 0 4%;
+
+  .accord_card{
+    border: none !important;
+    background-color: transparent;
+    padding: 20px 0;
+  }
+
+  .accord_card_body{
+    color: $font_color_gray;
+  }
+
+}
+
 
 @media (max-width: 1127px) {
   .box {
@@ -237,5 +271,23 @@
     input {
       width: 400px;
     }
+  }
+}
+
+@media (max-width:741px) {
+
+  .accord{
+    display: block;
+  }
+
+  .cards{
+    display: none;
+  }
+  .mobile_none{
+    display: none;
+  }
+  .footer_bottom{
+    justify-content: center;
+    text-align: center;
   }
 }
