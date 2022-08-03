@@ -1,9 +1,10 @@
 import styles from "../../styles/layout.module.scss";
 import Image from 'next/image'
-import {Container, Row,Col} from  "react-bootstrap"
+
 
 
 import React from 'react'
+import Accord from "./Accord";
 
 function Footer() {
   return (
@@ -64,6 +65,9 @@ function Footer() {
 
             </div>
           </div>
+
+                    {/* mobile viww */}
+                    <Accord />
           
           {/* copyright */}
           <div className={styles.footer_bottom}>
@@ -72,12 +76,15 @@ function Footer() {
               <p>&copy; Diamond Developers International Ltd. 2022</p>
             </div>
 
-            <div className={`flex`}>
+            <div className={`flex ${styles.mobile_none}` }>
               <h4>ENGLISH</h4>
               <h4>AED</h4>
             </div>
 
           </div>
+
+
+          <br />
 
         </div>
       </div>
