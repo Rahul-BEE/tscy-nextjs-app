@@ -1,7 +1,7 @@
 @import "./variable.module.scss";
 
 .app__header {
-  color: $primary__color;
+  color: $white__font_color;
   padding: 3.125rem 6.25rem;
   flex-wrap: nowrap;
   position: fixed;
@@ -16,6 +16,11 @@
   );
   @media (max-width: 1063px) {
     padding: 1rem 0.5rem;
+  }
+  .navbar__menubtn {
+    border: none;
+    box-shadow: none;
+    outline: none;
   }
 }
 

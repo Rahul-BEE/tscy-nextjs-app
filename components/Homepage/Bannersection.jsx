@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "../../styles/home.module.scss";
-
-const Bannersection = () => {
+import { motion } from "framer-motion";
+import Polygon from "../../public/Svg/Polygon.svg";
+const Bannersection = ({ banner }) => {
   return (
     <div className={styles.app__bannerSection}>
       <Image
@@ -10,14 +11,18 @@ const Bannersection = () => {
         objectFit="cover"
         objectPosition="50% 50%"
         quality={"100"}
+        priority
+        alt="The sustainable city image"
       />
-      <div className={styles.app__bannerSectionSubtraction}>
-        <img src={"/Svg/Subtract.svg"} />
-      </div>
+
+      <motion.div className={`${styles.app__banner_polygon1}`}>
+        <Polygon />
+      </motion.div>
+      <motion.div className={`${styles.app__banner_polygon2}`}>
+        <Polygon />
+      </motion.div>
     </div>
   );
 };
 
 export default Bannersection;
-
-export async function getStaticProps() {}

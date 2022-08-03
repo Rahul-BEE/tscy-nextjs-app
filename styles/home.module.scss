@@ -5,18 +5,36 @@
 .app__bannerSection {
   position: relative;
   width: 100vw;
-  height: 112vh;
-  .app__bannerSectionSubtraction {
+  height: 100vh;
+  overflow-x: hidden;
+  // .app__bannerSectionSubtraction {
+  //   position: absolute;
+  //   width: 100vw;
+  //   height: 100%;
+  //   left: 0;
+  //   bottom: -1px;
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: flex-end;
+  //   img {
+  //     width: 100%;
+  //   }
+  // }
+  .app__banner_polygon1 {
+    width: 25rem;
+    height: 25rem;
     position: absolute;
-    width: 100vw;
-    height: 100%;
-    left: 0;
-    bottom: -1px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    img {
-      width: 100%;
+    bottom: -7.625rem;
+    right: -5%;
+  }
+  .app__banner_polygon2 {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: -8.4375rem;
+    right: -8%;
+    svg path {
+      stroke: #e4e4e4 !important;
     }
   }
 }
