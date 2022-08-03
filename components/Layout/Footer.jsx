@@ -1,4 +1,5 @@
 import styles from "../../styles/layout.module.scss";
+import Image from 'next/image'
 import {Container, Row,Col} from  "react-bootstrap"
 
 
@@ -9,8 +10,9 @@ function Footer() {
     <div>
       <div className={`${styles.footer}`}>
       <div className={styles.logo}>
-      <img src="/Logos/logo.png" alt="logo" />
-      <img src="/Logos/logotext.png" alt="" />
+      <Image width={"123px"} height={"141px"} src="/Logos/logo.png" alt="logo" />
+      <Image width={"396px"} height={"60"} src="/Logos/logotext.png" alt="logotext" />
+
       </div>
         <div className={styles.items}>
           {/* top */}
@@ -67,12 +69,12 @@ function Footer() {
           
           {/* copyright */}
           <div className={styles.footer_bottom}>
-            <div className={styles.flex}>
+            <div className={`flex`}>
               <h4>Diamond Developers</h4>
               <p>&copy; Diamond Developers International Ltd. 2022</p>
             </div>
 
-            <div>
+            <div className={`flex`}>
               <h3>ENGLISH</h3>
               <h3>AED</h3>
             </div>

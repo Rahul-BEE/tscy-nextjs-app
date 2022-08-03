@@ -1,12 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-body{
-    font-family: 'Poppins', sans-serif;
-
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
 }
 
-button:not(:disabled){
-    color: white;
+// Scrollbar design and settings
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
 }
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+//Button Settings
+
+button,
+.btn {
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0.5rem 1.2rem;
+  gap: var(--gap, 0.5rem);
+  border: 1px solid white;
+  border: none;
+  box-shadow: none;
+}
+// list global styles
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    text-decoration: none;
+  }
+}
+
+// anchor global styles
+a {
+  text-decoration: none;
+  color: white;
+}
+
+// utility class
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--gap, 1rem);
+}
