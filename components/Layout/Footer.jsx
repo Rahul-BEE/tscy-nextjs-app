@@ -54,9 +54,7 @@ function Footer() {
             <div className={styles.newsletter}>
             <div className={styles.card}>
               <h3>Stay Updated</h3>
-              <ul>
-                <li>By Signing up to our newsletter</li>
-              </ul>
+              <p>By Signing up to our newsletter</p>
               <div>
               <input type="email" name="" id="" placeholder="Enter your email address" />
 
@@ -69,14 +67,14 @@ function Footer() {
           
           {/* copyright */}
           <div className={styles.footer_bottom}>
-            <div className={`flex`}>
+            <div className={`flex ${styles.bottom_items} `}>
               <h4>Diamond Developers</h4>
               <p>&copy; Diamond Developers International Ltd. 2022</p>
             </div>
 
             <div className={`flex`}>
-              <h3>ENGLISH</h3>
-              <h3>AED</h3>
+              <h4>ENGLISH</h4>
+              <h4>AED</h4>
             </div>
 
           </div>
