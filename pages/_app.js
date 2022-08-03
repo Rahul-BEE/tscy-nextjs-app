@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/scss/bootstrap.scss";
 import "../styles/globals.scss";
 import { Header, Footer } from "../components";
 function MyApp({ Component, pageProps }) {
