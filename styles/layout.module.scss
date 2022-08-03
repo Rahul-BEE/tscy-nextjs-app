@@ -14,7 +14,7 @@
     rgba(0, 0, 0, 0.25) 50.13%,
     rgba(217, 217, 217, 0) 100%
   );
-  @media (max-width: 991px) {
+  @media (max-width: 1063px) {
     padding: 1rem 0.5rem;
   }
 }
@@ -30,7 +30,7 @@
     @media (max-width: 500px) {
       min-width: 100px;
       min-height: 45px;
-      max-height: 45px;
+      max-height: 60px;
       max-width: 100px;
     }
   }
@@ -40,6 +40,7 @@
     color: $primary__button_color;
     background-color: white;
     margin-inline: 2%;
+    margin-right: 5%;
     width: 100px;
     height: 35px;
     @media (max-width: 500px) {
@@ -69,7 +70,7 @@
       letter-spacing: 1px;
     }
     @media (max-width: 1200px) {
-      gap: 2.5rem;
+      gap: 2rem;
     }
   }
 }
@@ -80,8 +81,7 @@
     border-radius: 25px;
     padding-inline: 1.8rem;
     white-space: nowrap;
-    margin-right: 5%;
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       display: none;
     }
   }
@@ -92,8 +92,8 @@
   padding-inline: 1.5rem;
   color: $primary__button_color;
   background-color: white;
-  width: 50px;
-  height: 20px;
+  width: 60px;
+  height: 30px;
   @media (min-width: 500px) {
     display: none;
   }

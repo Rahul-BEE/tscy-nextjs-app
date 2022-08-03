@@ -3,6 +3,7 @@ import { BiChevronRightCircle, BiMenuAltLeft } from "react-icons/bi";
 import Image from "next/image";
 import { english } from "../../utils/data";
 import Link from "next/link";
+import MobileMenu from "../MobilemenuModal";
 const Header = () => {
   return (
     <header className={`${styles.app__header} navbar navbar-expand-lg`}>
@@ -15,7 +16,7 @@ const Header = () => {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation">
-          <BiMenuAltLeft color="white" />
+          <BiMenuAltLeft color="white" size={35} className="me-3" />
         </button>
         <div className={`${styles.app__header_right} flex`}>
           <Image src="/Logos/tsc-logo-white.svg" width={180} height={80} />
