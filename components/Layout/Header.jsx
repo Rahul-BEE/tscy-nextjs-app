@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header className={`${styles.app__header} navbar navbar-expand-lg`}>
-      <div className="container-fluid">
+      <div className="container-fluid mx-2">
         <button
           className="navbar-toggler"
           type="button"
