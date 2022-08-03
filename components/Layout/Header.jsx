@@ -6,6 +6,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <nav className={`${styles.app__header} navbar navbar-expand-lg`}>
+      <div className="container-fluid">
       <button
         className="navbar-toggler"
         type="button"
@@ -40,6 +41,10 @@ const Header = () => {
             <BiChevronRightCircle />
         </button>
       </div>
+
+      </div>
+
+
     </nav>
   );
 };
