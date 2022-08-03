@@ -105,9 +105,80 @@
 }
 
 .items{
-    height: 300px;
-    clip-path: polygon(0 35%, 50% 0, 100% 35%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 100px, 50% 0, 100% 100px, 100% 100%, 0% 100%);
+    // clip-path: polygon(0 35%, 50% 0, 100% 35%, 100% 100%, 0% 100%);
     background: $footer_bg;
 
+}
+.box{
+  padding-top: 200px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  color: $font_color_gray;
+  overflow: hidden;
+  padding-bottom: 200px;
+  // margin: 0 auto;
+  border-bottom: 1px solid black;
 
+
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.card{
+  flex: 0 1 1 150px;
+  margin: 0 5%;
+  text-align: left;
+
+  ul{
+    list-style: none;
+    padding: 0;
+
+    li{
+      margin: 10px 0;
+    }
+    
+  }
+}
+
+.newsletter{
+
+  input{
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+
+    height: 56px;
+    border: 1px solid $font_color_gray;
+    border-radius: 6px;
+    padding: 13px 30px;
+  }
+}
+
+
+@media (max-width:1127px) {
+
+  .box{
+    grid-template-columns: 100%;
+  }
+  .newsletter{
+    display: grid;
+    place-items: center;
+    margin-top: 70px;
+
+    .card{
+      text-align: center;
+    }
+
+    input{
+      width: 400px;
+
+    }
+  }
+  
 }
