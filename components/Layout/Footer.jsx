@@ -1,5 +1,5 @@
 import styles from "../../styles/layout.module.scss";
-
+import {Container, Row,Col} from  "react-bootstrap"
 
 
 import React from 'react'
@@ -13,6 +13,7 @@ function Footer() {
       <img src="/Logos/logotext.png" alt="" />
       </div>
         <div className={styles.items}>
+          {/* top */}
           <div className={styles.box}>
             <div className={styles.cards}>
 
@@ -62,7 +63,21 @@ function Footer() {
             </div>
 
             </div>
-        </div>
+          </div>
+          
+          {/* copyright */}
+          <div className={styles.footer_bottom}>
+            <div className={styles.flex}>
+              <h4>Diamond Developers</h4>
+              <p>&copy; Diamond Developers International Ltd. 2022</p>
+            </div>
+
+            <div>
+              <h3>ENGLISH</h3>
+              <h3>AED</h3>
+            </div>
+
+          </div>
 
         </div>
       </div>

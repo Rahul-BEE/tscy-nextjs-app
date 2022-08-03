@@ -113,11 +113,11 @@
 .box{
   padding-top: 200px;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
   color: $font_color_gray;
   overflow: hidden;
-  padding-bottom: 200px;
-  // margin: 0 auto;
+  padding-bottom: 40px;
+  margin: 0 10%;
   border-bottom: 1px solid black;
 
 
@@ -126,13 +126,14 @@
 .cards{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 
 }
 
 .card{
   flex: 0 1 1 150px;
-  margin: 0 5%;
+  // margin: 0 5%;
+  margin-right: auto;
   text-align: left;
 
   ul{
@@ -148,9 +149,11 @@
 
 .newsletter{
 
+  .card{
+    margin: 0 0 0 20px;
+  }
   input{
     min-width: 300px;
-    max-width: 400px;
     width: 100%;
 
     height: 56px;
@@ -158,6 +161,17 @@
     border-radius: 6px;
     padding: 13px 30px;
   }
+}
+// bottom text
+.footer_bottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+  color: $font_color_gray;
+}
+
+.flex{
+  display: flex;
 }
 
 
