@@ -9,3 +9,24 @@
         background-color: red;
     }
 }
+
+
+.footer{
+    position: relative;
+    margin-top: 50px;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    text-align: center;
+}
+
+.items{
+    height: 300px;
+    clip-path: polygon(0 35%, 50% 0, 100% 35%, 100% 100%, 0% 100%);
+    background-color: aquamarine;
+}
