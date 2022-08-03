@@ -15,12 +15,12 @@ const Bannersection = ({ banner }) => {
         alt="The sustainable city image"
       />
 
-      <motion.div className={`${styles.app__banner_polygon1}`}>
+      <div className={`${styles.app__banner_polygon1}`}>
+        <Image src={"/Svg/Polygon.svg"} layout="fill" priority />
+      </div>
+      <div className={`${styles.app__banner_polygon2}`}>
         <Polygon />
-      </motion.div>
-      <motion.div className={`${styles.app__banner_polygon2}`}>
-        <Polygon />
-      </motion.div>
+      </div>
     </div>
   );
 };
