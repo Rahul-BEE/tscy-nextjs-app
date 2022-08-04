@@ -127,10 +127,17 @@
   z-index: 1;
   transform: translate(-50%, -50%);
   width: 100%;
-  min-width: 350px;
-  max-width: 400px;
+  min-width: 200px;
+  max-width: 350px;
   text-align: center;
   margin-top: 30px;
+
+  @media (max-width:600px) {
+    max-width: 300px;
+    
+  }
+
+
 
 }
 
@@ -142,7 +149,7 @@
   overflow: hidden;
   padding-bottom: 40px;
   margin: 0 10%;
-  border-bottom: 1px solid $font_color_gray;
+  border-bottom: 1px solid $font_color_gray_light;
 
   @media (max-width: 1360px) {
     margin: 0 4%;
@@ -203,6 +210,10 @@
     padding: 13px 30px;
     background-color: transparent;
     opacity: 0.5;
+
+    @media (min-width:1300px) {
+        width: 400px;
+    }
   }
 }
 
@@ -270,9 +281,13 @@
 
   .accord_card_body{
     color: $font_color_gray;
+    text-align: center;
   }
 
 }
+
+
+
 
 
 @media (max-width: 1127px) {
@@ -288,9 +303,7 @@
       text-align: center;
     }
 
-    input {
-      width: 400px;
-    }
+
   }
 }
 
