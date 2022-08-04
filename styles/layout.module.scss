@@ -32,6 +32,7 @@
     min-width: 170px;
     min-height: 60px;
     margin-inline: 2%;
+    transition: all 0.5s ease-in-out;
     @media (max-width: 500px) {
       min-width: 100px;
       min-height: 45px;
@@ -48,14 +49,14 @@
     margin-right: 5%;
     width: 100px;
     height: 35px;
-    @media (max-width: 500px) {
+    @media (max-width: 610px) {
       display: none;
     }
   }
   @media (max-width: 991px) {
     flex: 1;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 610px) {
     flex: unset;
   }
 }
@@ -86,7 +87,7 @@
     border-radius: 25px;
     padding-inline: 1.8rem;
     white-space: nowrap;
-    @media (max-width: 600px) {
+    @media (max-width: 610px) {
       display: none;
     }
   }
@@ -99,7 +100,7 @@
   background-color: white;
   width: 60px;
   height: 30px;
-  @media (min-width: 500px) {
+  @media (min-width: 610px) {
     display: none;
   }
 }
@@ -110,8 +111,6 @@
   position: relative;
   margin-top: 50px;
 }
-
-
 
 .items {
   clip-path: polygon(0 100px, 50% 0, 100% 100px, 100% 100%, 0% 100%);
@@ -131,7 +130,6 @@
   max-width: 400px;
   text-align: center;
   margin-top: 30px;
-
 }
 
 .box {
@@ -206,10 +204,10 @@
   }
 }
 
-.newsletter_box{
+.newsletter_box {
   position: relative;
-  
-  span{
+
+  span {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -242,38 +240,35 @@
 }
 // Accord
 
-.mobile_dropdown{
-
+.mobile_dropdown {
   color: $font_color_gray;
   justify-content: space-between;
   background-color: transparent;
 
-  h4{
+  h4 {
     color: $font_color_gray;
   }
 }
-.bg_transparent{
+.bg_transparent {
   background-color: transparent !important;
 }
 
-.accord{
+.accord {
   display: none;
   border: none;
   background-color: transparent;
   margin: 0 4%;
 
-  .accord_card{
+  .accord_card {
     border: none !important;
     background-color: transparent;
     padding: 20px 0;
   }
 
-  .accord_card_body{
+  .accord_card_body {
     color: $font_color_gray;
   }
-
 }
-
 
 @media (max-width: 1127px) {
   .box {
@@ -294,19 +289,18 @@
   }
 }
 
-@media (max-width:741px) {
-
-  .accord{
+@media (max-width: 741px) {
+  .accord {
     display: block;
   }
 
-  .cards{
+  .cards {
     display: none;
   }
-  .mobile_none{
+  .mobile_none {
     display: none;
   }
-  .footer_bottom{
+  .footer_bottom {
     justify-content: center;
     text-align: center;
   }
