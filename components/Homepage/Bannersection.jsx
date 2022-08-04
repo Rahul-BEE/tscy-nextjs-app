@@ -6,7 +6,7 @@ const Bannersection = ({ banner }) => {
   return (
     <div className={styles.app__bannerSection}>
       <Image
-        src="/Images/map-pic.png"
+        src="/Images/map-pic.jpg"
         layout="fill"
         objectFit="cover"
         objectPosition="50% 50%"
@@ -15,12 +15,28 @@ const Bannersection = ({ banner }) => {
         alt="The sustainable city image"
       />
 
-      <div className={`${styles.app__banner_polygon1}`}>
+      <motion.div
+        className={`${styles.app__banner_polygon1}`}
+        animate={{ y: [10, 0, 10] }}
+        transition={{
+          type: "spring",
+          stiffness: 10,
+          repeat: Infinity,
+          duration: 2,
+        }}>
         <Image src={"/Svg/Polygon.svg"} layout="fill" priority />
-      </div>
-      <div className={`${styles.app__banner_polygon2}`}>
+      </motion.div>
+      <motion.div
+        className={`${styles.app__banner_polygon2}`}
+        animate={{ y: [10, 0, 10] }}
+        transition={{
+          type: "spring",
+          stiffness: 10,
+          repeat: Infinity,
+          duration: 2,
+        }}>
         <Polygon />
-      </div>
+      </motion.div>
     </div>
   );
 };
