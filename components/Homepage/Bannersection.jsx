@@ -21,7 +21,7 @@ const Bannersection = ({ banner }) => {
         navigation
         speed={800}
         loop
-        pagination={customPagination}
+        pagination={{ clickable: true }}
         className={styles.app__bannerswiper}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}>
