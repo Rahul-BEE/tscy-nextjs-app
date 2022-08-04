@@ -10,18 +10,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 
 const Bannersection = ({ banner }) => {
   return (
     <div className={styles.app__bannerSection}>
       <Swiper
-        modules={[Pagination, A11y]}
+        modules={[Pagination]}
         slidesPerView={1}
         navigation
         speed={800}
         loop
-        pagination={customPagination}
+        pagination={{
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '"><img class="pagination-bullet"/></span>'
+            );
+          },
+        }}
         className={styles.app__bannerswiper}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}>
