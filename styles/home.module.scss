@@ -1,26 +1,13 @@
 .app__home {
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .app__bannerSection {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  margin-bottom: 5rem;
-  // .app__bannerSectionSubtraction {
-  //   position: absolute;
-  //   width: 100vw;
-  //   height: 100%;
-  //   left: 0;
-  //   bottom: -1px;
-  //   display: flex;
-  //   justify-content: flex-start;
-  //   align-items: flex-end;
-  //   img {
-  //     width: 100%;
-  //   }
-  // }
   .app__banner_polygon1 {
     width: 25rem;
     height: 25rem;
