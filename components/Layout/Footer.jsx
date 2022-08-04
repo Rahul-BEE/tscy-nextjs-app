@@ -1,5 +1,6 @@
 import styles from "../../styles/layout.module.scss";
 import Image from 'next/image'
+import {IoIosArrowDroprightCircle} from 'react-icons/io'
 
 
 
@@ -10,12 +11,13 @@ function Footer() {
   return (
     <div>
       <div className={`${styles.footer}`}>
-      <div className={styles.logo}>
-      <Image width={"123px"} height={"141px"} src="/Logos/logo.png" alt="logo" />
-      <Image width={"396px"} height={"60"} src="/Logos/logotext.png" alt="logotext" />
+
+        <div className={styles.items}>
+        <div className={styles.logo}>
+      <Image width={"123px"} height={"141px"} src="/Logos/logo.png" alt="logo"  />
+      <Image width={"395px"} height={"60"} src="/Logos/logotext.png" alt="logotext" />
 
       </div>
-        <div className={styles.items}>
           {/* top */}
           <div className={styles.box}>
             <div className={styles.cards}>
@@ -56,8 +58,11 @@ function Footer() {
             <div className={styles.card}>
               <h3>Stay Updated</h3>
               <p>By Signing up to our newsletter</p>
-              <div>
+              <div className={styles.newsletter_box}>
               <input type="email" name="" id="" placeholder="Enter your email address" />
+              <span>
+                <IoIosArrowDroprightCircle />
+              </span>
 
               </div>
 

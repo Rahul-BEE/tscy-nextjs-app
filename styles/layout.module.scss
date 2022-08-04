@@ -111,23 +111,31 @@
   margin-top: 50px;
 }
 
-.logo {
-  position: absolute;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  text-align: center;
-  margin-top: 30px;
-}
+
 
 .items {
   clip-path: polygon(0 100px, 50% 0, 100% 100px, 100% 100%, 0% 100%);
   // clip-path: polygon(0 35%, 50% 0, 100% 35%, 100% 100%, 0% 100%);
   background: $footer_bg;
+  position: relative;
 }
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-width: 350px;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
 .box {
-  padding-top: 200px;
+  padding-top: 300px;
   display: grid;
   grid-template-columns: 70% 30%;
   color: $font_color_gray;
@@ -195,6 +203,18 @@
     padding: 13px 30px;
     background-color: transparent;
     opacity: 0.5;
+  }
+}
+
+.newsletter_box{
+  position: relative;
+  
+  span{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: $fs_300;
+    opacity: 0.6;
   }
 }
 // bottom text
