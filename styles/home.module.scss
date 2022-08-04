@@ -8,19 +8,66 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  .app__banner_polygon1 {
-    width: 25rem;
-    height: 25rem;
-    position: absolute;
-    bottom: -7.625rem;
-    right: -5%;
+  .app__bannerswiper {
+    width: 100%;
+    height: 100%;
+    .app__bannerswiperslide {
+      width: 100%;
+      height: 100%;
+      .app__slider_overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.15)
+        );
+      }
+      .app__bannerslidecontent {
+        color: white;
+        letter-spacing: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 77.9037px rgba(0, 0, 0, 0.83);
+        h1 {
+          font-size: 3rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+    .swiper-pagination {
+      position: absolute;
+      top: "50%";
+      left: "50%";
+      transform: translate(-50%, -50%);
+    }
   }
-  .app__banner_polygon2 {
+  .app__banner_polygon1 {
     width: 20rem;
     height: 20rem;
     position: absolute;
-    bottom: -8.4375rem;
-    right: -8%;
+    bottom: -6rem;
+    right: -3%;
+    z-index: 2;
+    @media (max-width: 992px) {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+  .app__banner_polygon2 {
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: -7rem;
+    right: -3%;
+    z-index: 2;
     svg path {
       stroke: #e4e4e4 !important;
     }
