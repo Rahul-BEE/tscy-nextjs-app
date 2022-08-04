@@ -1,8 +1,6 @@
 const SustainableFeatures = () => {
   return (
-    <div
-      style={{ height: "100vh", color: "black", backgroundColor: "green" }}
-      className="flex">
+    <div style={{ height: "100vh", color: "black" }} className="flex">
       SustainableFeatures
     </div>
   );

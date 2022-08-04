@@ -72,6 +72,14 @@
           text-align: left;
           white-space: unset;
         }
+        @media (max-width: 610px) {
+          top: 85%;
+          left: 5%;
+          transform: none;
+          z-index: 2;
+          text-align: left;
+          white-space: unset;
+        }
       }
     }
   }
@@ -93,6 +101,9 @@
       height: 210px;
       bottom: -3rem;
     }
+    @media (max-width: 400px) {
+      right: -20%;
+    }
   }
   .app__banner_polygon2 {
     position: absolute;
@@ -111,6 +122,9 @@
       width: 210px;
       height: 210px;
       bottom: -5rem;
+    }
+    @media (max-width: 400px) {
+      right: -30%;
     }
   }
 }
