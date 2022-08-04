@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/home.module.scss";
 import { motion } from "framer-motion";
-import Polygon from "../../public/Svg/Polygon.svg";
 
 // import Swiper core and required modules
 import { Pagination, A11y } from "swiper";
@@ -108,7 +107,11 @@ const Bannersection = ({ banner }) => {
           repeat: Infinity,
           duration: 2,
         }}>
-        <Polygon />
+        <Image
+          src={"/Svg/Polygon.svg"}
+          alt="The Sustainable Villas Yiti"
+          layout="fill"
+        />
       </motion.div>
       <motion.div
         className={`${styles.app__banner_polygon2}`}
@@ -119,7 +122,11 @@ const Bannersection = ({ banner }) => {
           repeat: Infinity,
           duration: 2,
         }}>
-        <Polygon />
+        <Image
+          src={"/Svg/Polygon2.svg"}
+          alt="The Sustainable Villas Yiti"
+          layout="fill"
+        />
       </motion.div>
     </div>
   );
