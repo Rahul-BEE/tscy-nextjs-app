@@ -8,6 +8,67 @@ import React from 'react'
 import Accord from "./Accord";
 
 function Footer() {
+
+
+  const cardlinksdata = [
+    {
+      title: 'About',
+      links:[
+        {
+          title: "what we do"
+        },
+        {
+          title: "Careers"
+        },
+        {
+          title: "Press and News"
+        },
+        {
+          title: "Life at a Glance"
+        },
+        {
+          title: "Villas at TSC"
+        }
+
+      ]
+    },
+    {
+      title: 'Support',
+      links:[
+        {
+          title: "Reach out to us"
+        },
+        {
+          title: "Become a Broker"
+        },
+        {
+          title: "Language Support"
+        },
+        {
+          title: "Help and Support"
+        }
+
+      ]
+    },
+    {
+      title: 'More from TSC',
+      links:[
+        {
+          title: "About Us"
+        },
+        {
+          title: "TSC - Dubai"
+        },
+        {
+          title: "TSC - Sharjah"
+        },
+        {
+          title: "Villas at TSC"
+        }
+
+      ]
+    }
+  ]
   return (
     <div>
       <div className={`${styles.footer}`}>
@@ -19,39 +80,24 @@ function Footer() {
 
       </div>
           {/* top */}
+
+
+
           <div className={styles.box}>
             <div className={styles.cards}>
 
-            <div className={styles.card}>
-              <h3>About</h3>
-              <ul>
-                <li>what we do</li>
-                <li>Careers</li>
-                <li>Press and News</li>
-                <li>Life at a Glance</li>
-                <li>Villas at TSC</li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <h3>Support</h3>
-              <ul>
-                <li>Reach out to us</li>
-                <li>Become a Broker</li>
-                <li>Language Support</li>
-                <li>Language Support</li>
-                <li>Help and Support</li>
-              </ul>
-            </div>
-            <div className={styles.card}>
-              <h3>More from TSC</h3>
-              <ul>
-                <li>About Us</li>
-                <li>TSC - Dubai</li>
-                <li>TSC - Sharjah</li>
-                <li>Villas at TSC</li>
+            {cardlinksdata.map((e,key)=>(
+                          <div className={styles.card}>
+                          <h3>{e.title}</h3>
+                          <ul>
+                            {e.links.map((value,index)=>(
+                            <li>{value.title}</li>
 
-              </ul>
-            </div>
+                            ))}
+                          </ul>
+                        </div>
+          ))}
+
 
             </div>
             <div className={styles.newsletter}>
@@ -72,7 +118,7 @@ function Footer() {
           </div>
 
                     {/* mobile viww */}
-                    <Accord />
+                    <Accord data={cardlinksdata}/>
           
           {/* copyright */}
           <div className={styles.footer_bottom}>
