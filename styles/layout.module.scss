@@ -205,14 +205,13 @@
     background-color: transparent;
     opacity: 0.5;
 
-    @media (min-width: 1300px) {
-      width: 400px;
-    }
+
   }
 }
 
 .newsletter_box {
   position: relative;
+  max-width: 400px;
 
   span {
     position: absolute;
@@ -283,6 +282,7 @@
     grid-template-columns: 100%;
   }
   .newsletter {
+    width: 100%;
     display: grid;
     place-items: center;
     margin-top: 70px;
