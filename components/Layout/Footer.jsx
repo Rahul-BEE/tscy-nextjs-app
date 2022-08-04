@@ -14,7 +14,7 @@ function Footer() {
 
         <div className={styles.items}>
         <div className={styles.logo}>
-      <Image width={"123px"} height={"141px"} src="/Logos/logo.png" alt="logo"  />
+      <Image width={"100px"} height={"100px"} src="/Logos/logo.png" alt="logo"  />
       <Image width={"395px"} height={"60"} src="/Logos/logotext.png" alt="logotext" />
 
       </div>

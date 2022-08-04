@@ -132,6 +132,8 @@
   text-align: center;
   margin-top: 30px;
 
+
+
 }
 
 .box {
@@ -142,7 +144,7 @@
   overflow: hidden;
   padding-bottom: 40px;
   margin: 0 10%;
-  border-bottom: 1px solid $font_color_gray;
+  border-bottom: 1px solid $font_color_gray_light;
 
   @media (max-width: 1360px) {
     margin: 0 4%;
@@ -203,6 +205,10 @@
     padding: 13px 30px;
     background-color: transparent;
     opacity: 0.5;
+
+    @media (min-width:1300px) {
+        width: 400px;
+    }
   }
 }
 
@@ -270,9 +276,13 @@
 
   .accord_card_body{
     color: $font_color_gray;
+    text-align: center;
   }
 
 }
+
+
+
 
 
 @media (max-width: 1127px) {
@@ -288,9 +298,7 @@
       text-align: center;
     }
 
-    input {
-      width: 400px;
-    }
+
   }
 }
 
