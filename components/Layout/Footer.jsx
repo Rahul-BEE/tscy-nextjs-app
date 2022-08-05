@@ -89,7 +89,7 @@ function Footer() {
                   <h3>{e.title}</h3>
                   <ul>
                     {e.links.map((value, index) => (
-                      <li>{value.title}</li>
+                      <li key={`${index}_footer_list_links`}>{value.title}</li>
                     ))}
                   </ul>
                 </div>
