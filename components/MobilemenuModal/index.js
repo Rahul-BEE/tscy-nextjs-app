@@ -11,7 +11,6 @@ import Polygon from "../../public/Svg/menupolygon.svg";
 const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
   const lan = useLanguage();
   const router = useRouter();
-  console.log(currentLang);
   return (
     <Modal
       show={show}
@@ -92,15 +91,15 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                 </Col>
                 <Col />
               </Row>
-              <Row>
-                <Col className={styles.mobilemenu_languagecol}>
+              <Row className="flex justify-content-center">
+                <Col className={styles.mobilemenu_languagecol} md={6}>
                   <Button
                     className={
                       currentLang === "en"
                         ? styles.btnlangactive
                         : styles.btnlanginactive
                     }
-                    onClick={() => handleLang("ar")}>
+                    onClick={() => handleLang("en")}>
                     Hello
                   </Button>
                   <Button
