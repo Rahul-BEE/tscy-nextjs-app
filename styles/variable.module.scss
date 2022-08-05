@@ -4,13 +4,15 @@ $primary__color: black;
 $primary__button_color: #058da6;
 $white__font_color: #fff;
 $font_color_gray: #777777;
-$font_color_gray_light: rgba(119,119,119,0.2);
+$font_color_gray_light: rgba(119, 119, 119, 0.2);
 $footer_bg: #058da61a;
-
-$fs_1  : 1rem;
+$sectionsubheadingcolor: #c9c9c9;
+$sectionmainheadingbackground: linear-gradient(
+  90deg,
+  #058da6 -2.78%,
+  rgba(5, 141, 166, 0.3) 101.52%
+);
+$fs_1: 1rem;
 $fs_100: 0.6rem;
 $fs_200: 1.25rem;
 $fs_300: 1.5rem;
-
-
-
