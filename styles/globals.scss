@@ -73,7 +73,7 @@ a {
 
 .swiper-pagination {
   position: absolute;
-  bottom: 38%;
+  bottom: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -83,6 +83,9 @@ a {
   height: 15px;
   gap: 3px;
   padding: 1%;
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 .swiper-pagination-bullet > img {
   content: url("../public/Svg/swiperpolygon.png");
