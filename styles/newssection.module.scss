@@ -1,0 +1,52 @@
+@import "./variable.module.scss";
+
+.hero_newssection{
+    margin: 0 4%;
+    color: $font_color_gray;
+}
+
+.hero_text_center{
+    text-align: center;
+    text-transform: uppercase;
+
+    h2{
+        // color: $primary__button_color;
+        // background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.4) 101.52%);
+        background: #058DA6;
+        background: linear-gradient(to right, #058DA6 44%, #CFCFCF 68%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+}
+
+.hero_main_box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.563rem;
+    margin-top: 4.688rem;
+
+
+}
+
+.hero_box{
+    flex: 2 1 250px;
+    h3{
+        font-size: $fs_300;
+        font-weight: 600;
+    }
+}
+.hero_secondry_box{
+    flex: 1 1 150px;
+
+    h3{
+        font-size: $fs_1;
+        font-weight: 600;
+    }
+}
+.test_box{
+    width: 100%;
+    height: 300px;
+    background: red;
+}
