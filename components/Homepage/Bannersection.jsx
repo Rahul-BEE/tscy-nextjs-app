@@ -29,9 +29,7 @@ const Bannersection = ({ banner }) => {
             );
           },
         }}
-        className={styles.app__bannerswiper}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}>
+        className={styles.app__bannerswiper}>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
             src="/Images/map-pic.jpg"

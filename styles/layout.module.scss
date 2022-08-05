@@ -8,6 +8,7 @@
   top: 0;
   width: 100%;
   z-index: 5;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -18,6 +19,7 @@
     padding: 1rem 0.5rem;
   }
   .navbar__menubtn {
+    pointer-events: all;
     border: none;
     box-shadow: none;
     outline: none;
@@ -27,7 +29,7 @@
 .app__header_right {
   justify-content: space-between;
   gap: 2.5rem;
-
+  pointer-events: all;
   span span img {
     min-width: 170px;
     min-height: 60px;
@@ -64,6 +66,7 @@
 
 .app__header_middle {
   margin: 0 3rem;
+  pointer-events: all;
   ul {
     justify-content: flex-end;
     gap: 4rem;
@@ -84,6 +87,7 @@
 }
 
 .app__header_left {
+  pointer-events: all;
   button {
     border: 1px solid white;
     border-radius: 25px;
@@ -96,6 +100,7 @@
 }
 
 .mobilelangbtn {
+  pointer-events: all;
   font-weight: 600;
   padding-inline: 1.5rem;
   color: $primary__button_color;
@@ -308,5 +313,77 @@
   .footer_bottom {
     justify-content: center;
     text-align: center;
+  }
+}
+
+// Mobile Menu Modal Styling
+
+.header__modal {
+  .header__modal_body {
+    margin: 0;
+    padding: 5% 5%;
+    .header_mobilemenu {
+      width: 100%;
+      height: 100%;
+      color: white;
+    }
+  }
+}
+
+.header__modal_contentclass {
+  background-image: url("../public/Images/map-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+}
+
+.menuactive {
+  font-weight: 600;
+  color: white !important;
+  p {
+    letter-spacing: 2px;
+  }
+  svg {
+    display: block;
+  }
+}
+
+.menuinactive {
+  font-weight: 400;
+  svg {
+    display: none;
+  }
+}
+
+.mobilemenu_hr {
+  border-top: 1px solid white;
+  opacity: 0.3;
+  width: 100%;
+  margin: 1.3rem;
+}
+
+.mobilemenu_middlecol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  max-width: 300px;
+  min-width: 250px;
+}
+.mobilemenu_languagecol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.75rem;
+  height: 1.875rem;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 0;
+  button {
+    width: 100%;
+    height: 100%;
   }
 }

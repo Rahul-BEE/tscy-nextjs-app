@@ -33,7 +33,7 @@ function Accord({ data }) {
               <Card.Body className={styles.accord_card_body}>
                 <ul>
                   {e.links.map((value, index) => (
-                    <li>{value.title}</li>
+                    <li key={`${index}_footeraccord_list`}>{value.title}</li>
                   ))}
                 </ul>
               </Card.Body>
