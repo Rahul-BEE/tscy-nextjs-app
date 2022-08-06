@@ -33,8 +33,18 @@ function Newssection() {
                   issue.
                 </h3>
               </div>
-
               <div className={styles.test_box}></div>
+              <p>
+                Thus, when using the definite article, the speaker assumes the
+                listener knows the identity of the noun’s referent (because it
+                is obvious, because it is common knowledge, or because it was
+                mentioned in the same sentence or an earlier sentence). Use of
+                an indefinite article implies that the speaker assumes the
+                listener does not have to be told the identity of the referent.
+                Use of an indefinite article implies that the speaker assumes
+                the listener does not have to be told the identity of the
+                referent.
+              </p>
             </div>
           </div>
 
