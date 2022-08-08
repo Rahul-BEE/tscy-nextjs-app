@@ -134,3 +134,160 @@
     }
   }
 }
+
+//sustainable featuresection
+.app__sustainablefeaturesection {
+  margin: 0;
+  padding: 0;
+  .sustainablesection_heading {
+    margin: 5rem 2.5rem 1rem 2.5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.sustainablefeatureImages {
+}
+.sustainablefeatureImagesposition {
+}
+.sustainablefeaturecontent {
+  .sustainablefeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.sustainableicons {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//icons sections
+.socialIconIcon,
+.ecoIconIcon,
+.envIconIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.iconSocialActive {
+  svg {
+    fill: #e79127;
+    path {
+      stroke: #e79127;
+    }
+  }
+  .socialIconIcon {
+    svg path {
+      fill: white;
+      stroke: white;
+      stroke-width: 0.5px;
+    }
+  }
+}
+.iconSocial {
+  svg {
+    fill: transparent;
+    path {
+      stroke: orange;
+    }
+  }
+  .socialIconIcon {
+    svg path {
+      fill: orange;
+      stroke: orange;
+      stroke-width: 0.5px;
+    }
+  }
+}
+
+.iconEnvActive {
+  svg {
+    fill: #70b795;
+    path {
+      stroke: #70b795;
+    }
+  }
+  .envIconIcon {
+    svg path {
+      fill: white;
+      stroke: white;
+      stroke-width: 0.5px;
+    }
+  }
+}
+.iconEnv {
+  svg {
+    fill: transparent;
+    path {
+      stroke: #70b795;
+    }
+  }
+}
+.iconEcoActive {
+  svg {
+    fill: #038fab;
+    path {
+      stroke: #038fab;
+    }
+  }
+  .ecoIconIcon {
+    svg path {
+      fill: white;
+      stroke: white;
+      stroke-width: 0.5px;
+    }
+  }
+}
+.iconEco {
+  svg {
+    fill: transparent;
+    path {
+      stroke: #038fab;
+    }
+  }
+}
+
+//content section
+.sustainablecontentContainer {
+  background-color: #70b795;
+  padding: 2%;
+  min-height: max-content;
+  div {
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 30px;
+      font-size: 1.625rem;
+    }
+    p {
+      font-size: 1.125rem;
+      color: #777777;
+      font-weight: 400;
+    }
+  }
+}
+
+.featureBullets {
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: #777777;
+  margin: 2.5rem 0;
+
+  li {
+    margin: 2rem 0;
+  }
+}

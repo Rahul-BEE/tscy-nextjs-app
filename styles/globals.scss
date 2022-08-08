@@ -103,3 +103,21 @@ a {
   width: 100%;
   height: 100%;
 }
+
+.sectionsubHeading {
+  font-weight: 400;
+  font-size: 1.375rem;
+  color: $sectionsubheadingcolor;
+  width: fit-content;
+  text-align: center;
+}
+
+.sectionmainHeading {
+  font-weight: 600;
+  font-size: 2.125rem;
+  background: $sectionmainheadingbackground;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  text-align: center;
+}
