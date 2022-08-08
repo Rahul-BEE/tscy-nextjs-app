@@ -1,12 +1,14 @@
 import styles from "../../styles/newssection.module.scss";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
+import NewsCarousel from "./newssection/NewsCarousel";
+import NewsMobile from "./newssection/NewsMobile";
 
 function Newssection() {
   return (
     <div className={styles.hero_newssection}>
       <div className={styles.hero_container}>
-        <div className={styles.hero_text_center}>
+        <div className={`${styles.hero_text_center} ${styles.hero_mobile}` }>
           <p>See what they say in</p>
           <h2>press and news</h2>
         </div>
@@ -77,7 +79,13 @@ function Newssection() {
             </div>
           </div>
         </div>
+
+        {/* tablet view */}
+        <NewsCarousel />
       </div>
+
+      {/* mobile */}
+      <NewsMobile />
     </div>
   );
 }

@@ -38,6 +38,10 @@
     // gap: 2.563rem;
     margin-top: 4.688rem;
 
+    @media (max-width:991px) {
+        display: none;
+    }
+
 
 }
 
@@ -109,4 +113,36 @@
     position: absolute;
     left: 90%;
     z-index: -1;
+
+    @media (max-width:991px) {
+        left: -10%;
+    }
+
+    @media (max-width:600px) {
+        display: none;
+    }
+}
+
+
+// tablet
+.hero_tablet{
+    @media (max-width:600px) {
+        display: none;
+    }
+}
+.hero_tab_box{
+    margin-top: 4.688rem;
+    overflow: visible;
+}
+.mySwiper{
+    overflow: visible;
+}
+
+
+// mobile
+
+.hero_mobile{
+    @media (max-width:600px) {
+        display: none !important;
+    }
 }
