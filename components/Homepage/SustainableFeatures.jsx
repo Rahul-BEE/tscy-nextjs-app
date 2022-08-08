@@ -7,6 +7,10 @@ import People from "../../public/Svg/people.svg";
 import Eco from "../../public/Svg/Eco.svg";
 import Env from "../../public/Svg/Env.svg";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode } from "swiper";
+import "swiper/css/autoplay";
+import "swiper/css/free-mode";
 const SustainableFeatures = () => {
   const lan = useLanguage();
   const [featureSelected, setFeatureSelected] = useState(0);
@@ -112,14 +116,22 @@ const SustainableFeatures = () => {
                 }}>
                 {showData?.heading}
               </h3>
-              <p className="px-4 mt-4">{showData?.sub}</p>
-              <ul className={styles.featureBullets}>
+              <p className="px-4 my-4">{showData?.sub}</p>
+              <Swiper
+                className={styles.featureBullets}
+                modules={[Autoplay, FreeMode]}
+                direction="vertical"
+                slidesPerView={7}
+                loop={true}
+                freeMode={true}
+                speed={1000}
+                autoplay={{ delay: 1000 }}>
                 {showData?.bullets.map((bullet, index) => (
-                  <li key={`${index}_feature_bullet`}>
-                    <h5>{bullet}</h5>
-                  </li>
+                  <SwiperSlide key={`${index}_feature_bullet`}>
+                    <h5 className={styles.bulletSustainable}>{bullet}</h5>
+                  </SwiperSlide>
                 ))}
-              </ul>
+              </Swiper>
             </>
           )}
         </div>
