@@ -118,9 +118,16 @@
 
 // tablet
 .hero_tablet {
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none;
   }
+  @media (min-width: 991px) {
+    display: none;
+  }
+  .mySwiper p{
+    margin-top: 2.5rem;
+  }
+
 }
 .hero_tab_box {
   margin-top: 4.688rem;
@@ -132,8 +139,45 @@
 
 // mobile
 
+.hero_mobile_box{
+    @media (min-width:769px) {
+        display: none;
+    }
+}
+
 .hero_mobile {
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none !important;
+
+    
   }
 }
+.heading_mobile{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+    p{
+        color: $white__font_color;
+    }
+}
+
+@media (max-width:768px) {
+    .test_box{
+        height: 100vh;
+        position: relative;
+        .bottom_text{
+            color: $white__font_color;
+            padding: 30;
+            position: absolute;
+            bottom: 0;
+
+            h3{
+                padding: 30px;
+            }
+        }
+        
+    }
+}
+
+
