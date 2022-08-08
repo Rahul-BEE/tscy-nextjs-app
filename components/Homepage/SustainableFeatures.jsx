@@ -98,36 +98,37 @@ const SustainableFeatures = () => {
   const SustainableContents = () => {
     return (
       <Container fluid className={styles.sustainablecontentContainer}>
-        {showData && (
-          <div>
-            <h3
-              style={{
-                color:
-                  featureSelected === 1
-                    ? "#038fab"
-                    : featureSelected === 2
-                    ? "#70b795"
-                    : "#E79127",
-              }}>
-              {showData?.heading}
-            </h3>
-            <p>{showData?.sub}</p>
-            <Row>
-              <Col>
-                <ul className={styles.featureBullets}>
-                  {showData?.bullets.map((bullet, index) => (
-                    <li key={`${index}_feature_bullet`}>
-                      <h5>{bullet}</h5>
-                    </li>
-                  ))}
-                </ul>
-              </Col>
-            </Row>
-          </div>
-        )}
+        <div style={{ height: "32rem", overflow: "hidden" }}>
+          {showData && (
+            <>
+              <h3
+                style={{
+                  color:
+                    featureSelected === 1
+                      ? "#038fab"
+                      : featureSelected === 2
+                      ? "#70b795"
+                      : "#E79127",
+                }}>
+                {showData?.heading}
+              </h3>
+              <p className="px-4 mt-4">{showData?.sub}</p>
+              <ul className={styles.featureBullets}>
+                {showData?.bullets.map((bullet, index) => (
+                  <li key={`${index}_feature_bullet`}>
+                    <h5>{bullet}</h5>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+        <div className={styles.featuresoverLay}></div>
       </Container>
     );
   };
+
+  const SustainableImageComponents = (data) => {};
   return (
     <div className={styles.app__sustainablefeaturesection}>
       <Row>
