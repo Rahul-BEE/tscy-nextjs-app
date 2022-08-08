@@ -1,12 +1,14 @@
 import styles from "../../styles/newssection.module.scss";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
+import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
+import NewsMobile from "./NewsSectionComponents/NewsMobile";
 
 function Newssection() {
   return (
     <div className={styles.hero_newssection}>
       <div className={styles.hero_container}>
-        <div className={styles.hero_text_center}>
+        <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
           <p>See what they say in</p>
           <h2>press and news</h2>
         </div>
@@ -33,8 +35,18 @@ function Newssection() {
                   issue.
                 </h3>
               </div>
-
               <div className={styles.test_box}></div>
+              <p>
+                Thus, when using the definite article, the speaker assumes the
+                listener knows the identity of the noun’s referent (because it
+                is obvious, because it is common knowledge, or because it was
+                mentioned in the same sentence or an earlier sentence). Use of
+                an indefinite article implies that the speaker assumes the
+                listener does not have to be told the identity of the referent.
+                Use of an indefinite article implies that the speaker assumes
+                the listener does not have to be told the identity of the
+                referent.
+              </p>
             </div>
           </div>
 
@@ -67,7 +79,13 @@ function Newssection() {
             </div>
           </div>
         </div>
+
+        {/* tablet view */}
+        <NewsCarousel />
       </div>
+
+      {/* mobile */}
+      <NewsMobile />
     </div>
   );
 }
