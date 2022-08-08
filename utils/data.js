@@ -17,7 +17,7 @@ export const english = {
       {
         sectionhead: "Sustainable Features",
         heading: "Social SUSTAINABIlitY",
-        sub: "Through amenities & community out reach programs",
+        sub: "We are achieving this in The Sustainability City by providing all kinds of amenities and community outreach programs.",
         bullets: [
           "Indoor and outdoor gyms",
           "Cycling & jogging tracks",

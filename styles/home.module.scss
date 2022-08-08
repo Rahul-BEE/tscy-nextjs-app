@@ -154,6 +154,12 @@
 .sustainablefeatureImagesposition {
 }
 .sustainablefeaturecontent {
+  .sustainablefeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .sustainableicons {
@@ -167,6 +173,7 @@
   }
 }
 
+//icons sections
 .socialIconIcon,
 .ecoIconIcon,
 .envIconIcon {
@@ -177,9 +184,9 @@
 }
 .iconSocialActive {
   svg {
-    fill: orange;
+    fill: #e79127;
     path {
-      stroke: orange;
+      stroke: #e79127;
     }
   }
   .socialIconIcon {
@@ -250,5 +257,37 @@
     path {
       stroke: #038fab;
     }
+  }
+}
+
+//content section
+.sustainablecontentContainer {
+  background-color: #70b795;
+  padding: 2%;
+  min-height: max-content;
+  div {
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 30px;
+      font-size: 1.625rem;
+    }
+    p {
+      font-size: 1.125rem;
+      color: #777777;
+      font-weight: 400;
+    }
+  }
+}
+
+.featureBullets {
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: #777777;
+  margin: 2.5rem 0;
+
+  li {
+    margin: 2rem 0;
   }
 }
