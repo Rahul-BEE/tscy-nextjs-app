@@ -6,7 +6,7 @@ import axios from "../utils/axios";
 import { useEffect, useState } from "react";
 import qs from "qs";
 import { useRouter } from "next/router";
-export default function Home({ villas }) {
+export default function Home() {
   const [language, setLanguage] = useState("en");
   const location = useRouter();
   useEffect(() => {
@@ -22,39 +22,39 @@ export default function Home({ villas }) {
     <div className={styles.app__home}>
       <BannerSection />
       <SustainableFeatures />
-      <Villaplans data={villas} />
+      <Villaplans />
       <Newssection />
     </div>
   );
 }
 
-export async function getStaticProps(context) {
-  const { locale } = context;
-  const language = locale;
-  let query = "";
-  const populate = {
-    villatype: {
-      field: ["type"],
-    },
-    villaimage: {
-      populate: "*",
-    },
-  };
-  query = qs.stringify({
-    populate: populate,
-  });
-  const response = await axios({
-    method: "get",
-    url: `/villas?locale=${language}&${query}`,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + process.env.STRAPI_API_TOKEN,
-    },
-  });
+// export async function getStaticProps(context) {
+//   const { locale } = context;
+//   const language = locale;
+//   let query = "";
+//   const populate = {
+//     villatype: {
+//       field: ["type"],
+//     },
+//     villaimage: {
+//       populate: "*",
+//     },
+//   };
+//   query = qs.stringify({
+//     populate: populate,
+//   });
+//   const response = await axios({
+//     method: "get",
+//     url: `/villas?locale=${language}&${query}`,
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: "Bearer " + process.env.STRAPI_API_TOKEN,
+//     },
+//   });
 
-  return {
-    props: {
-      villas: response.data.data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       villas: response.data.data,
+//     },
+//   };
+// }
