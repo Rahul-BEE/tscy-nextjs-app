@@ -2,23 +2,21 @@ import Image from "next/image";
 import styles from "../../styles/home.module.scss";
 import { motion } from "framer-motion";
 
-// import Swiper core and required modules
-import { Pagination, A11y } from "swiper";
-
+import { Pagination, Autoplay, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import "swiper/css/autoplay";
 import "swiper/css";
 
 const Bannersection = ({ banner }) => {
   return (
     <div className={styles.app__bannerSection}>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay, FreeMode]}
         slidesPerView={1}
-        navigation
-        speed={800}
-        loop
+        speed={1500}
+        loop={true}
+        freeMode={true}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
