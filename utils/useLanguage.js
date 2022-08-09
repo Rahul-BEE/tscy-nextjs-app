@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { english, arabic } from "../utils/data";
+import english from "./english";
+import arabic from "./arabic";
 import { useRouter } from "next/router";
 
 const useLanguage = (val) => {

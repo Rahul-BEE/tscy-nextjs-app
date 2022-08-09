@@ -1,11 +1,9 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import useLangage from "../../utils/useLanguage";
 import styles from "../../styles/home.module.scss";
-import { useState } from "react";
-import { useEffect } from "react";
 const Villplans = ({ data }) => {
   const lan = useLangage();
-  const [villa, setVilla] = useState(data[0]);
+  console.log(data);
   return (
     <div className={styles.app__villplanmaincontainer}>
       <Row className="headingRow">
@@ -22,10 +20,7 @@ const Villplans = ({ data }) => {
             lg={3}
             key={index}>
             <h5>{villa.attributes.no_bed}</h5>
-            <p>
-              {lan?.commontext.bedroom}{" "}
-              {villa.attributes.villatype.data.attributes.type}
-            </p>
+            <p>Bedroom {villa.attributes.villatype.data.attributes.type}</p>
           </Col>
         ))}
       </Row>
