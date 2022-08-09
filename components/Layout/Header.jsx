@@ -73,18 +73,20 @@ const Header = () => {
           />
         </button>
         <div className={`${styles.app__header_right} flex`}>
-          <Link href={"/"} passHref>
-            <Image
-              src={
-                domYOffset || location.pathname !== "/"
-                  ? "/Logos/tsc-logo.svg"
-                  : "/Logos/tsc-logo-white.svg"
-              }
-              width={180}
-              height={80}
-              alt="sustainable city yiti "
-              style={{ cursor: "pointer" }}
-            />
+          <Link href="/" passHref>
+            <a>
+              <Image
+                src={
+                  domYOffset || location.pathname !== "/"
+                    ? "/Logos/tsc-logo.svg"
+                    : "/Logos/tsc-logo-white.svg"
+                }
+                width={180}
+                height={80}
+                alt="sustainable city yiti "
+                style={{ cursor: "pointer" }}
+              />
+            </a>
           </Link>
           <button
             className={`btn ${styles.header_right_langbtn} ${

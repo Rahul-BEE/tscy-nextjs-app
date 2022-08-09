@@ -58,6 +58,13 @@ export const english = {
       },
     ],
   },
+
+  villaplansection: {
+    title1: "Redefining living with our",
+    title2: "bedroom villa plans",
+    btntext: "see details",
+    proptext: "property features",
+  },
 };
 
 export const arabic = {
@@ -121,5 +128,11 @@ export const arabic = {
         ],
       },
     ],
+  },
+  villaplansection: {
+    title1: "Redefining living with our",
+    title2: "bedroom villa plans",
+    btntext: "see details",
+    proptext: "property features",
   },
 };

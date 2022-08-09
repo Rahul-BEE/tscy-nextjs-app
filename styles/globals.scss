@@ -110,6 +110,7 @@ a {
   color: $sectionsubheadingcolor;
   width: fit-content;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .sectionmainHeading {
@@ -120,4 +121,15 @@ a {
   -webkit-text-fill-color: transparent;
   width: fit-content;
   text-align: center;
+  text-transform: uppercase;
+}
+.headingRow {
+  .col {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 }
