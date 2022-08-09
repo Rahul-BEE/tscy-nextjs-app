@@ -37,8 +37,6 @@
     grid-template-columns: 65% 35%;
     // gap: 2.563rem;
     margin-top: 4.688rem;
-
-
 }
 
 .hero_box{
@@ -104,4 +102,165 @@
     position: absolute;
     left: 90%;
     z-index: -1;
+}
+
+
+//iqra news page style 
+// starts here
+
+.mainHeader
+{
+    text-align: center;
+    color: #777777;
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.secondheading
+{
+    margin-top: 5px;
+    color: #777777;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.fontWeight8
+{
+    font-weight: 600;
+}
+
+.mt200
+{
+    margin-top: 200px;
+}
+
+.textAlignCenter
+{
+    text-align: center;
+}
+
+.verticalAlignMiddle
+{
+    vertical-align: middle;
+}
+
+.ml14
+{
+    margin-left: 14px;
+}
+
+.datestyling
+{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #777777;
+    margin-top: 22px;
+}
+
+.mt22
+{
+    margin-top: 22px;
+    margin-bottom: 50px;
+}
+
+.newspage_container{
+    margin: 0 13%;
+}
+
+.herodashed
+{
+    border-top: 2px solid #777777;
+    margin-top: 10px;
+}
+
+.newspage_heading{
+    height: 3.75rem;
+    margin-bottom: 23px;
+    font-size: $fs_300;
+    font-weight: 600;
+    text-align:justify;
+    margin-right: 80px;
+    margin-bottom: 50rem;
+}
+
+.hero_mainnews_box{
+    display: grid;
+    // flex-wrap: wrap;
+    grid-template-columns: 75% 4% 21%;
+    // gap: 2.563rem;
+    margin-top: 5rem;
+
+}
+
+.secondrynews_box{
+    margin-bottom: 2.2rem;
+    text-align: justify;
+    margin-left: 20px;
+
+}
+
+.secondary_h1
+{
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.hero_newspagesection{
+    color: $font_color_gray;
+}
+
+.hero_newspageadjustment
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn_blue
+{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0.2rem 0.7rem;
+    gap: var(--gap, 0.5rem);
+    border: 1px solid white;
+    border: none;
+    box-shadow: none;
+    background: #058DA6;
+border-radius: 17px;
+margin-top: 20px;
+}
+
+.newssectionpage_shape_hex {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 90%;
+    z-index: -1;
+    top: 50%;
+}
+
+.newssectionpage_shape_hex_right{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: -1;
+    top: 106%;
+}
+
+.newssection_newssectionpage_shape_hex_bottom {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 100;
+    top: 72%;
+    left: 82%;
 }
