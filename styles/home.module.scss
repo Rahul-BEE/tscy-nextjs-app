@@ -137,7 +137,7 @@
 
 //sustainable featuresection
 .app__sustainablefeaturesection {
-  margin: 0 0 3rem 0;
+  margin: 0 0 5rem 0;
   padding: 0;
   .sustainablesection_heading {
     margin: 5rem 2.5rem 1rem 2.5rem;
@@ -149,19 +149,8 @@
     text-align: center;
   }
 }
-.sustainablefeatureImages {
-}
-.sustainablefeatureImagesposition {
-}
-.sustainablefeaturecontent {
-  .sustainablefeatures {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
 
+//icons sections
 .sustainableicons {
   width: 50px;
   height: 50px;
@@ -172,8 +161,6 @@
     height: 100%;
   }
 }
-
-//icons sections
 .socialIconIcon,
 .ecoIconIcon,
 .envIconIcon {
@@ -261,11 +248,19 @@
 }
 
 //content section
+.sustainablefeaturecontent {
+  .sustainablefeatures {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .sustainablecontentContainer {
   padding: 2%;
-  position: relative;
   min-height: max-content;
-
   div {
     text-align: center;
     h3 {
@@ -293,7 +288,7 @@
       rgba(255, 255, 255, 0) 61.49%
     );
     transform: matrix(1, 0, 0, -1, 0, 0);
-    z-index: 10;
+    z-index: 2;
   }
 }
 
@@ -311,4 +306,13 @@
 .bulletSustainable {
   margin: 2rem auto;
   max-width: 70%;
+}
+
+.sustainImgCol {
+  .susimage1 {
+    left: -50% !important;
+  }
+  .susimage2 {
+    right: -40% !important;
+  }
 }
