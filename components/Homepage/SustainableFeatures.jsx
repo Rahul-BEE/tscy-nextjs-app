@@ -36,7 +36,7 @@ const SustainableFeatures = () => {
         return;
       }
     }
-  }, [featureSelected]);
+  }, [featureSelected, lan]);
 
   const changeShowData = (value) => {
     if (value === 1) {
@@ -126,7 +126,7 @@ const SustainableFeatures = () => {
                     slidesPerView={7}
                     loop={true}
                     freeMode={true}
-                    speed={1000}
+                    speed={1500}
                     autoplay={{ delay: 1000 }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>

@@ -16,7 +16,7 @@ export const english = {
     features: [
       {
         sectionhead: "Sustainable Features",
-        heading: "Social SUSTAINABIlitY",
+        heading: "Social Sustainability",
         sub: "We are achieving this in The Sustainability City by providing all kinds of amenities and community outreach programs.",
         bullets: [
           "Indoor and outdoor gyms",
@@ -33,7 +33,7 @@ export const english = {
       },
 
       {
-        heading: "Economic SUSTAINABIlitY",
+        heading: "Economic Sustainability",
         sub: "Facilitated through operational efficiencies, savings for residents & contribution to a green economy",
         bullets: [
           "Huge savings on electricity & water bills",
@@ -44,7 +44,7 @@ export const english = {
         ],
       },
       {
-        heading: "Environmental SUSTAINABIlity",
+        heading: "Environmental Sustainability",
         sub: "Maintained through passive & active design strategies",
         bullets: [
           "Urban farms and greenhouses",

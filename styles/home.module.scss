@@ -264,7 +264,7 @@
   div {
     text-align: center;
     h3 {
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-weight: 600;
       line-height: 30px;
       font-size: 1.625rem;
@@ -285,7 +285,7 @@
     background: linear-gradient(
       180deg,
       #ffffff 0%,
-      rgba(255, 255, 255, 0) 61.49%
+      rgba(255, 255, 255, 0) 45.49%
     );
     transform: matrix(1, 0, 0, -1, 0, 0);
     z-index: 2;
@@ -309,6 +309,9 @@
 }
 
 .sustainImgCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .susimage1 {
     left: -50% !important;
   }

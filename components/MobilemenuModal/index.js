@@ -24,7 +24,11 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
           </Col>
         </Row>
         <div className={styles.header_topImage}>
-          <Image src="/Images/mobilemenutop.png" layout="fill" />
+          <Image
+            src="/Images/mobilemenutop.png"
+            layout="fill"
+            alt="sustainablecity yiti villas"
+          />
         </div>
         <Row fluid className={styles.header_mobilemenu}>
           <Col className="m-0 p-0">
@@ -116,10 +120,18 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
 
         <Row className={styles.header__modalbottom}>
           <Col className={styles.header_btmImage}>
-            <Image src="/Images/mobilemenuleft.png" layout="fill" />
+            <Image
+              src="/Images/mobilemenuleft.png"
+              layout="fill"
+              alt="sustainablecity yiti villas"
+            />
           </Col>
           <Col className={`${styles.header_btmImage} ${styles.btmImage2}`}>
-            <Image src="/Images/mobilemenuright.png" layout="fill" />
+            <Image
+              src="/Images/mobilemenuright.png"
+              layout="fill"
+              alt="sustainablecity yiti villas"
+            />
           </Col>
         </Row>
       </Modal.Body>
