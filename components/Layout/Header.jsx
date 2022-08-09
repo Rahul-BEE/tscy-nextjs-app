@@ -9,9 +9,11 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [language, setLanguage] = useState("en");
+  const [loading, setloading] = useState(true);
   const [domYOffset, setDomYOffset] = useState(false);
-  const lan = useLanguage();
+  const lan = useLanguage(loading);
   const location = useRouter();
+
   useLayoutEffect = useEffect;
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -23,21 +25,18 @@ const Header = () => {
     }
   }, []);
   const handelLanguageChange = (lang) => {
-    if (lang) {
-      localStorage.setItem("language", JSON.stringify(lang));
-      setLanguage(lan);
-      window.location.reload(true);
+    let lan = "";
+    if (language === "en") {
+      lan = "ar";
     } else {
-      let lan = "";
-      if (language === "en") {
-        lan = "ar";
-      } else {
-        lan = "en";
-      }
-      localStorage.setItem("language", JSON.stringify(lan));
-      setLanguage(lan);
-      window.location.reload(true);
+      lan = "en";
     }
+    localStorage.setItem("language", JSON.stringify(lan));
+    setLanguage(lan);
+    location.push(location.pathname, location.pathname, { locale: lan });
+    // window.location.reload(true);
+
+    setloading(!loading);
   };
   useLayoutEffect(() => {
     function updatePosition() {

@@ -14,9 +14,9 @@ const Bannersection = ({ banner }) => {
         modules={[Pagination, Autoplay, FreeMode]}
         slidesPerView={1}
         speed={1500}
-        loop={true}
+        // loop={true}
         freeMode={true}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        // autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {

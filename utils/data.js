@@ -65,6 +65,15 @@ export const english = {
     btntext: "see details",
     proptext: "property features",
   },
+
+  commontext: {
+    brochure: "Brochure",
+    floorplan: "Floor Plan",
+    learnmore: "Learn More",
+    download: "Download",
+    bedroom: "Bedroom",
+    bathroom: "Bathroom",
+  },
 };
 
 export const arabic = {
@@ -134,5 +143,13 @@ export const arabic = {
     title2: "bedroom villa plans",
     btntext: "see details",
     proptext: "property features",
+  },
+  commontext: {
+    brochure: "الكتيب",
+    floorplan: "المخططات",
+    learnmore: "إعرف المزيد",
+    download: "تحميل",
+    bedroom: "غرف نوم",
+    bathroom: "حمامات",
   },
 };

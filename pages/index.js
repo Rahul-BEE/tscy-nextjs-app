@@ -26,8 +26,9 @@ export default function Home({ villas }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const language = context.query?.locale ? context.query?.locale : "en";
+export async function getStaticProps(context) {
+  const { locale } = context;
+  const language = locale;
   let query = "";
   const populate = {
     villatype: {

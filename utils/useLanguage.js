@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { english, arabic } from "../utils/data";
 
-const useLangage = () => {
+const useLangage = (val) => {
   const [lan, setLan] = useState(english);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const useLangage = () => {
       setLan(english);
       document.querySelector("body").classList.add("en");
     }
-  }, []);
+  }, [val]);
 
   return lan;
 };
