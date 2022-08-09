@@ -71,7 +71,6 @@
 }
 .hero_secondry_box {
   // flex: 1 1 150px;
-
   h3 {
     font-size: $fs_1;
     font-weight: 600;
@@ -93,6 +92,7 @@
 
   p {
     margin: 30px 0 0 0;
+    cursor: pointer;
   }
 }
 
