@@ -78,7 +78,7 @@ const News = () => {
             <div>
               <div className={styles.newspage_heading}>
                 <h6>
-                  Britain starts to open up, Ramadan begins. It feels like
+                  Britain to open up, Ramadan begins. It feels like
                   perfect timing, with Russia cheif army scrubbling over the
                   issue.
                 </h6>
