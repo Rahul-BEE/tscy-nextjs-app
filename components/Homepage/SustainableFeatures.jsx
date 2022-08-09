@@ -1,6 +1,5 @@
 import styles from "../../styles/home.module.scss";
 import { Row, Col, Container } from "react-bootstrap";
-import useLanguage from "../../utils/useLanguage";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Polygon from "../../public/Svg/Polygonorg.svg";
 import People from "../../public/Svg/people.svg";
@@ -12,11 +11,12 @@ import { Autoplay, FreeMode } from "swiper";
 import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import Image from "next/image";
-const SustainableFeatures = () => {
-  const lan = useLanguage();
-  const [featureSelected, setFeatureSelected] = useState(0);
-  const [showData, setShowData] = useState(lan.sustainablesection.features[0]);
+import useLanguage from "../../utils/useLanguage";
 
+const SustainableFeatures = () => {
+  const [featureSelected, setFeatureSelected] = useState(0);
+  const lan = useLanguage();
+  const [showData, setShowData] = useState(lan.sustainablesection.features[0]);
   useEffect(() => {
     switch (featureSelected) {
       case 0: {
@@ -127,7 +127,7 @@ const SustainableFeatures = () => {
                     loop={true}
                     freeMode={true}
                     speed={1500}
-                    autoplay={{ delay: 1000 }}>
+                    autoplay={{ delay: 1000, disableOnInteraction: false }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>
                         <h5 className={styles.bulletSustainable}>{bullet}</h5>

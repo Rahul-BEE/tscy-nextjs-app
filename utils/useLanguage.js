@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { english, arabic } from "../utils/data";
+import { useRouter } from "next/router";
 
-const useLangage = (val) => {
-  const [lan, setLan] = useState(english);
-
+const useLanguage = (val) => {
+  const router = useRouter();
+  const { locale } = router;
+  const lan = locale === "ar" ? arabic : english;
   useEffect(() => {
-    const datachange = JSON.parse(localStorage.getItem("language"));
-    if (datachange === "ar") {
-      setLan(arabic);
+    if (locale === "ar") {
       document.querySelector("body").classList.add("ar");
     } else {
-      setLan(english);
       document.querySelector("body").classList.add("en");
     }
-  }, [val]);
+  }, []);
 
   return lan;
 };
 
-export default useLangage;
+export default useLanguage;
