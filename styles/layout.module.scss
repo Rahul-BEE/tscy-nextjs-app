@@ -232,7 +232,49 @@
     background-color: transparent;
     opacity: 0.5;
   }
+
+  .social_icons{
+    display: flex;
+    // justify-content: space-between;
+    margin-top: 2rem;
+    
+  
+    .icon{
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+  
+    @media (max-width:1127px) {
+      justify-content: space-evenly;
+      .icon{
+        margin: 0;
+      }
+    }
+    @media (max-width:741px) {
+      display: none;
+    }
+  }
+
 }
+
+.mobile_social_icon{
+  display: none;
+  .social_icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+  
+    .icon{
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  @media (max-width:741px) {
+    display: block;
+  }
+}
+
 
 .newsletter_box {
   position: relative;
