@@ -1,19 +1,21 @@
-import { useEffect } from "react";
 import english from "./english";
 import arabic from "./arabic";
 import { useRouter } from "next/router";
 
-const useLanguage = (val) => {
+const useLanguage = () => {
   const router = useRouter();
   const { locale } = router;
   const lan = locale === "ar" ? arabic : english;
-  useEffect(() => {
+
+  if (typeof window !== "undefined") {
     if (locale === "ar") {
-      document.querySelector("body").classList.add("ar");
+      document.body.classList.remove("en");
+      document.body.classList.add("ar");
     } else {
-      document.querySelector("body").classList.add("en");
+      document.body.classList.remove("ar");
+      document.body.classList.add("en");
     }
-  }, []);
+  }
 
   return lan;
 };

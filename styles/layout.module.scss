@@ -2,7 +2,7 @@
 
 .app__header {
   color: $white__font_color;
-  padding: 2.125rem 6.25rem;
+  padding: 1.125rem 6.25rem;
   flex-wrap: nowrap;
   position: fixed;
   top: 0;
@@ -233,48 +233,44 @@
     opacity: 0.5;
   }
 
-  .social_icons{
+  .social_icons {
     display: flex;
     // justify-content: space-between;
     margin-top: 2rem;
-    
-  
-    .icon{
+
+    .icon {
       font-size: 2rem;
       margin-right: 2rem;
     }
-  
-    @media (max-width:1127px) {
+
+    @media (max-width: 1127px) {
       justify-content: space-evenly;
-      .icon{
+      .icon {
         margin: 0;
       }
     }
-    @media (max-width:741px) {
+    @media (max-width: 741px) {
       display: none;
     }
   }
-
 }
 
-.mobile_social_icon{
+.mobile_social_icon {
   display: none;
-  .social_icons{
+  .social_icons {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    
-  
-    .icon{
+
+    .icon {
       font-size: 2rem;
       margin-right: 2rem;
     }
   }
-  @media (max-width:741px) {
+  @media (max-width: 741px) {
     display: block;
   }
 }
-
 
 .newsletter_box {
   position: relative;

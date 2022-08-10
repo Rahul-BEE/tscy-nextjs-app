@@ -59,6 +59,12 @@ const english = {
     ],
   },
 
+  masterplan: {
+    title1: "GET QUALITY LIFE WITH",
+    title2: "OUR MASTER PLAN",
+    description:
+      "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+  },
   villaplansection: {
     title1: "Redefining living with our",
     title2: "bedroom villa plans",

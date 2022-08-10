@@ -1,5 +1,10 @@
 import Head from "next/head";
-import { BannerSection, SustainableFeatures, Villaplans } from "../components";
+import {
+  BannerSection,
+  Masterplan,
+  SustainableFeatures,
+  Villaplans,
+} from "../components";
 import Newssection from "../components/Homepage/Newssection";
 import styles from "../styles/home.module.scss";
 import axios from "../utils/axios";
@@ -22,6 +27,7 @@ export default function Home() {
     <div className={styles.app__home}>
       <BannerSection />
       <SustainableFeatures />
+      <Masterplan />
       <Villaplans />
       <Newssection />
     </div>
