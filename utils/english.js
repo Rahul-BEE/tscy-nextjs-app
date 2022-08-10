@@ -66,6 +66,7 @@ const english = {
     proptext: "property features",
     villas: [
       {
+        id: 1,
         title: "Courtyard Villa – 3 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 238 m2",
@@ -83,6 +84,7 @@ const english = {
           "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
       },
       {
+        id: 2,
         title: "Courtyard Villa – 4 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 266 m2",
@@ -100,6 +102,7 @@ const english = {
           "This immaculate four-bedroom villa layout contains a bright and welcoming lower level with an extraordinarily bountiful living room area. The kitchen is clad with premium fixtures and fittings with plenty of elbow room to stimulate culinary creativity. The adjoining dining area is a lofty space enveloped in natural lighting and exuding a contemporary charm. The ground floor also houses a half-bath and maid’s room. On the upper level of this layout, there are three en-suite bedrooms along with a sprawling master bedroom. The master bedroom is fitted with prodigiously sized windows, generous wardrobe space, an opulent en-suite bathroom equipped with a soaking tub, and shaded balcony access overlooking the courtyard.",
       },
       {
+        id: 3,
         title: "Garden Villa – 4 Bedroom Unit – East Villas",
         homepagetitle: "Bedroom Garden Villa",
         gross: "Gross Floor Area 378 m2",
@@ -126,6 +129,14 @@ const english = {
     download: "Download",
     bedroom: "Bedroom",
     bathroom: "Bathroom",
+    pool: "Swimming Pool",
+    maidroom: "Maid Room",
+    propsubheading_1: "Property Features",
+    propsubheading_2: "Extra Features",
+    ecofriendly: "Eco-Friendly",
+    smarthome: "Smart Home",
+    privategarden: "Private Garden",
+    seedetails: "See Details",
   },
 };
 
