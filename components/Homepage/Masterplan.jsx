@@ -24,6 +24,8 @@ const Masterplan = () => {
           width={1568}
           height={800}
           className={styles.masterplanmap}
+          blurDataURL="/Images/masterplanimage.png"
+          placeholder="blur"
         />
       </div>
     </div>
