@@ -20,7 +20,7 @@ const Masterplan = () => {
       </Row>
       <div className={`${styles.masterplan_imagecontainer}`}>
         <Image
-          src="/Images/masterplanimage.svg"
+          src="/Images/masterplanimage.png"
           width={1568}
           height={800}
           className={styles.masterplanmap}
