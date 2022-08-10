@@ -2,6 +2,7 @@ import styles from "../../styles/home.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import Masterplanmap from "../../public/Images/masterplanimage.svg";
 const Masterplan = () => {
   const lan = useLanguage();
 
@@ -19,8 +20,7 @@ const Masterplan = () => {
         </Col>
       </Row>
       <div className={`${styles.masterplan_imagecontainer}`}>
-        <Image
-          src="/Images/masterplanimage.svg"
+        <Masterplanmap
           width={1568}
           height={800}
           className={styles.masterplanmap}
