@@ -2,11 +2,14 @@ import styles from "../../styles/newssection.module.scss";
 import { Row, Col, Container } from "react-bootstrap";
 import Image from "next/image";
 import { BiShare } from "react-icons/bi";
+import Polygon from "../../public/Svg/Polygonorg.svg";
 const News = () => {
   return (
-    <div className={styles.textAlignCenter}>
-      <Row className="mb-3">
-      <Col className={styles.mt200}>
+    <div className={styles.newspage_container}>
+      <div className="mb-3">
+      <div className={styles.mt200}>
+      <div>
+           
       <div className={styles.mainHeader}>
          <span className={styles.verticalAlignMiddle}>
        
@@ -18,63 +21,49 @@ const News = () => {
           />
           
          </span>
-            <span className={styles.ml14}>5 min. Read</span>
+            <span className={styles.ml14}>5 min. Read</span>   
          </div>
-      </Col>
-    </Row>   
-     <Row>
-      <Col>
-        <h6 className={styles.secondheading}>MUSCAT | OMAN</h6>    
-        <div className={styles.hero_text_center}>
+         <h6 className={styles.secondheading}>MUSCAT | OMAN</h6>
+         <div className={styles.hero_text_center1}>
             <h2 className={styles.fontWeight8}>The Sustainable City - Yiti Signs Escrow </h2>
             <h2 className={styles.fontWeight8}>Agreement with Sohar Islamic </h2>
          </div>
          <div className={styles.mt22}>
             <span className={styles.datestyling}>29th July, 2022</span>
          </div>
-         </Col>
-     </Row>       
-     <Row>
-       <Col> 
-       <div className={styles.newssectionpage_shape_hex}>
-          <Image
-            src={"/Svg/Polygon2.svg"}
-            alt="The Sustainable Villas Yiti"
-            width={"250px"}
-            height={"250px"}
-          />
-        </div>
-        <div className={styles.newssectionpage_shape_hex_right}>
-          <Image
-            src={"/Svg/Polygon2.svg"}
-            alt="The Sustainable Villas Yiti"
-            width={"250px"}
-            height={"250px"}
-          />
-        </div>
-        <div className={styles.newssection_newssectionpage_shape_hex_bottom}>
-          <Image
-            src={"/Svg/Polygon.svg"}
-            alt="The Sustainable Villas Yiti"
-            width={"250px"}
-            height={"250px"}
-          />
-        </div>
+         
+       <div className={styles.Poly1}>
+          <Polygon/>
+       </div>
+       <div className={styles.Poly2}>
+          <Polygon/>
+       </div>
+       <div className={styles.Poly3}>
+          <Polygon/>
+       </div>
+       <div className={styles.Poly4}>
+          <Polygon/>
+       </div>
+       <div className={styles.Poly5}>
+          <Polygon/>
+       </div>
+       <div className={styles.Poly6}>
+          <Polygon/>
+       </div>
+         <div className={styles.headerimg}>
          <Image
             src="/Images/bg-news.jpg"
-            height={483}
-            width={1200}
-            objectFit="none"
-            borderRadius="10px"
-            alt="The sustainable city image"
-          />       
-      </Col>
-    </Row>
-    <div className={styles.hero_newspagesection}>
-      <div className={styles.newspage_container}>
+            layout="responsive"
+            width={1300}
+            height={400}
+          />  
+         </div>
+         
+            <div className={styles.hero_newspagesection}>
+      <div>
         <div className={styles.hero_mainnews_box}>
           {/* main box */}
-          <div className={styles.hero_box}>
+          <div className={styles.hero_box1}>
             <div>
               <div className={styles.newspage_heading}>
                 <h6>
@@ -105,7 +94,7 @@ const News = () => {
               <div className={styles.herodashed}></div>
             </div>
           </div>
-          <div className={styles.hero_secondry_box}>
+          <div className={styles.hero_secondry_box1}>
             <div className={styles.secondrynews_box}>
               <h6 >
                 Introduction
@@ -124,7 +113,7 @@ const News = () => {
               </h6>
               <button className={styles.btn_blue}>
                
-              <BiShare size={16} />
+              <BiShare size={16} style={{transform: "rotateY(180deg)"}} />
               Share
             </button>
             </div>
@@ -132,7 +121,10 @@ const News = () => {
         </div>
       </div>
     </div>
-   
+           
+          </div>
+   </div>
+   </div>
     </div>
 
   )
