@@ -18,7 +18,12 @@ const Location = () => {
         </Col>
       </Row>
       <div className={styles.locationImagecontainer}>
-        <Image src="/Images/locationimage2.png" width={1728} height={652} />
+        <Image
+          src="/Images/locationimage2.png"
+          width={1728}
+          height={652}
+          layout="responsive"
+        />
       </div>
     </div>
   );
