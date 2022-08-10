@@ -1,6 +1,12 @@
 import styles from "../../styles/layout.module.scss";
 import Image from "next/image";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import {
+  FaInstagramSquare,
+  FaFacebookSquare,
+  FaLinkedin,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 
 import React from "react";
 import Accord from "./Accord";
@@ -110,12 +116,27 @@ function Footer() {
                     <IoIosArrowDroprightCircle />
                   </span>
                 </div>
+                <div className={styles.social_icons}>
+                  <FaLinkedin color="#0077B5" className={styles.icon} />
+                  <FaFacebookSquare color="#3A559F" className={styles.icon} />
+                  <FaWhatsappSquare color="#29A71A" className={styles.icon} />
+                  <FaInstagramSquare color="#E14478" className={styles.icon} />
+                </div>
               </div>
             </div>
           </div>
 
           {/* mobile viww */}
           <Accord data={cardlinksdata} />
+
+          <div className={styles.mobile_social_icon}>
+            <div className={styles.social_icons}>
+              <FaLinkedin color="#0077B5" className={styles.icon} />
+              <FaFacebookSquare color="#3A559F" className={styles.icon} />
+              <FaWhatsappSquare color="#29A71A" className={styles.icon} />
+              <FaInstagramSquare color="#E14478" className={styles.icon} />
+            </div>
+          </div>
 
           {/* copyright */}
           <div className={styles.footer_bottom}>
