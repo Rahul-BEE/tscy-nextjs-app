@@ -319,20 +319,101 @@
     right: -40% !important;
   }
 }
+//masterplan section
 
+.app__masterplan {
+  background: rgba(5, 141, 166, 0.1);
+  box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
+  padding: 5% 4%;
+  .masterplan_description {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    color: #777777;
+  }
+  .masterplan_imagecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5%;
+    border-radius: 15px;
+  }
+}
+
+//location section{
+.app__locationsection {
+  background: rgba(5, 141, 166, 0.1);
+  box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
+  .location_description {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    color: #777777;
+  }
+  .locationImagecontainer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 68.44%,
+      #ffffff 100%
+    );
+  }
+}
 //villaplan Section
 
 .app__villplanmaincontainer {
-  margin: 2.5rem 6.25rem;
+  margin: 2.5rem 4%;
   padding: 2.5rem 0 0 0;
   background: rgba(5, 141, 166, 0.1);
   box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
+  position: relative;
+  border-radius: 15px;
+  .descriptionRow {
+    position: absolute;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777777;
+  }
+  .activeVilla {
+    h5 {
+      color: #ffffff;
+      background-color: #038fab;
+    }
+    p {
+      font-weight: 600;
+    }
+  }
+}
+.villaplanindexrow {
+  justify-content: center;
+  margin: 1.8rem 0;
 }
 .villaplanindexcol {
   text-align: center;
   justify-content: center;
   flex-direction: column;
+  color: #777777;
+  background-color: transparent;
+  gap: 0;
+  border-right: 2px solid #038fab;
   cursor: pointer;
+  &:nth-child(3) {
+    border-right: none;
+  }
 
   h5 {
     width: 28px;
@@ -340,13 +421,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
-    background-color: #038fab;
-    color: #ffffff;
     margin-bottom: 0;
+    border-radius: 16px;
   }
+
   p {
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 35px;
+    color: #777777;
+  }
+}
+
+.villaplanImageContainer {
+  position: relative;
+  .villaplanfeatures {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1.5% 3%;
+    gap: 2.5rem;
+    transform: translate(-50%, -50%);
+
+    p {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      gap: 0.5rem;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 30px;
+
+      text-transform: capitalize;
+
+      color: #777777;
+    }
+    .heading {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    button {
+      white-space: nowrap;
+
+      background: #058da6;
+      border-radius: 10px;
+    }
   }
 }

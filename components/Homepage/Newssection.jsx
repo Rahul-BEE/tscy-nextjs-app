@@ -4,23 +4,16 @@ import Image from "next/image";
 import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
 import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
+import useLanguage from "../../utils/useLanguage";
 
 function Newssection() {
+  const lan = useLanguage();
+
   const data = [
     {
       id: 1,
-      title: `1Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
-      discription: `Thus, when using the definite article, the speaker assumes the
-      listener knows the identity of the noun’s referent (because it
-      is obvious, because it is common knowledge, or because it was
-      mentioned in the same sentence or an earlier sentence). Use of
-      an indefinite article implies that the speaker assumes the
-      listener does not have to be told the identity of the referent.
-      Use of an indefinite article implies that the speaker assumes
-      the listener does not have to be told the identity of the
-      referent.`,
+      title: lan.newssection.post[0].title,
+      discription: lan.newssection.post[0].discription,
     },
     {
       id: 2,

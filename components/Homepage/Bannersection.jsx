@@ -51,7 +51,6 @@ const Bannersection = ({ banner }) => {
             objectFit="cover"
             objectPosition="50% 50%"
             quality={"100"}
-            priority
             alt="The sustainable city image"
           />
           <div className={styles.app__slider_overlay}></div>
@@ -67,7 +66,6 @@ const Bannersection = ({ banner }) => {
             objectFit="cover"
             objectPosition="50% 50%"
             quality={"100"}
-            priority
             alt="The sustainable city image"
           />
           <div className={styles.app__slider_overlay}></div>
@@ -83,7 +81,6 @@ const Bannersection = ({ banner }) => {
             objectFit="cover"
             objectPosition="50% 50%"
             quality={"100"}
-            priority
             alt="The sustainable city image"
           />
           <div className={styles.app__slider_overlay}></div>

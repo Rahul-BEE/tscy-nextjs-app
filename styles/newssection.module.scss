@@ -57,13 +57,26 @@
     font-size: $fs_300;
     font-weight: 600;
     height: 3.75rem;
-    overflow: hidden;
+
     text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
   }
   p {
     margin-top: 1.6rem;
     font-size: $fs_200;
     font-weight: 400;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+
   }
 
   .test_box {
