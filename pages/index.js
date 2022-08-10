@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {
   BannerSection,
+  Location,
   Masterplan,
   SustainableFeatures,
   Villaplans,
@@ -28,6 +29,7 @@ export default function Home() {
       <BannerSection />
       <SustainableFeatures />
       <Masterplan />
+      <Location />
       <Villaplans />
       <Newssection />
     </div>

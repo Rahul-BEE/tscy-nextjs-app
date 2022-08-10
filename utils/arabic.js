@@ -64,6 +64,12 @@ const arabic = {
     description:
       "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
   },
+  locationsection: {
+    title1: "Dont miss anything with",
+    title2: "OUR PROJECT LOCATION",
+    description:
+      "Our project location is thoroughly surrounded by touristic locations with a world-class experience.",
+  },
   villaplansection: {
     title1: "Redefining living with our",
     title2: "bedroom villa plans",
@@ -143,7 +149,7 @@ const arabic = {
     seedetails: "See Details",
   },
   newssection: {
-    post:[
+    post: [
       {
         title: `دايموند للتطوير العقاري توقع اتفاقية شراكة مع الشركة العمانية للتنمية السياحية (عُمران) `,
         discription: `أبرمت "دايموند للتطوير العقاري" المتخصصة في تطوير المشروعات البيئية بدبي اتفاقية شراكة تطويرية مع الشركة العمانية للتنمية السياحية (مجموعة عُمران) لتنفيذ المرحلة الأولى من مشروع يتي السياحي المتكامل بقيمة استثمارية تبلغ نحو 3.7 مليار درهم إماراتي (تبلغ قرابة مليار دولار أمريكي). وقد أثمرت هذه الشراكة تأسيس "شركة التطوير والاستثمار المستدام ش.م.ع.م" لتتولى مهام تنفيذ هذه المرحلة من المشروع.
@@ -164,9 +170,9 @@ const arabic = {
         تأسست "دايموند للتطوير العقاري" في العام 2003، وتُعد شركة رائدة في مجال التطوير العقاري في دبي حيث طورت أول مدينة مستدامة متكاملة ضمن فئتها على مستوى العالم. تمتلك الشركة سجلاً حافلاً بالإنجازات، وتجسد تغييراً جذرياً في مفهوم بناء مدن المستقبل الذكية والمستدامة التي تحسن من جودة الحياة وتحقق أهداف اتفاقية باريس للمناخ 2050. كما تعمل الشركة من خلال شراكاتها الاستراتيجية على دعم وتمكين شركائها في جميع أنحاء العالم من الوصول إلى مدن المستقبل، اليوم".
   
   `,
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
 
 export default arabic;
