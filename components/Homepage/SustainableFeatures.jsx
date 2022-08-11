@@ -12,11 +12,50 @@ import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
-
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const SustainableFeatures = () => {
   const [featureSelected, setFeatureSelected] = useState(0);
   const lan = useLanguage();
   const [showData, setShowData] = useState(lan.sustainablesection.features[0]);
+
+  // Framer motiom setting
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
+  const variant1 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        bounce: 0.3,
+      },
+    },
+    hidden: {
+      x: "-100vw",
+      opacity: 0,
+    },
+  };
+  const variant2 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        bounce: 0.3,
+      },
+    },
+    hidden: {
+      x: "100vw",
+      opacity: 0,
+    },
+  };
+  const controls = useAnimation();
+
   useEffect(() => {
     switch (featureSelected) {
       case 0: {
@@ -37,6 +76,15 @@ const SustainableFeatures = () => {
       }
     }
   }, [featureSelected, lan]);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [inView]);
 
   const changeShowData = (value) => {
     if (value === 1) {
@@ -145,7 +193,7 @@ const SustainableFeatures = () => {
   };
 
   return (
-    <div className={styles.app__sustainablefeaturesection}>
+    <div ref={ref} className={styles.app__sustainablefeaturesection}>
       <Row>
         <Col className={styles.sustainablesection_heading}>
           <h5 className="sectionsubHeading">{lan.sustainablesection.title1}</h5>
@@ -156,12 +204,14 @@ const SustainableFeatures = () => {
       </Row>
       <Row>
         <Col md={3} className={styles.sustainImgCol}>
-          <Image
-            src="/Images/sustainableleft.png"
-            width={562}
-            height={546}
-            className={styles.susimage1}
-          />
+          <motion.div animate={controls} initial="hidden" variants={variant1}>
+            <Image
+              src="/Images/sustainableleft.png"
+              width={562}
+              height={546}
+              className={styles.susimage1}
+            />
+          </motion.div>
         </Col>
         <Col className={styles.sustainablefeaturecontent} md={6} sm={6} lg={6}>
           <Container className={`${styles.sustainablefeatures}`} fluid>
@@ -170,12 +220,14 @@ const SustainableFeatures = () => {
           </Container>
         </Col>
         <Col md={3} className={styles.sustainImgCol}>
-          <Image
-            src="/Images/sustainableright.png"
-            width={470}
-            height={501}
-            className={styles.susimage2}
-          />
+          <motion.div animate={controls} initial="hidden" variants={variant2}>
+            <Image
+              src="/Images/sustainableright.png"
+              width={470}
+              height={501}
+              className={styles.susimage2}
+            />
+          </motion.div>
         </Col>
       </Row>
     </div>
