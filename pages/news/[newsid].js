@@ -1,9 +1,10 @@
 import styles from "../../styles/newssection.module.scss";
-import { Row, Col, Container } from "react-bootstrap";
 import Image from "next/image";
 import { BiShare } from "react-icons/bi";
 import Polygon from "../../public/Svg/Polygonorg.svg";
+import useLanguage from "../../utils/useLanguage";
 const News = () => {
+  const lan = useLanguage();
   return (
     <div className={styles.newspage_container}>
       <div className="mb-3">
@@ -23,13 +24,21 @@ const News = () => {
          </span>
             <span className={styles.ml14}>5 min. Read</span>   
          </div>
-         <h6 className={styles.secondheading}>MUSCAT | OMAN</h6>
+         <h6 className={styles.secondheading}>
+           {lan.newspage.locationtitle}
+         </h6>
          <div className={styles.hero_text_center1}>
-            <h2 className={styles.fontWeight8}>The Sustainable City - Yiti Signs Escrow </h2>
-            <h2 className={styles.fontWeight8}>Agreement with Sohar Islamic </h2>
+            <h2 className={styles.fontWeight8}>
+            {lan.newspage.title1}
+            </h2>
+            <h2 className={styles.fontWeight8}>
+            {lan.newspage.title2}
+            </h2>
          </div>
          <div className={styles.mt22}>
-            <span className={styles.datestyling}>29th July, 2022</span>
+            <span className={styles.datestyling}>
+                {lan.newspage.date}
+            </span>
          </div>
          
        <div className={styles.Poly1}>
@@ -67,24 +76,24 @@ const News = () => {
             <div>
               <div className={styles.newspage_heading}>
                 <h6>
-                  Britain to open up, Ramadan begins. It feels like
-                  perfect timing, with Russia cheif army scrubbling over the
-                  issue.
+                {lan.newspage.desctitle1}
+                </h6>
+                  
+                <h6 className={styles.secondary_h1}>
+                {lan.newspage.descpara1}
+                </h6>
+                
+                <h6 className={styles.secondary_h1}>
+                  {lan.newspage.descpara2}
+                </h6>
+                <h6 className={styles.hero_newspageadjustment}> 
+                  {lan.newspage.desctitle2}
                 </h6>
                 <h6 className={styles.secondary_h1}>
-                Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.
+                {lan.newspage.descpara3}
                 </h6>
                 <h6 className={styles.secondary_h1}>
-                Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.
-                </h6>
-                <h6 className={styles.hero_newspageadjustment}>
-                  Calculating earnings in the Partner Program 
-                </h6>
-                <h6 className={styles.secondary_h1}>
-                Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.
-                </h6>
-                <h6 className={styles.secondary_h1}>
-                Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.
+                {lan.newspage.descpara4}
                 </h6>
               </div>
             </div>
