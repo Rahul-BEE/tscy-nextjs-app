@@ -66,22 +66,215 @@ const english = {
       "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
     markers: [
       {
-        name: "Plaza",
+        name: "autism center",
         icon: "",
         marker: {
-          top: "50%",
-          left: "68%",
-          width: "60px",
-          height: "60px",
+          top: "5%",
+          left: "5%",
         },
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: "1250",
+          area: 1250,
           capacity: 3000,
           built: 2020,
         },
       },
+      // {
+      //   name: "equistrian center",
+      //   icon: "",
+      //   marker: {
+      //     top: "50%",
+      //     left: "70%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "see lab",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Sustainable mosque",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Green spine",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "residential",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "school & nursery",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Sports complex",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Wellness center",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "4 Star resort",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Branded Residencies",
+      //   icon: "",
+      //   marker: {
+      //     top: "10%",
+      //     left: "30%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: 1250,
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Plaza",
+      //   icon: "",
+      //   marker: {
+      //     top: "50%",
+      //     left: "70%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: "1250",
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "5 star resort",
+      //   icon: "",
+      //   marker: {
+      //     top: "50%",
+      //     left: "70%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: "1250",
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
+      // {
+      //   name: "Festival Park",
+      //   icon: "",
+      //   marker: {
+      //     top: "50%",
+      //     left: "70%",
+      //   },
+      //   description:
+      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      //   details: {
+      //     area: "1250",
+      //     capacity: 3000,
+      //     built: 2020,
+      //   },
+      // },
     ],
   },
   locationsection: {
