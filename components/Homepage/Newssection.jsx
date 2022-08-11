@@ -5,12 +5,10 @@ import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
 import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
-import { useRouter } from "next/router";
 
 function Newssection() {
   const lan = useLanguage();
-  const router = useRouter();
-  const { locale } = router;
+
   const data = [
     {
       id: 1,
@@ -93,12 +91,7 @@ function Newssection() {
           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
-              <div
-                className={`${styles.hero_box} ${
-                  locale === "ar" && "hero_box2"
-                }`}
-                key={index}
-              >
+              <div className={styles.hero_box} key={index}>
                 <div>
                   <div className={styles.news_heading}>
                     <h3>{item.title}</h3>
@@ -114,10 +107,10 @@ function Newssection() {
           <div className={styles.hero_secondry_box}>
             <div className={styles.news_nav}>
               <p onClick={(e) => handelChnagePrev(e)}>
-                <FaChevronLeft /> Previous
+                <FaChevronLeft className={styles.icon} /> Previous
               </p>
               <p onClick={(e) => handelChange(e)}>
-                Next <FaChevronRight />
+                Next <FaChevronRight className={styles.icon} />
               </p>
             </div>
 
@@ -133,11 +126,11 @@ function Newssection() {
         </div>
 
         {/* tablet view */}
-        <NewsCarousel />
+        <NewsCarousel data={data} />
       </div>
 
       {/* mobile */}
-      <NewsMobile />
+      <NewsMobile data={data} />
     </div>
   );
 }

@@ -2,6 +2,8 @@ import styles from "../../styles/home.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
+// import MasterPlanPoints from "../../public/Svg/masterplanpoints.svg";
+import Masterplanmarker from "../Masterplanmarker";
 const Masterplan = () => {
   const lan = useLanguage();
 
@@ -21,12 +23,14 @@ const Masterplan = () => {
       <div className={`${styles.masterplan_imagecontainer}`}>
         <Image
           src="/Images/masterplanimage.png"
-          width={1568}
+          width={1528}
           height={800}
           className={styles.masterplanmap}
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"
         />
+        {/* <MasterPlanPoints /> */}
+        <Masterplanmarker />
       </div>
     </div>
   );
