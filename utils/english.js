@@ -1,3 +1,5 @@
+import styles from "../styles/home.module.scss";
+
 const english = {
   header: {
     langbtn: "مرحبا",
@@ -68,10 +70,7 @@ const english = {
       {
         name: "autism center",
         icon: "",
-        marker: {
-          top: "5%",
-          left: "5%",
-        },
+        className: styles.autism,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -80,201 +79,164 @@ const english = {
           built: 2020,
         },
       },
-      // {
-      //   name: "equistrian center",
-      //   icon: "",
-      //   marker: {
-      //     top: "50%",
-      //     left: "70%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "see lab",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Sustainable mosque",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Green spine",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "residential",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "school & nursery",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Sports complex",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Wellness center",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "4 Star resort",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Branded Residencies",
-      //   icon: "",
-      //   marker: {
-      //     top: "10%",
-      //     left: "30%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: 1250,
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Plaza",
-      //   icon: "",
-      //   marker: {
-      //     top: "50%",
-      //     left: "70%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: "1250",
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "5 star resort",
-      //   icon: "",
-      //   marker: {
-      //     top: "50%",
-      //     left: "70%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: "1250",
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
-      // {
-      //   name: "Festival Park",
-      //   icon: "",
-      //   marker: {
-      //     top: "50%",
-      //     left: "70%",
-      //   },
-      //   description:
-      //     "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      //   details: {
-      //     area: "1250",
-      //     capacity: 3000,
-      //     built: 2020,
-      //   },
-      // },
+      {
+        name: "equistrian center",
+        icon: "",
+        className: styles.equistrian,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "see lab",
+        icon: "",
+        className: styles.seelab,
+
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Sustainable mosque",
+        icon: "",
+        className: styles.mosque,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Green spine",
+        icon: "",
+        className: styles.spine,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "residential",
+        icon: "",
+        className: styles.residential,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "school& nursery",
+        className: styles.school,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Sports complex",
+        className: styles.sport,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Wellness center",
+        className: styles.wellness,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "4 Star resort",
+
+        className: styles.fourstar,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Branded Residencies",
+        className: styles.branded,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Plaza",
+        className: styles.plaza,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "5 star resort",
+        className: styles.fivestar,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Festival Park",
+        className: styles.festival,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
     ],
   },
   locationsection: {
@@ -390,6 +352,19 @@ const english = {
         discription: `Earning a commendable reputation for being the leading developers of sustainable communities in the UAE, Diamond Developers in partnership with the Oman Tourism Development Company (OMRAN Group), announced the launch of ‘The Sustainable City – Yiti’ in Muscat, today. With an investment value of nearly one billion US dollars, the city is the first project in Oman that meets the highest global green practices and adheres to the highest sustainability standards. <br><br>Spread over an area of 1 million square meters, ‘The Sustainable City – Yiti’ – will be developed within the phase 1 of the Yiti Integrated Tourism Development Masterplan - is the first project in Oman that meets the global green practices and is in adherence to the highest sustainability standards. This iconic destination is situated in the capital city of Muscat, overlooking the Sea of Oman and features a unique topography of majestic mountains that mingle with undisturbed valleys and pristine shores, which creates further competitive advantages to the destination.<br><br>Engineer Faris Saeed, Chairman of Diamond Developers said, “The Sustainable City – Yiti is not only a benchmark for sustainable urban development, it is a working model for future cities. It is a thriving community made up of thousands of residents, visitors, students, researchers, and entrepreneurs” he added. “The project is expected to be one of the region’s most sustainable cities, and by adopting the latest solutions in energy production, vertical farming, humidity harvesting, and autonomous transportation, we aim to be net zero carbon by 2040, in line with Oman’s vision and national strategy. At Diamond Developers, we remain committed to empowering and supporting partners around the world to realise the cities of tomorrow, today to deliver a more sustainable future for all of us.” <br><br>Further commenting on the launch, Eng. Mohammed Salim Al Busaidi, Chairman of OMRAN Group, said, “Our partnership with Diamond Developers to launch ‘The Sustainable City – Yiti’ is a unique milestone in our journey as we continue to invest, develop, and maximise the limitless potential of Oman’s tourism sector. As it’s being developed withinone of the largest urban developments in the Middle East, Yiti will open avenues for numerous lucrative investment opportunities for both local and international investors in line with the directions of Oman Investment Authority. Mirroring the Sultanate’s goal of driving transformational change to attain a green, circular economy and emissions reduction, the city embraces the highest standards of sustainability and attests to our vision of creating an eco-conscious community that is harmoniously aligned with the distinct geography of the region.” <br><br>With sustainable innovation at the heart of the development, the project will feature 1657 residential units including 300 eco-friendly and energy-efficient villas. Designed for comfort, practicality, and style, the spacious 3 and 4 bedroom villas will also offer significant savings on utility bills. <br><br>In line with the UN Sustainable Development Goals to reduce dependency on non-renewable sources of energy, the city is designed to produce 100 percent of its energy requirements from renewables which include solar panels and biogas. It will also recycle all its water and waste and use it for irrigation. Acknowledging the importance of creating a community that is self-sustaining, the city aims to grow its own food through productive farm areas and greenhouses. Encouraging community members to be a part of the process, private farming slots will also be allocated for residents to grow their own produce. <br><br>With a holistic approach to sustainability, the city will play a significant role in reducing carbon emissions by adopting clean mobility solutions like autonomies shuttles and electric cars, and by deploying EV charging stations around the project. The residential areas, designed to be car-free, will not only provide a safe environment for families but also encourage residents to build strong social connections within the community. <br><br>Dedicated to nurturing a new generation that understands the value of sustainability, the city will include a sustainable school that will teach important concepts of sustainability through the school curriculum. It will feature a ‘SEE lab’ which will showcase the latest in sustainability solutions like renewable energy technologies, indoor vertical farming, and humidity harvesting. With an innovative carbon natural building, the ‘SEE Institute’ will, additionally, focus on promoting awareness on environmental issues and sustainable living. <br><br>Striking the right balance between sustainability goals and promoting wellness, the city will feature a number of sports facilities which include jogging and cycling tracks, an equestrian club, and a horse track. It will also include a plaza that hosts a selection of commercial outlets, like shops, restaurants, and cafes. <br><br>In an endeavor to support eco-tourism, the project will feature a four-star neighborhood hotel with 197 rooms, a five-star resort with 170 rooms and a range of restaurants, numerous leisure facilities, and beachfront access. The resort will also manage 132 luxury serviced apartments to further accommodate the diverse needs of visitors. <br><br>The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable.`,
       },
     ],
+  },
+  newspage: {
+    locationtitle: "MUSCAT | OMAN",
+    title1: `The Sustainable City - Yiti Signs Escrow`,
+    title2: `Agreement with Sohar Islamic`,
+    date: "29th July, 2022",
+    desctitle1:"Britain to open up, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue.",
+    desctitle2:"Calculating earnings in the Partner Program ",
+    descpara1:"Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+    descpara2:"Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+    descpara3:"Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+    descpara4:"Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+ 
   },
 };
 

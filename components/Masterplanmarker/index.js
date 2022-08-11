@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/home.module.scss";
 import useLanguage from "../../utils/useLanguage";
+import { motion } from "framer-motion";
 const Masterplanmarker = () => {
   const lan = useLanguage();
   const pos = lan.masterplan.markers;
@@ -10,22 +11,19 @@ const Masterplanmarker = () => {
       {pos.length > 0 &&
         pos.map((item, index) => (
           <div
-            className={styles.masterplan_marker}
-            style={{
-              top: item.marker.top,
-              left: item.marker.left,
-            }}
+            className={`${styles.masterplan_marker} ${item.className}`}
             key={`${index}_${item.name}`}>
             <p>{item.name}</p>
             <Link href="/id">
-              <a
+              <motion.a
                 className={styles.markeranchor}
-                style={{
-                  width: item.marker.width,
-                  height: item.marker.height,
-                }}>
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 0.3 },
+                }}
+                style={{ cursor: "pointer" }}>
                 <Image src="/Images/masterplanmarker.png" layout="fill" />
-              </a>
+              </motion.a>
             </Link>
           </div>
         ))}

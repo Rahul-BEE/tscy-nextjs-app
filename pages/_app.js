@@ -5,7 +5,7 @@ import { Header, Footer } from "../components";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Component {...pageProps} />
       <Footer />
     </>
