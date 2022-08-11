@@ -43,12 +43,15 @@ const Villplans = () => {
               md={3}
               lg={3}
               key={`${index}_villas`}
-              onClick={() => changeVilla(index)}>
+              onClick={() => changeVilla(index)}
+            >
               <motion.h5
                 whileHover={{ scale: 1.2 }}
                 onHoverStart={(e) => {}}
-                onHoverEnd={(e) => {}}>
+                onHoverEnd={(e) => {}}
+              >
                 {villa.bedrooms}
+                <span className={styles[`border_line_${index}`]}></span>
               </motion.h5>
               <p>{villa.homepagetitle}</p>
             </Col>
