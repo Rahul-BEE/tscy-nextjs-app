@@ -7,15 +7,6 @@ const useLanguage = () => {
   const { locale } = router;
   const lan = locale === "ar" ? arabic : english;
 
-  if (typeof window !== "undefined") {
-    if (locale === "ar") {
-      document.body.classList.remove("en");
-      document.body.classList.add("ar");
-    } else {
-      document.body.classList.remove("ar");
-      document.body.classList.add("en");
-    }
-  }
 
   return lan;
 };

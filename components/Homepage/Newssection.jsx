@@ -5,10 +5,12 @@ import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
 import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
+import { useRouter } from "next/router";
 
 function Newssection() {
   const lan = useLanguage();
-
+  const router = useRouter();
+  const { locale } = router;
   const data = [
     {
       id: 1,
@@ -91,7 +93,12 @@ function Newssection() {
           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
-              <div className={styles.hero_box} key={index}>
+              <div
+                className={`${styles.hero_box} ${
+                  locale === "ar" && "hero_box2"
+                }`}
+                key={index}
+              >
                 <div>
                   <div className={styles.news_heading}>
                     <h3>{item.title}</h3>
