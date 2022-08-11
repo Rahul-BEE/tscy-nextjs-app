@@ -1,3 +1,4 @@
+import styles from "../styles/home.module.scss";
 const arabic = {
   header: {
     langbtn: "Hello",
@@ -63,6 +64,178 @@ const arabic = {
     title2: "OUR MASTER PLAN",
     description:
       "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+    markers: [
+      {
+        name: "autism center",
+        icon: "",
+        className: styles.autism,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "equistrian center",
+        icon: "",
+        className: styles.equistrian,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "see lab",
+        icon: "",
+        className: styles.seelab,
+
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Sustainable mosque",
+        icon: "",
+        className: styles.mosque,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Green spine",
+        icon: "",
+        className: styles.spine,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "residential",
+        icon: "",
+        className: styles.residential,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "school& nursery",
+        className: styles.school,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Sports complex",
+        className: styles.sport,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Wellness center",
+        className: styles.wellness,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "4 Star resort",
+
+        className: styles.fourstar,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Branded Residencies",
+        className: styles.branded,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Plaza",
+        className: styles.plaza,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "5 star resort",
+        className: styles.fivestar,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        name: "Festival Park",
+        className: styles.festival,
+        icon: "",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+    ],
   },
   locationsection: {
     title1: "Dont miss anything with",
@@ -174,10 +347,9 @@ const arabic = {
       {
         title: `دايموند للتطوير العقاري توقع اتفاقية شراكة مع الشركة العمانية للتنمية السياحية (عُمران) `,
         discription: `تحتفل اليوم شركة دايموند ديفيلوبرز - المتخصصة في تطوير المدن المستدامة – وبالشراكة مع الشركة العُمانية للتنمية السياحية (مجموعة عُمران) عن إطلاق مشروع المدينة المستدامة - يتي في مسقط، بتكلفة إجمالية تبلغ قرابة مليار دولار، والذي يمثل أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في سلطنة عُمان.<br><br>وتمثل المدينة المستدامة - يتي التي سيجري تطويرها ضمن المرحلة الأولى في المخطط العام لمشروع يتي السياحي المتكامل - أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في السلطنة على مساحة إجمالية تصل إلى مليون متراً مربعاً. ويتميز بموقعه الفريد في ولاية مسقط وبإطلالته على بحر عُمان ومقوماته الطبيعية الثرية، من الشطآن الممتدة والجبال والمنحدرات الصخرية، فضلاً عن الأودية التي تتناغم ضمن طبوغرافية الموقع، ما يضفي قيمة تنافسية جديرة بالاهتمام للمشروع. <br><br>وحول ذلك، قال فارس سعيد، رئيس مجلس إدارة شركة دايموند ديفيلوبرز للتطوير العقاري: "لا تقتصر أهمية هذا المشروع على كونه نموذجاً يحتذى به للتطوير العُمراني المستدام، بل إنه يُعد ايضاً مجتمعاً متكاملاً يضم مرافق سكنية وخدمية مختلفة، ويحتضن الآلاف من المقيمين، والزوار، والطلبة، والباحثين."<br><br>وأضاف "ستكون المدينة المستدامة – يتي من بين أكثر المشاريع استدامة على مستوى المنطقة، ونسعى من خلال توظيف أحدث الحلول في إنتاج الطاقة، وإعادة التدوير، وإنتاج الماء من الهواء، والزراعة العمودية، والنقل ذاتي القيادة وغيرها إلى تحقيق الحياد الكربوني بحلول العام ٢٠٤٠، بما يتوافق مع أهداف التنمية المستدامة واتفاقية باريس للمناخ، ونتطلع في دايموند ديفيلوبرز إلى المضي قدماً في دعم جهود الحفاظ على البيئة وتعزيز التنمية المستدامة في المنطقة وأن نُسهم في الانتقال الفاعل نحو اقتصاد منخفض الكربون."<br><br>ومن جانبه قال المهندس محمد بن سالم البوسعيدي، رئيس مجلس مجموعة عُمران: "يعد التعاون مع دايموند ديفيلوبرز لإطلاق المدينة المستدامة - يتي علامة فارقة في رحلتنا نحو تحفيز الاستثمار وتطوير إمكانات القطاع السياحي في السلطنة، حيث يعتبر ضمن أكبر مشروعات التطوير الحضري التي يجري تطويرها في منطقة الشرق الأوسط، الأمر الذي يؤهله لفتح آفاق واعدة لجذب الاستثمارات المحلية والأجنبية وذلك موائمةً مع توجهات جهاز الاستثمار العُماني. وتماشيا مع جهود السلطنة نحو التحول إلى الاقتصاد الدائري الأخضر وخفض الانبعاثات الكربونية،<br><br>فإن المشروع يلبي أعلى معايير الاستدامة ويجسد رؤيتنا المتمثلة في صناعة وجهات تتناغم بشكل تام مع الثراء الطبيعي وفق أعلى درجات الحفاظ على البيئة."<br><br>ومن المخطط أن ينتهي إنجاز المشروع بحلول عام ٢٠٢٥، وسيوفر ١٦٥٧ وحدة سكنية، تتضمن ٣٠٠ فيلا صديقة للبيئة بتصاميم عصرية وعالية الكفاءة ومساحات متنوعة للفلل المؤلفة من ٣ و٤ غرف نوم، كما يتيح فرص توفير كبيرة للسكان في فواتير التشغيل والخدمات.<br><br>وتماشيا مع أهداف الأمم المتحدة للتنمية المستدامة نحو تقليل الاعتماد على مصادر الطاقة غير النظيفة، ستعتمد المدينة على مصادر الطاقة المتجددة بالكامل لتشغيل كافة مرافقها، حيث تنتج ١٠٠٪ من طاقتها في المرحلة التشغيلية عبر الألواح الشمسية والغاز الحيوي كما تقوم بإعادة تدوير المياه والنفايات العضوية بنسبة ١٠٠٪ إضافة إلى إعادة استعمال المياه المعاد تدويرها لري المناطق الزراعية والمساحات الخضراء، بالإضافة لتوفير مساحات زراعية خاصة للسكان.<br><br>وتعمل المدينة على تقليل انبعاثاتها الكربونية من خلال تطبيق أفضل الممارسات البيئية مثل الاعتماد على المركبات الكهربائية، والعربات ذاتية القيادة للتنقل داخل المدينة، وتوفير محطات شحن السيارات الكهربائية، كما تتميز المناطق السكنية بخلوها من السيارات مما يوفر بيئة آمنة للعائلات ويشجع على خلق علاقات اجتماعية متينة بين السكان.<br><br>كما يشمل المشروع مدرسة تعتمد غرس مفاهيم الاستدامة في مناهجها للجيل القادم، بالإضافة إلى مختبر (سي) الذي يعرض أبرز حلول الاستدامة كتقنيات الطاقة المتجددة والزراعة العمودية وغيرها من الحلول البيئية علاوة على زيادة الوعي البيئي وتسريع بناء مدن المستقبل.<br><br>وتهدف المدينة المستدامة أيضا إلى تعزيز نمط الحياة الصحية، حيث تحتوي على مراكز صحية ورياضية ومرافق للركض وركوب الدراجات ونادي للفروسية ومضمار للخيل، بالإضافة إلى مجموعة من المحلات التجارية والمطاعم، والمقاهي، والمراكز الفنية، والثقافية.<br><br>ولدعم قطاع الضيافة تحتضن المدينة منتجع من فئة الخمس نجوم يحتوي على ١٧٠ غرفة بالإضافة إلى ١٣٢ شقة فندقية فاخرة، وفندق من فئة الأربع نجوم يحتوي على ١٩٧ غرفة، توفر هذه الفنادق أعلى مستويات الخدمة والرفاهية بالإضافة لإمكانية الوصول إلى الشاطئ والاستمتاع بمختلف النشاطات البحرية.`,
-      }
-    ]
-  }
-  }
-
+      },
+    ],
+  },
+};
 
 export default arabic;

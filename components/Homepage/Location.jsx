@@ -2,8 +2,17 @@ import styles from "../../styles/home.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Clickme from "../../public/Svg/locationbtn.svg";
 const Location = () => {
   const lan = useLanguage();
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(false);
+    }, 15000);
+  });
   return (
     <div className={styles.app__locationsection}>
       <Row className="headingRow">
@@ -18,12 +27,22 @@ const Location = () => {
         </Col>
       </Row>
       <div className={styles.locationImagecontainer}>
-        <Image
-          src="/Images/locationimage2.png"
-          width={1728}
-          height={652}
-          layout="responsive"
-        />
+        {show ? (
+          <Image
+            src="/Images/locationimage2.png"
+            width={1728}
+            height={652}
+            layout="responsive"
+          />
+        ) : (
+          <Image
+            src="/Images/locationimage1.png"
+            width={1728}
+            height={652}
+            layout="responsive"
+          />
+        )}
+        {!show && <Clickme onClick={() => setShow(true)} />}
       </div>
     </div>
   );
