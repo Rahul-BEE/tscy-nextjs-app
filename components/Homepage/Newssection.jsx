@@ -5,10 +5,12 @@ import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
 import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
+import { useRouter } from "next/router";
 
 function Newssection() {
   const lan = useLanguage();
-
+  const router = useRouter();
+  const { locale } = router;
   const data = [
     {
       id: 1,
@@ -17,22 +19,12 @@ function Newssection() {
     },
     {
       id: 2,
-      title: `2Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
-      discription: `Thus, when using the definite article, the speaker assumes the
-      listener knows the identity of the noun’s referent (because it
-      is obvious, because it is common knowledge, or because it was
-      mentioned in the same sentence or an earlier sentence). Use of
-      an indefinite article implies that the speaker assumes the
-      listener does not have to be told the identity of the referent.
-      Use of an indefinite article implies that the speaker assumes
-      the listener does not have to be told the identity of the
-      referent.`,
+      title: lan.newssection.post[1].title,
+      discription: lan.newssection.post[1].discription,
     },
     {
       id: 3,
-      title: `3Britain starts to open up, Ramadan begins. It feels like
+      title: `Britain starts to open up, Ramadan begins. It feels like
       perfect timing, with Russia cheif army scrubbling over the
       issue.`,
       discription: `Thus, when using the definite article, the speaker assumes the
@@ -44,26 +36,6 @@ function Newssection() {
       Use of an indefinite article implies that the speaker assumes
       the listener does not have to be told the identity of the
       referent.`,
-    },
-    {
-      title: `4Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
-    },
-    {
-      title: `5Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
-    },
-    {
-      title: `6Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
-    },
-    {
-      title: `7Britain starts to open up, Ramadan begins. It feels like
-      perfect timing, with Russia cheif army scrubbling over the
-      issue.`,
     },
   ];
 
@@ -121,7 +93,12 @@ function Newssection() {
           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
-              <div className={styles.hero_box} key={index}>
+              <div
+                className={`${styles.hero_box} ${
+                  locale === "ar" && "hero_box2"
+                }`}
+                key={index}
+              >
                 <div>
                   <div className={styles.news_heading}>
                     <h3>{item.title}</h3>
