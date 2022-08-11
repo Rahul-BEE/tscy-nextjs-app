@@ -136,6 +136,8 @@
 .footer {
   position: relative;
   margin-top: 50px;
+
+
 }
 
 .items {
@@ -175,6 +177,11 @@
   @media (max-width: 1360px) {
     margin: 0 4%;
   }
+
+  &:lang(ar){
+    direction: rtl !important;
+    text-align: right !important;
+  }
 }
 
 .cards {
@@ -212,6 +219,12 @@
       }
     }
   }
+
+  &:lang(ar){
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
 }
 
 .newsletter {
@@ -224,13 +237,14 @@
   input {
     min-width: 300px;
     width: 100%;
-
     height: 56px;
     border: 1px solid $font_color_gray;
     border-radius: 6px;
     padding: 13px 30px;
     background-color: transparent;
     opacity: 0.5;
+
+
   }
 
   .social_icons {
@@ -241,12 +255,17 @@
     .icon {
       font-size: 2rem;
       margin-right: 2rem;
+
+      &:lang(ar){
+        margin-right: 0;
+        margin-left: 2rem;
+      }
     }
 
     @media (max-width: 1127px) {
       justify-content: space-evenly;
       .icon {
-        margin: 0;
+        margin: 0 !important;
       }
     }
     @media (max-width: 741px) {
@@ -264,7 +283,7 @@
 
     .icon {
       font-size: 2rem;
-      margin-right: 2rem;
+      margin: 0 1rem;
     }
   }
   @media (max-width: 741px) {
@@ -279,9 +298,16 @@
   span {
     position: absolute;
     top: 10px;
-    right: 20px;
     font-size: $fs_300;
     opacity: 0.6;
+  }
+
+  span:lang(en){
+    right: 20px;
+  }
+  span:lang(ar){
+    left: 20px;
+    transform: rotate(180deg);
   }
 }
 // bottom text
@@ -307,7 +333,7 @@
     display: block;
   }
 }
-// Accord
+// **************Accord****************
 
 .mobile_dropdown {
   color: $font_color_gray;
@@ -337,6 +363,10 @@
   .accord_card_body {
     color: $font_color_gray;
     text-align: center;
+  }
+
+  &:lang(ar){
+    direction: rtl;
   }
 }
 
