@@ -2,8 +2,7 @@ import styles from "../../styles/home.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
-// import MasterPlanPoints from "../../public/Svg/masterplanpoints.svg";
-import Masterplanmarker from "../Masterplanmarker";
+import Masterplanmarker from "./Masterplanmarker";
 const Masterplan = () => {
   const lan = useLanguage();
 
@@ -29,8 +28,25 @@ const Masterplan = () => {
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"
         />
-        {/* <MasterPlanPoints /> */}
         <Masterplanmarker />
+        <div className={styles.masterplan_bottomindex}>
+          <div>
+            <div className={styles.landmarktext}>
+              {lan.commontext.landmarks}
+            </div>
+            <div className={styles.landmarks}>
+              {lan.masterplan.markers.map((item) => {
+                return <p>{item.name}</p>;
+              })}
+            </div>
+            <div className={styles.tracktext}>{lan.commontext.tracks}</div>
+            <div className={styles.tracks}>
+              {lan.tracks.map((item) => (
+                <p>{item.name}</p>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

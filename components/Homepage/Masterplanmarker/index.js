@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../styles/home.module.scss";
-import useLanguage from "../../utils/useLanguage";
+import styles from "../../../styles/home.module.scss";
+import useLanguage from "../../../utils/useLanguage";
 import { motion } from "framer-motion";
 const Masterplanmarker = () => {
   const lan = useLanguage();

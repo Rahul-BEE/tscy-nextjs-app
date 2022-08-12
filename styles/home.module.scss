@@ -342,6 +342,45 @@
   .masterplan_imagecontainer {
     border-radius: 15px;
     position: relative;
+    .masterplan_bottomindex {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      padding: 0% 6%;
+      div {
+        background-color: #ffffff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: fit-content;
+        .landmarks {
+          flex-wrap: wrap;
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            width: 180px;
+            color: #777777;
+            white-space: nowrap;
+          }
+        }
+        .tracks {
+          flex-wrap: wrap;
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            text-transform: capitalize;
+            color: #777777;
+          }
+        }
+      }
+    }
   }
   .masterplan_markerLayer {
     position: absolute;
@@ -421,8 +460,8 @@
 }
 
 .mosque {
-  top: 10%;
-  left: 38%;
+  top: 11%;
+  left: 37%;
   .markeranchor {
     width: 1.7rem;
     height: 1.7rem;
@@ -519,8 +558,8 @@
   }
 }
 .wellness {
-  top: 28%;
-  left: 65%;
+  top: 29%;
+  left: 66%;
   .markeranchor {
     width: 1.9rem;
     height: 1.9rem;
@@ -734,22 +773,18 @@
     align-items: center;
     margin-bottom: 0;
     border-radius: 16px;
-
-  
   }
 
-  span{
+  span {
     width: 2px;
     height: 80%;
     background: #038fab;
     position: absolute;
-    top: 1px;
     right: 1px;
   }
-  .border_line_2{
+  .border_line_2 {
     display: none;
   }
-
   p {
     padding: 0;
     margin: 0;

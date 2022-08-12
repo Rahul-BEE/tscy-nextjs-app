@@ -3,7 +3,7 @@ import { BiChevronRightCircle, BiMenuAltLeft } from "react-icons/bi";
 import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
-import MobileMenu from "../MobilemenuModal";
+import MobileMenu from "./MobilemenuModal";
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useRouter } from "next/router";
 const Header = () => {
