@@ -107,15 +107,20 @@ const SustainableFeatures = () => {
       <Row className="mb-3">
         <Col
           className="d-flex justify-content-between align-items-center"
-          style={{ gap: "2.5rem" }}>
-          <RiArrowLeftSLine onClick={() => changeShowData(-1)} />
+          style={{ gap: "2.5rem" }}
+        >
+          <RiArrowLeftSLine
+            className={styles.rotate_icon}
+            onClick={() => changeShowData(-1)}
+          />
           <div
             className={`${styles.sustainableicons} ${
               featureSelected !== 0
                 ? styles.iconSocial
                 : styles.iconSocialActive
             }`}
-            onClick={() => setFeatureSelected(0)}>
+            onClick={() => setFeatureSelected(0)}
+          >
             <Polygon />
             <div className={styles.socialIconIcon}>
               <People />
@@ -125,7 +130,8 @@ const SustainableFeatures = () => {
             className={`${styles.sustainableicons} ${
               featureSelected !== 1 ? styles.iconEco : styles.iconEcoActive
             }`}
-            onClick={() => setFeatureSelected(1)}>
+            onClick={() => setFeatureSelected(1)}
+          >
             <Polygon />
             <div className={styles.ecoIconIcon}>
               <Eco />
@@ -135,14 +141,18 @@ const SustainableFeatures = () => {
             className={`${styles.sustainableicons} ${
               featureSelected !== 2 ? styles.iconEnv : styles.iconEnvActive
             }`}
-            onClick={() => setFeatureSelected(2)}>
+            onClick={() => setFeatureSelected(2)}
+          >
             <Polygon />
             <div className={styles.envIconIcon}>
               <Env />
             </div>
           </div>
 
-          <RiArrowRightSLine onClick={() => changeShowData(1)} />
+          <RiArrowRightSLine
+            className={styles.rotate_icon}
+            onClick={() => changeShowData(1)}
+          />
         </Col>
       </Row>
     );
@@ -163,7 +173,8 @@ const SustainableFeatures = () => {
                           : featureSelected === 2
                           ? "#70b795"
                           : "#E79127",
-                    }}>
+                    }}
+                  >
                     {showData?.heading}
                   </h3>
                   <p className="px-4 my-4">{showData?.sub}</p>
@@ -175,7 +186,8 @@ const SustainableFeatures = () => {
                     loop={true}
                     freeMode={true}
                     speed={1500}
-                    autoplay={{ delay: 1000, disableOnInteraction: false }}>
+                    autoplay={{ delay: 1000, disableOnInteraction: false }}
+                  >
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>
                         <h5 className={styles.bulletSustainable}>{bullet}</h5>
