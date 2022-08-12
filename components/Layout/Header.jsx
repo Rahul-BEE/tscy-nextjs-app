@@ -65,7 +65,9 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation">
           <BiMenuAltLeft
-            color="white"
+            color={
+              domYOffset || location.pathname !== "/" ? "#058da6" : "white"
+            }
             size={40}
             className="me-3"
             onClick={() => setShow(true)}

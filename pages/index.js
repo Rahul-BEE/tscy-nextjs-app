@@ -3,6 +3,7 @@ import {
   BannerSection,
   Location,
   Masterplan,
+  Partners,
   SustainableFeatures,
   Villaplans,
 } from "../components";
@@ -32,6 +33,7 @@ export default function Home() {
       <Location />
       <Villaplans />
       <Newssection />
+      <Partners />
     </div>
   );
 }

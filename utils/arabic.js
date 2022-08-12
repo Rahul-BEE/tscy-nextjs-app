@@ -367,6 +367,11 @@ const arabic = {
     descpara4:
       "Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
   },
+
+  partners: {
+    title1: "We are proud of our",
+    title2: "PROJECT PARTNERS",
+  },
 };
 
 export default arabic;

@@ -106,7 +106,7 @@ a {
 
 .sectionsubHeading {
   font-weight: 400;
-  font-size: 1.375rem;
+  font-size: 1rem;
   color: $sectionsubheadingcolor;
   width: fit-content;
   text-align: center;
@@ -134,12 +134,78 @@ a {
     text-align: center;
   }
 }
+.partnercontainer {
+  overflow: hidden;
+  margin: 5rem 0;
+}
+.scrolling-image {
+  background: url("../public/Images/partnerback.png") repeat-x;
+  height: 74px;
+  width: 8363.16px;
+  animation: slide 60s linear infinite;
+}
+.scrolling-image2 {
+  background: url("../public/Images/partnerback2.png") repeat-x;
+  height: 74px;
+  width: 8363.16px;
+  animation: slide2 60s linear infinite;
+}
 
-.test {
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2787.72px);
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(2787.72px);
+  }
+}
+
+.animatedBackground {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 13%;
-  left: 10%;
-  z-index: 2;
-  height: 30px;
-  width: 30px;
+  top: 0;
+  left: 0;
+  background: url("../public/Images/partnerback.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: animatedBackground 500s linear infinite;
+}
+.animatedBackground2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../public/Images/partnerback2.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: animatedBackground2 500s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
+}
+@keyframes animatedBackground2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
 }
