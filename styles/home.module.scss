@@ -731,17 +731,19 @@
     margin-bottom: 0;
     border-radius: 16px;
 
-    
-    span{
-      width: 2px;
-      height: 80%;
-      background: #038fab;
-      position: absolute;
-      right: 1px;
-    }
-    .border_line_2{
-      display: none;
-    }
+  
+  }
+
+  span{
+    width: 2px;
+    height: 80%;
+    background: #038fab;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+  }
+  .border_line_2{
+    display: none;
   }
 
   p {
