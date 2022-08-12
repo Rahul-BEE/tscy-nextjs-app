@@ -30,14 +30,14 @@ const Masterplan = () => {
         />
         <Masterplanmarker />
         <div className={styles.masterplan_bottomindex}>
-          <div>
+          <div className={styles.indexdiv}>
             <div className={styles.landmarktext}>
               {lan.commontext.landmarks}
             </div>
             <div className={styles.landmarks}>
-              {lan.masterplan.markers.map((item) => {
-                return <p>{item.name}</p>;
-              })}
+              {lan.masterplan.markers.map((item) =>
+                [10, 13, 6].includes(item.id) ? <></> : <p>{item.name}</p>
+              )}
             </div>
             <div className={styles.tracktext}>{lan.commontext.tracks}</div>
             <div className={styles.tracks}>
