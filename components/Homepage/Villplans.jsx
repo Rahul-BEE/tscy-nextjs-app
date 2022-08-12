@@ -49,9 +49,9 @@ const Villplans = () => {
                 onHoverStart={(e) => {}}
                 onHoverEnd={(e) => {}}>
                 {villa.bedrooms}
-                <span className={styles[`border_line_${index}`]}></span>
               </motion.h5>
               <p>{villa.homepagetitle}</p>
+              <span className={styles[`border_line_${index}`]}></span>
             </Col>
           ))}
       </Row>
