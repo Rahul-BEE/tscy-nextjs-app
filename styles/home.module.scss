@@ -346,6 +346,7 @@
       position: absolute;
       bottom: 60px;
       left: 0;
+      width: 100%;
       padding: 0% 6%;
       div {
         background-color: #ffffff;
@@ -354,7 +355,8 @@
         justify-content: flex-start;
         height: fit-content;
         .landmarks {
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: auto auto auto auto;
           p {
             font-style: normal;
             font-weight: 500;
@@ -369,7 +371,8 @@
           }
         }
         .tracks {
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: auto auto;
           p {
             font-style: normal;
             font-weight: 500;
