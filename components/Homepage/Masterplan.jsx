@@ -39,6 +39,7 @@ const Masterplan = () => {
                 [10, 13, 6].includes(item.id) ? <></> : <p>{item.name}</p>
               )}
             </div>
+            <span className={styles.seperator}></span>
             <div className={styles.tracktext}>{lan.commontext.tracks}</div>
             <div className={styles.tracks}>
               {lan.tracks.map((item) => (
