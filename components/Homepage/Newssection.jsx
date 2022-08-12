@@ -35,6 +35,16 @@ function Newssection() {
       the listener does not have to be told the identity of the
       referent.`,
     },
+    {
+      id: 4,
+      title: lan.newssection.post[0].title,
+      discription: lan.newssection.post[0].discription,
+    },
+    {
+      id: 5,
+      title: lan.newssection.post[1].title,
+      discription: lan.newssection.post[1].discription,
+    },
   ];
 
   const initialData = {
@@ -52,6 +62,14 @@ function Newssection() {
         secondSlice: sliceNumber.secondSlice + 1,
         lastSlice: sliceNumber.lastSlice + 1,
       });
+    } else {
+      console.log(sliceNumber);
+      setSliceNumber({
+        ...sliceNumber,
+        firstSlice: 0,
+        secondSlice: 1,
+        lastSlice: 3,
+      });
     }
   };
 
@@ -63,6 +81,13 @@ function Newssection() {
         firstSlice: sliceNumber.firstSlice - 1,
         secondSlice: sliceNumber.secondSlice - 1,
         lastSlice: sliceNumber.lastSlice - 1,
+      });
+    } else {
+      setSliceNumber({
+        ...sliceNumber,
+        firstSlice: 2,
+        secondSlice: 3,
+        lastSlice: 5,
       });
     }
   };
