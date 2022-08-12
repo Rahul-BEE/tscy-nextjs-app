@@ -15,7 +15,7 @@ const Masterplan = () => {
         </Col>
       </Row>
       <Row className={`${styles.masterplan_description} flex`}>
-        <Col md={6} lg={6} sm={12}>
+        <Col md={6} lg={6} sm={12} xl={8}>
           {lan.masterplan.description}
         </Col>
       </Row>

@@ -14,7 +14,7 @@ const Header = () => {
   const lan = useLanguage(loading);
   const location = useRouter();
 
-  useLayoutEffect = useEffect;
+  // useLayoutEffect = useEffect;
   useEffect(() => {
     if (typeof window !== "undefined") {
       setLanguage(
