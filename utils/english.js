@@ -68,6 +68,7 @@ const english = {
       "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
     markers: [
       {
+        id: 1,
         name: "autism center",
         icon: "",
         className: styles.autism,
@@ -80,6 +81,7 @@ const english = {
         },
       },
       {
+        id: 2,
         name: "equistrian center",
         icon: "",
         className: styles.equistrian,
@@ -92,6 +94,8 @@ const english = {
         },
       },
       {
+        id: 3,
+
         name: "see lab",
         icon: "",
         className: styles.seelab,
@@ -105,6 +109,8 @@ const english = {
         },
       },
       {
+        id: 4,
+
         name: "Sustainable mosque",
         icon: "",
         className: styles.mosque,
@@ -117,6 +123,8 @@ const english = {
         },
       },
       {
+        id: 5,
+
         name: "Green spine",
         icon: "",
         className: styles.spine,
@@ -129,6 +137,8 @@ const english = {
         },
       },
       {
+        id: 6,
+
         name: "residential",
         icon: "",
         className: styles.residential,
@@ -141,6 +151,7 @@ const english = {
         },
       },
       {
+        id: 7,
         name: "school& nursery",
         className: styles.school,
         icon: "",
@@ -153,6 +164,7 @@ const english = {
         },
       },
       {
+        id: 8,
         name: "Sports complex",
         className: styles.sport,
         icon: "",
@@ -165,6 +177,7 @@ const english = {
         },
       },
       {
+        id: 9,
         name: "Wellness center",
         className: styles.wellness,
         icon: "",
@@ -178,6 +191,7 @@ const english = {
       },
       {
         name: "4 Star resort",
+        id: 10,
 
         className: styles.fourstar,
         icon: "",
@@ -190,6 +204,7 @@ const english = {
         },
       },
       {
+        id: 11,
         name: "Branded Residencies",
         className: styles.branded,
         icon: "",
@@ -202,6 +217,7 @@ const english = {
         },
       },
       {
+        id: 12,
         name: "Plaza",
         className: styles.plaza,
         icon: "",
@@ -214,6 +230,7 @@ const english = {
         },
       },
       {
+        id: 13,
         name: "5 star resort",
         className: styles.fivestar,
         icon: "",
@@ -226,6 +243,7 @@ const english = {
         },
       },
       {
+        id: 14,
         name: "Festival Park",
         className: styles.festival,
         icon: "",
@@ -323,7 +341,35 @@ const english = {
     smarthome: "Smart Home",
     privategarden: "Private Garden",
     seedetails: "See Details",
+    tracks: "Tracks",
+    landmarks: "Landmarks",
   },
+  tracks: [
+    {
+      id: 1,
+      name: "Walking",
+    },
+    {
+      id: 2,
+      name: "Running",
+    },
+    {
+      id: 3,
+      name: "Cycling",
+    },
+    {
+      id: 4,
+      name: "Equistrian",
+    },
+    {
+      id: 5,
+      name: "Bus",
+    },
+    {
+      id: 6,
+      name: "Smart Cars",
+    },
+  ],
   newssection: {
     post: [
       {

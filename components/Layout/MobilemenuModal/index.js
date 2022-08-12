@@ -1,12 +1,12 @@
 import Modal from "react-bootstrap/Modal";
-import styles from "../../styles/layout.module.scss";
+import styles from "../../../styles/layout.module.scss";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import Image from "next/image";
-import useLanguage from "../../utils/useLanguage";
+import useLanguage from "../../../utils/useLanguage";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Polygon from "../../public/Svg/menupolygon.svg";
+import Polygon from "../../../public/Svg/menupolygon.svg";
 const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
   const lan = useLanguage();
   const router = useRouter();

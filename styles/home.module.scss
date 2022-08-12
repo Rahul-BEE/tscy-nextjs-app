@@ -342,6 +342,45 @@
   .masterplan_imagecontainer {
     border-radius: 15px;
     position: relative;
+    .masterplan_bottomindex {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      padding: 0% 6%;
+      div {
+        background-color: #ffffff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: fit-content;
+        .landmarks {
+          flex-wrap: wrap;
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            text-transform: capitalize;
+            padding: 0;
+            margin: 0;
+            width: 180px;
+            color: #777777;
+            white-space: nowrap;
+          }
+        }
+        .tracks {
+          flex-wrap: wrap;
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 30px;
+            text-transform: capitalize;
+            color: #777777;
+          }
+        }
+      }
+    }
   }
   .masterplan_markerLayer {
     position: absolute;
