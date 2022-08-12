@@ -749,6 +749,10 @@
 .villaplanindexrow {
   justify-content: center;
   margin: 1.8rem 0;
+
+  &:lang(ar){
+    direction: rtl;
+  }
 }
 .villaplanindexcol {
   text-align: center;
@@ -792,6 +796,10 @@
     font-size: 14px;
     line-height: 35px;
     color: #777777;
+  }
+
+  span .border_line_2:lang(ar){
+    display: none;
   }
 }
 

@@ -25,6 +25,12 @@
     box-shadow: none;
     outline: none;
   }
+
+  &:lang(ar){
+    direction: rtl !important;
+    text-align: right !important;
+  }
+  
 }
 
 .app_header2 {
@@ -110,6 +116,9 @@
     @media (max-width: 610px) {
       display: none;
     }
+  }
+  button .arrow_icon:lang(ar){
+    transform: rotate(180deg);
   }
 }
 .header_left_btn2 {
