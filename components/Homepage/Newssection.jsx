@@ -5,9 +5,11 @@ import NewsCarousel from "./NewsSectionComponents/NewsCarousel";
 import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
+import { motion, useAnimation } from "framer-motion";
 
 function Newssection() {
   const lan = useLanguage();
+  const controls = useAnimation();
 
   const data = [
     {
@@ -55,6 +57,7 @@ function Newssection() {
   const [sliceNumber, setSliceNumber] = useState(initialData);
   const handelChange = (e) => {
     e.preventDefault();
+    controls.start("hidden");
     if (data.length - 1 >= sliceNumber.lastSlice) {
       setSliceNumber({
         ...sliceNumber,
@@ -71,6 +74,7 @@ function Newssection() {
         lastSlice: 3,
       });
     }
+    controls.start("visible");
   };
 
   const handelChnagePrev = (e) => {
@@ -90,6 +94,41 @@ function Newssection() {
         lastSlice: 5,
       });
     }
+  };
+  const variants1 = {
+    visible: {
+      borderRadius: ["50%", "50%", "0%", "0%"],
+      x: 400,
+      y: -100,
+      opacity: 1,
+      scale: 0.2,
+
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        bounce: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+    },
+  };
+
+  const variants = {
+    visible: {
+      x: [400, 100, 0],
+      y: [-100, 0],
+      opacity: [0, 1],
+      scale: [0, 1],
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+    },
   };
 
   return (
@@ -121,7 +160,12 @@ function Newssection() {
                   <div className={styles.news_heading}>
                     <h3>{item.title}</h3>
                   </div>
-                  <div className={styles.test_box}></div>
+                  <motion.div
+                    className={styles.test_box}
+                    animate={controls}
+                    initial="visible"
+                    variants={variants}
+                  ></motion.div>
                   <p>{item.discription}</p>
                 </div>
               </div>
@@ -131,12 +175,18 @@ function Newssection() {
 
           <div className={styles.hero_secondry_box}>
             <div className={styles.news_nav}>
-              <p onClick={(e) => handelChnagePrev(e)}>
+              <motion.p
+                onClick={(e) => handelChnagePrev(e)}
+                whileTap={{ scale: 0.9 }}
+              >
                 <FaChevronLeft className={styles.icon} /> Previous
-              </p>
-              <p onClick={(e) => handelChange(e)}>
+              </motion.p>
+              <motion.p
+                onClick={(e) => handelChange(e)}
+                whileTap={{ scale: 0.9 }}
+              >
                 Next <FaChevronRight className={styles.icon} />
-              </p>
+              </motion.p>
             </div>
 
             {data
