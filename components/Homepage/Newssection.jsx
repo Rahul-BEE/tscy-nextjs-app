@@ -127,7 +127,7 @@ function Newssection() {
       },
     },
     hidden: {
-      opacity: 0,
+      opacity: 1,
     },
   };
 
@@ -163,7 +163,7 @@ function Newssection() {
                   <motion.div
                     className={styles.test_box}
                     animate={controls}
-                    initial="visible"
+                    initial="hidden"
                     variants={variants}
                   ></motion.div>
                   <p>{item.discription}</p>
