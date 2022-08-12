@@ -26,11 +26,10 @@
     outline: none;
   }
 
-  &:lang(ar){
+  &:lang(ar) {
     direction: rtl !important;
     text-align: right !important;
   }
-  
 }
 
 .app_header2 {
@@ -78,6 +77,10 @@
     color: white;
     background-color: #058da6;
   }
+  .header_right_langbtn {
+    background-color: white;
+    color: #058da6;
+  }
 }
 
 .app__header_middle {
@@ -117,7 +120,7 @@
       display: none;
     }
   }
-  button .arrow_icon:lang(ar){
+  button .arrow_icon:lang(ar) {
     transform: rotate(180deg);
   }
 }
@@ -145,8 +148,6 @@
 .footer {
   position: relative;
   margin-top: 50px;
-
-
 }
 
 .items {
@@ -187,7 +188,7 @@
     margin: 0 4%;
   }
 
-  &:lang(ar){
+  &:lang(ar) {
     direction: rtl !important;
     text-align: right !important;
   }
@@ -229,7 +230,7 @@
     }
   }
 
-  &:lang(ar){
+  &:lang(ar) {
     margin-right: 0;
     margin-left: auto;
     text-align: right;
@@ -252,8 +253,6 @@
     padding: 13px 30px;
     background-color: transparent;
     opacity: 0.5;
-
-
   }
 
   .social_icons {
@@ -265,7 +264,7 @@
       font-size: 2rem;
       margin-right: 2rem;
 
-      &:lang(ar){
+      &:lang(ar) {
         margin-right: 0;
         margin-left: 2rem;
       }
@@ -311,10 +310,10 @@
     opacity: 0.6;
   }
 
-  span:lang(en){
+  span:lang(en) {
     right: 20px;
   }
-  span:lang(ar){
+  span:lang(ar) {
     left: 20px;
     transform: rotate(180deg);
   }
@@ -374,7 +373,7 @@
     text-align: center;
   }
 
-  &:lang(ar){
+  &:lang(ar) {
     direction: rtl;
   }
 }

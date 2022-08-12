@@ -256,9 +256,9 @@
     align-items: center;
     justify-content: center;
 
-    &:lang(ar){
+    &:lang(ar) {
       direction: rtl;
-      .rotate_icon{
+      .rotate_icon {
         transform: rotate(180deg);
       }
     }
@@ -397,7 +397,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 30px;
-
+            white-space: nowrap;
             text-transform: capitalize;
             color: #777777;
             padding: 0;
@@ -410,6 +410,9 @@
           width: 2px;
           border-radius: 20%;
           background-color: #058da6;
+        }
+        &:lang(ar) {
+          direction: rtl;
         }
       }
     }
@@ -443,6 +446,9 @@
 .markeranchor {
   display: block;
   position: relative;
+  &:lang(ar) {
+    direction: rtl;
+  }
 }
 
 .autism {
@@ -816,11 +822,11 @@
   }
   .border_line_2 {
     display: none;
-    &:lang(ar){
+    &:lang(ar) {
       display: block;
     }
   }
-  .border_line_0:lang(ar){
+  .border_line_0:lang(ar) {
     display: none;
   }
   p {
@@ -833,11 +839,9 @@
     color: #777777;
   }
 
-
   span .border_line_2:lang(ar) {
     display: none;
   }
-
 }
 
 .villaplanImageContainer {
@@ -883,7 +887,7 @@
     }
   }
 
-  &:lang(ar){
+  &:lang(ar) {
     direction: rtl;
   }
 }

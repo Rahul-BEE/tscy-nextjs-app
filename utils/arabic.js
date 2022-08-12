@@ -13,7 +13,7 @@ const arabic = {
 
   sustainablesection: {
     title1: "HOW WE SUPPORT",
-    title2: "SUSTAINABLE FEATURES",
+    title2: "خصائص الاستدامة",
     features: [
       {
         sectionhead: "خصائص الاستدامة",
@@ -67,7 +67,7 @@ const arabic = {
     markers: [
       {
         id: 1,
-        name: "autism center",
+        name: "مركز توحد",
         icon: "",
         className: styles.autism,
         description:
@@ -80,7 +80,7 @@ const arabic = {
       },
       {
         id: 2,
-        name: "equistrian center",
+        name: "مركز الفروسية",
         icon: "",
         className: styles.equistrian,
         description:
@@ -94,7 +94,7 @@ const arabic = {
       {
         id: 3,
 
-        name: "see lab",
+        name: "مختبر سي",
         icon: "",
         className: styles.seelab,
 
@@ -109,7 +109,7 @@ const arabic = {
       {
         id: 4,
 
-        name: "Sustainable mosque",
+        name: "مسجد مستدام",
         icon: "",
         className: styles.mosque,
         description:
@@ -123,7 +123,7 @@ const arabic = {
       {
         id: 5,
 
-        name: "Green spine",
+        name: "الحزام الأخضر",
         icon: "",
         className: styles.spine,
         description:
@@ -137,7 +137,7 @@ const arabic = {
       {
         id: 6,
 
-        name: "residential",
+        name: "المرافق السكنية",
         icon: "",
         className: styles.residential,
         description:
@@ -150,7 +150,7 @@ const arabic = {
       },
       {
         id: 7,
-        name: "school& nursery",
+        name: "مدرسة وحضانة",
         className: styles.school,
         icon: "",
         description:
@@ -163,7 +163,7 @@ const arabic = {
       },
       {
         id: 8,
-        name: "Sports complex",
+        name: "مجمع رياضي",
         className: styles.sport,
         icon: "",
         description:
@@ -176,7 +176,7 @@ const arabic = {
       },
       {
         id: 9,
-        name: "Wellness center",
+        name: "مركز صحي",
         className: styles.wellness,
         icon: "",
         description:
@@ -188,7 +188,7 @@ const arabic = {
         },
       },
       {
-        name: "4 Star resort",
+        name: "فندق 4 نجوم",
         id: 10,
 
         className: styles.fourstar,
@@ -203,7 +203,7 @@ const arabic = {
       },
       {
         id: 11,
-        name: "Branded Residencies",
+        name: "شقق فاخرة",
         className: styles.branded,
         icon: "",
         description:
@@ -216,7 +216,7 @@ const arabic = {
       },
       {
         id: 12,
-        name: "Plaza",
+        name: "البلازا",
         className: styles.plaza,
         icon: "",
         description:
@@ -229,7 +229,7 @@ const arabic = {
       },
       {
         id: 13,
-        name: "5 star resort",
+        name: "منتجع 5 نجوم",
         className: styles.fivestar,
         icon: "",
         description:
@@ -242,7 +242,7 @@ const arabic = {
       },
       {
         id: 14,
-        name: "Festival Park",
+        name: "ساحة المهرجانات",
         className: styles.festival,
         icon: "",
         description:
@@ -344,23 +344,23 @@ const arabic = {
   tracks: [
     {
       id: 1,
-      name: "Walking",
+      name: "مسار المشي",
     },
     {
       id: 2,
-      name: "Running",
+      name: "مسار الجري",
     },
     {
       id: 3,
-      name: "Cycling",
+      name: "مسار الدراجات الهوائية",
     },
     {
       id: 4,
-      name: "Equistrian",
+      name: "مسار الفروسية",
     },
     {
       id: 5,
-      name: "Bus",
+      name: "أوتوبيس",
     },
     {
       id: 6,

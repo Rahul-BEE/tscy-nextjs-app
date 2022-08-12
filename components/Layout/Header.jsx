@@ -54,8 +54,7 @@ const Header = () => {
     <header
       className={`${styles.app__header} ${
         domYOffset || location.pathname !== "/" ? styles.app_header2 : ""
-      } navbar navbar-expand-lg`}
-    >
+      } navbar navbar-expand-lg`}>
       <div className="container-fluid mx-2">
         <button
           className={`navbar-toggler ${styles.navbar__menubtn}`}
@@ -64,8 +63,7 @@ const Header = () => {
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <BiMenuAltLeft
             color={
               domYOffset || location.pathname !== "/" ? "#058da6" : "white"
@@ -92,13 +90,12 @@ const Header = () => {
             </a>
           </Link>
           <button
-            className={`btn ${styles.header_right_langbtn} ${
+            className={`btn ${
               domYOffset || location.pathname !== "/"
                 ? styles.header_right_langbtn2
-                : ""
+                : styles.header_right_langbtn
             }`}
-            onClick={() => handelLanguageChange()}
-          >
+            onClick={() => handelLanguageChange()}>
             {lan.header.langbtn}
           </button>
         </div>
@@ -107,8 +104,7 @@ const Header = () => {
             domYOffset || location.pathname !== "/"
               ? styles.header_middle_li2
               : ""
-          } collapse navbar-collapse`}
-        >
+          } collapse navbar-collapse`}>
           <ul className={`flex`}>
             {lan.header.links.map((link, index) => {
               return (
@@ -126,8 +122,7 @@ const Header = () => {
             domYOffset || location.pathname !== "/"
               ? styles.header_left_btn2
               : ""
-          } `}
-        >
+          } `}>
           <Link href={"/contact"} passHref>
             <button className="btn">
               {lan.header.contact}
@@ -138,8 +133,7 @@ const Header = () => {
       </div>
       <button
         className={`btn ${styles.header_right_langbtn} ${styles.mobilelangbtn}`}
-        onClick={() => handelLanguageChange()}
-      >
+        onClick={() => handelLanguageChange()}>
         {lan.header.langbtn}
       </button>
       {show && (
