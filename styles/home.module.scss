@@ -784,6 +784,12 @@
   }
   .border_line_2 {
     display: none;
+    &:lang(ar){
+      display: block;
+    }
+  }
+  .border_line_0:lang(ar){
+    display: none;
   }
   p {
     padding: 0;
@@ -795,9 +801,6 @@
     color: #777777;
   }
 
-  span .border_line_2:lang(ar){
-    display: none;
-  }
 }
 
 .villaplanImageContainer {
@@ -841,6 +844,10 @@
       background: #058da6;
       border-radius: 10px;
     }
+  }
+
+  &:lang(ar){
+    direction: rtl;
   }
 }
 
