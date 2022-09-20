@@ -253,6 +253,20 @@ const arabic = {
           built: 2020,
         },
       },
+      {
+        id: 6,
+
+        name: "المرافق السكنية",
+        icon: "",
+        className: styles.residential2,
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
     ],
   },
   locationsection: {
@@ -340,6 +354,7 @@ const arabic = {
     seedetails: "See Details",
     tracks: "Tracks",
     landmarks: "Landmarks",
+    components: "Components",
   },
   tracks: [
     {
