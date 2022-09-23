@@ -1,11 +1,12 @@
-import styles from "../../styles/home.module.scss";
+import styles from "../../styles/masterplan.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import Masterplanmarker from "./Masterplanmarker";
+import { motion } from "framer-motion";
+import { useState } from "react";
 const Masterplan = () => {
   const lan = useLanguage();
-
   return (
     <div className={styles.app__masterplan}>
       <Row className="headingRow">
@@ -19,35 +20,44 @@ const Masterplan = () => {
           {lan.masterplan.description}
         </Col>
       </Row>
-      <div className={`${styles.masterplan_imagecontainer}`}>
+      <div className={styles.masterplan}>
         <Image
           src="/Images/masterplanimage.png"
           width={1528}
           height={800}
+          // objectPosition="50% 50%"
+
+          objectFit="cover"
           className={styles.masterplanmap}
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"
         />
+
         <Masterplanmarker />
-        <div className={styles.masterplan_bottomindex}>
+        {/* <div className={styles.masterplan_bottomindex}>
           <div className={styles.indexdiv}>
-            <div className={styles.landmarktext}>
-              {lan.commontext.landmarks}
+            <div className={styles.componentdiv}>
+              <div className={styles.componentheading}>
+                {lan.commontext.components}
+              </div>
+              <div className={styles.components}>
+                {lan.masterplan.markers.map((item) => (
+                  <p>{item.name}</p>
+                ))}
+              </div>
             </div>
-            <div className={styles.landmarks}>
-              {lan.masterplan.markers.map((item) =>
-                [10, 13, 6].includes(item.id) ? <></> : <p>{item.name}</p>
-              )}
-            </div>
-            <span className={styles.seperator}></span>
-            <div className={styles.tracktext}>{lan.commontext.tracks}</div>
-            <div className={styles.tracks}>
-              {lan.tracks.map((item) => (
-                <p>{item.name}</p>
-              ))}
+            <div className={styles.tracksdiv}>
+              <div className={styles.tracksheading}>
+                {lan.commontext.tracks}
+              </div>
+              <div className={styles.tracks}>
+                {lan.tracks.map((item) => (
+                  <p>{item.name}</p>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

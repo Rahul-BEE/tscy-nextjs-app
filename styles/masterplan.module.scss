@@ -1,0 +1,79 @@
+//masterplan section
+
+.app__masterplan {
+  background: rgba(5, 141, 166, 0.1);
+  box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
+  padding: 5% 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .masterplan_description {
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    color: #777777;
+  }
+  .masterplan {
+    position: relative;
+    max-width: 1528px;
+    svg {
+      position: absolute;
+      inset: 0;
+      path {
+        position: absolute;
+      }
+    }
+    .masterplan_bottomindex {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      padding: 0 6%;
+      .indexdiv {
+        background: #ffffff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .componentdiv {
+          flex: 1;
+          flex-wrap: wrap;
+        }
+        .componentdiv,
+        .tracksdiv {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1rem;
+          line-height: 24px;
+          color: #777777;
+          text-transform: capitalize;
+          .componentheading,
+          .tracksheading {
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+.markeranchor {
+  display: block;
+  position: relative;
+  &:lang(ar) {
+    direction: rtl;
+  }
+}
+
+.masterplanpopup {
+  color: white;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}
