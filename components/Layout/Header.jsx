@@ -38,7 +38,7 @@ const Header = () => {
 
     setloading(!loading);
   };
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updatePosition() {
       if (window.pageYOffset > 600 && location.pathname === "/") {
         setDomYOffset(true);

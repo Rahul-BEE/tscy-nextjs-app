@@ -5,6 +5,7 @@ import Image from "next/image";
 import Masterplanmarker from "./Masterplanmarker";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import MasterplanPopup from "./Masterplanpop";
 const Masterplan = () => {
   const lan = useLanguage();
   return (
@@ -27,7 +28,6 @@ const Masterplan = () => {
           height={800}
           // objectPosition="50% 50%"
 
-          objectFit="cover"
           className={styles.masterplanmap}
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"

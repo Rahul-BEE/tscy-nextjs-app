@@ -1,4 +1,3 @@
-import styles from "../styles/home.module.scss";
 const english = {
   header: {
     langbtn: "مرحبا",
@@ -70,7 +69,6 @@ const english = {
         id: 1,
         name: "autism center",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.autism,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -83,7 +81,6 @@ const english = {
         id: 2,
         name: "equistrian center",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.equistrian,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -94,11 +91,8 @@ const english = {
       },
       {
         id: 3,
-
         name: "see lab",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.seelab,
-
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -109,10 +103,8 @@ const english = {
       },
       {
         id: 4,
-
         name: "Sustainable mosque",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.mosque,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -123,10 +115,8 @@ const english = {
       },
       {
         id: 5,
-
         name: "Green spine",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.spine,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -137,10 +127,8 @@ const english = {
       },
       {
         id: 6,
-
-        name: "West District",
+        name: "Branded Residencies",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.residential,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -151,8 +139,7 @@ const english = {
       },
       {
         id: 7,
-        name: "school& nursery",
-        className: styles.school,
+        name: "Wellness center",
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -165,20 +152,7 @@ const english = {
       {
         id: 8,
         name: "Sports complex",
-        className: styles.sport,
-        icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-      },
-      {
-        id: 9,
-        name: "Wellness center",
-        className: styles.wellness,
+
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -190,9 +164,19 @@ const english = {
       },
       {
         name: "4 Star resort",
+        id: 9,
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
         id: 10,
-
-        className: styles.fourstar,
+        name: "West District",
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -204,8 +188,7 @@ const english = {
       },
       {
         id: 11,
-        name: "Branded Residencies",
-        className: styles.branded,
+        name: "school& nursery",
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -217,21 +200,7 @@ const english = {
       },
       {
         id: 12,
-        name: "Plaza",
-        className: styles.plaza,
-        icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-      },
-      {
-        id: 13,
         name: "5 star resort",
-        className: styles.fivestar,
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -243,8 +212,7 @@ const english = {
       },
       {
         id: 14,
-        name: "Festival Park",
-        className: styles.festival,
+        name: "Plaza",
         icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -256,9 +224,20 @@ const english = {
       },
       {
         id: 15,
+        name: "Festival Park",
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+      },
+      {
+        id: 13,
         name: "East District",
         icon: "/Images/masterplan/plaza.png",
-        className: styles.residential2,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -356,6 +335,8 @@ const english = {
     tracks: "Tracks",
     landmarks: "Landmarks",
     components: "Components",
+    description: "Description",
+    details: "Details",
   },
   tracks: [
     {
