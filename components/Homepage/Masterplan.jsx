@@ -63,8 +63,8 @@ const Masterplan = () => {
           placeholder="blur"
         />
         {track === 18 && <CyclingTrack />}
-        {track === 17 && <JoggingTrack />}
-        {track === 16 && <EquistrainTrack />}
+        {track === 16 && <JoggingTrack />}
+        {track === 17 && <EquistrainTrack />}
         <Masterplanmarker
           getPath={getPath}
           x={x}
@@ -111,7 +111,7 @@ const Masterplan = () => {
                       setTrack(marker.id);
                     }}
                     style={{
-                      color: index === activeIndex - 1 ? "#058da6" : "",
+                      color: index + 15 === track - 1 ? "#058da6" : "",
                     }}>
                     <motion.span
                       style={{
