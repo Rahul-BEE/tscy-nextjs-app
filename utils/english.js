@@ -210,6 +210,19 @@ const english = {
           built: 2020,
         },
       },
+
+      {
+        id: 13,
+        name: "East District",
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+      },
       {
         id: 14,
         name: "Plaza",
@@ -230,18 +243,6 @@ const english = {
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
           area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-      },
-      {
-        id: 13,
-        name: "East District",
-        icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: 1250,
           capacity: 3000,
           built: 2020,
         },
@@ -340,15 +341,15 @@ const english = {
   },
   tracks: [
     {
-      id: 0,
+      id: 16,
       name: "Jogging",
     },
     {
-      id: 1,
+      id: 17,
       name: "Equistrian",
     },
     {
-      id: 2,
+      id: 18,
       name: "Cycling",
     },
   ],

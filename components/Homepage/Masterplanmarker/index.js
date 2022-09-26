@@ -2,21 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import MasterplanPopup from "../Masterplanpop";
 import styles from "../../../styles/masterplan.module.scss";
-const Masterplanmarker = () => {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
-  const [show, setShow] = useState(false);
-  const [item, setItem] = useState(0);
-  const getPath = ({ e, id }) => {
-    setShow(false);
-    const path = document.getElementById(`path_${id}`);
-    const rect = document.getElementById("something").getBoundingClientRect();
-    setItem(id);
-    setX(e.clientX - rect.left);
-    setY(e.clientY - rect.top);
-    setShow(true);
-  };
-  useEffect(() => {}, [item]);
+const Masterplanmarker = ({ getPath, show, setShow, item, y, x }) => {
+  useEffect(() => {}, [show, item]);
   return (
     <div
       id="something"
@@ -196,16 +183,16 @@ const Masterplanmarker = () => {
             fillOpacity="0.3"
           />
           <motion.g
-            id="path_13"
+            id="path_14"
             filter="url(#filter9_d_966_12867)"
-            onClick={(e) => getPath({ e, id: 13 })}
+            onClick={(e) => getPath({ e, id: 14 })}
             whileHover={{
               scale: 1.2,
               cursor: "pointer",
             }}>
             <path
               d="M1119.67 484.377C1117.71 483.245 1115.29 483.245 1113.33 484.377L1103.2 490.226C1101.24 491.358 1100.03 493.451 1100.03 495.716V507.414C1100.03 509.679 1101.24 511.771 1103.2 512.904L1113.33 518.753C1115.29 519.885 1117.71 519.885 1119.67 518.753L1129.8 512.904C1131.76 511.771 1132.97 509.679 1132.97 507.414V495.716C1132.97 493.451 1131.76 491.358 1129.8 490.226L1119.67 484.377Z"
-              fill={show && item === 13 ? "#058DA6" : "#E48C36"}
+              fill={show && item === 14 ? "#058DA6" : "#E48C36"}
             />
             <path
               d="M1119.19 485.2C1117.53 484.238 1115.47 484.238 1113.81 485.2L1103.68 491.049C1102.01 492.012 1100.98 493.791 1100.98 495.716V507.414C1100.98 509.339 1102.01 511.118 1103.68 512.08L1113.81 517.929C1115.47 518.892 1117.53 518.892 1119.19 517.929L1129.32 512.08C1130.99 511.118 1132.02 509.339 1132.02 507.414V495.716C1132.02 493.791 1130.99 492.012 1129.32 491.049L1119.19 485.2Z"
@@ -233,16 +220,16 @@ const Masterplanmarker = () => {
             fillOpacity="0.3"
           />
           <motion.g
-            id="path_14"
+            id="path_15"
             filter="url(#filter11_d_966_12867)"
-            onClick={(e) => getPath({ e, id: 14 })}
+            onClick={(e) => getPath({ e, id: 15 })}
             whileHover={{
               scale: 1.2,
               cursor: "pointer",
             }}>
             <path
               d="M1378.81 501.998C1376.94 500.918 1374.64 500.918 1372.77 501.998L1363.11 507.575C1361.24 508.654 1360.09 510.65 1360.09 512.809V523.963C1360.09 526.123 1361.24 528.118 1363.11 529.198L1372.77 534.775C1374.64 535.854 1376.94 535.854 1378.81 534.775L1388.47 529.198C1390.34 528.118 1391.5 526.123 1391.5 523.963V512.809C1391.5 510.65 1390.34 508.654 1388.47 507.575L1378.81 501.998Z"
-              fill={show && item === 14 ? "#058DA6" : "#E48C36"}
+              fill={show && item === 15 ? "#058DA6" : "#E48C36"}
             />
             <path
               d="M1378.36 502.783C1376.77 501.865 1374.81 501.865 1373.22 502.783L1363.56 508.36C1361.97 509.278 1361 510.974 1361 512.809V523.963C1361 525.799 1361.97 527.495 1363.56 528.413L1373.22 533.99C1374.81 534.907 1376.77 534.907 1378.36 533.99L1388.02 528.413C1389.61 527.495 1390.59 525.799 1390.59 523.963V512.809C1390.59 510.974 1389.61 509.278 1388.02 508.36L1378.36 502.783Z"
@@ -530,16 +517,16 @@ const Masterplanmarker = () => {
             fillOpacity="0.3"
           />
           <motion.g
-            id="path_15"
+            id="path_13"
             filter="url(#filter27_d_966_12867)"
-            onClick={(e) => getPath({ e, id: 15 })}
+            onClick={(e) => getPath({ e, id: 13 })}
             whileHover={{
               scale: 1.2,
               cursor: "pointer",
             }}>
             <path
               d="M878.762 543.587C877.362 542.779 875.638 542.779 874.238 543.587L867.007 547.762C865.607 548.57 864.745 550.064 864.745 551.68V560.029C864.745 561.646 865.607 563.139 867.007 563.948L874.238 568.122C875.638 568.93 877.362 568.93 878.762 568.122L885.993 563.948C887.393 563.139 888.255 561.646 888.255 560.029V551.68C888.255 550.064 887.393 548.57 885.993 547.762L878.762 543.587Z"
-              fill={show && item === 15 ? "#058DA6" : "#E48C36"}
+              fill={show && item === 13 ? "#058DA6" : "#E48C36"}
             />
             <path
               d="M878.423 544.175C877.233 543.488 875.767 543.488 874.577 544.175L867.346 548.349C866.157 549.036 865.424 550.306 865.424 551.68V560.029C865.424 561.403 866.157 562.673 867.346 563.36L874.577 567.534C875.767 568.221 877.233 568.221 878.423 567.534L885.654 563.36C886.843 562.673 887.576 561.403 887.576 560.029V551.68C887.576 550.306 886.843 549.036 885.654 548.349L878.423 544.175Z"
@@ -1768,8 +1755,8 @@ const Masterplanmarker = () => {
         <MasterplanPopup
           setShow={setShow}
           item={item - 1}
-          offsetTop={x}
-          offsetLeft={y}
+          offsetTop={y}
+          offsetLeft={x}
         />
       )}
     </div>

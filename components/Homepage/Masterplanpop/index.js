@@ -6,56 +6,56 @@ import { motion } from "framer-motion";
 const MasterplanPopup = ({ item, offsetTop, offsetLeft, setShow }) => {
   const lan = useLanguage();
   const ref = useRef(null);
-  const [width, setWidth] = useState(130);
-  const [data, _] = useState(lan.masterplan.markers[item]);
-
-  // const setNewWidth = useCallback(() => {
-  //   console.log(ref.current.clientWidth);
-  //   setWidth(ref.current.clientWidth / 2);
-  // }, [ref.current]);
-  // useEffect(() => {
-  //   window.addEventListener("resize", setNewWidth);
-  //   return () => {
-  //     window.removeEventListener("resize", setNewWidth);
-  //   };
-  // }, [ref]);
-
+  const [data, setData] = useState(undefined);
   useEffect(() => {
-    setWidth(ref.current.clientWidth / 2);
-  }, [ref.current]);
+    setData(lan.masterplan.markers[item]);
+    window.addEventListener("resize", () => setShow(false));
+    return () => {
+      window.removeEventListener("resize", () => setShow(false));
+    };
+  }, [item]);
   return (
     <div className={styles.masterplanpopup} key={`${item}_masterplanpop`}>
+      {console.log(`${item}_masterplanpop`)}
       {data && (
         <motion.div
-          onMouseLeave={() => setShow(false)}
           className={styles.popupinnercard}
           ref={ref}
           style={{
-            top: Number(offsetLeft),
-            left: Number(offsetTop - width),
+            top: Number(offsetTop),
+            left: Number(offsetLeft),
             position: "relative",
           }}
           data-position={item > 9 ? "top" : ""}>
-          <Image src={data.icon} width="60" height="65" layout="intrinsic" />
-          <h3>{data.name}</h3>
-          <h5>{lan.commontext.description}</h5>
-          <p className={styles.description}>{data.description}</p>
-          <h5>{lan.commontext.details}</h5>
-          <div className={styles.detailsContainer}>
-            <div className={styles.col1}>
-              <h6>{Object.keys(data.details)[0]}</h6>
-              <p>{Object.values(data.details)[0]}</p>
-            </div>
-            <div className={styles.col2}>
-              <h6>{Object.keys(data.details)[1]}</h6>
-              <p>{Object.values(data.details)[1]}</p>
-            </div>
-            <div className={styles.col3}>
-              <h6>{Object.keys(data.details)[2]}</h6>
-              <p>{Object.values(data.details)[2]}</p>
+          <div
+            className={`${item <= 9 ? styles.pentagontop : styles.normaltop}`}>
+            hi
+            {/* <Image src={data.icon} width="60" height="65" layout="responsive" /> */}
+          </div>
+          <div className={styles.contentbox}>
+            <h3>{data.name}</h3>
+            <h5>{lan.commontext.description}</h5>
+            <p className={styles.description}>{data.description}</p>
+            <h5>{lan.commontext.details}</h5>
+            <div className={styles.detailsContainer}>
+              <div className={styles.col1}>
+                <h6>{Object.keys(data.details)[0]}</h6>
+                <p>{Object.values(data.details)[0]}</p>
+              </div>
+              <div className={styles.col2}>
+                <h6>{Object.keys(data.details)[1]}</h6>
+                <p>{Object.values(data.details)[1]}</p>
+              </div>
+              <div className={styles.col3}>
+                <h6>{Object.keys(data.details)[2]}</h6>
+                <p>{Object.values(data.details)[2]}</p>
+              </div>
             </div>
           </div>
-          <button>{lan.commontext.seedetails}</button>
+          <div
+            className={`${item > 9 ? styles.pentagontop : styles.normaltop}`}>
+            <button>{lan.commontext.seedetails}</button>
+          </div>
         </motion.div>
       )}
     </div>

@@ -20,10 +20,11 @@
   }
   .masterplan {
     position: relative;
-    max-width: 1528px;
     svg {
       position: absolute;
       inset: 0;
+      height: 100%;
+      width: 100%;
       path {
         position: absolute;
       }
@@ -33,16 +34,15 @@
       position: absolute;
       inset: 0;
       height: 100%;
+      display: block;
       width: 100%;
       pointer-events: none;
-
       .popupinnercard {
+        width: 220px;
+        height: 440px;
+        transform: translate(-50%);
         font-family: "Poppins";
-        min-width: 200px;
-        min-height: 380px;
-        max-width: 260px;
-        max-height: 450px;
-        background-color: #ffffff;
+        background-color: white;
         font-size: 0.8125rem;
         line-height: 1;
         display: flex;
@@ -50,10 +50,11 @@
         align-items: center;
         justify-content: flex-start;
         color: #777777;
-        border-radius: 25px;
+        overflow: hidden;
         text-align: center;
-        padding: 5px;
         pointer-events: all;
+        -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
         h3 {
           text-transform: uppercase;
           letter-spacing: 0px;
@@ -74,24 +75,29 @@
         }
         button {
           color: #ffffff;
-          margin: 2rem 0;
+          margin: 1rem 0;
           background-color: #058da6;
         }
       }
       .popupinnercard[data-position="top"] {
-        transform: translateY(-100%);
+        transform: translate(-50%, -100%);
       }
     }
     .masterplan_bottomindex {
       position: absolute;
       bottom: 20px;
       width: 100%;
-      padding: 0 6%;
+      padding: 0 clamp(1vw, 4vw, 5vw);
+
       .indexdiv {
+        min-height: 125px;
+        height: 125px;
         background: #ffffff;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        border-radius: 15px;
+        padding: 10px;
         .componentdiv {
           flex: 1;
           flex-wrap: wrap;
@@ -99,20 +105,63 @@
         .componentdiv,
         .tracksdiv {
           display: grid;
+          min-height: 100%;
           grid-template-columns: auto 1fr;
           font-family: "Poppins";
           font-style: normal;
           font-weight: 500;
-          font-size: 1rem;
           line-height: 24px;
           color: #777777;
           text-transform: capitalize;
+          gap: 0.8rem;
           .componentheading,
           .tracksheading {
             font-weight: 700;
+            font-size: 14px;
             text-transform: uppercase;
           }
         }
+        .tracksdiv {
+          grid-template-columns: 40% 60%;
+          flex: 0.2;
+          position: relative;
+        }
+        .components,
+        .tracks {
+          display: grid;
+          grid-template-columns: repeat(5, 20%);
+          p {
+            font-family: "Poppins";
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+            font-size: clamp(12px, 0.4vw + 0.5rem, 0.9rem);
+            color: #777777;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+          @media (max-width: 1360px) {
+            grid-template-columns: repeat(4, 25%);
+          }
+        }
+        .tracks {
+          grid-template-columns: 1fr;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          height: 70%;
+          top: 15%;
+          right: 22%;
+          width: 2px;
+          background-color: #058da6;
+          border: none;
+          border-radius: 2px;
+        }
+      }
+      @media (max-width: 1224px) {
+        display: none;
       }
     }
   }
