@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import styles from "../../../styles/home.module.scss";
 
-function LocationSvgComp() {
-  const [svgchange, setSvgChange] = useState(true);
+function LocationSvgComp({ svgchange, setSvgChange }) {
   return (
     <div
+      className={styles.svg_mobile}
       style={{
         position: "absolute",
         inset: 0,

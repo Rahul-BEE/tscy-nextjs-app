@@ -362,12 +362,54 @@
     }
   }
 
+  .container_location{
+   overflow: hidden;
+  }
+  .container_location_mobile{
+    overflow: visible;
+  }
+
   .locationImagecontainer1{
-    position: relative;
+    position: relative !important;
     width: 100vw;
     height: 100%;
+
+    @media (max-width:600px) {
+      transform: rotate(270deg);
+      height: 100vw;
+      width: 100%;
+
+      .first_img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      span{
+        position: absolute !important;
+        right: 0%;
+        // top: 0%;
+        width: 100vh !important;
+        height: 100vw !important;
+      }
+      // location svg
+
+      .svg_mobile{
+        svg{
+          position: absolute;
+          // top: 10%;
+          right: 0;
+          width: 100vh !important;
+          height: 100vw !important;
+        }
+      }
+    }
   }
 }
+
+
+
 //villaplan Section
 
 .app__villplanmaincontainer {

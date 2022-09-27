@@ -5,9 +5,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Clickme from "../../public/Svg/locationbtn.svg";
 import LocationSvgComp from "./LocationSvg/LocationSvgComp";
+import { motion } from "framer-motion";
+
 const Location = () => {
   const lan = useLanguage();
   const [show, setShow] = useState(false);
+  const [svgchange, setSvgChange] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -46,16 +49,30 @@ const Location = () => {
         {!show && <Clickme onClick={() => setShow(true)} />}
       </div> */}
 
-      <div className={styles.locationImagecontainer1}>
-        <Image
-          src="/Images/location/Asset1.png"
-          width={1728}
-          height={872}
-          layout="responsive"
-          // layout="fill"
-        />
-        <LocationSvgComp />
-      </div>
+      <motion.div
+        className={
+          svgchange === true
+            ? styles.container_location
+            : styles.container_location_mobile
+        }
+        style={{
+          height: svgchange === true ? "100%" : "100vh",
+        }}
+      >
+        <div className={styles.locationImagecontainer1}>
+          <div className={styles.first_img}>
+            <Image
+              className={styles.mobile_img}
+              src="/Images/location/Asset1.png"
+              width={1728}
+              height={872}
+              layout="responsive"
+              // layout="fill"
+            />
+          </div>
+          <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
+        </div>
+      </motion.div>
     </div>
   );
 };
