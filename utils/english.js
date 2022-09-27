@@ -72,7 +72,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -84,7 +84,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -96,7 +96,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -108,7 +108,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -120,7 +120,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -132,7 +132,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -144,7 +144,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -157,7 +157,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -169,7 +169,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -181,7 +181,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -193,7 +193,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -205,7 +205,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: "1250",
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -218,7 +218,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: 1250,
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -230,7 +230,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: "1250",
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },
@@ -242,7 +242,7 @@ const english = {
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
-          area: "1250",
+          area: "1250 sq.ft",
           capacity: 3000,
           built: 2020,
         },

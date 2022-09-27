@@ -60,7 +60,7 @@ const Mobilebtmindex = () => {
               exit={{ y: -10, opacity: 0 }}
               transition={{ duration: 0.2, staggerChildren: 0.1 }}>
               {data.map((item) => {
-                return <p>{item.name}</p>;
+                return <p key={item.name}>{item.name}</p>;
               })}
             </motion.div>
           )}
