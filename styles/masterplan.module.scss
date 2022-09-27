@@ -43,49 +43,124 @@
       width: 100%;
       pointer-events: none;
       .popupinnercard {
-        width: 220px;
-        height: 440px;
-        transform: translate(-50%);
         font-family: "Poppins";
         background-color: white;
         font-size: 0.8125rem;
         line-height: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
         color: #777777;
-        overflow: hidden;
         text-align: center;
         pointer-events: all;
-        -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
-        clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
-        h3 {
-          text-transform: uppercase;
-          letter-spacing: 0px;
-          margin: 0.5rem 0;
+        max-width: 420px;
+        height: fit-content;
+        border-radius: 15px;
+        border-top-left-radius: 0;
+        padding: 1.5rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 33%);
+        gap: 0.5rem;
+        position: relative;
+        .popupheading {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: start;
+          gap: 1rem;
+          font-family: "Poppins" sans-serif;
+          font-size: 1rem;
+          h3 {
+            text-transform: capitalize;
+            font-size: 1.25rem;
+            letter-spacing: -0.022em;
+            margin: 0;
+            padding: 0;
+          }
+          h5 {
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+          }
         }
-        .description {
-          width: 80%;
+        p {
+          text-align: start;
+          margin: 0;
+          display: flex;
+          font-family: "Poppins", sans-serif;
+          font-size: 0.875rem;
+          font-weight: 400;
+          letter-spacing: -0.022em;
+          align-items: center;
+          line-height: 150%;
+        }
+        h5 {
+          text-transform: capitalize;
+          font-family: "Poppins", sans-serif;
+          font-size: 1rem;
+          margin: 0;
+          padding: 0;
+          text-align: start;
+        }
+        .contentbox {
+          text-align: start;
         }
         .detailsContainer {
+          margin-top: 0.5rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 0.8rem;
+          h6 {
+            text-transform: capitalize;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+          }
+          div {
+            h6,
+            span {
+              font-family: "Poppins", sans-serif;
+              font-size: 13px;
+              font-weight: 400;
+            }
+            h6 {
+              font-weight: 600;
+            }
+            span {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+        .popupcardbtn {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 1rem;
-          text-align: center;
-          h6 {
-            text-transform: capitalize;
+          position: absolute;
+          top: 18px;
+          right: 20px;
+          width: 40px;
+          height: 25px;
+          outline: none;
+          box-shadow: none;
+          border: 1px solid #058da6;
+          border-radius: 5px;
+          background: transparent;
+          svg {
+            color: #058da6;
           }
         }
-        button {
-          color: #ffffff;
-          margin: 1rem 0;
-          background-color: #058da6;
-        }
       }
-      .popupinnercard[data-position="top"] {
-        transform: translate(-50%, -100%);
+      .popupinnercard[data-pos="rt"] {
+        transform: translateX(-100%);
+        border-radius: 15px;
+        border-top-right-radius: 0;
+      }
+      .popupinnercard[data-pos="br"] {
+        transform: translate(-100%, -100%);
+        border-radius: 15px;
+        border-bottom-right-radius: 0;
+      }
+      @media (max-width: 1000px) {
+        display: none;
       }
     }
     .masterplan_bottomindex {

@@ -16,6 +16,8 @@ const Masterplan = () => {
   const [track, setTrack] = useState(null);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const [w, setW] = useState(0);
+  const [h, setH] = useState(0);
   const [show, setShow] = useState(false);
   const [item, setItem] = useState(0);
   const getPath = ({ id }) => {
@@ -23,10 +25,6 @@ const Masterplan = () => {
     const rect = document.getElementById("something").getBoundingClientRect();
     setItem(id);
     setActiveIndex(id);
-    // console.log(
-    //   path.getBoundingClientRect().width,
-    //   path.getBoundingClientRect().height
-    // );
     setX(
       path.getBoundingClientRect().x -
         rect.left +
@@ -37,6 +35,8 @@ const Masterplan = () => {
         rect.top +
         Number(path.getBoundingClientRect().height) / 2
     );
+    setW(Number(path.getBoundingClientRect().width));
+    setH(Number(path.getBoundingClientRect().height));
     setShow(true);
   };
   return (
@@ -62,6 +62,7 @@ const Masterplan = () => {
           className={styles.masterplanmap}
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"
+          priority={true}
         />
         {track === 18 && <CyclingTrack />}
         {track === 16 && <JoggingTrack />}
@@ -70,6 +71,8 @@ const Masterplan = () => {
           getPath={getPath}
           x={x}
           y={y}
+          w={w}
+          h={h}
           show={show}
           setShow={setShow}
           item={item}
