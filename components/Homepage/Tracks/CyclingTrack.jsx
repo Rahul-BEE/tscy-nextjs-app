@@ -8,8 +8,7 @@ const CyclingTrack = () => {
         inset: 0,
       }}>
       <svg
-        width="1528"
-        height="800"
+        preserveAspectRatio="none"
         viewBox="0 0 1528 800"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">

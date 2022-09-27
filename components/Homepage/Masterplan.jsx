@@ -9,6 +9,7 @@ import MasterplanPopup from "./Masterplanpop";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
+import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 const Masterplan = () => {
   const lan = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -57,7 +58,7 @@ const Masterplan = () => {
           width={1528}
           height={800}
           // objectPosition="50% 50%"
-
+          layout="fill"
           className={styles.masterplanmap}
           blurDataURL="/Images/masterplanimage.png"
           placeholder="blur"
@@ -127,6 +128,7 @@ const Masterplan = () => {
           </div>
         </div>
       </div>
+      <Mobilebtmindex />
     </div>
   );
 };
