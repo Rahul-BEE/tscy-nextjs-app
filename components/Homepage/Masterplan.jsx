@@ -21,6 +21,7 @@ const Masterplan = () => {
   const [h, setH] = useState(0);
   const [show, setShow] = useState(false);
   const [item, setItem] = useState(0);
+  const [zoom, setZoom] = useState(false);
   const getPath = ({ id }) => {
     const path = document.getElementById(`path_${id}`);
     const rect = document.getElementById("something").getBoundingClientRect();
@@ -93,9 +94,18 @@ const Masterplan = () => {
       </Row>
       <div className={styles.masterplanContainer}>
         <div className={styles.zoombtn}>
-          <BsFillPlusCircleFill />
+          <BsFillPlusCircleFill onClick={() => setZoom(!zoom)} />
         </div>
-        <motion.div className={styles.masterplan}>
+        <motion.div
+          className={styles.masterplan}
+          drag={zoom ? true : false}
+          dragConstraints={{
+            right: 0,
+            top: 0,
+          }}
+          style={{
+            scale: zoom ? 1.5 : 1,
+          }}>
           <Image
             id="masterplanmap"
             src="/Images/masterplanimage.png"
