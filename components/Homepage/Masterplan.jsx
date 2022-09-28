@@ -12,7 +12,6 @@ import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
-import { useGesture } from "@use-gesture/react";
 const Masterplan = () => {
   const lan = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -107,16 +106,16 @@ const Masterplan = () => {
   }, [isBrowser]);
 
   //Guestures
-  useGesture(
-    {
-      onDrag: () => {
-        console.log("dragging");
-      },
-    },
-    {
-      target: imageContainerRef,
-    }
-  );
+  // useGesture(
+  //   {
+  //     onDrag: () => {
+  //       console.log("dragging");
+  //     },
+  //   },
+  //   {
+  //     target: imageContainerRef,
+  //   }
+  // );
   return (
     <div className={styles.app__masterplan}>
       <Row className="headingRow">
