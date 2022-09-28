@@ -3,15 +3,17 @@ import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import Masterplanmarker from "./Masterplanmarker";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { BsFillPlusCircleFill } from "react-icons/bs";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useState } from "react";
+import { BsFillPlusCircleFill, BsMouse2Fill } from "react-icons/bs";
 import { AiFillMinusCircle } from "react-icons/ai";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 const Masterplan = () => {
   const lan = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -21,8 +23,11 @@ const Masterplan = () => {
   const [w, setW] = useState(0);
   const [h, setH] = useState(0);
   const [show, setShow] = useState(false);
+  const [isBrowser, setIsBrowser] = useState(false);
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const zoomAnimation = useAnimation();
+  const containerRef = useRef();
   const getPath = ({ id }) => {
     const path = document.getElementById(`path_${id}`);
     const rect = document.getElementById("something").getBoundingClientRect();
@@ -47,7 +52,6 @@ const Masterplan = () => {
   };
 
   const getTrackPath = async ({ id }) => {
-    console.log(id);
     setTrack(id);
     setShow(true);
     setActiveIndex(null);
@@ -72,14 +76,39 @@ const Masterplan = () => {
     }
   }, [track]);
 
+  const zoomHandler = (state) => {
+    setZoom(state);
+    if (state) {
+      zoomAnimation.start("visible");
+    } else {
+      zoomAnimation.start("hidden");
+    }
+  };
+
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsBrowser(window.innerWidth < 1224);
+    }
     window.addEventListener("resize", () => {
       setTrack(null);
+      setIsBrowser(window.innerWidth < 1224);
     });
     return () => {
-      window.removeEventListener("resize", () => setTrack(null));
+      window.removeEventListener("resize", () => {
+        setTrack(null);
+        setIsBrowser(window.innerWidth < 1224);
+      });
     };
   }, []);
+
+  useEffect(() => {
+    zoomAnimation.start("hidden");
+  }, [isBrowser]);
+
+  const dragHandler = (_, info) => {
+    console.log(info);
+  };
+
   return (
     <div className={styles.app__masterplan}>
       <Row className="headingRow">
@@ -93,24 +122,41 @@ const Masterplan = () => {
           {lan.masterplan.description}
         </Col>
       </Row>
-      <div className={styles.masterplanContainer}>
+      <div
+        className={styles.masterplanContainer}
+        id="masterplancontainer"
+        ref={containerRef}>
         <div className={styles.zoombtn}>
           {zoom ? (
-            <AiFillMinusCircle onClick={() => setZoom()} />
+            <AiFillMinusCircle onClick={() => zoomHandler(false)} />
           ) : (
-            <BsFillPlusCircleFill onClick={() => setZoom(!zoom)} />
+            <BsFillPlusCircleFill onClick={() => zoomHandler(true)} />
           )}
         </div>
         <motion.div
           className={styles.masterplan}
-          drag={zoom ? true : false}
-          dragConstraints={{
-            right: 0,
-            top: 0,
+          animate={zoomAnimation}
+          drag
+          dragListener={zoom}
+          dragConstraints={containerRef}
+          onDragEnd={dragHandler}
+          variants={{
+            visible: {
+              scale: 1.5,
+              transition: {
+                duration: 1,
+              },
+            },
+            hidden: {
+              scale: 1.1,
+              x: isBrowser ? "-28%" : 0,
+              y: 0,
+              transition: {
+                duration: 0.5,
+              },
+            },
           }}
-          style={{
-            scale: zoom ? 1.5 : 1,
-          }}>
+          initial="hidden">
           <Image
             id="masterplanmap"
             src="/Images/masterplanimage.png"
@@ -120,7 +166,6 @@ const Masterplan = () => {
             placeholder="blur"
             priority={true}
           />
-
           {track === 18 && <CyclingTrack />}
           {track === 16 && <JoggingTrack />}
           {track === 17 && <EquistrainTrack />}
@@ -135,7 +180,6 @@ const Masterplan = () => {
             item={item}
             track={track}
           />
-
           <div className={styles.masterplan_bottomindex}>
             <div className={styles.indexdiv}>
               <div className={styles.componentdiv}>
