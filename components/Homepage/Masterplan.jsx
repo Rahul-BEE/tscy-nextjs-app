@@ -6,6 +6,7 @@ import Masterplanmarker from "./Masterplanmarker";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import { AiFillMinusCircle } from "react-icons/ai";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
@@ -94,7 +95,11 @@ const Masterplan = () => {
       </Row>
       <div className={styles.masterplanContainer}>
         <div className={styles.zoombtn}>
-          <BsFillPlusCircleFill onClick={() => setZoom(!zoom)} />
+          {zoom ? (
+            <AiFillMinusCircle onClick={() => setZoom()} />
+          ) : (
+            <BsFillPlusCircleFill onClick={() => setZoom(!zoom)} />
+          )}
         </div>
         <motion.div
           className={styles.masterplan}
