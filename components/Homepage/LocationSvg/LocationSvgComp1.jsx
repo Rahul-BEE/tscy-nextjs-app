@@ -85,8 +85,8 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
                 y2="1224.32"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="white" stop-opacity="0" />
-                <stop offset="0.752354" stop-color="white" />
+                <stop stopColor="white" stopOpacity="0" />
+                <stop offset="0.752354" stopColor="white" />
               </linearGradient>
               <radialGradient
                 id="paint1_radial_1300_7920"
@@ -96,13 +96,13 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(255.635 112) rotate(90) scale(40 39.9307)"
               >
-                <stop stop-color="#E48C36" />
+                <stop stopColor="#E48C36" />
                 <stop
                   offset="0.591667"
-                  stop-color="#E48C36"
-                  stop-opacity="0.913542"
+                  stopColor="#E48C36"
+                  stopOpacity="0.913542"
                 />
-                <stop offset="0.864481" stop-color="#E48C36" stop-opacity="0" />
+                <stop offset="0.864481" stopColor="#E48C36" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>

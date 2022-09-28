@@ -74,7 +74,7 @@ const Location = () => {
           {/* <div className={styles.first_img}> */}
           <Image
             className={styles.mobile_img}
-            src="/Images/location/Asset1Mobile.png"
+            src="/Images/location/GroupMobile.png"
             // width={1028}
             // height={390}
             // layout="responsive"
