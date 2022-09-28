@@ -55,9 +55,9 @@ const Location = () => {
             ? styles.container_location
             : styles.container_location_mobile
         }
-        style={{
-          height: svgchange === true ? "100%" : "100vh",
-        }}
+        // style={{
+        //   height: svgchange === true ? "100%" : "100vh",
+        // }}
       >
         <div className={styles.locationImagecontainer1}>
           <div className={styles.first_img}>

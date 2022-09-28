@@ -362,11 +362,17 @@
     }
   }
 
-  .container_location{
-   overflow: hidden;
-  }
-  .container_location_mobile{
-    overflow: visible;
+  @media (max-width:600px) {
+    
+    .container_location{
+      overflow: hidden;
+      height: 100%;
+    }
+    .container_location_mobile{
+      overflow: visible;
+      height: 100vh;
+    }
+ 
   }
 
   .locationImagecontainer1{
@@ -402,6 +408,12 @@
           right: 0;
           width: 100vh !important;
           height: 100vw !important;
+        }
+        .svg_img_path_text{
+          transform: translateX(70px) translateY(90px) rotate(90deg) !important;
+        }
+        .svg_img_path_text1{
+          transform: translateX(-70px) translateY(-90px) rotate(90deg) !important;
         }
       }
     }
