@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Clickme from "../../public/Svg/locationbtn.svg";
 import LocationSvgComp from "./LocationSvg/LocationSvgComp";
+import LocationSvgComp1 from "./LocationSvg/LocationSvgComp1";
 import { motion } from "framer-motion";
 
 const Location = () => {
@@ -55,9 +56,6 @@ const Location = () => {
             ? styles.container_location
             : styles.container_location_mobile
         }
-        // style={{
-        //   height: svgchange === true ? "100%" : "100vh",
-        // }}
       >
         <div className={styles.locationImagecontainer1}>
           <div className={styles.first_img}>
@@ -71,6 +69,19 @@ const Location = () => {
             />
           </div>
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
+        </div>
+        <div className={styles.locationImagecontainer2}>
+          {/* <div className={styles.first_img}> */}
+          <Image
+            className={styles.mobile_img}
+            src="/Images/location/Asset1Mobile.png"
+            // width={1028}
+            // height={390}
+            // layout="responsive"
+            layout="fill"
+          />
+          {/* </div> */}
+          <LocationSvgComp1 svgchange={svgchange} setSvgChange={setSvgChange} />
         </div>
       </motion.div>
     </div>

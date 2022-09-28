@@ -366,12 +366,42 @@
     
     .container_location{
       overflow: hidden;
-      height: 100%;
+      height: 100vh;
+      // min-height: 390px;
+      max-height: 390px;
     }
     .container_location_mobile{
       overflow: visible;
-      height: 100vh;
+      height: 180vh;
     }
+    .locationImagecontainer1{
+      display: none !important;
+    }
+    .locationImagecontainer2{
+      display: block !important;
+      position: relative;
+      width: 100vw;
+      height: 100%;
+
+      .first_img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      .svg_location_comp{
+        height: 100%;
+        svg{
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+
+    }
+
  
   }
 
@@ -379,6 +409,7 @@
     position: relative !important;
     width: 100vw;
     height: 100%;
+    display: block;
 
     @media (max-width:600px) {
       transform: rotate(270deg);
@@ -409,14 +440,12 @@
           width: 100vh !important;
           height: 100vw !important;
         }
-        .svg_img_path_text{
-          transform: translateX(70px) translateY(90px) rotate(90deg) !important;
-        }
-        .svg_img_path_text1{
-          transform: translateX(-70px) translateY(-90px) rotate(90deg) !important;
-        }
       }
     }
+  }
+
+  .locationImagecontainer2{
+    display: none;
   }
 }
 
