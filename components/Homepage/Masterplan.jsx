@@ -5,15 +5,14 @@ import Image from "next/image";
 import Masterplanmarker from "./Masterplanmarker";
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useState } from "react";
-import { BsFillPlusCircleFill, BsMouse2Fill } from "react-icons/bs";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 import { AiFillMinusCircle } from "react-icons/ai";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-
+import { useGesture } from "@use-gesture/react";
 const Masterplan = () => {
   const lan = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -22,12 +21,14 @@ const Masterplan = () => {
   const [y, setY] = useState(0);
   const [w, setW] = useState(0);
   const [h, setH] = useState(0);
+  const [move, setMove] = useState({ x: "-50%", y: 0 });
   const [show, setShow] = useState(false);
   const [isBrowser, setIsBrowser] = useState(false);
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
   const zoomAnimation = useAnimation();
   const containerRef = useRef();
+  const imageContainerRef = useRef();
   const getPath = ({ id }) => {
     const path = document.getElementById(`path_${id}`);
     const rect = document.getElementById("something").getBoundingClientRect();
@@ -105,10 +106,17 @@ const Masterplan = () => {
     zoomAnimation.start("hidden");
   }, [isBrowser]);
 
-  const dragHandler = (_, info) => {
-    console.log(info);
-  };
-
+  //Guestures
+  useGesture(
+    {
+      onDrag: () => {
+        console.log("dragging");
+      },
+    },
+    {
+      target: imageContainerRef,
+    }
+  );
   return (
     <div className={styles.app__masterplan}>
       <Row className="headingRow">
@@ -136,19 +144,18 @@ const Masterplan = () => {
         <motion.div
           className={styles.masterplan}
           animate={zoomAnimation}
-          drag
-          dragListener={zoom}
-          dragConstraints={containerRef}
-          onDragEnd={dragHandler}
+          ref={imageContainerRef}
           variants={{
             visible: {
+              x: move.x,
+              y: move.y,
               scale: 1.5,
               transition: {
                 duration: 1,
               },
             },
             hidden: {
-              scale: 1.1,
+              scale: 1,
               x: isBrowser ? "-28%" : 0,
               y: 0,
               transition: {
