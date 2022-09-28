@@ -369,15 +369,23 @@
       height: 100vh;
       // min-height: 390px;
       max-height: 390px;
+      // transition: all 2s ease-in;
     }
     .container_location_mobile{
       overflow: visible;
       height: 180vh;
+
+      .locationImagecontainer2{
+        .svg_location_comp{
+          background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+        }
+      }
     }
     .locationImagecontainer1{
       display: none !important;
     }
     .locationImagecontainer2{
+      background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
       display: block !important;
       position: relative;
       width: 100vw;
@@ -392,6 +400,7 @@
 
       .svg_location_comp{
         height: 100%;
+        
         svg{
           right: 0;
           width: 100%;
