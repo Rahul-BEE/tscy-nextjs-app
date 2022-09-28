@@ -18,242 +18,291 @@
     text-align: center;
     color: #777777;
   }
-  .masterplan {
-    position: relative;
+  .masterplanContainer {
     width: 90vw;
-    height: 90vh;
+    height: 100vh;
     max-width: 1528px;
+    position: relative;
     max-height: 800px;
-
-    svg {
-      position: absolute;
-      inset: 0;
-      height: 100%;
+    background-color: #fff;
+    .masterplan {
+      position: relative;
       width: 100%;
-      path {
-        position: absolute;
+      height: 100vh;
+      max-width: 1528px;
+      max-height: 800px;
+      @media (max-width: 1500px) {
+        height: 70vh;
+        width: 90vw;
       }
-    }
-    .masterplanpopup {
-      background-color: transparent;
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      display: block;
-      width: 100%;
-      pointer-events: none;
-      .popupinnercard {
-        font-family: "Poppins";
-        background-color: white;
-        font-size: 0.8125rem;
-        line-height: 1;
-        color: #777777;
-        text-align: center;
-        pointer-events: all;
-        max-width: 420px;
-        height: fit-content;
-        border-radius: 15px;
-        border-top-left-radius: 0;
-        padding: 1.5rem 1rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 33%);
-        gap: 0.5rem;
-        position: relative;
-        .popupheading {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          text-align: start;
-          gap: 1rem;
-          font-family: "Poppins" sans-serif;
-          font-size: 1rem;
-          h3 {
-            text-transform: capitalize;
-            font-size: 1.25rem;
-            letter-spacing: -0.022em;
+      @media (max-width: 1224px) {
+        height: 100%;
+        width: 1528px;
+        transform: translateX(-30%);
+      }
+
+      svg {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        path {
+          position: absolute;
+        }
+        .selectedMarker {
+          display: none;
+          @media (max-width: 1224px) {
+            display: block;
+            scale: 1.5;
+          }
+        }
+      }
+      .masterplanpopup {
+        background-color: transparent;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        display: block;
+        width: 100%;
+        pointer-events: none;
+        .popupinnercard {
+          font-family: "Poppins";
+          background-color: white;
+          font-size: 0.8125rem;
+          line-height: 1;
+          color: #777777;
+          text-align: center;
+          pointer-events: all;
+          max-width: 420px;
+          height: fit-content;
+          border-radius: 15px;
+          border-top-left-radius: 0;
+          padding: 1.5rem 1rem;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 33%);
+          gap: 0.5rem;
+          position: relative;
+          .popupheading {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: start;
+            gap: 1rem;
+            font-family: "Poppins" sans-serif;
+            font-size: 1rem;
+            h3 {
+              text-transform: capitalize;
+              font-size: 1.25rem;
+              letter-spacing: -0.022em;
+              margin: 0;
+              padding: 0;
+            }
+            h5 {
+              font-size: 1rem;
+              margin: 0;
+              padding: 0;
+            }
+          }
+          p {
+            text-align: start;
             margin: 0;
-            padding: 0;
+            display: flex;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            align-items: center;
+            line-height: 150%;
           }
           h5 {
-            font-size: 1rem;
-            margin: 0;
-            padding: 0;
-          }
-        }
-        p {
-          text-align: start;
-          margin: 0;
-          display: flex;
-          font-family: "Poppins", sans-serif;
-          font-size: 0.875rem;
-          font-weight: 400;
-          letter-spacing: -0.022em;
-          align-items: center;
-          line-height: 150%;
-        }
-        h5 {
-          text-transform: capitalize;
-          font-family: "Poppins", sans-serif;
-          font-size: 1rem;
-          margin: 0;
-          padding: 0;
-          text-align: start;
-        }
-        .contentbox {
-          text-align: start;
-        }
-        .detailsContainer {
-          margin-top: 0.5rem;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 0.8rem;
-          h6 {
             text-transform: capitalize;
             font-family: "Poppins", sans-serif;
             font-size: 1rem;
             margin: 0;
             padding: 0;
+            text-align: start;
           }
-          div {
-            h6,
-            span {
-              font-family: "Poppins", sans-serif;
-              font-size: 13px;
-              font-weight: 400;
-            }
+          .contentbox {
+            text-align: start;
+          }
+          .detailsContainer {
+            margin-top: 0.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.8rem;
             h6 {
-              font-weight: 600;
+              text-transform: capitalize;
+              font-family: "Poppins", sans-serif;
+              font-size: 1rem;
+              margin: 0;
+              padding: 0;
             }
-            span {
-              margin-left: 0.5rem;
+            div {
+              h6,
+              span {
+                font-family: "Poppins", sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+              }
+              h6 {
+                font-weight: 600;
+              }
+              span {
+                margin-left: 0.5rem;
+              }
+            }
+          }
+          .popupcardbtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            width: 40px;
+            height: 25px;
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #058da6;
+            border-radius: 5px;
+            background: transparent;
+            svg {
+              color: #058da6;
             }
           }
         }
-        .popupcardbtn {
+        .popupinnercard[data-pos="rt"] {
+          transform: translateX(-100%);
+          border-radius: 15px;
+          border-top-right-radius: 0;
+        }
+        .popupinnercard[data-pos="br"] {
+          transform: translate(-100%, -100%);
+          border-radius: 15px;
+          border-bottom-right-radius: 0;
+        }
+        @media (max-width: 1224px) {
+          display: none;
+        }
+      }
+      .masterplan_bottomindex {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        padding: 0 clamp(1vw, 3vw, 3vw);
+
+        .indexdiv {
+          min-height: 125px;
+          height: 125px;
+          background: #ffffff;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-          top: 18px;
-          right: 20px;
-          width: 40px;
-          height: 25px;
-          outline: none;
-          box-shadow: none;
-          border: 1px solid #058da6;
-          border-radius: 5px;
-          background: transparent;
-          svg {
-            color: #058da6;
+          align-items: flex-start;
+          justify-content: space-between;
+          border-radius: 15px;
+          padding: 10px;
+          .componentdiv {
+            flex: 1;
+            flex-wrap: wrap;
+          }
+          .componentdiv,
+          .tracksdiv {
+            display: grid;
+            min-height: 100%;
+            grid-template-columns: auto 1fr;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            color: #777777;
+            text-transform: capitalize;
+            gap: 0.8rem;
+            .componentheading,
+            .tracksheading {
+              font-weight: 700;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+          }
+          .tracksdiv {
+            grid-template-columns: 40% 60%;
+            flex: 0.2;
+            position: relative;
+          }
+          .components,
+          .tracks {
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            p {
+              font-family: "Poppins";
+              cursor: pointer;
+              margin: 0;
+              padding: 0;
+              font-size: clamp(12px, 0.4vw + 0.5rem, 0.9rem);
+              color: #777777;
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+            }
+            @media (max-width: 1367px) {
+              grid-template-columns: repeat(4, 25%);
+            }
+          }
+          .tracks {
+            grid-template-columns: 1fr;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            height: 70%;
+            top: 15%;
+            right: 22%;
+            width: 2px;
+            background-color: #058da6;
+            border: none;
+            border-radius: 2px;
+            @media (max-width: 1360px) {
+              right: 20%;
+            }
           }
         }
-      }
-      .popupinnercard[data-pos="rt"] {
-        transform: translateX(-100%);
-        border-radius: 15px;
-        border-top-right-radius: 0;
-      }
-      .popupinnercard[data-pos="br"] {
-        transform: translate(-100%, -100%);
-        border-radius: 15px;
-        border-bottom-right-radius: 0;
-      }
-      @media (max-width: 1000px) {
-        display: none;
+        @media (max-width: 1224px) {
+          display: none;
+        }
       }
     }
-    .masterplan_bottomindex {
+    .zoombtn {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      box-shadow: none;
+      outline: none;
       position: absolute;
       bottom: 20px;
-      width: 100%;
-      padding: 0 clamp(1vw, 4vw, 5vw);
-
-      .indexdiv {
-        min-height: 125px;
-        height: 125px;
-        background: #ffffff;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        border-radius: 15px;
-        padding: 10px;
-        .componentdiv {
-          flex: 1;
-          flex-wrap: wrap;
-        }
-        .componentdiv,
-        .tracksdiv {
-          display: grid;
-          min-height: 100%;
-          grid-template-columns: auto 1fr;
-          font-family: "Poppins";
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px;
-          color: #777777;
-          text-transform: capitalize;
-          gap: 0.8rem;
-          .componentheading,
-          .tracksheading {
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-          }
-        }
-        .tracksdiv {
-          grid-template-columns: 40% 60%;
-          flex: 0.2;
-          position: relative;
-        }
-        .components,
-        .tracks {
-          display: grid;
-          grid-template-columns: repeat(5, 20%);
-          p {
-            font-family: "Poppins";
-            cursor: pointer;
-            margin: 0;
-            padding: 0;
-            font-size: clamp(12px, 0.4vw + 0.5rem, 0.9rem);
-            color: #777777;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-          }
-          @media (max-width: 1360px) {
-            grid-template-columns: repeat(4, 25%);
-          }
-        }
-        .tracks {
-          grid-template-columns: 1fr;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          height: 70%;
-          top: 15%;
-          right: 22%;
-          width: 2px;
-          background-color: #058da6;
-          border: none;
-          border-radius: 2px;
-        }
-      }
-      @media (max-width: 1224px) {
-        display: none;
+      right: 20px;
+      z-index: 10;
+      cursor: pointer;
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: #ffffff;
       }
     }
-    @media (max-width: 998px) {
+    @media (max-width: 1224px) {
+      overflow: hidden;
       height: 60vh;
     }
-    @media (max-width: 600px) {
-      height: 40vh;
+    @media (max-width: 728px) {
+      width: 100vw;
+      height: 70vh;
     }
   }
   .mobilebtmindex {
     display: none;
-    width: 90vw;
+    width: 85vw;
     nav {
       background: #fdfdfd;
       padding: 5px 5px 0;
@@ -287,9 +336,6 @@
       border-top-right-radius: 5px;
       padding: 0px 15px;
     }
-    li.selectedTab {
-      // background: #eee;
-    }
 
     li button {
       border: 0;
@@ -315,7 +361,9 @@
     }
     @media (max-width: 1224px) {
       display: block;
-      min-height: 20vh;
+    }
+    @media (max-width: 600px) {
+      width: 100vw;
     }
   }
 }

@@ -46,7 +46,7 @@ const Mobilebtmindex = () => {
             <motion.div
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
+                gridTemplateColumns: selectedTab === 0 ? "1fr 1fr 1fr" : "1fr",
               }}
               key={
                 selectedTab === 0
@@ -55,10 +55,11 @@ const Mobilebtmindex = () => {
                   ? "tracksmaster"
                   : "empty"
               }
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.2, staggerChildren: 0.1 }}>
+              // initial={{ y: 10, opacity: 0 }}
+              // animate={{ y: 0, opacity: 1 }}
+              // exit={{ y: -10, opacity: 0 }}
+              // transition={{ duration: 0.2, staggerChildren: 0.1 }}
+            >
               {data.map((item) => {
                 return <p key={item.name}>{item.name}</p>;
               })}
