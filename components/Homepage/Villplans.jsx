@@ -43,11 +43,13 @@ const Villplans = () => {
               md={3}
               lg={3}
               key={`${index}_villas`}
-              onClick={() => changeVilla(index)}>
+              onClick={() => changeVilla(index)}
+            >
               <motion.h5
                 whileHover={{ scale: 1.2 }}
                 onHoverStart={(e) => {}}
-                onHoverEnd={(e) => {}}>
+                onHoverEnd={(e) => {}}
+              >
                 {villa.bedrooms}
               </motion.h5>
               <p>{villa.homepagetitle}</p>
@@ -56,8 +58,8 @@ const Villplans = () => {
           ))}
       </Row>
       <Row className={styles.descriptionRow}>
-        <Col md={9} lg={9} sm={12}>
-          {currentvilla.description}
+        <Col md={9} lg={9} sm={12} className={styles.text}>
+          <p>{currentvilla.description}</p>
         </Col>
       </Row>
       <div className={styles.villaplanImageContainer}>
@@ -84,7 +86,9 @@ const Villplans = () => {
           <p>
             <Eco /> <span>{lan.commontext.smarthome}</span>
           </p>
-          <Button>{lan.commontext.seedetails}</Button>
+          <div>
+            <Button>{lan.commontext.seedetails}</Button>
+          </div>
         </div>
       </div>
     </div>
