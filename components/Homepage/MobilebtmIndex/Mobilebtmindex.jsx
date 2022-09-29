@@ -4,69 +4,123 @@ import styles from "../../../styles/masterplan.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import useLanguage from "../../../utils/useLanguage";
 import { useEffect } from "react";
-const Mobilebtmindex = () => {
+import { useRef } from "react";
+import { useCallback } from "react";
+const Mobilebtmindex = ({ item }) => {
   const lan = useLanguage();
   const [selectedTab, setSelectedTab] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [innerwidth, setInnerWidth] = useState(0);
   const [data, setData] = useState(lan.masterplan.markers);
-
   useEffect(() => {
     if (selectedTab === 0) {
       setData(lan.masterplan.markers);
     } else if (selectedTab === 1) {
       setData(lan.tracks);
     }
+    // setInnerWidthFunction();
   }, [selectedTab]);
+
+  useEffect(() => {
+    console.log(document.getElementById("dragContainer").clientWidth);
+    setInnerWidth(
+      document.getElementById("dragContainer").clientWidth -
+        window.innerWidth / 2
+    );
+  }, [data]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 728);
+    }
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth < 728);
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        setIsMobile(window.innerWidth < 728);
+      });
+    };
+  }, []);
   return (
     <div className={styles.mobilebtmindex}>
-      <nav>
-        <ul>
-          <li
-            key={"componentstab"}
-            className={selectedTab === 0 ? styles.selectedTab : ""}
-            onClick={() => setSelectedTab(0)}>
-            {lan.commontext.components}
-            {selectedTab === 0 ? (
-              <motion.div className={styles.underline} layoutId="underline" />
-            ) : null}
-          </li>
-          <li
-            key={"trackstab"}
-            className={selectedTab === 1 ? styles.selectedTab : ""}
-            onClick={() => setSelectedTab(1)}>
-            {lan.commontext.tracks}
-            {selectedTab === 1 ? (
-              <motion.div className={styles.underline} layoutId="underline" />
-            ) : null}
-          </li>
-        </ul>
-      </nav>
-      <div className={styles.mobilebtmcontent}>
-        <AnimatePresence mode="wait">
-          {data && (
-            <motion.div
-              style={{
-                display: "grid",
-                gridTemplateColumns: selectedTab === 0 ? "1fr 1fr 1fr" : "1fr",
-              }}
-              key={
-                selectedTab === 0
-                  ? "componentmaster"
-                  : selectedTab === 1
-                  ? "tracksmaster"
-                  : "empty"
-              }
-              // initial={{ y: 10, opacity: 0 }}
-              // animate={{ y: 0, opacity: 1 }}
-              // exit={{ y: -10, opacity: 0 }}
-              // transition={{ duration: 0.2, staggerChildren: 0.1 }}
-            >
-              {data.map((item) => {
-                return <p key={item.name}>{item.name}</p>;
-              })}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      {!item ? (
+        <>
+          <nav>
+            <ul>
+              <li
+                key={"componentstab"}
+                className={selectedTab === 0 ? styles.selectedTab : ""}
+                onClick={() => {
+                  setSelectedTab(0);
+                }}>
+                {lan.commontext.components}
+                {selectedTab === 0 ? (
+                  <motion.div
+                    className={styles.underline}
+                    layoutId="underline"
+                  />
+                ) : null}
+              </li>
+              <li
+                key={"trackstab"}
+                className={selectedTab === 1 ? styles.selectedTab : ""}
+                onClick={() => {
+                  setSelectedTab(1);
+                }}>
+                {lan.commontext.tracks}
+                {selectedTab === 1 ? (
+                  <motion.div
+                    className={styles.underline}
+                    layoutId="underline"
+                  />
+                ) : null}
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.mobilebtmcontent}>
+            <AnimatePresence mode="wait" initial={false}>
+              {data && (
+                <motion.div
+                  id="dragContainer"
+                  className={styles.mobilebtmcontentinner}
+                  data-index={selectedTab}
+                  drag="x"
+                  dragListener={isMobile}
+                  dragConstraints={{
+                    right: 0,
+                    left: -innerwidth,
+                  }}
+                  key={`${selectedTab}_dragDiv`}>
+                  {data.map((item) => {
+                    return (
+                      <>
+                        <motion.p
+                          key={item.name}
+                          className={styles.normalItem}
+                          initial={{
+                            opacity: 0,
+                          }}
+                          animate={{
+                            opacity: 1,
+                          }}
+                          transition={{
+                            duration: 0.6,
+                            ease: "easeIn",
+                          }}>
+                          {item.name}
+                        </motion.p>
+                      </>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </>
+      ) : (
+        <div>hi</div>
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import Masterplanmarker from "./Masterplanmarker";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useDragControls } from "framer-motion";
 import { useRef, useState } from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { AiFillMinusCircle } from "react-icons/ai";
@@ -12,6 +12,8 @@ import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
+import { useGesture } from "@use-gesture/react";
+import { useCallback } from "react";
 const Masterplan = () => {
   const lan = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -25,6 +27,7 @@ const Masterplan = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const [noDrag, setNoDrag] = useState(false);
   const zoomAnimation = useAnimation();
   const containerRef = useRef();
   const imageContainerRef = useRef();
@@ -76,14 +79,16 @@ const Masterplan = () => {
     }
   }, [track]);
 
-  const zoomHandler = (state) => {
+  const zoomHandler = useCallback((state) => {
     setZoom(state);
     if (state) {
-      zoomAnimation.start("visible");
+      setNoDrag(true);
+      zoomAnimation.start({ x: "-50%", y: 0, scale: 1.5 });
     } else {
+      setNoDrag(false);
       zoomAnimation.start("hidden");
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -99,23 +104,52 @@ const Masterplan = () => {
         setIsBrowser(window.innerWidth < 1224);
       });
     };
-  }, []);
+  }, [zoom]);
 
   useEffect(() => {
     zoomAnimation.start("hidden");
   }, [isBrowser]);
 
   //Guestures
-  // useGesture(
-  //   {
-  //     onDrag: () => {
-  //       console.log("dragging");
-  //     },
-  //   },
-  //   {
-  //     target: imageContainerRef,
-  //   }
-  // );
+
+  const dragHandler = async (_, info) => {
+    setMove({ x: info.offset.x, y: info.offset.y });
+    if (
+      imageContainerRef.current.getBoundingClientRect().left >
+      containerRef.current.getBoundingClientRect().left
+    ) {
+      await zoomAnimation.start({ x: "20%", y: "10%" });
+    } else if (
+      imageContainerRef.current.getBoundingClientRect().top >
+      containerRef.current.getBoundingClientRect().top
+    ) {
+      await zoomAnimation.start({ x: move.x, y: "10%" });
+    } else if (
+      imageContainerRef.current.getBoundingClientRect().right <
+      containerRef.current.getBoundingClientRect().right
+    ) {
+      await zoomAnimation.start({ x: "-50%", y: move.y });
+    } else if (
+      imageContainerRef.current.getBoundingClientRect().bottom <
+      containerRef.current.getBoundingClientRect().bottom
+    ) {
+      await zoomAnimation.start({ x: move.x, y: "0%" });
+    } else {
+      return;
+    }
+
+    // if (
+    //   imageContainerRef.current.getBoundingClientRect().left >
+    //   containerRef.current.getBoundingClientRect().left
+    // ) {
+    //   zoomAnimation.start({ x: "0%", y: 0 });
+    // } else if (
+    //   imageContainerRef.current.getBoundingClientRect().right <
+    //   containerRef.current.getBoundingClientRect().right
+    // ) {
+    //   zoomAnimation.start({ x: "-100%", y: 0 });
+    // }
+  };
   return (
     <div className={styles.app__masterplan}>
       <Row className="headingRow">
@@ -132,7 +166,10 @@ const Masterplan = () => {
       <div
         className={styles.masterplanContainer}
         id="masterplancontainer"
-        ref={containerRef}>
+        ref={containerRef}
+        style={{
+          touchAction: "none",
+        }}>
         <div className={styles.zoombtn}>
           {zoom ? (
             <AiFillMinusCircle onClick={() => zoomHandler(false)} />
@@ -144,11 +181,14 @@ const Masterplan = () => {
           className={styles.masterplan}
           animate={zoomAnimation}
           ref={imageContainerRef}
+          drag
+          onDragEnd={dragHandler}
+          dragListener={noDrag}
+          dragMomentum={0}
           variants={{
             visible: {
               x: move.x,
               y: move.y,
-              scale: 1.5,
               transition: {
                 duration: 1,
               },
@@ -157,11 +197,13 @@ const Masterplan = () => {
               scale: 1,
               x: isBrowser ? "-28%" : 0,
               y: 0,
+              touchAction: "none",
               transition: {
                 duration: 0.5,
               },
             },
           }}
+          transition={{ duration: 1 }}
           initial="hidden">
           <Image
             id="masterplanmap"
@@ -171,6 +213,7 @@ const Masterplan = () => {
             blurDataURL="/Images/masterplanimage.png"
             placeholder="blur"
             priority={true}
+            quality={100}
           />
           {track === 18 && <CyclingTrack />}
           {track === 16 && <JoggingTrack />}

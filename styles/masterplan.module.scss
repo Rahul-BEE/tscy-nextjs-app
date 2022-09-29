@@ -25,6 +25,7 @@
     position: relative;
     max-height: 800px;
     background-color: #fff;
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
     .masterplan {
       position: relative;
       width: 100%;
@@ -52,7 +53,6 @@
           display: none;
           @media (max-width: 1224px) {
             display: block;
-            scale: 1.5;
           }
         }
       }
@@ -283,6 +283,7 @@
       bottom: 20px;
       right: 20px;
       z-index: 10;
+      padding: 0.2rem;
       cursor: pointer;
       svg {
         width: 100%;
@@ -291,6 +292,10 @@
       }
       @media (max-width: 1224px) {
         display: flex;
+      }
+      @media (max-width: 500px) {
+        width: 40px;
+        height: 40px;
       }
     }
     @media (max-width: 1224px) {
@@ -304,11 +309,24 @@
   }
   .mobilebtmindex {
     display: none;
-    width: 85vw;
+    width: 90vw;
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #777777;
+    text-transform: capitalize;
     nav {
-      background: #fdfdfd;
-      padding: 5px 5px 0;
-      height: 44px;
+      background-color: #fff;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
     }
     ul,
     li {
@@ -317,7 +335,8 @@
       margin: 0;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
-      font-size: 14px;
+      background: transparent;
+      text-transform: uppercase;
     }
 
     ul {
@@ -325,30 +344,17 @@
       align-items: center;
       justify-content: flex-start;
       gap: 1rem;
+      .selectedTab {
+        font-weight: 700;
+      }
     }
 
     li {
       position: relative;
-      background: white;
       cursor: pointer;
-      height: 24px;
       min-width: 0;
       user-select: none;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
       padding: 0px 15px;
-    }
-
-    li button {
-      border: 0;
-      background: #fff;
-      border-radius: 3px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      stroke: #000;
-      margin-left: 10px;
-      cursor: pointer;
     }
     .underline {
       position: absolute;
@@ -360,11 +366,51 @@
     }
     .mobilebtmcontent {
       background-color: white;
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+      padding-top: 12px;
+      border-bottom-right-radius: 23px;
+      border-bottom-left-radius: 23px;
+      .mobilebtmcontentinner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 728px) {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          gap: 1rem;
+          width: fit-content;
+        }
+        .normalItem {
+          white-space: wrap;
+          @media (max-width: 728px) {
+            background-color: #efefef;
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 8px 24px 8px 24px;
+            border-radius: 23px;
+          }
+        }
+      }
+      .mobilebtmcontentinner[data-index="1"] {
+        grid-template-columns: 1fr;
+      }
+      @media (max-width: 500px) {
+        border-radius: 0;
+      }
     }
     @media (max-width: 1224px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 728px) {
       width: 100vw;
     }
   }
