@@ -16,10 +16,9 @@ function NewsMobile({ data }) {
         pagination={{
           clickable: true,
         }}
-        className={styles.mySwiper}
-      >
+        className={styles.mySwiper}>
         {data.map((e, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={`${index}_newmob`}>
             <div className={styles.test_box}>
               <div className={styles.heading_mobile}>
                 <h2>ress and news</h2>

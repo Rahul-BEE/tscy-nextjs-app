@@ -23,10 +23,9 @@ function NewsCarousel({ data }) {
             centeredSlides: true,
           },
         }}
-        className={styles.mySwiper}
-      >
+        className={styles.mySwiper}>
         {data.map((e, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={`${index}_newcarousel`}>
             <div className={styles.hero_tab_box}>
               <h3>{e.title}</h3>
               <div className={styles.test_box}></div>

@@ -26,14 +26,19 @@ export default function Home() {
     }
   }, [location.pathname]);
   return (
-    <div className={styles.app__home}>
-      <BannerSection />
-      <SustainableFeatures />
-      <Masterplan />
-      <Location />
-      <Villaplans />
-      <Newssection />
-      <Partners />
-    </div>
+    <>
+      <Head>
+        <meta name="viewport" content="width=devcice-width user-scalable=no" />
+      </Head>
+      <div className={styles.app__home}>
+        <BannerSection />
+        <SustainableFeatures />
+        <Masterplan />
+        <Location />
+        <Villaplans />
+        <Newssection />
+        <Partners />
+      </div>
+    </>
   );
 }
