@@ -16,7 +16,7 @@ const parentVariant = {
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
-    opacity: 0.4,
+    opacity: 0,
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
@@ -57,45 +57,46 @@ const Masterplandetail = ({ item, setShowDetail }) => {
     );
   }, [slideIndex]);
   return (
-    <div className={styles.masterplandetailinner} id="masterplanslideparent">
-      <AnimatePresence custom={direction} initial={false}>
-        <motion.div
-          data-index={item > 15 ? "true" : "false"}
-          drag="x"
-          dragConstraints={{
-            right: 0,
-            left: -sliderWidth,
-          }}
-          id="masterplanslider"
-          animate="visible"
-          initial="hidden"
-          exit={"exit"}
-          variants={parentVariant}
-          dragElastic={0.1}
-          custom={direction}
-          onDragEnd={(_, info) => dragHandler(info)}
-          className={styles.masterplaninnerslideimg}
-          key={`${data.name}${slideIndex}`}>
-          <Image
-            key={`${data.name}_detailimg`}
-            src={data.slideimg[slideIndex]}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            placeholder="blur"
-            blurDataURL={data.slideimg[slideIndex]}
-          />
-          <div className={styles.masterplandetailgradient} />
-        </motion.div>
-      </AnimatePresence>
-      <div className={styles.gobackbtn} onClick={() => setShowDetail(false)}>
-        <span>
-          <GoChevronLeft />
-        </span>
-        {lan.commontext.gobacktomasterplan}
+    <>
+      <div className={styles.masterplandetailinner} id="masterplanslideparent">
+        <AnimatePresence custom={direction} initial={false}>
+          <motion.div
+            data-index={item > 15 ? "true" : "false"}
+            drag="x"
+            dragConstraints={{
+              right: 0,
+              left: -sliderWidth,
+            }}
+            id="masterplanslider"
+            animate="visible"
+            initial="hidden"
+            exit={"exit"}
+            variants={parentVariant}
+            dragElastic={0.1}
+            custom={direction}
+            onDragEnd={(_, info) => dragHandler(info)}
+            className={styles.masterplaninnerslideimg}
+            key={`${data.name}${slideIndex}`}>
+            <Image
+              key={`${data.name}_detailimg`}
+              src={data.slideimg[slideIndex]}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              placeholder="blur"
+              blurDataURL={data.slideimg[slideIndex]}
+            />
+            <div className={styles.masterplandetailgradient} />
+          </motion.div>
+        </AnimatePresence>
+        <div className={styles.gobackbtn} onClick={() => setShowDetail(false)}>
+          <span>
+            <GoChevronLeft />
+          </span>
+          {lan.commontext.gobacktomasterplan}
+        </div>
       </div>
-      <div>hi</div>
-    </div>
+    </>
   );
 };
 

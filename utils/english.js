@@ -221,6 +221,7 @@ const english = {
       },
       {
         id: 10,
+        villadetails: true,
         name: "West District",
         icon: "/Images/masterplan/plaza.png",
         description:
@@ -234,6 +235,16 @@ const english = {
           "/Images/masterplan/westdistrict/1.png",
           "/Images/masterplan/westdistrict/2.png",
           "/Images/masterplan/westdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 4,
+          },
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 5,
+          },
         ],
       },
       {
@@ -273,6 +284,7 @@ const english = {
 
       {
         id: 13,
+        villadetails: true,
         name: "East District",
         icon: "/Images/masterplan/plaza.png",
         description:
@@ -286,6 +298,12 @@ const english = {
           "/Images/masterplan/eastdistrict/1.png",
           "/Images/masterplan/eastdistrict/2.png",
           "/Images/masterplan/eastdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Garden Villa",
+            noofbedrooms: 4,
+          },
         ],
       },
       {
@@ -414,6 +432,8 @@ const english = {
     description: "Description",
     details: "Details",
     gobacktomasterplan: "Back to masterplan ",
+    villatypes: "Villa Types",
+    seevillas: "See Villas",
   },
   tracks: [
     {

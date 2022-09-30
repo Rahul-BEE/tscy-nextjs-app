@@ -13,6 +13,7 @@ import JoggingTrack from "./Tracks/JoggingTrack";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
 import Masterplandetail from "./Masterplandetail/Masterplandetail";
+import Masterplandetailbtm from "./Masterplandetail/Masterplandetailbtm";
 
 const Masterplan = () => {
   const lan = useLanguage();
@@ -185,15 +186,18 @@ const Masterplan = () => {
       </Row>
 
       {showDetail ? (
-        <div
-          className={styles.masterplanContainer}
-          id="masterplancontainer"
-          ref={containerRef}
-          style={{
-            touchAction: "none",
-          }}>
-          <Masterplandetail item={item} setShowDetail={setShowDetail} />
-        </div>
+        <>
+          <div
+            className={styles.masterplanContainer}
+            id="masterplancontainer"
+            ref={containerRef}
+            style={{
+              touchAction: "none",
+            }}>
+            <Masterplandetail item={item} setShowDetail={setShowDetail} />
+          </div>
+          <Masterplandetailbtm item={item} />
+        </>
       ) : (
         <>
           <div
