@@ -7,3 +7,4 @@ export { default as Location } from "./Homepage/Location";
 export { default as Partners } from "./Homepage/Partners";
 export { default as Header } from "./Layout/Header";
 export { default as Footer } from "./Layout/Footer";
+export { default as Loader } from "./Loader/Loader";

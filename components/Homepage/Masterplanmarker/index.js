@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import MasterplanPopup from "../Masterplanpop";
 import styles from "../../../styles/masterplan.module.scss";
@@ -12,6 +12,7 @@ const Masterplanmarker = ({
   w,
   h,
   track,
+  setShowDetail,
 }) => {
   return (
     <div
@@ -1780,6 +1781,7 @@ const Masterplanmarker = ({
           w={w}
           h={h}
           track={track}
+          setShowDetail={setShowDetail}
         />
       )}
     </div>

@@ -76,6 +76,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/autismcenter/1.png",
+          "/Images/masterplan/autismcenter/2.png",
+          "/Images/masterplan/autismcenter/3.png",
+        ],
       },
       {
         id: 2,
@@ -88,6 +93,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/equistrian/1.png",
+          "/Images/masterplan/equistrian/2.png",
+          "/Images/masterplan/equistrian/3.png",
+        ],
       },
       {
         id: 3,
@@ -100,6 +110,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/seelab/1.png",
+          "/Images/masterplan/seelab/2.png",
+          "/Images/masterplan/seelab/3.png",
+        ],
       },
       {
         id: 4,
@@ -112,6 +127,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/sustainablemosque/1.png",
+          "/Images/masterplan/sustainablemosque/2.png",
+          "/Images/masterplan/sustainablemosque/3.png",
+        ],
       },
       {
         id: 5,
@@ -124,6 +144,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/greenspine/1.png",
+          "/Images/masterplan/greenspine/2.png",
+          "/Images/masterplan/greenspine/3.png",
+        ],
       },
       {
         id: 6,
@@ -136,6 +161,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/brandedresidencies/1.png",
+          "/Images/masterplan/brandedresidencies/2.png",
+          "/Images/masterplan/brandedresidencies/3.png",
+        ],
       },
       {
         id: 7,
@@ -148,6 +178,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/wellnesscenter/1.png",
+          "/Images/masterplan/wellnesscenter/2.png",
+          "/Images/masterplan/wellnesscenter/3.png",
+        ],
       },
       {
         id: 8,
@@ -161,6 +196,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/sportcomplex/1.png",
+          "/Images/masterplan/sportcomplex/2.png",
+          "/Images/masterplan/sportcomplex/3.png",
+        ],
       },
       {
         name: "4 Star resort",
@@ -173,6 +213,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/4starresort/1.png",
+          "/Images/masterplan/4starresort/2.png",
+          "/Images/masterplan/4starresort/3.png",
+        ],
       },
       {
         id: 10,
@@ -185,6 +230,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/westdistrict/1.png",
+          "/Images/masterplan/westdistrict/2.png",
+          "/Images/masterplan/westdistrict/3.png",
+        ],
       },
       {
         id: 11,
@@ -197,6 +247,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/school/1.png",
+          "/Images/masterplan/school/2.png",
+          "/Images/masterplan/school/3.png",
+        ],
       },
       {
         id: 12,
@@ -209,6 +264,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/5starresort/1.png",
+          "/Images/masterplan/5starresort/2.png",
+          "/Images/masterplan/5starresort/3.png",
+        ],
       },
 
       {
@@ -222,6 +282,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/eastdistrict/1.png",
+          "/Images/masterplan/eastdistrict/2.png",
+          "/Images/masterplan/eastdistrict/3.png",
+        ],
       },
       {
         id: 14,
@@ -234,6 +299,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/plaza/1.png",
+          "/Images/masterplan/plaza/2.png",
+          "/Images/masterplan/plaza/3.png",
+        ],
       },
       {
         id: 15,
@@ -246,6 +316,11 @@ const english = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/festivalpark/1.png",
+          "/Images/masterplan/festivalpark/2.png",
+          "/Images/masterplan/festivalpark/3.png",
+        ],
       },
     ],
   },
@@ -338,12 +413,14 @@ const english = {
     components: "Components",
     description: "Description",
     details: "Details",
+    gobacktomasterplan: "Back to masterplan ",
   },
   tracks: [
     {
       id: 16,
       name: "Jogging",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
@@ -356,6 +433,7 @@ const english = {
       id: 17,
       name: "Equistrian",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
@@ -368,6 +446,7 @@ const english = {
       id: 18,
       name: "Cycling",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
