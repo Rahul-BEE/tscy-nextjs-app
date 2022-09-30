@@ -249,13 +249,17 @@
 
 //content section
 .sustainablefeaturecontent {
+  @media (max-width: 1200px) {
+    width: 100%!important;
+    
+  }
   .sustainablefeatures {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+  
     &:lang(ar) {
       direction: rtl;
       .rotate_icon {
@@ -264,8 +268,27 @@
     }
   }
 }
-
+.sustainabledeskdisp
+{
+  height: 32rem; 
+  overflow: hidden;
+  @media (max-width: 400px) {
+    display: none;
+    overflow: visible;
+  }
+}
+.sustainablemobdisp
+{
+  display: none;
+  height: 32rem; 
+  overflow: hidden;
+  @media (max-width: 400px) {
+    overflow: visible;
+    display: block;
+  }
+}
 .sustainablecontentContainer {
+ 
   padding: 2%;
   min-height: max-content;
   div {
@@ -283,6 +306,9 @@
     }
   }
   .featuresoverLay {
+    @media (max-width: 400px) {
+      display: none;
+    }
     top: 0;
     left: 0;
     position: absolute;
@@ -313,9 +339,24 @@
 .bulletSustainable {
   margin: 2rem auto;
   max-width: 70%;
+  @media (max-width: 400px) {
+    margin: 2rem auto;
+    max-width: 100%;
+    font-size: 14px;
+    color: #777777;
+  }
 }
 
 .sustainImgCol {
+  @media (max-width: 1200px) {
+    position: absolute;
+    top: 45%;
+    width: 30%;
+    
+  }
+  @media (max-width: 400px) {
+    display: none;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,6 +367,45 @@
     right: -40% !important;
   }
 }
+.rowtablet
+{
+  @media (max-width: 1200px) {
+    position: relative;
+    
+    
+  }
+}
+.sustainImgCol1 {
+  @media (max-width: 1200px) {
+    position: absolute;
+    top: 45%;
+    width: 30%;
+    right: 0%;
+    
+  }
+  @media (max-width: 400px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .susimage1 {
+    left: -50% !important;
+  }
+  .susimage2 {
+    right: -40% !important;
+  }
+}
+
+.sustainImgCol2 {
+display: none;
+  @media (max-width: 400px) {
+    display: block;
+   
+    padding: 0px;
+  }
+}
+
 //masterplan section
 
 .app__masterplan {

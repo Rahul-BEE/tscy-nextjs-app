@@ -158,7 +158,7 @@ const SustainableFeatures = () => {
       <Container fluid className={styles.sustainablecontentContainer}>
         <Row>
           <Col style={{ position: "relative" }}>
-            <div style={{ height: "32rem", overflow: "hidden" }}>
+            <div className={styles.sustainabledeskdisp}>
               {showData && (
                 <>
                   <h3
@@ -192,9 +192,31 @@ const SustainableFeatures = () => {
               )}
             </div>
             <div className={styles.featuresoverLay}></div>
+            <div className={styles.sustainablemobdisp}>
+              {showData && (
+                <>
+                  <h3
+                    style={{
+                      color:
+                        featureSelected === 1
+                          ? "#038fab"
+                          : featureSelected === 2
+                          ? "#70b795"
+                          : "#E79127",
+                    }}>
+                    {showData?.heading}
+                  </h3>
+                    {showData?.bullets.map((bullet, index) => (
+                        <h5 className={styles.bulletSustainable}>{bullet}</h5>
+                    ))}
+                </>
+              )}
+            </div>
+            
           </Col>
         </Row>
       </Container>
+      
     );
   };
 
@@ -208,7 +230,7 @@ const SustainableFeatures = () => {
           </h2>
         </Col>
       </Row>
-      <Row>
+      <Row className={styles.rowtablet}>
         <Col md={3} className={styles.sustainImgCol}>
           <motion.div animate={controls} initial="hidden" variants={variant1}>
             <Image
@@ -225,12 +247,23 @@ const SustainableFeatures = () => {
             {showData && <SustainableContents />}
           </Container>
         </Col>
-        <Col md={3} className={styles.sustainImgCol}>
+        <Col md={3} className={styles.sustainImgCol1}>
           <motion.div animate={controls} initial="hidden" variants={variant2}>
             <Image
               src="/Images/sustainableright.png"
               width={470}
               height={501}
+              className={styles.susimage2}
+            />
+          </motion.div>
+        </Col>
+    
+        <Col md={12} className={styles.sustainImgCol2}>
+          <motion.div animate={controls} initial="hidden" variants={variant2}>
+            <Image
+              src="/Images/sustainablemobile.png"
+              width={470}
+              height={400}
               className={styles.susimage2}
             />
           </motion.div>
