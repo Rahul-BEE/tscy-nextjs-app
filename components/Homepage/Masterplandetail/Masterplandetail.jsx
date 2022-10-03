@@ -5,25 +5,27 @@ import useLanguage from "../../../utils/useLanguage";
 import { GoChevronLeft } from "react-icons/go";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
+import Paginationdots from "./Paginationdots";
 const parentVariant = {
   visible: {
     x: 0,
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
-      duration: 0.6,
+      duration: 1,
     },
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
     opacity: 0,
+    transition: {
+      duration: 1,
+    },
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
     opacity: 0,
     transition: {
       duration: 1,
-      staggerChildren: 0.2,
     },
   }),
 };
@@ -95,6 +97,17 @@ const Masterplandetail = ({ item, setShowDetail }) => {
           </span>
           {lan.commontext.gobacktomasterplan}
         </div>
+        {data.slideimg.length > 1 && (
+          <>
+            <div className={styles.slideNumber}>
+              <p>
+                {slideIndex + 1}/{data.slideimg.length}
+              </p>
+            </div>
+
+            <Paginationdots slideIndex={slideIndex} />
+          </>
+        )}
       </div>
     </>
   );

@@ -41,6 +41,7 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
+    console.log("called");
     const path = document.getElementById(`path_${id}`);
     const rect = document.getElementById("something").getBoundingClientRect();
     if (track) {
@@ -60,6 +61,8 @@ const Masterplan = () => {
     );
     setW(Number(path.getBoundingClientRect().width));
     setH(Number(path.getBoundingClientRect().height));
+
+    console.log("called and out");
     setShow(true);
   };
 
@@ -94,14 +97,6 @@ const Masterplan = () => {
     } else {
       zoomAnimation.start({ x: move.x, y: 0, scale: 1 });
     }
-    // setZoom(state);
-    // if (state) {
-    //   setNoDrag(undefined);
-    //   zoomAnimation.start({ x: "-50%", y: 0, scale: 1.5 });
-    // } else {
-    //   setNoDrag("x");
-    //   zoomAnimation.start("hidden");
-    // }
   };
 
   useEffect(() => {
@@ -119,10 +114,6 @@ const Masterplan = () => {
       });
     };
   }, []);
-
-  // useEffect(() => {
-  //   zoomAnimation.start("hidden");
-  // }, [isBrowser]);
 
   useEffect(() => {
     console.log("imageref", imageContainerRef.current?.getBoundingClientRect());

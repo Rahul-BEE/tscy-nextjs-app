@@ -25,12 +25,17 @@ const Masterplandetailbtm = ({ item }) => {
               </div>
             ))}
           </div>
-          <motion.button>{lan.commontext.seevillas}</motion.button>
+          <motion.button
+            style={{
+              backgroundColor: "#058DA6",
+            }}>
+            {lan.commontext.seevillas}
+          </motion.button>
         </div>
       ) : (
         <div className={styles.itemdetailsbtm}>
           {Object.entries(data.details).map((value, index) => (
-            <p>
+            <p key={`${index}_values`}>
               {value[0]}
               <span>{value[1]}</span>
             </p>
