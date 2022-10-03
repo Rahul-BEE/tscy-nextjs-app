@@ -104,7 +104,10 @@ const MasterplanInfoBox = ({
               </div>
             ) : (
               <div className={styles.itemdetailsbtm}>
-                <h4>
+                <h4
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}>
                   {lan.commontext.contact} {lan.commontext.details}
                 </h4>
                 <div className={styles.itemdetailsbtmdiv}>
@@ -140,6 +143,10 @@ const MasterplanInfoBox = ({
               </div>
             ))}
           </div>
+          {/* <div>
+            <GoChevronLeft onClick={() => controlHandler(1)} />
+            <GoChevronRight onClick={() => controlHandler(-1)} />
+          </div> */}
         </>
       )}
     </div>
