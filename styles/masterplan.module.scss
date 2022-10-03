@@ -363,13 +363,11 @@
         position: absolute;
         width: 32%;
         height: 90%;
-        display: block;
         top: 5%;
         right: 8%;
         border-radius: 10px;
         background: linear-gradient(167deg, rgba(255, 255, 255, 0.35) 4.47%, rgba(255, 255, 255, 0.05) 92.71%);
         box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
-        // backdrop-filter: blur(12px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -378,24 +376,38 @@
         isolation: isolate;
         padding: 2rem;
         color: #fff;
+        // backdrop-filter: blur(12px);
 
         .infocontrols {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
+          gap: 1rem;
           font-family: 'Poppins';
           font-style: normal;
           font-weight: 500;
           font-size: 10px;
           line-height: 15px;
-          display: flex;
-          align-items: center;
           text-align: right;
 
           div {
+            width: 100%;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.6rem;
+
+            &[data-order="2"] {
+              justify-content: flex-end;
+            }
+
+            p {
+              text-transform: capitalize;
+            }
           }
+
         }
 
         .infoboxcontent {
@@ -405,8 +417,9 @@
           font-style: normal;
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: space-between;
           flex-direction: column;
+          margin-top: 1rem;
 
           h3,
           p,
@@ -438,14 +451,18 @@
           }
 
           .itemdetailsbtm {
-
             width: 100%;
+            margin-bottom: 1rem;
 
             .itemdetailsbtmdiv {
               display: flex;
               align-items: center;
               justify-content: space-between;
               gap: 0.6rem;
+
+              h5 {
+                text-transform: capitalize;
+              }
 
               h5,
               p {
@@ -454,6 +471,7 @@
                 line-height: 24px;
                 font-family: "Poppins";
                 font-style: normal;
+
               }
 
               p {

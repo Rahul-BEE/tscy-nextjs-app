@@ -36,36 +36,30 @@ const MasterplanInfoBox = ({
           <div className={styles.infocontrols}>
             <div onClick={() => controlHandler(1)}>
               {index !== 0 && (
-                <p
-                  style={{
-                    padding: 0,
-                    margin: 0,
-                  }}>
-                  <span
+                <>
+                  <GoChevronLeft />
+                  <p
                     style={{
-                      marginRight: "0.6rem",
+                      padding: 0,
+                      margin: 0,
                     }}>
-                    <GoChevronLeft />
-                  </span>
-                  {lan.commontext.previousto} {data[index - 1].name}
-                </p>
+                    {lan.commontext.previousto} {data[index - 1].name}
+                  </p>
+                </>
               )}
             </div>
-            <div onClick={() => controlHandler(-1)}>
+            <div onClick={() => controlHandler(-1)} data-order={2}>
               {index !== data.length - 1 && (
-                <p
-                  style={{
-                    padding: 0,
-                    margin: 0,
-                  }}>
-                  {lan.commontext.nextto} {data[index + 1].name}
-                  <span
+                <>
+                  <p
                     style={{
-                      marginLeft: "0.6rem",
+                      padding: 0,
+                      margin: 0,
                     }}>
-                    <GoChevronRight />
-                  </span>
-                </p>
+                    {lan.commontext.nextto} {data[index + 1].name}
+                  </p>
+                  <GoChevronRight />
+                </>
               )}
             </div>
           </div>
@@ -78,8 +72,15 @@ const MasterplanInfoBox = ({
           />
           <div className={styles.infoboxcontent}>
             <h3>{data[index].name}</h3>
-            <h4>{lan.commontext.description}</h4>
-            <p>{data[index].description}</p>
+            <div>
+              <h4
+                style={{
+                  marginBottom: "0.5rem",
+                }}>
+                {lan.commontext.description}
+              </h4>
+              <p>{data[index].description}</p>
+            </div>
             {data[index].villadetails ? (
               <div className={styles.villadetailsbtm}>
                 <h4>{lan.commontext.villatypes}</h4>
