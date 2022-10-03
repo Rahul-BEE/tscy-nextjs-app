@@ -1,4 +1,3 @@
-import styles from "../styles/home.module.scss";
 const arabic = {
   header: {
     langbtn: "Hello",
@@ -68,8 +67,7 @@ const arabic = {
       {
         id: 1,
         name: "مركز توحد",
-        icon: "",
-        className: styles.autism,
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -77,12 +75,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/autismcenter/1.png",
+          "/Images/masterplan/autismcenter/2.png",
+          "/Images/masterplan/autismcenter/3.png",
+        ],
       },
       {
         id: 2,
         name: "مركز الفروسية",
-        icon: "",
-        className: styles.equistrian,
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -90,14 +92,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/equistrian/1.png",
+          "/Images/masterplan/equistrian/2.png",
+          "/Images/masterplan/equistrian/3.png",
+        ],
       },
       {
         id: 3,
-
         name: "مختبر سي",
-        icon: "",
-        className: styles.seelab,
-
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -105,13 +109,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/seelab/1.png",
+          "/Images/masterplan/seelab/2.png",
+          "/Images/masterplan/seelab/3.png",
+        ],
       },
       {
         id: 4,
-
         name: "مسجد مستدام",
-        icon: "",
-        className: styles.mosque,
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -119,13 +126,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/sustainablemosque/1.png",
+          "/Images/masterplan/sustainablemosque/2.png",
+          "/Images/masterplan/sustainablemosque/3.png",
+        ],
       },
       {
         id: 5,
-
         name: "الحزام الأخضر",
-        icon: "",
-        className: styles.spine,
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -133,13 +143,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/greenspine/1.png",
+          "/Images/masterplan/greenspine/2.png",
+          "/Images/masterplan/greenspine/3.png",
+        ],
       },
       {
         id: 6,
-
-        name: "المرافق السكنية",
-        icon: "",
-        className: styles.residential,
+        name: "شقق فاخرة",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -147,12 +160,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/brandedresidencies/1.png",
+          "/Images/masterplan/brandedresidencies/2.png",
+          "/Images/masterplan/brandedresidencies/3.png",
+        ],
       },
       {
         id: 7,
-        name: "مدرسة وحضانة",
-        className: styles.school,
-        icon: "",
+        name: "مركز صحي",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -160,12 +177,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/wellnesscenter/1.png",
+          "/Images/masterplan/wellnesscenter/2.png",
+          "/Images/masterplan/wellnesscenter/3.png",
+        ],
       },
       {
         id: 8,
         name: "مجمع رياضي",
-        className: styles.sport,
-        icon: "",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -173,26 +194,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
-      },
-      {
-        id: 9,
-        name: "مركز صحي",
-        className: styles.wellness,
-        icon: "",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
+        slideimg: [
+          "/Images/masterplan/sportcomplex/1.png",
+          "/Images/masterplan/sportcomplex/2.png",
+          "/Images/masterplan/sportcomplex/3.png",
+        ],
       },
       {
         name: "فندق 4 نجوم",
-        id: 10,
-
-        className: styles.fourstar,
-        icon: "",
+        id: 9,
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -200,12 +211,44 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/4starresort/1.png",
+          "/Images/masterplan/4starresort/2.png",
+          "/Images/masterplan/4starresort/3.png",
+        ],
+      },
+      {
+        id: 10,
+        villadetails: true,
+        name: "West District",
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: 1250,
+          capacity: 3000,
+          built: 2020,
+        },
+        slideimg: [
+          "/Images/masterplan/westdistrict/1.png",
+          "/Images/masterplan/westdistrict/2.png",
+          "/Images/masterplan/westdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 4,
+          },
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 5,
+          },
+        ],
       },
       {
         id: 11,
-        name: "شقق فاخرة",
-        className: styles.branded,
-        icon: "",
+        name: "مدرسة وحضانة",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -213,12 +256,16 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/school/1.png",
+          "/Images/masterplan/school/2.png",
+          "/Images/masterplan/school/3.png",
+        ],
       },
       {
         id: 12,
-        name: "البلازا",
-        className: styles.plaza,
-        icon: "",
+        name: "منتجع 5 نجوم",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -226,39 +273,17 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/5starresort/1.png",
+          "/Images/masterplan/5starresort/2.png",
+          "/Images/masterplan/5starresort/3.png",
+        ],
       },
       {
         id: 13,
-        name: "منتجع 5 نجوم",
-        className: styles.fivestar,
-        icon: "",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-      },
-      {
-        id: 14,
-        name: "ساحة المهرجانات",
-        className: styles.festival,
-        icon: "",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-      },
-      {
-        id: 6,
-
-        name: "المرافق السكنية",
-        icon: "",
-        className: styles.residential2,
+        villadetails: true,
+        name: "East District",
+        icon: "/Images/masterplan/plaza.png",
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -266,6 +291,53 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/eastdistrict/1.png",
+          "/Images/masterplan/eastdistrict/2.png",
+          "/Images/masterplan/eastdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Garden Villa",
+            noofbedrooms: 4,
+          },
+        ],
+      },
+      {
+        id: 14,
+        name: "البلازا",
+
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+        slideimg: [
+          "/Images/masterplan/plaza/1.png",
+          "/Images/masterplan/plaza/2.png",
+          "/Images/masterplan/plaza/3.png",
+        ],
+      },
+
+      {
+        id: 15,
+        name: "ساحة المهرجانات",
+        icon: "/Images/masterplan/plaza.png",
+        description:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        details: {
+          area: "1250",
+          capacity: 3000,
+          built: 2020,
+        },
+        slideimg: [
+          "/Images/masterplan/festivalpark/1.png",
+          "/Images/masterplan/festivalpark/2.png",
+          "/Images/masterplan/festivalpark/3.png",
+        ],
       },
     ],
   },
@@ -355,31 +427,51 @@ const arabic = {
     tracks: "Tracks",
     landmarks: "Landmarks",
     components: "Components",
+    details: "Details",
+    description: "Description",
+    gobacktomasterplan: "Back to masterplan",
+    villatypes: "Villa Types",
+    seevillas: "See Villas",
   },
   tracks: [
     {
-      id: 1,
-      name: "مسار المشي",
+      id: 16,
+      name: "Jogging",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
+      description:
+        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
     },
     {
-      id: 2,
-      name: "مسار الجري",
+      id: 17,
+      name: "Equistrian",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
+      description:
+        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
     },
     {
-      id: 3,
-      name: "مسار الدراجات الهوائية",
-    },
-    {
-      id: 4,
-      name: "مسار الفروسية",
-    },
-    {
-      id: 5,
-      name: "أوتوبيس",
-    },
-    {
-      id: 6,
-      name: "Smart Cars",
+      id: 18,
+      name: "Cycling",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      description:
+        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
     },
   ],
   newssection: {

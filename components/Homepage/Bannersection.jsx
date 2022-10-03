@@ -35,8 +35,8 @@ const Bannersection = ({ banner }) => {
             objectFit="cover"
             objectPosition="50% 50%"
             quality={"100"}
-            priority
             alt="The sustainable city image"
+            as="image"
           />
           <div className={styles.app__slider_overlay}></div>
           <motion.div className={styles.app__bannerslidecontent}>
