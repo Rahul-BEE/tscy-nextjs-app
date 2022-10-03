@@ -12,6 +12,7 @@ const MasterplanPopup = ({
   w,
   h,
   track,
+  setShowDetail,
 }) => {
   const lan = useLanguage();
   const ref = useRef(null);
@@ -86,7 +87,9 @@ const MasterplanPopup = ({
               </div>
             </div>
           </div>
-          <button className={styles.popupcardbtn}>
+          <button
+            className={styles.popupcardbtn}
+            onClick={() => setShowDetail(true)}>
             <HiOutlineArrowSmRight />
           </button>
         </motion.div>

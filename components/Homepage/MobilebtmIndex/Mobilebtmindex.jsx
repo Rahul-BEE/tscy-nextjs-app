@@ -4,9 +4,7 @@ import styles from "../../../styles/masterplan.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import useLanguage from "../../../utils/useLanguage";
 import { useEffect } from "react";
-import { useRef } from "react";
-import { useCallback } from "react";
-const Mobilebtmindex = ({ item }) => {
+const Mobilebtmindex = ({ item, setShowDetail, setItem }) => {
   const lan = useLanguage();
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +20,6 @@ const Mobilebtmindex = ({ item }) => {
   }, [selectedTab]);
 
   useEffect(() => {
-    console.log(document.getElementById("dragContainer").clientWidth);
     setInnerWidth(
       document.getElementById("dragContainer").clientWidth -
         window.innerWidth / 2
@@ -42,6 +39,11 @@ const Mobilebtmindex = ({ item }) => {
       });
     };
   }, []);
+
+  const clickHandler = (id) => {
+    setShowDetail(true);
+    setItem(id);
+  };
   return (
     <div className={styles.mobilebtmindex}>
       {!item ? (
@@ -94,23 +96,22 @@ const Mobilebtmindex = ({ item }) => {
                   key={`${selectedTab}_dragDiv`}>
                   {data.map((item) => {
                     return (
-                      <>
-                        <motion.p
-                          key={item.name}
-                          className={styles.normalItem}
-                          initial={{
-                            opacity: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                          }}
-                          transition={{
-                            duration: 0.6,
-                            ease: "easeIn",
-                          }}>
-                          {item.name}
-                        </motion.p>
-                      </>
+                      <motion.p
+                        key={item.name}
+                        className={styles.normalItem}
+                        onClick={() => clickHandler(item.id)}
+                        initial={{
+                          opacity: 0,
+                        }}
+                        animate={{
+                          opacity: 1,
+                        }}
+                        transition={{
+                          duration: 0.6,
+                          ease: "easeIn",
+                        }}>
+                        {item.name}
+                      </motion.p>
                     );
                   })}
                 </motion.div>

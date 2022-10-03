@@ -75,6 +75,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/autismcenter/1.png",
+          "/Images/masterplan/autismcenter/2.png",
+          "/Images/masterplan/autismcenter/3.png",
+        ],
       },
       {
         id: 2,
@@ -87,6 +92,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/equistrian/1.png",
+          "/Images/masterplan/equistrian/2.png",
+          "/Images/masterplan/equistrian/3.png",
+        ],
       },
       {
         id: 3,
@@ -99,6 +109,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/seelab/1.png",
+          "/Images/masterplan/seelab/2.png",
+          "/Images/masterplan/seelab/3.png",
+        ],
       },
       {
         id: 4,
@@ -111,6 +126,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/sustainablemosque/1.png",
+          "/Images/masterplan/sustainablemosque/2.png",
+          "/Images/masterplan/sustainablemosque/3.png",
+        ],
       },
       {
         id: 5,
@@ -123,6 +143,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/greenspine/1.png",
+          "/Images/masterplan/greenspine/2.png",
+          "/Images/masterplan/greenspine/3.png",
+        ],
       },
       {
         id: 6,
@@ -135,6 +160,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/brandedresidencies/1.png",
+          "/Images/masterplan/brandedresidencies/2.png",
+          "/Images/masterplan/brandedresidencies/3.png",
+        ],
       },
       {
         id: 7,
@@ -147,6 +177,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/wellnesscenter/1.png",
+          "/Images/masterplan/wellnesscenter/2.png",
+          "/Images/masterplan/wellnesscenter/3.png",
+        ],
       },
       {
         id: 8,
@@ -159,6 +194,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/sportcomplex/1.png",
+          "/Images/masterplan/sportcomplex/2.png",
+          "/Images/masterplan/sportcomplex/3.png",
+        ],
       },
       {
         name: "فندق 4 نجوم",
@@ -171,10 +211,15 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/4starresort/1.png",
+          "/Images/masterplan/4starresort/2.png",
+          "/Images/masterplan/4starresort/3.png",
+        ],
       },
       {
         id: 10,
-
+        villadetails: true,
         name: "West District",
         icon: "/Images/masterplan/plaza.png",
         description:
@@ -184,6 +229,21 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/westdistrict/1.png",
+          "/Images/masterplan/westdistrict/2.png",
+          "/Images/masterplan/westdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 4,
+          },
+          {
+            type: "Courtyyard Villa",
+            noofbedrooms: 5,
+          },
+        ],
       },
       {
         id: 11,
@@ -196,6 +256,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/school/1.png",
+          "/Images/masterplan/school/2.png",
+          "/Images/masterplan/school/3.png",
+        ],
       },
       {
         id: 12,
@@ -208,9 +273,15 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/5starresort/1.png",
+          "/Images/masterplan/5starresort/2.png",
+          "/Images/masterplan/5starresort/3.png",
+        ],
       },
       {
         id: 13,
+        villadetails: true,
         name: "East District",
         icon: "/Images/masterplan/plaza.png",
         description:
@@ -220,6 +291,17 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/eastdistrict/1.png",
+          "/Images/masterplan/eastdistrict/2.png",
+          "/Images/masterplan/eastdistrict/3.png",
+        ],
+        villatype: [
+          {
+            type: "Garden Villa",
+            noofbedrooms: 4,
+          },
+        ],
       },
       {
         id: 14,
@@ -233,6 +315,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/plaza/1.png",
+          "/Images/masterplan/plaza/2.png",
+          "/Images/masterplan/plaza/3.png",
+        ],
       },
 
       {
@@ -246,6 +333,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        slideimg: [
+          "/Images/masterplan/festivalpark/1.png",
+          "/Images/masterplan/festivalpark/2.png",
+          "/Images/masterplan/festivalpark/3.png",
+        ],
       },
     ],
   },
@@ -337,12 +429,16 @@ const arabic = {
     components: "Components",
     details: "Details",
     description: "Description",
+    gobacktomasterplan: "Back to masterplan",
+    villatypes: "Villa Types",
+    seevillas: "See Villas",
   },
   tracks: [
     {
       id: 16,
       name: "Jogging",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
@@ -355,6 +451,7 @@ const arabic = {
       id: 17,
       name: "Equistrian",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
@@ -367,6 +464,7 @@ const arabic = {
       id: 18,
       name: "Cycling",
       icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
       details: {
