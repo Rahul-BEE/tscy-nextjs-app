@@ -6,6 +6,7 @@ import { GoChevronLeft } from "react-icons/go";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import Paginationdots from "./Paginationdots";
+import MasterplanInfoBox from "./Masterplaninfobox/MasterplanInfoBox";
 const parentVariant = {
   visible: {
     x: 0,
@@ -91,6 +92,7 @@ const Masterplandetail = ({ item, setShowDetail }) => {
             <div className={styles.masterplandetailgradient} />
           </motion.div>
         </AnimatePresence>
+        <MasterplanInfoBox item={item} />
         <div className={styles.gobackbtn} onClick={() => setShowDetail(false)}>
           <span>
             <GoChevronLeft />

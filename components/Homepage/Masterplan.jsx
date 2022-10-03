@@ -41,7 +41,6 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    console.log("called");
     const path = document.getElementById(`path_${id}`);
     const rect = document.getElementById("something").getBoundingClientRect();
     if (track) {
@@ -62,7 +61,6 @@ const Masterplan = () => {
     setW(Number(path.getBoundingClientRect().width));
     setH(Number(path.getBoundingClientRect().height));
 
-    console.log("called and out");
     setShow(true);
   };
 
@@ -116,9 +114,9 @@ const Masterplan = () => {
   }, []);
 
   useEffect(() => {
-    console.log("imageref", imageContainerRef.current?.getBoundingClientRect());
-    console.log("containered", containerRef.current?.getBoundingClientRect());
-    console.log("z", zoom);
+    // console.log("imageref", imageContainerRef.current?.getBoundingClientRect());
+    // console.log("containered", containerRef.current?.getBoundingClientRect());
+    // console.log("z", zoom);
     if (zoom) {
       setConstrains({
         right: -(imageContainerRef.current?.getBoundingClientRect().x + move.x),

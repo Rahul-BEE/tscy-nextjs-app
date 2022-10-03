@@ -34,7 +34,7 @@ const Masterplandetailbtm = ({ item }) => {
         </div>
       ) : (
         <div className={styles.itemdetailsbtm}>
-          {Object.entries(data.details).map((value, index) => (
+          {Object.entries(data.contact).map((value, index) => (
             <p key={`${index}_values`}>
               {value[0]}
               <span>{value[1]}</span>
