@@ -8,6 +8,7 @@ const Paginationdots = ({ slideIndex }) => {
         {[0, 1, 2].map((item) => {
           return (
             <motion.li
+              key={item}
               initial={{
                 opacity: 0.5,
               }}
