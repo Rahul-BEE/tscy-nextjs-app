@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=devcice-width user-scalable=no" />
+        <meta name="viewport" content="width=device-width user-scalable=1" />
       </Head>
       <div className={styles.app__home}>
         <BannerSection />
