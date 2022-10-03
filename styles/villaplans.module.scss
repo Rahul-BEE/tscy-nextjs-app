@@ -1,0 +1,219 @@
+/* *************** villaplan Section *************** */
+
+
+.app_villa_main{
+    background-color: #058DA6;
+  
+  
+    .app__villplanmaincontainer_desktop {
+      margin: 2.5rem 4%;
+      padding: 2.5rem 0 0 0;
+      background: rgba(5, 141, 166, 0.1);
+      box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
+      position: relative;
+      border-radius: 15px;
+    
+      @media (max-width:600px) {
+        display: none;
+      }
+    
+      .descriptionRow {
+        // position: absolute;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777777;
+    
+        .text{
+          p{
+            margin: 0 !important;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            flex: 1;
+                }
+        }
+      }
+      .activeVilla {
+        h5 {
+          color: #ffffff;
+          background-color: #038fab;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+  
+  .villaplanindexrow {
+    justify-content: center;
+    margin: 1.8rem 0;
+  
+    &:lang(ar) {
+      direction: rtl;
+    }
+  }
+  .villaplanindexcol {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #777777;
+    background-color: transparent;
+    gap: 0;
+    // border-right: 2px solid #038fab;
+    position: relative;
+    cursor: pointer;
+    &:nth-child(3) {
+      border-right: none;
+    }
+  
+    h5 {
+      width: 28px;
+      height: 41px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      border-radius: 16px;
+    }
+  
+    span {
+      width: 2px;
+      height: 80%;
+      background: #038fab;
+      position: absolute;
+      right: 1px;
+    }
+    .border_line_2 {
+      display: none;
+      &:lang(ar) {
+        display: block;
+      }
+    }
+    .border_line_0:lang(ar) {
+      display: none;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 35px;
+      color: #777777;
+    }
+  
+    span .border_line_2:lang(ar) {
+      display: none;
+    }
+  }
+  
+  .villadownload{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+  
+  
+    .download_content{
+      background-color: #FFFFFF;
+      // width: 161px;
+      // height: 28px;
+      border-radius: 17.5px;
+      // padding:20px ;
+      padding: 5px 10px ;
+  
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: #058DA6;
+      text-align: center;
+      text-justify: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      cursor: pointer;
+  
+    }
+  }
+  
+  
+  
+  .villaplanImageContainer {
+    position: relative;
+    .villaplanfeatures {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 15px;
+      padding: 1.5% 3%;
+      gap: 2.5rem;
+      transform: translate(-50%, -50%);
+  
+      p {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        gap: 0.5rem;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+  
+        text-transform: capitalize;
+  
+        color: #777777;
+      }
+  
+      .heading {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      button {
+        white-space: nowrap;
+  
+        background: #058da6;
+        border-radius: 10px;
+      }
+  
+      @media (max-width:1259px) {
+        flex-wrap: wrap;
+        width: 100%;
+        border-radius: 0;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+        p:first-child{
+          width: 100%;
+          justify-content: center;
+        }
+        div{
+          width: 100%;
+          button{
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  
+    &:lang(ar) {
+      direction: rtl;
+    }
+  }
