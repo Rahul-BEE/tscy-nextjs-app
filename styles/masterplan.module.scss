@@ -393,6 +393,9 @@
           align-items: center;
           text-align: right;
 
+          div {
+            cursor: pointer;
+          }
         }
 
         .infoboxcontent {
@@ -482,7 +485,9 @@
           }
         }
 
-
+        @media (max-width:1224px) {
+          display: none;
+        }
       }
     }
 

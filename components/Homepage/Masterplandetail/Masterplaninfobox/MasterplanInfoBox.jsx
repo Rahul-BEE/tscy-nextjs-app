@@ -4,36 +4,72 @@ import useLanguage from "../../../../utils/useLanguage";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { motion } from "framer-motion";
-const MasterplanInfoBox = ({ item }) => {
+const MasterplanInfoBox = ({
+  item,
+  track,
+  slideIndex,
+  setSlideIndex,
+  updateIndex,
+}) => {
   const lan = useLanguage();
-  const [index, setIndex] = useState(item);
-  const [data, setData] = useState(
-    item < 16 ? lan.masterplan.markers[index - 1] : lan.tracks[index - 16]
-  );
+  const [index, setIndex] = useState(track ? track - 16 : item - 1);
+
+  const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
+  const controlHandler = (pos) => {
+    if (pos === 1) {
+      if (index !== 0) {
+        setIndex((prev) => prev - 1);
+        updateIndex(index - 1);
+      }
+    } else if (pos === -1) {
+      if (index !== data.length - 1) {
+        setIndex((prev) => prev + 1);
+        updateIndex(index + 1);
+      }
+    }
+  };
+
   return (
     <div className={styles.masterplaninfobox}>
-      <div className={styles.infocontrols}>
-        <div>
-          <span
-            style={{
-              marginRight: "0.6rem",
-            }}>
-            <GoChevronLeft />
-          </span>
-          {lan.commontext.previousto}
-        </div>
-        <div>
-          {lan.commontext.nextto}
-          <span
-            style={{
-              marginLeft: "0.6rem",
-            }}>
-            <GoChevronRight />
-          </span>
-        </div>
-      </div>
-      {data && (
+      {data[index] && (
         <>
+          <div className={styles.infocontrols}>
+            <div onClick={() => controlHandler(1)}>
+              {index !== 0 && (
+                <p
+                  style={{
+                    padding: 0,
+                    margin: 0,
+                  }}>
+                  <span
+                    style={{
+                      marginRight: "0.6rem",
+                    }}>
+                    <GoChevronLeft />
+                  </span>
+                  {lan.commontext.previousto} {data[index - 1].name}
+                </p>
+              )}
+            </div>
+            <div onClick={() => controlHandler(-1)}>
+              {index !== data.length - 1 && (
+                <p
+                  style={{
+                    padding: 0,
+                    margin: 0,
+                  }}>
+                  {lan.commontext.nextto} {data[index + 1].name}
+                  <span
+                    style={{
+                      marginLeft: "0.6rem",
+                    }}>
+                    <GoChevronRight />
+                  </span>
+                </p>
+              )}
+            </div>
+          </div>
+
           <Image
             src={"/Images/masterplan/plaza.png"}
             width="85"
@@ -41,15 +77,15 @@ const MasterplanInfoBox = ({ item }) => {
             layout="intrinsic"
           />
           <div className={styles.infoboxcontent}>
-            <h3>{data.name}</h3>
+            <h3>{data[index].name}</h3>
             <h4>{lan.commontext.description}</h4>
-            <p>{data.description}</p>
-            {data.villadetails ? (
+            <p>{data[index].description}</p>
+            {data[index].villadetails ? (
               <div className={styles.villadetailsbtm}>
                 <h4>{lan.commontext.villatypes}</h4>
                 <div className={styles.villaitem}>
-                  {data.villatype.map((villa, index) => (
-                    <div key={index}>
+                  {data[index].villatype.map((villa, index) => (
+                    <div key={`${index}_${villa.type}`}>
                       <h5>{villa.type}</h5>
                       <p>
                         {villa.noofbedrooms}{" "}
@@ -71,7 +107,7 @@ const MasterplanInfoBox = ({ item }) => {
                   {lan.commontext.contact} {lan.commontext.details}
                 </h4>
                 <div className={styles.itemdetailsbtmdiv}>
-                  {Object.entries(data.contact).map((value, index) => (
+                  {Object.entries(data[index].contact).map((value, index) => (
                     <div key={`${index}_values`}>
                       <h5>{value[0]}</h5>
                       <p>{value[1]}</p>
@@ -83,16 +119,23 @@ const MasterplanInfoBox = ({ item }) => {
           </div>
           <h4>{lan.commontext.relatedimages}</h4>
           <div className={styles.infoboxslider}>
-            {data.slideimg.map((item, index) => (
-              <div className={styles.infoslide}>
+            {data[index].slideimg.map((item, index) => (
+              <div className={styles.infoslide} key={index}>
                 <Image
                   src={item}
                   width={120}
                   height={120}
                   layout="responsive"
                   objectFit="cover"
+                  onClick={() => setSlideIndex(index)}
                 />
-                <div className={styles.slideoverLay} />
+                <div
+                  className={styles.slideoverLay}
+                  style={{
+                    display: slideIndex === index ? "none" : "",
+                    pointerEvents: "none",
+                  }}
+                />
               </div>
             ))}
           </div>

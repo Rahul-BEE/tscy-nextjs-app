@@ -29,6 +29,7 @@ const Masterplan = () => {
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [noDrag, setNoDrag] = useState(false);
+  const [desktop, setDesktop] = useState(true);
   const [constrains, setConstrains] = useState({
     right: 0,
     left: 0,
@@ -70,7 +71,7 @@ const Masterplan = () => {
     setActiveIndex(null);
   };
   useEffect(() => {
-    if (track) {
+    if (track && desktop) {
       const path = document.getElementById(`path_${track}`);
       const rect = document.getElementById("something").getBoundingClientRect();
       setX(
@@ -87,7 +88,7 @@ const Masterplan = () => {
       setH(Number(path?.getBoundingClientRect().height * 2));
       setShow(true);
     }
-  }, [track]);
+  }, [track, desktop]);
 
   const zoomHandler = (state) => {
     if (state) {
@@ -183,9 +184,13 @@ const Masterplan = () => {
             style={{
               touchAction: "none",
             }}>
-            <Masterplandetail item={item} setShowDetail={setShowDetail} />
+            <Masterplandetail
+              item={item}
+              track={track}
+              setShowDetail={setShowDetail}
+            />
           </div>
-          <Masterplandetailbtm item={item} />
+          <Masterplandetailbtm item={item} track={track} />
         </>
       ) : (
         <>
@@ -305,7 +310,12 @@ const Masterplan = () => {
               </div>
             </motion.div>
           </div>
-          <Mobilebtmindex setItem={setItem} setShowDetail={setShowDetail} />
+          <Mobilebtmindex
+            setShowDetail={setShowDetail}
+            setItem={setItem}
+            setTrack={setTrack}
+            setDesktop={setDesktop}
+          />
         </>
       )}
     </div>
