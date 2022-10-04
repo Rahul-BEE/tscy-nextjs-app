@@ -29,7 +29,7 @@ const Villplans = () => {
 
   return (
     <div className={styles.app_villa_main}>
-      <div className={styles.app__villplanmaincontainer_desktop}>
+      <div className={styles.app__villaplanmaincontainer_desktop}>
         <Row className="headingRow">
           <Col>
             <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5>
@@ -105,7 +105,9 @@ const Villplans = () => {
         </div>
       </div>
 
-      {/* <VillaplansMobile /> */}
+      <div className={styles.villaplanmaincontainer_mobile}>
+        <VillaplansMobile />
+      </div>
     </div>
   );
 };
