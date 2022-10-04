@@ -29,7 +29,7 @@
     background-color: #fff;
     overflow: hidden;
     border-radius: 15px;
-    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
+    // filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
 
     .masterplan {
       position: relative;
@@ -368,15 +368,25 @@
         border-radius: 10px;
         background: linear-gradient(167deg, rgba(255, 255, 255, 0.35) 4.47%, rgba(255, 255, 255, 0.05) 92.71%);
         box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        justify-content: flex-start;
-        isolation: isolate;
-        padding: 2rem;
-        color: #fff;
-        // backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+
+        .masterplaninnerinfobox {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          color: #FFFFFF;
+          padding: 2rem 1.5rem 1rem;
+          border-radius: 10px;
+          // background: linear-gradient(167deg, rgba(255, 255, 255, 0.35) 4.47%, rgba(255, 255, 255, 0.05) 92.71%);
+          // box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
+
+
+        }
+
+
 
         .infocontrols {
           display: flex;
@@ -390,6 +400,7 @@
           font-size: 10px;
           line-height: 15px;
           text-align: right;
+          margin-bottom: 1rem;
 
           div {
             width: 100%;
@@ -405,6 +416,7 @@
 
             p {
               text-transform: capitalize;
+              text-align: start;
             }
           }
 
@@ -450,6 +462,31 @@
             text-align: center;
           }
 
+          .villadetailsbtm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-direction: column;
+          }
+
+          .villaitem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+
+            h5 {
+              font-size: 1rem;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 1rem;
+              font-weight: 400;
+            }
+          }
+
           .itemdetailsbtm {
             width: 100%;
             margin-bottom: 1rem;
@@ -483,23 +520,51 @@
 
         .infoboxslider {
           width: 100%;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.5rem;
+          overflow: hidden;
+
+          .infoboxsliderinner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+
+            &[data-align="start"] {
+              justify-content: flex-start;
+            }
+          }
+
 
           .infoslide {
+            width: 30%;
+            height: auto;
+            flex: 0 0 30%;
             overflow: hidden;
             position: relative;
             border-radius: 10px;
             cursor: pointer;
+            max-width: 130px;
 
             .slideoverLay {
               position: absolute;
               inset: 0;
               background: rgba(255, 255, 255, .6);
+              pointer-events: none;
               // backdrop-filter: blur(1px);
 
             }
+          }
+        }
+
+        .slidenav {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          svg {
+            cursor: pointer;
           }
         }
 
@@ -538,6 +603,7 @@
       font-weight: 500;
       font-size: 13px;
       line-height: 20px;
+      z-index: 20;
     }
 
     .slideNumber {

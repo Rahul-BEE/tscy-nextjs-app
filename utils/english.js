@@ -2,7 +2,7 @@ const english = {
   header: {
     langbtn: "مرحبا",
     links: [
-      { text: "FIND YOUR VILLA", link: "/floorplan" },
+      { text: "FIND YOUR DREAM HOME", link: "/floorplan" },
       { text: "ABOUT US", link: "/about" },
       { text: "NEWS", link: "/news" },
     ],
@@ -82,6 +82,9 @@ const english = {
           Phone: " 0312547",
         },
         slideimg: [
+          "/Images/masterplan/autismcenter/1.png",
+          "/Images/masterplan/autismcenter/2.png",
+          "/Images/masterplan/autismcenter/3.png",
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
           "/Images/masterplan/autismcenter/3.png",

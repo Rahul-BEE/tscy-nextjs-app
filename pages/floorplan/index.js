@@ -1,14 +1,7 @@
-const Floorplan = ({ data }) => {
-  return <div>{data}</div>;
+import styles from "../../styles/floorplan.module.scss";
+import useLanguage from "../../utils/useLanguage";
+const Floorplan = () => {
+  return <div className={styles.app__floorplanmain}>hi</div>;
 };
-export async function getStaticProps(context) {
-  const { locale } = context;
-  console.log("hi", locale);
 
-  return {
-    props: {
-      data: "Hello wrold",
-    },
-  };
-}
 export default Floorplan;

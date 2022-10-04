@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../../styles/masterplan.module.scss";
 import useLanguage from "../../../../utils/useLanguage";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 const MasterplanInfoBox = ({
   item,
   track,
@@ -13,7 +13,9 @@ const MasterplanInfoBox = ({
 }) => {
   const lan = useLanguage();
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
-
+  const [imgIndex, setImgIndex] = useState(slideIndex);
+  const scrollAnimation = useAnimation();
+  const [scrolledWIdth, setScrolledWidth] = useState(0);
   const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
   const controlHandler = (pos) => {
     if (pos === 1) {
@@ -29,10 +31,34 @@ const MasterplanInfoBox = ({
     }
   };
 
+  useEffect(() => {
+    setSlideIndex(imgIndex);
+  }, [imgIndex]);
+
+  const carouselHandler = ({ dir, id }) => {
+    console.log(dir, imgIndex);
+    if (dir) {
+      if (dir === 1 && imgIndex < data[index].slideimg.length - 1) {
+        setScrolledWidth((prev) => prev + 120);
+        setImgIndex((prev) => prev + 1);
+        scrollAnimation.start({
+          x: -(scrolledWIdth + 120),
+        });
+      } else if (dir === -1 && imgIndex !== 0) {
+        setScrolledWidth((prev) => prev - 120);
+        setImgIndex((prev) => prev - 1);
+        scrollAnimation.start({
+          x: -scrolledWIdth + 120,
+        });
+      }
+    } else {
+      setImgIndex(id);
+    }
+  };
   return (
     <div className={styles.masterplaninfobox}>
       {data[index] && (
-        <>
+        <div className={styles.masterplaninnerinfobox}>
           <div className={styles.infocontrols}>
             <div onClick={() => controlHandler(1)}>
               {index !== 0 && (
@@ -123,31 +149,44 @@ const MasterplanInfoBox = ({
           </div>
           <h4>{lan.commontext.relatedimages}</h4>
           <div className={styles.infoboxslider}>
-            {data[index].slideimg.map((item, index) => (
-              <div className={styles.infoslide} key={index}>
-                <Image
-                  src={item}
-                  width={120}
-                  height={120}
-                  layout="responsive"
-                  objectFit="cover"
-                  onClick={() => setSlideIndex(index)}
-                />
-                <div
-                  className={styles.slideoverLay}
-                  style={{
-                    display: slideIndex === index ? "none" : "",
-                    pointerEvents: "none",
-                  }}
-                />
-              </div>
-            ))}
+            <motion.div
+              className={styles.infoboxsliderinner}
+              animate={scrollAnimation}
+              data-align={data[index].slideimg.length > 3 ? "start" : "center"}>
+              {data[index].slideimg.map((item, index) => (
+                <div className={styles.infoslide} key={index}>
+                  <Image
+                    src={item}
+                    width={120}
+                    height={120}
+                    layout="responsive"
+                    objectFit="cover"
+                    onClick={() => carouselHandler({ id: index })}
+                  />
+                  <div
+                    className={styles.slideoverLay}
+                    style={{
+                      display: imgIndex === index ? "none" : "",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              ))}
+            </motion.div>
           </div>
-          {/* <div>
-            <GoChevronLeft onClick={() => controlHandler(1)} />
-            <GoChevronRight onClick={() => controlHandler(-1)} />
-          </div> */}
-        </>
+          <div
+            className={styles.slidenav}
+            style={{
+              display: data[index].slideimg.length > 3 ? "" : "none",
+            }}>
+            <GoChevronLeft
+              onClick={() => carouselHandler({ dir: -1, index })}
+            />
+            <GoChevronRight
+              onClick={() => carouselHandler({ dir: 1, index })}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
