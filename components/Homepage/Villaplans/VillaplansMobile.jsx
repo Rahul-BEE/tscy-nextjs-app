@@ -93,21 +93,24 @@ function VillaplansMobile() {
       </div>
       <div className={styles.villaplanfeatures_mobile}>
         <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
-        <p>
-          <Bedroom /> <span>{lan.commontext.bedroom}</span>
-        </p>
-        <p>
-          <Eco /> <span>{lan.commontext.bathroom}</span>
-        </p>
-        <p>
-          <Maidroom /> <span>{lan.commontext.maidroom}</span>
-        </p>
-        <p>
-          <Garden /> <span>{lan.commontext.privategarden}</span>
-        </p>
-        <p>
-          <Eco /> <span>{lan.commontext.smarthome}</span>
-        </p>
+
+        <div className={styles.items}>
+          <p>
+            <Bedroom /> <span>{lan.commontext.bedroom}</span>
+          </p>
+          <p>
+            <Eco /> <span>{lan.commontext.bathroom}</span>
+          </p>
+          <p>
+            <Maidroom /> <span>{lan.commontext.maidroom}</span>
+          </p>
+          <p>
+            <Garden /> <span>{lan.commontext.privategarden}</span>
+          </p>
+          <p>
+            <Eco /> <span>{lan.commontext.smarthome}</span>
+          </p>
+        </div>
         <div>
           <Button>{lan.commontext.seedetails}</Button>
         </div>
