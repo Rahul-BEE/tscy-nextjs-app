@@ -21,17 +21,23 @@ function VillaplansMobile() {
   const [activeVilla, setActiveVilla] = useState(0);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
 
-  //   useEffect(() => {
-  //     setActiveVilla(lan.villaplansection.villas[activeVilla]);
-  //   }, [lan]);
-
   const changeVilla = (index) => {
     setActiveVilla(index);
     setVilla(lan.villaplansection.villas[index]);
 
-    test.start({
-      x: 100,
-    });
+    if (index === 1) {
+      test.start({
+        x: -100,
+      });
+    } else if (index === 2) {
+      test.start({
+        x: -200,
+      });
+    } else {
+      test.start({
+        x: 0,
+      });
+    }
   };
 
   return (
