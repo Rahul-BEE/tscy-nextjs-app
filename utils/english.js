@@ -472,7 +472,7 @@ const english = {
         bedrooms: 3,
         bathrooms: 5,
         type: "Courtyard Villa",
-        location: "West Villas",
+        location: "West District",
         gfa: "238",
         bua: "256",
         description:
@@ -500,7 +500,7 @@ const english = {
         bedrooms: "4",
         bathrooms: "5",
         type: "Courtyard Villa",
-        location: "West Villas",
+        location: "West District",
         gfa: "266",
         bua: "285",
         description:
@@ -531,7 +531,7 @@ const english = {
         bedrooms: "4",
         bathrooms: "6",
         type: "Garden Villa ",
-        location: "East Villas",
+        location: "East District",
         gfa: "378",
         bua: "459",
         description:
