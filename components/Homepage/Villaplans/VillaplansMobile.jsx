@@ -91,7 +91,8 @@ function VillaplansMobile() {
 
       <div className={styles.villaplanImageContainer}>
         <Image
-          src="/Images/villaplansectionimg.png"
+          // src="/Images/villaplansectionimg.png"
+          src={lan.villaplansection.villas[activeVilla].mainImg}
           width={900}
           height={500}
           layout="responsive"
