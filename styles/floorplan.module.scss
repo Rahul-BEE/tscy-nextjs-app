@@ -1,0 +1,157 @@
+.app__floorplanmain {
+    margin-top: 120px;
+    width: 100vw;
+
+    @media (max-width:1224px) {
+        margin-top: 120px;
+    }
+
+    @media (max-width:600px) {
+        margin-top: 80px;
+    }
+
+    .floorplanHeading {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 39px;
+            line-height: 58px;
+            text-align: center;
+            color: #777777;
+
+        }
+
+        span {
+            display: inline;
+            background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+        }
+    }
+
+    .filterrow {
+        margin-inline: 10%;
+        overflow: hidden;
+        position: relative;
+
+
+        .filterinnerrow {
+            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+            grid-auto-flow: column;
+            gap: 0.5rem;
+            align-items: stretch;
+            justify-items: center;
+
+            .filterItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 0.2rem;
+                font-family: 'Poppins';
+                font-style: normal;
+                color: #777777;
+                cursor: pointer;
+                padding-block: 15px;
+                min-width: 120px;
+
+
+                p,
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+
+                h4 {
+                    flex: 1;
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+            }
+
+            .selectedFilterItem {
+                svg {
+                    path {
+                        fill: #058DA6
+                    }
+                }
+
+                color: #058DA6;
+            }
+
+            @media (max-width:1224px) {
+                grid-template-columns: repeat(auto-fit, 90px);
+                gap: 1.5rem;
+            }
+
+            @media (max-width:600px) {
+                grid-template-columns: repeat(auto-fit, 70px);
+                gap: 1.5rem;
+            }
+
+        }
+
+        .filtercontrols {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            pointer-events: none;
+
+            &[data-arrow="false"] {
+                justify-content: flex-end;
+            }
+
+            .arrow {
+                width: 120px;
+                height: 100%;
+                background: linear-gradient(270deg, #FFFFFF 24.66%, rgba(255, 255, 255, 0) 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &[data-control="left"] {
+
+                    background: linear-gradient(90deg, #FFFFFF 24.66%, rgba(255, 255, 255, 0) 100%);
+                }
+
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    cursor: pointer;
+                    color: white;
+                    pointer-events: all;
+
+                    path {
+                        stroke: #058DA6;
+                    }
+                }
+
+            }
+
+            @media (max-width:600px) {
+                display: none;
+            }
+        }
+
+
+        @media (max-width:1224px) {
+            margin-inline: 5%;
+        }
+    }
+}

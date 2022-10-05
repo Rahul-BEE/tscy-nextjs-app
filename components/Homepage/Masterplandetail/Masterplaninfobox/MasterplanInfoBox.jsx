@@ -36,7 +36,6 @@ const MasterplanInfoBox = ({
   }, [imgIndex]);
 
   const carouselHandler = ({ dir, id }) => {
-    console.log(dir, imgIndex);
     if (dir) {
       if (dir === 1 && imgIndex < data[index].slideimg.length - 1) {
         setScrolledWidth((prev) => prev + 120);

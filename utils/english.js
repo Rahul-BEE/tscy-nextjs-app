@@ -1,3 +1,18 @@
+import All from "../public/Svg/floorplans/all.svg";
+import Area from "../public/Svg/floorplans/area.svg";
+import Balcony from "../public/Svg/floorplans/balcony.svg";
+import Bedroom from "../public/Svg/floorplans/bedroom.svg";
+import Courtyard from "../public/Svg/floorplans/courtyard.svg";
+import Farm from "../public/Svg/floorplans/farm.svg";
+import Garage from "../public/Svg/floorplans/garage.svg";
+import Garden from "../public/Svg/floorplans/garden.svg";
+import Kitchen from "../public/Svg/floorplans/kitchen.svg";
+import Mosque from "../public/Svg/floorplans/mosque.svg";
+import Ocean from "../public/Svg/floorplans/ocean.svg";
+import Parking from "../public/Svg/floorplans/parking.svg";
+import Pool from "../public/Svg/floorplans/pool.svg";
+import Spine from "../public/Svg/floorplans/spine.svg";
+
 const english = {
   header: {
     langbtn: "مرحبا",
@@ -485,6 +500,128 @@ const english = {
         bua: "459",
         description:
           "Our four-bedroom garden villa layout was masterfully designed for the discerning environmentalist. An inviting foyer area is a welcoming gateway to this residence. An expansive living room is accompanied by a vast swath of shaded terrace space. The two-car garage is a convenient addition, situated behind the maid’s room, accessible through the courtyard. The dining area flows seamlessly into a u-shaped kitchen, which makes for a commanding focal point, spaciously accommodating to the most ambitious of culinary aspirations. The first floor is comprised of four en-suite bedrooms. The master bedroom has abundant wardrobe space, a splendidly spacious en-suite bathroom, and a broad, sweeping balcony, nestled above the courtyard’s luxuriant greenspace.",
+      },
+    ],
+    filters: [
+      {
+        id: 0,
+        key: "all",
+        icon: <All />,
+        headingText: "PERFECT FOR YOU.",
+        subtext: "All",
+        text: "Villas",
+      },
+      {
+        id: 1,
+        key: "ocean",
+        icon: <Ocean />,
+        headingText: "CLOSER TO OCEAN.",
+        subtext: "Closer to",
+        text: "Ocean",
+      },
+      {
+        id: 2,
+        key: "mosque",
+        icon: <Mosque />,
+        headingText: "CLOSER TO MOSQUE.",
+        subtext: "Closer to",
+        text: "Mosque",
+      },
+      {
+        id: 3,
+        key: "pool",
+        icon: <Pool />,
+        headingText: "HAVING PROVISIONAL POOL.",
+        subtext: "Provisional",
+        text: "Pool",
+      },
+      {
+        id: 4,
+        key: "spine",
+        icon: <Spine />,
+        headingText: "HAVE GREEN SPINE.",
+        subtext: "Attaching",
+        text: "Green Spine",
+      },
+      {
+        id: 5,
+        key: "parking",
+        icon: <Parking />,
+        headingText: "HAVE PARKING.",
+        subtext: "Cluster",
+        text: "Parking",
+      },
+      {
+        id: 6,
+        key: "bedrooms",
+        icon: <Bedroom />,
+        headingText: "HAVE 3 BEDROOMS",
+        subtext: "Bedrooms",
+        text: "3",
+      },
+      {
+        id: 7,
+        key: "bedrooms",
+        icon: <Bedroom />,
+        headingText: "HAVE 4 BEDROOMS",
+        subtext: "Bedrooms",
+        text: "4",
+      },
+      {
+        id: 8,
+        key: "kitchens",
+        icon: <Kitchen />,
+        headingText: "HAVE 2 KICHTENS",
+        subtext: "Kitchens",
+        text: "2",
+      },
+      {
+        id: 9,
+        key: "courtyard",
+        icon: <Courtyard />,
+        headingText: "HAVE A COURTYARD",
+        subtext: "Bigger",
+        text: "Courtyard",
+      },
+      {
+        id: 10,
+        key: "garden",
+        icon: <Garden />,
+        headingText: "HAVE A GARDEN",
+        subtext: "Bigger",
+        text: "Garden",
+      },
+      {
+        id: 11,
+        key: "area",
+        icon: <Garden />,
+        headingText: "HAVE BIG AREA",
+        subtext: "Bigger",
+        text: "Area",
+      },
+      {
+        id: 12,
+        key: "balcony",
+        icon: <Balcony />,
+        headingText: "HAVE A BALCONY",
+        subtext: "Sweeping",
+        text: "Balcony",
+      },
+      {
+        id: 13,
+        key: "garage",
+        icon: <Garage />,
+        headingText: "HAVE A GARAGE",
+        subtext: "Cars",
+        text: "Garage",
+      },
+      {
+        id: 14,
+        key: "farm",
+        icon: <Farm />,
+        headingText: "HAVE A FARM",
+        subtext: "C.V.",
+        text: "Farm",
       },
     ],
   },
