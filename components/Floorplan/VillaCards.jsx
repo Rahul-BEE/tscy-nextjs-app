@@ -54,39 +54,38 @@ const VillaCards = ({ filterId }) => {
           </div>
         ))}
       </div>
-      {sortedArray && (
-        <div
-          className={`${styles.villacardsection} ${styles.villacardsectionmobile}`}>
-          {sortedArray.map((villa, index) => (
-            <div
-              className={styles.villacard}
-              key={`${index}_villacards`}
-              style={{
-                filter:
-                  filterId === 0
-                    ? "grayscale(0)"
-                    : villa.keys.includes(filterId)
-                    ? "grayscale(0)"
-                    : "grayscale(1)",
-              }}>
-              <div>
-                <h5>
-                  {villa.bedrooms} {lan.commontext.bedroom}
-                </h5>
-                <h5>{villa.type}</h5>
-                <p>{villa.location}</p>
-                <button>{lan.commontext.learnmore}</button>
-              </div>
-              <Image
-                src={villa.mainImg}
-                width={476}
-                height={222}
-                layout={"responsive"}
-              />
+
+      <div
+        className={`${styles.villacardsection} ${styles.villacardsectionmobile}`}>
+        {sortedArray.map((villa, index) => (
+          <div
+            className={styles.villacard}
+            key={`${index}_villacards`}
+            style={{
+              filter:
+                filterId === 0
+                  ? "grayscale(0)"
+                  : villa.keys.includes(filterId)
+                  ? "grayscale(0)"
+                  : "grayscale(1)",
+            }}>
+            <div>
+              <h5>
+                {villa.bedrooms} {lan.commontext.bedroom}
+              </h5>
+              <h5>{villa.type}</h5>
+              <p>{villa.location}</p>
+              <button>{lan.commontext.learnmore}</button>
             </div>
-          ))}
-        </div>
-      )}
+            <Image
+              src={villa.mainImg}
+              width={476}
+              height={222}
+              layout={"responsive"}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

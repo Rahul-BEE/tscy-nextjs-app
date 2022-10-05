@@ -3,7 +3,13 @@ import Filters from "../../components/Floorplan/Filters";
 import styles from "../../styles/floorplan.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import VillaCards from "../../components/Floorplan/VillaCards";
+import useLanguage from "../../utils/useLanguage";
+import { BsArrowDownCircle } from "react-icons/bs";
+import CardSection from "../../components/Floorplan/CardsSection";
+import LocationFYV from "../../components/Floorplan/Location";
+
 const Floorplan = () => {
+  const lan = useLanguage();
   const [text, setText] = useState("PERFECT FOR YOU.");
   const [filterId, setFilterId] = useState(0);
   return (
@@ -56,6 +62,14 @@ const Floorplan = () => {
         setText={setText}
       />
       <VillaCards filterId={filterId} />
+      <div className={styles.downloadcomparison}>
+        <p>
+          {lan.commontext.download} {lan.commontext.comparison}{" "}
+          <BsArrowDownCircle />
+        </p>
+      </div>
+      <CardSection />
+      <LocationFYV />
     </div>
   );
 };

@@ -12,6 +12,10 @@ import Ocean from "../public/Svg/floorplans/ocean.svg";
 import Parking from "../public/Svg/floorplans/parking.svg";
 import Pool from "../public/Svg/floorplans/pool.svg";
 import Spine from "../public/Svg/floorplans/spine.svg";
+import Bin from "../public/Svg/floorplans/cards/bin.svg";
+import Drop from "../public/Svg/floorplans/cards/drop.svg";
+import House from "../public/Svg/floorplans/cards/house.svg";
+import Car from "../public/Svg/floorplans/cards/car.svg";
 
 const english = {
   header: {
@@ -693,6 +697,7 @@ const english = {
     nextto: "Next to",
     contact: "Contact",
     relatedimages: "Related Images",
+    comparison: "Comparison",
   },
   tracks: [
     {
@@ -800,6 +805,46 @@ const english = {
   partners: {
     title1: "We are proud of our",
     title2: "PROJECT PARTNERS",
+  },
+  findyourvilla: {
+    title1: "Caption",
+    title2: "Experience Sustainable Living",
+    description:
+      "The project is designed to improve The Sustainable City Yiti has gone to great lengths in increasing the sense of community feel with the facilities and services provided.",
+    cards: [
+      {
+        id: 0,
+        icon: <Car />,
+        title1: "Shared EV",
+        title2: "Network",
+        description:
+          "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars..",
+      },
+      {
+        id: 1,
+        icon: <Drop />,
+        title1: "Wastewater",
+        title2: "Recycling",
+        description:
+          "Our cities aim to recycle 100% of their wastewater and use the resulting treated sewage effluent to irrigate the landscape.",
+      },
+      {
+        id: 2,
+        icon: <House />,
+        title1: "Thermal",
+        title2: "Insulation",
+        description:
+          "By using products with high insulation levels in our buildings, we are able to create a well insulated envelope that significantly reduces energy demand.",
+      },
+      {
+        id: 3,
+        icon: <Bin />,
+        title1: "Waste to",
+        title2: "Energy",
+        description:
+          "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+      },
+    ],
   },
 };
 
