@@ -1,3 +1,18 @@
+import All from "../public/Svg/floorplans/all.svg";
+import Area from "../public/Svg/floorplans/area.svg";
+import Balcony from "../public/Svg/floorplans/balcony.svg";
+import Bedroom from "../public/Svg/floorplans/bedroom.svg";
+import Courtyard from "../public/Svg/floorplans/courtyard.svg";
+import Farm from "../public/Svg/floorplans/farm.svg";
+import Garage from "../public/Svg/floorplans/garage.svg";
+import Garden from "../public/Svg/floorplans/garden.svg";
+import Kitchen from "../public/Svg/floorplans/kitchen.svg";
+import Mosque from "../public/Svg/floorplans/mosque.svg";
+import Ocean from "../public/Svg/floorplans/ocean.svg";
+import Parking from "../public/Svg/floorplans/parking.svg";
+import Pool from "../public/Svg/floorplans/pool.svg";
+import Spine from "../public/Svg/floorplans/spine.svg";
+
 const arabic = {
   header: {
     langbtn: "Hello",
@@ -420,6 +435,7 @@ const arabic = {
         gross: "إجمالي المساحة الأرضية 238 متر مربع ",
         build: "مساحة البناء 285 متر مربع",
         link: "/floorplan/1",
+        mainImg: "/Images/villas/3bcv.png",
         ff_plan: "",
         gf_plan: "",
         bedrooms: 3,
@@ -438,6 +454,7 @@ const arabic = {
         gross: "إجمالي المساحة الأرضية 266 متراً مربعاً",
         build: "مساحة البناء 285 متراً مربعاً",
         link: "/floorplans/2",
+        mainImg: "/Images/villas/4bcv.png",
         gf_plan: "",
         ff_plan: "",
         bedrooms: 4,
@@ -456,6 +473,7 @@ const arabic = {
         gross: "إجمالي المساحة الأرضية 378 متراً مربعاً",
         build: "مساحة البناء 459 متراً مربعاً",
         link: "/floorplans/3",
+        mainImg: "/Images/villas/4bgv.png",
         gf_image: "",
         ff_image: "",
         bedrooms: 4,
@@ -466,6 +484,128 @@ const arabic = {
         bua: "459",
         description:
           "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء.",
+      },
+    ],
+    filters: [
+      {
+        id: 0,
+        key: "all",
+        icon: <All />,
+        headingText: "PERFECT FOR YOU.",
+        subtext: "All",
+        text: "Villas",
+      },
+      {
+        id: 1,
+        key: "ocean",
+        icon: <Ocean />,
+        headingText: "CLOSER TO OCEAN.",
+        subtext: "Closer to",
+        text: "Ocean",
+      },
+      {
+        id: 2,
+        key: "mosque",
+        icon: <Mosque />,
+        headingText: "CLOSER TO MOSQUE.",
+        subtext: "Closer to",
+        text: "Mosque",
+      },
+      {
+        id: 3,
+        key: "pool",
+        icon: <Pool />,
+        headingText: "HAVING PROVISIONAL POOL.",
+        subtext: "Provisional",
+        text: "Pool",
+      },
+      {
+        id: 4,
+        key: "spine",
+        icon: <Spine />,
+        headingText: "HAVE GREEN SPINE.",
+        subtext: "Attaching",
+        text: "Green Spine",
+      },
+      {
+        id: 5,
+        key: "parking",
+        icon: <Parking />,
+        headingText: "HAVE PARKING.",
+        subtext: "Cluster",
+        text: "Parking",
+      },
+      {
+        id: 6,
+        key: "bedrooms",
+        icon: <Bedroom />,
+        headingText: "HAVE 3 BEDROOMS",
+        subtext: "Bedrooms",
+        text: "3",
+      },
+      {
+        id: 7,
+        key: "bedrooms",
+        icon: <Bedroom />,
+        headingText: "HAVE 4 BEDROOMS",
+        subtext: "Bedrooms",
+        text: "4",
+      },
+      {
+        id: 8,
+        key: "kitchens",
+        icon: <Kitchen />,
+        headingText: "HAVE 2 KICHTENS",
+        subtext: "Kitchens",
+        text: "2",
+      },
+      {
+        id: 9,
+        key: "courtyard",
+        icon: <Courtyard />,
+        headingText: "HAVE A COURTYARD",
+        subtext: "Bigger",
+        text: "Courtyard",
+      },
+      {
+        id: 10,
+        key: "garden",
+        icon: <Garden />,
+        headingText: "HAVE A GARDEN",
+        subtext: "Bigger",
+        text: "Garden",
+      },
+      {
+        id: 11,
+        key: "area",
+        icon: <Area />,
+        headingText: "HAVE BIG AREA",
+        subtext: "Bigger",
+        text: "Area",
+      },
+      {
+        id: 12,
+        key: "balcony",
+        icon: <Balcony />,
+        headingText: "HAVE A BALCONY",
+        subtext: "Sweeping",
+        text: "Balcony",
+      },
+      {
+        id: 13,
+        key: "garage",
+        icon: <Garage />,
+        headingText: "HAVE A GARAGE",
+        subtext: "Cars",
+        text: "Garage",
+      },
+      {
+        id: 14,
+        key: "farm",
+        icon: <Farm />,
+        headingText: "HAVE A FARM",
+        subtext: "C.V.",
+        text: "Farm",
       },
     ],
   },

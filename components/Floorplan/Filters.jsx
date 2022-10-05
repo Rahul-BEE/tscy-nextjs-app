@@ -12,13 +12,11 @@ const Filters = ({ filterId, setFilterId, setText }) => {
   const lan = useLanguage();
   const [showLeft, setShowLeft] = useState(false);
   const [data, _] = useState(lan.villaplansection);
-  // const [sliderWidth, setSliderWidth] = useState(0);
+  const [sliderWidth, setSliderWidth] = useState(0);
   const [scrolledWIdth, setScrolledWidth] = useState(0);
   const innerRow = useRef(null);
   const filterRowRef = useRef(null);
-  const [sliderWidth, setSliderWidth] = useState(0);
-  const [sliderChildrenWidth, setSliderChildrenWidth] = useState(0);
-  const [sliderConstraints, setSliderConstraints] = useState(0);
+
   const move = useAnimation();
   const moveFilter = (dir) => {
     if (dir === 1) {
@@ -41,54 +39,32 @@ const Filters = ({ filterId, setFilterId, setText }) => {
       }
     }
   };
-  // const setNewSliderInnerWidth = useCallback(() => {
-  //   console.log(
-  //     innerRow.current?.getBoundingClientRect().width,
-  //     filterRowRef.current?.getBoundingClientRect().width,
-  //     innerRow.current?.getBoundingClientRect().width /
-  //       filterRowRef.current?.getBoundingClientRect().width
-  //   );
-  //   setSliderWidth(
-  //     innerRow.current?.getBoundingClientRect().width -
-  //       filterRowRef.current?.getBoundingClientRect().width
-  //   );
-  // }, [innerRow]);
+  const setNewSliderInnerWidth = useCallback(() => {
+    console.log(
+      innerRow.current?.getBoundingClientRect().width,
+      filterRowRef.current?.getBoundingClientRect().width,
+      innerRow.current?.getBoundingClientRect().width /
+        filterRowRef.current?.getBoundingClientRect().width
+    );
+    setSliderWidth(
+      innerRow.current?.getBoundingClientRect().width -
+        filterRowRef.current?.getBoundingClientRect().width
+    );
+  }, [innerRow]);
 
-  // useEffect(() => {
-  //   setNewSliderInnerWidth();
-  // }, []);
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     window.addEventListener("resize", setNewSliderInnerWidth);
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("resize", setNewSliderInnerWidth);
-  //   };
-  // }, [setNewSliderInnerWidth, innerRow]);
   useEffect(() => {
-    if (!innerRow && !innerRow.current) return;
+    setNewSliderInnerWidth();
+  }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", setNewSliderInnerWidth);
+    }
 
-    const calcSliderChildrenWidth = () => {
-      setSliderChildrenWidth(innerRow?.current?.scrollWidth);
+    return () => {
+      window.removeEventListener("resize", setNewSliderInnerWidth);
     };
+  }, [setNewSliderInnerWidth, innerRow]);
 
-    calcSliderChildrenWidth();
-
-    const calcSliderWidth = () => {
-      setSliderWidth(innerRow?.current?.clientWidth);
-    };
-
-    calcSliderWidth();
-    window.addEventListener("resize", calcSliderWidth);
-
-    const calcSliderConstraints = () => {
-      setSliderConstraints(sliderChildrenWidth - sliderWidth);
-    };
-
-    calcSliderConstraints();
-    window.addEventListener("resize", calcSliderConstraints);
-  }, [innerRow, sliderChildrenWidth, sliderWidth]);
   const clickHandler = (index) => {
     setFilterId(index);
 
@@ -146,7 +122,6 @@ const Filters = ({ filterId, setFilterId, setText }) => {
           <IoChevronForwardCircleOutline />
         </div>
       </div>
-      {console.log("s", sliderWidth)}
     </div>
   );
 };

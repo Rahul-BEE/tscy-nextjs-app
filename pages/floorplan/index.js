@@ -2,6 +2,7 @@ import { useState } from "react";
 import Filters from "../../components/Floorplan/Filters";
 import styles from "../../styles/floorplan.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import VillaCards from "../../components/Floorplan/VillaCards";
 const Floorplan = () => {
   const [text, setText] = useState("PERFECT FOR YOU.");
   const [filterId, setFilterId] = useState(0);
@@ -54,6 +55,7 @@ const Floorplan = () => {
         setFilterId={setFilterId}
         setText={setText}
       />
+      <VillaCards />
     </div>
   );
 };
