@@ -84,6 +84,7 @@ const english = {
         id: 1,
         name: "autism center",
         icon: "/Images/masterplan/plaza.png",
+
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -449,6 +450,7 @@ const english = {
     villas: [
       {
         id: 1,
+        keys: [0, 1, 5, 6, 7],
         title: "Courtyard Villa – 3 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 238 m2",
@@ -480,6 +482,7 @@ const english = {
       },
       {
         id: 2,
+        keys: [0, 2, 10, 11, 13, 14],
         title: "Courtyard Villa – 4 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 266 m2",
@@ -508,6 +511,7 @@ const english = {
       },
       {
         id: 3,
+        keys: [0, 3, 4, 8, 9, 12],
         title: "Garden Villa – 4 Bedroom Unit – East Villas",
         homepagetitle: "Bedroom Garden Villa",
         gross: "Gross Floor Area 378 m2",

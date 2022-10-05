@@ -21,10 +21,17 @@
             font-style: normal;
             font-weight: 600;
             font-size: 39px;
-            line-height: 58px;
+
             text-align: center;
             color: #777777;
 
+            @media (max-width:1224px) {
+                font-size: 25px;
+            }
+
+            @media (max-width:600px) {
+                font-size: 20px;
+            }
         }
 
         span {
@@ -152,6 +159,60 @@
 
         @media (max-width:1224px) {
             margin-inline: 5%;
+        }
+    }
+
+    .villacardsection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: min(2%, 50px);
+        padding-inline: min(5%, 5rem);
+        margin-top: 3rem;
+        max-width: 1600px;
+        margin-inline: auto;
+
+        .villacard {
+            background: rgba(5, 141, 166, 0.1);
+            border-radius: 10px;
+            padding-top: 56px;
+
+            p,
+            h5 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 30px;
+                text-align: center;
+                color: #777777;
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            button {
+                margin-inline: auto;
+                margin-top: 1rem;
+                background-color: #058DA6;
+            }
+        }
+
+        @media(max-width:764px) {
+            display: none;
+        }
+    }
+
+    .villacardsectionmobile {
+        display: none;
+
+        @media (max-width:764px) {
+            display: grid;
+            grid-template-columns: 1fr;
         }
     }
 }

@@ -55,7 +55,7 @@ const Floorplan = () => {
         setFilterId={setFilterId}
         setText={setText}
       />
-      <VillaCards />
+      <VillaCards filterId={filterId} />
     </div>
   );
 };
