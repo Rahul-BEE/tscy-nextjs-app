@@ -1,4 +1,5 @@
 import styles from "../../styles/home.module.scss";
+import featurestyles from "../../styles/sustainblefeature.module.scss";
 import { Row, Col, Container } from "react-bootstrap";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Polygon from "../../public/Svg/Polygonorg.svg";
@@ -155,10 +156,10 @@ const SustainableFeatures = () => {
   };
   const SustainableContents = () => {
     return (
-      <Container fluid className={styles.sustainablecontentContainer}>
+      <Container fluid className={featurestyles.sustainablecontentContainer}>
         <Row>
           <Col style={{ position: "relative" }}>
-            <div className={styles.sustainabledeskdisp}>
+            <div className={featurestyles.sustainabledeskdisp}>
               {showData && (
                 <>
                   <h3
@@ -174,7 +175,7 @@ const SustainableFeatures = () => {
                   </h3>
                   <p className="px-4 my-4">{showData?.sub}</p>
                   <Swiper
-                    className={styles.featureBullets}
+                    className={featurestyles.featureBullets}
                     modules={[Autoplay, FreeMode]}
                     direction="vertical"
                     slidesPerView={7}
@@ -184,15 +185,15 @@ const SustainableFeatures = () => {
                     autoplay={{ delay: 1000, disableOnInteraction: false }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>
-                        <h5 className={styles.bulletSustainable}>{bullet}</h5>
+                        <h5 className={featurestyles.bulletSustainable}>{bullet}</h5>
                       </SwiperSlide>
                     ))}
                   </Swiper>
                 </>
               )}
             </div>
-            <div className={styles.featuresoverLay}></div>
-            <div className={styles.sustainablemobdisp}>
+            <div className={featurestyles.featuresoverLay}></div>
+            <div className={featurestyles.sustainablemobdisp}>
               {showData && (
                 <>
                   <h3
@@ -207,7 +208,7 @@ const SustainableFeatures = () => {
                     {showData?.heading}
                   </h3>
                     {showData?.bullets.map((bullet, index) => (
-                        <h5 className={styles.bulletSustainable}>{bullet}</h5>
+                        <h5 className={featurestyles.bulletSustainable}>{bullet}</h5>
                     ))}
                 </>
               )}
@@ -221,50 +222,50 @@ const SustainableFeatures = () => {
   };
 
   return (
-    <div ref={ref} className={styles.app__sustainablefeaturesection}>
+    <div ref={ref} className={featurestyles.app__sustainablefeaturesection}>
       <Row>
-        <Col className={styles.sustainablesection_heading}>
+        <Col className={featurestyles.sustainablesection_heading}>
           <h5 className="sectionsubHeading">{lan.sustainablesection.title1}</h5>
           <h2 className="sectionmainHeading">
             {lan.sustainablesection.title2}
           </h2>
         </Col>
       </Row>
-      <Row className={styles.rowtablet}>
-        <Col md={3} className={styles.sustainImgCol}>
+      <Row className={featurestyles.rowtablet}>
+        <Col md={3} className={featurestyles.sustainImgCol}>
           <motion.div animate={controls} initial="hidden" variants={variant1}>
             <Image
               src="/Images/sustainableleft.png"
               width={562}
               height={546}
-              className={styles.susimage1}
+              className={featurestyles.susimage1}
             />
           </motion.div>
         </Col>
-        <Col className={styles.sustainablefeaturecontent} md={6} sm={6} lg={6}>
-          <Container className={`${styles.sustainablefeatures}`} fluid>
+        <Col className={featurestyles.sustainablefeaturecontent} md={6} sm={6} lg={6}>
+          <Container className={`${featurestyles.sustainablefeatures}`} fluid>
             <SustainableIcons />
             {showData && <SustainableContents />}
           </Container>
         </Col>
-        <Col md={3} className={styles.sustainImgCol1}>
+        <Col md={3} className={featurestyles.sustainImgCol1}>
           <motion.div animate={controls} initial="hidden" variants={variant2}>
             <Image
               src="/Images/sustainableright.png"
               width={470}
               height={501}
-              className={styles.susimage2}
+              className={featurestyles.susimage2}
             />
           </motion.div>
         </Col>
     
-        <Col md={12} className={styles.sustainImgCol2}>
+        <Col md={12} className={featurestyles.sustainImgCol2}>
           <motion.div animate={controls} initial="hidden" variants={variant2}>
             <Image
               src="/Images/sustainablemobile.png"
               width={470}
               height={400}
-              className={styles.susimage2}
+              className={featurestyles.susimage2}
             />
           </motion.div>
         </Col>

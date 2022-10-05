@@ -51,28 +51,10 @@ const Header = () => {
     return () => window.removeEventListener("scroll", updatePosition);
   }, [location.pathname]);
   return (
-    <header
-      className={`${styles.app__header} ${
-        domYOffset || location.pathname !== "/" ? styles.app_header2 : ""
-      } navbar navbar-expand-lg`}>
-      <div className="container-fluid mx-2">
-        <button
-          className={`navbar-toggler ${styles.navbar__menubtn}`}
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <BiMenuAltLeft
-            color={
-              domYOffset || location.pathname !== "/" ? "#058da6" : "white"
-            }
-            size={40}
-            className="me-3"
-            onClick={() => setShow(true)}
-          />
-        </button>
+    <header className={`${styles.app__header} navbar navbar-expand-lg`}>
+      <div
+        className={` ${styles.headermain}`}
+        data-scrolled={domYOffset || location.pathname !== "/" ? "true" : ""}>
         <div className={`${styles.app__header_right} flex`}>
           <Link href="/" passHref>
             <a>
@@ -124,18 +106,40 @@ const Header = () => {
               : ""
           } `}>
           <Link href={"/contact"} passHref>
-            <button className="btn">
+            <button className={`btn ${styles.contactbtn}`}>
               {lan.header.contact}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>
           </Link>
+          <Link href={"/contact"} passHref>
+            <button className={`btn ${styles.findyourhome}`}>
+              {lan.header.links[0].text}
+            </button>
+          </Link>
         </div>
+        <button
+          className={`navbar-toggler ${styles.navbar__menubtn}`}
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <BiMenuAltLeft
+            color={
+              domYOffset || location.pathname !== "/" ? "#058da6" : "white"
+            }
+            size={40}
+            className="me-3"
+            onClick={() => setShow(true)}
+          />
+        </button>
       </div>
-      <button
+      {/* <button
         className={`btn ${styles.header_right_langbtn} ${styles.mobilelangbtn}`}
         onClick={() => handelLanguageChange()}>
         {lan.header.langbtn}
-      </button>
+      </button> */}
       {show && (
         <MobileMenu
           show={show}

@@ -75,6 +75,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
@@ -91,6 +96,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/equistrian/1.png",
@@ -109,6 +119,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/seelab/1.png",
           "/Images/masterplan/seelab/2.png",
@@ -125,6 +140,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/sustainablemosque/1.png",
@@ -143,6 +163,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/greenspine/1.png",
           "/Images/masterplan/greenspine/2.png",
@@ -159,6 +184,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/brandedresidencies/1.png",
@@ -177,6 +207,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/wellnesscenter/1.png",
           "/Images/masterplan/wellnesscenter/2.png",
@@ -193,6 +228,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/sportcomplex/1.png",
@@ -211,6 +251,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/4starresort/1.png",
           "/Images/masterplan/4starresort/2.png",
@@ -228,6 +273,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/westdistrict/1.png",
@@ -255,6 +305,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/school/1.png",
@@ -290,6 +345,11 @@ const arabic = {
           area: 1250,
           capacity: 3000,
           built: 2020,
+        },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
         },
         slideimg: [
           "/Images/masterplan/eastdistrict/1.png",
@@ -432,6 +492,10 @@ const arabic = {
     gobacktomasterplan: "Back to masterplan",
     villatypes: "Villa Types",
     seevillas: "See Villas",
+    previousto: "Previous to",
+    nextto: "Next to",
+    contact: "Contact",
+    relatedimages: "Related Images",
   },
   tracks: [
     {
@@ -446,6 +510,11 @@ const arabic = {
         capacity: 3000,
         built: 2020,
       },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
+      },
     },
     {
       id: 17,
@@ -459,6 +528,11 @@ const arabic = {
         capacity: 3000,
         built: 2020,
       },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
+      },
     },
     {
       id: 18,
@@ -471,6 +545,11 @@ const arabic = {
         area: "1250 sq.ft",
         capacity: 3000,
         built: 2020,
+      },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
       },
     },
   ],

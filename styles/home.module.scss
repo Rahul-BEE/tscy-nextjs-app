@@ -136,19 +136,7 @@
 }
 
 /* ******************** sustainable featuresection **************** */
-.app__sustainablefeaturesection {
-  margin: 0 0 5rem 0;
-  padding: 0;
-  .sustainablesection_heading {
-    margin: 5rem 2.5rem 1rem 2.5rem;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
+
 
 //icons sections
 .sustainableicons {
@@ -248,125 +236,7 @@
 }
 
 /* ****************** content section **************** */
-.sustainablefeaturecontent {
-  @media (max-width: 1200px) {
-    width: 100%!important;
-    
-  }
-  .sustainablefeatures {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    &:lang(ar) {
-      direction: rtl;
-      .rotate_icon {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
-.sustainabledeskdisp
-{
-  height: 32rem; 
-  overflow: hidden;
-  @media (max-width: 400px) {
-    display: none;
-    overflow: visible;
-  }
-}
-.sustainablemobdisp
-{
-  display: none;
-  height: 32rem; 
-  overflow: hidden;
-  @media (max-width: 400px) {
-    overflow: visible;
-    display: block;
-  }
-}
-.sustainablecontentContainer {
- 
-  padding: 2%;
-  min-height: max-content;
-  div {
-    text-align: center;
-    h3 {
-      text-transform: capitalize;
-      font-weight: 600;
-      line-height: 30px;
-      font-size: 1.625rem;
-    }
-    p {
-      font-size: 1.125rem;
-      color: #777777;
-      font-weight: 400;
-    }
-  }
-  .featuresoverLay {
-    @media (max-width: 400px) {
-      display: none;
-    }
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0) 45.49%
-    );
-    transform: matrix(1, 0, 0, -1, 0, 0);
-    z-index: 2;
-  }
-}
 
-.featureBullets {
-  font-weight: 500;
-  font-size: 1.375rem;
-  color: #777777;
-  text-transform: uppercase;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin-top: 2.5rem;
-}
-
-.bulletSustainable {
-  margin: 2rem auto;
-  max-width: 70%;
-  @media (max-width: 400px) {
-    margin: 2rem auto;
-    max-width: 100%;
-    font-size: 14px;
-    color: #777777;
-  }
-}
-
-.sustainImgCol {
-  @media (max-width: 1200px) {
-    position: absolute;
-    top: 45%;
-    width: 30%;
-    
-  }
-  @media (max-width: 400px) {
-    display: none;
-  }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .susimage1 {
-    left: -50% !important;
-  }
-  .susimage2 {
-    right: -40% !important;
-  }
-}
 
 /* ********************* location section **************************/
 

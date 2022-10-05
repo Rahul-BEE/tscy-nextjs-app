@@ -6,6 +6,7 @@ import { GoChevronLeft } from "react-icons/go";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import Paginationdots from "./Paginationdots";
+import MasterplanInfoBox from "./Masterplaninfobox/MasterplanInfoBox";
 const parentVariant = {
   visible: {
     x: 0,
@@ -29,15 +30,16 @@ const parentVariant = {
     },
   }),
 };
-const Masterplandetail = ({ item, setShowDetail }) => {
+const Masterplandetail = ({ item, track, setShowDetail }) => {
   const lan = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
   const [sliderWidth, setSliderWidth] = useState(0);
+  const [index, setIndex] = useState(track ? track - 16 : item - 1);
   const [direction, setDirection] = useState(1);
-  const [data, setData] = useState(
-    item < 16 ? lan.masterplan.markers[item - 1] : lan.tracks[item - 16]
-  );
-  const length = data.slideimg.length;
+
+  const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
+  const length = data[index]?.slideimg.length;
+
   const dragHandler = (info) => {
     if (info.velocity.x < -200 && slideIndex < length - 1) {
       setDirection(1);
@@ -78,30 +80,37 @@ const Masterplandetail = ({ item, setShowDetail }) => {
             custom={direction}
             onDragEnd={(_, info) => dragHandler(info)}
             className={styles.masterplaninnerslideimg}
-            key={`${data.name}${slideIndex}`}>
+            key={`${data[index].name}${slideIndex}`}>
             <Image
-              key={`${data.name}_detailimg`}
-              src={data.slideimg[slideIndex]}
+              key={`${data[index].name}_detailimg`}
+              src={data[index].slideimg[slideIndex]}
               layout="fill"
               objectFit="cover"
               objectPosition="center"
               placeholder="blur"
-              blurDataURL={data.slideimg[slideIndex]}
+              blurDataURL={data[index].slideimg[slideIndex]}
             />
             <div className={styles.masterplandetailgradient} />
           </motion.div>
         </AnimatePresence>
+        <MasterplanInfoBox
+          item={item}
+          track={track}
+          slideIndex={slideIndex}
+          setSlideIndex={setSlideIndex}
+          updateIndex={setIndex}
+        />
         <div className={styles.gobackbtn} onClick={() => setShowDetail(false)}>
           <span>
             <GoChevronLeft />
           </span>
           {lan.commontext.gobacktomasterplan}
         </div>
-        {data.slideimg.length > 1 && (
+        {data[index].slideimg.length > 1 && (
           <>
             <div className={styles.slideNumber}>
               <p>
-                {slideIndex + 1}/{data.slideimg.length}
+                {slideIndex + 1}/{data[index].slideimg.length}
               </p>
             </div>
 
