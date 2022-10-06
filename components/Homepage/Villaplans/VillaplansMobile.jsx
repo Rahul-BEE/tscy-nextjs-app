@@ -55,17 +55,16 @@ function VillaplansMobile() {
           drag={"x"}
           dragConstraints={{ right: 0, left: -200 }}
           ref={ref}
-          animate={test}
-        >
+          animate={test}>
           {lan &&
             lan.villaplansection.villas.map((villa, index) => (
               <div
+                key={index}
                 // className={styles.content_container}
                 className={`${styles.content_container} flex ${
                   currentvilla.id === index + 1 ? styles.activeVilla : ""
                 }`}
-                onClick={() => changeVilla(index)}
-              >
+                onClick={() => changeVilla(index)}>
                 <div className={styles.content}>
                   <div className={styles.number}>{villa.bedrooms}</div>
                   <div className={styles.text}>

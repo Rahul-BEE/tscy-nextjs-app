@@ -67,7 +67,6 @@ const Filters = ({ filterId, setFilterId, setText }) => {
 
   const clickHandler = (index) => {
     setFilterId(index);
-
     setText(data.filters[index].headingText);
   };
 

@@ -111,7 +111,7 @@ const Header = () => {
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>
           </Link>
-          <Link href={"/contact"} passHref>
+          <Link href={"/floorplan"} passHref>
             <button className={`btn ${styles.findyourhome}`}>
               {lan.header.links[0].text}
             </button>
