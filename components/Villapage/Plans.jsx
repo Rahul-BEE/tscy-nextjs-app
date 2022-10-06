@@ -19,21 +19,22 @@ function Plans() {
   const [expanded, setExpanded] = useState(0);
 
   return (
-    <div className={styles.hero_main}>
-      {/* heading */}
-      <div className={styles.hero_heading}>
-        <p>Our villas stand out with</p>
-        <h2>FLOOR PLANS</h2>
-      </div>
+    <div className={styles.hero_box}>
+      <div className={styles.hero_main}>
+        {/* heading */}
+        <div className={styles.hero_heading}>
+          <p>Our villas stand out with</p>
+          <h2>FLOOR PLANS</h2>
+        </div>
 
-      {/* floor plan */}
+        {/* floor plan */}
 
-      {data && (
-        <div className={styles.hero_container}>
-          {/* left */}
-          <div className={styles.hero_items}>
-            <div className={styles.item_container1}>
-              {/* <div className={styles.item} onClick={() => setFloorindex(0)}>
+        {data && (
+          <div className={styles.hero_container}>
+            {/* left */}
+            <div className={styles.hero_items}>
+              <div className={styles.item_container1}>
+                {/* <div className={styles.item} onClick={() => setFloorindex(0)}>
                 <h3>Ground Floor</h3>
                 <p>
                   Transform your home office into your new favorite meeting
@@ -62,53 +63,56 @@ function Plans() {
                 </p>
               </div> */}
 
-              <Accordion
-                i={0}
-                expanded={expanded}
-                setExpanded={setExpanded}
-                data={data}
-              />
-              <Accordion
-                i={1}
-                expanded={expanded}
-                setExpanded={setExpanded}
-                data={data}
-              />
+                <Accordion
+                  i={0}
+                  expanded={expanded}
+                  setExpanded={setExpanded}
+                  data={data}
+                />
+                <Accordion
+                  i={1}
+                  expanded={expanded}
+                  setExpanded={setExpanded}
+                  data={data}
+                />
 
-              {/* Button */}
-              <div className={styles.dd_button}>Download Floor Plans</div>
+                {/* Button */}
+                <div className={styles.dd_button}>Download Floor Plans</div>
+              </div>
             </div>
-          </div>
 
-          {/* center */}
-          <div className={styles.hero_items}>
-            <Image
-              className={styles.mobile_img}
-              // src="/Images/location/Asset1.png"
-              src={data.floorplan[expanded]}
-              width={556}
-              height={800}
-              layout="responsive"
-              // layout="fill"
-            />
-          </div>
+            {/* center */}
+            <div className={styles.hero_items}>
+              <Image
+                className={styles.mobile_img}
+                // src="/Images/location/Asset1.png"
+                src={data.floorplan[expanded]}
+                width={556}
+                height={800}
+                layout="responsive"
+                // layout="fill"
+              />
+            </div>
 
-          {/* right */}
-          <div className={styles.hero_items}>
-            <div className={styles.item_container2}>
-              <div className={styles.item}>
-                <div className={styles.item_heading}>
-                  <h3>{floorindex === 0 ? "Ground Floor" : "First Floor"}</h3>
+            {/* right */}
+            <div className={styles.hero_items}>
+              <div className={styles.item_container2}>
+                <div className={styles.item}>
+                  <div className={styles.item_heading}>
+                    <h3>{floorindex === 0 ? "Ground Floor" : "First Floor"}</h3>
+                  </div>
+
+                  {/* features */}
+
+                  <div className={styles.collection}>
+                    
+                  </div>
                 </div>
-
-                {/* features */}
-
-                <div className={styles.collection}></div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
