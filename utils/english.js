@@ -17,6 +17,15 @@ import Drop from "../public/Svg/floorplans/cards/drop.svg";
 import House from "../public/Svg/floorplans/cards/house.svg";
 import Car from "../public/Svg/floorplans/cards/car.svg";
 
+import Bedroomp from "../public/Svg/bedroom.svg";
+import MaidRoomp from "../public/Svg/maidroom.svg";
+import Bathroomp from "../public/Svg/bathroom.svg";
+import Livingp from "../public/Svg/living.svg";
+import Kitchenp from "../public/Svg/kitchen.svg";
+import Laundryp from "../public/Svg/laundry.svg";
+import Parkingp from "../public/Svg/parking.svg";
+import Gardenp from "../public/Svg/garden.svg";
+
 const english = {
   header: {
     langbtn: "مرحبا",
@@ -480,6 +489,45 @@ const english = {
         bathrooms: 5,
         type: "Courtyard Villa",
         location: "West District",
+        locationImg: "/Images/villas/westdistrict.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
+        ],
         gfa: "238",
         bua: "256",
         description:
@@ -495,6 +543,12 @@ const english = {
         build: "Built Up Area 285 m2",
         link: "/floorplans/2",
         mainImg: "/Images/villas/4bcv/4bcv.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
@@ -504,12 +558,45 @@ const english = {
           "/Images/villas/4bcv/4bcvInterior/2.png",
           "/Images/villas/4bcv/4bcvInterior/3.png",
         ],
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
+        ],
         gf_plan: "",
         ff_plan: "",
         bedrooms: "4",
         bathrooms: "5",
         type: "Courtyard Villa",
         location: "West District",
+        locationImg: "/Images/villas/westdistrict.png",
         gfa: "266",
         bua: "285",
         description:
@@ -525,6 +612,10 @@ const english = {
         build: "Built Up Area 459 m2",
         link: "/floorplans/3",
         mainImg: "/Images/villas/4bgv/4bgv.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
         floorplan: [
           "/Images/villas/4bgv/floorplan/groundfloor.png",
           "/Images/villas/4bgv/floorplan/firstfloor.png",
@@ -537,12 +628,47 @@ const english = {
           "/Images/villas/4bgv/4bgvInterior/2.png",
           "/Images/villas/4bgv/4bgvInterior/3.png",
         ],
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
+        ],
         gf_image: "",
         ff_image: "",
         bedrooms: "4",
         bathrooms: "6",
         type: "Garden Villa ",
         location: "East District",
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",
         description:
@@ -672,7 +798,40 @@ const english = {
       },
     ],
   },
-
+  propertyFeatures: [
+    {
+      name: "Bedrooms",
+      icon: <Bedroomp />,
+    },
+    {
+      name: "Maid Room",
+      icon: <MaidRoomp />,
+    },
+    {
+      name: "Bathrooms",
+      icon: <Bathroomp />,
+    },
+    {
+      name: "Living Room",
+      icon: <Livingp />,
+    },
+    {
+      name: "Kitchen",
+      icon: <Kitchenp />,
+    },
+    {
+      name: "Laundry",
+      icon: <Laundryp />,
+    },
+    {
+      name: "Parking",
+      icon: <Parkingp />,
+    },
+    {
+      name: "Private Garden",
+      icon: <Gardenp />,
+    },
+  ],
   commontext: {
     brochure: "Brochure",
     floorplan: "Floor Plan",
@@ -701,6 +860,8 @@ const english = {
     contact: "Contact",
     relatedimages: "Related Images",
     comparison: "Comparison",
+    dontforget: "Dont forget to check our",
+    othervillatypes: "Other Villa Types",
   },
   tracks: [
     {

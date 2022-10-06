@@ -163,6 +163,8 @@ a {
 }
 
 .headingRow {
+  margin-inline: 0 !important;
+
   .col {
     width: 100%;
     display: flex;

@@ -25,6 +25,7 @@ const LocationFYV = () => {
           width={1500}
           height={600}
           layout="responsive"
+          objectFit="cover"
         />
       </div>
       <div className={styles.locationMobile}>
