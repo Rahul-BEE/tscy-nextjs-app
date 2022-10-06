@@ -801,6 +801,8 @@ const arabic = {
     comparison: "Comparison",
     dontforget: "Dont forget to check our",
     othervillatypes: "Other Villa Types",
+    viewin: "View In",
+    masterplan: "Master Plan",
   },
   propertyFeatures: [
     {

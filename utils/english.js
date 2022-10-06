@@ -862,6 +862,10 @@ const english = {
     comparison: "Comparison",
     dontforget: "Dont forget to check our",
     othervillatypes: "Other Villa Types",
+    situated: "Situated at a ",
+    primelocationText: "Prime Location in Master Plan",
+    viewin: "View In",
+    masterplan: "Master Plan",
   },
   tracks: [
     {
