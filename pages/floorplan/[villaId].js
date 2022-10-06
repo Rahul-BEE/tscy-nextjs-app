@@ -1,9 +1,5 @@
 const Villa = () => {
-  return (
-    <div>Villa in progress
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Villa
+export default Villa;

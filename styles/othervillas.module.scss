@@ -1,0 +1,64 @@
+.othervillasmain {
+    padding-inline: clamp(40px, 86px, 5%);
+
+    .othervillainner {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        justify-items: center;
+        padding-top: 2rem;
+        max-width: 1600px;
+        margin-inline: auto;
+
+        .villacard {
+            background: rgba(5, 141, 166, 0.1);
+            border-radius: 10px;
+
+            max-width: 600px;
+            width: 100%;
+
+            .cardHeader {
+                margin-block: 56px 20px;
+            }
+
+            p,
+            h5 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 150%;
+                text-align: center;
+                color: #777777;
+                margin: 0;
+                padding: 0;
+
+                @media (max-width:900px) {
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 24px;
+
+                @media (max-width:900px) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            button {
+                margin-inline: auto;
+                margin-top: 1rem;
+                background-color: #058DA6;
+            }
+        }
+
+        @media (max-width:600px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+}

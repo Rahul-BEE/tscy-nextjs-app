@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import styles from "../../styles/floorplan.module.scss";
+import styles from "../../styles/cardsection.module.scss";
 import useLanguage from "../../utils/useLanguage";
-const CardSection = () => {
+const CardSection = ({ page }) => {
   const lan = useLanguage();
   return (
     <div className={styles.cardsSectionmain}>
@@ -16,7 +16,7 @@ const CardSection = () => {
         <div className={`sectionmaindescription`}>
           <p>{lan.findyourvilla.description}</p>
         </div>
-        <div className={styles.cardContainer}>
+        <div className={styles.cardContainer} data-page={page}>
           {lan.findyourvilla.cards.map((item, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.cardHeader}>
@@ -27,6 +27,17 @@ const CardSection = () => {
                 </div>
               </div>
               <p className={styles.cardContents}>{item.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className={styles.cardContainer2} data-page={page}>
+          {lan.findyourvilla.cards.map((item, index) => (
+            <div className={styles.cardHeader} key={index}>
+              <div className={styles.iconContainer}>{item.icon}</div>
+              <div className={styles.cardContents}>
+                <p>{item.title1}</p>
+                <p>{item.title2}</p>
+              </div>
             </div>
           ))}
         </div>

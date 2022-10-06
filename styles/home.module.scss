@@ -8,23 +8,25 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
   .app__bannerswiper {
     width: 100%;
     height: 100%;
+
     .app__bannerswiperslide {
       width: 100%;
       height: 100%;
+
       .app__slider_overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         display: block;
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.15),
-          rgba(0, 0, 0, 0.15)
-        );
+        background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15));
       }
+
       .app__bannerslidecontent {
         color: white;
         letter-spacing: 1px;
@@ -39,13 +41,16 @@
         max-width: 100%;
         white-space: nowrap;
         transition: all 0.5s ease-in-out;
+
         h1 {
           font-size: 3rem;
           margin: 1rem 0;
           transition: all 0.5s ease-in-out;
+
           @media (max-width: 1300px) {
             font-size: 2.5rem;
           }
+
           @media (max-width: 610px) {
             font-size: 1.5rem;
             margin: 0.5rem 0;
@@ -54,16 +59,20 @@
 
         h2 {
           transition: all 0.5s ease-in-out;
+
           @media (max-width: 1300px) {
             font-size: 1.8rem;
           }
+
           @media (max-width: 992px) {
             font-size: 1.5rem;
           }
+
           @media (max-width: 610px) {
             font-size: 1rem;
           }
         }
+
         @media (max-width: 992px) {
           top: 80%;
           left: 5%;
@@ -72,6 +81,7 @@
           text-align: left;
           white-space: unset;
         }
+
         @media (max-width: 610px) {
           top: 85%;
           left: 5%;
@@ -83,6 +93,7 @@
       }
     }
   }
+
   .app__banner_polygon1 {
     position: absolute;
     bottom: -8.5rem;
@@ -90,24 +101,29 @@
     z-index: 2;
     width: 350px;
     height: 350px;
+
     @media (max-width: 1400px) {
       bottom: -12rem;
       right: -7%;
     }
+
     @media (max-width: 992px) {
       width: 300px;
       height: 300px;
       bottom: -7rem;
     }
+
     @media (max-width: 610px) {
       width: 210px;
       height: 210px;
       bottom: -3rem;
     }
+
     @media (max-width: 400px) {
       right: -20%;
     }
   }
+
   .app__banner_polygon2 {
     position: absolute;
     bottom: -15rem;
@@ -115,20 +131,24 @@
     z-index: 2;
     width: 350px;
     height: 350px;
+
     @media (max-width: 1400px) {
       bottom: -17rem;
       right: -11%;
     }
+
     @media (max-width: 992px) {
       width: 300px;
       height: 300px;
       bottom: -12rem;
     }
+
     @media (max-width: 610px) {
       width: 210px;
       height: 210px;
       bottom: -5rem;
     }
+
     @media (max-width: 400px) {
       right: -30%;
     }
@@ -144,11 +164,13 @@
   height: 50px;
   position: relative;
   cursor: pointer;
+
   svg {
     width: 100%;
     height: 100%;
   }
 }
+
 .socialIconIcon,
 .ecoIconIcon,
 .envIconIcon {
@@ -157,13 +179,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .iconSocialActive {
   svg {
     fill: #e79127;
+
     path {
       stroke: #e79127;
     }
   }
+
   .socialIconIcon {
     svg path {
       fill: white;
@@ -172,13 +197,16 @@
     }
   }
 }
+
 .iconSocial {
   svg {
     fill: transparent;
+
     path {
       stroke: orange;
     }
   }
+
   .socialIconIcon {
     svg path {
       fill: orange;
@@ -191,10 +219,12 @@
 .iconEnvActive {
   svg {
     fill: #70b795;
+
     path {
       stroke: #70b795;
     }
   }
+
   .envIconIcon {
     svg path {
       fill: white;
@@ -203,21 +233,26 @@
     }
   }
 }
+
 .iconEnv {
   svg {
     fill: transparent;
+
     path {
       stroke: #70b795;
     }
   }
 }
+
 .iconEcoActive {
   svg {
     fill: #038fab;
+
     path {
       stroke: #038fab;
     }
   }
+
   .ecoIconIcon {
     svg path {
       fill: white;
@@ -226,9 +261,11 @@
     }
   }
 }
+
 .iconEco {
   svg {
     fill: transparent;
+
     path {
       stroke: #038fab;
     }
@@ -242,6 +279,8 @@
 
 .app__locationsection {
   background: rgba(5, 141, 166, 0.1);
+  padding-top: 5rem;
+
   // box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
   .location_description {
     margin: 1rem 0;
@@ -253,21 +292,22 @@
     text-align: center;
     color: #777777;
   }
+
   .locationImagecontainer {
     width: 100%;
     height: 100%;
     position: relative;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 68.44%,
-      #ffffff 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0) 68.44%,
+        #ffffff 100%);
+
     svg {
       position: absolute;
       bottom: 31.5%;
       right: 8%;
       cursor: pointer;
       transition: all 0.2s ease-out;
+
       &:hover {
         transform: scale(1.2);
       }
@@ -275,45 +315,48 @@
   }
 
   @media (max-width:600px) {
-    
-    .container_location{
+
+    .container_location {
       overflow: hidden;
       height: 100vh;
       // min-height: 390px;
       max-height: 390px;
       // transition: all 2s ease-in;
     }
-    .container_location_mobile{
+
+    .container_location_mobile {
       overflow: visible;
       height: 180vh;
 
-      .locationImagecontainer2{
-        .svg_location_comp{
+      .locationImagecontainer2 {
+        .svg_location_comp {
           background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
         }
       }
     }
-    .locationImagecontainer1{
+
+    .locationImagecontainer1 {
       display: none !important;
     }
-    .locationImagecontainer2{
+
+    .locationImagecontainer2 {
       background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
       display: block !important;
       position: relative;
       width: 100vw;
       height: 100%;
 
-      .first_img{
+      .first_img {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
       }
 
-      .svg_location_comp{
+      .svg_location_comp {
         height: 100%;
-        
-        svg{
+
+        svg {
           right: 0;
           width: 100%;
           height: 100%;
@@ -323,10 +366,10 @@
 
     }
 
- 
+
   }
 
-  .locationImagecontainer1{
+  .locationImagecontainer1 {
     position: relative !important;
     width: 100vw;
     height: 100%;
@@ -338,24 +381,25 @@
       height: 100vw;
       width: 100%;
 
-      .first_img{
+      .first_img {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
       }
 
-      span{
+      span {
         position: absolute !important;
         right: 0%;
         // top: 0%;
         width: 100vh !important;
         height: 100vw !important;
       }
+
       // location svg
 
-      .svg_mobile{
-        svg{
+      .svg_mobile {
+        svg {
           position: absolute;
           // top: 10%;
           right: 0;
@@ -366,7 +410,7 @@
     }
   }
 
-  .locationImagecontainer2{
+  .locationImagecontainer2 {
     display: none;
   }
 }
@@ -382,7 +426,7 @@
 }
 
 @media (min-width:0px) and (max-width:600px) {
-  .app__villplanmaincontainer_desktop{
+  .app__villplanmaincontainer_desktop {
     display: none !important;
   }
 
