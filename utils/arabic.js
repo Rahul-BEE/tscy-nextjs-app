@@ -435,6 +435,7 @@ const arabic = {
         id: 1,
         title: "كورتيارد فيلا – 3 غرف نوم – الفلل الغربية",
         homepagetitle: "غرف كورتيارد",
+        slug: "courtyard-villa-3bedroom",
         gross: "إجمالي المساحة الأرضية 238 متر مربع ",
         build: "مساحة البناء 285 متر مربع",
         link: "/floorplan/1",
@@ -469,6 +470,7 @@ const arabic = {
         gross: "إجمالي المساحة الأرضية 266 متراً مربعاً",
         build: "مساحة البناء 285 متراً مربعاً",
         link: "/floorplans/2",
+        slug: "courtyard-villa-4bedroom",
         mainImg: "/Images/villas/4bcv/4bcv.png",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
@@ -494,6 +496,7 @@ const arabic = {
         id: 3,
         title: "فيلا الحديقة – 4 غرف نوم – الفلل الشرقية",
         homepagetitle: "غرف كورتيارد فيلا",
+        slug: "garden-villa-4bedroom",
         gross: "إجمالي المساحة الأرضية 378 متراً مربعاً",
         build: "مساحة البناء 459 متراً مربعاً",
         link: "/floorplans/3",

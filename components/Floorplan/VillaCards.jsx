@@ -45,7 +45,7 @@ const VillaCards = ({ filterId }) => {
               </h5>
               <h5>{villa.type}</h5>
               <p>{villa.location}</p>
-              <Link href={`floorplan/${villa.id}`} passHref>
+              <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
                   whileHover={{
                     scale: 1.05,
@@ -84,7 +84,7 @@ const VillaCards = ({ filterId }) => {
               </h5>
               <h5>{villa.type}</h5>
               <p>{villa.location}</p>
-              <Link href={`floorplan/${villa.id}`} passHref>
+              <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
                   whileHover={{
                     scale: 1.05,

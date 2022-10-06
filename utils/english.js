@@ -455,6 +455,7 @@ const english = {
       {
         id: 1,
         keys: [0, 1, 5, 6, 7],
+        slug: "courtyard-villa-3bedroom",
         title: "Courtyard Villa – 3 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 238 m2",
@@ -487,6 +488,7 @@ const english = {
       {
         id: 2,
         keys: [0, 2, 10, 11, 13, 14],
+        slug: "courtyard-villa-4bedroom",
         title: "Courtyard Villa – 4 Bedroom Unit – West Villas",
         homepagetitle: "Bedroom Courtyard",
         gross: "Gross Floor Area 266 m2",
@@ -516,6 +518,7 @@ const english = {
       {
         id: 3,
         keys: [0, 3, 4, 8, 9, 12],
+        slug: "garden-villa-4bedroom",
         title: "Garden Villa – 4 Bedroom Unit – East Villas",
         homepagetitle: "Bedroom Garden Villa",
         gross: "Gross Floor Area 378 m2",
