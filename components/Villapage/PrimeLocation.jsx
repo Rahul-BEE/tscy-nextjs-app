@@ -6,6 +6,7 @@ import styles from "../../styles/othervillas.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Amenities from "./Amenities";
 const PrimeLocation = () => {
   const lan = useLanguage();
   const router = useRouter();
@@ -63,6 +64,7 @@ const PrimeLocation = () => {
           </div>
         )}
       </div>
+      <Amenities />
     </div>
   );
 };

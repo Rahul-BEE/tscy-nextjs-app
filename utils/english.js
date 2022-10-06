@@ -833,6 +833,8 @@ const english = {
     },
   ],
   commontext: {
+    nearby: "Near By",
+    amenities: "Amenities",
     brochure: "Brochure",
     floorplan: "Floor Plan",
     learnmore: "Learn More",

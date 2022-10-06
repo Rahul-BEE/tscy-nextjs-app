@@ -1,5 +1,11 @@
+import { PrimeLocation } from "../../components";
+
 const Villa = () => {
-  return <div></div>;
+  return (
+    <div>
+      <PrimeLocation />
+    </div>
+  );
 };
 
 export default Villa;
