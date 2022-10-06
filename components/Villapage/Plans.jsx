@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 function Plans() {
   const lan = useLanguage();
@@ -15,8 +16,16 @@ function Plans() {
   );
 
   //   onclick change
-  const [floorindex, setFloorindex] = useState(0);
+  const [floorindex, setFloorindex] = useState();
   const [expanded, setExpanded] = useState(0);
+
+  useEffect(() => {
+    if (expanded === 0) {
+      setFloorindex("ground");
+    } else if (expanded === 1) {
+      setFloorindex("first");
+    }
+  }, [expanded]);
 
   return (
     <div className={styles.hero_box}>
@@ -99,13 +108,38 @@ function Plans() {
               <div className={styles.item_container2}>
                 <div className={styles.item}>
                   <div className={styles.item_heading}>
-                    <h3>{floorindex === 0 ? "Ground Floor" : "First Floor"}</h3>
+                    <h3>{expanded === 0 ? "Ground Floor" : "First Floor"}</h3>
                   </div>
 
                   {/* features */}
 
                   <div className={styles.collection}>
-                    
+                    {data.propertyFeatures[floorindex].map((value, index) => (
+                      <div key={index}>
+                        {lan.propertyFeatures[value].num === true ? (
+                          <div className={styles.icons}>
+                            <div className={styles.svg_icon}>
+                              {lan.propertyFeatures[value].icon}
+                            </div>
+                            <div>
+                              {lan.propertyFeatures[value].key && (
+                                <span>
+                                  {data[lan.propertyFeatures[value].key]}
+                                </span>
+                              )}
+                              {lan.propertyFeatures[value].name}
+                            </div>
+                          </div>
+                        ) : (
+                          <div className={styles.icons}>
+                            <div className={styles.svg_icon}>
+                              {lan.propertyFeatures[value].icon}
+                            </div>
+                            <div>{lan.propertyFeatures[value].name}</div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -119,10 +153,6 @@ function Plans() {
 
 const Accordion = ({ i, expanded, setExpanded, data }) => {
   const isOpen = i === expanded;
-  console.log(isOpen, i);
-
-  // By using `AnimatePresence` to mount and unmount the contents, we can animate
-  // them in and out while also only rendering the contents of open accordions
   return (
     <div className={styles.accordion_box}>
       <motion.div

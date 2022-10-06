@@ -802,14 +802,20 @@ const english = {
     {
       name: "Bedrooms",
       icon: <Bedroomp />,
+      num: true,
+      key: "bedrooms",
     },
     {
       name: "Maid Room",
       icon: <MaidRoomp />,
+      num: true,
+      key: "",
     },
     {
       name: "Bathrooms",
       icon: <Bathroomp />,
+      num: true,
+      key: "bathrooms",
     },
     {
       name: "Living Room",

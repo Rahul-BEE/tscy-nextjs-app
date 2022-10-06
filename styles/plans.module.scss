@@ -98,6 +98,37 @@
                     font-size: 20px;
                 }
             }
+
+            .collection{
+
+                .icons{
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 70px auto;
+                    margin: 20px 0;
+                    align-items: center;
+
+                    color: #777777;
+                    z-index: 1;
+                    
+                    
+                    .svg_icon{
+                        height: 36px;
+                        display: flex;
+                        justify-content: center;
+
+                    }
+                }
+
+                .icons::before{
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    height: 36px;
+                    background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+                    z-index: -1;
+                }
+            }
         }
 
 
