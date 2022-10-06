@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styles from "../../styles/floorplan.module.scss";
 import useLanguage from "../../utils/useLanguage";
+import Link from "next/link";
+import { motion } from "framer-motion";
 const VillaCards = ({ filterId }) => {
   const lan = useLanguage();
   const [data, _] = useState(lan.villaplansection.villas);
@@ -43,7 +45,14 @@ const VillaCards = ({ filterId }) => {
               </h5>
               <h5>{villa.type}</h5>
               <p>{villa.location}</p>
-              <button>{lan.commontext.learnmore}</button>
+              <Link href={`floorplan/${villa.id}`} passHref>
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                  }}>
+                  {lan.commontext.learnmore}
+                </motion.button>
+              </Link>
             </div>
             <Image
               src={villa.mainImg}
@@ -75,7 +84,14 @@ const VillaCards = ({ filterId }) => {
               </h5>
               <h5>{villa.type}</h5>
               <p>{villa.location}</p>
-              <button>{lan.commontext.learnmore}</button>
+              <Link href={`floorplan/${villa.id}`} passHref>
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                  }}>
+                  {lan.commontext.learnmore}
+                </motion.button>
+              </Link>
             </div>
             <Image
               src={villa.mainImg}
