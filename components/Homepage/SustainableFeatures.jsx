@@ -185,7 +185,9 @@ const SustainableFeatures = () => {
                     autoplay={{ delay: 1000, disableOnInteraction: false }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>
-                        <h5 className={featurestyles.bulletSustainable}>{bullet}</h5>
+                        <h5 className={featurestyles.bulletSustainable}>
+                          {bullet}
+                        </h5>
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -207,17 +209,17 @@ const SustainableFeatures = () => {
                     }}>
                     {showData?.heading}
                   </h3>
-                    {showData?.bullets.map((bullet, index) => (
-                        <h5 className={featurestyles.bulletSustainable}>{bullet}</h5>
-                    ))}
+                  {showData?.bullets.map((bullet, index) => (
+                    <h5 className={featurestyles.bulletSustainable} key={index}>
+                      {bullet}
+                    </h5>
+                  ))}
                 </>
               )}
             </div>
-            
           </Col>
         </Row>
       </Container>
-      
     );
   };
 
@@ -242,7 +244,11 @@ const SustainableFeatures = () => {
             />
           </motion.div>
         </Col>
-        <Col className={featurestyles.sustainablefeaturecontent} md={6} sm={6} lg={6}>
+        <Col
+          className={featurestyles.sustainablefeaturecontent}
+          md={6}
+          sm={6}
+          lg={6}>
           <Container className={`${featurestyles.sustainablefeatures}`} fluid>
             <SustainableIcons />
             {showData && <SustainableContents />}
@@ -258,7 +264,7 @@ const SustainableFeatures = () => {
             />
           </motion.div>
         </Col>
-    
+
         <Col md={12} className={featurestyles.sustainImgCol2}>
           <motion.div animate={controls} initial="hidden" variants={variant2}>
             <Image

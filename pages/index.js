@@ -9,9 +9,7 @@ import {
   Newssection,
 } from "../components";
 import styles from "../styles/home.module.scss";
-import axios from "../utils/axios";
 import { useEffect, useState } from "react";
-import qs from "qs";
 import { useRouter } from "next/router";
 export default function Home() {
   const [language, setLanguage] = useState("en");
