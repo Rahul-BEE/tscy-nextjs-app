@@ -1,0 +1,105 @@
+
+.hero_main{
+    margin: 150px 100px;
+    padding: 80px 80px 40px;
+
+    font-family: 'Poppins';
+
+
+
+
+    .hero_heading{
+        text-align: center;
+        margin-bottom: 40px;
+        p{
+            color: #B5B5B5;
+        }
+        h2{
+            background: #058da6;
+            background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
+            -webkit-background-clip: text;
+            background-clip: text ;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+
+    // floor plans
+
+    .hero_container{
+        display: grid;
+        grid-template-columns: 400px auto 400px;
+
+        .hero_items:last-child{
+            margin-left: 40px;
+        }
+
+        .item_container1, .item_container2{
+            margin-top: 20%;
+        }
+
+        // left container
+        .item_container1 {
+            border-top: 2px solid #777777;
+
+            .accordion_box{
+                border-bottom: 1px solid #777777;
+
+                .details{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #777777;
+                    margin-right: 40px;
+
+                    .fw_500{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+
+                        span{
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            .heading_accord{
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 38px;
+                margin: 16px 0;
+            }
+
+            .dd_button{
+                background: #058DA6;
+                border-radius: 17px;
+                width: fit-content;
+                padding: 8px 16px;
+                margin-top: 24px;
+                color: white;
+            }
+        }
+
+
+        // right container
+
+        .item_container2{
+
+            .item_heading{
+                h3{
+                    color: #777777;
+                    font-size: 20px;
+                }
+            }
+        }
+
+
+    }
+
+
+
+}
+
+
