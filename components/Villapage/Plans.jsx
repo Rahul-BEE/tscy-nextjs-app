@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "../../styles/plans.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 function Plans() {
   const lan = useLanguage();
   const router = useRouter();
+  const test = useAnimation();
+  const ref = useRef(null);
+
   const { villaId } = router.query;
   const data = lan.villaplansection.villas.find(
     (villa) => villa.slug === villaId
@@ -22,8 +25,14 @@ function Plans() {
   useEffect(() => {
     if (expanded === 0) {
       setFloorindex("ground");
+      test.start({
+        x: 0,
+      });
     } else if (expanded === 1) {
       setFloorindex("first");
+      test.start({
+        x: -200,
+      });
     }
   }, [expanded]);
 
@@ -43,50 +52,81 @@ function Plans() {
             {/* left */}
             <div className={styles.hero_items}>
               <div className={styles.item_container1}>
-                {/* <div className={styles.item} onClick={() => setFloorindex(0)}>
-                <h3>Ground Floor</h3>
-                <p>
-                  Transform your home office into your new favorite meeting
-                  room—and your desk into a shared table where you can gather
-                  with your team.
-                </p>
-                <p>
-                  Gross Floor Area: <span>{data.gfa}</span>
-                </p>
-                <p>
-                  Built Up Area: <span>{data.bua}</span>
-                </p>
-              </div>
-              <div className={styles.item} onClick={() => setFloorindex(1)}>
-                <h3>First Floor</h3>
-                <p>
-                  Transform your home office into your new favorite meeting
-                  room—and your desk into a shared table where you can gather
-                  with your team.
-                </p>
-                <p>
-                  Gross Floor Area: <span>{data.gfa}</span>
-                </p>
-                <p>
-                  Built Up Area: <span>{data.bua}</span>
-                </p>
-              </div> */}
-
-                <Accordion
-                  i={0}
-                  expanded={expanded}
-                  setExpanded={setExpanded}
-                  data={data}
-                />
-                <Accordion
-                  i={1}
-                  expanded={expanded}
-                  setExpanded={setExpanded}
-                  data={data}
-                />
+                <div className={styles.hero_desktop}>
+                  <Accordion
+                    i={0}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                    data={data}
+                  />
+                  <Accordion
+                    i={1}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                    data={data}
+                  />
+                </div>
 
                 {/* Button */}
                 <div className={styles.dd_button}>Download Floor Plans</div>
+
+                <div className={styles.hero_tablet}>
+                  <div className={styles.item}>
+                    <div className={styles.heading_item}>
+                      <div
+                        onClick={() => setExpanded(0)}
+                        className={expanded === 0 ? styles.active : ""}
+                      >
+                        <h3>Ground Floor</h3>
+                      </div>
+                      <div
+                        onClick={() => setExpanded(1)}
+                        className={expanded === 1 ? styles.active : ""}
+                      >
+                        <h3>First Floor</h3>
+                      </div>
+                    </div>
+                    {/* mobile heading */}
+                    <div className={styles.heading_item_mobile}>
+                      <motion.div
+                        className={styles.head}
+                        drag={"x"}
+                        dragConstraints={{ right: 0, left: -200 }}
+                        ref={ref}
+                        animate={test}
+                      >
+                        <div
+                          onClick={() => setExpanded(0)}
+                          className={expanded === 0 ? styles.active : ""}
+                        >
+                          <h3>Ground Floor</h3>
+                        </div>
+                        <div
+                          onClick={() => setExpanded(1)}
+                          className={expanded === 1 ? styles.active : ""}
+                        >
+                          <h3>First Floor</h3>
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    <div className={styles.description}>
+                      <p>
+                        Transform your home office into your new favorite
+                        meeting room—and your desk into a shared table where you
+                        can gather with your team.
+                      </p>
+                      <div className={styles.col_2}>
+                        <p>
+                          Gross Floor Area <span>{data.gfa}</span>
+                        </p>
+                        <p>
+                          Built Up Area <span>{data.bua}</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
