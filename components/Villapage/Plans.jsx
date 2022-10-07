@@ -16,7 +16,7 @@ function Plans() {
   );
 
   //   onclick change
-  const [floorindex, setFloorindex] = useState();
+  const [floorindex, setFloorindex] = useState("ground");
   const [expanded, setExpanded] = useState(0);
 
   useEffect(() => {
@@ -114,7 +114,7 @@ function Plans() {
                   {/* features */}
 
                   <div className={styles.collection}>
-                    {data.propertyFeatures[floorindex]?.map((value, index) => (
+                    {data.propertyFeatures[floorindex].map((value, index) => (
                       <div key={index}>
                         {lan.propertyFeatures[value].num === true ? (
                           <div className={styles.icons}>

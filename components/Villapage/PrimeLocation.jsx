@@ -30,6 +30,7 @@ const PrimeLocation = () => {
           <div className={styles.locationimgContainer}>
             <Image
               src={data.locationImg}
+              priority={true}
               layout="fill"
               objectFit="cover"
               objectPosition={"center"}
