@@ -1,11 +1,5 @@
-import Plans from "../../components/Villapage/Plans";
-
 const Villa = () => {
-  return (
-    <div>
-      <Plans />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Villa;
