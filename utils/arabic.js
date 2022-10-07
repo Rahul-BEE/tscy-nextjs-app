@@ -803,7 +803,7 @@ const arabic = {
     othervillatypes: "Other Villa Types",
     viewin: "View In",
     masterplan: "Master Plan",
-    nearby: "Near By",
+    nearby: "Nearby",
     amenities: "Amenities",
   },
   propertyFeatures: [
