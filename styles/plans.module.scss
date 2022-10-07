@@ -1,8 +1,11 @@
 
+.hero_box{
+    background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+}
 .hero_main{
     margin: 150px 100px;
     padding: 80px 80px 40px;
-
+    background-color: white;
     font-family: 'Poppins';
 
 
@@ -28,7 +31,9 @@
 
     .hero_container{
         display: grid;
-        grid-template-columns: 400px auto 400px;
+        // grid-template-columns: 400px auto 400px;
+        // grid-template-columns: 3 2fr;
+        grid-template-columns: repeat(3, 1fr);
 
         .hero_items:last-child{
             margin-left: 40px;
@@ -91,6 +96,37 @@
                 h3{
                     color: #777777;
                     font-size: 20px;
+                }
+            }
+
+            .collection{
+
+                .icons{
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 70px auto;
+                    margin: 20px 0;
+                    align-items: center;
+
+                    color: #777777;
+                    z-index: 1;
+                    
+                    
+                    .svg_icon{
+                        height: 36px;
+                        display: flex;
+                        justify-content: center;
+
+                    }
+                }
+
+                .icons::before{
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    height: 36px;
+                    background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+                    z-index: -1;
                 }
             }
         }
