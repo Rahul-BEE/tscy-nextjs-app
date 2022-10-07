@@ -241,30 +241,32 @@
     }
 
 
-    .location {
-        background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
-        padding-top: 5rem;
+
+}
+
+.location {
+    background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+    // padding-top: 5rem;
+
+    @media (max-width:600px) {
+        background: unset;
+    }
+
+    .locationDesktop {
+        display: block;
+        margin-bottom: 5rem;
 
         @media (max-width:600px) {
-            background: unset;
-        }
-
-        .locationDesktop {
-            display: block;
-            margin-bottom: 5rem;
-
-            @media (max-width:600px) {
-                display: none;
-
-            }
-        }
-
-        .locationMobile {
             display: none;
 
-            @media (max-width:600px) {
-                display: block;
-            }
+        }
+    }
+
+    .locationMobile {
+        display: none;
+
+        @media (max-width:600px) {
+            display: block;
         }
     }
 }

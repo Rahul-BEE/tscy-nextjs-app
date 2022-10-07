@@ -114,7 +114,7 @@ function Plans() {
                   {/* features */}
 
                   <div className={styles.collection}>
-                    {data.propertyFeatures[floorindex].map((value, index) => (
+                    {data.propertyFeatures[floorindex]?.map((value, index) => (
                       <div key={index}>
                         {lan.propertyFeatures[value].num === true ? (
                           <div className={styles.icons}>
@@ -160,8 +160,7 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
         animate={{ opacity: isOpen ? "1" : "0.5" }}
         onClick={() => setExpanded(i)}
         style={{ cursor: "pointer", color: "#777777" }}
-        className={styles.heading_accord}
-      >
+        className={styles.heading_accord}>
         {i === 0 ? "Ground Floor" : "First Floor"}
       </motion.div>
       <AnimatePresence initial={false} exitBeforeEnter>
@@ -177,8 +176,7 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
             }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
             style={{ overflow: "hidden" }}
-            className={styles.details}
-          >
+            className={styles.details}>
             <p>
               Transform your home office into your new favorite meeting room—and
               your desk into a shared table where you can gather with your team.
