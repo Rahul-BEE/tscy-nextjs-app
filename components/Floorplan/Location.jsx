@@ -11,7 +11,9 @@ const LocationFYV = () => {
       <div className={`${styles.cardSectionInner} ${styles.locationDesktop}`}>
         <Row className="headingRow">
           <Col>
-            <h5 className="sectionsubHeading">{lan.locationsection.title1}</h5>
+            <h5 className="sectionsubHeading mt-5">
+              {lan.locationsection.title1}
+            </h5>
             <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
           </Col>
         </Row>

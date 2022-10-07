@@ -43,9 +43,9 @@ const InteriorFeatures = () => {
           <p className={`${styles.subHeading} sectionsubHeading`}>
             {lan.commontext.caption}
           </p>
-          <p className={"sectionmainHeading"}>
+          <h4 className={"sectionmainHeading"}>
             {lan.commontext.interiorHeading}
-          </p>
+          </h4>
         </div>
         <div className={styles.interiorcontrols}>
           <IoChevronBackCircleOutline onClick={() => carouselHandler(true)} />

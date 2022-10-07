@@ -16,7 +16,9 @@ const SliderComponent = () => {
     (villa) => villa.slug === villaId
   );
   const setNewComponentWidth = useCallback(() => {
-    setContainerWidth(carouselRef.current?.getBoundingClientRect().width);
+    setContainerWidth(
+      carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
+    );
   }, [carouselRef]);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ const SliderComponent = () => {
       ref={carouselRef}
       dragConstraints={{
         right: 0,
-        left: -1830,
+        left: -containerWidth,
       }}>
       {data &&
         data.interior.map((item, index) => (
