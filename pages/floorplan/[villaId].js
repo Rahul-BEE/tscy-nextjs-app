@@ -8,10 +8,11 @@ const Villa = () => {
     <div>
       {/* <CardSection page={true} />
       <InteriorFeatures />
-      <PrimeLocation />
+  
       <OtherVillas />
       <LocationFYV /> 
       <Plans /> */}
+      <PrimeLocation />
     </div>
   );
 };
