@@ -27,7 +27,7 @@ const OtherVillas = () => {
       {data && (
         <div className={styles.othervillainner}>
           {data.map((villa, index) => (
-            <Link href={`/floorplan/${villa.slug}`} passHref>
+            <Link href={`/floorplan/${villa.slug}`} passHref key={index}>
               <div className={styles.villacard} key={`${index}_villacards`}>
                 <div className={styles.cardHeader}>
                   <h5>

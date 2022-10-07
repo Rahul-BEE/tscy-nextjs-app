@@ -475,12 +475,51 @@ const english = {
           "/Images/villas/3bcv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
         ],
         link: "/floorplan/1",
         ff_plan: "",
@@ -532,6 +571,8 @@ const english = {
         bua: "256",
         description:
           "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 2,
@@ -554,9 +595,21 @@ const english = {
           "/Images/villas/4bcv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/4bcv/4bcvInterior/1.png",
-          "/Images/villas/4bcv/4bcvInterior/2.png",
-          "/Images/villas/4bcv/4bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bcv/4bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bcv/4bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bcv/4bcvInterior/3.png",
+          },
         ],
         nearby: [
           {
@@ -601,6 +654,8 @@ const english = {
         bua: "285",
         description:
           "This immaculate four-bedroom villa layout contains a bright and welcoming lower level with an extraordinarily bountiful living room area. The kitchen is clad with premium fixtures and fittings with plenty of elbow room to stimulate culinary creativity. The adjoining dining area is a lofty space enveloped in natural lighting and exuding a contemporary charm. The ground floor also houses a half-bath and maid’s room. On the upper level of this layout, there are three en-suite bedrooms along with a sprawling master bedroom. The master bedroom is fitted with prodigiously sized windows, generous wardrobe space, an opulent en-suite bathroom equipped with a soaking tub, and shaded balcony access overlooking the courtyard.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 3,
@@ -621,12 +676,36 @@ const english = {
           "/Images/villas/4bgv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
         ],
         nearby: [
           {
@@ -673,6 +752,8 @@ const english = {
         bua: "459",
         description:
           "Our four-bedroom garden villa layout was masterfully designed for the discerning environmentalist. An inviting foyer area is a welcoming gateway to this residence. An expansive living room is accompanied by a vast swath of shaded terrace space. The two-car garage is a convenient addition, situated behind the maid’s room, accessible through the courtyard. The dining area flows seamlessly into a u-shaped kitchen, which makes for a commanding focal point, spaciously accommodating to the most ambitious of culinary aspirations. The first floor is comprised of four en-suite bedrooms. The master bedroom has abundant wardrobe space, a splendidly spacious en-suite bathroom, and a broad, sweeping balcony, nestled above the courtyard’s luxuriant greenspace.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
     ],
     filters: [
@@ -868,6 +949,8 @@ const english = {
     primelocationText: "Prime Location in Master Plan",
     viewin: "View In",
     masterplan: "Master Plan",
+    interiorHeading: "Interior Features",
+    caption: "caption",
   },
   tracks: [
     {

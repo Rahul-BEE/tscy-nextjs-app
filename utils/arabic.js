@@ -460,12 +460,51 @@ const arabic = {
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         interior: [
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
         ],
         nearby: [
           {
@@ -509,6 +548,8 @@ const arabic = {
         bua: "256",
         description:
           "تمتاز هذه الفلل المكونة من ثلاث غرف نوم برحابتها وبأناقتها العصرية. ويراعي هذا التصميم العملي ضمان وجود إضاءة طبيعية في الطابق الأرضي، مع مساحة مطبخ واسعة مجاورة لغرفة الخادمة المرفقة بحمام صغير (نصف حمام) وغرفة معيشة واسعة. ويتضمن الطابق العلوي ثلاث غرف نوم مرفقة بحمامات داخلية، مع مساحة كبيرة لرُكن الدراسة والمنامة والتخزين. وتأتي غرفة النوم الرئيسة مزودة بمساحة مخصصة لخزانة ملابس واسعة، وحمام فخم كامل التجهيزات، ومخرج إلى الشرفة المطلة على ساحة الفناء المصممة بأسلوب أنيق وبعناية فائقة، ما يضمن توافر جميع العناصر اللازمة لمعيشة هادئة ونمط حياة مريح.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 2,
@@ -530,9 +571,21 @@ const arabic = {
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         interior: [
-          "/Images/villas/4bcv/4bcvInterior/1.png",
-          "/Images/villas/4bcv/4bcvInterior/2.png",
-          "/Images/villas/4bcv/4bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bcv/4bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bcv/4bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bcv/4bcvInterior/3.png",
+          },
         ],
         nearby: [
           {
@@ -576,6 +629,8 @@ const arabic = {
         bua: "285",
         description:
           "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 3,
@@ -629,12 +684,36 @@ const arabic = {
           },
         ],
         interior: [
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
         ],
         gf_image: "",
         ff_image: "",
@@ -646,6 +725,8 @@ const arabic = {
         bua: "459",
         description:
           "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
     ],
     filters: [
@@ -805,6 +886,8 @@ const arabic = {
     masterplan: "Master Plan",
     nearby: "Nearby",
     amenities: "Amenities",
+    interiorHeading: "Interior Features",
+    caption: "caption",
   },
   propertyFeatures: [
     {
