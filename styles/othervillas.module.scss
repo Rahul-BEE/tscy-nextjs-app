@@ -424,6 +424,42 @@
         grid-template-columns: 1fr 1fr;
         grid-auto-flow: column;
 
+        .description {
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 24px;
+                color: #777777;
+
+                @media (max-width:700px) {
+                    font-size: 0.8125rem;
+                }
+            }
+
+            .buttoncontainer {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5rem;
+                width: 100%;
+
+                .btn2 {
+                    background: transparent;
+                    color: #058da6;
+                }
+
+                .btn1 {
+                    background-color: #058da6;
+                    border-radius: 10px;
+                }
+
+
+
+            }
+        }
+
         .slideContainer {
             overflow: hidden;
             width: 100%;
@@ -460,6 +496,7 @@
                     h5 {
                         font-weight: 600;
                         font-size: 20px;
+                        color: #767676;
 
                     }
 
@@ -467,6 +504,7 @@
                         font-weight: 400;
                         font-size: 13px;
                         line-height: 20px;
+                        color: #777777;
                     }
 
                     .imgcontainer {

@@ -5,8 +5,9 @@ import {
   IoChevronBackCircleOutline,
   IoChevronForwardCircleOutline,
 } from "react-icons/io5";
+import { BsArrowDownCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
-import Image from "next/image";
+
 import {
   AnimatePresence,
   LayoutGroup,
@@ -73,10 +74,13 @@ const InteriorFeatures = () => {
                     },
                   }}>
                   <p>{data.interiorDescription}</p>
-                  <div>
-                    <button>Register Interest</button>
-                    <button>
+                  <div className={styles.buttoncontainer}>
+                    <button className={styles.btn1}> Register Interest</button>
+                    <button className={styles.btn2}>
                       {lan.commontext.download} {lan.commontext.brochure}
+                      <span>
+                        <BsArrowDownCircle />
+                      </span>
                     </button>
                   </div>
                 </motion.div>
