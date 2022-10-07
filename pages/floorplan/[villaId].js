@@ -6,13 +6,12 @@ import Plans from "../../components/Villapage/Plans";
 const Villa = () => {
   return (
     <div>
-      {/* <CardSection page={true} />
+      <Plans />
+      <CardSection page={true} />
       <InteriorFeatures />
-  
-      <OtherVillas />
-      <LocationFYV /> 
-      <Plans /> */}
       <PrimeLocation />
+      <OtherVillas />
+      <LocationFYV />
     </div>
   );
 };

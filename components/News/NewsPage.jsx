@@ -15,7 +15,7 @@ function NewsPage() {
 
           <div className={styles.container_boxs}>
             {ar.map((index) => (
-              <div className={styles.box}>
+              <div className={styles.box} key={index}>
                 <div>
                   <Image
                     src="/Images/villaplansectionimg.png"
