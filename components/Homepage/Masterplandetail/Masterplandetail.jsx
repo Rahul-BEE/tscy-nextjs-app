@@ -114,7 +114,10 @@ const Masterplandetail = ({ item, track, setShowDetail }) => {
               </p>
             </div>
 
-            <Paginationdots slideIndex={slideIndex} />
+            <Paginationdots
+              slideIndex={slideIndex}
+              length={data[index].slideimg.length}
+            />
           </>
         )}
       </div>
