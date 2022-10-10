@@ -5,7 +5,7 @@ const Paginationdots = ({ slideIndex }) => {
   return (
     <div className={styles.paginationdots}>
       <ul>
-        {[0, 1, 2].map((item) => {
+        {[...Array(length).keys()].map((item) => {
           return (
             <motion.li
               key={item}
@@ -15,6 +15,7 @@ const Paginationdots = ({ slideIndex }) => {
               animate={{
                 opacity: item === slideIndex ? 1 : 0.5,
               }}>
+              {console.log(item)}
               {item === slideIndex ? (
                 <motion.span layoutId="selectedOne" layout="position" />
               ) : null}

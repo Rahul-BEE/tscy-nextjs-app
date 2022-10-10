@@ -102,7 +102,6 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
         </ul>
       </nav>
       <div className={styles.mobilebtmcontent}>
-        {console.log("in", innerwidth)}
         <AnimatePresence mode="wait" initial={false}>
           {data && (
             <motion.div
