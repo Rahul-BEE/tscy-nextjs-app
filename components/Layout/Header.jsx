@@ -33,7 +33,8 @@ const Header = () => {
     }
     localStorage.setItem("language", JSON.stringify(lan));
     setLanguage(lan);
-    location.push(location.pathname, location.pathname, { locale: lan });
+    console.log(location);
+    location.push(location.asPath, location.asPath, { locale: lan });
     // window.location.reload(true);
 
     setloading(!loading);
