@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../../../styles/masterplan.module.scss";
 import { motion } from "framer-motion";
-const Paginationdots = ({ slideIndex }) => {
+const Paginationdots = ({ slideIndex, length }) => {
   return (
     <div className={styles.paginationdots}>
       <ul>
-        {[0, 1, 2].map((item) => {
+        {[...Array(length).keys()].map((item) => {
           return (
             <motion.li
               key={item}

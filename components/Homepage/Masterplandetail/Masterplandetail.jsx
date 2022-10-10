@@ -30,14 +30,14 @@ const parentVariant = {
     },
   }),
 };
-const Masterplandetail = ({ item, track, setShowDetail }) => {
+const Masterplandetail = ({ item, track, goback }) => {
   const lan = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
   const [sliderWidth, setSliderWidth] = useState(0);
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
   const [direction, setDirection] = useState(1);
 
-  const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
+  const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
 
   const dragHandler = (info) => {
@@ -65,7 +65,7 @@ const Masterplandetail = ({ item, track, setShowDetail }) => {
       <div className={styles.masterplandetailinner} id="masterplanslideparent">
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
-            data-index={item > 15 ? "true" : "false"}
+            data-index={track !== null ? "true" : "false"}
             drag="x"
             dragConstraints={{
               right: 0,
@@ -100,7 +100,7 @@ const Masterplandetail = ({ item, track, setShowDetail }) => {
           setSlideIndex={setSlideIndex}
           updateIndex={setIndex}
         />
-        <div className={styles.gobackbtn} onClick={() => setShowDetail(false)}>
+        <div className={styles.gobackbtn} onClick={() => goback()}>
           <span>
             <GoChevronLeft />
           </span>
@@ -114,7 +114,10 @@ const Masterplandetail = ({ item, track, setShowDetail }) => {
               </p>
             </div>
 
-            <Paginationdots slideIndex={slideIndex} />
+            <Paginationdots
+              slideIndex={slideIndex}
+              length={data[index].slideimg.length}
+            />
           </>
         )}
       </div>

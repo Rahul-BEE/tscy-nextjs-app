@@ -21,7 +21,7 @@ function NewsMobile({ data }) {
           <SwiperSlide key={`${index}_newmob`}>
             <div className={styles.test_box}>
               <div className={styles.heading_mobile}>
-                <h2>ress and news</h2>
+                <h2>Press and news</h2>
                 <p>Read here </p>
               </div>
 

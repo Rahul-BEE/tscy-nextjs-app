@@ -1,44 +1,52 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useState } from "react";
 import styles from "../../../styles/masterplan.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import useLanguage from "../../../utils/useLanguage";
 import { useEffect } from "react";
+import { useRef } from "react";
 const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
   const lan = useLanguage();
   const [selectedTab, setSelectedTab] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [innerwidth, setInnerWidth] = useState(0);
   const [data, setData] = useState(lan.masterplan.markers);
-  useEffect(() => {
-    if (selectedTab === 0) {
+  const innerRow = useRef(null);
+
+  const clickTabHandler = (id) => {
+    if (id === 0) {
+      setSelectedTab(0);
       setData(lan.masterplan.markers);
-    } else if (selectedTab === 1) {
+    } else if (id === 1) {
       setData(lan.tracks);
+      setSelectedTab(1);
     }
-    // setInnerWidthFunction();
-  }, [selectedTab]);
+    setNewSliderInnerWidth();
+  };
 
-  useEffect(() => {
+  const setNewSliderInnerWidth = useCallback(() => {
     setInnerWidth(
-      document.getElementById("dragContainer").clientWidth -
-        window.innerWidth / 2
+      innerRow.current?.scrollWidth - innerRow.current?.clientWidth
     );
-  }, [data]);
+  }, [innerRow, selectedTab]);
 
   useEffect(() => {
+    setNewSliderInnerWidth();
+
     if (typeof window !== "undefined") {
       setIsMobile(window.innerWidth < 728);
+      window.addEventListener("resize", () => {
+        setIsMobile(window.innerWidth < 728);
+        window.addEventListener("resize", setNewSliderInnerWidth);
+      });
     }
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 728);
-    });
     return () => {
       window.removeEventListener("resize", () => {
         setIsMobile(window.innerWidth < 728);
+        window.addEventListener("resize", setNewSliderInnerWidth);
       });
     };
-  }, []);
+  }, [innerRow, setNewSliderInnerWidth]);
 
   const clickHandler = (id) => {
     setDesktop(false);
@@ -59,7 +67,7 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
             key={"componentstab"}
             className={selectedTab === 0 ? styles.selectedTab : ""}
             onClick={() => {
-              setSelectedTab(0);
+              clickTabHandler(0);
             }}>
             {lan.commontext.components}
             {selectedTab === 0 ? (
@@ -70,7 +78,7 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
             key={"trackstab"}
             className={selectedTab === 1 ? styles.selectedTab : ""}
             onClick={() => {
-              setSelectedTab(1);
+              clickTabHandler(1);
             }}>
             {lan.commontext.tracks}
             {selectedTab === 1 ? (
@@ -84,9 +92,11 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
           {data && (
             <motion.div
               id="dragContainer"
+              onLoad={setNewSliderInnerWidth}
               className={styles.mobilebtmcontentinner}
               data-index={selectedTab}
               drag="x"
+              ref={innerRow}
               dragListener={isMobile}
               dragConstraints={{
                 right: 0,

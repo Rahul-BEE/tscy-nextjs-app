@@ -774,7 +774,7 @@
           justify-content: flex-start;
           flex-wrap: nowrap;
           gap: 1rem;
-          width: fit-content;
+          // width: fit-content;
         }
 
         .normalItem {
@@ -884,19 +884,32 @@
 
     .itemdetailsbtm {
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
       align-items: center;
+      justify-content: space-around;
 
-      p {
+      .detailItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+
+        @media (max-width:700px) {
+          flex-direction: column;
+        }
+      }
+
+      p,
+      h6 {
         font-weight: 600;
         font-family: "Poppins";
         font-style: normal;
+        margin: 0;
+        padding: 0;
+      }
 
-        span {
-          font-weight: 500;
-          margin-left: 1rem;
-        }
+      p {
+        font-weight: 500;
       }
 
     }
@@ -905,4 +918,6 @@
       display: flex;
     }
   }
+
+
 }
