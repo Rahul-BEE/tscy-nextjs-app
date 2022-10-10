@@ -17,6 +17,15 @@ import Drop from "../public/Svg/floorplans/cards/drop.svg";
 import House from "../public/Svg/floorplans/cards/house.svg";
 import Car from "../public/Svg/floorplans/cards/car.svg";
 
+import Bedroomp from "../public/Svg/bedroom.svg";
+import MaidRoomp from "../public/Svg/maidroom.svg";
+import Bathroomp from "../public/Svg/bathroom.svg";
+import Livingp from "../public/Svg/living.svg";
+import Kitchenp from "../public/Svg/kitchen.svg";
+import Laundryp from "../public/Svg/laundry.svg";
+import Parkingp from "../public/Svg/parking.svg";
+import Gardenp from "../public/Svg/garden.svg";
+
 const english = {
   header: {
     langbtn: "مرحبا",
@@ -466,12 +475,51 @@ const english = {
           "/Images/villas/3bcv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
-          "/Images/villas/3bcv/3bcvInterior/1.png",
-          "/Images/villas/3bcv/3bcvInterior/2.png",
-          "/Images/villas/3bcv/3bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
         ],
         link: "/floorplan/1",
         ff_plan: "",
@@ -480,10 +528,51 @@ const english = {
         bathrooms: 5,
         type: "Courtyard Villa",
         location: "West District",
+        locationImg: "/Images/villas/westdistrict.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
+        ],
         gfa: "238",
         bua: "256",
         description:
           "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 2,
@@ -495,14 +584,64 @@ const english = {
         build: "Built Up Area 285 m2",
         link: "/floorplans/2",
         mainImg: "/Images/villas/4bcv/4bcv.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/4bcv/4bcvInterior/1.png",
-          "/Images/villas/4bcv/4bcvInterior/2.png",
-          "/Images/villas/4bcv/4bcvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bcv/4bcvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bcv/4bcvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bcv/4bcvInterior/3.png",
+          },
+        ],
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
         ],
         gf_plan: "",
         ff_plan: "",
@@ -510,10 +649,13 @@ const english = {
         bathrooms: "5",
         type: "Courtyard Villa",
         location: "West District",
+        locationImg: "/Images/villas/westdistrict.png",
         gfa: "266",
         bua: "285",
         description:
           "This immaculate four-bedroom villa layout contains a bright and welcoming lower level with an extraordinarily bountiful living room area. The kitchen is clad with premium fixtures and fittings with plenty of elbow room to stimulate culinary creativity. The adjoining dining area is a lofty space enveloped in natural lighting and exuding a contemporary charm. The ground floor also houses a half-bath and maid’s room. On the upper level of this layout, there are three en-suite bedrooms along with a sprawling master bedroom. The master bedroom is fitted with prodigiously sized windows, generous wardrobe space, an opulent en-suite bathroom equipped with a soaking tub, and shaded balcony access overlooking the courtyard.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
       {
         id: 3,
@@ -525,17 +667,77 @@ const english = {
         build: "Built Up Area 459 m2",
         link: "/floorplans/3",
         mainImg: "/Images/villas/4bgv/4bgv.png",
+        propertyFeatures: {
+          ground: [0, 1, 2, 3, 4],
+          first: [5, 6, 7],
+        },
         floorplan: [
           "/Images/villas/4bgv/floorplan/groundfloor.png",
           "/Images/villas/4bgv/floorplan/firstfloor.png",
         ],
         interior: [
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
-          "/Images/villas/4bgv/4bgvInterior/1.png",
-          "/Images/villas/4bgv/4bgvInterior/2.png",
-          "/Images/villas/4bgv/4bgvInterior/3.png",
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
+          {
+            title: "Wardrobes",
+            description: "Custom made high gloss veneer finish",
+            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+          },
+          {
+            title: "Sanitary",
+            description: "Modern designed sanitary",
+            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+          },
+          {
+            title: "Wall Paint",
+            description: "High finishing fenomastic paint",
+            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+          },
+        ],
+        nearby: [
+          {
+            name: "Plaza",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/plaza.png",
+          },
+          {
+            name: "AUTISM VILLAGE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/autism.png",
+          },
+          {
+            name: "MOSQUE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/mosque.png",
+          },
+          {
+            name: "EQUISTRIAN CENTRE",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/equistrian.png",
+          },
+          {
+            name: "BRIDGES",
+            description:
+              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+            img: "/Images/villas/amenities/bridge.png",
+          },
         ],
         gf_image: "",
         ff_image: "",
@@ -543,10 +745,15 @@ const english = {
         bathrooms: "6",
         type: "Garden Villa ",
         location: "East District",
+        locationDesc:
+          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",
         description:
           "Our four-bedroom garden villa layout was masterfully designed for the discerning environmentalist. An inviting foyer area is a welcoming gateway to this residence. An expansive living room is accompanied by a vast swath of shaded terrace space. The two-car garage is a convenient addition, situated behind the maid’s room, accessible through the courtyard. The dining area flows seamlessly into a u-shaped kitchen, which makes for a commanding focal point, spaciously accommodating to the most ambitious of culinary aspirations. The first floor is comprised of four en-suite bedrooms. The master bedroom has abundant wardrobe space, a splendidly spacious en-suite bathroom, and a broad, sweeping balcony, nestled above the courtyard’s luxuriant greenspace.",
+        interiorDescription:
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
       },
     ],
     filters: [
@@ -672,8 +879,49 @@ const english = {
       },
     ],
   },
-
+  propertyFeatures: [
+    {
+      name: "Bedrooms",
+      icon: <Bedroomp />,
+      num: true,
+      key: "bedrooms",
+    },
+    {
+      name: "Maid Room",
+      icon: <MaidRoomp />,
+      num: true,
+      key: "",
+    },
+    {
+      name: "Bathrooms",
+      icon: <Bathroomp />,
+      num: true,
+      key: "bathrooms",
+    },
+    {
+      name: "Living Room",
+      icon: <Livingp />,
+    },
+    {
+      name: "Kitchen",
+      icon: <Kitchenp />,
+    },
+    {
+      name: "Laundry",
+      icon: <Laundryp />,
+    },
+    {
+      name: "Parking",
+      icon: <Parkingp />,
+    },
+    {
+      name: "Private Garden",
+      icon: <Gardenp />,
+    },
+  ],
   commontext: {
+    nearby: "Nearby",
+    amenities: "Amenities",
     brochure: "Brochure",
     floorplan: "Floor Plan",
     learnmore: "Learn More",
@@ -701,6 +949,14 @@ const english = {
     contact: "Contact",
     relatedimages: "Related Images",
     comparison: "Comparison",
+    dontforget: "Dont forget to check our",
+    othervillatypes: "Other Villa Types",
+    situated: "Situated at a ",
+    primelocationText: "Prime Location in Master Plan",
+    viewin: "View In",
+    masterplan: "Master Plan",
+    interiorHeading: "Interior Features",
+    caption: "caption",
     registerinterest:"Register Interest",
   },
   tracks: [

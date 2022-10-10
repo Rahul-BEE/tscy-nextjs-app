@@ -52,7 +52,7 @@
 
 
         .filterinnerrow {
-            width: fit-content;
+            // width: fit-content;
             display: grid;
             grid-template-columns: repeat(auto-fit, 100px);
             grid-auto-flow: column;
@@ -240,118 +240,33 @@
         }
     }
 
-    .cardsSectionmain {
-        padding: 5% 10%;
-        background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
-
-        .cardSectionInner {
-            margin-bottom: 0;
-        }
-
-        .cardContainer {
-            display: grid;
-            gap: min(2%, 50px);
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-            align-items: start;
-            margin-block: 2rem;
-
-            .card {
-                background-color: white;
-                border-radius: 10px;
-                padding: 1rem;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                flex-direction: column;
-                gap: 1rem;
-                max-width: 288px;
 
 
-                p,
-                h5 {
-                    padding: 0;
-                    margin: 0;
-                }
+}
 
-                .cardHeader {
-                    display: grid;
-                    gap: 1rem;
-                    grid-template-columns: auto 1fr;
+.location {
+    background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+    // padding-top: 5rem;
 
-                    .iconContainer {
-                        width: 56px;
-                        height: 55px;
-                        background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
+    @media (max-width:600px) {
+        background: unset;
+    }
 
+    .locationDesktop {
+        display: block;
+        margin-bottom: 5rem;
 
-                    h5 {
-                        font-weight: 600;
-                        font-size: 1.25rem;
-                        line-height: 30px;
-                    }
-                }
-
-                .cardContents {
-                    font-family: 'Poppins';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 24px;
-                    color: #777777;
-                }
-            }
-
-            @media (max-width:968px) {
-                grid-template-columns: repeat(2, 1fr);
-
-            }
-
-            @media (max-width:700px) {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 2rem;
-
-            }
-        }
-
-
-        @media (max-width:1224px) {
-            padding: 5%;
+        @media (max-width:600px) {
+            display: none;
 
         }
     }
 
-    .location {
-        background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
+    .locationMobile {
+        display: none;
 
         @media (max-width:600px) {
-            background: unset;
-        }
-
-        .locationDesktop {
             display: block;
-            margin-bottom: 5rem;
-
-            @media (max-width:600px) {
-                display: none;
-
-            }
-        }
-
-        .locationMobile {
-            display: none;
-
-            @media (max-width:600px) {
-                display: block;
-            }
         }
     }
 }

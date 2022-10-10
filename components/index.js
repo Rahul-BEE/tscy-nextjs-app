@@ -8,3 +8,8 @@ export { default as Partners } from "./Homepage/Partners";
 export { default as Header } from "./Layout/Header";
 export { default as Footer } from "./Layout/Footer";
 export { default as Loader } from "./Loader/Loader";
+export { default as OtherVillas } from "./Villapage/OtherVillas";
+export { default as PrimeLocation } from "./Villapage/PrimeLocation";
+export { default as InteriorFeatures } from "./Villapage/InteriorFeatures";
+export { default as Amenities } from "./Villapage/Amenities";
+export { default as CardsSection } from "./Floorplan/CardsSection";

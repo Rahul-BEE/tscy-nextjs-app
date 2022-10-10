@@ -162,7 +162,7 @@ const Masterplan = () => {
     }
   };
   return (
-    <div className={styles.app__masterplan}>
+    <div className={styles.app__masterplan} id="masterplananchor">
       <Row className="headingRow">
         <Col>
           <h5 className="sectionsubHeading">{lan.masterplan.title1}</h5>

@@ -3,7 +3,6 @@ import useLanguage from "../../utils/useLanguage";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Clickme from "../../public/Svg/locationbtn.svg";
 import LocationSvgComp from "./LocationSvg/LocationSvgComp";
 import LocationSvgComp1 from "./LocationSvg/LocationSvgComp1";
 import { motion } from "framer-motion";
@@ -55,8 +54,7 @@ const Location = () => {
           svgchange === true
             ? styles.container_location
             : styles.container_location_mobile
-        }
-      >
+        }>
         <div className={styles.locationImagecontainer1}>
           <div className={styles.first_img}>
             <Image
