@@ -29,7 +29,6 @@ const Masterplan = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
-  const [noDrag, setNoDrag] = useState(false);
   const [desktop, setDesktop] = useState(true);
   const [constrains, setConstrains] = useState({
     right: 0,
@@ -37,7 +36,6 @@ const Masterplan = () => {
     top: 0,
     bottom: 0,
   });
-  const [containerWidth, setContainerWidth] = useState(0);
   const [showDetail, setShowDetail] = useState(false);
   const zoomAnimation = useAnimation();
   const containerRef = useRef();
@@ -91,62 +89,78 @@ const Masterplan = () => {
     }
   }, [track, desktop]);
 
-  const zoomHandler = (state) => {
+  const zoomHandler = async (state) => {
     if (state) {
-      zoomAnimation.start({ x: move.x, y: 0, scale: 1.5 });
+      await zoomAnimation.start({
+        x: move.x,
+        y: 0,
+        scale: 1.5,
+        transition: {
+          duration: 1,
+        },
+      });
+      setZoom(state);
     } else {
-      zoomAnimation.start({ x: move.x, y: 0, scale: 1 });
+      await zoomAnimation.start({
+        x: move.x,
+        y: 0,
+        scale: 1,
+        transition: {
+          duration: 1,
+        },
+      });
+      setZoom(state);
     }
   };
+  const setNewConstraints = useCallback(() => {
+    setIsBrowser(window.innerWidth < 1224);
+    setTrack(null);
+    console.log(
+      "zoom called",
+      zoom,
+      imageContainerRef.current?.getBoundingClientRect()
+    );
+    setConstrains({
+      right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
+      left: -(
+        imageContainerRef.current?.getBoundingClientRect().width -
+        containerRef.current?.clientWidth
+      ),
+      top: zoom ? -10 : 0,
+      bottom: zoom ? 100 : 0,
+    });
 
+    // if (zoom) {
+    //   console.log("called", zoom);
+    //   setConstrains({
+    //     left: -(
+    //       imageContainerRef.current?.getBoundingClientRect().width -
+    //       imageContainerRef.current?.scrollWidth
+    //     ),
+    //     right: 342,
+    //   });
+    // } else {
+    //   console.log("called", zoom);
+    //   setConstrains({
+    //     right: 0,
+    //     left: -(
+    //       imageContainerRef.current?.getBoundingClientRect().width -
+    //       containerRef.current?.getBoundingClientRect().width
+    //     ),
+    //     top: 0,
+    //     bottom: 0,
+    //   });
+    // }
+  }, [zoom]);
   useEffect(() => {
     setNewConstraints();
     if (typeof window !== "undefined") {
-      setIsBrowser(window.innerWidth < 1224);
-      window.addEventListener("resize", () => {
-        setTrack(null);
-        setIsBrowser(window.innerWidth < 1224);
-        setNewConstraints();
-      });
+      window.addEventListener("resize", setNewConstraints());
     }
     return () => {
-      window.removeEventListener("resize", () => {
-        setTrack(null);
-        setIsBrowser(window.innerWidth < 1224);
-        setNewConstraints();
-      });
+      window.removeEventListener("resize", setNewConstraints);
     };
-  }, []);
-
-  const setNewConstraints = useCallback(() => {
-    if (zoom) {
-      setConstrains({
-        right: -(imageContainerRef.current?.getBoundingClientRect().x + move.x),
-        left:
-          imageContainerRef.current?.getBoundingClientRect().width / 1.5 - 341,
-        // top: 0,
-        // bottom: 0,
-        // top:
-        //   -(
-        //     imageContainerRef.current?.getBoundingClientRect().height -
-        //     containerRef.current?.getBoundingClientRect().height
-        //   ) * 0.5,
-        // bottom:
-        //   (imageContainerRef.current?.getBoundingClientRect().height -
-        //     containerRef.current?.getBoundingClientRect().height) *
-        //   0.5,
-      });
-    } else {
-      setConstrains({
-        right: 0,
-        left:
-          imageContainerRef.current?.getBoundingClientRect().width -
-          containerRef.current?.getBoundingClientRect().width,
-        top: 0,
-        bottom: 0,
-      });
-    }
-  }, [imageContainerRef, containerRef]);
+  }, [setNewConstraints, zoom, imageContainerRef]);
 
   //Guestures
 
@@ -181,16 +195,12 @@ const Masterplan = () => {
           {lan.masterplan.description}
         </Col>
       </Row>
-
       {showDetail ? (
         <>
           <div
             className={styles.masterplanContainer}
             id="masterplancontainer"
-            ref={containerRef}
-            style={{
-              touchAction: "none",
-            }}>
+            ref={containerRef}>
             <Masterplandetail
               item={item}
               track={track}
@@ -208,10 +218,7 @@ const Masterplan = () => {
           <div
             className={styles.masterplanContainer}
             id="masterplancontainer"
-            ref={containerRef}
-            style={{
-              touchAction: "none",
-            }}>
+            ref={containerRef}>
             <div className={styles.zoombtn}>
               {zoom ? (
                 <AiFillMinusCircle onClick={() => zoomHandler(false)} />
@@ -230,16 +237,12 @@ const Masterplan = () => {
               dragElastic={false}
               dragConstraints={{
                 right: constrains.right,
-                left: -constrains.left,
+                left: constrains.left,
                 top: constrains.top,
                 bottom: constrains.bottom,
               }}
               dragMomentum={0}
-              style={{
-                touchAction: "none",
-              }}
               transition={{ duration: 1 }}
-              onAnimationComplete={() => setZoom(!zoom)}
               initial="hidden">
               <Image
                 id="masterplanmap"
