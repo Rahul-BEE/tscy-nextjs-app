@@ -139,4 +139,8 @@
             padding: 5%;
 
         }
+
+        &[data-bg="true"] {
+            background: #FFFFFF;
+        }
     }

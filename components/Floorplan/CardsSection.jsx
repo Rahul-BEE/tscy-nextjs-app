@@ -5,7 +5,7 @@ import useLanguage from "../../utils/useLanguage";
 const CardSection = ({ page }) => {
   const lan = useLanguage();
   return (
-    <div className={styles.cardsSectionmain}>
+    <div className={styles.cardsSectionmain} data-bg={page}>
       <div className={styles.cardSectionInner}>
         <Row className="headingRow">
           <Col>
