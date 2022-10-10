@@ -96,7 +96,7 @@ const Masterplan = () => {
         y: 0,
         scale: 1.5,
         transition: {
-          duration: 1,
+          duration: 0.5,
         },
       });
       setZoom(state);
@@ -106,7 +106,7 @@ const Masterplan = () => {
         y: 0,
         scale: 1,
         transition: {
-          duration: 1,
+          duration: 0.5,
         },
       });
       setZoom(state);
@@ -115,42 +115,16 @@ const Masterplan = () => {
   const setNewConstraints = useCallback(() => {
     setIsBrowser(window.innerWidth < 1224);
     setTrack(null);
-    console.log(
-      "zoom called",
-      zoom,
-      imageContainerRef.current?.getBoundingClientRect()
-    );
+
     setConstrains({
       right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
       left: -(
         imageContainerRef.current?.getBoundingClientRect().width -
-        containerRef.current?.clientWidth
+        containerRef.current?.getBoundingClientRect().width
       ),
       top: zoom ? -10 : 0,
       bottom: zoom ? 100 : 0,
     });
-
-    // if (zoom) {
-    //   console.log("called", zoom);
-    //   setConstrains({
-    //     left: -(
-    //       imageContainerRef.current?.getBoundingClientRect().width -
-    //       imageContainerRef.current?.scrollWidth
-    //     ),
-    //     right: 342,
-    //   });
-    // } else {
-    //   console.log("called", zoom);
-    //   setConstrains({
-    //     right: 0,
-    //     left: -(
-    //       imageContainerRef.current?.getBoundingClientRect().width -
-    //       containerRef.current?.getBoundingClientRect().width
-    //     ),
-    //     top: 0,
-    //     bottom: 0,
-    //   });
-    // }
   }, [zoom]);
   useEffect(() => {
     setNewConstraints();
@@ -169,6 +143,16 @@ const Masterplan = () => {
       setMove({
         x: 0,
         y: imageContainerRef.current.getBoundingClientRect().y,
+      });
+    } else if (
+      imageContainerRef.current.getBoundingClientRect().x < constrains.left
+    ) {
+      zoomAnimation.start({
+        x: -imageContainerRef.current?.clientWidth,
+      });
+      setMove({
+        x: -500,
+        y: 0,
       });
     } else {
       setMove({
@@ -242,7 +226,6 @@ const Masterplan = () => {
                 bottom: constrains.bottom,
               }}
               dragMomentum={0}
-              transition={{ duration: 1 }}
               initial="hidden">
               <Image
                 id="masterplanmap"
