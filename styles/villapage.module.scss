@@ -1,0 +1,70 @@
+.app__villasection1planmain {
+    margin-top: 73px;
+    width: 100vw;
+    height: 100%;
+    background: rgba(5, 141, 166, 0.1);
+
+    @media (max-width:1224px) {
+        margin-top: 120px;
+    }
+
+    @media (max-width:600px) {
+        margin-top: 80px;
+    }
+
+
+    .floorplanHeading {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 39px;
+        background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-top: 116px;
+
+    }
+
+    .floorplansubHeading
+    {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        color: #777777;
+        width: 60%;
+        margin: 0 auto;
+        color: #777777;
+    }
+    button {
+        margin-right: 20px;
+        background-color: #058DA6;
+        border-radius: 10px;
+    }
+
+    .downloadcomparison {
+        margin-block: 2rem;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #058DA6;
+
+        p {
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+        }
+    }
+    .bgimg
+    {
+        bottom: 380px!important;
+    }
+
+}

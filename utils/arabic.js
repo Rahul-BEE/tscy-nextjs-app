@@ -676,6 +676,7 @@ const arabic = {
     contact: "Contact",
     relatedimages: "Related Images",
     comparison: "Comparison",
+    registerinterest:"Register Interest",
   },
   tracks: [
     {

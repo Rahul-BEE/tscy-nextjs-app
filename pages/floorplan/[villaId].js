@@ -1,8 +1,6 @@
 const Villa = () => {
   return (
-    <div>Villa in progress
-      
-    </div>
+    <div>Villa</div>
   )
 }
 
