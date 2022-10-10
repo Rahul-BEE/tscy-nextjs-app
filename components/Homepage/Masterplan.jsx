@@ -14,6 +14,7 @@ import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
 import Masterplandetail from "./Masterplandetail/Masterplandetail";
 import Masterplandetailbtm from "./Masterplandetail/Masterplandetailbtm";
+import { useCallback } from "react";
 
 const Masterplan = () => {
   const lan = useLanguage();
@@ -99,25 +100,25 @@ const Masterplan = () => {
   };
 
   useEffect(() => {
+    setNewConstraints();
     if (typeof window !== "undefined") {
       setIsBrowser(window.innerWidth < 1224);
+      window.addEventListener("resize", () => {
+        setTrack(null);
+        setIsBrowser(window.innerWidth < 1224);
+        setNewConstraints();
+      });
     }
-    window.addEventListener("resize", () => {
-      setTrack(null);
-      setIsBrowser(window.innerWidth < 1224);
-    });
     return () => {
       window.removeEventListener("resize", () => {
         setTrack(null);
         setIsBrowser(window.innerWidth < 1224);
+        setNewConstraints();
       });
     };
   }, []);
 
-  useEffect(() => {
-    // console.log("imageref", imageContainerRef.current?.getBoundingClientRect());
-    // console.log("containered", containerRef.current?.getBoundingClientRect());
-    // console.log("z", zoom);
+  const setNewConstraints = useCallback(() => {
     if (zoom) {
       setConstrains({
         right: -(imageContainerRef.current?.getBoundingClientRect().x + move.x),
@@ -145,7 +146,8 @@ const Masterplan = () => {
         bottom: 0,
       });
     }
-  }, []);
+  }, [imageContainerRef, containerRef]);
+
   //Guestures
 
   const dragHandler = async (_, info) => {
@@ -160,6 +162,11 @@ const Masterplan = () => {
         y: imageContainerRef.current.getBoundingClientRect().y,
       });
     }
+  };
+  const getBacktoMasterplan = () => {
+    setShowDetail(false);
+    setItem(null);
+    setTrack(null);
   };
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
@@ -187,10 +194,14 @@ const Masterplan = () => {
             <Masterplandetail
               item={item}
               track={track}
-              setShowDetail={setShowDetail}
+              goback={getBacktoMasterplan}
             />
           </div>
-          <Masterplandetailbtm item={item} track={track} />
+          <Masterplandetailbtm
+            item={item}
+            track={track}
+            goback={getBacktoMasterplan}
+          />
         </>
       ) : (
         <>
@@ -209,6 +220,7 @@ const Masterplan = () => {
               )}
             </div>
             <motion.div
+              onLoad={setNewConstraints}
               id="masterplanimageinner"
               className={styles.masterplan}
               animate={zoomAnimation}

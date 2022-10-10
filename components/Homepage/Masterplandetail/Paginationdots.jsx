@@ -15,7 +15,6 @@ const Paginationdots = ({ slideIndex, length }) => {
               animate={{
                 opacity: item === slideIndex ? 1 : 0.5,
               }}>
-              {console.log(item)}
               {item === slideIndex ? (
                 <motion.span layoutId="selectedOne" layout="position" />
               ) : null}

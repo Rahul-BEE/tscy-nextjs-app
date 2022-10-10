@@ -12,14 +12,6 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
   const [innerwidth, setInnerWidth] = useState(0);
   const [data, setData] = useState(lan.masterplan.markers);
   const innerRow = useRef(null);
-  // useEffect(() => {
-  //   if (selectedTab === 0) {
-  //     setData(lan.masterplan.markers);
-  //   } else if (selectedTab === 1) {
-  //     setData(lan.tracks);
-  //   }
-  //   setNewSliderInnerWidth();
-  // }, [selectedTab]);
 
   const clickTabHandler = (id) => {
     if (id === 0) {
@@ -31,12 +23,6 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
     }
     setNewSliderInnerWidth();
   };
-  // useEffect(() => {
-  //   setInnerWidth(
-  //     document.getElementById("dragContainer").clientWidth -
-  //       window.innerWidth / 2
-  //   );
-  // }, [data]);
 
   const setNewSliderInnerWidth = useCallback(() => {
     setInnerWidth(

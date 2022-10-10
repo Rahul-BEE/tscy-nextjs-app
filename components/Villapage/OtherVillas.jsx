@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Col, Row } from "react-bootstrap";
+import { motion } from "framer-motion";
 const OtherVillas = () => {
   const router = useRouter();
   const { villaId } = router.query;
@@ -28,7 +29,12 @@ const OtherVillas = () => {
         <div className={styles.othervillainner}>
           {data.map((villa, index) => (
             <Link href={`/floorplan/${villa.slug}`} passHref key={index}>
-              <div className={styles.villacard} key={`${index}_villacards`}>
+              <motion.div
+                whileHover={{
+                  scale: 1.02,
+                }}
+                className={styles.villacard}
+                key={`${index}_villacards`}>
                 <div className={styles.cardHeader}>
                   <h5>
                     {villa.bedrooms} {lan.commontext.bedroom}
@@ -42,7 +48,7 @@ const OtherVillas = () => {
                   height={222}
                   layout={"responsive"}
                 />
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>
