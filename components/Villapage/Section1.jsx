@@ -53,7 +53,7 @@ const Section1 = () => {
                 <Image className={styles.bgimg}
                 src={data.mainImg}
                 width={476}
-                height={222}
+                height={200}
                 layout={"responsive"}
                 />
             </div>

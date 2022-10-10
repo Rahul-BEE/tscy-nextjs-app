@@ -1,11 +1,11 @@
 .app__villasection1planmain {
     margin-top: 73px;
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     background: rgba(5, 141, 166, 0.1);
 
     @media (max-width:1224px) {
-        margin-top: 120px;
+        margin-top: 110px;
         height: 100%;
     }
 
@@ -23,9 +23,13 @@
         background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        padding-top: 116px;
+        padding-top: 200px;
+        @media (max-width:1200px) {
+            padding-top: 112px;
+        }
         @media (max-width:600px) {
             font-size: 25px;
+            padding-top: 112px;
         }
     
     }
@@ -86,14 +90,14 @@ margin-bottom: 20px;
     }
     .bgimg
     {
-        bottom: 380px!important;
+        //bottom: 380px!important;
         @media (max-width:1224px) {
             bottom: 0px!important;
         }
     }
     .poly1
     {
-        margin-top: 20%;
+        margin-top: 25%;
     position: absolute;
     display: block;
     @media (max-width:1224px) {
