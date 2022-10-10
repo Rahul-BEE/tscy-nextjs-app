@@ -29,7 +29,7 @@ const SliderComponent = () => {
     return () => {
       window.removeEventListener("resize", setNewComponentWidth);
     };
-  }, [carouselRef.current]);
+  }, [carouselRef.current, setNewComponentWidth]);
   return (
     <motion.div
       className={styles.sliderItemContainer}

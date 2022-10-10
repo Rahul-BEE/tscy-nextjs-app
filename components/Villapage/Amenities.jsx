@@ -57,7 +57,7 @@ const Amenities = () => {
     return () => {
       window.removeEventListener("resize", setNewComponentWidth);
     };
-  }, [itemRef.current]);
+  }, [itemRef.current, setNewComponentWidth]);
   return (
     <div className={styles.amenetiesContainer}>
       <div className={styles.amenetiesInner}>

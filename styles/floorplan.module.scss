@@ -52,7 +52,7 @@
 
 
         .filterinnerrow {
-            width: fit-content;
+            // width: fit-content;
             display: grid;
             grid-template-columns: repeat(auto-fit, 100px);
             grid-auto-flow: column;

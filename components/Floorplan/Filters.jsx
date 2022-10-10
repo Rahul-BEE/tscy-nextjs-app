@@ -40,22 +40,13 @@ const Filters = ({ filterId, setFilterId, setText }) => {
     }
   };
   const setNewSliderInnerWidth = useCallback(() => {
-    console.log(
-      innerRow.current?.getBoundingClientRect().width,
-      filterRowRef.current?.getBoundingClientRect().width,
-      innerRow.current?.getBoundingClientRect().width /
-        filterRowRef.current?.getBoundingClientRect().width
-    );
     setSliderWidth(
-      innerRow.current?.getBoundingClientRect().width -
-        filterRowRef.current?.getBoundingClientRect().width
+      innerRow.current?.scrollWidth - innerRow.current?.clientWidth
     );
   }, [innerRow]);
 
   useEffect(() => {
     setNewSliderInnerWidth();
-  }, []);
-  useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("resize", setNewSliderInnerWidth);
     }
@@ -63,7 +54,7 @@ const Filters = ({ filterId, setFilterId, setText }) => {
     return () => {
       window.removeEventListener("resize", setNewSliderInnerWidth);
     };
-  }, [setNewSliderInnerWidth, innerRow]);
+  }, [setNewSliderInnerWidth, innerRow.current]);
 
   const clickHandler = (index) => {
     setFilterId(index);
@@ -73,6 +64,7 @@ const Filters = ({ filterId, setFilterId, setText }) => {
   return (
     <div className={styles.filterrow} ref={filterRowRef}>
       <motion.div
+        onLoad={setNewSliderInnerWidth}
         className={styles.filterinnerrow}
         drag="x"
         animate={move}
@@ -80,7 +72,9 @@ const Filters = ({ filterId, setFilterId, setText }) => {
         dragElastic={false}
         dragConstraints={{
           right: 0,
-          left: -1076,
+          left: -(
+            innerRow.current?.scrollWidth - innerRow.current?.clientWidth
+          ),
         }}
         ref={innerRow}>
         {data.filters.map((item, index) => {
