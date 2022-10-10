@@ -24,6 +24,7 @@ const InteriorFeatures = () => {
   const [containerWidth, setContainerWidth] = useState(0);
   const [itemWidth, setItemWidth] = useState(100);
   const [scrolledWidth, setScrolledWidth] = useState(0);
+  const [controlsColor, setControlsColor] = useState([0.5, 1]);
   const carouselRef = useRef(null);
   const itemRef = useRef(null);
   const data = lan.villaplansection.villas.find(
@@ -65,9 +66,31 @@ const InteriorFeatures = () => {
         x: -scrolledWidth + itemWidth,
       });
     } else if (scrolledWidth === 0 && id === "-") {
+      setControlsColor([0.5, 1]);
       setOpen(false);
     } else if (scrolledWidth === 0 && id === "+") {
       setOpen(true);
+      setControlsColor([1, 1]);
+    } else {
+      setControlsColor([1, 0.5]);
+      return;
+    }
+  };
+  const carouselHandler2 = (id) => {
+    if (
+      id === "+" &&
+      scrolledWidth <
+        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
+    ) {
+      setScrolledWidth((prev) => prev + itemWidth);
+      starterAnimation.start({
+        x: -(scrolledWidth + itemWidth),
+      });
+    } else if (id === "-" && scrolledWidth > 0) {
+      setScrolledWidth((prev) => prev - itemWidth);
+      starterAnimation.start({
+        x: -scrolledWidth + itemWidth,
+      });
     } else {
       return;
     }
@@ -85,8 +108,18 @@ const InteriorFeatures = () => {
           </h4>
         </div>
         <div className={styles.interiorcontrols}>
-          <IoChevronBackCircleOutline onClick={() => carouselHandler("-")} />
-          <IoChevronForwardCircleOutline onClick={() => carouselHandler("+")} />
+          <IoChevronBackCircleOutline
+            onClick={() => carouselHandler("-")}
+            style={{
+              opacity: controlsColor[0],
+            }}
+          />
+          <IoChevronForwardCircleOutline
+            onClick={() => carouselHandler("+")}
+            style={{
+              opacity: controlsColor[1],
+            }}
+          />
         </div>
       </div>
       {data && (
@@ -116,6 +149,15 @@ const InteriorFeatures = () => {
                   itemRef={itemRef}
                   setItemWidth={setItemWidth}
                 />
+                <div
+                  className={`${styles.interiorcontrols} ${styles.mobileControls}`}>
+                  <IoChevronBackCircleOutline
+                    onClick={() => carouselHandler2("-")}
+                  />
+                  <IoChevronForwardCircleOutline
+                    onClick={() => carouselHandler2("+")}
+                  />
+                </div>
               </motion.div>
             </LayoutGroup>
           </AnimatePresence>
