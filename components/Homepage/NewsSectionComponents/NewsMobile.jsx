@@ -9,30 +9,36 @@ import "swiper/css";
 function NewsMobile({ data }) {
   return (
     <div className={styles.hero_mobile_box}>
+      <div className={`${styles.hero_text_center}`}>
+   
+          <h2 style={{marginBottom: "3.5rem"}}>press and news</h2>
+          </div>
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
-        spaceBetween={70}
+        spaceBetween={0}
         pagination={{
           clickable: true,
         }}
         className={styles.mySwiper}>
         {data.map((e, index) => (
+          
+       <div>
+           
           <SwiperSlide key={`${index}_newmob`}>
             <div className={styles.test_box}>
-              <div className={styles.heading_mobile}>
-                <h2>Press and news</h2>
-                <p>Read here </p>
-              </div>
-
-              <div className={styles.bottom_text}>
-                <h3>{e.title}</h3>
-              </div>
+            <div className={styles.bottom_text}>
+            <h3 style={{color:"black"}}>{e.title}</h3>
+           </div>
+            <p>Read here </p>
             </div>
           </SwiperSlide>
+       </div>
+          
         ))}
       </Swiper>
-    </div>
+      </div>
+
   );
 }
 

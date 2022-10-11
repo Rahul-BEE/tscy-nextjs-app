@@ -104,10 +104,24 @@
 
 }
 .test_box {
-  width: 100%;
+  width: 90%;
   height: 210px;
   background: $primary__button_color;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+  
+    p{
+      text-align: right;
+      color: white;
+      padding-right: 25px;
+      position: absolute;
+      right: 10%;
+      bottom: 0%;
+    }
+        
+     
+    }
 }
 
 .news_nav {
@@ -196,10 +210,12 @@
 
 // ***************mobile****************
 
+
 .hero_mobile_box{
     @media (min-width:769px) {
         display: none;
     }
+    padding: 30px;
 
   &:lang(ar){
     direction: rtl !important;
@@ -215,7 +231,7 @@
   }
 }
 .heading_mobile{
-    display: flex;
+    //display: flex;
     justify-content: space-between;
     padding: 20px;
     
@@ -223,10 +239,35 @@
       color: $white__font_color;
     }
 }
-
-.bottom_text h3{
-  color: $white__font_color;
+.mySwiper
+{
+  @media (max-width: 565px) {
+   margin-top: 150px;
+  }
+  @media only screen and (max-width: 768px) and (min-width: 566px)
+  {
+    margin-top: 100px;
+   }
 }
+.bottom_text{ 
+  h3{ 
+  color: $white__font_color;
+  @media (max-width: 565px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+    position: absolute;
+    top: -60%;
+  }
+  @media only screen and (max-width: 768px) and (min-width: 566px)
+  { font-size: 16px;
+    line-height: 24px;
+    padding: 10px;
+    position: absolute;
+    top: -40%;
+   }
+}
+ }
 
 .shape_hex{
     width: 250px;
@@ -235,6 +276,7 @@
     left: 90%;
     z-index: -1;
 }
+
 
 
 //iqra news page style 
