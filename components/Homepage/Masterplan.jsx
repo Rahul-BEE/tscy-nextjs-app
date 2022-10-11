@@ -116,7 +116,9 @@ const Masterplan = () => {
     setIsBrowser(window.innerWidth < 1224);
     setTrack(null);
     setConstrains({
-      right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
+      right: zoom
+        ? -(imageContainerRef.current?.getBoundingClientRect().x / 1.5)
+        : 0,
       left: zoom
         ? -(
             (imageContainerRef.current?.getBoundingClientRect().width -
@@ -145,6 +147,13 @@ const Masterplan = () => {
   //Guestures
 
   const dragHandler = async (_, info) => {
+    if (
+      Math.abs(info.velocity.y) > 200 &&
+      Math.abs(info.offset.y) > 200 &&
+      !zoom
+    ) {
+      window.scrollBy(0, -info.offset.y);
+    }
     if (imageContainerRef.current.getBoundingClientRect().x >= 52) {
       setMove({
         x: 0,
