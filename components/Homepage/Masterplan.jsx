@@ -144,7 +144,7 @@ const Masterplan = () => {
     };
   }, [setNewConstraints, zoom, imageContainerRef]);
 
-  //Guestures
+  //Guesture
 
   const dragHandler = async (_, info) => {
     if (
