@@ -957,7 +957,9 @@ const english = {
     masterplan: "Master Plan",
     interiorHeading: "Interior Features",
     caption: "caption",
-    registerinterest:"Register Interest",
+    registerinterest: "Register Interest",
+    findyour: "Find your",
+    dreamHome: "dream home",
   },
   tracks: [
     {

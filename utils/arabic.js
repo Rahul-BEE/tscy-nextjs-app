@@ -888,7 +888,9 @@ const arabic = {
     amenities: "Amenities",
     interiorHeading: "Interior Features",
     caption: "caption",
-    registerinterest:"Register Interest",
+    registerinterest: "Register Interest",
+    findyour: "Find your",
+    dreamHome: "dream home",
   },
   propertyFeatures: [
     {

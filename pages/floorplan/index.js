@@ -10,12 +10,15 @@ import LocationFYV from "../../components/Floorplan/Location";
 
 const Floorplan = () => {
   const lan = useLanguage();
-  const [text, setText] = useState("PERFECT FOR YOU.");
+  // const [text, setText] = useState("PERFECT FOR YOU.");
   const [filterId, setFilterId] = useState(0);
   return (
     <div className={styles.app__floorplanmain}>
       <div className={styles.floorplanHeading}>
-        <p>Let’s find a home</p>
+        <p>
+          {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
+        </p>
+        {/* <p>Let’s find a home</p>
         <AnimatePresence>
           <p>
             that’s{" "}
@@ -53,13 +56,13 @@ const Floorplan = () => {
               ))}
             </motion.span>
           </p>
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
 
       <Filters
         filterId={filterId}
         setFilterId={setFilterId}
-        setText={setText}
+        // setText={setText}
       />
       <VillaCards filterId={filterId} />
       <div className={styles.downloadcomparison}>
