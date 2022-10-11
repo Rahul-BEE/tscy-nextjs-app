@@ -8,7 +8,7 @@ import {
 import styles from "../../styles/floorplan.module.scss";
 import { useRef } from "react";
 import { useCallback } from "react";
-const Filters = ({ filterId, setFilterId, setText }) => {
+const Filters = ({ filterId, setFilterId }) => {
   const lan = useLanguage();
   const [showLeft, setShowLeft] = useState(false);
   const [data, _] = useState(lan.villaplansection);
@@ -58,7 +58,7 @@ const Filters = ({ filterId, setFilterId, setText }) => {
 
   const clickHandler = (index) => {
     setFilterId(index);
-    setText(data.filters[index].headingText);
+    // setText(data.filters[index].headingText);
   };
 
   return (

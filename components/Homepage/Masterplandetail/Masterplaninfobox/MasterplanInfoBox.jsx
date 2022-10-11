@@ -4,6 +4,7 @@ import useLanguage from "../../../../utils/useLanguage";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 const MasterplanInfoBox = ({
   item,
   track,
@@ -120,12 +121,17 @@ const MasterplanInfoBox = ({
                     </div>
                   ))}
                 </div>
-                <motion.button
-                  style={{
-                    backgroundColor: "#058DA6",
-                  }}>
-                  {lan.commontext.seevillas}
-                </motion.button>
+                <Link href={"/floorplan"} passHref>
+                  <motion.button
+                    whileHover={{
+                      scale: 1.02,
+                    }}
+                    style={{
+                      backgroundColor: "#058DA6",
+                    }}>
+                    {lan.commontext.seevillas}
+                  </motion.button>
+                </Link>
               </div>
             ) : (
               <div className={styles.itemdetailsbtm}>

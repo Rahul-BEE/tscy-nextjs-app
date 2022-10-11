@@ -115,13 +115,21 @@ const Masterplan = () => {
   const setNewConstraints = useCallback(() => {
     setIsBrowser(window.innerWidth < 1224);
     setTrack(null);
-
     setConstrains({
-      right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
-      left: -(
-        imageContainerRef.current?.getBoundingClientRect().width -
-        containerRef.current?.getBoundingClientRect().width
-      ),
+      right: zoom
+        ? -(imageContainerRef.current?.getBoundingClientRect().x / 1.5)
+        : 0,
+      left: zoom
+        ? -(
+            (imageContainerRef.current?.getBoundingClientRect().width -
+              containerRef.current?.getBoundingClientRect().width) /
+              1.5 +
+            50
+          )
+        : -(
+            imageContainerRef.current?.getBoundingClientRect().width -
+            containerRef.current?.getBoundingClientRect().width
+          ),
       top: zoom ? -10 : 0,
       bottom: zoom ? 100 : 0,
     });
@@ -136,23 +144,25 @@ const Masterplan = () => {
     };
   }, [setNewConstraints, zoom, imageContainerRef]);
 
-  //Guestures
+  //Guesture
 
   const dragHandler = async (_, info) => {
+    if (
+      Math.abs(info.velocity.y) > 200 &&
+      Math.abs(info.offset.y) > 200 &&
+      !zoom
+    ) {
+      window.scrollBy(0, -info.offset.y);
+    }
     if (imageContainerRef.current.getBoundingClientRect().x >= 52) {
       setMove({
         x: 0,
         y: imageContainerRef.current.getBoundingClientRect().y,
       });
-    } else if (
-      imageContainerRef.current.getBoundingClientRect().x < constrains.left
-    ) {
-      zoomAnimation.start({
-        x: -imageContainerRef.current?.clientWidth,
-      });
+    } else if (imageContainerRef.current.getBoundingClientRect().x < -1400) {
       setMove({
-        x: -500,
-        y: 0,
+        x: -800,
+        y: imageContainerRef.current.getBoundingClientRect().y,
       });
     } else {
       setMove({
