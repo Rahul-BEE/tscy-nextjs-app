@@ -129,7 +129,6 @@ function Plans() {
                 </div>
               </div>
             </div>
-
             {/* center */}
             <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
               <Image
@@ -142,7 +141,6 @@ function Plans() {
               />
             </div>
 
-            {/* right */}
             <div className={`${styles.hero_items} ${styles.propertiesgrid}`}>
               <div className={styles.item_container2}>
                 <div className={styles.item}>
