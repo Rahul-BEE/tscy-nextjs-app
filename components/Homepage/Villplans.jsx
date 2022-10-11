@@ -13,6 +13,7 @@ import Garden from "../../public/Svg/garden.svg";
 import Eco from "../../public/Svg/ecofriendly.svg";
 import Maidroom from "../../public/Svg/maidroom.svg";
 import VillaplansMobile from "./Villaplans/VillaplansMobile";
+import Link from "next/link";
 
 const Villplans = () => {
   const lan = useLangage();
@@ -48,13 +49,11 @@ const Villplans = () => {
                 md={3}
                 lg={3}
                 key={`${index}_villas`}
-                onClick={() => changeVilla(index)}
-              >
+                onClick={() => changeVilla(index)}>
                 <motion.h5
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
-                >
+                  onHoverEnd={(e) => {}}>
                   {villa.bedrooms}
                 </motion.h5>
                 <p>{villa.homepagetitle}</p>
@@ -76,7 +75,7 @@ const Villplans = () => {
 
         <div className={styles.villaplanImageContainer}>
           <Image
-            src="/Images/villaplansectionimg.png"
+            src={currentvilla.mainImg}
             width={900}
             height={500}
             layout="responsive"
@@ -98,9 +97,16 @@ const Villplans = () => {
             <p>
               <Eco /> <span>{lan.commontext.smarthome}</span>
             </p>
-            <div>
-              <Button>{lan.commontext.seedetails}</Button>
-            </div>
+            <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+              <div>
+                <motion.button
+                  whileHover={{
+                    scale: 1.02,
+                  }}>
+                  {lan.commontext.seedetails}
+                </motion.button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

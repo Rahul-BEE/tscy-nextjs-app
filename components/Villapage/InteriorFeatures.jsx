@@ -130,7 +130,9 @@ const InteriorFeatures = () => {
                 <motion.div key={open} className={styles.description}>
                   <p>{data.interiorDescription}</p>
                   <div className={styles.buttoncontainer}>
-                    <button className={styles.btn1}> Register Interest</button>
+                    <button className={styles.btn1}>
+                      {lan.commontext.registerinterest}
+                    </button>
                     <button className={styles.btn2}>
                       {lan.commontext.download} {lan.commontext.brochure}
                       <span>

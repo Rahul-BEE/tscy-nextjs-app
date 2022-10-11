@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import Plandot from "../../public/Svg/floorplans/plandots/plandot.svg";
+import Activeplandot from "../../public/Svg/floorplans/plandots/activeplandot.svg";
 
 function Plans() {
   const lan = useLanguage();
@@ -50,7 +52,7 @@ function Plans() {
         {data && (
           <div className={styles.hero_container}>
             {/* left */}
-            <div className={styles.hero_items}>
+            <div className={`${styles.hero_items} ${styles.selectFloor}`}>
               <div className={styles.item_container1}>
                 <div className={styles.hero_desktop}>
                   <Accordion
@@ -59,6 +61,7 @@ function Plans() {
                     setExpanded={setExpanded}
                     data={data}
                   />
+
                   <Accordion
                     i={1}
                     expanded={expanded}
@@ -75,14 +78,13 @@ function Plans() {
                     <div className={styles.heading_item}>
                       <div
                         onClick={() => setExpanded(0)}
-                        className={expanded === 0 ? styles.active : ""}
-                      >
+                        className={expanded === 0 ? styles.active : ""}>
                         <h3>Ground Floor</h3>
                       </div>
+                      <span className={styles.seperator}></span>
                       <div
                         onClick={() => setExpanded(1)}
-                        className={expanded === 1 ? styles.active : ""}
-                      >
+                        className={expanded === 1 ? styles.active : ""}>
                         <h3>First Floor</h3>
                       </div>
                     </div>
@@ -93,18 +95,16 @@ function Plans() {
                         drag={"x"}
                         dragConstraints={{ right: 0, left: -200 }}
                         ref={ref}
-                        animate={test}
-                      >
+                        animate={test}>
                         <div
                           onClick={() => setExpanded(0)}
-                          className={expanded === 0 ? styles.active : ""}
-                        >
+                          className={expanded === 0 ? styles.active : ""}>
                           <h3>Ground Floor</h3>
                         </div>
+
                         <div
                           onClick={() => setExpanded(1)}
-                          className={expanded === 1 ? styles.active : ""}
-                        >
+                          className={expanded === 1 ? styles.active : ""}>
                           <h3>First Floor</h3>
                         </div>
                       </motion.div>
@@ -131,20 +131,18 @@ function Plans() {
             </div>
 
             {/* center */}
-            <div className={styles.hero_items}>
-              <Image
-                className={styles.mobile_img}
-                // src="/Images/location/Asset1.png"
-                src={data.floorplan[expanded]}
-                width={556}
-                height={800}
-                layout="responsive"
-                // layout="fill"
-              />
+            <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
+              <div className={styles.planImgContainer}>
+                <Image
+                  className={styles.mobile_img}
+                  src={data.floorplan[expanded]}
+                  layout="fill"
+                />
+              </div>
             </div>
 
             {/* right */}
-            <div className={styles.hero_items}>
+            <div className={`${styles.hero_items} ${styles.propertiesgrid}`}>
               <div className={styles.item_container2}>
                 <div className={styles.item}>
                   <div className={styles.item_heading}>
@@ -186,6 +184,10 @@ function Plans() {
             </div>
           </div>
         )}
+        <div className={styles.planPagination}>
+          <span>{expanded === 0 ? <Activeplandot /> : <Plandot />}</span>
+          <span> {expanded === 1 ? <Activeplandot /> : <Plandot />}</span>
+        </div>
       </div>
     </div>
   );
