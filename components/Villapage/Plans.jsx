@@ -132,13 +132,14 @@ function Plans() {
 
             {/* center */}
             <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
-              <div className={styles.planImgContainer}>
-                <Image
-                  className={styles.mobile_img}
-                  src={data.floorplan[expanded]}
-                  layout="fill"
-                />
-              </div>
+              <Image
+                className={styles.mobile_img}
+                src={data.floorplan[expanded]}
+                layout="responsive"
+                width={556}
+                height={800}
+                objectFit="cover"
+              />
             </div>
 
             {/* right */}
