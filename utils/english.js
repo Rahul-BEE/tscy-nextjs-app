@@ -960,6 +960,9 @@ const english = {
     registerinterest: "Register Interest",
     findyour: "Find your",
     dreamHome: "dream home",
+    firstfloor: "First Floor",
+    groundfloor: "Ground Floor",
+    parking: "Parking",
   },
   tracks: [
     {

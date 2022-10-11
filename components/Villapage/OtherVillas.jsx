@@ -19,7 +19,7 @@ const OtherVillas = () => {
     <div className={styles.othervillasmain}>
       <Row className="headingRow">
         <Col>
-          <h5 className="sectionsubHeading">{lan.commontext.dontforget}</h5>
+          {/* <h5 className="sectionsubHeading">{lan.commontext.dontforget}</h5> */}
           <h2 className="sectionmainHeading">
             {lan.commontext.othervillatypes}
           </h2>

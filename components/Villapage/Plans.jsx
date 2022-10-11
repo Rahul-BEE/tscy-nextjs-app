@@ -8,6 +8,7 @@ import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import Plandot from "../../public/Svg/floorplans/plandots/plandot.svg";
 import Activeplandot from "../../public/Svg/floorplans/plandots/activeplandot.svg";
+import { Col, Row } from "react-bootstrap";
 
 function Plans() {
   const lan = useLanguage();
@@ -40,152 +41,159 @@ function Plans() {
 
   return (
     <div className={styles.hero_box}>
-      <div className={styles.hero_main}>
-        {/* heading */}
-        <div className={styles.hero_heading}>
-          <p>Our villas stand out with</p>
-          <h2>FLOOR PLANS</h2>
-        </div>
+      <div className={styles.realtiveParent}>
+        <div className={styles.hero_main}>
+          {/* heading */}
+          <Row className="headingRow">
+            <Col>
+              <h2 className="sectionmainHeading">{lan.commontext.floorplan}</h2>
+            </Col>
+          </Row>
 
-        {/* floor plan */}
+          {/* floor plan */}
 
-        {data && (
-          <div className={styles.hero_container}>
-            {/* left */}
-            <div className={`${styles.hero_items} ${styles.selectFloor}`}>
-              <div className={styles.item_container1}>
-                <div className={styles.hero_desktop}>
-                  <Accordion
-                    i={0}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                    data={data}
-                  />
+          {data && (
+            <div className={styles.hero_container}>
+              {/* left */}
+              <div className={`${styles.hero_items} ${styles.selectFloor}`}>
+                <div className={styles.item_container1}>
+                  <div className={styles.hero_desktop}>
+                    <Accordion
+                      i={0}
+                      expanded={expanded}
+                      setExpanded={setExpanded}
+                      data={data}
+                    />
 
-                  <Accordion
-                    i={1}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                    data={data}
-                  />
-                </div>
+                    <Accordion
+                      i={1}
+                      expanded={expanded}
+                      setExpanded={setExpanded}
+                      data={data}
+                    />
+                  </div>
 
-                {/* Button */}
-                <div className={styles.dd_button}>Download Floor Plans</div>
+                  {/* Button */}
+                  <div className={styles.dd_button}>Download Floor Plans</div>
 
-                <div className={styles.hero_tablet}>
-                  <div className={styles.item}>
-                    <div className={styles.heading_item}>
-                      <div
-                        onClick={() => setExpanded(0)}
-                        className={expanded === 0 ? styles.active : ""}>
-                        <h3>Ground Floor</h3>
-                      </div>
-                      <span className={styles.seperator}></span>
-                      <div
-                        onClick={() => setExpanded(1)}
-                        className={expanded === 1 ? styles.active : ""}>
-                        <h3>First Floor</h3>
-                      </div>
-                    </div>
-                    {/* mobile heading */}
-                    <div className={styles.heading_item_mobile}>
-                      <motion.div
-                        className={styles.head}
-                        drag={"x"}
-                        dragConstraints={{ right: 0, left: -200 }}
-                        ref={ref}
-                        animate={test}>
+                  <div className={styles.hero_tablet}>
+                    <div className={styles.item}>
+                      <div className={styles.heading_item}>
                         <div
                           onClick={() => setExpanded(0)}
                           className={expanded === 0 ? styles.active : ""}>
-                          <h3>Ground Floor</h3>
+                          <h3>{lan.commontext.groundfloor}</h3>
                         </div>
-
+                        <span className={styles.seperator}></span>
                         <div
                           onClick={() => setExpanded(1)}
                           className={expanded === 1 ? styles.active : ""}>
-                          <h3>First Floor</h3>
+                          <h3>{lan.commontext.firstfloor}</h3>
                         </div>
-                      </motion.div>
-                    </div>
+                      </div>
+                      {/* mobile heading */}
+                      <div className={styles.heading_item_mobile}>
+                        <div
+                          className={styles.head}
+                          drag={"x"}
+                          dragConstraints={{ right: 0, left: -200 }}
+                          ref={ref}
+                          animate={test}>
+                          <div
+                            onClick={() => setExpanded(0)}
+                            className={expanded === 0 ? styles.active : ""}>
+                            <h3>{lan.commontext.groundfloor}</h3>
+                          </div>
 
-                    <div className={styles.description}>
-                      <p>
-                        Transform your home office into your new favorite
-                        meeting room—and your desk into a shared table where you
-                        can gather with your team.
-                      </p>
-                      <div className={styles.col_2}>
+                          <div
+                            onClick={() => setExpanded(1)}
+                            className={expanded === 1 ? styles.active : ""}>
+                            <h3>{lan.commontext.firstfloor}</h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={styles.description}>
                         <p>
-                          Gross Floor Area <span>{data.gfa}</span>
+                          Transform your home office into your new favorite
+                          meeting room—and your desk into a shared table where
+                          you can gather with your team.
                         </p>
-                        <p>
-                          Built Up Area <span>{data.bua}</span>
-                        </p>
+                        <div className={styles.col_2}>
+                          <p>
+                            Gross Floor Area <span>{data.gfa}</span>
+                          </p>
+                          <p>
+                            Built Up Area <span>{data.bua}</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* center */}
-            <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
-              <Image
-                className={styles.mobile_img}
-                src={data.floorplan[expanded]}
-                layout="responsive"
-                width={556}
-                height={800}
-                objectFit="cover"
-              />
-            </div>
+              {/* center */}
+              <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
+                <Image
+                  className={styles.mobile_img}
+                  src={data.floorplan[expanded]}
+                  layout="responsive"
+                  width={556}
+                  height={800}
+                  objectFit="cover"
+                />
+              </div>
 
-            <div className={`${styles.hero_items} ${styles.propertiesgrid}`}>
-              <div className={styles.item_container2}>
-                <div className={styles.item}>
-                  <div className={styles.item_heading}>
-                    <h3>{expanded === 0 ? "Ground Floor" : "First Floor"}</h3>
-                  </div>
+              <div className={`${styles.hero_items} ${styles.propertiesgrid}`}>
+                <div className={styles.item_container2}>
+                  <div className={styles.item}>
+                    <div className={styles.item_heading}>
+                      <h3>
+                        {expanded === 0
+                          ? lan.commontext.groundfloor
+                          : lan.commontext.firstfloor}
+                      </h3>
+                    </div>
 
-                  {/* features */}
+                    {/* features */}
 
-                  <div className={styles.collection}>
-                    {data.propertyFeatures[floorindex].map((value, index) => (
-                      <div key={index}>
-                        {lan.propertyFeatures[value].num === true ? (
-                          <div className={styles.icons}>
-                            <div className={styles.svg_icon}>
-                              {lan.propertyFeatures[value].icon}
+                    <div className={styles.collection}>
+                      {data.propertyFeatures[floorindex].map((value, index) => (
+                        <div key={index}>
+                          {lan.propertyFeatures[value].num === true ? (
+                            <div className={styles.icons}>
+                              <div className={styles.svg_icon}>
+                                {lan.propertyFeatures[value].icon}
+                              </div>
+                              <div>
+                                {lan.propertyFeatures[value].key && (
+                                  <span>
+                                    {data[lan.propertyFeatures[value].key]}
+                                  </span>
+                                )}
+                                {lan.propertyFeatures[value].name}
+                              </div>
                             </div>
-                            <div>
-                              {lan.propertyFeatures[value].key && (
-                                <span>
-                                  {data[lan.propertyFeatures[value].key]}
-                                </span>
-                              )}
-                              {lan.propertyFeatures[value].name}
+                          ) : (
+                            <div className={styles.icons}>
+                              <div className={styles.svg_icon}>
+                                {lan.propertyFeatures[value].icon}
+                              </div>
+                              <div>{lan.propertyFeatures[value].name}</div>
                             </div>
-                          </div>
-                        ) : (
-                          <div className={styles.icons}>
-                            <div className={styles.svg_icon}>
-                              {lan.propertyFeatures[value].icon}
-                            </div>
-                            <div>{lan.propertyFeatures[value].name}</div>
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          )}
+          <div className={styles.planPagination}>
+            <span>{expanded === 0 ? <Activeplandot /> : <Plandot />}</span>
+            <span> {expanded === 1 ? <Activeplandot /> : <Plandot />}</span>
           </div>
-        )}
-        <div className={styles.planPagination}>
-          <span>{expanded === 0 ? <Activeplandot /> : <Plandot />}</span>
-          <span> {expanded === 1 ? <Activeplandot /> : <Plandot />}</span>
         </div>
       </div>
     </div>
@@ -194,6 +202,7 @@ function Plans() {
 
 const Accordion = ({ i, expanded, setExpanded, data }) => {
   const isOpen = i === expanded;
+  const lan = useLanguage();
   return (
     <div className={styles.accordion_box}>
       <motion.div
@@ -202,7 +211,7 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
         onClick={() => setExpanded(i)}
         style={{ cursor: "pointer", color: "#777777" }}
         className={styles.heading_accord}>
-        {i === 0 ? "Ground Floor" : "First Floor"}
+        {i === 0 ? lan.commontext.groundfloor : lan.commontext.firstfloor}
       </motion.div>
       <AnimatePresence initial={false} exitBeforeEnter>
         {isOpen && (

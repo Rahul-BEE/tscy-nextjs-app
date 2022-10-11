@@ -1,17 +1,16 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import useLangage from "../../utils/useLanguage";
-// import styles from "../../styles/home.module.scss";
 import styles from "../../styles/villaplans.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-import Bedroom from "../../public/Svg/bedroom.svg";
-import Swimicon from "../../public/Svg/swimicon.svg";
-import Garden from "../../public/Svg/garden.svg";
-import Eco from "../../public/Svg/ecofriendly.svg";
-import Maidroom from "../../public/Svg/maidroom.svg";
+import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
+import Parking from "../../public/Svg/homevillaplan/parking.svg";
+import Garden from "../../public/Svg/homevillaplan/garden.svg";
+import Bathroom from "../../public/Svg/homevillaplan/bathroom.svg";
+import Bedroom from "../../public/Svg/homevillaplan/maidroom.svg";
 import VillaplansMobile from "./Villaplans/VillaplansMobile";
 import Link from "next/link";
 
@@ -68,9 +67,15 @@ const Villplans = () => {
         </Row>
 
         <div className={styles.villadownload}>
-          <div className={styles.download_content}>Download Brochure</div>
-          <div className={styles.download_content}>Download Floor Plan</div>
-          <div className={styles.download_content}>Register Interest</div>
+          <div className={styles.download_content}>
+            {lan.commontext.download} {lan.commontext.brochure}
+          </div>
+          <div className={styles.download_content}>
+            {lan.commontext.download} {lan.commontext.floorplan}
+          </div>
+          <div className={styles.download_content}>
+            {lan.commontext.registerinterest}
+          </div>
         </div>
 
         <div className={styles.villaplanImageContainer}>
@@ -86,7 +91,7 @@ const Villplans = () => {
               <Bedroom /> <span>{lan.commontext.bedroom}</span>
             </p>
             <p>
-              <Eco /> <span>{lan.commontext.bathroom}</span>
+              <Bathroom /> <span>{lan.commontext.bathroom}</span>
             </p>
             <p>
               <Maidroom /> <span>{lan.commontext.maidroom}</span>
@@ -95,7 +100,7 @@ const Villplans = () => {
               <Garden /> <span>{lan.commontext.privategarden}</span>
             </p>
             <p>
-              <Eco /> <span>{lan.commontext.smarthome}</span>
+              <Parking /> <span>{lan.commontext.parking}</span>
             </p>
             <Link href={`/floorplan/${currentvilla.slug}`} passHref>
               <div>
