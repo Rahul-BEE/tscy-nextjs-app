@@ -74,25 +74,31 @@ function Plans() {
                   </div>
 
                   {/* Button */}
-                  <div className={styles.dd_button}>Download Floor Plans</div>
+                  <div className={styles.dd_button}>
+                    {lan.commontext.download} {lan.commontext.floorplan}
+                  </div>
 
                   <div className={styles.hero_tablet}>
                     <div className={styles.item}>
                       <div className={styles.heading_item}>
                         <div
                           onClick={() => setExpanded(0)}
-                          className={expanded === 0 ? styles.active : ""}>
+                          className={
+                            expanded === 0 ? styles.active : styles.noactive
+                          }>
                           <h3>{lan.commontext.groundfloor}</h3>
                         </div>
                         <span className={styles.seperator}></span>
                         <div
                           onClick={() => setExpanded(1)}
-                          className={expanded === 1 ? styles.active : ""}>
+                          className={
+                            expanded === 1 ? styles.active : styles.noactive
+                          }>
                           <h3>{lan.commontext.firstfloor}</h3>
                         </div>
                       </div>
                       {/* mobile heading */}
-                      <div className={styles.heading_item_mobile}>
+                      {/* <div className={styles.heading_item_mobile}>
                         <div
                           className={styles.head}
                           drag={"x"}
@@ -111,7 +117,7 @@ function Plans() {
                             <h3>{lan.commontext.firstfloor}</h3>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className={styles.description}>
                         <p>
@@ -120,12 +126,14 @@ function Plans() {
                           you can gather with your team.
                         </p>
                         <div className={styles.col_2}>
-                          <p>
-                            Gross Floor Area <span>{data.gfa}</span>
-                          </p>
-                          <p>
-                            Built Up Area <span>{data.bua}</span>
-                          </p>
+                          <div className={styles.fw_500}>
+                            <p>Gross Floor Area:</p>
+                            <span>{data.gfa} m&sup2;</span>
+                          </div>
+                          <div className={styles.fw_500}>
+                            <p>Built Up Area:</p>
+                            <span>{data.bua} m&sup2;</span>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -30,6 +30,14 @@
 
                     .item_container1 {
                         border-top: 2px solid #777777;
+                        text-align: start;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        color: #777777;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        flex-direction: column;
 
                         .accordion_box {
                             border-bottom: 1px solid #777777;
@@ -68,6 +76,117 @@
                             padding: 8px 16px;
                             margin-top: 24px;
                             color: white;
+                            margin-bottom: 2rem;
+                        }
+
+                        .hero_desktop {
+                            display: block;
+                        }
+
+                        .hero_tablet {
+                            display: none;
+
+                            .heading_item_mobile {
+                                display: none;
+                            }
+                        }
+
+                        @media (max-width:1224px) {
+                            border: none;
+                            text-align: center;
+                            align-items: center;
+                            gap: 1rem;
+
+                            .hero_desktop {
+                                display: none;
+                            }
+
+                            .hero_tablet {
+                                display: block;
+
+                                .heading_item {
+                                    font-weight: 600;
+                                    font-size: 1.6rem;
+                                    display: flex;
+                                    // align-items: center;
+                                    justify-content: center;
+                                    gap: 2rem;
+
+                                    h3 {
+                                        user-select: none;
+                                        cursor: pointer;
+                                    }
+
+                                    .seperator {
+                                        min-height: 100%;
+                                        width: 2px;
+                                        background: #777777;
+                                    }
+
+                                    .active {
+                                        opacity: 1;
+                                    }
+
+                                    .noactive {
+                                        opacity: 0.75;
+                                    }
+                                }
+                            }
+
+                            .description {
+                                margin-block: 1rem 2rem;
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-align: center;
+
+                                /* P Color */
+
+                                color: #777777;
+
+                                opacity: 0.8;
+
+                                .col_2 {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 5rem;
+                                }
+
+                                .fw_500 {
+                                    font-family: 'Poppins';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: flex-start;
+
+                                    p {
+                                        margin: 0;
+                                    }
+
+                                    span {
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+
+                        @media (max-width:600px) {
+                            // .hero_tablet {
+                            //     display: block;
+
+                            //     .heading_item {
+                            //         display: none;
+                            //     }
+
+                            //     .heading_item_mobile {
+                            //         display: block;
+                            //     }
+                            // }
                         }
                     }
                 }
@@ -85,26 +204,29 @@
                         justify-content: flex-start;
                         flex-direction: column;
                         height: 100%;
+                        width: 100%;
 
                         .item_heading {
                             h3 {
                                 color: #777777;
                                 font-size: 20px;
                             }
+
+                            @media (max-width:1224px) {
+                                display: none;
+                            }
                         }
 
                         .collection {
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            gap: 1rem;
-                            flex-direction: column;
-
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-auto-columns: 1fr;
 
                             .icons {
                                 position: relative;
                                 display: grid;
                                 grid-template-columns: 70px auto;
+                                grid-auto-columns: 1fr;
                                 margin: 20px 0;
                                 align-items: center;
 
@@ -119,6 +241,10 @@
                                     align-items: flex-end;
 
                                 }
+
+                                @media (max-width:1224px) {
+                                    grid-template-columns: 1fr;
+                                }
                             }
 
                             .icons::before {
@@ -128,6 +254,12 @@
                                 height: 36px;
                                 background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
                                 z-index: -1;
+                            }
+
+                            @media (max-width:1224px) {
+                                grid-template-columns: 1fr 1fr;
+
+                                margin-inline: 2rem;
                             }
                         }
                     }
@@ -141,11 +273,19 @@
 
                 @media (max-width:600px) {
                     grid-template-areas: 'select'
-                        'plan'
-                        'properties';
+                        'properties'
+                        'plan';
                 }
 
 
+            }
+
+            .planPagination {
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
             }
 
             @media(max-width:1224px) {
@@ -230,10 +370,10 @@
 
 //                         .item {
 //                             .heading_item {
-//                                 color: #777777;
-//                                 display: flex;
-//                                 justify-content: center;
-//                                 gap: 1rem;
+// color: #777777;
+// display: flex;
+// justify-content: center;
+// gap: 1rem;
 
 //                                 h3 {
 //                                     opacity: 0.5;
@@ -246,11 +386,7 @@
 //                                     }
 //                                 }
 
-//                                 .seperator {
-//                                     min-height: 100%;
-//                                     width: 1px;
-//                                     background: #777777;
-//                                 }
+
 //                             }
 
 //                             .heading_item_mobile {
@@ -517,12 +653,6 @@
 //     //     height: 100%;
 //     // }
 
-//     .planPagination {
-//         margin-top: 2rem;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         gap: 1rem;
-//     }
+
 
 // }
