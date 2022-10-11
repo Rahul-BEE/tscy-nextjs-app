@@ -43,13 +43,15 @@ const Section1 = () => {
               <BsArrowDownCircle />
             </p>
           </div>
-          <Image
-            className={styles.bgimg}
-            src={data.mainImg}
-            width={476}
-            height={200}
-            layout="responsive"
-          />
+          <div>
+            <Image
+                className={styles.bgimg}
+                src={data.mainImg}
+                width={476}
+                height={200}
+                layout="responsive"
+            />
+            </div>
         </div>
       )}
     </div>
