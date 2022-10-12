@@ -180,7 +180,7 @@ const Masterplan = () => {
     <div className={styles.app__masterplan} id="masterplananchor">
       <Row className="headingRow">
         <Col>
-          <h5 className="sectionsubHeading">{lan.masterplan.title1}</h5>
+          {/* <h5 className="sectionsubHeading">{lan.masterplan.title1}</h5> */}
           <h2 className="sectionmainHeading">{lan.masterplan.title2}</h2>
         </Col>
       </Row>

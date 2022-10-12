@@ -9,11 +9,15 @@ const LocationFYV = () => {
   return (
     <div className={styles.location}>
       <div className={`${styles.cardSectionInner} ${styles.locationDesktop}`}>
-        <Row className="headingRow">
+        <Row
+          className="headingRow"
+          style={{
+            paddingTop: "2rem",
+          }}>
           <Col>
-            <h5 className="sectionsubHeading mt-5">
+            {/* <h5 className="sectionsubHeading mt-5">
               {lan.locationsection.title1}
-            </h5>
+            </h5> */}
             <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
           </Col>
         </Row>

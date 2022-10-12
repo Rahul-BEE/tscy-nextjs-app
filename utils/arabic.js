@@ -894,6 +894,7 @@ const arabic = {
     firstfloor: "First Floor",
     groundfloor: "Ground Floor",
     parking: "Parking",
+    press: "Press and News",
   },
   propertyFeatures: [
     {

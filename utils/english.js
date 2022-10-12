@@ -966,6 +966,7 @@ const english = {
     firstfloor: "First Floor",
     groundfloor: "Ground Floor",
     parking: "Parking",
+    press: "Press and News",
   },
   tracks: [
     {
