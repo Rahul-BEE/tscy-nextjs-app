@@ -50,7 +50,7 @@ const MasterplanPopup = ({
               : "br"
           }>
           <div className={styles.popupheading}>
-            <Image src={data.icon} width="60" height="65" />
+            <Image src={data.icon} width="60" height="65" alt={data.name} />
             <div
               style={{
                 display: "flex",

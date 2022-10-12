@@ -23,6 +23,7 @@ const Othercities = () => {
                 width={600}
                 height={400}
                 objectFit="cover"
+                alt={data.othercity.city1}
               />
             </div>
             <p>{data.othercity.city1}</p>
@@ -36,6 +37,7 @@ const Othercities = () => {
                 width={600}
                 height={400}
                 objectFit="cover"
+                alt={data.othercity.city2}
               />
             </div>
             <p>{data.othercity.city2}</p>

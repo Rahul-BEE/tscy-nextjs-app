@@ -21,7 +21,6 @@ const Location = () => {
     <div className={styles.app__locationsection}>
       <Row className="headingRow">
         <Col>
-          {/* <h5 className="sectionsubHeading">{lan.locationsection.title1}</h5> */}
           <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
         </Col>
       </Row>
@@ -30,24 +29,6 @@ const Location = () => {
           {lan.locationsection.description}
         </Col>
       </Row>
-      {/* <div className={styles.locationImagecontainer}>
-        {show ? (
-          <Image
-            src="/Images/location/Assets1.png"
-            width={1728}
-            height={652}
-            layout="responsive"
-          />
-        ) : (
-          <Image
-            src="/Images/locationimage1.png"
-            width={1728}
-            height={652}
-            layout="responsive"
-          />
-        )}
-        {!show && <Clickme onClick={() => setShow(true)} />}
-      </div> */}
 
       <motion.div
         className={
@@ -63,19 +44,16 @@ const Location = () => {
               width={1728}
               height={872}
               layout="responsive"
-              // layout="fill"
+              alt={lan.locationsection.title2}
             />
           </div>
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
         </div>
         <div className={styles.locationImagecontainer2}>
-          {/* <div className={styles.first_img}> */}
           <Image
             className={styles.mobile_img}
             src="/Images/location/GroupMobile.png"
-            // width={1028}
-            // height={390}
-            // layout="responsive"
+            alt={lan.locationsection.title2}
             layout="fill"
           />
           {/* </div> */}

@@ -36,6 +36,7 @@ const Joinus = () => {
             width={300}
             height={226}
             layout="responsive"
+            alt="diamond polygon"
           />
         </div>
       </div>

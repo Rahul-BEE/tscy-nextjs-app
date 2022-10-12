@@ -241,6 +241,7 @@ const SustainableFeatures = () => {
               width={562}
               height={546}
               className={featurestyles.susimage1}
+              alt="Sustainale feature image"
             />
           </motion.div>
         </Col>
@@ -261,6 +262,7 @@ const SustainableFeatures = () => {
               width={470}
               height={501}
               className={featurestyles.susimage2}
+              alt="Sustainbale feature Image"
             />
           </motion.div>
         </Col>
@@ -272,6 +274,7 @@ const SustainableFeatures = () => {
               width={470}
               height={400}
               className={featurestyles.susimage2}
+              alt="Sustainbale feature Image"
             />
           </motion.div>
         </Col>

@@ -54,7 +54,7 @@ const Filters = ({ filterId, setFilterId }) => {
     return () => {
       window.removeEventListener("resize", setNewSliderInnerWidth);
     };
-  }, [setNewSliderInnerWidth, innerRow.current]);
+  }, [setNewSliderInnerWidth]);
 
   const clickHandler = (index) => {
     setFilterId(index);

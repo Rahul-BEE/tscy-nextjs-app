@@ -166,6 +166,7 @@ const MasterplanInfoBox = ({
                     height={120}
                     layout="responsive"
                     objectFit="cover"
+                    alt={"slideimages"}
                     onClick={() => carouselHandler({ id: index })}
                   />
                   <div

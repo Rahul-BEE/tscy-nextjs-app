@@ -22,7 +22,7 @@ const VillaCards = ({ filterId }) => {
       let temp2 = data.filter((item) => !item.keys.includes(filterId));
       setSortedArray([temp1, ...temp2]);
     }
-  }, [filterId]);
+  }, [filterId, data]);
 
   return (
     <div>
@@ -59,6 +59,7 @@ const VillaCards = ({ filterId }) => {
               width={476}
               height={222}
               layout={"responsive"}
+              alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
             />
           </div>
         ))}
@@ -98,6 +99,7 @@ const VillaCards = ({ filterId }) => {
               width={476}
               height={222}
               layout={"responsive"}
+              alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
             />
           </div>
         ))}

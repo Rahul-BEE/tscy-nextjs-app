@@ -29,6 +29,7 @@ const Ourstory = () => {
             objectFit="cover"
             objectPosition="80%"
             priority
+            alt="Sustainable City Yiti Masterplan"
           />
         </div>
         <div className={styles.storycontent}>

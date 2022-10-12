@@ -246,6 +246,7 @@ const Masterplan = () => {
                 placeholder="blur"
                 priority={true}
                 quality={100}
+                alt="MasterPlan"
               />
               {track === 18 && <CyclingTrack />}
               {track === 16 && <JoggingTrack />}

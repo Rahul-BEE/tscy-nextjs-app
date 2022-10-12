@@ -89,6 +89,7 @@ const Masterplandetail = ({ item, track, goback }) => {
               objectPosition="center"
               placeholder="blur"
               blurDataURL={data[index].slideimg[slideIndex]}
+              alt={data[index].name}
             />
             <div className={styles.masterplandetailgradient} />
           </motion.div>
