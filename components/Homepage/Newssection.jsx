@@ -6,6 +6,7 @@ import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
+import { Col, Row } from "react-bootstrap";
 
 function Newssection() {
   const lan = useLanguage();
@@ -134,11 +135,12 @@ function Newssection() {
   return (
     <div className={styles.hero_newssection}>
       <div className={styles.hero_container}>
-        <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
-          <p>See what they say in</p>
-          <h2>press and news</h2>
-        </div>
-
+        <Row className="headingRow">
+          <Col>
+            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+            <h2 className="sectionmainHeading">{lan.commontext.press}</h2>
+          </Col>
+        </Row>
         {/* layout */}
 
         <div className={styles.shape_hex}>
@@ -164,8 +166,7 @@ function Newssection() {
                     className={styles.test_box}
                     animate={controls}
                     initial="hidden"
-                    variants={variants}
-                  ></motion.div>
+                    variants={variants}></motion.div>
                   <p>{item.discription}</p>
                 </div>
               </div>
@@ -177,14 +178,12 @@ function Newssection() {
             <div className={styles.news_nav}>
               <motion.p
                 onClick={(e) => handelChnagePrev(e)}
-                whileTap={{ scale: 0.9 }}
-              >
+                whileTap={{ scale: 0.9 }}>
                 <FaChevronLeft className={styles.icon} /> Previous
               </motion.p>
               <motion.p
                 onClick={(e) => handelChange(e)}
-                whileTap={{ scale: 0.9 }}
-              >
+                whileTap={{ scale: 0.9 }}>
                 Next <FaChevronRight className={styles.icon} />
               </motion.p>
             </div>

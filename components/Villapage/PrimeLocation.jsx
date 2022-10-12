@@ -19,7 +19,7 @@ const PrimeLocation = () => {
     <div className={styles.primelocationmain}>
       <Row className="headingRow">
         <Col>
-          <h5 className="sectionsubHeading">{lan.commontext.situated}</h5>
+          {/* <h5 className="sectionsubHeading">{lan.commontext.situated}</h5> */}
           <h2 className="sectionmainHeading">
             {lan.commontext.primelocationText}
           </h2>

@@ -13,7 +13,6 @@ import { Col, Row } from "react-bootstrap";
 function Plans() {
   const lan = useLanguage();
   const router = useRouter();
-  const test = useAnimation();
   const ref = useRef(null);
 
   const { villaId } = router.query;
@@ -25,19 +24,31 @@ function Plans() {
   const [floorindex, setFloorindex] = useState("ground");
   const [expanded, setExpanded] = useState(0);
 
+  const mobileIndexAnimation = useAnimation();
+  const mobileIndexAnimation2 = useAnimation();
+
   useEffect(() => {
     if (expanded === 0) {
       setFloorindex("ground");
-      test.start({
-        x: 0,
-      });
     } else if (expanded === 1) {
       setFloorindex("first");
-      test.start({
-        x: -200,
-      });
     }
   }, [expanded]);
+
+  const clickHandler = async (id) => {
+    setExpanded(id);
+    if (id === 1) {
+      mobileIndexAnimation.start("visible");
+      await mobileIndexAnimation2.start({
+        x: "-100%",
+      });
+    } else if (id === 0) {
+      mobileIndexAnimation.start("hidden");
+      await mobileIndexAnimation2.start({
+        x: 0,
+      });
+    }
+  };
 
   return (
     <div className={styles.hero_box}>
@@ -98,29 +109,69 @@ function Plans() {
                         </div>
                       </div>
                       {/* mobile heading */}
-                      {/* <div className={styles.heading_item_mobile}>
-                        <div
-                          className={styles.head}
-                          drag={"x"}
-                          dragConstraints={{ right: 0, left: -200 }}
-                          ref={ref}
-                          animate={test}>
+                      <div className={styles.heading_item_mobile}>
+                        <motion.div
+                          drag="x"
+                          className={styles.innerHeading}
+                          animate={mobileIndexAnimation2}>
                           <div
-                            onClick={() => setExpanded(0)}
-                            className={expanded === 0 ? styles.active : ""}>
-                            <h3>{lan.commontext.groundfloor}</h3>
+                            onClick={() => clickHandler(0)}
+                            className={`${styles.flexItem1} ${
+                              expanded === 0 ? styles.active : styles.noactive
+                            }`}>
+                            <motion.h3
+                              variants={{
+                                hidden: {
+                                  position: "static",
+                                },
+                                visible: {
+                                  position: "absolute",
+                                  right: "-20%",
+                                },
+                              }}
+                              animate={mobileIndexAnimation}
+                              initial="hidden">
+                              {lan.commontext.groundfloor}
+                            </motion.h3>
+                            {expanded === 0 ? (
+                              <motion.div
+                                className={styles.underline}
+                                layoutId="underline"
+                              />
+                            ) : null}
                           </div>
 
                           <div
-                            onClick={() => setExpanded(1)}
-                            className={expanded === 1 ? styles.active : ""}>
-                            <h3>{lan.commontext.firstfloor}</h3>
+                            onClick={() => clickHandler(1)}
+                            className={`${styles.flexItem2} ${
+                              expanded === 1 ? styles.active : styles.noactive
+                            }`}>
+                            <motion.h3
+                              variants={{
+                                visible: {
+                                  position: "static",
+                                },
+                                hidden: {
+                                  position: "absolute",
+                                  left: "-10%",
+                                },
+                              }}
+                              animate={mobileIndexAnimation}
+                              initial="hidden">
+                              {lan.commontext.firstfloor}
+                            </motion.h3>
+                            {expanded === 1 ? (
+                              <motion.div
+                                className={styles.underline}
+                                layoutId="underline"
+                              />
+                            ) : null}
                           </div>
-                        </div>
-                      </div> */}
+                        </motion.div>
+                      </div>
 
                       <div className={styles.description}>
-                        <p>
+                        <p className={styles.descp}>
                           Transform your home office into your new favorite
                           meeting room—and your desk into a shared table where
                           you can gather with your team.
@@ -173,7 +224,7 @@ function Plans() {
                               <div className={styles.svg_icon}>
                                 {lan.propertyFeatures[value].icon}
                               </div>
-                              <div>
+                              <div className={styles.featuredata}>
                                 {lan.propertyFeatures[value].key && (
                                   <span>
                                     {data[lan.propertyFeatures[value].key]}
@@ -187,7 +238,9 @@ function Plans() {
                               <div className={styles.svg_icon}>
                                 {lan.propertyFeatures[value].icon}
                               </div>
-                              <div>{lan.propertyFeatures[value].name}</div>
+                              <div className={styles.featuredata}>
+                                {lan.propertyFeatures[value].name}
+                              </div>
                             </div>
                           )}
                         </div>
@@ -212,12 +265,15 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
   const isOpen = i === expanded;
   const lan = useLanguage();
   return (
-    <div className={styles.accordion_box}>
+    <div className={styles.accordion_box} key={i}>
       <motion.div
         initial={false}
-        animate={{ opacity: isOpen ? "1" : "0.5" }}
         onClick={() => setExpanded(i)}
-        style={{ cursor: "pointer", color: "#777777" }}
+        style={{
+          cursor: "pointer",
+          color: "#777777",
+          opacity: isOpen ? 1 : 0.5,
+        }}
         className={styles.heading_accord}>
         {i === 0 ? lan.commontext.groundfloor : lan.commontext.firstfloor}
       </motion.div>

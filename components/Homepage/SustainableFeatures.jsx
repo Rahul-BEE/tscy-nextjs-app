@@ -227,7 +227,7 @@ const SustainableFeatures = () => {
     <div ref={ref} className={featurestyles.app__sustainablefeaturesection}>
       <Row>
         <Col className={featurestyles.sustainablesection_heading}>
-          <h5 className="sectionsubHeading">{lan.sustainablesection.title1}</h5>
+          {/* <h5 className="sectionsubHeading">{lan.sustainablesection.title1}</h5> */}
           <h2 className="sectionmainHeading">
             {lan.sustainablesection.title2}
           </h2>

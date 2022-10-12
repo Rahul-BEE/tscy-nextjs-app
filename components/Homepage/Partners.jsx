@@ -7,7 +7,7 @@ const Partners = () => {
     <div className={styles.app__partnersection}>
       <Row className="headingRow">
         <Col>
-          <h5 className="sectionsubHeading">{lan.partners.title1}</h5>
+          {/* <h5 className="sectionsubHeading">{lan.partners.title1}</h5> */}
           <h2 className="sectionmainHeading">{lan.partners.title2}</h2>
         </Col>
       </Row>

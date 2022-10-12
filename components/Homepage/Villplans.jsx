@@ -32,7 +32,7 @@ const Villplans = () => {
       <div className={styles.app__villaplanmaincontainer_desktop}>
         <Row className="headingRow">
           <Col>
-            <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5>
+            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
             <h2 className="sectionmainHeading">
               {lan.villaplansection.title2}
             </h2>

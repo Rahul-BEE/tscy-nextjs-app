@@ -9,7 +9,7 @@ const CardSection = ({ page }) => {
       <div className={styles.cardSectionInner}>
         <Row className="headingRow">
           <Col>
-            <h5 className="sectionsubHeading">{lan.findyourvilla.title1}</h5>
+            {/* <h5 className="sectionsubHeading">{lan.findyourvilla.title1}</h5> */}
             <h2 className="sectionmainHeading">{lan.findyourvilla.title2}</h2>
           </Col>
         </Row>
