@@ -6,11 +6,11 @@ import { useRef } from "react";
 import useLanguage from "../../../utils/useLanguage";
 import Image from "next/image";
 
-import Bedroom from "../../../public/Svg/bedroom.svg";
-import Swimicon from "../../../public/Svg/swimicon.svg";
-import Garden from "../../../public/Svg/garden.svg";
-import Eco from "../../../public/Svg/ecofriendly.svg";
-import Maidroom from "../../../public/Svg/maidroom.svg";
+import Maidroom from "../../../public/Svg/homevillaplan/bedroom.svg";
+import Parking from "../../../public/Svg/homevillaplan/parking.svg";
+import Garden from "../../../public/Svg/homevillaplan/garden.svg";
+import Bathroom from "../../../public/Svg/homevillaplan/bathroom.svg";
+import Bedroom from "../../../public/Svg/homevillaplan/maidroom.svg";
 
 function VillaplansMobile() {
   const lan = useLanguage();
@@ -105,7 +105,7 @@ function VillaplansMobile() {
             <Bedroom /> <span>{lan.commontext.bedroom}</span>
           </p>
           <p>
-            <Eco /> <span>{lan.commontext.bathroom}</span>
+            <Bathroom /> <span>{lan.commontext.bathroom}</span>
           </p>
           <p>
             <Maidroom /> <span>{lan.commontext.maidroom}</span>
@@ -114,7 +114,7 @@ function VillaplansMobile() {
             <Garden /> <span>{lan.commontext.privategarden}</span>
           </p>
           <p>
-            <Eco /> <span>{lan.commontext.smarthome}</span>
+            <Parking /> <span>{lan.commontext.parking}</span>
           </p>
         </div>
         <div>
