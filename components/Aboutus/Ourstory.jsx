@@ -9,11 +9,11 @@ const Ourstory = () => {
     <section className={styles.ourstory}>
       <div className={styles.ourstoryInner}>
         <div className={styles.heading}>
-          <p>{data.title}</p>
+          <p className="sectionmainHeading">{data.title}</p>
         </div>
         <div className={styles.statistics}>
           {data.statistics.map((item, index) => (
-            <div key={index}>
+            <div key={index} className={styles[`item${index}`]}>
               <h2>
                 {item.data}
                 {item.sub && <sub>{item.sub}</sub>}
@@ -22,26 +22,34 @@ const Ourstory = () => {
             </div>
           ))}
         </div>
-        <div
-          className={styles.aboutusmasterplan}
-          style={{
-            position: "relative",
-          }}>
+        <div className={styles.aboutusmasterplan}>
           <Image
             src={"/Images/masterplanimage.png"}
             layout="fill"
             objectFit="cover"
-            objectPosition={"center"}
+            objectPosition="80%"
+            priority
           />
         </div>
         <div className={styles.storycontent}>
           <h3>{lan.commontext.ourstory}</h3>
           <p>
-            {data.story.p1} <span>{data.story.s}</span> {data.story.p2}
+            {data.story.p1}
+            <span>{data.story.s}</span>
+            {data.story.p2}
           </p>
-          <p>
-            {data.story.p3} <span>{data.story.s2}</span> {data.story.p4}{" "}
-            <span>{data.story.s3}</span>
+
+          <p
+            style={{
+              marginTop: "2rem",
+            }}>
+            {data.story.p3} <span>{data.story.s2}</span> {data.story.p4}
+            <span
+              style={{
+                textDecoration: "underline",
+              }}>
+              {data.story.s3}
+            </span>
             {data.story.p5}
           </p>
         </div>

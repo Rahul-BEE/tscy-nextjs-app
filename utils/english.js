@@ -1129,11 +1129,7 @@ const english = {
         title: "Hectares",
         data: "100",
       },
-      {
-        title: "Residents",
-        data: "10000",
-        sub: "+",
-      },
+
       {
         title: "Solar powered",
         data: "100",
@@ -1149,15 +1145,20 @@ const english = {
         data: "80",
         sub: "%",
       },
+      {
+        title: "Residents",
+        data: "10000",
+        sub: "+",
+      },
     ],
     story: {
       p1: "Oman Tourism Development Company (",
       s: "Omran",
       p2: ") and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
       p3: "Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
-      s2: " net-zero",
-      p4: " energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first",
-      s3: " Sustainable City in Dubai",
+      s2: "net-zero",
+      p4: "energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first ",
+      s3: "Sustainable City in Dubai",
       p5: " in 2016.",
     },
     joinus: {
@@ -1165,7 +1166,8 @@ const english = {
       desc: "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
     },
     othercity: {
-      heading: "Other Cities by Diamond Developers",
+      heading1: "Other Cities by",
+      heading2: "Diamond Developers",
       city1: "Sharjah Sustainable City",
       city2: "The Sustainable City - Dubai",
       country: "UAE",

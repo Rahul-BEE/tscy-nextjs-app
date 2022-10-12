@@ -10,7 +10,10 @@ const Othercities = () => {
   return (
     <section className={styles.othercities}>
       <div className={styles.othercitiesinner}>
-        <p>{data.othercity.heading}</p>
+        <div>
+          <p className={styles.heading}>{data.othercity.heading1}</p>
+          <p className={styles.heading}>{data.othercity.heading2}</p>
+        </div>
         <div className={styles.citycardcontainer}>
           <div className={styles.citycard}>
             <div className={styles.cardImg}>
@@ -35,7 +38,7 @@ const Othercities = () => {
                 objectFit="cover"
               />
             </div>
-            <p>{data.othercity.city1}</p>
+            <p>{data.othercity.city2}</p>
             <p>{data.othercity.country}</p>
           </div>
         </div>
