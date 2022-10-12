@@ -213,11 +213,12 @@
     }
 
     @media (max-width:1259px) {
+      position: static;
       flex-wrap: wrap;
       width: 100%;
       border-radius: 0;
       bottom: 0;
-      transform: translate(-50%, 0%);
+      transform: translate(0%, 0%);
 
       p:first-child {
         width: 100%;

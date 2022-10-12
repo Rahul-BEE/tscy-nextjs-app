@@ -39,6 +39,7 @@ const MasterplanPopup = ({
             left: Number(offsetLeft),
             position: "relative",
           }}
+          data-type={track ? "track" : ""}
           data-pos={
             track
               ? "rt"

@@ -11,6 +11,7 @@ import Parking from "../../../public/Svg/homevillaplan/parking.svg";
 import Garden from "../../../public/Svg/homevillaplan/garden.svg";
 import Bathroom from "../../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../../public/Svg/homevillaplan/maidroom.svg";
+import Link from "next/link";
 
 function VillaplansMobile() {
   const lan = useLanguage();
@@ -60,7 +61,6 @@ function VillaplansMobile() {
             lan.villaplansection.villas.map((villa, index) => (
               <div
                 key={index}
-                // className={styles.content_container}
                 className={`${styles.content_container} flex ${
                   currentvilla.id === index + 1 ? styles.activeVilla : ""
                 }`}
@@ -81,16 +81,20 @@ function VillaplansMobile() {
           <p>{currentvilla.description}</p>
         </Col>
       </Row>
-
       <div className={styles.villadownload}>
-        <div className={styles.download_content}>Download Brochure</div>
-        <div className={styles.download_content}>Download Floor Plan</div>
-        <div className={styles.download_content}>Register Interest</div>
+        <div className={styles.download_content}>
+          {lan.commontext.download} {lan.commontext.brochure}
+        </div>
+        <div className={styles.download_content}>
+          {lan.commontext.download} {lan.commontext.floorplan}
+        </div>
+        <div className={styles.download_content}>
+          {lan.commontext.registerinterest}
+        </div>
       </div>
 
       <div className={styles.villaplanImageContainer}>
         <Image
-          // src="/Images/villaplansectionimg.png"
           src={lan.villaplansection.villas[activeVilla].mainImg}
           width={900}
           height={500}
@@ -117,9 +121,13 @@ function VillaplansMobile() {
             <Parking /> <span>{lan.commontext.parking}</span>
           </p>
         </div>
-        <div>
-          <Button>{lan.commontext.seedetails}</Button>
-        </div>
+        <Link
+          href={`/floorplan/${lan.villaplansection.villas[activeVilla].slug}`}
+          passHref>
+          <div>
+            <Button>{lan.commontext.seedetails}</Button>
+          </div>
+        </Link>
       </div>
     </div>
   );

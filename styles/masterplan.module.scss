@@ -205,6 +205,12 @@
           border-bottom-right-radius: 0;
         }
 
+        @media(max-width:1300px) {
+          .popupinnercard[data-type="track"] {
+            max-width: 330px;
+          }
+        }
+
         @media (max-width: 1224px) {
           display: none;
         }
@@ -677,7 +683,7 @@
 
     @media (max-width: 1224px) {
       overflow: hidden;
-      height: 70vh;
+      height: 90vh;
       border-radius: 0;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
