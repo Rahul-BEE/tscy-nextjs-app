@@ -25,6 +25,9 @@ import Kitchenp from "../public/Svg/kitchen.svg";
 import Laundryp from "../public/Svg/laundry.svg";
 import Parkingp from "../public/Svg/parking.svg";
 import Gardenp from "../public/Svg/garden.svg";
+
+import Diamond from "../public/Logos/diamond.svg";
+import Omran from "../public/Logos/omran.svg";
 const arabic = {
   header: {
     langbtn: "Hello",
@@ -895,6 +898,7 @@ const arabic = {
     groundfloor: "Ground Floor",
     parking: "Parking",
     press: "Press and News",
+    ourstory: "Our Story",
   },
   propertyFeatures: [
     {
@@ -1036,6 +1040,8 @@ const arabic = {
   partners: {
     title1: "We are proud of our",
     title2: "PROJECT PARTNERS",
+    diamond: <Diamond />,
+    omran: <Omran />,
   },
   findyourvilla: {
     title1: "Caption",
@@ -1076,6 +1082,56 @@ const arabic = {
           "Biogas plants are used to generate energy using green organic waste collected from our cities.",
       },
     ],
+  },
+  aboutus: {
+    title: "Oman's first net-zero energy city",
+
+    statistics: [
+      {
+        title: "Hectares",
+        data: "100",
+      },
+      {
+        title: "Residents",
+        data: "10000",
+        sub: "+",
+      },
+      {
+        title: "Solar powered",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "Water and waste recycling",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "Food self sufficiency",
+        data: "80",
+        sub: "%",
+      },
+    ],
+    story: {
+      p1: "Oman Tourism Development Company (",
+      s: "Omran",
+      p2: ") and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
+      p3: "Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
+      s2: " net-zero",
+      p4: " energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first",
+      s3: " Sustainable City in Dubai",
+      p5: " in 2016.",
+    },
+    joinus: {
+      title: "Join us in inspiring a better and a brighter tomorrow. ",
+      desc: "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+    },
+    othercity: {
+      heading: "Other Cities by Diamond Developers",
+      city1: "Sharjah Sustainable City",
+      city2: "The Sustainable City - Dubai",
+      country: "UAE",
+    },
   },
 };
 
