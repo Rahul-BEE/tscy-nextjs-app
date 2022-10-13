@@ -46,7 +46,7 @@ const english = {
       { text: "ABOUT US", link: "/about" },
       { text: "NEWS", link: "/news" },
     ],
-    contact: "CONTACT US",
+    contact: "REGISTER INTEREST",
     homepage: "Homepage",
   },
 
