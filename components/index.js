@@ -16,3 +16,5 @@ export { default as CardsSection } from "./Floorplan/CardsSection";
 export { default as Ourstory } from "./Aboutus/Ourstory";
 export { default as Joinus } from "./Aboutus/Joinus";
 export { default as Othercities } from "./Aboutus/Othercities";
+export { default as Registration } from "./Contact/Registration";
+export { default as Visitus } from "./Contact/Visitus";

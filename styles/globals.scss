@@ -120,15 +120,16 @@ a {
 }
 
 .sectionmainHeading {
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight: 600;
   font-size: 1.9375rem;
-  background: $sectionmainheadingbackground;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+  line-height: 58px;
   text-align: center;
-  text-transform: uppercase;
+  background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   @media (max-width:1224px) {
     font-size: 1.5625rem;

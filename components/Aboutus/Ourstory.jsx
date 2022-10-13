@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import styles from "../../styles/about.module.scss";
 import useLanguage from "../../utils/useLanguage";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const Ourstory = () => {
   const lan = useLanguage();
   const data = lan.aboutus;
@@ -22,15 +24,42 @@ const Ourstory = () => {
             </div>
           ))}
         </div>
-        <div className={styles.aboutusmasterplan}>
-          <Image
-            src={"/Images/masterplanimage.png"}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="80%"
-            priority
-            alt="Sustainable City Yiti Masterplan"
-          />
+        <div className={styles.aboutusimgmaincontainer}>
+          <div className={styles.aboutusmasterplan}>
+            <Image
+              src={"/Images/masterplanimage.png"}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="80%"
+              priority
+              alt="Sustainable City Yiti Masterplan"
+            />
+          </div>
+          <div className={styles.polygoncontainer1}>
+            <Image
+              src={"/Images/aboutus/poly1.png"}
+              layout="responsive"
+              objectFit="contain"
+              width={439}
+              height={439}
+              alt="Sustainable City Yiti Masterplan"
+              priority
+            />
+          </div>
+          <div className={styles.polygoncontainer2}>
+            <Image
+              src={"/Images/aboutus/poly2.png"}
+              layout="responsive"
+              width={439}
+              height={439}
+              objectFit="contain"
+              alt="Sustainable City Yiti Masterplan"
+              style={{
+                left: "-100%",
+              }}
+              priority
+            />
+          </div>
         </div>
         <div className={styles.storycontent}>
           <h3>{lan.commontext.ourstory}</h3>
@@ -57,8 +86,30 @@ const Ourstory = () => {
         <div className={styles.partners}>
           <h5>{lan.partners.title2}</h5>
           <div className={styles.partnercontainer}>
-            <div className={styles.partneritem}>{lan.partners.diamond}</div>
-            <div className={styles.partneritem}>{lan.partners.omran}</div>
+            <Link href={"https://diamond-developers.ae/"} passHref>
+              <a target={"_blank"}>
+                <motion.div
+                  className={styles.partneritem}
+                  whileHover={{
+                    boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
+                    border: "1px solid white",
+                  }}>
+                  {lan.partners.diamond}
+                </motion.div>
+              </a>
+            </Link>
+            <Link href={"https://www.omran.om/"} passHref>
+              <a target={"_blank"}>
+                <motion.div
+                  className={styles.partneritem}
+                  whileHover={{
+                    boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
+                    border: "1px solid white",
+                  }}>
+                  {lan.partners.omran}
+                </motion.div>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

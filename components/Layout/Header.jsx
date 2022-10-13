@@ -4,7 +4,7 @@ import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
 import MobileMenu from "./MobilemenuModal";
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -108,7 +108,7 @@ const Header = () => {
           } `}>
           <Link href={"/contact"} passHref>
             <button className={`btn ${styles.contactbtn}`}>
-              {lan.header.contact}
+              {lan.commontext.registerinterest}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>
           </Link>

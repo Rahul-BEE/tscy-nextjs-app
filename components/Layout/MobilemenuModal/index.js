@@ -28,6 +28,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
             src="/Images/mobilemenutop.png"
             layout="fill"
             alt="sustainablecity yiti villas"
+            priority
+            quality={50}
           />
         </div>
         <Row fluid className={styles.header_mobilemenu}>
@@ -87,7 +89,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                     }`}
                     onClick={() => onHide()}>
                     <Polygon className="me-2" />
-                    <p className="p-0 m-0">{lan.header.contact}</p>
+                    <p className="p-0 m-0">{lan.commontext.registerinterest}</p>
                   </a>
                 </Link>
               </Col>
