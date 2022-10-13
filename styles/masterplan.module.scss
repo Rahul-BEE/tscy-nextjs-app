@@ -27,8 +27,8 @@
     position: relative;
     max-height: 800px;
     background-color: #fff;
-    overflow: hidden;
-    border-radius: 15px;
+
+
     // filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
 
     .masterplan {
@@ -37,6 +37,8 @@
       height: 100%;
       max-width: 1528px;
       max-height: 800px;
+      overflow: hidden;
+      border-radius: 15px;
 
       @media (max-width: 1224px) {
         height: 100%;
@@ -216,100 +218,144 @@
         }
       }
 
-      .masterplan_bottomindex {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        padding: 0 clamp(1vw, 3vw, 3vw);
 
-        .indexdiv {
-          min-height: 125px;
-          height: 125px;
-          background: #ffffff;
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          border-radius: 15px;
-          padding: 10px;
+    }
 
-          .componentdiv {
-            flex: 1;
-            flex-wrap: wrap;
-          }
+    .masterplan_bottomindex {
+      position: absolute;
+      bottom: -70px;
+      width: 100%;
+      padding: 0 clamp(1vw, 3vw, 3vw);
 
-          .componentdiv,
-          .tracksdiv {
-            display: grid;
-            min-height: 100%;
-            grid-template-columns: auto 1fr;
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 500;
-            line-height: 24px;
-            color: #777777;
-            text-transform: capitalize;
-            gap: 0.8rem;
+      .indexdiv {
 
-            .componentheading,
-            .tracksheading {
-              font-weight: 700;
-              font-size: 14px;
-              text-transform: uppercase;
-            }
-          }
+        background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+        padding: 24px 48px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.28);
+        gap: 1rem;
 
-          .tracksdiv {
-            grid-template-columns: 40% 60%;
-            flex: 0.2;
-            position: relative;
-          }
+        .components {
+          display: grid;
+          width: fit-content;
+          min-height: 100%;
+          margin-left: 0.5rem;
+          grid-template-columns: repeat(4, 1fr);
+          flex: 1;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: #777777;
+          text-transform: capitalize;
+          cursor: pointer;
 
-          .components,
-          .tracks {
-            display: grid;
-            grid-template-columns: repeat(5, 20%);
-
-            p {
-              font-family: "Poppins";
-              cursor: pointer;
-              margin: 0;
-              padding: 0;
-              font-size: clamp(12px, 0.4vw + 0.5rem, 0.9rem);
-              color: #777777;
-              display: flex;
-              align-items: flex-start;
-              justify-content: flex-start;
-            }
-
-            @media (max-width: 1367px) {
-              grid-template-columns: repeat(4, 25%);
-            }
-          }
-
-          .tracks {
-            grid-template-columns: 1fr;
-          }
-
-          &::before {
-            content: "";
-            position: absolute;
-            height: 70%;
-            top: 15%;
-            right: 22%;
-            width: 2px;
-            background-color: #058da6;
-            border: none;
-            border-radius: 2px;
-
-            @media (max-width: 1360px) {
-              right: 20%;
-            }
+          p {
+            margin-bottom: 5px;
           }
         }
 
-        @media (max-width: 1224px) {
-          display: none;
+        .tracks {
+          cursor: pointer;
         }
+
+        .componentheading,
+        .tracksheading {
+          font-family: "Poppins";
+          font-style: normal;
+          color: #777777;
+          font-weight: 700;
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+
+        .seperator {
+          width: 2px;
+          background-color: #058da6;
+          border: none;
+          border-radius: 2px;
+          justify-self: center;
+        }
+
+        @media (max-width:1420px) {
+          padding: 12px 24px;
+          font-size: 0.85rem;
+        }
+
+        // .componentdiv {
+        //   flex: 1;
+        //   flex-wrap: wrap;
+        // }
+
+        // .componentdiv,
+        // .tracksdiv {
+        //   display: grid;
+        //   min-height: 100%;
+        //   grid-template-columns: auto 1fr;
+        // font-family: "Poppins";
+        // font-style: normal;
+        // font-weight: 500;
+        // line-height: 24px;
+        // color: #777777;
+        // text-transform: capitalize;
+
+
+        // }
+
+        // .tracksdiv {
+        //   grid-template-columns: 40% 60%;
+        //   flex: 0.2;
+        //   position: relative;
+        // }
+
+        // .components,
+        // .tracks {
+        //   display: grid;
+        //   grid-template-columns: repeat(4, 25%);
+        //   gap: 1rem;
+
+        //   p {
+        //     font-family: "Poppins";
+        //     cursor: pointer;
+        //     margin: 0;
+        //     padding: 0;
+        //     font-size: clamp(12px, 0.4vw + 0.5rem, 0.9rem);
+        //     color: #777777;
+        //     display: flex;
+        //     align-items: flex-start;
+        //     justify-content: flex-start;
+        //   }
+
+        //   @media (max-width: 1367px) {
+        //     grid-template-columns: repeat(4, 25%);
+        //   }
+        // }
+
+        // .tracks {
+        //   grid-template-columns: 1fr;
+        // }
+
+        // seperator {
+        //   content: "";
+        //   position: absolute;
+        //   height: 70%;
+        //   top: 15%;
+        //   right: 22%;
+        //   width: 2px;
+        //   background-color: #058da6;
+        //   border: none;
+        //   border-radius: 2px;
+
+        //   @media (max-width: 1360px) {
+        //     right: 20%;
+        //   }
+        // }
+      }
+
+      @media (max-width: 1224px) {
+        display: none;
       }
     }
 
@@ -679,6 +725,14 @@
       @media (max-width:1224px) {
         display: flex;
       }
+    }
+
+    @media (max-width:1500px) {
+      height: 80vh;
+    }
+
+    @media (max-width:1350px) {
+      height: 70vh;
     }
 
     @media (max-width: 1224px) {

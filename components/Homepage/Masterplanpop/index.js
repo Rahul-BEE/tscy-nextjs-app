@@ -65,29 +65,31 @@ const MasterplanPopup = ({
             </div>
           </div>
           <p className={styles.description}>{data.description}</p>
-          <div className={styles.contentbox}>
-            <h5>{lan.commontext.details}</h5>
-            <div className={styles.detailsContainer}>
-              <div className={styles.col1}>
-                <h6>
-                  {Object.keys(data.details)[0]}
-                  <span>{Object.values(data.details)[0]}</span>
-                </h6>
-              </div>
-              <div className={styles.col2}>
-                <h6>
-                  {Object.keys(data.details)[1]}
-                  <span>{Object.values(data.details)[1]}</span>
-                </h6>
-              </div>
-              <div className={styles.col3}>
-                <h6>
-                  {Object.keys(data.details)[2]}
-                  <span>{Object.values(data.details)[2]}</span>
-                </h6>
+          {track && (
+            <div className={styles.contentbox}>
+              <h5>{lan.commontext.details}</h5>
+              <div className={styles.detailsContainer}>
+                <div className={styles.col1}>
+                  <h6>
+                    {Object.keys(data.details)[0]}
+                    <span>{Object.values(data.details)[0]}</span>
+                  </h6>
+                </div>
+                <div className={styles.col2}>
+                  <h6>
+                    {Object.keys(data.details)[1]}
+                    <span>{Object.values(data.details)[1]}</span>
+                  </h6>
+                </div>
+                <div className={styles.col3}>
+                  <h6>
+                    {Object.keys(data.details)[2]}
+                    <span>{Object.values(data.details)[2]}</span>
+                  </h6>
+                </div>
               </div>
             </div>
-          </div>
+          )}
           <button
             className={styles.popupcardbtn}
             onClick={() => setShowDetail(true)}>

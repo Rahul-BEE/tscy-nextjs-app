@@ -24,6 +24,7 @@
             grid-template-columns: 40% auto;
             grid-template-areas: "infoBox form ";
             grid-auto-rows: 1fr;
+            margin-top: 2rem;
 
             .infoBox {
                 grid-area: infoBox;
@@ -268,7 +269,7 @@
             }
         }
 
-        @media (max-width:1224px) {
+        @media (max-width:1300px) {
             padding: 30px 60px;
         }
 
