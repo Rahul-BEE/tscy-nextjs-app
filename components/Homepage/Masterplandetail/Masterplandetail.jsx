@@ -36,7 +36,7 @@ const Masterplandetail = ({ item, track, goback }) => {
   const [sliderWidth, setSliderWidth] = useState(0);
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
   const [direction, setDirection] = useState(1);
-
+  const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
 
@@ -90,8 +90,11 @@ const Masterplandetail = ({ item, track, goback }) => {
               placeholder="blur"
               blurDataURL={data[index].slideimg[slideIndex]}
               alt={data[index].name}
+              onLoad={() => setShowGradient(true)}
             />
-            <div className={styles.masterplandetailgradient} />
+            {showGradient && (
+              <div className={styles.masterplandetailgradient} />
+            )}
           </motion.div>
         </AnimatePresence>
         <MasterplanInfoBox
@@ -102,10 +105,14 @@ const Masterplandetail = ({ item, track, goback }) => {
           updateIndex={setIndex}
         />
         <div className={styles.gobackbtn} onClick={() => goback()}>
-          <span>
+          <span
+            style={{
+              marginRight: "5px",
+              marginBottom: "2px",
+            }}>
             <GoChevronLeft />
           </span>
-          {lan.commontext.gobacktomasterplan}
+          <p>{lan.commontext.gobacktomasterplan}</p>
         </div>
         {data[index].slideimg.length > 1 && (
           <>

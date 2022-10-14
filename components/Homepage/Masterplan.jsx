@@ -116,9 +116,7 @@ const Masterplan = () => {
     setIsBrowser(window.innerWidth < 1224);
     setTrack(null);
     setConstrains({
-      right: zoom
-        ? -(imageContainerRef.current?.getBoundingClientRect().x / 1.5)
-        : 0,
+      right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
       left: zoom
         ? -(
             (imageContainerRef.current?.getBoundingClientRect().width -
@@ -147,13 +145,6 @@ const Masterplan = () => {
   //Guesture
 
   const dragHandler = async (_, info) => {
-    if (
-      Math.abs(info.velocity.y) > 200 &&
-      Math.abs(info.offset.y) > 200 &&
-      !zoom
-    ) {
-      window.scrollBy(0, -info.offset.y);
-    }
     if (imageContainerRef.current.getBoundingClientRect().x >= 52) {
       setMove({
         x: 0,
@@ -175,6 +166,15 @@ const Masterplan = () => {
     setShowDetail(false);
     setItem(null);
     setTrack(null);
+  };
+  const scrollHandler = (_, info) => {
+    if (
+      Math.abs(info.velocity.y) > 50 &&
+      Math.abs(info.offset.y) > 50 &&
+      !zoom
+    ) {
+      window.scrollBy(0, -info.offset.y);
+    }
   };
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
@@ -227,6 +227,7 @@ const Masterplan = () => {
               animate={zoomAnimation}
               ref={imageContainerRef}
               drag
+              onDrag={scrollHandler}
               onDragEnd={dragHandler}
               dragElastic={false}
               dragConstraints={{
@@ -244,7 +245,7 @@ const Masterplan = () => {
                 className={styles.masterplanmap}
                 blurDataURL="/Images/masterplanimage.png"
                 placeholder="blur"
-                priority={true}
+                priority
                 quality={100}
                 alt="MasterPlan"
               />
