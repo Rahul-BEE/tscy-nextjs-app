@@ -10,6 +10,7 @@ import { AiFillMinusCircle } from "react-icons/ai";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
+import Ebuggy from "./Tracks/E-buggy";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
 import Masterplandetail from "./Masterplandetail/Masterplandetail";
@@ -250,7 +251,7 @@ const Masterplan = () => {
                 alt="MasterPlan"
               />
               {track === 18 && <CyclingTrack />}
-              {track === 19 && <CyclingTrack />}
+              {track === 19 && <Ebuggy />}
               {track === 16 && <JoggingTrack />}
               {track === 17 && <EquistrainTrack />}
 
@@ -267,56 +268,6 @@ const Masterplan = () => {
                 setShowDetail={setShowDetail}
               />
             </motion.div>
-            <div className={styles.masterplan_bottomindex}>
-              <div className={styles.indexdiv}>
-                <div className={styles.componentheading}>
-                  {lan.commontext.components}
-                </div>
-                <div className={styles.components}>
-                  {lan.masterplan.markers.map((marker, index) => (
-                    <motion.p
-                      key={`${marker.name}_${index}_${marker.id}`}
-                      onClick={() => getPath({ id: marker.id })}
-                      style={{
-                        color:
-                          index === activeIndex - 1 ? "#058da6" : "#777777",
-                      }}>
-                      <motion.span
-                        style={{
-                          display: index === activeIndex - 1 ? "" : "none",
-                        }}>
-                        -
-                      </motion.span>
-                      {marker.name}
-                    </motion.p>
-                  ))}
-                </div>
-                <div className={styles.seperator}></div>
-                <div className={styles.tracksheading}>
-                  {lan.commontext.tracks}
-                </div>
-                <div className={styles.tracks}>
-                  {lan.tracks.map((marker, index) => (
-                    <motion.p
-                      key={`${marker.name}_${index}_${marker.id}`}
-                      onClick={() => {
-                        getTrackPath({ id: marker.id });
-                      }}
-                      style={{
-                        color: index + 15 === track - 1 ? "#058da6" : "#777777",
-                      }}>
-                      <motion.span
-                        style={{
-                          display: index + 15 === track - 1 ? "" : "none",
-                        }}>
-                        -
-                      </motion.span>
-                      {marker.name}
-                    </motion.p>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
           <Mobilebtmindex
             setShowDetail={setShowDetail}
@@ -325,6 +276,55 @@ const Masterplan = () => {
             setDesktop={setDesktop}
           />
         </>
+      )}
+      {!showDetail && (
+        <div className={styles.masterplan_bottomindex}>
+          <div className={styles.indexdiv}>
+            <div className={styles.componentheading}>
+              {lan.commontext.components}
+            </div>
+            <div className={styles.components}>
+              {lan.masterplan.markers.map((marker, index) => (
+                <motion.p
+                  key={`${marker.name}_${index}_${marker.id}`}
+                  onClick={() => getPath({ id: marker.id })}
+                  style={{
+                    color: index === activeIndex - 1 ? "#058da6" : "#777777",
+                  }}>
+                  <motion.span
+                    style={{
+                      display: index === activeIndex - 1 ? "" : "none",
+                    }}>
+                    -
+                  </motion.span>
+                  {marker.name}
+                </motion.p>
+              ))}
+            </div>
+            <div className={styles.seperator}></div>
+            <div className={styles.tracksheading}>{lan.commontext.tracks}</div>
+            <div className={styles.tracks}>
+              {lan.tracks.map((marker, index) => (
+                <motion.p
+                  key={`${marker.name}_${index}_${marker.id}`}
+                  onClick={() => {
+                    getTrackPath({ id: marker.id });
+                  }}
+                  style={{
+                    color: index + 15 === track - 1 ? "#058da6" : "#777777",
+                  }}>
+                  <motion.span
+                    style={{
+                      display: index + 15 === track - 1 ? "" : "none",
+                    }}>
+                    -
+                  </motion.span>
+                  {marker.name}
+                </motion.p>
+              ))}
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

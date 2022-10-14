@@ -1038,6 +1038,24 @@ const english = {
         Phone: " 0312547",
       },
     },
+    {
+      id: 19,
+      name: "E-Buggy",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      description:
+        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
+      },
+    },
   ],
   newssection: {
     post: [
