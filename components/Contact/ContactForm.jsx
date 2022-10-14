@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Col, Row } from "react-bootstrap";
 import styles from "../../styles/contact.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import PhoneInput from "react-phone-input-2";
@@ -109,6 +108,10 @@ const ContactForm = () => {
                     inputClass={styles.piinputclass}
                     buttonClass={styles.buttonClass}
                     onChange={(val) => setPhone(val)}
+                    enableSearch={true}
+                    searchClass={styles.searchClass}
+                    countryCodeEditable={false}
+                    searchNotFound={"No country found"}
                   />
                 </div>
               </div>
@@ -131,7 +134,7 @@ const ContactForm = () => {
               <div className={styles.btnholder}>
                 <motion.button
                   whileHover={{
-                    scale: 1.02,
+                    scale: 1.1,
                   }}>
                   {lan.commontext.sendmessage}
                 </motion.button>
