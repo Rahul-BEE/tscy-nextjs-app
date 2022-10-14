@@ -42,11 +42,20 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    const path = document.getElementById(`path_${id}`);
-    const rect = document.getElementById("something").getBoundingClientRect();
-    if (track) {
+    console.log(id, track, "hi");
+    if (id === item || track) {
+      setItem(null);
+      setShow(null);
+      setActiveIndex(null);
+      setTrack(null);
+      return;
+    }
+    if (track !== null) {
       setTrack(null);
     }
+    const path = document.getElementById(`path_${id}`);
+    const rect = document.getElementById("something").getBoundingClientRect();
+
     setItem(id);
     setActiveIndex(id);
     setX(
@@ -65,12 +74,18 @@ const Masterplan = () => {
     setShow(true);
   };
 
-  const getTrackPath = async ({ id }) => {
+  const getTrackPath = ({ id }) => {
+    if (track === id) {
+      setTrack(null);
+      setShow(false);
+      return;
+    }
     setTrack(id);
-    setShow(true);
     setActiveIndex(null);
+    setShow(true);
   };
   useEffect(() => {
+    console.log("calked use", track);
     if (track && desktop) {
       const path = document.getElementById(`path_${track}`);
       const rect = document.getElementById("something").getBoundingClientRect();
@@ -88,7 +103,7 @@ const Masterplan = () => {
       setH(Number(path?.getBoundingClientRect().height * 2));
       setShow(true);
     }
-  }, [track, desktop]);
+  }, [track, setDesktop]);
 
   const zoomHandler = async (state) => {
     if (state) {
@@ -115,7 +130,6 @@ const Masterplan = () => {
   };
   const setNewConstraints = useCallback(() => {
     setIsBrowser(window.innerWidth < 1224);
-    setTrack(null);
     setConstrains({
       right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
       left: zoom
@@ -167,6 +181,7 @@ const Masterplan = () => {
     setShowDetail(false);
     setItem(null);
     setTrack(null);
+    setActiveIndex(null);
   };
   const scrollHandler = (_, info) => {
     if (
@@ -177,6 +192,7 @@ const Masterplan = () => {
       window.scrollBy(0, -info.offset.y);
     }
   };
+
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
       <Row className="headingRow">
@@ -291,12 +307,12 @@ const Masterplan = () => {
                   style={{
                     color: index === activeIndex - 1 ? "#058da6" : "#777777",
                   }}>
-                  <motion.span
+                  {/* <motion.span
                     style={{
                       display: index === activeIndex - 1 ? "" : "none",
                     }}>
                     -
-                  </motion.span>
+                  </motion.span> */}
                   {marker.name}
                 </motion.p>
               ))}
@@ -313,12 +329,12 @@ const Masterplan = () => {
                   style={{
                     color: index + 15 === track - 1 ? "#058da6" : "#777777",
                   }}>
-                  <motion.span
+                  {/* <motion.span
                     style={{
                       display: index + 15 === track - 1 ? "" : "none",
                     }}>
                     -
-                  </motion.span>
+                  </motion.span> */}
                   {marker.name}
                 </motion.p>
               ))}

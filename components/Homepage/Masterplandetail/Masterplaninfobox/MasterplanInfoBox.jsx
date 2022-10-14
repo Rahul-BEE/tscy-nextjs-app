@@ -11,6 +11,7 @@ const MasterplanInfoBox = ({
   slideIndex,
   setSlideIndex,
   updateIndex,
+  setDirection,
 }) => {
   const lan = useLanguage();
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
@@ -22,11 +23,13 @@ const MasterplanInfoBox = ({
     if (pos === 1) {
       if (index !== 0) {
         setIndex((prev) => prev - 1);
+        setDirection(-1);
         updateIndex(index - 1);
       }
     } else if (pos === -1) {
       if (index !== data.length - 1) {
         setIndex((prev) => prev + 1);
+        setDirection(1);
         updateIndex(index + 1);
       }
     }

@@ -17,14 +17,14 @@ const parentVariant = {
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
-    opacity: 0,
+    opacity: 0.75,
     transition: {
       duration: 1,
     },
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
-    opacity: 0,
+    opacity: 0.75,
     transition: {
       duration: 1,
     },
@@ -60,9 +60,11 @@ const Masterplandetail = ({ item, track, goback }) => {
           .width
     );
   }, [slideIndex]);
+
   return (
     <>
       <div className={styles.masterplandetailinner} id="masterplanslideparent">
+        {console.log("direction", direction)}
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
             data-index={track !== null ? "true" : "false"}
@@ -103,6 +105,7 @@ const Masterplandetail = ({ item, track, goback }) => {
           slideIndex={slideIndex}
           setSlideIndex={setSlideIndex}
           updateIndex={setIndex}
+          setDirection={setDirection}
         />
         <div className={styles.gobackbtn} onClick={() => goback()}>
           <span
