@@ -62,9 +62,6 @@ function Footer() {
         {
           title: "TSC - Sharjah",
         },
-        {
-          title: "Villas at TSC",
-        },
       ],
     },
   ];
