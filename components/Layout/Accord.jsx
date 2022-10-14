@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Accordion,
   Card,
@@ -21,13 +22,20 @@ function CustomToggle({ children, eventkey }) {
 }
 
 function Accord({ data }) {
+  const [open, setOpen] = useState([false, 0]);
   return (
-    <div>
+    <div key={data}>
       <Accordion className={styles.accord}>
         {data.map((e, index) => (
           <Card className={styles.accord_card} key={`${index}_footer_link`}>
-            <Card.Header className={styles.bg_transparent}>
-              <CustomToggle eventkey={index}>{e.title}</CustomToggle>
+            <Card.Header
+              className={styles.bg_transparent}
+              data-open={index === open[1] && open[0] ? "open" : "closed"}>
+              <CustomToggle
+                eventkey={index}
+                onClick={() => setOpen([!open[0], index])}>
+                {e.title}
+              </CustomToggle>
             </Card.Header>
             <Accordion.Collapse eventKey={index}>
               <Card.Body className={styles.accord_card_body}>

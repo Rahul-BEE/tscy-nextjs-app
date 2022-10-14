@@ -42,9 +42,9 @@ function Footer() {
         {
           title: "Become a Broker",
         },
-        {
-          title: "Language Support",
-        },
+        // {
+        //   title: "Language Support",
+        // },
         {
           title: "Help and Support",
         },

@@ -13,10 +13,23 @@ const ContactForm = () => {
   const [company, setCompany] = useState("");
   const [companyContact, setCompanyContact] = useState("");
   const [license, setLicense] = useState("");
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const data = lan.contact.register.formdata;
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(e);
+  };
+
+  const handleChange = (_, country) => {
+    const mobLength = country.format.split(".").length - 1;
+    if (phone.split("").length - 1 !== mobLength) {
+      setError(true);
+      setErrorMessage("Enter Valid Mobile Number");
+    } else {
+      setError(false);
+      setErrorMessage("r");
+    }
   };
   return (
     <div className={styles.contactform}>
@@ -110,9 +123,29 @@ const ContactForm = () => {
                     onChange={(val) => setPhone(val)}
                     enableSearch={true}
                     searchClass={styles.searchClass}
+                    onBlur={handleChange}
                     countryCodeEditable={false}
                     searchNotFound={"No country found"}
+                    isValid={(value, country) => {
+                      if (value.match(/12345/)) {
+                        setError(true);
+                        return false;
+                      } else if (value.match(/1234/)) {
+                        setError(true);
+                        return false;
+                      } else {
+                        setError(false);
+                        return true;
+                      }
+                    }}
                   />
+                  <small
+                    className={styles.phoneErrorDiv}
+                    style={{
+                      opacity: error ? 1 : 0,
+                    }}>
+                    {errorMessage}
+                  </small>
                 </div>
               </div>
               {select === 1 && (
@@ -133,6 +166,7 @@ const ContactForm = () => {
 
               <div className={styles.btnholder}>
                 <motion.button
+                  type="submit"
                   whileHover={{
                     scale: 1.1,
                   }}>

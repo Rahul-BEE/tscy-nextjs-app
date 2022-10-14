@@ -429,14 +429,24 @@
   color: $font_color_gray;
   justify-content: space-between;
   background-color: transparent;
+  font-weight: 400;
 
   h4 {
     color: $font_color_gray;
+    margin: 0;
+    margin-block: 20px;
+    font-weight: 400;
+    font-size: 1rem;
   }
+
 }
 
 .bg_transparent {
   background-color: transparent !important;
+
+  &[data-open="open"] {
+    border-bottom: none;
+  }
 }
 
 .accord {
@@ -445,15 +455,28 @@
   background-color: transparent;
   margin: 0 4%;
 
+
   .accord_card {
     border: none !important;
     background-color: transparent;
-    padding: 20px 0;
+
   }
 
   .accord_card_body {
     color: $font_color_gray;
-    text-align: center;
+    text-align: left;
+    font-family: "Poppins";
+    font-style: normal;
+    border-bottom: 1px solid;
+
+    ul {
+      li {
+        margin-block: 1rem;
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+    }
   }
 
   &:lang(ar) {
@@ -534,6 +557,8 @@
 
   .header__modal_body {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 
     .header_mobilemenu {
       position: absolute;
