@@ -40,7 +40,7 @@ import Twitter from "../public/Svg/contactus/twitter.svg";
 
 const english = {
   header: {
-    langbtn: "مرحبا",
+    langbtn: "عربي",
     links: [
       { text: "FIND YOUR DREAM HOME", link: "/floorplan" },
       { text: "ABOUT US", link: "/about" },
@@ -464,7 +464,7 @@ const english = {
   },
   villaplansection: {
     title1: "Redefining living with our",
-    title2: "bedroom villa plans",
+    title2: "Our Villas",
     btntext: "see details",
     proptext: "property features",
     villas: [
@@ -1307,6 +1307,61 @@ const english = {
         "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
       location: "Al-Bahri Road, Musqat, Oman",
     },
+  },
+  footer: {
+    cardlinksdata: [
+      {
+        title: "About",
+        links: [
+          {
+            title: "what we do",
+          },
+          // {
+          //   title: "Careers",
+          // },
+          {
+            title: "Press and News",
+          },
+          // {
+          //   title: "Life at a Glance",
+          // },
+          {
+            title: "Find Your Dream Home",
+          },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          {
+            title: "Reach out to us",
+          },
+          {
+            title: "Become a Broker",
+          },
+          // {
+          //   title: "Language Support",
+          // },
+          {
+            title: "Help and Support",
+          },
+        ],
+      },
+      {
+        title: "More from TSC",
+        links: [
+          {
+            title: "About Us",
+          },
+          {
+            title: "TSC - Dubai",
+          },
+          {
+            title: "TSC - Sharjah",
+          },
+        ],
+      },
+    ],
   },
 };
 

@@ -39,7 +39,7 @@ import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 const arabic = {
   header: {
-    langbtn: "Hello",
+    langbtn: "English",
     links: [
       { text: "ابحث عن فيلا", link: "/floorplan" },
       { text: "من نحن", link: "/about" },
@@ -442,13 +442,13 @@ const arabic = {
   },
   locationsection: {
     title1: "Dont miss anything with",
-    title2: "OUR PROJECT LOCATION",
+    title2: "موقع المشروع",
     description:
       "Our project location is thoroughly surrounded by touristic locations with a world-class experience.",
   },
   villaplansection: {
     title1: "Redefining living with our",
-    title2: "bedroom villa plans",
+    title2: "مخططات الفلل",
     btntext: "see details",
     proptext: "property features",
     villas: [
@@ -1067,21 +1067,21 @@ const arabic = {
 
   partners: {
     title1: "We are proud of our",
-    title2: "PROJECT PARTNERS",
+    title2: "شركاء المشروع",
     diamond: <Diamond />,
     omran: <Omran />,
   },
   findyourvilla: {
     title1: "Caption",
-    title2: "Experience Sustainable Living",
+    title2: "عيش الحياة المستدامة",
     description:
       "The project is designed to improve The Sustainable City Yiti has gone to great lengths in increasing the sense of community feel with the facilities and services provided.",
     cards: [
       {
         id: 0,
         icon: <Car />,
-        title1: "Shared EV",
-        title2: "Network",
+        title1: "شبكة سيارات",
+        title2: "كهرباء مشتركة",
         description:
           "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars..",
       },
@@ -1254,6 +1254,61 @@ const arabic = {
         "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
       location: "Al-Bahri Road, Musqat, Oman",
     },
+  },
+  footer: {
+    cardlinksdata: [
+      {
+        title: "عنا",
+        links: [
+          {
+            title: "ماذا نفعل",
+          },
+          // {
+          //   title: "",
+          // },
+          {
+            title: "الصحافة",
+          },
+          // {
+          //   title: "المجتمع",
+          // },
+          {
+            title: "ابحث عن فيلا",
+          },
+        ],
+      },
+      {
+        title: "مساعدة",
+        links: [
+          {
+            title: "إتصل بنا",
+          },
+          {
+            title: "كن وسيطاً عقارياً",
+          },
+          // {
+          //   title: "Language Support",
+          // },
+          {
+            title: "بلغ عن مشكلة",
+          },
+        ],
+      },
+      {
+        title: "المزيد ",
+        links: [
+          // {
+          //   title: "About Us",
+          // },
+          {
+            title: "المدينة المستدامة - دبي",
+          },
+          {
+            title: "المدينة المستدامة - الشارقة",
+          },
+        ],
+      },
+    ],
   },
 };
 
