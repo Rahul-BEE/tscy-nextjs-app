@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @import "./variable.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -9,6 +10,12 @@ body {
   color: $primary__color;
   scroll-behavior: smooth;
 
+<<<<<<< HEAD
+  &:lang(ar) {
+    font-family: "Tajawal", sans-serif !important;
+  }
+=======
+>>>>>>> 42320220c77cd8ece4f706979daae2550d2656e2
 }
 
 // Scrollbar design and settings

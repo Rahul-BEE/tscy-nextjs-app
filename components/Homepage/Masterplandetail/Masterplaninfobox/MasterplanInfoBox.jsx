@@ -71,7 +71,8 @@ const MasterplanInfoBox = ({
                     style={{
                       padding: 0,
                       margin: 0,
-                    }}>
+                    }}
+                  >
                     {lan.commontext.previousto} {data[index - 1].name}
                   </p>
                 </>
@@ -84,7 +85,8 @@ const MasterplanInfoBox = ({
                     style={{
                       padding: 0,
                       margin: 0,
-                    }}>
+                    }}
+                  >
                     {lan.commontext.nextto} {data[index + 1].name}
                   </p>
                   <GoChevronRight />
@@ -105,7 +107,8 @@ const MasterplanInfoBox = ({
               <h4
                 style={{
                   marginBottom: "0.5rem",
-                }}>
+                }}
+              >
                 {lan.commontext.description}
               </h4>
               <p>{data[index].description}</p>
@@ -131,7 +134,8 @@ const MasterplanInfoBox = ({
                     }}
                     style={{
                       backgroundColor: "#058DA6",
-                    }}>
+                    }}
+                  >
                     {lan.commontext.seevillas}
                   </motion.button>
                 </Link>
@@ -141,8 +145,9 @@ const MasterplanInfoBox = ({
                 <h4
                   style={{
                     marginBottom: "0.5rem",
-                  }}>
-                  {lan.commontext.contact} {lan.commontext.details}
+                  }}
+                >
+                  {lan.commontext.details}
                 </h4>
                 <div className={styles.itemdetailsbtmdiv}>
                   {Object.entries(data[index].contact).map((value, index) => (
@@ -160,7 +165,8 @@ const MasterplanInfoBox = ({
             <motion.div
               className={styles.infoboxsliderinner}
               animate={scrollAnimation}
-              data-align={data[index].slideimg.length > 3 ? "start" : "center"}>
+              data-align={data[index].slideimg.length > 3 ? "start" : "center"}
+            >
               {data[index].slideimg.map((item, index) => (
                 <div className={styles.infoslide} key={index}>
                   <Image
@@ -187,7 +193,8 @@ const MasterplanInfoBox = ({
             className={styles.slidenav}
             style={{
               display: data[index].slideimg.length > 3 ? "" : "none",
-            }}>
+            }}
+          >
             <GoChevronLeft
               onClick={() => carouselHandler({ dir: -1, index })}
             />
