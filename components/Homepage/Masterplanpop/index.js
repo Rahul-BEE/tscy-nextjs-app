@@ -50,7 +50,8 @@ const MasterplanPopup = ({
                 : item > 4 && item <= 8
                 ? "rt"
                 : "br"
-            }>
+            }
+          >
             <div className={styles.popupheading}>
               <Image src={data.icon} width="60" height="65" alt={data.name} />
               <div
@@ -61,7 +62,8 @@ const MasterplanPopup = ({
                   gap: "0.5rem",
                   flexDirection: "column",
                   height: 65,
-                }}>
+                }}
+              >
                 <h3>{data.name}</h3>
                 <h5>{lan.commontext.description}</h5>
               </div>
@@ -94,7 +96,8 @@ const MasterplanPopup = ({
             )}
             <button
               className={styles.popupcardbtn}
-              onClick={() => setShowDetail(true)}>
+              onClick={() => setShowDetail(true)}
+            >
               <HiOutlineArrowSmRight />
             </button>
           </motion.div>
@@ -111,7 +114,8 @@ const MasterplanPopup = ({
             fill="none"
             id="popupmarker"
             xmlns="http://www.w3.org/2000/svg"
-            onClick={() => getPath({ id: item + 1 })}>
+            onClick={() => getPath({ id: item + 1 })}
+          >
             <motion.path
               style={{
                 scale: 1.02,

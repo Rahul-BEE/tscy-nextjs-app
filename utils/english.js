@@ -111,7 +111,7 @@ const english = {
         icon: "/Images/masterplan/plaza.png",
 
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "One of the region’s largest centres offering a comprehensive and integrated approach towards autism spectrum disorders (ASD) and other related disorders. The center’s holistic approach is designed to empower both affected individuals and their families to navigate daily life.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -133,10 +133,10 @@ const english = {
       },
       {
         id: 2,
-        name: "equistrian center",
+        name: "Equestrian center",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The equestrian center features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -158,7 +158,7 @@ const english = {
         name: "see lab",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -179,8 +179,7 @@ const english = {
         id: 4,
         name: "Sustainable mosque",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -202,7 +201,7 @@ const english = {
         name: "Green spine",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The green spine runs along the majority of the development and is planted with trees and shrubs that thrive in Oman’s environment. Being a productive landscape, residents can farm the community allotments and greenhouses are used to grow herbs and leafy green vegetables.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -221,10 +220,9 @@ const english = {
       },
       {
         id: 6,
-        name: "Branded Residencies",
+        name: "Branded Residence",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -246,7 +244,7 @@ const english = {
         name: "Wellness center",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "A wellness center providing high quality holistic medical services.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -269,7 +267,7 @@ const english = {
 
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "As part of an all-encompassing approach to sustainable development, the city facilitates an active lifestyle through the integration of gyms, a sports complex, a 7.4km running and cycling track, outdoor fitness stations, tennis courts, basketball courts, a skate park, 11 playgrounds, swimming pools, an equestrian club and riding track, over 3km of hiking trails and access to non-motorised water-sports on the beach.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -291,7 +289,7 @@ const english = {
         id: 9,
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The four-star Hotel is characterized by a neighbour-hood spirit and friendly atmosphere and echoes the community’s sustainability ethos.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -313,8 +311,7 @@ const english = {
         villadetails: true,
         name: "West District",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -346,7 +343,7 @@ const english = {
         name: "school& nursery",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -368,7 +365,7 @@ const english = {
         name: "5 star resort",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "This five-star resort has a range of restaurants, leisure facilities, lounges and beach front access. The resort also manages 132 luxury branded apartments.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -391,8 +388,7 @@ const english = {
         villadetails: true,
         name: "East District",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -420,7 +416,7 @@ const english = {
         name: "Plaza",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "A vibrant community plaza, with commercial facilities including shops, restaurants, cafes, offices, and apartments.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -441,8 +437,7 @@ const english = {
         id: 15,
         name: "Festival Park",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -990,7 +985,7 @@ const english = {
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "A 7.4 km jogging track runs along the entire stretch of the green spine and the waterfront promenade.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -1004,11 +999,11 @@ const english = {
     },
     {
       id: 17,
-      name: "Equistrian",
+      name: "Equestrian",
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "=1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -1026,7 +1021,7 @@ const english = {
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "The dedicated cycling track encourages people to go car-free by providing non-vehicular Sikkas within the sustainable district.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -1044,7 +1039,7 @@ const english = {
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "Car free areas to create safe zones for kids and promote walkability.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
