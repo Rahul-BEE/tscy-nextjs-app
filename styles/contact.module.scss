@@ -229,7 +229,8 @@
                                 display: none;
                             }
 
-                            input {
+                            input,
+                            select {
                                 margin: 0;
                                 padding: 0 1rem;
                                 color: #777777;
@@ -242,6 +243,8 @@
 
                         input,
                         input:focus,
+                        select,
+                        select:focus,
                         .picontainerclass input,
                         .picontainerclass input:focus {
                             margin-top: 0;
@@ -251,8 +254,21 @@
                             border-radius: 0;
                             outline: none;
                             box-shadow: none;
-                            // padding: 0.3rem 0;
+                        }
 
+                        select {
+                            background: transparent;
+                            font-size: 1rem;
+                            font-family: "Poppins";
+                            font-weight: 400;
+                            color: #777777;
+                        }
+
+                        .optionvalue {
+                            font-size: 1rem;
+                            font-family: "Poppins";
+                            font-weight: 400;
+                            background: white;
                         }
 
                         .formItem {
@@ -261,6 +277,7 @@
                             justify-content: flex-start;
                             flex-direction: column;
                             margin-block: 1rem;
+
                         }
 
                         .buttonClass {

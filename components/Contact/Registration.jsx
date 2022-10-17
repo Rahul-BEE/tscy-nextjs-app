@@ -4,8 +4,11 @@ import styles from "../../styles/contact.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 const Registration = () => {
   const lan = useLanguage();
+  const router = useRouter();
+  const broker = router.query.broker;
   return (
     <div className={styles.registration}>
       <div className="headingRow">
@@ -16,7 +19,9 @@ const Registration = () => {
             margin: 0,
             padding: 0,
           }}>
-          {lan.contact.register.title}
+          {broker === "true"
+            ? lan.contact.register.title
+            : lan.commontext.registerinterest}
         </p>
       </div>
       <div className={styles.infoContainer}>
@@ -63,7 +68,7 @@ const Registration = () => {
             })}
           </div>
         </div>
-        <ContactForm />
+        <ContactForm page={broker} />
       </div>
     </div>
   );
