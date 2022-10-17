@@ -125,7 +125,7 @@ function VillaplansMobile() {
           href={`/floorplan/${lan.villaplansection.villas[activeVilla].slug}`}
           passHref>
           <div>
-            <Button>{lan.commontext.seedetails}</Button>
+            <Button>{lan.commontext.registerinterest}</Button>
           </div>
         </Link>
       </div>

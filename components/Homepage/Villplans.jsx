@@ -19,6 +19,12 @@ const Villplans = () => {
   const [villaIndex, setIndex] = useState(0);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
 
+  const [showForm, setShowForm] = useState(false);
+  const [dataReceived, setDataReceived] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const handleUserInput = () => {};
   useEffect(() => {
     setVilla(lan.villaplansection.villas[villaIndex]);
   }, [lan]);
@@ -90,31 +96,100 @@ const Villplans = () => {
           />
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>
-            <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
-            <p>
-              <Bedroom /> <span>{lan.commontext.bedroom}</span>
-            </p>
-            <p>
-              <Bathroom /> <span>{lan.commontext.bathroom}</span>
-            </p>
-            <p>
-              <Maidroom /> <span>{lan.commontext.maidroom}</span>
-            </p>
-            <p>
-              <Garden /> <span>{lan.commontext.privategarden}</span>
-            </p>
-            <p>
-              <Parking /> <span>{lan.commontext.parking}</span>
-            </p>
+            {dataReceived ? (
+              <div>Data receiver</div>
+            ) : !showForm ? (
+              <>
+                <p className={styles.heading}>
+                  {lan.commontext.propsubheading_1}
+                </p>
+                <p>
+                  <Bedroom /> <span>{lan.commontext.bedroom}</span>
+                </p>
+                <p>
+                  <Bathroom /> <span>{lan.commontext.bathroom}</span>
+                </p>
+                <p>
+                  <Maidroom /> <span>{lan.commontext.maidroom}</span>
+                </p>
+                <p>
+                  <Garden /> <span>{lan.commontext.privategarden}</span>
+                </p>
+                <p>
+                  <Parking /> <span>{lan.commontext.parking}</span>
+                </p>
 
-            <div>
-              <motion.button
-                whileHover={{
-                  scale: 1.02,
-                }}>
-                {lan.commontext.registerinterest}
-              </motion.button>
-            </div>
+                <div>
+                  <motion.button
+                    onClick={() => setShowForm(true)}
+                    whileHover={{
+                      scale: 1.02,
+                    }}>
+                    {lan.commontext.registerinterest}
+                  </motion.button>
+                </div>
+              </>
+            ) : (
+              <div className={styles.villaplanuserform}>
+                <div className={styles.userformcontainer}>
+                  <p className={styles.heading}>Add your details</p>
+                  <form className={styles.userform}>
+                    <div className={styles.seperator}></div>
+                    <div className={styles.formItem}>
+                      <label htmlFor="name">
+                        {lan.contact.register.formdata.name.title}
+                      </label>
+                      <input
+                        type={"text"}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder={
+                          lan.contact.register.formdata.name.placeholder
+                        }
+                      />
+                    </div>
+                    <div className={styles.seperator}></div>
+                    <div className={styles.formItem}>
+                      <label htmlFor="email">
+                        {lan.contact.register.formdata.email.title}
+                      </label>
+                      <input
+                        type={"email"}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder={
+                          lan.contact.register.formdata.email.placeholder
+                        }
+                      />
+                    </div>
+                    <div className={styles.seperator}></div>
+                    <div className={styles.formItem}>
+                      <label htmlFor="name">
+                        {lan.contact.register.formdata.phone.title}
+                      </label>
+                      <input
+                        type={"text"}
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder={
+                          lan.contact.register.formdata.phone.placeholder
+                        }
+                      />
+                    </div>
+                    <div className={styles.seperator}></div>
+                  </form>
+                </div>
+                <div>
+                  <motion.button
+                    onClick={() => handleUserInput(true)}
+                    whileHover={{
+                      scale: 1.02,
+                    }}>
+                    {lan.commontext.registerinterest}
+                  </motion.button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
