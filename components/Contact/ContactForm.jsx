@@ -4,13 +4,14 @@ import useLanguage from "../../utils/useLanguage";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { motion } from "framer-motion";
-const ContactForm = () => {
+const ContactForm = ({ page }) => {
   const lan = useLanguage();
   const [select, setSelect] = useState(0);
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
+  const [villa, setVilla] = useState(0);
   const [companyContact, setCompanyContact] = useState("");
   const [license, setLicense] = useState("");
   const [error, setError] = useState(false);
@@ -35,20 +36,22 @@ const ContactForm = () => {
     <div className={styles.contactform}>
       {data && (
         <>
-          <div className={styles.typeSelector}>
-            <div className={styles.innertypeselector}>
-              <p
-                className={select === 0 ? styles.active : ""}
-                onClick={() => setSelect(0)}>
-                {lan.contact.register.individual}
-              </p>
-              <p
-                className={select === 1 ? styles.active : ""}
-                onClick={() => setSelect(1)}>
-                {lan.contact.register.corporate}
-              </p>
+          {page === "true" && (
+            <div className={styles.typeSelector}>
+              <div className={styles.innertypeselector}>
+                <p
+                  className={select === 0 ? styles.active : ""}
+                  onClick={() => setSelect(0)}>
+                  {lan.contact.register.individual}
+                </p>
+                <p
+                  className={select === 1 ? styles.active : ""}
+                  onClick={() => setSelect(1)}>
+                  {lan.contact.register.corporate}
+                </p>
+              </div>
             </div>
-          </div>
+          )}
           <div className={styles.formContainer}>
             <form onSubmit={submitHandler} className={styles.forms}>
               {select === 1 && (
@@ -142,15 +145,35 @@ const ContactForm = () => {
                   <small
                     className={styles.phoneErrorDiv}
                     style={{
-                      opacity: error ? 1 : 0,
+                      display: error ? "block" : "none",
                     }}>
                     {errorMessage}
                   </small>
                 </div>
               </div>
+              {page !== "true" && (
+                <div className={styles.formItem}>
+                  <label htmlFor="villa" style={{ marginBottom: "0.5rem" }}>
+                    {data.villas.title}
+                  </label>
+                  <select
+                    className={styles.selectcontent}
+                    value={villa}
+                    onChange={(e) => setVilla(e.target.value)}>
+                    {data.villas.villa.map((item, index) => (
+                      <option
+                        value={item}
+                        key={index}
+                        className={styles.optionvalue}>
+                        {item}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
               {select === 1 && (
                 <div className={styles.formItem}>
-                  <label htmlFor="license">{data.company.title}</label>
+                  <label htmlFor="license">{data.license.title}</label>
                   <input
                     style={{
                       padding: "0.3rem 0",

@@ -10,6 +10,7 @@ import {
 
 import React from "react";
 import Accord from "./Accord";
+import Link from "next/link";
 
 function Footer() {
   const cardlinksdata = [
@@ -92,7 +93,12 @@ function Footer() {
                   <h3>{e.title}</h3>
                   <ul>
                     {e.links.map((value, index) => (
-                      <li key={`${index}_footer_list_links`}>{value.title}</li>
+                      <Link
+                        href={"/contact?broker=true"}
+                        passHref
+                        key={`${index}_footer_list_links`}>
+                        <li>{value.title}</li>
+                      </Link>
                     ))}
                   </ul>
                 </div>

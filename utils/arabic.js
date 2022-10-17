@@ -1230,6 +1230,14 @@ const arabic = {
           title: "Full Name",
           placeholder: "John Doe",
         },
+        villas: {
+          title: "Villa you are interested in ",
+          villa: [
+            "4 Bedroom Garden Villa",
+            "4 Bedroom Courtyard Villa",
+            "3 Bedroom Courtyard Villa",
+          ],
+        },
         email: {
           title: "Mail",
           placeholder: "example@gmail.com",
