@@ -47,6 +47,7 @@ const Villplans = () => {
                 }`}
                 md={3}
                 lg={3}
+                sm={3}
                 key={`${index}_villas`}
                 onClick={() => changeVilla(index)}>
                 <motion.h5
@@ -73,18 +74,21 @@ const Villplans = () => {
           <div className={styles.download_content}>
             {lan.commontext.download} {lan.commontext.floorplan}
           </div>
-          <div className={styles.download_content}>
-            {lan.commontext.registerinterest}
-          </div>
+          <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+            <div className={styles.download_content}>
+              {lan.commontext.seedetails}
+            </div>
+          </Link>
         </div>
 
         <div className={styles.villaplanImageContainer}>
           <Image
             src={currentvilla.mainImg}
-            width={900}
-            height={500}
+            width={1531}
+            height={439}
             layout="responsive"
           />
+          <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>
             <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
             <p>
@@ -102,16 +106,15 @@ const Villplans = () => {
             <p>
               <Parking /> <span>{lan.commontext.parking}</span>
             </p>
-            <Link href={`/floorplan/${currentvilla.slug}`} passHref>
-              <div>
-                <motion.button
-                  whileHover={{
-                    scale: 1.02,
-                  }}>
-                  {lan.commontext.seedetails}
-                </motion.button>
-              </div>
-            </Link>
+
+            <div>
+              <motion.button
+                whileHover={{
+                  scale: 1.02,
+                }}>
+                {lan.commontext.registerinterest}
+              </motion.button>
+            </div>
           </div>
         </div>
       </div>

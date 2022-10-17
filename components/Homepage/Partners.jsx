@@ -33,12 +33,15 @@ const Marquee = ({ dir }) => {
       <div className="marquee">
         <ul className="marquee-content" data-dir={dir}>
           <li>
-            <a href="https://diamond-developers.ae/" target={"_blank"}>
+            <a
+              href="https://diamond-developers.ae/"
+              target={"_blank"}
+              rel="noreferrer">
               <Diamond />
             </a>
           </li>
           <li>
-            <a href="https://www.omran.om/" target={"_blank"}>
+            <a href="https://www.omran.om/" target={"_blank"} rel="noreferrer">
               <Omran />
             </a>
           </li>
@@ -47,12 +50,15 @@ const Marquee = ({ dir }) => {
       <div className="marquee2">
         <ul className="marquee-content2" data-dir={dir}>
           <li>
-            <a href="https://diamond-developers.ae/" target={"_blank"}>
+            <a
+              href="https://diamond-developers.ae/"
+              target={"_blank"}
+              rel="noreferrer">
               <Diamond />
             </a>
           </li>
           <li>
-            <a href="https://www.omran.om/" target={"_blank"}>
+            <a href="https://www.omran.om/" target={"_blank"} rel="noreferrer">
               <Omran />
             </a>
           </li>
