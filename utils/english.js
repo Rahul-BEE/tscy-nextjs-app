@@ -1299,7 +1299,7 @@ const english = {
         },
         phone: {
           title: "Phone",
-          placeholder: "",
+          placeholder: "+968 000 000000",
         },
       },
     },
