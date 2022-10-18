@@ -136,7 +136,11 @@
       white-space: nowrap;
       font-weight: 400;
       letter-spacing: 1px;
+      &:lang(ar) {
+          font-weight: 700;
+        }
     }
+        
 
     @media (max-width: 1200px) {
       gap: 2rem;

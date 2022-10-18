@@ -59,11 +59,11 @@ const Floorplan = () => {
         </AnimatePresence> */}
       </div>
 
-      <Filters
+      {/* <Filters
         filterId={filterId}
         setFilterId={setFilterId}
         // setText={setText}
-      />
+      /> */}
       <VillaCards filterId={filterId} />
       <div className={styles.downloadcomparison}>
         <p>

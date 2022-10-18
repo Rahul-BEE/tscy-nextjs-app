@@ -40,7 +40,7 @@ import Twitter from "../public/Svg/contactus/twitter.svg";
 
 const english = {
   header: {
-    langbtn: "مرحبا",
+    langbtn: "عربي",
     links: [
       { text: "FIND YOUR DREAM HOME", link: "/floorplan" },
       { text: "ABOUT US", link: "/about" },
@@ -464,7 +464,7 @@ const english = {
   },
   villaplansection: {
     title1: "Redefining living with our",
-    title2: "bedroom villa plans",
+    title2: "Our Villas",
     btntext: "see details",
     proptext: "property features",
     villas: [
@@ -1307,6 +1307,72 @@ const english = {
         "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
       location: "Al-Bahri Road, Musqat, Oman",
     },
+  },
+  footer: {
+    cardlinksdata: [
+      {
+        title: "About",
+        links: [
+          {
+            title: "What We Do",
+            link: "/about",
+          },
+          // {
+          //   title: "Careers",
+          //   link: "/",
+          // },
+          {
+            title: "Press and News",
+            link: "/news",
+          },
+          // {
+          //   title: "Life at a Glance",
+          // },
+          {
+            title: "Find Your Dream Home",
+            link: "/floorplan",
+          },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          {
+            title: "Reach out to us",
+            link: "/contact",
+          },
+          {
+            title: "Become a Broker",
+            link: "/contact?broker=true",
+          },
+          // {
+          //   title: "Language Support",
+          //   link: "",
+          // },
+          // {
+          //   title: "Help and Support",
+          //   link: "",
+          // },
+        ],
+      },
+      {
+        title: "More from TSC",
+        links: [
+          {
+            title: "About Us",
+            link: "/about",
+          },
+          {
+            title: "TSC - Dubai",
+            link: "www.thesustainablecity.ae",
+          },
+          {
+            title: "TSC - Sharjah",
+            link: "www.sharjahsustainablecity.ae",
+          },
+        ],
+      },
+    ],
   },
 };
 
