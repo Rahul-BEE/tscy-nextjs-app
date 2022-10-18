@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BiShare } from "react-icons/bi";
 import Polygon from "../../public/Svg/Polygonorg.svg";
 import useLanguage from "../../utils/useLanguage";
+import Newssection from "../../components/Homepage/Newssection";
 const News = () => {
   const lan = useLanguage();
   return (
@@ -134,6 +135,7 @@ const News = () => {
           </div>
    </div>
    </div>
+   <Newssection/>
     </div>
 
   )

@@ -6,7 +6,7 @@ import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
-
+import Link from "next/link";
 function Newssection() {
   const lan = useLanguage();
   const controls = useAnimation();
@@ -14,35 +14,35 @@ function Newssection() {
   const data = [
     {
       slug: lan.newssection.post[0].slug,
-      title: lan.newssection.post[0].heading,
+      heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
       image:lan.newssection.post[0].image,
       date:lan.newssection.post[0].date,
     },
     {
       slug: lan.newssection.post[1].slug,
-      title: lan.newssection.post[1].heading,
+      heading: lan.newssection.post[1].heading,
       discription: lan.newssection.post[1].discription,
       image:lan.newssection.post[1].image,
       date:lan.newssection.post[1].date,
     },
     {
       slug: lan.newssection.post[2].slug,
-      title: lan.newssection.post[2].heading,
+      heading: lan.newssection.post[2].heading,
       discription: lan.newssection.post[2].discription,
       image:lan.newssection.post[2].image,
       date:lan.newssection.post[2].date,
     },
     {
       slug: lan.newssection.post[0].slug,
-      title: lan.newssection.post[0].heading,
+      heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
       image:lan.newssection.post[0].image,
       date:lan.newssection.post[0].date,
     },
     {
       slug: lan.newssection.post[1].slug,
-      title: lan.newssection.post[1].heading,
+      heading: lan.newssection.post[1].heading,
       discription: lan.newssection.post[1].discription,
       image:lan.newssection.post[1].image,
       date:lan.newssection.post[1].date,
@@ -155,20 +155,32 @@ function Newssection() {
           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
+              <Link href={`news/${item.slug}`} passHref>
+              <a>
               <div className={styles.hero_box} key={index}>
                 <div>
                   <div className={styles.news_heading}>
-                    <h3>{item.title}</h3>
+                    <h3>{item.heading}</h3>
                   </div>
+                  <div className={styles.news_date}>{item.date}</div>
                   <motion.div
-                    className={styles.test_box}
+                    
                     animate={controls}
                     initial="hidden"
                     variants={variants}
-                  ></motion.div>
+                  >
+                  <Image
+                className={styles.test_box}
+                src={item.image}
+                width={476}
+                height={200}
+                layout="responsive"
+            />
+                  </motion.div>
                   <p>{item.discription}</p>
                 </div>
-              </div>
+              </div></a>
+                </Link>
             ))}
 
           {/* small boxes */}
@@ -192,10 +204,21 @@ function Newssection() {
             {data
               .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
               .map((item, index) => (
+                <Link href={`news/${item.slug}`} passHref>
+              <a>
                 <div className={styles.secondry_box} key={index}>
-                  <div className={styles.test_box}></div>
-                  <h3>{item.title}</h3>
+                   <Image
+                className={styles.test_box}
+                src={item.image}
+                width={476}
+                height={200}
+                layout="responsive"
+            />
+                  <h3>{item.heading}</h3>
+                  <div className={styles.news_date}>{item.date}</div>
                 </div>
+                </a>
+                </Link>
               ))}
           </div>
         </div>
