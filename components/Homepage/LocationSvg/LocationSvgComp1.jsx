@@ -10,16 +10,14 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
       style={{
         position: "absolute",
         inset: 0,
-      }}
-    >
+      }}>
       {svgchange === true ? (
         <>
           <svg
             preserveAspectRatio="none"
             viewBox="0 0 390 306"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <rect
               x="-1"
               y="1028.6"
@@ -83,8 +81,7 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
                 y1="1224.27"
                 x2="-0.740689"
                 y2="1224.32"
-                gradientUnits="userSpaceOnUse"
-              >
+                gradientUnits="userSpaceOnUse">
                 <stop stopColor="white" stopOpacity="0" />
                 <stop offset="0.752354" stopColor="white" />
               </linearGradient>
@@ -94,8 +91,7 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
                 cy="0"
                 r="1"
                 gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(255.635 112) rotate(90) scale(40 39.9307)"
-              >
+                gradientTransform="translate(255.635 112) rotate(90) scale(40 39.9307)">
                 <stop stopColor="#E48C36" />
                 <stop
                   offset="0.591667"
@@ -113,6 +109,7 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
           //   width={1028}
           //   height={390}
           //   layout="responsive"
+          alt="Sustainable city Yiti Location Map "
           layout="fill"
         />
       )}

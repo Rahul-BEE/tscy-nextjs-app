@@ -4,17 +4,36 @@ import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
 import MobileMenu from "./MobilemenuModal";
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { useCallback } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useScrollDirection } from "react-use-scroll-direction";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [language, setLanguage] = useState("en");
   const [loading, setloading] = useState(true);
   const [domYOffset, setDomYOffset] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const lan = useLanguage(loading);
   const location = useRouter();
+  const animation = useAnimation();
+  const { scrollDirection } = useScrollDirection();
 
-  // useLayoutEffect = useEffect;
+  useEffect(() => {
+    const someFunc = async () => {
+      if (scrollDirection === "DOWN" && !isMobile) {
+        await animation.start({
+          y: -300,
+        });
+      } else if (scrollDirection === "UP" && !isMobile) {
+        await animation.start({
+          y: 0,
+        });
+      }
+    };
+    someFunc();
+  }, [scrollDirection]);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setLanguage(
@@ -33,7 +52,6 @@ const Header = () => {
     }
     localStorage.setItem("language", JSON.stringify(lan));
     setLanguage(lan);
-    console.log(location);
     location.push(location.asPath, location.asPath, { locale: lan });
     // window.location.reload(true);
 
@@ -41,18 +59,32 @@ const Header = () => {
   };
   useEffect(() => {
     function updatePosition() {
+      if (window.innerWidth < 700) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
       if (window.pageYOffset > 600 && location.pathname === "/") {
         setDomYOffset(true);
       } else {
         setDomYOffset(false);
       }
     }
-    window.addEventListener("scroll", updatePosition);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", updatePosition);
+      window.addEventListener("resize", updatePosition);
+    }
     updatePosition();
-    return () => window.removeEventListener("scroll", updatePosition);
+    return () => {
+      window.removeEventListener("scroll", updatePosition);
+      window.removeEventListener("resize", updatePosition);
+    };
   }, [location.pathname]);
+
   return (
-    <header className={`${styles.app__header} navbar navbar-expand-lg`}>
+    <motion.header
+      className={`${styles.app__header} navbar navbar-expand-lg`}
+      animate={animation}>
       <div
         className={` ${styles.headermain}`}
         data-scrolled={domYOffset || location.pathname !== "/" ? "true" : ""}>
@@ -108,7 +140,7 @@ const Header = () => {
           } `}>
           <Link href={"/contact"} passHref>
             <button className={`btn ${styles.contactbtn}`}>
-              {lan.header.contact}
+              {lan.commontext.registerinterest}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>
           </Link>
@@ -149,7 +181,7 @@ const Header = () => {
           currentLang={language}
         />
       )}
-    </header>
+    </motion.header>
   );
 };
 

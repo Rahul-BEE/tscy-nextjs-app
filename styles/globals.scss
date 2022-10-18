@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @import "./variable.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -8,6 +9,10 @@ body {
   letter-spacing: 1px;
   color: $primary__color;
   scroll-behavior: smooth;
+
+  &:lang(ar) {
+    font-family: "Tajawal", sans-serif !important;
+  }
 }
 
 // Scrollbar design and settings
@@ -107,6 +112,7 @@ a {
 .pagination-bullet {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .sectionsubHeading {
@@ -119,14 +125,16 @@ a {
 }
 
 .sectionmainHeading {
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight: 600;
   font-size: 1.9375rem;
-  background: $sectionmainheadingbackground;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+  line-height: 58px;
   text-align: center;
+  background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-transform: uppercase;
 
   @media (max-width:1224px) {
@@ -211,48 +219,135 @@ a {
   }
 }
 
-.animatedBackground {
-  width: 100%;
-  height: 100%;
+
+:root {
+  --marquee-width: 100vw;
+  --marquee-height: 20vh;
+  /* --marquee-elements: 12; */
+  /* defined with JavaScript */
+  --marquee-elements-displayed: 4;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 7s);
+  --marquee-animation-duration2: calc(var(--marquee-elements) * 14s);
+}
+
+.marquee,
+.marquee2 {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee:before,
+.marquee:after,
+.marquee2:before,
+.marquee2:after {
   position: absolute;
   top: 0;
-  left: 0;
-  background: url("../public/Images/partnerback.png");
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-size: auto 100%;
-  animation: animatedBackground 500s linear infinite;
-}
-
-.animatedBackground2 {
-  width: 100%;
+  width: 10rem;
   height: 100%;
-  position: absolute;
-  top: 0;
+  content: "";
+  z-index: 1;
+}
+
+.marquee:before,
+.marquee2:before {
   left: 0;
-  background: url("../public/Images/partnerback2.png");
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-size: auto 100%;
-  animation: animatedBackground2 500s linear infinite;
+  background: linear-gradient(to right, rgb(248, 248, 248) 0%, transparent 100%);
 }
 
-@keyframes animatedBackground {
-  from {
-    background-position: 0 0;
+.marquee:after,
+.marquee2:after {
+  right: 0;
+  background: linear-gradient(to left, rgb(252, 249, 249) 0%, transparent 100%);
+}
+
+.marquee-content,
+.marquee-content2 {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  opacity: 0.75;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+
+.marquee-content2 {
+  opacity: 0.35;
+  animation: antiscrolling var(--marquee-animation-duration2) linear infinite;
+}
+
+.marquee-content:hover,
+.marquee-content2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrolling {
+  100% {
+    transform: translateX(0%);
   }
 
-  to {
-    background-position: -10000px 0;
+  0% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
   }
 }
 
-@keyframes animatedBackground2 {
-  from {
-    background-position: 0 0;
+@keyframes antiscrolling {
+  0% {
+    transform: translateX(0%);
   }
 
-  to {
-    background-position: 10000px 0;
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+.marquee-content li,
+.marquee-content2 li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4);
+  /* 5rem; */
+  white-space: nowrap;
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+
+  a {
+    margin-inline: 2rem;
+  }
+}
+
+.marquee-content li img,
+.marquee-content2 li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 2;
+  }
+
+  .marquee:before,
+  .marquee:after,
+  .marquee2:before,
+  .marquee2:after {
+    width: 5rem;
   }
 }

@@ -1782,6 +1782,7 @@ const Masterplanmarker = ({
           h={h}
           track={track}
           setShowDetail={setShowDetail}
+          getPath={getPath}
         />
       )}
     </div>

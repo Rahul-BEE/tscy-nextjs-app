@@ -26,15 +26,27 @@ import Laundryp from "../public/Svg/laundry.svg";
 import Parkingp from "../public/Svg/parking.svg";
 import Gardenp from "../public/Svg/garden.svg";
 
+import Diamond from "../public/Logos/diamond.svg";
+import Omran from "../public/Logos/omran.svg";
+
+import Email from "../public/Svg/contactus/email.svg";
+import Pin from "../public/Svg/contactus/pin.svg";
+import Tel from "../public/Svg/contactus/tel.svg";
+import Clock from "../public/Svg/contactus/clock.svg";
+import Facebook from "../public/Svg/contactus/fb.svg";
+import Linkedin from "../public/Svg/contactus/linkedin.svg";
+import Instagram from "../public/Svg/contactus/insta.svg";
+import Twitter from "../public/Svg/contactus/twitter.svg";
+
 const english = {
   header: {
-    langbtn: "مرحبا",
+    langbtn: "عربي",
     links: [
       { text: "FIND YOUR DREAM HOME", link: "/floorplan" },
       { text: "ABOUT US", link: "/about" },
       { text: "NEWS", link: "/news" },
     ],
-    contact: "CONTACT US",
+    contact: "REGISTER INTEREST",
     homepage: "Homepage",
   },
 
@@ -99,7 +111,7 @@ const english = {
         icon: "/Images/masterplan/plaza.png",
 
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "One of the region’s largest centres offering a comprehensive and integrated approach towards autism spectrum disorders (ASD) and other related disorders. The center’s holistic approach is designed to empower both affected individuals and their families to navigate daily life.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -121,10 +133,10 @@ const english = {
       },
       {
         id: 2,
-        name: "equistrian center",
+        name: "Equestrian center",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The equestrian center features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -146,7 +158,7 @@ const english = {
         name: "see lab",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -167,8 +179,7 @@ const english = {
         id: 4,
         name: "Sustainable mosque",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -190,7 +201,7 @@ const english = {
         name: "Green spine",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The green spine runs along the majority of the development and is planted with trees and shrubs that thrive in Oman’s environment. Being a productive landscape, residents can farm the community allotments and greenhouses are used to grow herbs and leafy green vegetables.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -209,10 +220,9 @@ const english = {
       },
       {
         id: 6,
-        name: "Branded Residencies",
+        name: "Branded Residence",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -234,7 +244,7 @@ const english = {
         name: "Wellness center",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "A wellness center providing high quality holistic medical services.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -257,7 +267,7 @@ const english = {
 
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "As part of an all-encompassing approach to sustainable development, the city facilitates an active lifestyle through the integration of gyms, a sports complex, a 7.4km running and cycling track, outdoor fitness stations, tennis courts, basketball courts, a skate park, 11 playgrounds, swimming pools, an equestrian club and riding track, over 3km of hiking trails and access to non-motorised water-sports on the beach.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -279,7 +289,7 @@ const english = {
         id: 9,
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The four-star Hotel is characterized by a neighbour-hood spirit and friendly atmosphere and echoes the community’s sustainability ethos.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -301,8 +311,7 @@ const english = {
         villadetails: true,
         name: "West District",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -334,7 +343,7 @@ const english = {
         name: "school& nursery",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -356,7 +365,7 @@ const english = {
         name: "5 star resort",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "This five-star resort has a range of restaurants, leisure facilities, lounges and beach front access. The resort also manages 132 luxury branded apartments.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -379,8 +388,7 @@ const english = {
         villadetails: true,
         name: "East District",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -408,7 +416,7 @@ const english = {
         name: "Plaza",
         icon: "/Images/masterplan/plaza.png",
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "A vibrant community plaza, with commercial facilities including shops, restaurants, cafes, offices, and apartments.",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -429,8 +437,7 @@ const english = {
         id: 15,
         name: "Festival Park",
         icon: "/Images/masterplan/plaza.png",
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "....",
         details: {
           area: "1250 sq.ft",
           capacity: 3000,
@@ -457,7 +464,7 @@ const english = {
   },
   villaplansection: {
     title1: "Redefining living with our",
-    title2: "bedroom villa plans",
+    title2: "Our Villas",
     btntext: "see details",
     proptext: "property features",
     villas: [
@@ -923,6 +930,8 @@ const english = {
     },
   ],
   commontext: {
+    sendmessage: "Send Message",
+    getdirection: "Get Directions",
     nearby: "Nearby",
     amenities: "Amenities",
     brochure: "Brochure",
@@ -967,6 +976,7 @@ const english = {
     groundfloor: "Ground Floor",
     parking: "Parking",
     press: "Press and News",
+    ourstory: "Our Story",
   },
   tracks: [
     {
@@ -975,7 +985,7 @@ const english = {
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "A 7.4 km jogging track runs along the entire stretch of the green spine and the waterfront promenade.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -989,11 +999,11 @@ const english = {
     },
     {
       id: 17,
-      name: "Equistrian",
+      name: "Equestrian",
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "=1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -1011,7 +1021,25 @@ const english = {
       icon: "/Images/masterplan/plaza.png",
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        "The dedicated cycling track encourages people to go car-free by providing non-vehicular Sikkas within the sustainable district.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
+      },
+    },
+    {
+      id: 19,
+      name: "E-Buggy",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      description:
+        "Car free areas to create safe zones for kids and promote walkability.",
       details: {
         area: "1250 sq.ft",
         capacity: 3000,
@@ -1027,43 +1055,31 @@ const english = {
   newssection: {
     post: [
       {
-        slug:"tourism-development-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"29th July, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img1.jpg",
-          type:"news",
-          heading:"Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
-          discription:["Diamond Developers, the mastermind behind The Sustainable City brand, the first fully operational sustainable community in the Middle East has entered into a development partnership agreement with the Oman Tourism Development Company (OMRAN Group), the executive arm of the Sultanate for tourism development. The agreement entails the development of first phase of the Yiti Tourism masterplan with an investment value of approximately AED 3.7 billion (approximately USD 1 billion). In conjunction with this partnership, a joint venture called Sustainable Development and Investment Company (SDIC) S.A.O.C has been established to carry out the execution of this phase."
-            ,"OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group."
-            ,"We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
-            ,"The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year."
-            ,"Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy."
-            ,"Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today."
-          ]
+        id: 1,
+        title:
+          "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
+        discription: `Diamond Developers, the mastermind behind The Sustainable City brand, the first fully operational sustainable community in the Middle East has entered into a development partnership agreement with the Oman Tourism Development Company (OMRAN Group), the executive arm of the Sultanate for tourism development. The agreement entails the development of first phase of the Yiti Tourism masterplan with an investment value of approximately AED 3.7 billion (approximately USD 1 billion). In conjunction with this partnership, a joint venture called Sustainable Development and Investment Company (SDIC) S.A.O.C has been established to carry out the execution of this phase.
+        <br>
+        <br>
+        “OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group.
+        <br>
+        <br>
+        “We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.
+        <br>
+        <br>
+        The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year.
+        <br>
+        <br>
+        Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy.”
+        <br>
+        <br>
+        Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today. `,
       },
       {
-        slug:"investment-value-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"22nd April, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img2.jpg",
-          type:"news",
-              heading:"Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",
-              discription:["Earning a commendable reputation for being the leading developers of sustainable communities in the UAE, Diamond Developers in partnership with the Oman Tourism Development Company (OMRAN Group), announced the launch of ‘The Sustainable City – Yiti’ in Muscat, today. With an investment value of nearly one billion US dollars, the city is the first project in Oman that meets the highest global green practices and adheres to the highest sustainability standards." 
-              ,"Spread over an area of 1 million square meters, ‘The Sustainable City – Yiti’ – will be developed within the phase 1 of the Yiti Integrated Tourism Development Masterplan - is the first project in Oman that meets the global green practices and is in adherence to the highest sustainability standards. This iconic destination is situated in the capital city of Muscat, overlooking the Sea of Oman and features a unique topography of majestic mountains that mingle with undisturbed valleys and pristine shores, which creates further competitive advantages to the destination."
-              ,"Engineer Faris Saeed, Chairman of Diamond Developers said, “The Sustainable City – Yiti is not only a benchmark for sustainable urban development, it is a working model for future cities. It is a thriving community made up of thousands of residents, visitors, students, researchers, and entrepreneurs” he added. “The project is expected to be one of the region’s most sustainable cities, and by adopting the latest solutions in energy production, vertical farming, humidity harvesting, and autonomous transportation, we aim to be net zero carbon by 2040, in line with Oman’s vision and national strategy. At Diamond Developers, we remain committed to empowering and supporting partners around the world to realise the cities of tomorrow, today to deliver a more sustainable future for all of us."
-              ,"Further commenting on the launch, Eng. Mohammed Salim Al Busaidi, Chairman of OMRAN Group, said, “Our partnership with Diamond Developers to launch ‘The Sustainable City – Yiti’ is a unique milestone in our journey as we continue to invest, develop, and maximise the limitless potential of Oman’s tourism sector. As it’s being developed withinone of the largest urban developments in the Middle East, Yiti will open avenues for numerous lucrative investment opportunities for both local and international investors in line with the directions of Oman Investment Authority. Mirroring the Sultanate’s goal of driving transformational change to attain a green, circular economy and emissions reduction, the city embraces the highest standards of sustainability and attests to our vision of creating an eco-conscious community that is harmoniously aligned with the distinct geography of the region."
-              ,"With sustainable innovation at the heart of the development, the project will feature 1657 residential units including 300 eco-friendly and energy-efficient villas. Designed for comfort, practicality, and style, the spacious 3 and 4 bedroom villas will also offer significant savings on utility bills."
-              ,"In line with the UN Sustainable Development Goals to reduce dependency on non-renewable sources of energy, the city is designed to produce 100 percent of its energy requirements from renewables which include solar panels and biogas. It will also recycle all its water and waste and use it for irrigation. Acknowledging the importance of creating a community that is self-sustaining, the city aims to grow its own food through productive farm areas and greenhouses. Encouraging community members to be a part of the process, private farming slots will also be allocated for residents to grow their own produce."
-              ,"With a holistic approach to sustainability, the city will play a significant role in reducing carbon emissions by adopting clean mobility solutions like autonomies shuttles and electric cars, and by deploying EV charging stations around the project. The residential areas, designed to be car-free, will not only provide a safe environment for families but also encourage residents to build strong social connections within the community."
-              ,"Dedicated to nurturing a new generation that understands the value of sustainability, the city will include a sustainable school that will teach important concepts of sustainability through the school curriculum. It will feature a ‘SEE lab’ which will showcase the latest in sustainability solutions like renewable energy technologies, indoor vertical farming, and humidity harvesting. With an innovative carbon natural building, the ‘SEE Institute’ will, additionally, focus on promoting awareness on environmental issues and sustainable living."
-              ,"Striking the right balance between sustainability goals and promoting wellness, the city will feature a number of sports facilities which include jogging and cycling tracks, an equestrian club, and a horse track. It will also include a plaza that hosts a selection of commercial outlets, like shops, restaurants, and cafes."
-              ,"In an endeavor to support eco-tourism, the project will feature a four-star neighborhood hotel with 197 rooms, a five-star resort with 170 rooms and a range of restaurants, numerous leisure facilities, and beachfront access. The resort will also manage 132 luxury serviced apartments to further accommodate the diverse needs of visitors." 
-              ,"The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable."
-          ]         
+        id: 2,
+        title:
+          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",
+        discription: `Earning a commendable reputation for being the leading developers of sustainable communities in the UAE, Diamond Developers in partnership with the Oman Tourism Development Company (OMRAN Group), announced the launch of ‘The Sustainable City – Yiti’ in Muscat, today. With an investment value of nearly one billion US dollars, the city is the first project in Oman that meets the highest global green practices and adheres to the highest sustainability standards. <br><br>Spread over an area of 1 million square meters, ‘The Sustainable City – Yiti’ – will be developed within the phase 1 of the Yiti Integrated Tourism Development Masterplan - is the first project in Oman that meets the global green practices and is in adherence to the highest sustainability standards. This iconic destination is situated in the capital city of Muscat, overlooking the Sea of Oman and features a unique topography of majestic mountains that mingle with undisturbed valleys and pristine shores, which creates further competitive advantages to the destination.<br><br>Engineer Faris Saeed, Chairman of Diamond Developers said, “The Sustainable City – Yiti is not only a benchmark for sustainable urban development, it is a working model for future cities. It is a thriving community made up of thousands of residents, visitors, students, researchers, and entrepreneurs” he added. “The project is expected to be one of the region’s most sustainable cities, and by adopting the latest solutions in energy production, vertical farming, humidity harvesting, and autonomous transportation, we aim to be net zero carbon by 2040, in line with Oman’s vision and national strategy. At Diamond Developers, we remain committed to empowering and supporting partners around the world to realise the cities of tomorrow, today to deliver a more sustainable future for all of us.” <br><br>Further commenting on the launch, Eng. Mohammed Salim Al Busaidi, Chairman of OMRAN Group, said, “Our partnership with Diamond Developers to launch ‘The Sustainable City – Yiti’ is a unique milestone in our journey as we continue to invest, develop, and maximise the limitless potential of Oman’s tourism sector. As it’s being developed withinone of the largest urban developments in the Middle East, Yiti will open avenues for numerous lucrative investment opportunities for both local and international investors in line with the directions of Oman Investment Authority. Mirroring the Sultanate’s goal of driving transformational change to attain a green, circular economy and emissions reduction, the city embraces the highest standards of sustainability and attests to our vision of creating an eco-conscious community that is harmoniously aligned with the distinct geography of the region.” <br><br>With sustainable innovation at the heart of the development, the project will feature 1657 residential units including 300 eco-friendly and energy-efficient villas. Designed for comfort, practicality, and style, the spacious 3 and 4 bedroom villas will also offer significant savings on utility bills. <br><br>In line with the UN Sustainable Development Goals to reduce dependency on non-renewable sources of energy, the city is designed to produce 100 percent of its energy requirements from renewables which include solar panels and biogas. It will also recycle all its water and waste and use it for irrigation. Acknowledging the importance of creating a community that is self-sustaining, the city aims to grow its own food through productive farm areas and greenhouses. Encouraging community members to be a part of the process, private farming slots will also be allocated for residents to grow their own produce. <br><br>With a holistic approach to sustainability, the city will play a significant role in reducing carbon emissions by adopting clean mobility solutions like autonomies shuttles and electric cars, and by deploying EV charging stations around the project. The residential areas, designed to be car-free, will not only provide a safe environment for families but also encourage residents to build strong social connections within the community. <br><br>Dedicated to nurturing a new generation that understands the value of sustainability, the city will include a sustainable school that will teach important concepts of sustainability through the school curriculum. It will feature a ‘SEE lab’ which will showcase the latest in sustainability solutions like renewable energy technologies, indoor vertical farming, and humidity harvesting. With an innovative carbon natural building, the ‘SEE Institute’ will, additionally, focus on promoting awareness on environmental issues and sustainable living. <br><br>Striking the right balance between sustainability goals and promoting wellness, the city will feature a number of sports facilities which include jogging and cycling tracks, an equestrian club, and a horse track. It will also include a plaza that hosts a selection of commercial outlets, like shops, restaurants, and cafes. <br><br>In an endeavor to support eco-tourism, the project will feature a four-star neighborhood hotel with 197 rooms, a five-star resort with 170 rooms and a range of restaurants, numerous leisure facilities, and beachfront access. The resort will also manage 132 luxury serviced apartments to further accommodate the diverse needs of visitors. <br><br>The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable.`,
       },
       {
         slug:"ramadan-begins-news",
@@ -1105,6 +1121,8 @@ const english = {
   partners: {
     title1: "We are proud of our",
     title2: "PROJECT PARTNERS",
+    diamond: <Diamond />,
+    omran: <Omran />,
   },
   findyourvilla: {
     title1: "Caption",
@@ -1143,6 +1161,220 @@ const english = {
         title2: "Energy",
         description:
           "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+      },
+    ],
+  },
+  aboutus: {
+    title: "Oman's first net-zero energy city",
+
+    statistics: [
+      {
+        title: "Hectares",
+        data: "100",
+      },
+
+      {
+        title: "Solar powered",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "Water and waste recycling",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "Food self sufficiency",
+        data: "80",
+        sub: "%",
+      },
+      {
+        title: "Residents",
+        data: "10000",
+        sub: "+",
+      },
+    ],
+    story: {
+      p1: "Oman Tourism Development Company (",
+      s: "Omran",
+      p6: ") and ",
+      s4: "Diamond Developers",
+      p2: " have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
+      p3: " Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
+      s2: "net-zero",
+      p4: " energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first ",
+      s3: "Sustainable City in Dubai",
+      p5: " in 2016.",
+    },
+    joinus: {
+      title: "Join us in inspiring a better and a brighter tomorrow. ",
+      desc: "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+    },
+    othercity: {
+      heading1: "Other Cities by",
+      heading2: "Diamond Developers",
+      city1: "Sharjah Sustainable City",
+      city2: "The Sustainable City - Dubai",
+      country: "UAE",
+    },
+  },
+  contact: {
+    register: {
+      title: "Broker Registration",
+
+      info: {
+        title: "Contact Information",
+        description:
+          "Fill up the form and our team will try to help you with your query.",
+        data: [
+          {
+            title: "Email:",
+            content: "hello@thesustainablecity-yiti.com",
+            icon: <Email />,
+          },
+          {
+            title: "Address:",
+            content: "Mina Al Sultan Qaboos Centre Yiti, Sultanate of Oman",
+            icon: <Pin />,
+          },
+          {
+            title: "Toll-Free:",
+            content: "+968 8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "Working Hours:",
+            content: "Sun - Thu: 09:00AM - 07:00PM",
+            content2: "Sat: 10:00AM - 7:00PM",
+            icon: <Clock />,
+          },
+        ],
+        socialmedia: [
+          {
+            icon: <Facebook />,
+            link: "/",
+          },
+          {
+            icon: <Linkedin />,
+            link: "/",
+          },
+          {
+            icon: <Instagram />,
+            link: "/",
+          },
+          {
+            icon: <Twitter />,
+            link: "/",
+          },
+        ],
+      },
+      individual: "Individual",
+      corporate: "Corporate",
+      formdata: {
+        company: {
+          title: "Company Name",
+          placeholder: "Wallace Co.",
+        },
+        companyContact: {
+          title: "Company Contact",
+          placeholder: "xyz.company.com",
+        },
+        license: {
+          title: "Cooperate License Number",
+          placeholder: "0000000000",
+        },
+        name: {
+          title: "Full Name",
+          placeholder: "John Doe",
+        },
+        villas: {
+          title: "Villa you are interested in ",
+          villa: [
+            "4 Bedroom Garden Villa",
+            "4 Bedroom Courtyard Villa",
+            "3 Bedroom Courtyard Villa",
+          ],
+        },
+        email: {
+          title: "Mail",
+          placeholder: "example@gmail.com",
+        },
+        phone: {
+          title: "Phone",
+          placeholder: "",
+        },
+      },
+    },
+    visitus: {
+      title: "Visit us anytime",
+      description:
+        "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+      location: "Al-Bahri Road, Musqat, Oman",
+    },
+  },
+  footer: {
+    cardlinksdata: [
+      {
+        title: "About",
+        links: [
+          {
+            title: "What We Do",
+            link: "/about",
+          },
+          // {
+          //   title: "Careers",
+          //   link: "/",
+          // },
+          {
+            title: "Press and News",
+            link: "/news",
+          },
+          // {
+          //   title: "Life at a Glance",
+          // },
+          {
+            title: "Find Your Dream Home",
+            link: "/floorplan",
+          },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          {
+            title: "Reach out to us",
+            link: "/contact",
+          },
+          {
+            title: "Become a Broker",
+            link: "/contact?broker=true",
+          },
+          // {
+          //   title: "Language Support",
+          //   link: "",
+          // },
+          // {
+          //   title: "Help and Support",
+          //   link: "",
+          // },
+        ],
+      },
+      {
+        title: "More from TSC",
+        links: [
+          {
+            title: "About Us",
+            link: "/about",
+          },
+          {
+            title: "TSC - Dubai",
+            link: "www.thesustainablecity.ae",
+          },
+          {
+            title: "TSC - Sharjah",
+            link: "www.sharjahsustainablecity.ae",
+          },
+        ],
       },
     ],
   },

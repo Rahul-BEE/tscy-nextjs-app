@@ -17,14 +17,14 @@ const parentVariant = {
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
-    opacity: 0,
+    opacity: 0.75,
     transition: {
       duration: 1,
     },
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
-    opacity: 0,
+    opacity: 0.75,
     transition: {
       duration: 1,
     },
@@ -36,7 +36,7 @@ const Masterplandetail = ({ item, track, goback }) => {
   const [sliderWidth, setSliderWidth] = useState(0);
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
   const [direction, setDirection] = useState(1);
-
+  const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
 
@@ -60,9 +60,11 @@ const Masterplandetail = ({ item, track, goback }) => {
           .width
     );
   }, [slideIndex]);
+
   return (
     <>
       <div className={styles.masterplandetailinner} id="masterplanslideparent">
+        {console.log("direction", direction)}
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
             data-index={track !== null ? "true" : "false"}
@@ -89,8 +91,12 @@ const Masterplandetail = ({ item, track, goback }) => {
               objectPosition="center"
               placeholder="blur"
               blurDataURL={data[index].slideimg[slideIndex]}
+              alt={data[index].name}
+              onLoad={() => setShowGradient(true)}
             />
-            <div className={styles.masterplandetailgradient} />
+            {showGradient && (
+              <div className={styles.masterplandetailgradient} />
+            )}
           </motion.div>
         </AnimatePresence>
         <MasterplanInfoBox
@@ -99,12 +105,17 @@ const Masterplandetail = ({ item, track, goback }) => {
           slideIndex={slideIndex}
           setSlideIndex={setSlideIndex}
           updateIndex={setIndex}
+          setDirection={setDirection}
         />
         <div className={styles.gobackbtn} onClick={() => goback()}>
-          <span>
+          <span
+            style={{
+              marginRight: "5px",
+              marginBottom: "2px",
+            }}>
             <GoChevronLeft />
           </span>
-          {lan.commontext.gobacktomasterplan}
+          <p>{lan.commontext.gobacktomasterplan}</p>
         </div>
         {data[index].slideimg.length > 1 && (
           <>

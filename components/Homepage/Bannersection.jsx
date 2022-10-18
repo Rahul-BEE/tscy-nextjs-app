@@ -11,11 +11,10 @@ const Bannersection = ({ banner }) => {
   return (
     <div className={styles.app__bannerSection}>
       <Swiper
-        modules={[Pagination, Autoplay, FreeMode]}
+        modules={[Pagination, Autoplay]}
         slidesPerView={1}
         speed={1500}
         loop={true}
-        freeMode={true}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{
           clickable: true,

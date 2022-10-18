@@ -10,6 +10,7 @@ import { AiFillMinusCircle } from "react-icons/ai";
 import CyclingTrack from "./Tracks/CyclingTrack";
 import EquistrainTrack from "./Tracks/EquistrainTrack";
 import JoggingTrack from "./Tracks/JoggingTrack";
+import Ebuggy from "./Tracks/E-buggy";
 import Mobilebtmindex from "./MobilebtmIndex/Mobilebtmindex";
 import { useEffect } from "react";
 import Masterplandetail from "./Masterplandetail/Masterplandetail";
@@ -41,11 +42,20 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    const path = document.getElementById(`path_${id}`);
-    const rect = document.getElementById("something").getBoundingClientRect();
-    if (track) {
+    console.log(id, track, "hi");
+    if (id === item || track) {
+      setItem(null);
+      setShow(null);
+      setActiveIndex(null);
+      setTrack(null);
+      return;
+    }
+    if (track !== null) {
       setTrack(null);
     }
+    const path = document.getElementById(`path_${id}`);
+    const rect = document.getElementById("something").getBoundingClientRect();
+
     setItem(id);
     setActiveIndex(id);
     setX(
@@ -64,12 +74,18 @@ const Masterplan = () => {
     setShow(true);
   };
 
-  const getTrackPath = async ({ id }) => {
+  const getTrackPath = ({ id }) => {
+    if (track === id) {
+      setTrack(null);
+      setShow(false);
+      return;
+    }
     setTrack(id);
-    setShow(true);
     setActiveIndex(null);
+    setShow(true);
   };
   useEffect(() => {
+    console.log("calked use", track);
     if (track && desktop) {
       const path = document.getElementById(`path_${track}`);
       const rect = document.getElementById("something").getBoundingClientRect();
@@ -87,7 +103,7 @@ const Masterplan = () => {
       setH(Number(path?.getBoundingClientRect().height * 2));
       setShow(true);
     }
-  }, [track, desktop]);
+  }, [track, setDesktop]);
 
   const zoomHandler = async (state) => {
     if (state) {
@@ -114,11 +130,8 @@ const Masterplan = () => {
   };
   const setNewConstraints = useCallback(() => {
     setIsBrowser(window.innerWidth < 1224);
-    setTrack(null);
     setConstrains({
-      right: zoom
-        ? -(imageContainerRef.current?.getBoundingClientRect().x / 1.5)
-        : 0,
+      right: zoom ? -imageContainerRef.current?.getBoundingClientRect().x : 0,
       left: zoom
         ? -(
             (imageContainerRef.current?.getBoundingClientRect().width -
@@ -147,13 +160,6 @@ const Masterplan = () => {
   //Guesture
 
   const dragHandler = async (_, info) => {
-    if (
-      Math.abs(info.velocity.y) > 200 &&
-      Math.abs(info.offset.y) > 200 &&
-      !zoom
-    ) {
-      window.scrollBy(0, -info.offset.y);
-    }
     if (imageContainerRef.current.getBoundingClientRect().x >= 52) {
       setMove({
         x: 0,
@@ -175,7 +181,18 @@ const Masterplan = () => {
     setShowDetail(false);
     setItem(null);
     setTrack(null);
+    setActiveIndex(null);
   };
+  const scrollHandler = (_, info) => {
+    if (
+      Math.abs(info.velocity.y) > 50 &&
+      Math.abs(info.offset.y) > 50 &&
+      !zoom
+    ) {
+      window.scrollBy(0, -info.offset.y);
+    }
+  };
+
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
       <Row className="headingRow">
@@ -227,6 +244,7 @@ const Masterplan = () => {
               animate={zoomAnimation}
               ref={imageContainerRef}
               drag
+              onDrag={scrollHandler}
               onDragEnd={dragHandler}
               dragElastic={false}
               dragConstraints={{
@@ -244,12 +262,15 @@ const Masterplan = () => {
                 className={styles.masterplanmap}
                 blurDataURL="/Images/masterplanimage.png"
                 placeholder="blur"
-                priority={true}
+                priority
                 quality={100}
+                alt="MasterPlan"
               />
               {track === 18 && <CyclingTrack />}
+              {track === 19 && <Ebuggy />}
               {track === 16 && <JoggingTrack />}
               {track === 17 && <EquistrainTrack />}
+
               <Masterplanmarker
                 getPath={getPath}
                 x={x}
@@ -262,60 +283,6 @@ const Masterplan = () => {
                 track={track}
                 setShowDetail={setShowDetail}
               />
-              <div className={styles.masterplan_bottomindex}>
-                <div className={styles.indexdiv}>
-                  <div className={styles.componentdiv}>
-                    <div className={styles.componentheading}>
-                      {lan.commontext.components}
-                    </div>
-                    <div className={styles.components}>
-                      {lan.masterplan.markers.map((marker, index) => (
-                        <motion.p
-                          key={`${marker.name}_${index}_${marker.id}`}
-                          onClick={() => getPath({ id: marker.id })}
-                          style={{
-                            color:
-                              index === activeIndex - 1 ? "#058da6" : "#777777",
-                          }}>
-                          <motion.span
-                            style={{
-                              display: index === activeIndex - 1 ? "" : "none",
-                            }}>
-                            -
-                          </motion.span>
-                          {marker.name}
-                        </motion.p>
-                      ))}
-                    </div>
-                  </div>
-                  <div className={styles.tracksdiv}>
-                    <div className={styles.tracksheading}>
-                      {lan.commontext.tracks}
-                    </div>
-                    <div className={styles.tracks}>
-                      {lan.tracks.map((marker, index) => (
-                        <motion.p
-                          key={`${marker.name}_${index}_${marker.id}`}
-                          onClick={() => {
-                            getTrackPath({ id: marker.id });
-                          }}
-                          style={{
-                            color:
-                              index + 15 === track - 1 ? "#058da6" : "#777777",
-                          }}>
-                          <motion.span
-                            style={{
-                              display: index + 15 === track - 1 ? "" : "none",
-                            }}>
-                            -
-                          </motion.span>
-                          {marker.name}
-                        </motion.p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
           <Mobilebtmindex
@@ -325,6 +292,55 @@ const Masterplan = () => {
             setDesktop={setDesktop}
           />
         </>
+      )}
+      {!showDetail && (
+        <div className={styles.masterplan_bottomindex}>
+          <div className={styles.indexdiv}>
+            <div className={styles.componentheading}>
+              {lan.commontext.components}
+            </div>
+            <div className={styles.components}>
+              {lan.masterplan.markers.map((marker, index) => (
+                <motion.p
+                  key={`${marker.name}_${index}_${marker.id}`}
+                  onClick={() => getPath({ id: marker.id })}
+                  style={{
+                    color: index === activeIndex - 1 ? "#058da6" : "#777777",
+                  }}>
+                  {/* <motion.span
+                    style={{
+                      display: index === activeIndex - 1 ? "" : "none",
+                    }}>
+                    -
+                  </motion.span> */}
+                  {marker.name}
+                </motion.p>
+              ))}
+            </div>
+            <div className={styles.seperator}></div>
+            <div className={styles.tracksheading}>{lan.commontext.tracks}</div>
+            <div className={styles.tracks}>
+              {lan.tracks.map((marker, index) => (
+                <motion.p
+                  key={`${marker.name}_${index}_${marker.id}`}
+                  onClick={() => {
+                    getTrackPath({ id: marker.id });
+                  }}
+                  style={{
+                    color: index + 15 === track - 1 ? "#058da6" : "#777777",
+                  }}>
+                  {/* <motion.span
+                    style={{
+                      display: index + 15 === track - 1 ? "" : "none",
+                    }}>
+                    -
+                  </motion.span> */}
+                  {marker.name}
+                </motion.p>
+              ))}
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
