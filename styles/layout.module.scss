@@ -516,11 +516,18 @@
       font-weight: 600;
       font-size: 1.25rem;
 
+      @media (max-width:1224px) {
+        margin-bottom: 1.5rem;
+      }
     }
 
     h6 {
       font-weight: 600;
       font-size: 1rem;
+
+      @media (max-width:1224px) {
+        margin-bottom: 1.5rem;
+      }
     }
 
     p {
@@ -596,11 +603,13 @@
       width: 100%;
       margin-block: 1rem;
       padding: 0;
+      height: 1px;
 
       @media (max-width:600px) {
         display: none;
       }
     }
+
 
     .footercpycontent {
       display: flex;
