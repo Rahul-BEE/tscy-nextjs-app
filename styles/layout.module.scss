@@ -111,6 +111,7 @@
   .header_right_langbtn2 {
     color: white;
     background-color: #058da6;
+
   }
 
   .header_right_langbtn {
@@ -188,7 +189,7 @@
 
     @media (max-width:992px) {
       display: inline-block;
-      font-size: 0.5rem;
+      font-size: 1rem;
       padding: 0.5rem 0.8rem;
       margin-left: 1rem;
     }

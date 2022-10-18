@@ -10,7 +10,7 @@ const Othercities = () => {
   return (
     <section className={styles.othercities}>
       <div className={styles.othercitiesinner}>
-        <div>
+        <div className={styles.topheading}>
           <p className={styles.heading}>{data.othercity.heading1}</p>
           <p className={styles.heading}>{data.othercity.heading2}</p>
         </div>
