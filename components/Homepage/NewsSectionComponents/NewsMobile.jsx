@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/newssection.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 
@@ -22,8 +22,15 @@ function NewsMobile({ data }) {
         {data.map((e, index) => (
           <SwiperSlide key={`${index}_newmob`}>
             <div className={styles.test_box}>
+            <Image
+                className={styles.test_box}
+                src={e.image}
+                width={476}
+                height={200}
+                layout="responsive"
+            />
               <div className={styles.bottom_text}>
-              <h3 style={{color:"black"}}>{e.title}</h3>
+              <h3 style={{color:"black"}}>{e.heading}</h3>
             </div>
               <p>Read here </p>
             </div>

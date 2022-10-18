@@ -10,15 +10,37 @@
             color: #B5B5B5;
         }
 
-        h4{
+        h2{
             background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
             -webkit-background-clip: text;
             background-clip: text ;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 60px;
         }
 
     }
-
+    .test_box {
+        background: #ffffff;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+      
+        @media (max-width: 768px) {
+          width: 90%;
+      
+          p {
+      
+            text-align: right;
+            color: white;
+            padding-right: 25px;
+            position: absolute;
+            right: 10%;
+            bottom: 0%;
+          }
+      
+      
+        }
+      }
     // blog container
 
     .hero_container{

@@ -2,8 +2,11 @@ import React from "react";
 import Newssection from "../Homepage/Newssection";
 import styles from "../../styles/newspage.module.scss";
 import Image from "next/image";
+import useLanguage from "../../utils/useLanguage";
+import Link from "next/link";
 function NewsPage() {
-  const ar = [1, 2, 3, 4, 5, 6];
+  const lan = useLanguage();
+  const ar = lan.newssection.post
   return (
     <div className={styles.news_main_page}>
       <Newssection />
@@ -11,29 +14,32 @@ function NewsPage() {
       <div className={styles.hero_container}>
         <div className={styles.second_heading}>
           <p>Know more about us in our</p>
-          <h4>Latest stories</h4>
+          <h2>LATEST STORIES</h2>
 
           <div className={styles.container_boxs}>
-            {ar.map((index) => (
+            {ar.map((e,index) => (
+              <Link href={`news/${e.slug}`} passHref>
+              <a>
               <div className={styles.box} key={index}>
                 <div>
                   <Image
-                    src="/Images/villaplansectionimg.png"
+                  className={styles.test_box}
+                    src={e.image}
                     width={900}
                     height={500}
                     layout="responsive"
                   />
                 </div>
                 <div className={styles.content}>
-                  <p>- Muscat, Oman</p>
+                  <p>- {e.city}, {e.country}</p>
                   <p className={styles.description}>
-                    Britain starts to open up, Ramadan begins. It feels like
-                    perfect timing, with Russia cheif army scrubbling over the
-                    issue.
+                  {e.heading}
                   </p>
-                  <p>April 22, 2012</p>
+                  <p> {e.date}</p>
                 </div>
               </div>
+              </a>
+              </Link>
             ))}
           </div>
         </div>
