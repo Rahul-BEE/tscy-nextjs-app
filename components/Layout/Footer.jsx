@@ -46,7 +46,14 @@ function Footer() {
     <div className={styles.footer}>
       <div className={styles.innerFooter}>
         <div className={styles.footerLogoContainer}>
-          <Icon id="footericonhead" />
+          <Link
+            href={"/"}
+            passHref
+            style={{
+              cursor: "pointer",
+            }}>
+            <Icon id="footericonhead" />
+          </Link>
         </div>
         <div className={styles.footercontent}>
           <div className={styles.mainfooter}>
