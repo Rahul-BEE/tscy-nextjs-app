@@ -6,12 +6,48 @@ import NewsMobile from "./NewsSectionComponents/NewsMobile";
 import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
-import { Col, Row } from "react-bootstrap";
 
 function Newssection() {
   const lan = useLanguage();
   const controls = useAnimation();
-  const data = lan.newssection.post
+
+  const data = [
+    {
+      slug: lan.newssection.post[0].slug,
+      title: lan.newssection.post[0].heading,
+      discription: lan.newssection.post[0].discription,
+      image:lan.newssection.post[0].image,
+      date:lan.newssection.post[0].date,
+    },
+    {
+      slug: lan.newssection.post[1].slug,
+      title: lan.newssection.post[1].heading,
+      discription: lan.newssection.post[1].discription,
+      image:lan.newssection.post[1].image,
+      date:lan.newssection.post[1].date,
+    },
+    {
+      slug: lan.newssection.post[2].slug,
+      title: lan.newssection.post[2].heading,
+      discription: lan.newssection.post[2].discription,
+      image:lan.newssection.post[2].image,
+      date:lan.newssection.post[2].date,
+    },
+    {
+      slug: lan.newssection.post[0].slug,
+      title: lan.newssection.post[0].heading,
+      discription: lan.newssection.post[0].discription,
+      image:lan.newssection.post[0].image,
+      date:lan.newssection.post[0].date,
+    },
+    {
+      slug: lan.newssection.post[1].slug,
+      title: lan.newssection.post[1].heading,
+      discription: lan.newssection.post[1].discription,
+      image:lan.newssection.post[1].image,
+      date:lan.newssection.post[1].date,
+    },
+  ];
 
   const initialData = {
     firstSlice: 0,
@@ -98,12 +134,11 @@ function Newssection() {
   return (
     <div className={styles.hero_newssection}>
       <div className={styles.hero_container}>
-        <Row className="headingRow">
-          <Col>
-            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
-            <h2 className="sectionmainHeading">{lan.commontext.press}</h2>
-          </Col>
-        </Row>
+        <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
+          <p>See what they say in</p>
+          <h2>press and news</h2>
+        </div>
+
         {/* layout */}
 
         <div className={styles.shape_hex}>
@@ -129,7 +164,8 @@ function Newssection() {
                     className={styles.test_box}
                     animate={controls}
                     initial="hidden"
-                    variants={variants}></motion.div>
+                    variants={variants}
+                  ></motion.div>
                   <p>{item.discription}</p>
                 </div>
               </div>
@@ -141,12 +177,14 @@ function Newssection() {
             <div className={styles.news_nav}>
               <motion.p
                 onClick={(e) => handelChnagePrev(e)}
-                whileTap={{ scale: 0.9 }}>
+                whileTap={{ scale: 0.9 }}
+              >
                 <FaChevronLeft className={styles.icon} /> Previous
               </motion.p>
               <motion.p
                 onClick={(e) => handelChange(e)}
-                whileTap={{ scale: 0.9 }}>
+                whileTap={{ scale: 0.9 }}
+              >
                 Next <FaChevronRight className={styles.icon} />
               </motion.p>
             </div>
