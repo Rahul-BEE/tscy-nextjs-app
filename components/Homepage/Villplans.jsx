@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-
+import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
 import Parking from "../../public/Svg/homevillaplan/parking.svg";
 import Garden from "../../public/Svg/homevillaplan/garden.svg";
@@ -16,20 +16,34 @@ import Link from "next/link";
 
 const Villplans = () => {
   const lan = useLangage();
-  const [villaIndex, setIndex] = useState(0);
-  const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
+  const [villaIndex, setIndex] = useState(1);
+  const [currentvilla, setVilla] = useState(lan.villaplansection.villas[1]);
 
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const handleUserInput = () => {};
-  useEffect(() => {
-    setVilla(lan.villaplansection.villas[villaIndex]);
-  }, [lan]);
+  const handleUserInput = () => {
+    let data = {
+      email,
+      name,
+      phone,
+    };
+    localStorage.setItem("userdata", JSON.stringify(data));
+    console.log(email, name, phone, currentvilla.title);
+    setDataReceived(true);
+  };
+  const handleClick = (id) => {
+    if (!dataReceived) {
+      setShowForm(true);
+      return;
+    }
+  };
+
   const changeVilla = (index) => {
     setIndex(index);
+    setShowForm(false);
     setVilla(lan.villaplansection.villas[index]);
   };
 
@@ -74,16 +88,48 @@ const Villplans = () => {
         </Row>
 
         <div className={styles.villadownload}>
-          <div className={styles.download_content}>
-            {lan.commontext.download} {lan.commontext.brochure}
-          </div>
-          <div className={styles.download_content}>
-            {lan.commontext.download} {lan.commontext.floorplan}
-          </div>
+          <motion.div
+            onClick={() => handleClick(1)}
+            className={styles.download_content}
+            whileHover={{
+              backgroundColor: "#058DA6",
+              color: "#fff",
+            }}>
+            {lan.commontext.download} {lan.commontext.brochure}{" "}
+            <BsArrowDownCircle
+              style={{
+                marginLeft: "0.5rem",
+              }}
+            />
+          </motion.div>
+          <motion.div
+            onClick={() => handleClick(2)}
+            className={styles.download_content}
+            whileHover={{
+              backgroundColor: "#058DA6",
+              color: "#fff",
+            }}>
+            {lan.commontext.download} {lan.commontext.floorplan}{" "}
+            <BsArrowDownCircle
+              style={{
+                marginLeft: "0.5rem",
+              }}
+            />
+          </motion.div>
           <Link href={`/floorplan/${currentvilla.slug}`} passHref>
-            <div className={styles.download_content}>
-              {lan.commontext.seedetails}
-            </div>
+            <motion.div
+              className={styles.download_content}
+              whileHover={{
+                backgroundColor: "#058DA6",
+                color: "#fff",
+              }}>
+              {lan.commontext.seedetails}{" "}
+              <BsArrowRightCircle
+                style={{
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </motion.div>
           </Link>
         </div>
 
@@ -96,9 +142,7 @@ const Villplans = () => {
           />
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>
-            {dataReceived ? (
-              <div>Data receiver</div>
-            ) : !showForm ? (
+            {!showForm ? (
               <>
                 <p className={styles.heading}>
                   {lan.commontext.propsubheading_1}
@@ -121,7 +165,7 @@ const Villplans = () => {
 
                 <div>
                   <motion.button
-                    onClick={() => setShowForm(true)}
+                    onClick={() => handleClick()}
                     whileHover={{
                       scale: 1.02,
                     }}>
@@ -130,65 +174,67 @@ const Villplans = () => {
                 </div>
               </>
             ) : (
-              <div className={styles.villaplanuserform}>
-                <div className={styles.userformcontainer}>
-                  <p className={styles.heading}>Add your details</p>
-                  <form className={styles.userform}>
-                    <div className={styles.seperator}></div>
-                    <div className={styles.formItem}>
-                      <label htmlFor="name">
-                        {lan.contact.register.formdata.name.title}
-                      </label>
-                      <input
-                        type={"text"}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder={
-                          lan.contact.register.formdata.name.placeholder
-                        }
-                      />
+              <>
+                {dataReceived ? (
+                  <div>Data Received</div>
+                ) : (
+                  <div className={styles.villaplanuserform}>
+                    <p className={styles.heading}>Add your details</p>
+                    <div className={styles.userformcontainer}>
+                      <form className={styles.userform}>
+                        <div className={styles.formItem}>
+                          <label htmlFor="name">
+                            {lan.contact.register.formdata.name.title}
+                          </label>
+                          <input
+                            type={"text"}
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder={
+                              lan.contact.register.formdata.name.placeholder
+                            }
+                          />
+                        </div>
+                        <div className={styles.formItem}>
+                          <label htmlFor="email">
+                            {lan.contact.register.formdata.email.title}
+                          </label>
+                          <input
+                            type={"email"}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder={
+                              lan.contact.register.formdata.email.placeholder
+                            }
+                          />
+                        </div>
+                        <div className={styles.formItem}>
+                          <label htmlFor="name">
+                            {lan.contact.register.formdata.phone.title}
+                          </label>
+                          <input
+                            type={"text"}
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder={
+                              lan.contact.register.formdata.phone.placeholder
+                            }
+                          />
+                        </div>
+                      </form>
                     </div>
-                    <div className={styles.seperator}></div>
-                    <div className={styles.formItem}>
-                      <label htmlFor="email">
-                        {lan.contact.register.formdata.email.title}
-                      </label>
-                      <input
-                        type={"email"}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder={
-                          lan.contact.register.formdata.email.placeholder
-                        }
-                      />
+                    <div className={styles.resgisterinterestbtn}>
+                      <motion.button
+                        onClick={() => handleUserInput()}
+                        whileHover={{
+                          scale: 1.02,
+                        }}>
+                        {lan.commontext.registerinterest}
+                      </motion.button>
                     </div>
-                    <div className={styles.seperator}></div>
-                    <div className={styles.formItem}>
-                      <label htmlFor="name">
-                        {lan.contact.register.formdata.phone.title}
-                      </label>
-                      <input
-                        type={"text"}
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder={
-                          lan.contact.register.formdata.phone.placeholder
-                        }
-                      />
-                    </div>
-                    <div className={styles.seperator}></div>
-                  </form>
-                </div>
-                <div>
-                  <motion.button
-                    onClick={() => handleUserInput(true)}
-                    whileHover={{
-                      scale: 1.02,
-                    }}>
-                    {lan.commontext.registerinterest}
-                  </motion.button>
-                </div>
-              </div>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>

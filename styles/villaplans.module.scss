@@ -196,19 +196,21 @@
     gap: 2.5rem;
     transform: translate(-50%, -50%);
     min-width: 80%;
-
+    width: 90%;
+    max-width: 1500px;
 
     .villaplanuserform {
       display: flex;
       height: 100%;
+      align-items: center;
       justify-content: space-between;
+      width: 100%;
       gap: 1rem;
 
       @media (max-width:1224px) {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 3REM;
       }
 
       .userformcontainer {
@@ -217,7 +219,6 @@
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
-
 
         @media (max-width:1224px) {
           flex-direction: column;
@@ -232,7 +233,6 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        gap: 2rem;
         font-weight: 400;
         font-size: 16px;
         color: #B5B5B5;
@@ -248,10 +248,11 @@
           justify-content: space-between;
           flex-direction: column;
           width: 100%;
-          gap: 1rem;
+          border-left: 2px solid #058DA6;
+          padding-left: 1rem;
 
           input {
-            max-width: 200px;
+            width: 100%;
 
             @media (max-width:758px) {
               min-width: 100%;
@@ -467,7 +468,11 @@
       border-radius: 17.5px;
       color: #FFFFFF;
       width: fit-content;
-      padding: 5 20px;
+      padding: 4px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
     }
   }
 
