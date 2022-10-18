@@ -16,7 +16,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
       fullscreen={true}
       onHide={onHide}
       className={styles.header__modal}
-      contentClassName={styles.header__modal_contentclass}>
+      contentClassName={styles.header__modal_contentclass}
+    >
       <Modal.Body className={styles.header__modal_body}>
         <Row className={styles.header__modaltop}>
           <Col>
@@ -54,7 +55,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}
-                    onClick={() => onHide()}>
+                    onClick={() => onHide()}
+                  >
                     <Polygon className="me-2" />
                     <p className="p-0 m-0">{lan.header.homepage}</p>
                   </a>
@@ -64,7 +66,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                     <div
                       key={`${index}_header_links_mobile`}
                       style={{ width: "100%" }}
-                      className="flex justify-content-center flex-column">
+                      className="flex justify-content-center flex-column"
+                    >
                       <Link href={link.link}>
                         <a
                           className={`d-flex align-items-center ${
@@ -72,7 +75,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                               ? styles.menuactive
                               : styles.menuinactive
                           }`}
-                          onClick={() => onHide()}>
+                          onClick={() => onHide()}
+                        >
                           <Polygon className="me-2" />
                           <p className="p-0 m-0">{link.text}</p>
                         </a>
@@ -87,7 +91,8 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}
-                    onClick={() => onHide()}>
+                    onClick={() => onHide()}
+                  >
                     <Polygon className="me-2" />
                     <p className="p-0 m-0">{lan.commontext.registerinterest}</p>
                   </a>
@@ -103,8 +108,9 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                       ? styles.btnlangactive
                       : styles.btnlanginactive
                   }
-                  onClick={() => handleLang("en")}>
-                  Hello
+                  onClick={() => handleLang("en")}
+                >
+                  English
                 </Button>
                 <Button
                   className={
@@ -112,8 +118,9 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                       ? styles.btnlangactive
                       : styles.btnlanginactive
                   }
-                  onClick={() => handleLang("ar")}>
-                  مرحبا
+                  onClick={() => handleLang("ar")}
+                >
+                  عربي
                 </Button>
               </Col>
             </Row>

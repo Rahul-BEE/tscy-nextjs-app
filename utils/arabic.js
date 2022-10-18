@@ -46,7 +46,7 @@ const arabic = {
       { text: "الأخبار", link: "/news" },
     ],
     contact: "تواصل معنا",
-    homepage: "Homepage",
+    homepage: "الصفحة الرئيسية",
   },
 
   sustainablesection: {
