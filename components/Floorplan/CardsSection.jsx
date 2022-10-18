@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import styles from "../../styles/cardsection.module.scss";
 import useLanguage from "../../utils/useLanguage";
+import { motion } from "framer-motion";
 const CardSection = ({ page }) => {
   const lan = useLanguage();
   return (
@@ -18,7 +19,12 @@ const CardSection = ({ page }) => {
         </div>
         <div className={styles.cardContainer} data-page={page}>
           {lan.findyourvilla.cards.map((item, index) => (
-            <div key={index} className={styles.card}>
+            <motion.div
+              key={index}
+              className={styles.card}
+              whileHover={{
+                boxShadow: "5px 5px 16px rgba(0, 0, 0, 0.1)",
+              }}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconContainer}>{item.icon}</div>
                 <div className={styles.cardContents}>
@@ -27,7 +33,7 @@ const CardSection = ({ page }) => {
                 </div>
               </div>
               <p className={styles.cardContents}>{item.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className={styles.cardContainer2} data-page={page}>

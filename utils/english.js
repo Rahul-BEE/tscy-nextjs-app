@@ -16,6 +16,10 @@ import Bin from "../public/Svg/floorplans/cards/bin.svg";
 import Drop from "../public/Svg/floorplans/cards/drop.svg";
 import House from "../public/Svg/floorplans/cards/house.svg";
 import Car from "../public/Svg/floorplans/cards/car.svg";
+import Plant from "../public/Svg/floorplans/cards/plant.svg";
+import World from "../public/Svg/floorplans/cards/world.svg";
+import SmartHouse from "../public/Svg/floorplans/cards/smarthouse.svg";
+import Station from "../public/Svg/floorplans/cards/station.svg";
 
 import Bedroomp from "../public/Svg/bedroom.svg";
 import MaidRoomp from "../public/Svg/maidroom.svg";
@@ -978,8 +982,8 @@ const english = {
     press: "Press and News",
     ourstory: "Our Story",
     diamonddevelopers: "Diamond Developers",
-    cpyright:"© Diamond Developers International Ltd. 2022",
-    language:"Arabic"
+    cpyright: "© Diamond Developers International Ltd. 2022",
+    language: "Arabic",
   },
   tracks: [
     {
@@ -1166,10 +1170,42 @@ const english = {
       {
         id: 3,
         icon: <Bin />,
-        title1: "Waste to",
+        title1: "Renewable",
         title2: "Energy",
         description:
-          "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+          "We rely on clean renewable sources to generate energy for our cities. These systems include but are not limited to solar PV cells, biogas plants and wind turbines.",
+      },
+      {
+        id: 4,
+        icon: <Station />,
+        title1: "EV Charging",
+        title2: "Stations",
+        description:
+          "EV chargers are distributed around our cities to further promote the use of electric cars.",
+      },
+      {
+        id: 5,
+        icon: <SmartHouse />,
+        title1: "Smart",
+        title2: "Home",
+        description:
+          "By integrating smart technologies to manage our systems, we are able to drive higher efficiencies across all platforms, allowing us to maximise the use of our assets and resources.",
+      },
+      {
+        id: 6,
+        icon: <Plant />,
+        title1: "Low-Carbon",
+        title2: "Embodiment",
+        description:
+          "We aim to maximise the use of low-embodied carbon materials and products in order to help us achieve our net zero carbon goals.",
+      },
+      {
+        id: 7,
+        icon: <World />,
+        title1: "Food",
+        title2: "Production",
+        description:
+          "By facilitating community gardening initiatives, residents are encouraged to grow their own food and further promote local food production within our developments.",
       },
     ],
   },
