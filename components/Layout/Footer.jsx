@@ -47,7 +47,7 @@ function Footer() {
                     <ul>
                       {e.links.map((value, index) => (
                         <Link
-                          href={`${value.link}`}
+                          href={` ${value.link}`}
                           passHref
                           key={`${index}_footer_list_links`}
                         >

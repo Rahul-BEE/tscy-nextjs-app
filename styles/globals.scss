@@ -12,6 +12,8 @@ body {
 
   &:lang(ar) {
     font-family: "Tajawal", sans-serif !important;
+    direction: rtl !important;
+      text-align: right !important;
   }
 }
 
@@ -125,7 +127,7 @@ a {
 }
 
 .sectionmainHeading {
-  font-family: 'Poppins';
+  // font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 1.9375rem;
