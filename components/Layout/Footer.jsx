@@ -11,14 +11,37 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Accord from "./Accord";
 import Link from "next/link";
 import { VscGlobe } from "react-icons/vsc";
+import { useRouter } from "next/router";
 function Footer() {
   const lan = useLanguage();
+  const location = useRouter();
+  const [language, setLanguage] = useState("en");
   const data = lan.footer;
-
+  const handelLanguageChange = (lang) => {
+    let lan = "";
+    if (language === "en") {
+      lan = "ar";
+    } else {
+      lan = "en";
+    }
+    localStorage.setItem("language", JSON.stringify(lan));
+    setLanguage(lan);
+    location.push(location.asPath, location.asPath, { locale: lan });
+    // window.location.reload(true);
+  };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLanguage(
+        JSON.parse(localStorage.getItem("language"))
+          ? JSON.parse(localStorage.getItem("language"))
+          : "en"
+      );
+    }
+  }, []);
   return (
     <div className={styles.footer}>
       <div className={styles.innerFooter}>
@@ -103,11 +126,13 @@ function Footer() {
           <hr />
           <div className={styles.footercpycontent}>
             <div className={styles.left}>
-              <h6>Diamond Developers</h6>
-              <p>© Diamond Developers International Ltd. 2022</p>
+              <h6>{lan.commontext.diamonddevelopers} </h6>
+              <p>{lan.commontext.cpyright}</p>
             </div>
-            <div className={styles.right}>
-              <VscGlobe /> ENGLISH
+            <div
+              className={styles.right}
+              onClick={() => handelLanguageChange()}>
+              <VscGlobe /> {lan.commontext.language}
             </div>
           </div>
         </div>
