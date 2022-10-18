@@ -340,7 +340,7 @@ const english = {
       },
       {
         id: 11,
-        name: "school& nursery",
+        name: "school & nursery",
         icon: "/Images/masterplan/plaza.png",
         description:
           "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
@@ -1163,7 +1163,7 @@ const english = {
     ],
   },
   aboutus: {
-    title: "Oman's first net-zero energy city",
+    title: "A working model for future cities",
 
     statistics: [
       {
@@ -1194,13 +1194,15 @@ const english = {
     ],
     story: {
       p1: "Oman Tourism Development Company (",
-      s: "Omran",
-      p2: ") and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
-      p3: "Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
-      s2: "net-zero",
-      p4: "energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first ",
-      s3: "Sustainable City in Dubai",
-      p5: " in 2016.",
+      s1: "Omran",
+      p2: ") and ",
+      s2: "Diamond Developers",
+      p3: " have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
+      p4: "Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
+      s3: " net-zero",
+      p5: " energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first ",
+      s4: "Sustainable City in Dubai",
+      p6: " in 2016.",
     },
     joinus: {
       title: "Join us in inspiring a better and a brighter tomorrow. ",
@@ -1356,19 +1358,23 @@ const english = {
         ],
       },
       {
-        title: "More from TSC",
+        title: "More",
         links: [
           {
-            title: "About Us",
-            link: "/about",
+            title: "Diamond Developers",
+            link: "https://www.diamond-developers.ae",
+          },
+          {
+            title: "Omran",
+            link: "https://www.omran.om",
           },
           {
             title: "TSC - Dubai",
-            link: "www.thesustainablecity.ae",
+            link: "https://www.thesustainablecity.ae",
           },
           {
             title: "TSC - Sharjah",
-            link: "www.sharjahsustainablecity.ae",
+            link: "https://www.sharjahsustainablecity.ae",
           },
         ],
       },

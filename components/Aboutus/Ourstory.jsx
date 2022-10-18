@@ -65,22 +65,26 @@ const Ourstory = () => {
           <h3>{lan.commontext.ourstory}</h3>
           <p>
             {data.story.p1}
-            <span>{data.story.s}</span>
+            <span>{data.story.s1}</span>
             {data.story.p2}
+            <span>{data.story.s2}</span>
+            {data.story.p3}
           </p>
 
           <p
             style={{
               marginTop: "2rem",
-            }}>
-            {data.story.p3} <span>{data.story.s2}</span> {data.story.p4}
+            }}
+          >
+            {data.story.p4} <span>{data.story.s3}</span> {data.story.p5}
             <span
               style={{
                 textDecoration: "underline",
-              }}>
-              {data.story.s3}
+              }}
+            >
+              {data.story.s4}
             </span>
-            {data.story.p5}
+            {data.story.p6}
           </p>
         </div>
         <div className={styles.partners}>
@@ -93,7 +97,8 @@ const Ourstory = () => {
                   whileHover={{
                     boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
                     border: "1px solid white",
-                  }}>
+                  }}
+                >
                   {lan.partners.diamond}
                 </motion.div>
               </a>
@@ -105,7 +110,8 @@ const Ourstory = () => {
                   whileHover={{
                     boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
                     border: "1px solid white",
-                  }}>
+                  }}
+                >
                   {lan.partners.omran}
                 </motion.div>
               </a>

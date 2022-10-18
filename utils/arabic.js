@@ -367,6 +367,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/5starresort/1.png",
           "/Images/masterplan/5starresort/2.png",
@@ -1000,6 +1005,24 @@ const arabic = {
         Phone: " 0312547",
       },
     },
+    {
+      id: 19,
+      name: "المركبات الكهربائية",
+      icon: "/Images/masterplan/plaza.png",
+      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      description:
+        "Car free areas to create safe zones for kids and promote walkability.",
+      details: {
+        area: "1250 sq.ft",
+        capacity: 3000,
+        built: 2020,
+      },
+      contact: {
+        contact: "0123456",
+        email: "come@yiti.com",
+        Phone: " 0312547",
+      },
+    },
   ],
   newssection: {
     post: [
@@ -1112,7 +1135,7 @@ const arabic = {
     ],
   },
   aboutus: {
-    title: "Oman's first net-zero energy city",
+    title: "نموذج حي لمدن المستقبل",
 
     statistics: [
       {
@@ -1142,24 +1165,26 @@ const arabic = {
       },
     ],
     story: {
-      p1: "Oman Tourism Development Company (",
-      s: "Omran",
-      p2: ") and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman. The project, designed to improve quality of life for residents, makes no compromises on the needs of future generations. Directed by some of the best thought leaders in the world, TSC Yiti presents opportunities for research and learning, empowering residents to lead the change towards minimizing our carbon footprint, realizing the goals of the future today.",
-      p3: "Using clean energy, water & waste recycling, food production, clean mobility, and better air quality, Oman's first",
-      s2: "net-zero",
-      p4: "energy city and it keeps people at its heart. The strength of community spirit endures here as we come together with our residents to lead the change towards a brighter tomorrow. The Sustainable City Yiti follows the blueprint for low carbon living that was pioneered by the first ",
-      s3: "Sustainable City in Dubai",
-      p5: " in 2016.",
+      p1: "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (",
+      s1: "عمران",
+      p2: ") وشركة ",
+      s2: "دايموند ديفلوبرز",
+      p3: " لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان. صُمم هذا المشروع الفريد ضمن رؤية تستهدفُ تحسين جودة حياة السكان والارتقاء بنمط معيشتهم، وتوفير كل ما يتوافق مع احتياجات الأجيال المقبلة ومتطلباتهم، من دون أي مساومة على مستويات الجودة وشمولية الخدمات. يدير هذا المشروع المُستحدث بعضٌ من أفضل قادة الفكر في العالم، ويقدم فرصاً واسعةً للتعلم وتطوير البحوث، ويتيحُ لسكانه أسبقية قيادة التغيير نحو تقليل البصمة الكربونية وبلوغ الأهداف المستقبلية، اليوم.",
+      p4: "تُعدُّ المدينة المستدامة - يتي أول مدينة تحقق ",
+      s3: "  صافي صفرية الطاقة ",
+      p5: "في سلطنة عُمان، ذلك أنها تعتمدُ نُظُماً ومفاهيمَ جوهريةً تشتمل على استخدام الطاقة النظيفة، وإعادة تدوير المياه والنفايات، وإنتاج الغذاء، والتنقل النظيف، وجودة أفضل للهواء. وتوفر المدينة لسكانها مجتمعاً متكاملاً يتوافر فيه أفضل الخدمات ومقومات الحياة، وتتسم بروح جماعية يتشارك فيها سكانها الرغبة في قيادة التغيير نحو غد أكثر إشراقاً. تتبنى المدينة المستدامة - يتي نموذجاً للمعيشة منخفضة الكربون ابتكرته واعتمدته أول مدينة",
+      s4: "مستدامة افتتحت في دبي",
+      p6: " العام 2016",
     },
     joinus: {
-      title: "Join us in inspiring a better and a brighter tomorrow. ",
-      desc: "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
+      title: "انضم إلينا في إلهام غد أفضل وأكثر إشراقًا",
+      desc: "تم تصميم هذا المشروع لتوفير أسلوب حياة صحية للعائلات القاطنة فيه دون الإضرار بالبيئة ومواردها. ",
     },
     othercity: {
       heading: "Other Cities by Diamond Developers",
-      city1: "Sharjah Sustainable City",
-      city2: "The Sustainable City - Dubai",
-      country: "UAE",
+      city1: "مدينة الشارقة المستدامة",
+      city2: "المدينة المستدامة - يتي",
+      country: "الإمارات العربية المتحدة",
     },
   },
   contact: {
@@ -1262,18 +1287,21 @@ const arabic = {
         links: [
           {
             title: "ماذا نفعل",
+            link: "/about",
           },
           // {
           //   title: "",
           // },
           {
             title: "الصحافة",
+            link: "/news",
           },
           // {
           //   title: "المجتمع",
           // },
           {
             title: "ابحث عن فيلا",
+            link: "/floorplan",
           },
         ],
       },
@@ -1282,15 +1310,17 @@ const arabic = {
         links: [
           {
             title: "إتصل بنا",
+            link: "/contact",
           },
           {
             title: "كن وسيطاً عقارياً",
+            link: "/contact?broker=true",
           },
           // {
           //   title: "Language Support",
           // },
           {
-            title: "بلغ عن مشكلة",
+            // title: "بلغ عن مشكلة",
           },
         ],
       },
@@ -1301,10 +1331,20 @@ const arabic = {
           //   title: "About Us",
           // },
           {
+            title: "دايموند ديفلوبرز",
+            link: "https://www.diamond-developers.ae",
+          },
+          {
+            title: "عمران",
+            link: "https://www.omran.om",
+          },
+          {
             title: "المدينة المستدامة - دبي",
+            link: "https://www.thesustainablecity.ae",
           },
           {
             title: "المدينة المستدامة - الشارقة",
+            link: "https://www.sharjahsustainablecity.ae",
           },
         ],
       },
