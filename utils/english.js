@@ -1314,19 +1314,23 @@ const english = {
         title: "About",
         links: [
           {
-            title: "what we do",
+            title: "What We Do",
+            link: "/about",
           },
           // {
           //   title: "Careers",
+          //   link: "/",
           // },
           {
             title: "Press and News",
+            link: "/news",
           },
           // {
           //   title: "Life at a Glance",
           // },
           {
             title: "Find Your Dream Home",
+            link: "/floorplan",
           },
         ],
       },
@@ -1335,16 +1339,20 @@ const english = {
         links: [
           {
             title: "Reach out to us",
+            link: "/contact",
           },
           {
             title: "Become a Broker",
+            link: "/contact?broker=true",
           },
           // {
           //   title: "Language Support",
+          //   link: "",
           // },
-          {
-            title: "Help and Support",
-          },
+          // {
+          //   title: "Help and Support",
+          //   link: "",
+          // },
         ],
       },
       {
@@ -1352,12 +1360,15 @@ const english = {
         links: [
           {
             title: "About Us",
+            link: "/about",
           },
           {
             title: "TSC - Dubai",
+            link: "www.thesustainablecity.ae",
           },
           {
             title: "TSC - Sharjah",
+            link: "www.sharjahsustainablecity.ae",
           },
         ],
       },

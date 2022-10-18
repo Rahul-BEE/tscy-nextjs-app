@@ -47,7 +47,7 @@ function Footer() {
                     <ul>
                       {e.links.map((value, index) => (
                         <Link
-                          href={"/contact?broker=true"}
+                          href={`${value.link}`}
                           passHref
                           key={`${index}_footer_list_links`}
                         >
@@ -73,6 +73,12 @@ function Footer() {
                       <IoIosArrowDroprightCircle />
                     </span>
                   </div> */}
+                  {/* <h3>Contact Information</h3>
+                  <h6>Email:</h6>
+                  <h6>hello@thesustainablecity-yiti.com</h6>
+                  <h6>Toll-free</h6>
+                  <h6>+96880003333</h6> */}
+
                   <div className={styles.social_icons}>
                     <FaLinkedin color="#0077B5" className={styles.icon} />
                     <FaFacebookSquare color="#3A559F" className={styles.icon} />
