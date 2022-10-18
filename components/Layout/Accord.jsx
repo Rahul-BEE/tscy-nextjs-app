@@ -1,55 +1,100 @@
-import React from "react";
-import { useState } from "react";
-import {
-  Accordion,
-  Card,
-  Container,
-  useAccordionButton,
-} from "react-bootstrap";
-import { BsPlus } from "react-icons/bs";
+import Accordion from "react-bootstrap/Accordion";
+import { useAccordionButton } from "react-bootstrap/AccordionButton";
+import Card from "react-bootstrap/Card";
+import useLanguage from "../../utils/useLanguage";
 import styles from "../../styles/layout.module.scss";
-
-function CustomToggle({ children, eventkey }) {
-  const decoratedOnClick = useAccordionButton(eventkey, () =>
-    console.log("click")
+import Link from "next/link";
+import { AiOutlinePlus } from "react-icons/ai";
+function CustomToggle({ children, eventKey }) {
+  const decoratedOnClick = useAccordionButton(eventKey, () =>
+    console.log("totally custom!")
   );
+
   return (
-    <div className={`${styles.mobile_dropdown} flex `}>
-      <h4>{children}</h4>
-      <BsPlus onClick={decoratedOnClick} className={styles.icon} />
+    <div
+      type="button"
+      className={styles.accordHeaderbtn}
+      onClick={decoratedOnClick}>
+      {children}
     </div>
   );
 }
 
-function Accord({ data }) {
-  const [open, setOpen] = useState([false, 0]);
+function Accord() {
+  const lan = useLanguage();
+  const data = lan.footer;
   return (
-    <div key={data}>
-      <Accordion className={styles.accord}>
-        {data.map((e, index) => (
-          <Card className={styles.accord_card} key={`${index}_footer_link`}>
-            <Card.Header
-              className={styles.bg_transparent}
-              data-open={index === open[1] && open[0] ? "open" : "closed"}>
-              <CustomToggle
-                eventkey={index}
-                onClick={() => setOpen([!open[0], index])}>
-                {e.title}
-              </CustomToggle>
-            </Card.Header>
-            <Accordion.Collapse eventKey={index}>
-              <Card.Body className={styles.accord_card_body}>
-                <ul>
-                  {e.links.map((value, index) => (
-                    <li key={`${index}_footeraccord_list`}>{value.title}</li>
-                  ))}
-                </ul>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        ))}
-      </Accordion>
-    </div>
+    <Accordion className={styles.footeraccord}>
+      {data && (
+        <Card
+          className={styles.accordcard}
+          style={{
+            borderTop: "2px solid rgba(119, 119, 119, 0.2)",
+          }}>
+          <Card.Header className={styles.accordcardheader}>
+            <CustomToggle eventKey="0">
+              {data[0].title} <AiOutlinePlus />
+            </CustomToggle>
+          </Card.Header>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body className={styles.accordcardbody}>
+              <div
+                className={`${styles.footercardlink} ${styles.accordfootercardlink}`}>
+                {data[0].links.map((item, index) => (
+                  <Link key={index} href={item.link}>
+                    <a>{item.text}</a>
+                  </Link>
+                ))}
+              </div>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      )}
+      {data && (
+        <Card className={styles.accordcard}>
+          <Card.Header className={styles.accordcardheader}>
+            <CustomToggle eventKey="1">
+              {data[1].title} <AiOutlinePlus />
+            </CustomToggle>
+          </Card.Header>
+          <Accordion.Collapse eventKey="1">
+            <Card.Body className={styles.accordcardbody}>
+              <div
+                className={`${styles.footercardlink} ${styles.accordfootercardlink}`}>
+                {data[1].links.map((item, index) => (
+                  <Link key={index} href={item.link}>
+                    <a>{item.text}</a>
+                  </Link>
+                ))}
+              </div>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      )}
+      {data && (
+        <Card className={styles.accordcard}>
+          <Card.Header className={styles.accordcardheader}>
+            <CustomToggle eventKey="2">
+              {data[2].title} <AiOutlinePlus />
+            </CustomToggle>
+          </Card.Header>
+          <Accordion.Collapse eventKey="2">
+            <Card.Body className={styles.accordcardbody}>
+              <div
+                className={`${styles.footercardlink} ${styles.accordfootercardlink}`}>
+                {data[2].links.map((item, index) => (
+                  <Link key={index} href={item.link}>
+                    <a target={"_blank"} rel="noreferrer">
+                      {item.text}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      )}
+    </Accordion>
   );
 }
 

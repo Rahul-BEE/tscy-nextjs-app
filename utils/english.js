@@ -1310,76 +1310,68 @@ const english = {
       location: "Al-Bahri Road, Musqat, Oman",
     },
   },
-  footer: {
-    cardlinksdata: [
-      {
-        title: "About",
-        links: [
-          {
-            title: "What We Do",
-            link: "/about",
-          },
-          // {
-          //   title: "Careers",
-          //   link: "/",
-          // },
-          {
-            title: "Press and News",
-            link: "/news",
-          },
-          // {
-          //   title: "Life at a Glance",
-          // },
-          {
-            title: "Find Your Dream Home",
-            link: "/floorplan",
-          },
-        ],
-      },
-      {
-        title: "Support",
-        links: [
-          {
-            title: "Reach out to us",
-            link: "/contact",
-          },
-          {
-            title: "Become a Broker",
-            link: "/contact?broker=true",
-          },
-          // {
-          //   title: "Language Support",
-          //   link: "",
-          // },
-          // {
-          //   title: "Help and Support",
-          //   link: "",
-          // },
-        ],
-      },
-      {
-        title: "More",
-        links: [
-          {
-            title: "Diamond Developers",
-            link: "https://www.diamond-developers.ae",
-          },
-          {
-            title: "Omran",
-            link: "https://www.omran.om",
-          },
-          {
-            title: "TSC - Dubai",
-            link: "https://www.thesustainablecity.ae",
-          },
-          {
-            title: "TSC - Sharjah",
-            link: "https://www.sharjahsustainablecity.ae",
-          },
-        ],
-      },
-    ],
-  },
+  footer: [
+    {
+      title: "Navgation",
+      links: [
+        {
+          text: "Find your dream home",
+          link: "/floorplan",
+        },
+        {
+          text: "Newsroom",
+          link: "/news",
+        },
+        {
+          text: "About us",
+          link: "/about",
+        },
+      ],
+    },
+    {
+      title: "Support",
+      links: [
+        {
+          text: "Reach out to us",
+          link: "/contact",
+        },
+        {
+          text: "Become a broker",
+          link: "/contact?broker=true",
+        },
+      ],
+    },
+    {
+      title: "More from TSC",
+      links: [
+        {
+          text: "About diamond developers",
+          link: "https://diamond-developers.ae/",
+        },
+        {
+          text: "TSC - Dubai",
+          link: "https://www.thesustainablecity.ae/",
+        },
+        {
+          text: "TSC - Sharjah",
+          link: "https://www.sharjahsustainablecity.ae/",
+        },
+      ],
+    },
+    {
+      title: "Contact Information",
+      links: [
+        {
+          title: "Email:",
+          link: "hello@thesustainablecity-yiti.com",
+        },
+        {
+          title: "Toll-free:",
+          link: "+968 8000 33 33",
+        },
+      ],
+    },
+  ],
 };
 
 export default english;
