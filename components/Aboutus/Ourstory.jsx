@@ -65,18 +65,36 @@ const Ourstory = () => {
           <h3>{lan.commontext.ourstory}</h3>
           <p>
             {data.story.p1}
-            <span>{data.story.s1}</span>
+            <Link href={"https://omran.om/"} passHref>
+              <a target={"_blank"}>
+            <span
+             style={{
+              textDecoration: "underline",
+            }}
+            >{data.story.s1}</span>
+            </a>
+            </Link>
             {data.story.p2}
-            <span>{data.story.s2}</span>
+            <Link href={"https://diamond-developers.ae/"} passHref>
+              <a target={"_blank"}>
+            <span
+             style={{
+              textDecoration: "underline",
+            }}
+            >{data.story.s2}</span>
+            </a>
+            </Link>
             {data.story.p3}
           </p>
-
+          
           <p
             style={{
               marginTop: "2rem",
             }}
           >
             {data.story.p4} <span>{data.story.s3}</span> {data.story.p5}
+            <Link href={"https://www.thesustainablecity.ae/"} passHref>
+              <a target={"_blank"}>
             <span
               style={{
                 textDecoration: "underline",
@@ -84,6 +102,8 @@ const Ourstory = () => {
             >
               {data.story.s4}
             </span>
+            </a>
+            </Link>
             {data.story.p6}
           </p>
         </div>
