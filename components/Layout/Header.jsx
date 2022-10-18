@@ -162,8 +162,7 @@ const Header = () => {
             color={
               domYOffset || location.pathname !== "/" ? "#058da6" : "white"
             }
-            size={40}
-            className="me-3"
+            size={35}
             onClick={() => setShow(true)}
           />
         </button>
