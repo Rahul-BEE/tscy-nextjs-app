@@ -464,7 +464,7 @@ const english = {
   },
   villaplansection: {
     title1: "Redefining living with our",
-    title2: "Our Villas",
+    title2: "Choose Your Villa",
     btntext: "see details",
     proptext: "property features",
     villas: [
