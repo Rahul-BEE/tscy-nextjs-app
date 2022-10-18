@@ -16,7 +16,10 @@ import Bin from "../public/Svg/floorplans/cards/bin.svg";
 import Drop from "../public/Svg/floorplans/cards/drop.svg";
 import House from "../public/Svg/floorplans/cards/house.svg";
 import Car from "../public/Svg/floorplans/cards/car.svg";
-
+import Plant from "../public/Svg/floorplans/cards/plant.svg";
+import World from "../public/Svg/floorplans/cards/world.svg";
+import SmartHouse from "../public/Svg/floorplans/cards/smarthouse.svg";
+import Station from "../public/Svg/floorplans/cards/station.svg";
 import Bedroomp from "../public/Svg/bedroom.svg";
 import MaidRoomp from "../public/Svg/maidroom.svg";
 import Bathroomp from "../public/Svg/bathroom.svg";
@@ -915,6 +918,9 @@ const arabic = {
     press: "الصحافة",
     ourstory: "قصتنا",
     sendmessage: "إرسال رسالة",
+    diamonddevelopers: "Diamond Developers",
+    cpyright: "© Diamond Developers International Ltd. 2022",
+    language: "English",
   },
   propertyFeatures: [
     {
@@ -1035,7 +1041,7 @@ const arabic = {
   //       وستركز المرحلة الأولى من المشروع التي سُتنفذ على مساحة تصل إلى 900,000 مترًا مربعًا على إنشاء مشروع سياحي مستدام متعدد الاستخدامات، كما يحتفي المشروع الأول من نوعه في السلطنة بأنماط الحياة المستدامة. وستضم هذه المرحلة مجموعة من المرافق الرئيسية كالمتنزهات والمرافق العامة والوحدات السكنية والمحلات التجارية والمرافق التعليمية. وسيتسنى للزوار والقاطنين في المدينة التمتع بمجموعة واسعة من الخيارات والتجارب تتضمن مرافق للضيافة، والمطاعم والمقاهي ومركزاً للفروسية. ومن المؤمل أن يتم إطلاقه رسمياً والكشف عن كافة تفاصيله في وقت قريب لاحق.
   //       <br>
   //       <br>
-  //       وحول أهمية هذه الشراكة التطويرية، قال هاشل بن عبيد المحروقي، الرئيس التنفيذي لمجموعة عُمران: "يشكل تعاون مجموعة عُمران مع دايموند للتطوير العقاري لتنفيذ المرحلة الأولى من مشروع يتي السياحي المتكامل انطلاقة فارقة نستهل من خلالها العمل على بلورة الأهداف الموضوعة من خلال تنفيذ جزء حيوي من المخطط الرئيسي لهذا المشروع. كما يعكس توقيع هذه الاتفاقية رؤية المجموعة واستراتيجيتها الرامية إلى دفع عجلة التنمية السياحية في السلطنة من خلال جذب الاستثمار الأجنبي المباشر بما يتوافق مع توجهات جهاز الاستثمار العماني وأهداف رؤية عُمان 2040 والاستراتيجية الوطنية للسياحة في دعم الاقتصاد الوطني." 
+  //       وحول أهمية هذه الشراكة التطويرية، قال هاشل بن عبيد المحروقي، الرئيس التنفيذي لمجموعة عُمران: "يشكل تعاون مجموعة عُمران مع دايموند للتطوير العقاري لتنفيذ المرحلة الأولى من مشروع يتي السياحي المتكامل انطلاقة فارقة نستهل من خلالها العمل على بلورة الأهداف الموضوعة من خلال تنفيذ جزء حيوي من المخطط الرئيسي لهذا المشروع. كما يعكس توقيع هذه الاتفاقية رؤية المجموعة واستراتيجيتها الرامية إلى دفع عجلة التنمية السياحية في السلطنة من خلال جذب الاستثمار الأجنبي المباشر بما يتوافق مع توجهات جهاز الاستثمار العماني وأهداف رؤية عُمان 2040 والاستراتيجية الوطنية للسياحة في دعم الاقتصاد الوطني."
   //       <br>
   //       <br>
   //       وأضاف المحروقي: "يسرنا التعاون مع شركة دايموند للتطوير العقاري باعتبارها إحدى الشركات التي وضعت بصمتها جليًا في إنشاء المدن المستدامة في المنطقة، بما ينسجم مع منهجيتنا الراسخة في تطبيق أسس صناعة المكان وتأصيل الاستدامة في نمط الحياة وعبر جميع مكونات المشروع."
@@ -1045,7 +1051,7 @@ const arabic = {
   //       <br>
   //       <br>
   //       تأسست "دايموند للتطوير العقاري" في العام 2003، وتُعد شركة رائدة في مجال التطوير العقاري في دبي حيث طورت أول مدينة مستدامة متكاملة ضمن فئتها على مستوى العالم. تمتلك الشركة سجلاً حافلاً بالإنجازات، وتجسد تغييراً جذرياً في مفهوم بناء مدن المستقبل الذكية والمستدامة التي تحسن من جودة الحياة وتحقق أهداف اتفاقية باريس للمناخ 2050. كما تعمل الشركة من خلال شراكاتها الاستراتيجية على دعم وتمكين شركائها في جميع أنحاء العالم من الوصول إلى مدن المستقبل، اليوم".
-  
+
   // `,
   //     },
   //     {
@@ -1112,21 +1118,27 @@ const arabic = {
         discription: `تحتفل اليوم شركة دايموند ديفيلوبرز - المتخصصة في تطوير المدن المستدامة – وبالشراكة مع الشركة العُمانية للتنمية السياحية (مجموعة عُمران) عن إطلاق مشروع المدينة المستدامة - يتي في مسقط، بتكلفة إجمالية تبلغ قرابة مليار دولار، والذي يمثل أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في سلطنة عُمان.<br><br>وتمثل المدينة المستدامة - يتي التي سيجري تطويرها ضمن المرحلة الأولى في المخطط العام لمشروع يتي السياحي المتكامل - أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في السلطنة على مساحة إجمالية تصل إلى مليون متراً مربعاً. ويتميز بموقعه الفريد في ولاية مسقط وبإطلالته على بحر عُمان ومقوماته الطبيعية الثرية، من الشطآن الممتدة والجبال والمنحدرات الصخرية، فضلاً عن الأودية التي تتناغم ضمن طبوغرافية الموقع، ما يضفي قيمة تنافسية جديرة بالاهتمام للمشروع. <br><br>وحول ذلك، قال فارس سعيد، رئيس مجلس إدارة شركة دايموند ديفيلوبرز للتطوير العقاري: "لا تقتصر أهمية هذا المشروع على كونه نموذجاً يحتذى به للتطوير العُمراني المستدام، بل إنه يُعد ايضاً مجتمعاً متكاملاً يضم مرافق سكنية وخدمية مختلفة، ويحتضن الآلاف من المقيمين، والزوار، والطلبة، والباحثين."<br><br>وأضاف "ستكون المدينة المستدامة – يتي من بين أكثر المشاريع استدامة على مستوى المنطقة، ونسعى من خلال توظيف أحدث الحلول في إنتاج الطاقة، وإعادة التدوير، وإنتاج الماء من الهواء، والزراعة العمودية، والنقل ذاتي القيادة وغيرها إلى تحقيق الحياد الكربوني بحلول العام ٢٠٤٠، بما يتوافق مع أهداف التنمية المستدامة واتفاقية باريس للمناخ، ونتطلع في دايموند ديفيلوبرز إلى المضي قدماً في دعم جهود الحفاظ على البيئة وتعزيز التنمية المستدامة في المنطقة وأن نُسهم في الانتقال الفاعل نحو اقتصاد منخفض الكربون."<br><br>ومن جانبه قال المهندس محمد بن سالم البوسعيدي، رئيس مجلس مجموعة عُمران: "يعد التعاون مع دايموند ديفيلوبرز لإطلاق المدينة المستدامة - يتي علامة فارقة في رحلتنا نحو تحفيز الاستثمار وتطوير إمكانات القطاع السياحي في السلطنة، حيث يعتبر ضمن أكبر مشروعات التطوير الحضري التي يجري تطويرها في منطقة الشرق الأوسط، الأمر الذي يؤهله لفتح آفاق واعدة لجذب الاستثمارات المحلية والأجنبية وذلك موائمةً مع توجهات جهاز الاستثمار العُماني. وتماشيا مع جهود السلطنة نحو التحول إلى الاقتصاد الدائري الأخضر وخفض الانبعاثات الكربونية،<br><br>فإن المشروع يلبي أعلى معايير الاستدامة ويجسد رؤيتنا المتمثلة في صناعة وجهات تتناغم بشكل تام مع الثراء الطبيعي وفق أعلى درجات الحفاظ على البيئة."<br><br>ومن المخطط أن ينتهي إنجاز المشروع بحلول عام ٢٠٢٥، وسيوفر ١٦٥٧ وحدة سكنية، تتضمن ٣٠٠ فيلا صديقة للبيئة بتصاميم عصرية وعالية الكفاءة ومساحات متنوعة للفلل المؤلفة من ٣ و٤ غرف نوم، كما يتيح فرص توفير كبيرة للسكان في فواتير التشغيل والخدمات.<br><br>وتماشيا مع أهداف الأمم المتحدة للتنمية المستدامة نحو تقليل الاعتماد على مصادر الطاقة غير النظيفة، ستعتمد المدينة على مصادر الطاقة المتجددة بالكامل لتشغيل كافة مرافقها، حيث تنتج ١٠٠٪ من طاقتها في المرحلة التشغيلية عبر الألواح الشمسية والغاز الحيوي كما تقوم بإعادة تدوير المياه والنفايات العضوية بنسبة ١٠٠٪ إضافة إلى إعادة استعمال المياه المعاد تدويرها لري المناطق الزراعية والمساحات الخضراء، بالإضافة لتوفير مساحات زراعية خاصة للسكان.<br><br>وتعمل المدينة على تقليل انبعاثاتها الكربونية من خلال تطبيق أفضل الممارسات البيئية مثل الاعتماد على المركبات الكهربائية، والعربات ذاتية القيادة للتنقل داخل المدينة، وتوفير محطات شحن السيارات الكهربائية، كما تتميز المناطق السكنية بخلوها من السيارات مما يوفر بيئة آمنة للعائلات ويشجع على خلق علاقات اجتماعية متينة بين السكان.<br><br>كما يشمل المشروع مدرسة تعتمد غرس مفاهيم الاستدامة في مناهجها للجيل القادم، بالإضافة إلى مختبر (سي) الذي يعرض أبرز حلول الاستدامة كتقنيات الطاقة المتجددة والزراعة العمودية وغيرها من الحلول البيئية علاوة على زيادة الوعي البيئي وتسريع بناء مدن المستقبل.<br><br>وتهدف المدينة المستدامة أيضا إلى تعزيز نمط الحياة الصحية، حيث تحتوي على مراكز صحية ورياضية ومرافق للركض وركوب الدراجات ونادي للفروسية ومضمار للخيل، بالإضافة إلى مجموعة من المحلات التجارية والمطاعم، والمقاهي، والمراكز الفنية، والثقافية.<br><br>ولدعم قطاع الضيافة تحتضن المدينة منتجع من فئة الخمس نجوم يحتوي على ١٧٠ غرفة بالإضافة إلى ١٣٢ شقة فندقية فاخرة، وفندق من فئة الأربع نجوم يحتوي على ١٩٧ غرفة، توفر هذه الفنادق أعلى مستويات الخدمة والرفاهية بالإضافة لإمكانية الوصول إلى الشاطئ والاستمتاع بمختلف النشاطات البحرية.`,
       },
       {
-        slug:"ramadan-begins-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"29th July, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img3.jpg",
-          type:"news",
-          heading:"Britain starts to open up, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue.",
-          discription:["April 22, 2012, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue. Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent."
-            ,"OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group."
-            ,"We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
-            ,"The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year."
-            ,"Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy."
-            ,"Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today."
-          ]
+        slug: "ramadan-begins-news",
+        title: [
+          "The Sustainable City - Yiti Signs Escrow",
+          "Agreement with Sohar Islamic",
+        ],
+        date: "29th July, 2022",
+        city: "Muscat",
+        country: "Oman",
+        image: "/Images/news/news_img3.jpg",
+        type: "news",
+        heading:
+          "Britain starts to open up, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue.",
+        discription: [
+          "April 22, 2012, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue. Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+          "OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group.",
+          "We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
+          ,
+          "The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year.",
+          "Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy.",
+          "Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today.",
+        ],
       },
     ],
   },
@@ -1191,6 +1203,38 @@ const arabic = {
         title2: "Energy",
         description:
           "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+      },
+      {
+        id: 4,
+        icon: <Station />,
+        title1: "EV Charging",
+        title2: "Stations",
+        description:
+          "EV chargers are distributed around our cities to further promote the use of electric cars.",
+      },
+      {
+        id: 5,
+        icon: <SmartHouse />,
+        title1: "Smart",
+        title2: "Home",
+        description:
+          "By integrating smart technologies to manage our systems, we are able to drive higher efficiencies across all platforms, allowing us to maximise the use of our assets and resources.",
+      },
+      {
+        id: 6,
+        icon: <Plant />,
+        title1: "Low-Carbon",
+        title2: "Embodiment",
+        description:
+          "We aim to maximise the use of low-embodied carbon materials and products in order to help us achieve our net zero carbon goals.",
+      },
+      {
+        id: 7,
+        icon: <World />,
+        title1: "Food",
+        title2: "Production",
+        description:
+          "By facilitating community gardening initiatives, residents are encouraged to grow their own food and further promote local food production within our developments.",
       },
     ],
   },
@@ -1340,76 +1384,68 @@ const arabic = {
       location: "Al-Bahri Road, Musqat, Oman",
     },
   },
-  footer: {
-    cardlinksdata: [
-      {
-        title: "عنا",
-        links: [
-          {
-            title: "ماذا نفعل",
-            link: "/about",
-          },
-          // {
-          //   title: "",
-          // },
-          {
-            title: "الصحافة",
-            link: "/news",
-          },
-          // {
-          //   title: "المجتمع",
-          // },
-          {
-            title: "ابحث عن فيلا",
-            link: "/floorplan",
-          },
-        ],
-      },
-      {
-        title: "مساعدة",
-        links: [
-          {
-            title: "إتصل بنا",
-            link: "/contact",
-          },
-          {
-            title: "كن وسيطاً عقارياً",
-            link: "/contact?broker=true",
-          },
-          // {
-          //   title: "Language Support",
-          // },
-          {
-            // title: "بلغ عن مشكلة",
-          },
-        ],
-      },
-      {
-        title: "المزيد ",
-        links: [
-          // {
-          //   title: "About Us",
-          // },
-          {
-            title: "دايموند ديفلوبرز",
-            link: "https://www.diamond-developers.ae",
-          },
-          {
-            title: "عمران",
-            link: "https://www.omran.om",
-          },
-          {
-            title: "المدينة المستدامة - دبي",
-            link: "https://www.thesustainablecity.ae",
-          },
-          {
-            title: "المدينة المستدامة - الشارقة",
-            link: "https://www.sharjahsustainablecity.ae",
-          },
-        ],
-      },
-    ],
-  },
+  footer: [
+    {
+      title: "Navgation",
+      links: [
+        {
+          text: "Find your dream home",
+          link: "/floorplan",
+        },
+        {
+          text: "Newsroom",
+          link: "/news",
+        },
+        {
+          text: "About us",
+          link: "/about",
+        },
+      ],
+    },
+    {
+      title: "Support",
+      links: [
+        {
+          text: "Reach out to us",
+          link: "/contact",
+        },
+        {
+          text: "Become a broker",
+          link: "/contact?broker=true",
+        },
+      ],
+    },
+    {
+      title: "More from TSC",
+      links: [
+        {
+          text: "About diamond developers",
+          link: "https://diamond-developers.ae/",
+        },
+        {
+          text: "TSC - Dubai",
+          link: "https://www.thesustainablecity.ae/",
+        },
+        {
+          text: "TSC - Sharjah",
+          link: "https://www.sharjahsustainablecity.ae/",
+        },
+      ],
+    },
+    {
+      title: "Contact Information",
+      links: [
+        {
+          title: "Email:",
+          link: "hello@thesustainablecity-yiti.com",
+        },
+        {
+          text: "Toll-free:",
+          link: "+968 8000 33 33",
+        },
+      ],
+    },
+  ],
 };
 
 export default arabic;

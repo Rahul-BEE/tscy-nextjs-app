@@ -1,126 +1,149 @@
 import styles from "../../styles/layout.module.scss";
-import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
-
+import Icon from "../../public/Svg/footer/footerLogo.svg";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import {
   FaInstagramSquare,
   FaFacebookSquare,
   FaLinkedin,
   FaWhatsappSquare,
+  FaTwitter,
+  FaTwitterSquare,
 } from "react-icons/fa";
-
-import React from "react";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import Accord from "./Accord";
 import Link from "next/link";
-
+import { VscGlobe } from "react-icons/vsc";
+import { useRouter } from "next/router";
 function Footer() {
   const lan = useLanguage();
-  const cardlinksdata = lan.footer.cardlinksdata;
-
+  const location = useRouter();
+  const [language, setLanguage] = useState("en");
+  const data = lan.footer;
+  const handelLanguageChange = (lang) => {
+    let lan = "";
+    if (language === "en") {
+      lan = "ar";
+    } else {
+      lan = "en";
+    }
+    localStorage.setItem("language", JSON.stringify(lan));
+    setLanguage(lan);
+    location.push(location.asPath, location.asPath, { locale: lan });
+    // window.location.reload(true);
+  };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLanguage(
+        JSON.parse(localStorage.getItem("language"))
+          ? JSON.parse(localStorage.getItem("language"))
+          : "en"
+      );
+    }
+  }, []);
   return (
-    <div>
-      {cardlinksdata && (
-        <div className={`${styles.footer}`}>
-          <div className={styles.items}>
-            <div className={styles.logo}>
-              <Image
-                width={"100px"}
-                height={"100px"}
-                src="/Logos/logo.png"
-                alt="logo"
-              />
-              <Image
-                width={"395px"}
-                height={"60"}
-                src="/Logos/logotext.png"
-                alt="logotext"
-              />
-            </div>
-            {/* top */}
-
-            <div className={styles.box}>
-              <div className={styles.cards}>
-                {cardlinksdata.map((e, index) => (
-                  <div className={styles.card} key={`${index}_footer_primary`}>
-                    <h3>{e.title}</h3>
-                    <ul>
-                      {e.links.map((value, index) => (
-                        <Link
-                          href={` ${value.link}`}
-                          passHref
-                          key={`${index}_footer_list_links`}
-                        >
-                          <li>{value.title}</li>
-                        </Link>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              <div className={styles.newsletter}>
-                <div className={styles.card}>
-                  {/* <h3>Stay Updated</h3>
-                  <p>By Signing up to our newsletter</p>
-                  <div className={styles.newsletter_box}>
-                    <input
-                      type="email"
-                      name=""
-                      id=""
-                      placeholder="Enter your email address"
-                    />
-                    <span>
-                      <IoIosArrowDroprightCircle />
-                    </span>
-                  </div> */}
-                  {/* <h3>Contact Information</h3>
-                  <h6>Email:</h6>
-                  <h6>hello@thesustainablecity-yiti.com</h6>
-                  <h6>Toll-free</h6>
-                  <h6>+96880003333</h6> */}
-
-                  <div className={styles.social_icons}>
-                    <FaLinkedin color="#0077B5" className={styles.icon} />
-                    <FaFacebookSquare color="#3A559F" className={styles.icon} />
-                    <FaWhatsappSquare color="#29A71A" className={styles.icon} />
-                    <FaInstagramSquare
-                      color="#E14478"
-                      className={styles.icon}
-                    />
-                  </div>
+    <div className={styles.footer}>
+      <div className={styles.innerFooter}>
+        <div className={styles.footerLogoContainer}>
+          <Link
+            href={"/"}
+            passHref
+            style={{
+              cursor: "pointer",
+            }}>
+            <Icon id="footericonhead" />
+          </Link>
+        </div>
+        <div className={styles.footercontent}>
+          <div className={styles.mainfooter}>
+            {data && (
+              <div className={styles.footercard}>
+                <h4>{data[0].title}</h4>
+                <div className={styles.footercardlink}>
+                  {data[0].links.map((item, index) => (
+                    <Link key={index} href={item.link}>
+                      <motion.a>{item.text}</motion.a>
+                    </Link>
+                  ))}
                 </div>
               </div>
-            </div>
-
-            {/* mobile viww */}
-            <Accord data={cardlinksdata} />
-
-            <div className={styles.mobile_social_icon}>
-              <div className={styles.social_icons}>
-                <FaLinkedin color="#0077B5" className={styles.icon} />
-                <FaFacebookSquare color="#3A559F" className={styles.icon} />
-                <FaWhatsappSquare color="#29A71A" className={styles.icon} />
-                <FaInstagramSquare color="#E14478" className={styles.icon} />
+            )}
+            {data && (
+              <div className={styles.footercard}>
+                <h4>{data[1].title}</h4>
+                <div className={styles.footercardlink}>
+                  {data[1].links.map((item, index) => (
+                    <Link key={index} href={item.link}>
+                      <motion.a>{item.text}</motion.a>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* copyright */}
-            <div className={styles.footer_bottom}>
-              <div className={`flex ${styles.bottom_items} `}>
-                <h4>Diamond Developers</h4>
-                <p>&copy; Diamond Developers Co. Ltd. 2022</p>
+            )}
+            {data && (
+              <div className={styles.footercard}>
+                <h4>{data[2].title}</h4>
+                <div className={styles.footercardlink}>
+                  {data[2].links.map((item, index) => (
+                    <Link key={index} href={item.link}>
+                      <motion.a target={"_blank"} rel="noreferrer">
+                        {item.text}
+                      </motion.a>
+                    </Link>
+                  ))}
+                </div>
               </div>
-
-              <div className={`flex ${styles.mobile_none}`}>
-                <h4>{lan.header.langbtn}</h4>
-                {/* <h4>AED</h4> */}
+            )}
+          </div>
+          <Accord />
+          <div className={styles.contactinfo}>
+            <h4>{data[3].title}</h4>
+            {data[3].links.map((item, index) => (
+              <div key={index}>
+                <h6>{item.title}</h6>
+                <p>{item.link}</p>
               </div>
+            ))}
+            <div className={styles.socialIcons}>
+              <Link href={"/"}>
+                <a>
+                  <FaLinkedin color="#0077B5" />
+                </a>
+              </Link>
+              <Link href={"/"}>
+                <a>
+                  <FaTwitterSquare color="#50ABF1" />
+                </a>
+              </Link>
+              <Link href={"/"}>
+                <a>
+                  <FaFacebookSquare color="#3A559F" />
+                </a>
+              </Link>
+              <Link href={"/"}>
+                <a>
+                  <FaInstagramSquare color="#E14478" />
+                </a>
+              </Link>
             </div>
-
-            <br />
           </div>
         </div>
-      )}
+        <div className={styles.footercopyright}>
+          <hr />
+          <div className={styles.footercpycontent}>
+            <div className={styles.left}>
+              <h6>{lan.commontext.diamonddevelopers} </h6>
+              <p>{lan.commontext.cpyright}</p>
+            </div>
+            <div
+              className={styles.right}
+              onClick={() => handelLanguageChange()}>
+              <VscGlobe /> {lan.commontext.language}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

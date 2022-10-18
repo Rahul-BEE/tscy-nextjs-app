@@ -31,6 +31,7 @@ const Masterplan = () => {
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [desktop, setDesktop] = useState(true);
+  const [animating, setAnimating] = useState(false);
   const [constrains, setConstrains] = useState({
     right: 0,
     left: 0,
@@ -107,6 +108,7 @@ const Masterplan = () => {
 
   const zoomHandler = async (state) => {
     if (state) {
+      setAnimating(true);
       await zoomAnimation.start({
         x: move.x,
         y: 0,
@@ -116,16 +118,22 @@ const Masterplan = () => {
         },
       });
       setZoom(state);
+      setAnimating(false);
     } else {
+      setAnimating(true);
       await zoomAnimation.start({
-        x: move.x,
+        x: Math.abs(move.x) > 1200 ? -500 : move.x,
         y: 0,
         scale: 1,
         transition: {
           duration: 0.5,
         },
       });
+      if (Math.abs(move.x) > 1200) {
+        setMove({ x: -500, y: 0 });
+      }
       setZoom(state);
+      setAnimating(false);
     }
   };
   const setNewConstraints = useCallback(() => {
@@ -244,6 +252,7 @@ const Masterplan = () => {
               animate={zoomAnimation}
               ref={imageContainerRef}
               drag
+              dragListener={!animating}
               onDrag={scrollHandler}
               onDragEnd={dragHandler}
               dragElastic={false}

@@ -8,13 +8,14 @@
 
         .cardContainer {
             display: grid;
-            gap: min(2%, 50px);
+            column-gap: 40px;
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
             align-items: start;
             margin-block: 2rem;
             margin-inline: auto;
             max-width: 1500px;
+            row-gap: 40px;
 
             .card {
                 background-color: white;
@@ -89,9 +90,10 @@
 
         .cardContainer2 {
             display: none;
-            gap: 1rem;
+            margin-top: 2rem;
             justify-items: center;
-            grid-template-rows: 150px 150px;
+            grid-template-rows: 1fr;
+            row-gap: 40px;
 
             .cardHeader {
                 width: 100%;

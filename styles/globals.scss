@@ -13,7 +13,7 @@ body {
   &:lang(ar) {
     font-family: "Tajawal", sans-serif !important;
     direction: rtl !important;
-      text-align: right !important;
+    text-align: right !important;
   }
 }
 
@@ -131,7 +131,6 @@ a {
   font-style: normal;
   font-weight: 600;
   font-size: 1.9375rem;
-  line-height: 58px;
   text-align: center;
   background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
   -webkit-background-clip: text;

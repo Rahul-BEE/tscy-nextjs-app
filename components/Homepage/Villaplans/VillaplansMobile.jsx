@@ -6,26 +6,48 @@ import { useRef } from "react";
 import useLanguage from "../../../utils/useLanguage";
 import Image from "next/image";
 
+import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../../public/Svg/homevillaplan/bedroom.svg";
 import Parking from "../../../public/Svg/homevillaplan/parking.svg";
 import Garden from "../../../public/Svg/homevillaplan/garden.svg";
 import Bathroom from "../../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../../public/Svg/homevillaplan/maidroom.svg";
 import Link from "next/link";
+import { useAppContext } from "../../../context/AppContext";
 
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
-
+  const { state, dispatch } = useAppContext();
   const test = useAnimation();
-
+  const [showForm, setShowForm] = useState(false);
+  const [dataReceived, setDataReceived] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [activeVilla, setActiveVilla] = useState(0);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
+  const handleUserInput = () => {
+    let data = {
+      email,
+      name,
+      phone,
+    };
+    dispatch({
+      type: "updateuser",
+      value: data,
+    });
+    //sent data to the backend
+    setDataReceived(true);
+  };
+  const handleClick = (id) => {
+    setShowForm(true);
+  };
 
   const changeVilla = (index) => {
     setActiveVilla(index);
     setVilla(lan.villaplansection.villas[index]);
-
+    setShowForm(false);
     if (index === 1) {
       test.start({
         x: -100,
@@ -45,7 +67,7 @@ function VillaplansMobile() {
     <div className={styles.section_villaplan_mobile}>
       <Row className="headingRow">
         <Col>
-          <h5 className="sectionsubHeading">Redefining living with our</h5>
+          {/* <h5 className="sectionsubHeading">Redefining living with our</h5> */}
           <h2 className="sectionmainHeading">BEDROOM VILLA PLANS</h2>
         </Col>
       </Row>
@@ -82,15 +104,49 @@ function VillaplansMobile() {
         </Col>
       </Row>
       <div className={styles.villadownload}>
-        <div className={styles.download_content}>
-          {lan.commontext.download} {lan.commontext.brochure}
-        </div>
-        <div className={styles.download_content}>
-          {lan.commontext.download} {lan.commontext.floorplan}
-        </div>
-        <div className={styles.download_content}>
-          {lan.commontext.registerinterest}
-        </div>
+        <motion.div
+          onClick={() => handleClick(1)}
+          className={styles.download_content}
+          whileHover={{
+            backgroundColor: "#058DA6",
+            color: "#fff",
+          }}>
+          {lan.commontext.download} {lan.commontext.brochure}{" "}
+          <BsArrowDownCircle
+            style={{
+              marginLeft: "0.5rem",
+            }}
+          />
+        </motion.div>
+        <motion.div
+          onClick={() => handleClick(2)}
+          className={styles.download_content}
+          whileHover={{
+            backgroundColor: "#058DA6",
+            color: "#fff",
+          }}>
+          {lan.commontext.download} {lan.commontext.floorplan}{" "}
+          <BsArrowDownCircle
+            style={{
+              marginLeft: "0.5rem",
+            }}
+          />
+        </motion.div>
+        <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+          <motion.div
+            className={styles.download_content}
+            whileHover={{
+              backgroundColor: "#058DA6",
+              color: "#fff",
+            }}>
+            {lan.commontext.seedetails}{" "}
+            <BsArrowRightCircle
+              style={{
+                marginLeft: "0.5rem",
+              }}
+            />
+          </motion.div>
+        </Link>
       </div>
 
       <div className={styles.villaplanImageContainer}>
@@ -101,34 +157,137 @@ function VillaplansMobile() {
           layout="responsive"
         />
       </div>
-      <div className={styles.villaplanfeatures_mobile}>
-        <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
+      {!showForm ? (
+        <div className={styles.villaplanfeatures_mobile}>
+          <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
 
-        <div className={styles.items}>
-          <p>
-            <Bedroom /> <span>{lan.commontext.bedroom}</span>
-          </p>
-          <p>
-            <Bathroom /> <span>{lan.commontext.bathroom}</span>
-          </p>
-          <p>
-            <Maidroom /> <span>{lan.commontext.maidroom}</span>
-          </p>
-          <p>
-            <Garden /> <span>{lan.commontext.privategarden}</span>
-          </p>
-          <p>
-            <Parking /> <span>{lan.commontext.parking}</span>
-          </p>
-        </div>
-        <Link
-          href={`/floorplan/${lan.villaplansection.villas[activeVilla].slug}`}
-          passHref>
-          <div>
-            <Button>{lan.commontext.seedetails}</Button>
+          <div className={styles.items}>
+            <p>
+              <Bedroom /> <span>{lan.commontext.bedroom}</span>
+            </p>
+            <p>
+              <Bathroom /> <span>{lan.commontext.bathroom}</span>
+            </p>
+            <p>
+              <Maidroom /> <span>{lan.commontext.maidroom}</span>
+            </p>
+            <p>
+              <Garden /> <span>{lan.commontext.privategarden}</span>
+            </p>
+            <p>
+              <Parking /> <span>{lan.commontext.parking}</span>
+            </p>
           </div>
-        </Link>
-      </div>
+
+          <div>
+            <Button onClick={() => handleClick()}>
+              {lan.commontext.registerinterest}
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <>
+          {dataReceived ? (
+            <div className={styles.villaplanuserform}>
+              <p>Thanks for your response.</p>
+              <div className={styles.btncontainer}>
+                <motion.div
+                  onClick={() => handleClick(1)}
+                  className={styles.download_content}
+                  whileHover={{
+                    color: "#058DA6",
+                    backgroundColor: "#fff",
+                  }}>
+                  {lan.commontext.download} {lan.commontext.brochure}{" "}
+                </motion.div>
+                <motion.div
+                  onClick={() => handleClick(2)}
+                  className={styles.download_content}
+                  whileHover={{
+                    color: "#058DA6",
+                    backgroundColor: "#fff",
+                  }}>
+                  {lan.commontext.download} {lan.commontext.floorplan}{" "}
+                </motion.div>
+                <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+                  <motion.div
+                    className={styles.download_content}
+                    whileHover={{
+                      color: "#058DA6",
+                      backgroundColor: "#fff",
+                    }}>
+                    {lan.commontext.seedetails}{" "}
+                    <BsArrowRightCircle
+                      style={{
+                        marginLeft: "0.5rem",
+                      }}
+                    />
+                  </motion.div>
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div className={styles.villaplanuserform}>
+              <p className={styles.heading}>Add your details</p>
+              <div className={styles.userformcontainer}>
+                <form className={styles.userform}>
+                  <div className={styles.formItem}>
+                    <label htmlFor="name">
+                      {lan.contact.register.formdata.name.title}
+                    </label>
+                    <input
+                      type={"text"}
+                      value={name}
+                      required
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder={
+                        lan.contact.register.formdata.name.placeholder
+                      }
+                    />
+                  </div>
+                  <div className={styles.formItem}>
+                    <label htmlFor="email">
+                      {lan.contact.register.formdata.email.title}
+                    </label>
+                    <input
+                      type={"email"}
+                      value={email}
+                      required
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder={
+                        lan.contact.register.formdata.email.placeholder
+                      }
+                    />
+                  </div>
+                  <div className={styles.formItem}>
+                    <label htmlFor="name">
+                      {lan.contact.register.formdata.phone.title}
+                    </label>
+                    <input
+                      type={"text"}
+                      value={phone}
+                      required
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder={
+                        lan.contact.register.formdata.phone.placeholder
+                      }
+                    />
+                  </div>
+                </form>
+              </div>
+              <div className={styles.resgisterinterestbtn}>
+                <motion.button
+                  onClick={() => handleUserInput()}
+                  whileHover={{
+                    scale: 1.02,
+                  }}>
+                  {lan.commontext.registerinterest}
+                </motion.button>
+              </div>
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }

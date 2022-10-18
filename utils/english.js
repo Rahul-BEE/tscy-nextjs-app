@@ -16,6 +16,10 @@ import Bin from "../public/Svg/floorplans/cards/bin.svg";
 import Drop from "../public/Svg/floorplans/cards/drop.svg";
 import House from "../public/Svg/floorplans/cards/house.svg";
 import Car from "../public/Svg/floorplans/cards/car.svg";
+import Plant from "../public/Svg/floorplans/cards/plant.svg";
+import World from "../public/Svg/floorplans/cards/world.svg";
+import SmartHouse from "../public/Svg/floorplans/cards/smarthouse.svg";
+import Station from "../public/Svg/floorplans/cards/station.svg";
 
 import Bedroomp from "../public/Svg/bedroom.svg";
 import MaidRoomp from "../public/Svg/maidroom.svg";
@@ -977,6 +981,9 @@ const english = {
     parking: "Parking",
     press: "Press and News",
     ourstory: "Our Story",
+    diamonddevelopers: "Diamond Developers",
+    cpyright: "© Diamond Developers International Ltd. 2022",
+    language: "Arabic",
   },
   tracks: [
     {
@@ -1094,21 +1101,27 @@ const english = {
     ]
       },
       {
-        slug:"ramadan-begins-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"29th July, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img3.jpg",
-          type:"news",
-          heading:"Britain starts to open up, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue.",
-          discription:["April 22, 2012, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue. Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent."
-            ,"OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group."
-            ,"We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
-            ,"The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year."
-            ,"Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy."
-            ,"Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today."
-          ]
+        slug: "ramadan-begins-news",
+        title: [
+          "The Sustainable City - Yiti Signs Escrow",
+          "Agreement with Sohar Islamic",
+        ],
+        date: "29th July, 2022",
+        city: "Muscat",
+        country: "Oman",
+        image: "/Images/news/news_img3.jpg",
+        type: "news",
+        heading:
+          "Britain starts to open up, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue.",
+        discription: [
+          "April 22, 2012, Ramadan begins. It feels like perfect timing, with Russia cheif army scrubbling over the issue. Thus, when using the definite article, the speaker assumes the listener knows the identity of the noun’s referent (because it is obvious, because it is common knowledge, or because it was mentioned in the same sentence or an earlier sentence). Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent. Use of an indefinite article implies that the speaker assumes the listener does not have to be told the identity of the referent.",
+          "OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group.",
+          "We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
+          ,
+          "The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year.",
+          "Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy.",
+          "Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today.",
+        ],
       },
     ],
   },
@@ -1169,10 +1182,42 @@ const english = {
       {
         id: 3,
         icon: <Bin />,
-        title1: "Waste to",
+        title1: "Renewable",
         title2: "Energy",
         description:
-          "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+          "We rely on clean renewable sources to generate energy for our cities. These systems include but are not limited to solar PV cells, biogas plants and wind turbines.",
+      },
+      {
+        id: 4,
+        icon: <Station />,
+        title1: "EV Charging",
+        title2: "Stations",
+        description:
+          "EV chargers are distributed around our cities to further promote the use of electric cars.",
+      },
+      {
+        id: 5,
+        icon: <SmartHouse />,
+        title1: "Smart",
+        title2: "Home",
+        description:
+          "By integrating smart technologies to manage our systems, we are able to drive higher efficiencies across all platforms, allowing us to maximise the use of our assets and resources.",
+      },
+      {
+        id: 6,
+        icon: <Plant />,
+        title1: "Low-Carbon",
+        title2: "Embodiment",
+        description:
+          "We aim to maximise the use of low-embodied carbon materials and products in order to help us achieve our net zero carbon goals.",
+      },
+      {
+        id: 7,
+        icon: <World />,
+        title1: "Food",
+        title2: "Production",
+        description:
+          "By facilitating community gardening initiatives, residents are encouraged to grow their own food and further promote local food production within our developments.",
       },
     ],
   },
@@ -1313,7 +1358,7 @@ const english = {
         },
         phone: {
           title: "Phone",
-          placeholder: "",
+          placeholder: "+968 000 000000",
         },
       },
     },
@@ -1324,76 +1369,68 @@ const english = {
       location: "Al-Bahri Road, Musqat, Oman",
     },
   },
-  footer: {
-    cardlinksdata: [
-      {
-        title: "About",
-        links: [
-          {
-            title: "What We Do",
-            link: "/about",
-          },
-          // {
-          //   title: "Careers",
-          //   link: "/",
-          // },
-          {
-            title: "Press and News",
-            link: "/news",
-          },
-          // {
-          //   title: "Life at a Glance",
-          // },
-          {
-            title: "Find Your Dream Home",
-            link: "/floorplan",
-          },
-        ],
-      },
-      {
-        title: "Support",
-        links: [
-          {
-            title: "Reach out to us",
-            link: "/contact",
-          },
-          {
-            title: "Become a Broker",
-            link: "/contact?broker=true",
-          },
-          // {
-          //   title: "Language Support",
-          //   link: "",
-          // },
-          // {
-          //   title: "Help and Support",
-          //   link: "",
-          // },
-        ],
-      },
-      {
-        title: "More",
-        links: [
-          {
-            title: "Diamond Developers",
-            link: "https://www.diamond-developers.ae",
-          },
-          {
-            title: "Omran",
-            link: "https://www.omran.om",
-          },
-          {
-            title: "TSC - Dubai",
-            link: "https://www.thesustainablecity.ae",
-          },
-          {
-            title: "TSC - Sharjah",
-            link: "https://www.sharjahsustainablecity.ae",
-          },
-        ],
-      },
-    ],
-  },
+  footer: [
+    {
+      title: "Navgation",
+      links: [
+        {
+          text: "Find your dream home",
+          link: "/floorplan",
+        },
+        {
+          text: "Newsroom",
+          link: "/news",
+        },
+        {
+          text: "About us",
+          link: "/about",
+        },
+      ],
+    },
+    {
+      title: "Support",
+      links: [
+        {
+          text: "Reach out to us",
+          link: "/contact",
+        },
+        {
+          text: "Become a broker",
+          link: "/contact?broker=true",
+        },
+      ],
+    },
+    {
+      title: "More from TSC",
+      links: [
+        {
+          text: "About diamond developers",
+          link: "https://diamond-developers.ae/",
+        },
+        {
+          text: "TSC - Dubai",
+          link: "https://www.thesustainablecity.ae/",
+        },
+        {
+          text: "TSC - Sharjah",
+          link: "https://www.sharjahsustainablecity.ae/",
+        },
+      ],
+    },
+    {
+      title: "Contact Information",
+      links: [
+        {
+          title: "Email:",
+          link: "hello@thesustainablecity-yiti.com",
+        },
+        {
+          title: "Toll-free:",
+          link: "+968 8000 33 33",
+        },
+      ],
+    },
+  ],
 };
 
 export default english;
