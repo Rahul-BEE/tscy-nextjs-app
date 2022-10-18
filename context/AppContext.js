@@ -1,11 +1,30 @@
-import { createContext, useContext, useMemo } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+} from "react";
+import { AppReducer, initialState } from "./AppReducer";
 
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const [appState, setAppState] = useState({});
+  const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const contextValue = useMemo(() => {
-    return [appState, setAppState];
-  }, [appState, setAppState]);
+    return { state, dispatch };
+  }, [state, dispatch]);
+
+  useEffect(() => {
+    if (state !== initialState) {
+      sessionStorage.setItem("userdata", JSON.stringify(state));
+    }
+  }, [state]);
+  return (
+    <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
+  );
+}
+export function useAppContext() {
+  return useContext(AppContext);
 }

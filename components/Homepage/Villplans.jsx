@@ -4,7 +4,6 @@ import styles from "../../styles/villaplans.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
 import Parking from "../../public/Svg/homevillaplan/parking.svg";
@@ -13,8 +12,10 @@ import Bathroom from "../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../public/Svg/homevillaplan/maidroom.svg";
 import VillaplansMobile from "./Villaplans/VillaplansMobile";
 import Link from "next/link";
+import { useAppContext } from "../../context/AppContext";
 
 const Villplans = () => {
+  const { state, dispatch } = useAppContext();
   const lan = useLangage();
   const [villaIndex, setIndex] = useState(1);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[1]);
@@ -30,15 +31,15 @@ const Villplans = () => {
       name,
       phone,
     };
-    localStorage.setItem("userdata", JSON.stringify(data));
-    console.log(email, name, phone, currentvilla.title);
+    dispatch({
+      type: "updateuser",
+      value: data,
+    });
+    //sent data to the backend
     setDataReceived(true);
   };
   const handleClick = (id) => {
-    if (!dataReceived) {
-      setShowForm(true);
-      return;
-    }
+    setShowForm(true);
   };
 
   const changeVilla = (index) => {
@@ -176,7 +177,44 @@ const Villplans = () => {
             ) : (
               <>
                 {dataReceived ? (
-                  <div>Data Received</div>
+                  <div className={styles.villaplanuserform}>
+                    <p>Thanks for your response.</p>
+                    <div className={styles.btncontainer}>
+                      <motion.div
+                        onClick={() => handleClick(1)}
+                        className={styles.download_content}
+                        whileHover={{
+                          color: "#058DA6",
+                          backgroundColor: "#fff",
+                        }}>
+                        {lan.commontext.download} {lan.commontext.brochure}{" "}
+                      </motion.div>
+                      <motion.div
+                        onClick={() => handleClick(2)}
+                        className={styles.download_content}
+                        whileHover={{
+                          color: "#058DA6",
+                          backgroundColor: "#fff",
+                        }}>
+                        {lan.commontext.download} {lan.commontext.floorplan}{" "}
+                      </motion.div>
+                      <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+                        <motion.div
+                          className={styles.download_content}
+                          whileHover={{
+                            color: "#058DA6",
+                            backgroundColor: "#fff",
+                          }}>
+                          {lan.commontext.seedetails}{" "}
+                          <BsArrowRightCircle
+                            style={{
+                              marginLeft: "0.5rem",
+                            }}
+                          />
+                        </motion.div>
+                      </Link>
+                    </div>
+                  </div>
                 ) : (
                   <div className={styles.villaplanuserform}>
                     <p className={styles.heading}>Add your details</p>
@@ -189,6 +227,7 @@ const Villplans = () => {
                           <input
                             type={"text"}
                             value={name}
+                            required
                             onChange={(e) => setName(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.name.placeholder
@@ -202,6 +241,7 @@ const Villplans = () => {
                           <input
                             type={"email"}
                             value={email}
+                            required
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.email.placeholder
@@ -215,6 +255,7 @@ const Villplans = () => {
                           <input
                             type={"text"}
                             value={phone}
+                            required
                             onChange={(e) => setPhone(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.phone.placeholder
