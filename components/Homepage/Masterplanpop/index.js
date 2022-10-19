@@ -50,8 +50,7 @@ const MasterplanPopup = ({
                 : item > 4 && item <= 8
                 ? "rt"
                 : "br"
-            }
-          >
+            }>
             <div className={styles.popupheading}>
               <Image src={data.icon} width="60" height="65" alt={data.name} />
               <div
@@ -62,8 +61,7 @@ const MasterplanPopup = ({
                   gap: "0.5rem",
                   flexDirection: "column",
                   height: 65,
-                }}
-              >
+                }}>
                 <h3>{data.name}</h3>
                 <h5>{lan.commontext.description}</h5>
               </div>
@@ -96,16 +94,15 @@ const MasterplanPopup = ({
             )}
             <button
               className={styles.popupcardbtn}
-              onClick={() => setShowDetail(true)}
-            >
+              onClick={() => setShowDetail(true)}>
               <HiOutlineArrowSmRight />
             </button>
           </motion.div>
 
           <svg
             style={{
-              width: w,
-              height: h,
+              width: w + 5,
+              height: h + 5,
               top: Number(offsetTop - h / 2),
               left: Number(offsetLeft - w / 2),
               cursor: "pointer",

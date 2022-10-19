@@ -10,7 +10,7 @@
   justify-content: center;
   position: relative;
 
-  
+
 
   .masterplan_description {
     margin: 1rem 0;
@@ -84,7 +84,7 @@
         pointer-events: none;
         direction: ltr;
         text-align: left;
-        
+
 
         .popupinnercard {
           // font-family: "Poppins";
@@ -103,10 +103,17 @@
           grid-template-columns: 1fr;
           gap: 0.5rem;
           position: relative;
+
           &:lang(ar) {
-              direction: rtl !important;
-              text-align: right !important;
+            direction: rtl !important;
+            text-align: right !important;
+
+            .popupcardbtn {
+              right: unset;
+              left: 20px;
+              rotate: 180deg;
             }
+          }
 
           .popupheading {
             display: flex;
@@ -114,7 +121,6 @@
             justify-content: flex-start;
             text-align: start;
             gap: 1rem;
-            // font-family: "Poppins" sans-serif;
             font-size: 1rem;
             margin-bottom: 1rem;
 
@@ -205,7 +211,7 @@
             border: 1px solid #058da6;
             border-radius: 5px;
             background: transparent;
-            
+
 
             svg {
               color: #058da6;
@@ -779,7 +785,7 @@
     align-items: center;
     justify-content: center;
 
-    
+
 
     .indexdiv {
       max-width: max-content;

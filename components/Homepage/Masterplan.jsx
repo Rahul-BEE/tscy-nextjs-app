@@ -272,6 +272,7 @@ const Masterplan = () => {
                 blurDataURL="/Images/masterplanimage.png"
                 placeholder="blur"
                 priority
+                unoptimized={true}
                 quality={100}
                 alt="MasterPlan"
               />
