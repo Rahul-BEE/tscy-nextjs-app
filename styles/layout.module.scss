@@ -357,7 +357,10 @@
 
     @media(max-width:600px) {
       width: 80%;
+    }
 
+    @media(max-width:335px) {
+      width: 55%;
     }
   }
 
