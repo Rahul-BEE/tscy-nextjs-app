@@ -268,13 +268,13 @@
   }
 
   .header__modal_contentclass {
-    background-image: url("../public/Images/map-pic.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
-
+    // background-image: url("../public/Images/map-pic.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 50% 50%;
+    // background-attachment: fixed;
+    // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
   }
 
 
@@ -286,7 +286,9 @@
   justify-content: flex-end;
   z-index: 15;
   direction: ltr !important;
-  position: relative;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .imageContainermobmenu {
@@ -314,6 +316,13 @@
       top: -70px;
       left: -70px;
     }
+
+    @media (max-width:400px) {
+      width: 180px;
+      height: 190px;
+      top: -70px;
+      left: -70px;
+    }
   }
 
   .left {
@@ -325,6 +334,13 @@
     @media (max-width:600px) {
       width: 341px;
       height: 271px;
+      bottom: -60px;
+      left: -130px;
+    }
+
+    @media (max-width:400px) {
+      width: 301px;
+      height: 231px;
       bottom: -60px;
       left: -130px;
     }
@@ -358,13 +374,19 @@
 
     @media(max-width:600px) {
       width: 80%;
-
     }
+
+
   }
 
   .mobmenucontainer {
     width: 100%;
     height: auto;
+    margin: auto;
+
+    @media(max-width:321px) {
+      width: 80%;
+    }
   }
 
   .menuactive {
@@ -372,6 +394,10 @@
     font-size: 20px;
     text-align: center;
     color: #82C9D8;
+
+    @media(max-width:400px) {
+      font-size: 1rem;
+    }
   }
 
   .linkdiv {
@@ -386,6 +412,7 @@
     @media(max-width:600px) {
       padding-block: 10px;
     }
+
   }
 
   .menuinactive {
@@ -393,6 +420,10 @@
     font-size: 20px;
     text-align: center;
     color: #FFFFFF;
+
+    @media(max-width:400px) {
+      font-size: 1rem;
+    }
   }
 
   .langbtnmobile {
@@ -416,6 +447,9 @@
       font-weight: 400;
       height: 100%;
 
+      @media(max-width:400px) {
+        font-size: 1rem;
+      }
     }
 
     .btnlangactive {
