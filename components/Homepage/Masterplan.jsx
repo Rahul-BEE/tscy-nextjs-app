@@ -238,31 +238,40 @@ const Masterplan = () => {
             className={styles.masterplanContainer}
             id="masterplancontainer"
             ref={containerRef}>
-            <div className={styles.zoombtn}>
+            {/* <div className={styles.zoombtn}>
               {zoom ? (
                 <AiFillMinusCircle onClick={() => zoomHandler(false)} />
               ) : (
                 <BsFillPlusCircleFill onClick={() => zoomHandler(true)} />
               )}
-            </div>
+            </div> */}
             <motion.div
               onLoad={setNewConstraints}
               id="masterplanimageinner"
               className={styles.masterplan}
               animate={zoomAnimation}
               ref={imageContainerRef}
-              drag
+              drag={zoom ? true : "x"}
               dragListener={!animating}
-              onDrag={scrollHandler}
+              // onDrag={scrollHandler}
               onDragEnd={dragHandler}
-              dragElastic={false}
-              dragConstraints={{
-                right: constrains.right,
-                left: constrains.left,
-                top: constrains.top,
-                bottom: constrains.bottom,
-              }}
-              dragMomentum={0}
+              dragElastic={0}
+              dragConstraints={
+                lan.language === 1
+                  ? {
+                      right: constrains.right,
+                      left: constrains.left,
+                      top: constrains.top,
+                      bottom: constrains.bottom,
+                    }
+                  : {
+                      left: constrains.right,
+                      right: -constrains.left,
+                      top: constrains.top,
+                      bottom: constrains.bottom,
+                    }
+              }
+              dragMomentum={true}
               initial="hidden">
               <Image
                 id="masterplanmap"

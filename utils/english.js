@@ -43,6 +43,7 @@ import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 
 const english = {
+  language: 1,
   header: {
     langbtn: "عربي",
     links: [

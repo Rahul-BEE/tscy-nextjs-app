@@ -294,8 +294,8 @@
 
       .masterplaninnerslideimg[data-index="true"] {
         @media (max-width: 1224px) {
-          width: 1528px;
-          height: auto;
+          width: 1100px;
+          height: 100%;
         }
       }
 
@@ -340,7 +340,7 @@
           font-size: 10px;
           line-height: 15px;
           text-align: right;
-          margin-bottom: 1rem;
+          // margin-bottom: 1rem;
           direction: ltr;
 
           div {
@@ -366,13 +366,13 @@
         .infoboxcontent {
           flex: 1;
           text-align: center;
-          // font-family: "Poppins";
           font-style: normal;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           flex-direction: column;
-          margin-top: 1rem;
+          gap: 1rem;
+          width: 100%;
 
           h3,
           p,
@@ -397,11 +397,12 @@
           }
 
           p {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
+            font-weight: 400;
+            font-size: 14px;
             text-align: center;
           }
+
+
 
           .villadetailsbtm {
             display: flex;
@@ -409,6 +410,7 @@
             justify-content: center;
             gap: 0.8rem;
             flex-direction: column;
+            width: 100%;
           }
 
           .villaitem {
@@ -431,12 +433,18 @@
           .itemdetailsbtm {
             width: 100%;
             margin-bottom: 1rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
 
             .itemdetailsbtmdiv {
               display: flex;
               align-items: center;
               justify-content: space-between;
-              gap: 0.6rem;
+              width: 100%;
+              // gap: 0.6rem;
 
               h5 {
                 text-transform: capitalize;
@@ -458,6 +466,8 @@
             }
           }
         }
+
+
 
         .infoboxslider {
           width: 100%;
@@ -495,6 +505,11 @@
 
             }
           }
+        }
+
+        .subheading {
+          font-size: 1.25rem;
+          font-weight: 500;
         }
 
         .slidenav {
@@ -928,15 +943,6 @@
           margin-bottom: 1rem;
         }
       }
-
-      button {
-        // font-family: "Poppins";
-        font-style: normal;
-        color: "white";
-        background-color: "#058DA6";
-        border-radius: 10px;
-        margin-top: 20px;
-      }
     }
 
     .itemdetailsbtm {
@@ -977,4 +983,12 @@
   }
 
 
+
+  .seevillabtn {
+    background-color: #058da6;
+    color: #fff;
+    width: 50%;
+    font-size: 1rem;
+
+  }
 }
