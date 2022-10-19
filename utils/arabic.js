@@ -971,6 +971,8 @@ const arabic = {
     diamonddevelopers: "Diamond Developers",
     cpyright: "© Diamond Developers International Ltd. 2022",
     language: "English",
+    next: "التالي",
+    previous: "السابق",
   },
   propertyFeatures: [
     {

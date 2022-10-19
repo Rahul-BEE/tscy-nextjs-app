@@ -16,36 +16,36 @@ function Newssection() {
       slug: lan.newssection.post[0].slug,
       heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
-      image:lan.newssection.post[0].image,
-      date:lan.newssection.post[0].date,
+      image: lan.newssection.post[0].image,
+      date: lan.newssection.post[0].date,
     },
     {
       slug: lan.newssection.post[1].slug,
       heading: lan.newssection.post[1].heading,
       discription: lan.newssection.post[1].discription,
-      image:lan.newssection.post[1].image,
-      date:lan.newssection.post[1].date,
+      image: lan.newssection.post[1].image,
+      date: lan.newssection.post[1].date,
     },
     {
       slug: lan.newssection.post[2].slug,
       heading: lan.newssection.post[2].heading,
       discription: lan.newssection.post[2].discription,
-      image:lan.newssection.post[2].image,
-      date:lan.newssection.post[2].date,
+      image: lan.newssection.post[2].image,
+      date: lan.newssection.post[2].date,
     },
     {
       slug: lan.newssection.post[0].slug,
       heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
-      image:lan.newssection.post[0].image,
-      date:lan.newssection.post[0].date,
+      image: lan.newssection.post[0].image,
+      date: lan.newssection.post[0].date,
     },
     {
       slug: lan.newssection.post[1].slug,
       heading: lan.newssection.post[1].heading,
       discription: lan.newssection.post[1].discription,
-      image:lan.newssection.post[1].image,
-      date:lan.newssection.post[1].date,
+      image: lan.newssection.post[1].image,
+      date: lan.newssection.post[1].date,
     },
   ];
 
@@ -135,8 +135,8 @@ function Newssection() {
     <div className={styles.hero_newssection}>
       <div className={styles.hero_container}>
         <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
-          <p>See what they say in</p>
-          <h2>press and news</h2>
+          {/* <p>See what they say in</p> */}
+          <h2>{lan.commontext.press}</h2>
         </div>
 
         {/* layout */}
@@ -156,31 +156,31 @@ function Newssection() {
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
               <Link href={`news/${item.slug}`} key={index} passHref>
-              <a>
-              <div className={styles.hero_box}>
-                <div>
-                  <div className={styles.news_heading}>
-                    <h3>{item.heading}</h3>
+                <a>
+                  <div className={styles.hero_box}>
+                    <div>
+                      <div className={styles.news_heading}>
+                        <h3>{item.heading}</h3>
+                      </div>
+                      <div className={styles.news_date}>{item.date}</div>
+                      <motion.div
+                        animate={controls}
+                        initial="hidden"
+                        variants={variants}
+                      >
+                        <Image
+                          className={styles.test_box}
+                          src={item.image}
+                          width={476}
+                          height={200}
+                          layout="responsive"
+                        />
+                      </motion.div>
+                      <p>{item.discription}</p>
+                    </div>
                   </div>
-                  <div className={styles.news_date}>{item.date}</div>
-                  <motion.div
-                    
-                    animate={controls}
-                    initial="hidden"
-                    variants={variants}
-                  >
-                  <Image
-                className={styles.test_box}
-                src={item.image}
-                width={476}
-                height={200}
-                layout="responsive"
-            />
-                  </motion.div>
-                  <p>{item.discription}</p>
-                </div>
-              </div></a>
-                </Link>
+                </a>
+              </Link>
             ))}
 
           {/* small boxes */}
@@ -191,13 +191,14 @@ function Newssection() {
                 onClick={(e) => handelChnagePrev(e)}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaChevronLeft className={styles.icon} /> Previous
+                <FaChevronLeft className={styles.icon} />{" "}
+                {lan.commontext.previous}
               </motion.p>
               <motion.p
                 onClick={(e) => handelChange(e)}
                 whileTap={{ scale: 0.9 }}
               >
-                Next <FaChevronRight className={styles.icon} />
+                {lan.commontext.next} <FaChevronRight className={styles.icon} />
               </motion.p>
             </div>
 
@@ -205,19 +206,19 @@ function Newssection() {
               .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
               .map((item, index) => (
                 <Link href={`news/${item.slug}`} key={index} passHref>
-              <a>
-                <div className={styles.secondry_box}>
-                   <Image
-                className={styles.test_box}
-                src={item.image}
-                width={476}
-                height={200}
-                layout="responsive"
-            />
-                  <h3>{item.heading}</h3>
-                  <div className={styles.news_date}>{item.date}</div>
-                </div>
-                </a>
+                  <a>
+                    <div className={styles.secondry_box}>
+                      <Image
+                        className={styles.test_box}
+                        src={item.image}
+                        width={476}
+                        height={200}
+                        layout="responsive"
+                      />
+                      <h3>{item.heading}</h3>
+                      <div className={styles.news_date}>{item.date}</div>
+                    </div>
+                  </a>
                 </Link>
               ))}
           </div>

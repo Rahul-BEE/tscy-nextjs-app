@@ -1032,6 +1032,8 @@ const english = {
     diamonddevelopers: "Diamond Developers",
     cpyright: "© Diamond Developers International Ltd. 2022",
     language: "Arabic",
+    next: "Next",
+    previous: "Previous",
   },
   tracks: [
     {
