@@ -41,6 +41,7 @@ import Linkedin from "../public/Svg/contactus/linkedin.svg";
 import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 const arabic = {
+  language: 2,
   header: {
     langbtn: "English",
     links: [

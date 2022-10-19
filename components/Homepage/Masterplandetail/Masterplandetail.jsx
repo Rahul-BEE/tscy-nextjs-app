@@ -39,7 +39,6 @@ const Masterplandetail = ({ item, track, goback }) => {
   const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
-
   const dragHandler = (info) => {
     if (info.velocity.x < -200 && slideIndex < length - 1) {
       setDirection(1);
@@ -69,16 +68,24 @@ const Masterplandetail = ({ item, track, goback }) => {
           <motion.div
             data-index={track !== null ? "true" : "false"}
             drag="x"
-            dragConstraints={{
-              right: 0,
-              left: -sliderWidth,
-            }}
+            dragConstraints={
+              lan.language === 1
+                ? {
+                    right: 0,
+                    left: -sliderWidth,
+                  }
+                : {
+                    left: 0,
+                    right: sliderWidth,
+                  }
+            }
             id="masterplanslider"
             animate="visible"
             initial="hidden"
             exit={"exit"}
             variants={parentVariant}
-            dragElastic={0.1}
+            dragElastic={false}
+            dragMomentum={true}
             custom={direction}
             onDragEnd={(_, info) => dragHandler(info)}
             className={styles.masterplaninnerslideimg}
@@ -92,9 +99,9 @@ const Masterplandetail = ({ item, track, goback }) => {
               placeholder="blur"
               blurDataURL={data[index].slideimg[slideIndex]}
               alt={data[index].name}
-              onLoad={() => setShowGradient(true)}
+              onLoadingComplete={() => setShowGradient(true)}
             />
-            {showGradient && (
+            {showGradient && track === null && (
               <div className={styles.masterplandetailgradient} />
             )}
           </motion.div>
@@ -107,29 +114,30 @@ const Masterplandetail = ({ item, track, goback }) => {
           updateIndex={setIndex}
           setDirection={setDirection}
         />
-        <div className={styles.gobackbtn} onClick={() => goback()}>
-          <span
-            style={{
-              marginRight: "5px",
-              marginBottom: "2px",
-            }}>
-            <GoChevronLeft />
-          </span>
-          <p>{lan.commontext.gobacktomasterplan}</p>
-        </div>
-        {data[index].slideimg.length > 1 && (
-          <>
+        <div className={styles.detailtopbar}>
+          <div className={styles.gobackbtn} onClick={() => goback()}>
+            <span
+              style={{
+                marginRight: "5px",
+                marginBottom: "2px",
+              }}>
+              <GoChevronLeft />
+            </span>
+            <p>{lan.commontext.gobacktomasterplan}</p>
+          </div>
+          {data[index].slideimg.length > 1 && (
             <div className={styles.slideNumber}>
               <p>
                 {slideIndex + 1}/{data[index].slideimg.length}
               </p>
             </div>
-
-            <Paginationdots
-              slideIndex={slideIndex}
-              length={data[index].slideimg.length}
-            />
-          </>
+          )}
+        </div>
+        {data[index].slideimg.length > 1 && (
+          <Paginationdots
+            slideIndex={slideIndex}
+            length={data[index].slideimg.length}
+          />
         )}
       </div>
     </>

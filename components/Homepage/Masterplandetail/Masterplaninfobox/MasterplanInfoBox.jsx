@@ -71,8 +71,7 @@ const MasterplanInfoBox = ({
                     style={{
                       padding: 0,
                       margin: 0,
-                    }}
-                  >
+                    }}>
                     {lan.commontext.previousto} {data[index - 1].name}
                   </p>
                 </>
@@ -85,8 +84,7 @@ const MasterplanInfoBox = ({
                     style={{
                       padding: 0,
                       margin: 0,
-                    }}
-                  >
+                    }}>
                     {lan.commontext.nextto} {data[index + 1].name}
                   </p>
                   <GoChevronRight />
@@ -105,17 +103,19 @@ const MasterplanInfoBox = ({
             <h3>{data[index].name}</h3>
             <div>
               <h4
+                className={styles.subheading}
                 style={{
                   marginBottom: "0.5rem",
-                }}
-              >
+                }}>
                 {lan.commontext.description}
               </h4>
               <p>{data[index].description}</p>
             </div>
             {data[index].villadetails ? (
               <div className={styles.villadetailsbtm}>
-                <h4>{lan.commontext.villatypes}</h4>
+                <h4 className={styles.subheading}>
+                  {lan.commontext.villatypes}
+                </h4>
                 <div className={styles.villaitem}>
                   {data[index].villatype.map((villa, index) => (
                     <div key={`${index}_${villa.type}`}>
@@ -128,25 +128,18 @@ const MasterplanInfoBox = ({
                   ))}
                 </div>
                 <Link href={"/floorplan"} passHref>
-                  <motion.button
-                    whileHover={{
-                      scale: 1.02,
-                    }}
-                    style={{
-                      backgroundColor: "#058DA6",
-                    }}
-                  >
+                  <button className={styles.seevillabtn}>
                     {lan.commontext.seevillas}
-                  </motion.button>
+                  </button>
                 </Link>
               </div>
             ) : (
               <div className={styles.itemdetailsbtm}>
                 <h4
+                  className={styles.subheading}
                   style={{
                     marginBottom: "0.5rem",
-                  }}
-                >
+                  }}>
                   {lan.commontext.details}
                 </h4>
                 <div className={styles.itemdetailsbtmdiv}>
@@ -160,13 +153,12 @@ const MasterplanInfoBox = ({
               </div>
             )}
           </div>
-          <h4>{lan.commontext.relatedimages}</h4>
+          <h4 className={styles.subheading}>{lan.commontext.relatedimages}</h4>
           <div className={styles.infoboxslider}>
             <motion.div
               className={styles.infoboxsliderinner}
               animate={scrollAnimation}
-              data-align={data[index].slideimg.length > 3 ? "start" : "center"}
-            >
+              data-align={data[index].slideimg.length > 3 ? "start" : "center"}>
               {data[index].slideimg.map((item, index) => (
                 <div className={styles.infoslide} key={index}>
                   <Image
@@ -193,8 +185,7 @@ const MasterplanInfoBox = ({
             className={styles.slidenav}
             style={{
               display: data[index].slideimg.length > 3 ? "" : "none",
-            }}
-          >
+            }}>
             <GoChevronLeft
               onClick={() => carouselHandler({ dir: -1, index })}
             />

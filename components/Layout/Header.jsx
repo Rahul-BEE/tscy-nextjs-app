@@ -22,12 +22,18 @@ const Header = () => {
   useEffect(() => {
     const someFunc = async () => {
       if (scrollDirection === "DOWN" && !isMobile) {
-        await animation.start({
+        animation.start({
           y: -300,
+          transition: {
+            duration: 0.5,
+          },
         });
       } else if (scrollDirection === "UP" && !isMobile) {
-        await animation.start({
+        animation.start({
           y: 0,
+          transition: {
+            duration: 0.5,
+          },
         });
       }
     };
