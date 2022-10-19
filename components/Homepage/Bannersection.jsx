@@ -40,6 +40,7 @@ const Bannersection = ({ banner }) => {
             alt="The sustainable city image"
             as="image"
             priority
+            unoptimized
           />
           <div className={styles.app__slider_overlay}></div>
           <motion.div className={styles.app__bannerslidecontent}>
@@ -57,6 +58,7 @@ const Bannersection = ({ banner }) => {
             alt="The sustainable city image"
             as="image"
             priority
+            unoptimized
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -74,6 +76,7 @@ const Bannersection = ({ banner }) => {
             alt="The sustainable city image"
             as="image"
             priority
+            unoptimized
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -91,6 +94,7 @@ const Bannersection = ({ banner }) => {
             alt="The sustainable city image"
             as="image"
             priority
+            unoptimized
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
