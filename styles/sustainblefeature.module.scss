@@ -149,11 +149,16 @@
   display: none;
     @media (max-width: 620px) {
       display: block;
-     
+     margin-top: 75px;
       padding: 0px;
     }
   }
-
+  .animateright
+  {
+    span{
+      float: right;
+    }
+  }
   .sustainablefeaturecontent {
     @media (max-width: 1200px) {
       width: 100%!important;

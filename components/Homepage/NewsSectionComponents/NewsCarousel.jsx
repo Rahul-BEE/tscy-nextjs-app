@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../styles/newssection.module.scss";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 
@@ -25,7 +25,9 @@ function NewsCarousel({ data }) {
         }}
         className={styles.mySwiper}>
         {data.map((e, index) => (
+          
           <SwiperSlide key={`${index}_newcarousel`}>
+             <Link href={`news/${e.slug}`}  passHref>
             <div className={styles.hero_tab_box}>
               <h3>{e.heading}</h3>
               <Image
@@ -37,7 +39,9 @@ function NewsCarousel({ data }) {
             />
               <p>{e.discription}</p>
             </div>
+            </Link>
           </SwiperSlide>
+          
         ))}
       </Swiper>
     </div>
