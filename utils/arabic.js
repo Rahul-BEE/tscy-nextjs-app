@@ -440,6 +440,11 @@ const arabic = {
           capacity: 3000,
           built: 2020,
         },
+        contact: {
+          contact: "0123456",
+          email: "come@yiti.com",
+          Phone: " 0312547",
+        },
         slideimg: [
           "/Images/masterplan/festivalpark/1.png",
           "/Images/masterplan/festivalpark/2.png",
@@ -481,33 +486,33 @@ const arabic = {
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         interior: [
           {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
+            title: "التجهيزات",
+            description: "أجهزة تسخين وتبريد عالية الكفاءة",
             img: "/Images/villas/3bcv/3bcvInterior/1.png",
           },
           {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
+            title: "الأرضيات",
+            description: "أرضيات بورسلين عالية الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/2.png",
           },
           {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
+            title: "الخزائن",
+            description: "خزائن مثبتة بالجدران مصنوعة بمواد ذات جودة عالية",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
           {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
+            title: "النوافذ",
+            description: "نوافذ زجاجية مزدوجة العزل",
             img: "/Images/villas/3bcv/3bcvInterior/1.png",
           },
           {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
+            title: "تجهيزات الحمامات",
+            description: "أدوات صحية بتصميم حديث",
             img: "/Images/villas/3bcv/3bcvInterior/2.png",
           },
           {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
+            title: "دهان الجدران",
+            description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
           {
@@ -569,7 +574,7 @@ const arabic = {
         description:
           "تمتاز هذه الفلل المكونة من ثلاث غرف نوم برحابتها وبأناقتها العصرية. ويراعي هذا التصميم العملي ضمان وجود إضاءة طبيعية في الطابق الأرضي، مع مساحة مطبخ واسعة مجاورة لغرفة الخادمة المرفقة بحمام صغير (نصف حمام) وغرفة معيشة واسعة. ويتضمن الطابق العلوي ثلاث غرف نوم مرفقة بحمامات داخلية، مع مساحة كبيرة لرُكن الدراسة والمنامة والتخزين. وتأتي غرفة النوم الرئيسة مزودة بمساحة مخصصة لخزانة ملابس واسعة، وحمام فخم كامل التجهيزات، ومخرج إلى الشرفة المطلة على ساحة الفناء المصممة بأسلوب أنيق وبعناية فائقة، ما يضمن توافر جميع العناصر اللازمة لمعيشة هادئة ونمط حياة مريح.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "تمتاز هذه الفلل المكونة من ثلاث غرف نوم برحابتها وبأناقتها العصرية. ويراعي هذا التصميم العملي ضمان وجود إضاءة طبيعية في الطابق الأرضي، مع مساحة مطبخ واسعة مجاورة لغرفة الخادمة المرفقة بحمام صغير (نصف حمام) وغرفة معيشة واسعة. ويتضمن الطابق العلوي ثلاث غرف نوم مرفقة بحمامات داخلية، مع مساحة كبيرة لرُكن الدراسة والمنامة والتخزين. وتأتي غرفة النوم الرئيسة مزودة بمساحة مخصصة لخزانة ملابس واسعة، وحمام فخم كامل التجهيزات، ومخرج إلى الشرفة المطلة على ساحة الفناء المصممة بأسلوب أنيق وبعناية فائقة، ما يضمن توافر جميع العناصر اللازمة لمعيشة هادئة ونمط حياة مريح.",
       },
       {
         id: 2,
@@ -592,19 +597,49 @@ const arabic = {
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         interior: [
           {
+            title: "التجهيزات",
+            description: "أجهزة تسخين وتبريد عالية الكفاءة",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "الأرضيات",
+            description: "أرضيات بورسلين عالية الجودة",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "الخزائن",
+            description: "خزائن مثبتة بالجدران مصنوعة بمواد ذات جودة عالية",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "النوافذ",
+            description: "نوافذ زجاجية مزدوجة العزل",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "تجهيزات الحمامات",
+            description: "أدوات صحية بتصميم حديث",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "دهان الجدران",
+            description: "دهان فينوماستيك عالي الجودة",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
             title: "Wardrobes",
             description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/4bcv/4bcvInterior/1.png",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
           },
           {
             title: "Sanitary",
             description: "Modern designed sanitary",
-            img: "/Images/villas/4bcv/4bcvInterior/2.png",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
           },
           {
             title: "Wall Paint",
             description: "High finishing fenomastic paint",
-            img: "/Images/villas/4bcv/4bcvInterior/3.png",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
         ],
         nearby: [
@@ -705,34 +740,49 @@ const arabic = {
         ],
         interior: [
           {
+            title: "التجهيزات",
+            description: "أجهزة تسخين وتبريد عالية الكفاءة",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "الأرضيات",
+            description: "أرضيات بورسلين عالية الجودة",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "الخزائن",
+            description: "خزائن مثبتة بالجدران مصنوعة بمواد ذات جودة عالية",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
+            title: "النوافذ",
+            description: "نوافذ زجاجية مزدوجة العزل",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          },
+          {
+            title: "تجهيزات الحمامات",
+            description: "أدوات صحية بتصميم حديث",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          },
+          {
+            title: "دهان الجدران",
+            description: "دهان فينوماستيك عالي الجودة",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          },
+          {
             title: "Wardrobes",
             description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/4bgv/4bgvInterior/1.png",
+            img: "/Images/villas/3bcv/3bcvInterior/1.png",
           },
           {
             title: "Sanitary",
             description: "Modern designed sanitary",
-            img: "/Images/villas/4bgv/4bgvInterior/2.png",
+            img: "/Images/villas/3bcv/3bcvInterior/2.png",
           },
           {
             title: "Wall Paint",
             description: "High finishing fenomastic paint",
-            img: "/Images/villas/4bgv/4bgvInterior/3.png",
-          },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/4bgv/4bgvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/4bgv/4bgvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/4bgv/4bgvInterior/3.png",
+            img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
         ],
         gf_image: "",
@@ -873,7 +923,7 @@ const arabic = {
     ],
   },
   commontext: {
-    getdirection: "Get Directions",
+    getdirection: "الاتجاهاتس",
     brochure: "الكتيب",
     floorplan: "المخططات",
     learnmore: "إعرف المزيد",
@@ -921,6 +971,8 @@ const arabic = {
     diamonddevelopers: "Diamond Developers",
     cpyright: "© Diamond Developers International Ltd. 2022",
     language: "English",
+    next: "التالي",
+    previous: "السابق",
   },
   propertyFeatures: [
     {
@@ -1079,13 +1131,16 @@ const arabic = {
   newssection: {
     post: [
       {
-        slug:"tourism-development-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"29th July, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img2.jpg",
-          type:"news",
+        slug: "tourism-development-news",
+        title: [
+          "The Sustainable City - Yiti Signs Escrow",
+          "Agreement with Sohar Islamic",
+        ],
+        date: "29th July, 2022",
+        city: "Muscat",
+        country: "Oman",
+        image: "/Images/news/news_img2.jpg",
+        type: "news",
         heading: `دايموند للتطوير العقاري توقع اتفاقية شراكة مع الشركة العمانية للتنمية السياحية (عُمران) `,
         discription: `أبرمت "دايموند للتطوير العقاري" المتخصصة في تطوير المشروعات البيئية بدبي اتفاقية شراكة تطويرية مع الشركة العمانية للتنمية السياحية (مجموعة عُمران) لتنفيذ المرحلة الأولى من مشروع يتي السياحي المتكامل بقيمة استثمارية تبلغ نحو 3.7 مليار درهم إماراتي (تبلغ قرابة مليار دولار أمريكي). وقد أثمرت هذه الشراكة تأسيس "شركة التطوير والاستثمار المستدام ش.م.ع.م" لتتولى مهام تنفيذ هذه المرحلة من المشروع.
         <br>
@@ -1107,13 +1162,16 @@ const arabic = {
   `,
       },
       {
-        slug:"investment-value-news",
-        title:["The Sustainable City - Yiti Signs Escrow","Agreement with Sohar Islamic"],
-          date:"22nd April, 2022",
-          city:"Muscat",
-          country:"Oman",
-          image:"/Images/news/news_img1.jpg",
-          type:"news",
+        slug: "investment-value-news",
+        title: [
+          "The Sustainable City - Yiti Signs Escrow",
+          "Agreement with Sohar Islamic",
+        ],
+        date: "22nd April, 2022",
+        city: "Muscat",
+        country: "Oman",
+        image: "/Images/news/news_img1.jpg",
+        type: "news",
         heading: `دايموند للتطوير العقاري توقع اتفاقية شراكة مع الشركة العمانية للتنمية السياحية (عُمران) `,
         discription: `تحتفل اليوم شركة دايموند ديفيلوبرز - المتخصصة في تطوير المدن المستدامة – وبالشراكة مع الشركة العُمانية للتنمية السياحية (مجموعة عُمران) عن إطلاق مشروع المدينة المستدامة - يتي في مسقط، بتكلفة إجمالية تبلغ قرابة مليار دولار، والذي يمثل أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في سلطنة عُمان.<br><br>وتمثل المدينة المستدامة - يتي التي سيجري تطويرها ضمن المرحلة الأولى في المخطط العام لمشروع يتي السياحي المتكامل - أول مشروع يلبي أعلى معايير الاستدامة والاقتصاد الأخضر في السلطنة على مساحة إجمالية تصل إلى مليون متراً مربعاً. ويتميز بموقعه الفريد في ولاية مسقط وبإطلالته على بحر عُمان ومقوماته الطبيعية الثرية، من الشطآن الممتدة والجبال والمنحدرات الصخرية، فضلاً عن الأودية التي تتناغم ضمن طبوغرافية الموقع، ما يضفي قيمة تنافسية جديرة بالاهتمام للمشروع. <br><br>وحول ذلك، قال فارس سعيد، رئيس مجلس إدارة شركة دايموند ديفيلوبرز للتطوير العقاري: "لا تقتصر أهمية هذا المشروع على كونه نموذجاً يحتذى به للتطوير العُمراني المستدام، بل إنه يُعد ايضاً مجتمعاً متكاملاً يضم مرافق سكنية وخدمية مختلفة، ويحتضن الآلاف من المقيمين، والزوار، والطلبة، والباحثين."<br><br>وأضاف "ستكون المدينة المستدامة – يتي من بين أكثر المشاريع استدامة على مستوى المنطقة، ونسعى من خلال توظيف أحدث الحلول في إنتاج الطاقة، وإعادة التدوير، وإنتاج الماء من الهواء، والزراعة العمودية، والنقل ذاتي القيادة وغيرها إلى تحقيق الحياد الكربوني بحلول العام ٢٠٤٠، بما يتوافق مع أهداف التنمية المستدامة واتفاقية باريس للمناخ، ونتطلع في دايموند ديفيلوبرز إلى المضي قدماً في دعم جهود الحفاظ على البيئة وتعزيز التنمية المستدامة في المنطقة وأن نُسهم في الانتقال الفاعل نحو اقتصاد منخفض الكربون."<br><br>ومن جانبه قال المهندس محمد بن سالم البوسعيدي، رئيس مجلس مجموعة عُمران: "يعد التعاون مع دايموند ديفيلوبرز لإطلاق المدينة المستدامة - يتي علامة فارقة في رحلتنا نحو تحفيز الاستثمار وتطوير إمكانات القطاع السياحي في السلطنة، حيث يعتبر ضمن أكبر مشروعات التطوير الحضري التي يجري تطويرها في منطقة الشرق الأوسط، الأمر الذي يؤهله لفتح آفاق واعدة لجذب الاستثمارات المحلية والأجنبية وذلك موائمةً مع توجهات جهاز الاستثمار العُماني. وتماشيا مع جهود السلطنة نحو التحول إلى الاقتصاد الدائري الأخضر وخفض الانبعاثات الكربونية،<br><br>فإن المشروع يلبي أعلى معايير الاستدامة ويجسد رؤيتنا المتمثلة في صناعة وجهات تتناغم بشكل تام مع الثراء الطبيعي وفق أعلى درجات الحفاظ على البيئة."<br><br>ومن المخطط أن ينتهي إنجاز المشروع بحلول عام ٢٠٢٥، وسيوفر ١٦٥٧ وحدة سكنية، تتضمن ٣٠٠ فيلا صديقة للبيئة بتصاميم عصرية وعالية الكفاءة ومساحات متنوعة للفلل المؤلفة من ٣ و٤ غرف نوم، كما يتيح فرص توفير كبيرة للسكان في فواتير التشغيل والخدمات.<br><br>وتماشيا مع أهداف الأمم المتحدة للتنمية المستدامة نحو تقليل الاعتماد على مصادر الطاقة غير النظيفة، ستعتمد المدينة على مصادر الطاقة المتجددة بالكامل لتشغيل كافة مرافقها، حيث تنتج ١٠٠٪ من طاقتها في المرحلة التشغيلية عبر الألواح الشمسية والغاز الحيوي كما تقوم بإعادة تدوير المياه والنفايات العضوية بنسبة ١٠٠٪ إضافة إلى إعادة استعمال المياه المعاد تدويرها لري المناطق الزراعية والمساحات الخضراء، بالإضافة لتوفير مساحات زراعية خاصة للسكان.<br><br>وتعمل المدينة على تقليل انبعاثاتها الكربونية من خلال تطبيق أفضل الممارسات البيئية مثل الاعتماد على المركبات الكهربائية، والعربات ذاتية القيادة للتنقل داخل المدينة، وتوفير محطات شحن السيارات الكهربائية، كما تتميز المناطق السكنية بخلوها من السيارات مما يوفر بيئة آمنة للعائلات ويشجع على خلق علاقات اجتماعية متينة بين السكان.<br><br>كما يشمل المشروع مدرسة تعتمد غرس مفاهيم الاستدامة في مناهجها للجيل القادم، بالإضافة إلى مختبر (سي) الذي يعرض أبرز حلول الاستدامة كتقنيات الطاقة المتجددة والزراعة العمودية وغيرها من الحلول البيئية علاوة على زيادة الوعي البيئي وتسريع بناء مدن المستقبل.<br><br>وتهدف المدينة المستدامة أيضا إلى تعزيز نمط الحياة الصحية، حيث تحتوي على مراكز صحية ورياضية ومرافق للركض وركوب الدراجات ونادي للفروسية ومضمار للخيل، بالإضافة إلى مجموعة من المحلات التجارية والمطاعم، والمقاهي، والمراكز الفنية، والثقافية.<br><br>ولدعم قطاع الضيافة تحتضن المدينة منتجع من فئة الخمس نجوم يحتوي على ١٧٠ غرفة بالإضافة إلى ١٣٢ شقة فندقية فاخرة، وفندق من فئة الأربع نجوم يحتوي على ١٩٧ غرفة، توفر هذه الفنادق أعلى مستويات الخدمة والرفاهية بالإضافة لإمكانية الوصول إلى الشاطئ والاستمتاع بمختلف النشاطات البحرية.`,
       },
@@ -1293,31 +1351,31 @@ const arabic = {
   },
   contact: {
     register: {
-      title: "Broker Registration",
+      title: "تسجيل وسطاء العقارات",
       info: {
-        title: "Contact Information",
+        title: "معلومات الاتصال",
         description:
-          "Fill up the form and our team will try to help you with your query.",
+          "يرجى تعبئة النموذج أدناه لتسجيل إهتمامك. سيتم التواصل معكم في أقرب وقت ممكن.",
         data: [
           {
-            title: "Email:",
+            title: "البريد الإلكتروني",
             content: "hello@thesustainablecity-yiti.com",
             icon: <Email />,
           },
           {
-            title: "Address:",
-            content: "Mina Al Sultan Qaboos Centre Yiti, Sultanate of Oman",
+            title: "العنوان",
+            content: "مركز ميناء السلطان قابوس، سلطنة عمان",
             icon: <Pin />,
           },
           {
-            title: "Toll-Free:",
+            title: "رقم الهاتف",
             content: "+968 8000 33 33",
             icon: <Tel />,
           },
           {
-            title: "Working Hours:",
-            content: "Sun - Thu: 09:00AM - 07:00PM",
-            content2: "Sat: 10:00AM - 7:00PM",
+            title: "أوقات العمل",
+            content: "09:00AM - 07:00PM : الأحد - الخميس",
+            content2: "10:00AM - 7:00PM : السبت",
             icon: <Clock />,
           },
         ],
@@ -1340,24 +1398,24 @@ const arabic = {
           },
         ],
       },
-      individual: "Individual",
-      corporate: "Corporate",
+      individual: "فرد",
+      corporate: "شركة",
       formdata: {
         company: {
-          title: "Company Name",
+          title: "إسم الشركة",
           placeholder: "Wallace Co.",
         },
         companyContact: {
-          title: "Company Contact",
+          title: "رقم الهاتف",
           placeholder: "xyz.company.com",
         },
         license: {
-          title: "Cooperate License Number",
+          title: "رقم الترخيص",
           placeholder: "0000000000",
         },
         name: {
-          title: "Full Name",
-          placeholder: "John Doe",
+          title: "الاسم",
+          placeholder: "محمد علي",
         },
         villas: {
           title: "Villa you are interested in ",
@@ -1368,79 +1426,79 @@ const arabic = {
           ],
         },
         email: {
-          title: "Mail",
+          title: "البريد الإلكتروني",
           placeholder: "example@gmail.com",
         },
         phone: {
-          title: "Phone",
+          title: "رقم الهاتف",
           placeholder: "",
         },
       },
     },
     visitus: {
-      title: "Visit us anytime",
+      title: "قم بزيارتنا في أي وقت",
       description:
-        "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
-      location: "Al-Bahri Road, Musqat, Oman",
+        "تم تصميم هذا المشروع لتوفير أسلوب حياة صحية للعائلات القاطنة فيه دون الإضرار بالبيئة ومواردها. ",
+      location: "مركز ميناء السلطان قابوس",
     },
   },
   footer: [
     {
-      title: "Navgation",
+      title: "الصفحات",
       links: [
         {
-          text: "Find your dream home",
+          text: "ابحث عن فيلا",
           link: "/floorplan",
         },
         {
-          text: "Newsroom",
+          text: "الصحافة",
           link: "/news",
         },
         {
-          text: "About us",
+          text: "من نحن",
           link: "/about",
         },
       ],
     },
     {
-      title: "Support",
+      title: "المساعدة",
       links: [
         {
-          text: "Reach out to us",
+          text: "سجل إهتمامك",
           link: "/contact",
         },
         {
-          text: "Become a broker",
+          text: "كن وسيطاً عقاريا",
           link: "/contact?broker=true",
         },
       ],
     },
     {
-      title: "More from TSC",
+      title: "المزيد",
       links: [
         {
-          text: "About diamond developers",
+          text: "دايموند ديفيلوبرز",
           link: "https://diamond-developers.ae/",
         },
         {
-          text: "TSC - Dubai",
+          text: "المدينة المستدامة - دبي",
           link: "https://www.thesustainablecity.ae/",
         },
         {
-          text: "TSC - Sharjah",
+          text: "مدينة الشارقة المستدامة",
           link: "https://www.sharjahsustainablecity.ae/",
         },
       ],
     },
     {
-      title: "Contact Information",
+      title: "معلومات الاتصال",
       links: [
         {
-          title: "Email:",
+          title: "البريد الإلكتروني",
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          text: "Toll-free:",
+          text: "رقم الهاتف",
           link: "+968 8000 33 33",
         },
       ],
