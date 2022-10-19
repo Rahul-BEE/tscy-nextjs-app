@@ -283,7 +283,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
+    padding-block: 2rem;
+  }
+
+  @media (max-width:700px) {
+    background-color: #058DA61A;
   }
 
   .userformcontainer {
@@ -300,6 +304,8 @@
       width: 100%;
       padding-inline: 25px;
     }
+
+
   }
 
   .userform {
@@ -310,8 +316,6 @@
     font-weight: 400;
     font-size: 16px;
     color: #B5B5B5;
-
-
 
     label {
       font-weight: 600;
@@ -330,6 +334,7 @@
       input {
         width: 100%;
         color: #777777;
+        padding-block: 12px;
 
         @media (max-width:758px) {
           min-width: 100%;
@@ -371,7 +376,7 @@
     @media (max-width:758px) {
       flex-direction: column;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
   }
 
@@ -395,9 +400,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
       cursor: pointer;
 
+      @media (max-width:700px) {
+        border-radius: 45px;
+
+      }
+    }
+
+    @media (max-width:700px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
     }
   }
 }
@@ -409,7 +423,6 @@
   justify-content: center;
 
   button {
-
     background-color: #058DA6;
     border-radius: 5px;
     padding: 10px 18px;
@@ -422,8 +435,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
+
+    @media (max-width:700px) {
+      width: 60%;
+      margin-top: 1rem;
+    }
   }
 }
 
