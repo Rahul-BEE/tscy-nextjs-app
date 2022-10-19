@@ -55,6 +55,11 @@ const english = {
     homepage: "Homepage",
   },
 
+  bannersection: {
+    title1: "A Sustainable Lifestyle",
+    title2: "For a Better Tomorrow",
+  },
+
   sustainablesection: {
     title1: "HOW WE SUPPORT",
     title2: "SUSTAINABLE FEATURES",

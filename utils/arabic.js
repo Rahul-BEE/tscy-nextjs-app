@@ -53,6 +53,11 @@ const arabic = {
     homepage: "الصفحة الرئيسية",
   },
 
+  bannersection: {
+    title1: "نمط حياة مستدام",
+    title2: "لغدٍ أفضل",
+  },
+
   sustainablesection: {
     title1: "HOW WE SUPPORT",
     title2: "خصائص الاستدامة",
