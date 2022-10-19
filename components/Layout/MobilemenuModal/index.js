@@ -90,10 +90,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                 layout="responsive"
               />
             </div>
-            <div
-              style={{
-                paddingTop: "1rem",
-              }}>
+            <div>
               <div
                 className={styles.linkdiv}
                 style={{
