@@ -46,9 +46,9 @@ const english = {
   header: {
     langbtn: "عربي",
     links: [
-      { text: "FIND YOUR DREAM HOME", link: "/floorplan" },
-      { text: "ABOUT US", link: "/about" },
-      { text: "NEWS", link: "/news" },
+      { text: "Find Your Dream Home", link: "/floorplan" },
+      { text: "About Us", link: "/about" },
+      { text: "News", link: "/news" },
     ],
     contact: "REGISTER INTEREST",
     homepage: "Homepage",

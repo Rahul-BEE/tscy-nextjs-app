@@ -1,25 +1,175 @@
 import Modal from "react-bootstrap/Modal";
 import styles from "../../../styles/layout.module.scss";
-import { Row, Col, Container, Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import Image from "next/image";
 import useLanguage from "../../../utils/useLanguage";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Polygon from "../../../public/Svg/menupolygon.svg";
+import { useCallback, useEffect } from "react";
 const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
   const lan = useLanguage();
   const router = useRouter();
+
+  const closeModal = useCallback(() => {
+    if (window.innerWidth > 1224) {
+      onHide();
+    }
+  }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", closeModal);
+    }
+
+    return () => {
+      window.addEventListener("resize", closeModal);
+    };
+  }, [closeModal]);
+
   return (
     <Modal
       show={show}
       fullscreen={true}
       onHide={onHide}
       className={styles.header__modal}
-      contentClassName={styles.header__modal_contentclass}
-    >
+      contentClassName={styles.header__modal_contentclass}>
       <Modal.Body className={styles.header__modal_body}>
-        <Row className={styles.header__modaltop}>
+        <div className={styles.closebtnmob}>
+          <IoClose
+            onClick={onHide}
+            size={30}
+            color="white"
+            style={{
+              cursor: "pointer",
+            }}
+          />
+        </div>
+        <div className={styles.imageContainermobmenu}>
+          <div className={styles.top}>
+            <Image
+              src="/Images/mobilemenutop.png"
+              width={402}
+              height={421}
+              layout="responsive"
+              alt="sustainablecity yiti villas"
+              priority
+              quality={50}
+            />
+          </div>
+
+          <div className={styles.left}>
+            <Image
+              src="/Images/mobilemenuleft.png"
+              width={664}
+              height={590}
+              layout="responsive"
+              alt="sustainablecity yiti villas"
+              priority
+              quality={50}
+            />
+          </div>
+          <div className={styles.right}>
+            <Image
+              src="/Images/mobilemenuright.png"
+              width={445}
+              height={623}
+              layout="responsive"
+              alt="sustainablecity yiti villas"
+              priority
+              quality={50}
+            />
+          </div>
+        </div>
+        <div className={styles.mobmenulinks}>
+          <div className={styles.inner}>
+            <div className={styles.mobmenucontainer}>
+              <Image
+                src="/Logos/tsc-logo-white-text.svg"
+                alt="the sustainable city yiti"
+                width={200}
+                height={100}
+                layout="responsive"
+              />
+            </div>
+            <div
+              style={{
+                paddingTop: "1rem",
+              }}>
+              <div
+                className={styles.linkdiv}
+                style={{
+                  borderTop: " 1.52113px solid rgba(255, 255, 255, 0.2)",
+                }}>
+                <Link href="/">
+                  <a
+                    className={`${
+                      router.pathname === "/"
+                        ? styles.menuactive
+                        : styles.menuinactive
+                    }`}
+                    onClick={() => onHide()}>
+                    <p>{lan.header.homepage}</p>
+                  </a>
+                </Link>
+              </div>
+              {lan.header.links.map((link, index) => {
+                return (
+                  <div
+                    key={`${index}_header_links_mobile`}
+                    className={styles.linkdiv}>
+                    <Link href={link.link}>
+                      <a
+                        className={` ${
+                          router.pathname === link.link
+                            ? styles.menuactive
+                            : styles.menuinactive
+                        }`}
+                        onClick={() => onHide()}>
+                        <p>{link.text}</p>
+                      </a>
+                    </Link>
+                  </div>
+                );
+              })}
+              <div className={styles.linkdiv}>
+                <Link href="/contact">
+                  <a
+                    className={` ${
+                      router.pathname === "/contact"
+                        ? styles.menuactive
+                        : styles.menuinactive
+                    }`}
+                    onClick={() => onHide()}>
+                    <p>{lan.commontext.registerinterest}</p>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.langbtnmobile}>
+              <div className={styles.langbtnmobileinner}>
+                <button
+                  className={
+                    currentLang === "en"
+                      ? styles.btnlangactive
+                      : styles.btnlanginactive
+                  }
+                  onClick={() => handleLang("en")}>
+                  English
+                </button>
+                <button
+                  className={
+                    currentLang === "ar"
+                      ? styles.btnlangactive
+                      : styles.btnlanginactive
+                  }
+                  onClick={() => handleLang("ar")}>
+                  عربي
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <Row className={styles.header__modaltop}>
           <Col>
             <IoClose onClick={onHide} size={30} color="white" />
           </Col>
@@ -55,8 +205,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}
-                    onClick={() => onHide()}
-                  >
+                    onClick={() => onHide()}>
                     <Polygon className="me-2" />
                     <p className="p-0 m-0">{lan.header.homepage}</p>
                   </a>
@@ -66,8 +215,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                     <div
                       key={`${index}_header_links_mobile`}
                       style={{ width: "100%" }}
-                      className="flex justify-content-center flex-column"
-                    >
+                      className="flex justify-content-center flex-column">
                       <Link href={link.link}>
                         <a
                           className={`d-flex align-items-center ${
@@ -75,8 +223,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                               ? styles.menuactive
                               : styles.menuinactive
                           }`}
-                          onClick={() => onHide()}
-                        >
+                          onClick={() => onHide()}>
                           <Polygon className="me-2" />
                           <p className="p-0 m-0">{link.text}</p>
                         </a>
@@ -91,8 +238,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}
-                    onClick={() => onHide()}
-                  >
+                    onClick={() => onHide()}>
                     <Polygon className="me-2" />
                     <p className="p-0 m-0">{lan.commontext.registerinterest}</p>
                   </a>
@@ -108,8 +254,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                       ? styles.btnlangactive
                       : styles.btnlanginactive
                   }
-                  onClick={() => handleLang("en")}
-                >
+                  onClick={() => handleLang("en")}>
                   English
                 </Button>
                 <Button
@@ -118,8 +263,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                       ? styles.btnlangactive
                       : styles.btnlanginactive
                   }
-                  onClick={() => handleLang("ar")}
-                >
+                  onClick={() => handleLang("ar")}>
                   عربي
                 </Button>
               </Col>
@@ -142,7 +286,7 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
               alt="sustainablecity yiti villas"
             />
           </Col>
-        </Row>
+        </Row> */}
       </Modal.Body>
     </Modal>
   );
