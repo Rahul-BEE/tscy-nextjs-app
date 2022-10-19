@@ -317,15 +317,16 @@
 
     .container_location {
       overflow: hidden;
-      height: 100vh;
+      height: 50vh;
       // min-height: 390px;
-      max-height: 390px;
+      max-height: 288px;
       // transition: all 2s ease-in;
     }
 
     .container_location_mobile {
       overflow: visible;
-      height: 180vh;
+      height: 150vh;
+      max-height: 1028px;
 
       .locationImagecontainer2 {
         .svg_location_comp {
@@ -354,12 +355,6 @@
 
       .svg_location_comp {
         height: 100%;
-
-        svg {
-          right: 0;
-          width: 100%;
-          height: 100%;
-        }
       }
 
 

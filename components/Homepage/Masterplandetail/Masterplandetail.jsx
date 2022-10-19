@@ -85,7 +85,7 @@ const Masterplandetail = ({ item, track, goback }) => {
             exit={"exit"}
             variants={parentVariant}
             dragElastic={false}
-            dragMomentum={true}
+            dragMomentum={track ? true : false}
             custom={direction}
             onDragEnd={(_, info) => dragHandler(info)}
             className={styles.masterplaninnerslideimg}
@@ -97,6 +97,7 @@ const Masterplandetail = ({ item, track, goback }) => {
               objectFit="cover"
               objectPosition="center"
               placeholder="blur"
+              unoptimized={true}
               blurDataURL={data[index].slideimg[slideIndex]}
               alt={data[index].name}
               onLoadingComplete={() => setShowGradient(true)}
@@ -137,6 +138,7 @@ const Masterplandetail = ({ item, track, goback }) => {
           <Paginationdots
             slideIndex={slideIndex}
             length={data[index].slideimg.length}
+            setSlideIndex={setSlideIndex}
           />
         )}
       </div>

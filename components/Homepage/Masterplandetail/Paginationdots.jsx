@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "../../../styles/masterplan.module.scss";
 import { motion } from "framer-motion";
-const Paginationdots = ({ slideIndex, length }) => {
+const Paginationdots = ({ slideIndex, length, setSlideIndex }) => {
   return (
     <div className={styles.paginationdots}>
       <ul>
         {[...Array(length).keys()].map((item) => {
           return (
             <motion.li
+              onClick={() => setSlideIndex(item)}
               key={item}
               initial={{
                 opacity: 0.5,

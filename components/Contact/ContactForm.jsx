@@ -151,7 +151,7 @@ const ContactForm = ({ page }) => {
                   </small>
                 </div>
               </div>
-              {page !== "true" && (
+              {/* {page !== "true" && (
                 <div className={styles.formItem}>
                   <label htmlFor="villa" style={{ marginBottom: "0.5rem" }}>
                     {data.villas.title}
@@ -170,7 +170,7 @@ const ContactForm = ({ page }) => {
                     ))}
                   </select>
                 </div>
-              )}
+              )} */}
               {select === 1 && (
                 <div className={styles.formItem}>
                   <label htmlFor="license">{data.license.title}</label>
