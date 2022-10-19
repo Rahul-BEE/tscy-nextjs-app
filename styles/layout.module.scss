@@ -339,6 +339,13 @@
     }
 
     @media (max-width:400px) {
+      width: 321px;
+      height: 251px;
+      bottom: -60px;
+      left: -130px;
+    }
+
+    @media (max-width:321px) {
       width: 301px;
       height: 231px;
       bottom: -60px;
@@ -383,9 +390,11 @@
     width: 100%;
     height: auto;
     margin: auto;
+    margin-bottom: 1rem;
 
     @media(max-width:321px) {
       width: 80%;
+
     }
   }
 
@@ -410,7 +419,7 @@
     }
 
     @media(max-width:600px) {
-      padding-block: 10px;
+      padding-block: 16px;
     }
 
   }
@@ -592,7 +601,7 @@
     .footercard {
       h4 {
         font-weight: 600;
-        font-size: 1.25;
+        font-size: 1.25rem;
         color: #777777;
       }
     }
