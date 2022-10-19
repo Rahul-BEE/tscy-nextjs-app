@@ -18,9 +18,9 @@ function NewsPage() {
 
           <div className={styles.container_boxs}>
             {ar.map((e,index) => (
-              <Link href={`news/${e.slug}`} passHref>
+              <Link href={`news/${e.slug}`} key={index} passHref>
               <a>
-              <div className={styles.box} key={index}>
+              <div className={styles.box}>
                 <div>
                   <Image
                   className={styles.test_box}

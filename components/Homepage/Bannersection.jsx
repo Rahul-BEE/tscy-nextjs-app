@@ -13,7 +13,7 @@ const Bannersection = ({ banner }) => {
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
-        speed={1500}
+        speed={2500}
         loop={true}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{

@@ -155,9 +155,9 @@ function Newssection() {
           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
-              <Link href={`news/${item.slug}`} passHref>
+              <Link href={`news/${item.slug}`} key={index} passHref>
               <a>
-              <div className={styles.hero_box} key={index}>
+              <div className={styles.hero_box}>
                 <div>
                   <div className={styles.news_heading}>
                     <h3>{item.heading}</h3>
@@ -204,9 +204,9 @@ function Newssection() {
             {data
               .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
               .map((item, index) => (
-                <Link href={`news/${item.slug}`} passHref>
+                <Link href={`news/${item.slug}`} key={index} passHref>
               <a>
-                <div className={styles.secondry_box} key={index}>
+                <div className={styles.secondry_box}>
                    <Image
                 className={styles.test_box}
                 src={item.image}

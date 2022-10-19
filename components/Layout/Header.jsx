@@ -6,7 +6,6 @@ import Link from "next/link";
 import MobileMenu from "./MobilemenuModal";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useCallback } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useScrollDirection } from "react-use-scroll-direction";
 const Header = () => {
@@ -104,7 +103,7 @@ const Header = () => {
               />
             </a>
           </Link>
-          <button
+          <motion.button
             className={`btn ${
               domYOffset || location.pathname !== "/"
                 ? styles.header_right_langbtn2
@@ -112,7 +111,7 @@ const Header = () => {
             }`}
             onClick={() => handelLanguageChange()}>
             {lan.header.langbtn}
-          </button>
+          </motion.button>
         </div>
         <nav
           className={`${styles.app__header_middle} ${
@@ -125,7 +124,15 @@ const Header = () => {
               return (
                 <li key={`${index}_header_links`}>
                   <Link href={link.link}>
-                    <a>{link.text}</a>
+                    <motion.a
+                      style={{
+                        cursor: "pointer",
+                      }}
+                      whileHover={{
+                        color: "#058DA6",
+                      }}>
+                      {link.text}
+                    </motion.a>
                   </Link>
                 </li>
               );

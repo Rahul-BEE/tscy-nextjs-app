@@ -34,7 +34,7 @@ export default function Home() {
         <Masterplan />
         <Location />
         <Villaplans />
-        {/* <Newssection /> */}
+        <Newssection />
         <Partners />
       </div>
     </>
