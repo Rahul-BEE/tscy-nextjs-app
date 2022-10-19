@@ -40,6 +40,25 @@ import Facebook from "../public/Svg/contactus/fb.svg";
 import Linkedin from "../public/Svg/contactus/linkedin.svg";
 import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
+import Popwellness from "../public/Svg/masterplan/wellness.svg";
+import Popeast from "../public/Svg/masterplan/east.svg";
+import Popwest from "../public/Svg/masterplan/west.svg";
+import Popplaza from "../public/Svg/masterplan/plaza.svg";
+import Pop5star from "../public/Svg/masterplan/5star.svg";
+import Pop4star from "../public/Svg/masterplan/4star.svg";
+import Popschool from "../public/Svg/masterplan/school.svg";
+import Popsports from "../public/Svg/masterplan/sports.svg";
+import Popbranded from "../public/Svg/masterplan/branded.svg";
+import Popequestrian from "../public/Svg/masterplan/equestrisn.svg";
+import Popseelab from "../public/Svg/masterplan/seelab.svg";
+import Popautism from "../public/Svg/masterplan/autism.svg";
+import Popjogging from "../public/Svg/masterplan/jogging.svg";
+import Popmosque from "../public/Svg/masterplan/mosque.svg";
+import Popequestraiantrack from "../public/Svg/masterplan/equestraiantrack.svg";
+import Popcycling from "../public/Svg/masterplan/cycling.svg";
+import Popebuggy from "../public/Svg/masterplan/ebuggy.svg";
+import Popfestival from "../public/Svg/masterplan/festival.svg";
+import Popspine from "../public/Svg/masterplan/spine.svg";
 const arabic = {
   language: 2,
   header: {
@@ -110,7 +129,7 @@ const arabic = {
       {
         id: 1,
         name: "مركز توحد",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popplaza />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -132,7 +151,7 @@ const arabic = {
       {
         id: 2,
         name: "مركز الفروسية",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popequestrian />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -154,7 +173,7 @@ const arabic = {
       {
         id: 3,
         name: "مختبر سي",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popseelab />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -176,7 +195,7 @@ const arabic = {
       {
         id: 4,
         name: "مسجد مستدام",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popmosque />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -198,7 +217,7 @@ const arabic = {
       {
         id: 5,
         name: "الحزام الأخضر",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popspine />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -220,7 +239,7 @@ const arabic = {
       {
         id: 6,
         name: "شقق فاخرة",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popbranded />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -242,7 +261,7 @@ const arabic = {
       {
         id: 7,
         name: "مركز صحي",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popwellness />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -264,7 +283,7 @@ const arabic = {
       {
         id: 8,
         name: "مجمع رياضي",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popsports />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -286,7 +305,7 @@ const arabic = {
       {
         name: "فندق 4 نجوم",
         id: 9,
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Pop4star />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -309,7 +328,7 @@ const arabic = {
         id: 10,
         villadetails: true,
         name: "الحي الغربي",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popwest />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -341,7 +360,7 @@ const arabic = {
       {
         id: 11,
         name: "مدرسة وحضانة",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popschool />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -363,7 +382,7 @@ const arabic = {
       {
         id: 12,
         name: "منتجع 5 نجوم",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Pop5star />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -386,7 +405,7 @@ const arabic = {
         id: 13,
         villadetails: true,
         name: "الحي الشرقي",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popeast />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -415,7 +434,7 @@ const arabic = {
         id: 14,
         name: "البلازا",
 
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popplaza />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -433,7 +452,7 @@ const arabic = {
       {
         id: 15,
         name: "ساحة المهرجانات",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popfestival />,
         description:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         details: {
@@ -1013,7 +1032,7 @@ const arabic = {
     {
       id: 16,
       name: "الجري",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popjogging />,
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -1031,7 +1050,7 @@ const arabic = {
     {
       id: 17,
       name: "الخيول",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popequestraiantrack />,
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -1049,7 +1068,7 @@ const arabic = {
     {
       id: 18,
       name: "الدراجات الهوائية",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popcycling />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -1067,7 +1086,7 @@ const arabic = {
     {
       id: 19,
       name: "المركبات الكهربائية",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popebuggy />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "Car free areas to create safe zones for kids and promote walkability.",

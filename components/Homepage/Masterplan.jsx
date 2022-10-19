@@ -43,7 +43,6 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    console.log(id, track, "hi");
     if (id === item || track) {
       setItem(null);
       setShow(null);
@@ -203,17 +202,21 @@ const Masterplan = () => {
 
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
-      <Row className="headingRow">
+      <Row
+        className="headingRow"
+        style={{
+          paddingTop: "2rem",
+        }}>
         <Col>
-          {/* <h5 className="sectionsubHeading">{lan.masterplan.title1}</h5> */}
+          {/* <h5 className="sectionsubHeading mt-5">
+              {lan.locationsection.title1}
+            </h5> */}
           <h2 className="sectionmainHeading">{lan.masterplan.title2}</h2>
         </Col>
       </Row>
-      <Row className={`${styles.masterplan_description} flex`}>
-        <Col md={6} lg={6} sm={12} xl={8}>
-          {lan.masterplan.description}
-        </Col>
-      </Row>
+      <div className={`sectionmaindescription`}>
+        <p>{lan.masterplan.description}</p>
+      </div>
       {showDetail ? (
         <>
           <div
@@ -252,8 +255,8 @@ const Masterplan = () => {
               animate={zoomAnimation}
               ref={imageContainerRef}
               drag={zoom ? true : "x"}
-              dragListener={!animating}
-              // onDrag={scrollHandler}
+              onDrag={scrollHandler}
+              dragListener={isBrowser}
               onDragEnd={dragHandler}
               dragElastic={0}
               dragConstraints={

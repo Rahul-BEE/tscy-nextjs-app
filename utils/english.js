@@ -42,6 +42,25 @@ import Linkedin from "../public/Svg/contactus/linkedin.svg";
 import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 
+import Popwellness from "../public/Svg/masterplan/wellness.svg";
+import Popeast from "../public/Svg/masterplan/east.svg";
+import Popwest from "../public/Svg/masterplan/west.svg";
+import Popplaza from "../public/Svg/masterplan/plaza.svg";
+import Pop5star from "../public/Svg/masterplan/5star.svg";
+import Pop4star from "../public/Svg/masterplan/4star.svg";
+import Popschool from "../public/Svg/masterplan/school.svg";
+import Popsports from "../public/Svg/masterplan/sports.svg";
+import Popbranded from "../public/Svg/masterplan/branded.svg";
+import Popequestrian from "../public/Svg/masterplan/equestrisn.svg";
+import Popseelab from "../public/Svg/masterplan/seelab.svg";
+import Popautism from "../public/Svg/masterplan/autism.svg";
+import Popjogging from "../public/Svg/masterplan/jogging.svg";
+import Popmosque from "../public/Svg/masterplan/mosque.svg";
+import Popequestraiantrack from "../public/Svg/masterplan/equestraiantrack.svg";
+import Popcycling from "../public/Svg/masterplan/cycling.svg";
+import Popebuggy from "../public/Svg/masterplan/ebuggy.svg";
+import Popfestival from "../public/Svg/masterplan/festival.svg";
+import Popspine from "../public/Svg/masterplan/spine.svg";
 const english = {
   language: 1,
   header: {
@@ -113,7 +132,7 @@ const english = {
       {
         id: 1,
         name: "autism center",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popplaza />,
 
         description:
           "One of the region’s largest centres offering a comprehensive and integrated approach towards autism spectrum disorders (ASD) and other related disorders. The center’s holistic approach is designed to empower both affected individuals and their families to navigate daily life.",
@@ -139,7 +158,7 @@ const english = {
       {
         id: 2,
         name: "Equestrian center",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popequestrian />,
         description:
           "The equestrian center features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
         details: {
@@ -161,7 +180,7 @@ const english = {
       {
         id: 3,
         name: "see lab",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popseelab />,
         description:
           "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
         details: {
@@ -183,7 +202,7 @@ const english = {
       {
         id: 4,
         name: "Sustainable mosque",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popmosque />,
         description: "....",
         details: {
           area: "1250 sq.ft",
@@ -203,8 +222,8 @@ const english = {
       },
       {
         id: 5,
-        name: "Green spine",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popspine />,
+        name: "Green Spine",
         description:
           "The green spine runs along the majority of the development and is planted with trees and shrubs that thrive in Oman’s environment. Being a productive landscape, residents can farm the community allotments and greenhouses are used to grow herbs and leafy green vegetables.",
         details: {
@@ -226,7 +245,7 @@ const english = {
       {
         id: 6,
         name: "Branded Residence",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popbranded />,
         description: "....",
         details: {
           area: "1250 sq.ft",
@@ -247,7 +266,7 @@ const english = {
       {
         id: 7,
         name: "Wellness center",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popwellness />,
         description:
           "A wellness center providing high quality holistic medical services.",
         details: {
@@ -270,7 +289,7 @@ const english = {
         id: 8,
         name: "Sports complex",
 
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popsports />,
         description:
           "As part of an all-encompassing approach to sustainable development, the city facilitates an active lifestyle through the integration of gyms, a sports complex, a 7.4km running and cycling track, outdoor fitness stations, tennis courts, basketball courts, a skate park, 11 playgrounds, swimming pools, an equestrian club and riding track, over 3km of hiking trails and access to non-motorised water-sports on the beach.",
         details: {
@@ -292,7 +311,7 @@ const english = {
       {
         name: "4 Star resort",
         id: 9,
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Pop4star />,
         description:
           "The four-star Hotel is characterized by a neighbour-hood spirit and friendly atmosphere and echoes the community’s sustainability ethos.",
         details: {
@@ -315,7 +334,7 @@ const english = {
         id: 10,
         villadetails: true,
         name: "West District",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popwest />,
         description: "....",
         details: {
           area: "1250 sq.ft",
@@ -346,7 +365,7 @@ const english = {
       {
         id: 11,
         name: "school & nursery",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popschool />,
         description:
           "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
         details: {
@@ -368,7 +387,7 @@ const english = {
       {
         id: 12,
         name: "5 star resort",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Pop5star />,
         description:
           "This five-star resort has a range of restaurants, leisure facilities, lounges and beach front access. The resort also manages 132 luxury branded apartments.",
         details: {
@@ -392,7 +411,7 @@ const english = {
         id: 13,
         villadetails: true,
         name: "East District",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popeast />,
         description: "....",
         details: {
           area: "1250 sq.ft",
@@ -419,7 +438,7 @@ const english = {
       {
         id: 14,
         name: "Plaza",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popplaza />,
         description:
           "A vibrant community plaza, with commercial facilities including shops, restaurants, cafes, offices, and apartments.",
         details: {
@@ -441,7 +460,7 @@ const english = {
       {
         id: 15,
         name: "Festival Park",
-        icon: "/Images/masterplan/plaza.png",
+        icon: <Popfestival />,
         description: "....",
         details: {
           area: "1250 sq.ft",
@@ -1040,7 +1059,7 @@ const english = {
     {
       id: 16,
       name: "Jogging",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popjogging />,
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
         "A 7.4 km jogging track runs along the entire stretch of the green spine and the waterfront promenade.",
@@ -1058,7 +1077,7 @@ const english = {
     {
       id: 17,
       name: "Equestrian",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popequestraiantrack />,
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
         "=1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
@@ -1076,7 +1095,7 @@ const english = {
     {
       id: 18,
       name: "Cycling",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popcycling />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "The dedicated cycling track encourages people to go car-free by providing non-vehicular Sikkas within the sustainable district.",
@@ -1094,7 +1113,7 @@ const english = {
     {
       id: 19,
       name: "E-Buggy",
-      icon: "/Images/masterplan/plaza.png",
+      icon: <Popebuggy />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "Car free areas to create safe zones for kids and promote walkability.",

@@ -84,6 +84,7 @@ const MasterplanInfoBox = ({
                     style={{
                       padding: 0,
                       margin: 0,
+                      textAlign: "end",
                     }}>
                     {lan.commontext.nextto} {data[index + 1].name}
                   </p>
@@ -93,12 +94,7 @@ const MasterplanInfoBox = ({
             </div>
           </div>
 
-          <Image
-            src={"/Images/masterplan/plaza.png"}
-            width="85"
-            height={"95"}
-            layout="intrinsic"
-          />
+          <div className={styles.infoboxheadicon}>{data[index].icon}</div>
           <div className={styles.infoboxcontent}>
             <h3>{data[index].name}</h3>
             <div>
