@@ -638,11 +638,13 @@
 
     h4 {
       font-weight: 600;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
 
       @media (max-width:1224px) {
         margin-bottom: 1.5rem;
       }
+
+
     }
 
     h6 {
@@ -651,6 +653,10 @@
 
       @media (max-width:1224px) {
         margin-bottom: 1.5rem;
+      }
+
+      @media (max-width:600px) {
+        margin-bottom: 0;
       }
     }
 
@@ -666,6 +672,10 @@
         width: 40px;
         height: 40px;
         margin-right: 1rem;
+      }
+
+      @media (max-width:600px) {
+        margin-top: 2rem;
       }
     }
 
@@ -775,8 +785,9 @@
           }
         }
 
-        @media (max-width:600px) {
-          display: none;
+        @media(max-width:600px) {
+          align-items: center;
+          justify-content: center;
         }
       }
 
@@ -785,12 +796,16 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        font-size: 1.2rem;
         gap: 1rem;
         cursor: pointer;
       }
 
       @media (max-width:600px) {
         justify-content: center;
+        flex-direction: column-reverse;
+        gap: 2rem;
+
       }
     }
   }
