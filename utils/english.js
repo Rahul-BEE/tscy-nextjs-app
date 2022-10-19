@@ -74,6 +74,11 @@ const english = {
     homepage: "Homepage",
   },
 
+  bannersection: {
+    title1: "A Sustainable Lifestyle",
+    title2: "For a Better Tomorrow",
+  },
+
   sustainablesection: {
     title1: "HOW WE SUPPORT",
     title2: "SUSTAINABLE FEATURES",
@@ -94,6 +99,9 @@ const english = {
           "Autism Center",
           "A thriving hospitality sector that includes 4 and 5 star hotels",
         ],
+        rightimg:"/Images/sustainable/social_right.png",
+        leftimg:"/Images/sustainable/social_left.png",
+        mobimg:"/Images/sustainable/social_mobile.png"
       },
 
       {
@@ -106,6 +114,9 @@ const english = {
           "Smart design leading to lower operational costs",
           "Promotion of circular economy",
         ],
+        rightimg:"/Images/sustainable/economic_right.png",
+        leftimg:"/Images/sustainable/economic_left.png",
+        mobimg:"/Images/sustainable/economic_mobile.png"
       },
       {
         heading: "Environmental Sustainability",
@@ -119,6 +130,9 @@ const english = {
           "EV charging stations",
           "Waste recycling",
         ],
+        rightimg:"/Images/sustainable/environmental_right.png",
+        leftimg:"/Images/sustainable/environmental_left.png",
+        mobimg:"/Images/sustainable/environmental_mobile.png"
       },
     ],
   },
@@ -1132,26 +1146,25 @@ const english = {
   newssection: {
     post: [
       {
-        slug: "tourism-development-news",
+        slug: "newly-launched-plan",
         title: [
           "The Sustainable City - Yiti Signs Escrow",
           "Agreement with Sohar Islamic",
         ],
-        date: "29th July, 2022",
+        date: "29th June, 2022",
         city: "Muscat",
         country: "Oman",
-        image: "/Images/news/news_img2.jpg",
+        image: "/Images/news/news_img1.jpg",
         type: "news",
         heading:
-          "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
+          "Understanding with Sohar Islamic Bank to open an Escrow Account for the newly launched master planned project in the capital city of Muscat.",
         discription: [
-          "Diamond Developers, the mastermind behind The Sustainable City brand, the first fully operational sustainable community in the Middle East has entered into a development partnership agreement with the Oman Tourism Development Company (OMRAN Group), the executive arm of the Sultanate for tourism development. The agreement entails the development of first phase of the Yiti Tourism masterplan with an investment value of approximately AED 3.7 billion (approximately USD 1 billion). In conjunction with this partnership, a joint venture called Sustainable Development and Investment Company (SDIC) S.A.O.C has been established to carry out the execution of this phase.",
-          "OMRAN Group’s partnership with Diamond Developers marks a major milestone in Yiti Development as we together begin the first phase of this integrated urban destination in Muscat. The signing further attests to OMRAN Group’s strategic vision in expanding the nation’s tourism sector and continuing to play a pivotal role as a catalyst and enabler of multi-fold, lucrative investment opportunities in the country in line with Oman Investment Authority’s directions in realising the ambitious goals of Oman Vision 2040 and supporting the delivery of the National Tourism Strategy,” said Hashil Bin Obaid Al Mahrouqi, CEO of OMRAN Group.",
-          "We are delighted to collaborate with Diamond Developers as they are one of the leading and reputable companies in building sustainable cities in the region.  Their approach is in line with our vision of adopting the foundations of placemaking and harnessing sustainability in all aspects of the development.” Al Mahrouqi added.",
-          ,
-          "The first phase of the Yiti project, which covers 900,000 square meters, will focus on constructing a fully sustainable mixed-use project, the Sultanate's first of its kind community that promotes sustainable living. The first phase will include green public spaces, residences, tourism, commercial, and educational facilities, all with well-balanced and integrated components. Visitors and residents alike will enjoy a variety of unique lifestyle experiences, including restaurants, cafés, shops, and an equestrian center, a farm along with other distinctive components that create a meaningful green-living environment. The two sides announced that full details of the project will be revealed at the official launch ceremony later this year.",
-          "Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy.",
-          "Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today.",
+          "Muscat, Oman – The Sustainable City - Yiti, set to be the first fully sustainable community in Oman, has signed today a Memorandum of Understanding with Sohar Islamic Bank to open an Escrow Account for the newly launched master planned project in the capital city of Muscat.",
+          "This agreement was made in abidance by the Sultanate’s Royal Decree No. 30/2018, aimed to protect developers’ funds. In light of that, The Sustainable City Yiti can now offer Escrow services for the buyers of its upcoming 1657 residential units - including 300 eco-friendly and energy-efficient villas, 1225 apartments, and 132 luxury serviced apartments. ",
+          "The agreement was signed by Mr. Hashil Bin Obaid Al Mahrougi, Chairman of Sustainable Development and Investment Company (SDIC), and Mr. Abdul Wahid Bin Mohammed Al Murshidi, Chief Islamic Banking Officer, Sohar Islamic. The ceremony was also attended by key stakeholders from OMRAN Group, Diamond Developers and Sohar Islamic.",,
+          "Commenting on this partnership, Mr. Hashil Al Mahrouqi, Chairman of (SDIC), said: With an investment value of nearly one billion US dollars, this project marks a unique milestone in our journey as we continue to invest, develop, and maximize the limitless potential of Omans tourism sector. We are committed to working with our partners to ensure the smoothest experience for our buyers and investors. Our agreement with Sohar Islamic, one of the leading financial institutions in the country, not only protects customers but assists in attracting investors to Omans real estate market.",
+          "Mr. Abdul Wahid Al Murshidi, Chief Islamic Banking Officer, Sohar Islamic, said: “We always aspire to collaborate with key strategic partners in the development space. This agreement was a result of a very detailed dialogue and requirements definition exercise between the teams from both sides, and we are delighted to be offering bespoke services to The Sustainable City - Yiti buyers and to support the property sector and the overall economic growth of the Sultanate.",
+          "The Sustainable City - Yiti project is a partnership between OMRAN Group, the executive arm of the Sultanate for developing the tourism sector, and Diamond Developers – the leading company in developing sustainable communities. The project will be the largest operational sustainable community in the region, designed to deliver measurable outcomes across the three pillars of sustainability: social, environmental, and economic, and will achieve net-zero carbon targets by 2040.",
         ],
       },
       {
@@ -1163,7 +1176,7 @@ const english = {
         date: "22nd April, 2022",
         city: "Muscat",
         country: "Oman",
-        image: "/Images/news/news_img1.jpg",
+        image: "/Images/news/news_img2.jpg",
         type: "news",
         heading:
           "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",

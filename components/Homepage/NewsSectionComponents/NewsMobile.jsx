@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
-
+import Link from "next/link";
 function NewsMobile({ data }) {
   //hh
   return (
@@ -21,7 +21,8 @@ function NewsMobile({ data }) {
         }}
         className={styles.mySwiper}>
         {data.map((e, index) => (
-          <SwiperSlide key={`${index}_newmob`}>
+          <SwiperSlide key={index}>
+          <Link href={`news/${e.slug}`}  passHref>
             <div className={styles.test_box}>
               <Image
                 className={styles.test_box}
@@ -36,6 +37,7 @@ function NewsMobile({ data }) {
               </div>
               <p>Read here </p>
             </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

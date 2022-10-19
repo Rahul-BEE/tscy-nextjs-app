@@ -233,13 +233,15 @@ const SustainableFeatures = () => {
           </h2>
         </Col>
       </Row>
+      {showData && (
       <Row className={featurestyles.rowtablet}>
         <Col md={3} className={featurestyles.sustainImgCol}>
-          <motion.div animate={controls} initial="hidden" variants={variant1}>
+          <motion.div animate={controls} initial="hidden" variants={variant1} style={{height:"100%",width:"100%"}}>
             <Image
-              src="/Images/sustainableleft.png"
-              width={562}
-              height={546}
+              src={showData?.leftimg}
+              width={357}
+              height={453}
+
               className={featurestyles.susimage1}
               alt="Sustainale feature image"
             />
@@ -256,11 +258,12 @@ const SustainableFeatures = () => {
           </Container>
         </Col>
         <Col md={3} className={featurestyles.sustainImgCol1}>
-          <motion.div animate={controls} initial="hidden" variants={variant2}>
+          <motion.div animate={controls} initial="hidden" variants={variant2} className={featurestyles.animateright} style={{height:"100%",width:"100%"}}>
             <Image
-              src="/Images/sustainableright.png"
-              width={470}
-              height={501}
+              src={showData?.rightimg}
+              width={369}
+              height={431}
+              style={{float: "right"}}
               className={featurestyles.susimage2}
               alt="Sustainbale feature Image"
             />
@@ -270,7 +273,7 @@ const SustainableFeatures = () => {
         <Col md={12} className={featurestyles.sustainImgCol2}>
           <motion.div animate={controls} initial="hidden" variants={variant2}>
             <Image
-              src="/Images/sustainablemobile.png"
+              src={showData?.mobimg}
               width={470}
               height={400}
               className={featurestyles.susimage2}
@@ -279,6 +282,7 @@ const SustainableFeatures = () => {
           </motion.div>
         </Col>
       </Row>
+        )}
     </div>
   );
 };
