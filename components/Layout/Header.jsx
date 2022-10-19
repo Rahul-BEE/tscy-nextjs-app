@@ -131,9 +131,6 @@ const Header = () => {
                 <li key={`${index}_header_links`}>
                   <Link href={link.link}>
                     <motion.a
-                      style={{
-                        cursor: "pointer",
-                      }}
                       whileHover={{
                         color: "#058DA6",
                       }}>
