@@ -41,6 +41,7 @@ import Linkedin from "../public/Svg/contactus/linkedin.svg";
 import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 const arabic = {
+  language: 2,
   header: {
     langbtn: "English",
     links: [
@@ -50,6 +51,11 @@ const arabic = {
     ],
     contact: "تواصل معنا",
     homepage: "الصفحة الرئيسية",
+  },
+
+  bannersection: {
+    title1: "نمط حياة مستدام",
+    title2: "لغدٍ أفضل",
   },
 
   sustainablesection: {
@@ -932,7 +938,7 @@ const arabic = {
     ],
   },
   commontext: {
-    getdirection: "الاتجاهاتس",
+    getdirection: "الاتجاهات",
     brochure: "الكتيب",
     floorplan: "المخططات",
     learnmore: "إعرف المزيد",
@@ -1497,7 +1503,7 @@ const arabic = {
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          text: "رقم الهاتف",
+          title: "رقم الهاتف",
           link: "+968 8000 33 33",
         },
       ],

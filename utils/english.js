@@ -43,6 +43,7 @@ import Instagram from "../public/Svg/contactus/insta.svg";
 import Twitter from "../public/Svg/contactus/twitter.svg";
 
 const english = {
+  language: 1,
   header: {
     langbtn: "عربي",
     links: [
@@ -52,6 +53,11 @@ const english = {
     ],
     contact: "REGISTER INTEREST",
     homepage: "Homepage",
+  },
+
+  bannersection: {
+    title1: "A Sustainable Lifestyle",
+    title2: "For a Better Tomorrow",
   },
 
   sustainablesection: {
@@ -549,7 +555,7 @@ const english = {
         bathrooms: "5",
         maidroom: "1",
         type: "Courtyard Villa",
-        location: "West بDistrict",
+        location: "West District",
         locationImg: "/Images/villas/westdistrict.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],

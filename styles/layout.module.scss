@@ -92,7 +92,7 @@
     margin-inline: 2%;
     margin-right: 5%;
     width: 100px;
-    height: 35px;
+    height: 46px;
     transition: all 0.5s ease-in-out;
 
     @media (max-width: 676px) {
@@ -137,6 +137,7 @@
       white-space: nowrap;
       font-weight: 400;
       letter-spacing: 1px;
+      cursor: pointer;
 
       &:lang(ar) {
         font-weight: 700;

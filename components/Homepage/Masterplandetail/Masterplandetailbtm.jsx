@@ -44,10 +44,7 @@ const Masterplandetailbtm = ({ item, track, goback }) => {
               </div>
             ))}
           </div>
-          <motion.button
-            style={{
-              backgroundColor: "#058DA6",
-            }}>
+          <motion.button className={styles.seevillabtn}>
             {lan.commontext.seevillas}
           </motion.button>
         </div>

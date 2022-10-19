@@ -39,7 +39,6 @@ const Masterplandetail = ({ item, track, goback }) => {
   const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
-
   const dragHandler = (info) => {
     if (info.velocity.x < -200 && slideIndex < length - 1) {
       setDirection(1);
@@ -69,17 +68,24 @@ const Masterplandetail = ({ item, track, goback }) => {
           <motion.div
             data-index={track !== null ? "true" : "false"}
             drag="x"
-            dragConstraints={{
-              right: 0,
-              left: -sliderWidth,
-            }}
+            dragConstraints={
+              lan.language === 1
+                ? {
+                    right: 0,
+                    left: -sliderWidth,
+                  }
+                : {
+                    left: 0,
+                    right: sliderWidth,
+                  }
+            }
             id="masterplanslider"
             animate="visible"
             initial="hidden"
             exit={"exit"}
             variants={parentVariant}
             dragElastic={false}
-            dragMomentum={false}
+            dragMomentum={track ? true : false}
             custom={direction}
             onDragEnd={(_, info) => dragHandler(info)}
             className={styles.masterplaninnerslideimg}
@@ -91,11 +97,12 @@ const Masterplandetail = ({ item, track, goback }) => {
               objectFit="cover"
               objectPosition="center"
               placeholder="blur"
+              unoptimized={true}
               blurDataURL={data[index].slideimg[slideIndex]}
               alt={data[index].name}
               onLoadingComplete={() => setShowGradient(true)}
             />
-            {showGradient && (
+            {showGradient && track === null && (
               <div className={styles.masterplandetailgradient} />
             )}
           </motion.div>
@@ -131,6 +138,7 @@ const Masterplandetail = ({ item, track, goback }) => {
           <Paginationdots
             slideIndex={slideIndex}
             length={data[index].slideimg.length}
+            setSlideIndex={setSlideIndex}
           />
         )}
       </div>

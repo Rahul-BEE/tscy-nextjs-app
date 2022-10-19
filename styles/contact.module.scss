@@ -83,6 +83,13 @@
                     }
 
 
+                    .infoRow:nth-child(3),
+                    .infoRow:nth-child(4) {
+                        p {
+                            direction: ltr;
+                        }
+                    }
+
                     @media (max-width:1224px) {
                         grid-template-columns: 1fr 1fr;
                     }
@@ -91,6 +98,8 @@
                         grid-template-columns: 1fr;
                     }
                 }
+
+
 
                 .infosocial {
                     display: grid;
@@ -117,6 +126,10 @@
                 justify-content: flex-start;
                 flex-direction: column;
                 gap: 2rem;
+
+                &:lang(ar) {
+                    padding-right: 80px;
+                }
 
                 .typeSelector {
                     width: 100%;

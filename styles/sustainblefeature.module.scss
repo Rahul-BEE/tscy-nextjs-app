@@ -172,7 +172,7 @@
       justify-content: center;
     
       &:lang(ar) {
-        direction: rtl;
+        direction: ltr;
         .rotate_icon {
           transform: rotate(180deg);
         }
