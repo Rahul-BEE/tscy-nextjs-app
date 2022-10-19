@@ -541,7 +541,7 @@ const english = {
         bathrooms: "5",
         maidroom: "1",
         type: "Courtyard Villa",
-        location: "West بDistrict",
+        location: "West District",
         locationImg: "/Images/villas/westdistrict.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],

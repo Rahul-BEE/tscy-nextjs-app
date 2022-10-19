@@ -924,7 +924,7 @@ const arabic = {
     ],
   },
   commontext: {
-    getdirection: "الاتجاهاتس",
+    getdirection: "الاتجاهات",
     brochure: "الكتيب",
     floorplan: "المخططات",
     learnmore: "إعرف المزيد",
@@ -1499,7 +1499,7 @@ const arabic = {
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          text: "رقم الهاتف",
+          title: "رقم الهاتف",
           link: "+968 8000 33 33",
         },
       ],
