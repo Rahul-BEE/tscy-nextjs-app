@@ -8,7 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 const VillaCards = ({ filterId }) => {
   const lan = useLanguage();
-  const [data, _] = useState(lan.villaplansection.villas);
+  const data = lan.villaplansection.villas;
 
   const [sortedArray, setSortedArray] = useState(data);
 
