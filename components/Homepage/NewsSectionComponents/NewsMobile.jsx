@@ -6,11 +6,12 @@ import Image from "next/image";
 import "swiper/css";
 
 function NewsMobile({ data }) {
+  //hh
   return (
     <div className={styles.hero_mobile_box}>
       <div className={`${styles.hero_text_center}`}>
-          <h2 style={{marginBottom: "3.5rem"}}>press and news</h2>
-        </div>
+        <h2 style={{ marginBottom: "3.5rem" }}>press and news</h2>
+      </div>
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -22,23 +23,23 @@ function NewsMobile({ data }) {
         {data.map((e, index) => (
           <SwiperSlide key={`${index}_newmob`}>
             <div className={styles.test_box}>
-            <Image
+              <Image
                 className={styles.test_box}
                 src={e.image}
                 width={476}
                 height={200}
                 layout="responsive"
-            />
+              />
+
               <div className={styles.bottom_text}>
-              <h3 style={{color:"black"}}>{e.heading}</h3>
-            </div>
+                <h3 style={{ color: "black" }}>{e.heading}</h3>
+              </div>
               <p>Read here </p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      </div>
-
+    </div>
   );
 }
 
