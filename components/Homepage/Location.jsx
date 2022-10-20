@@ -56,6 +56,8 @@ const Location = () => {
               height={872}
               layout="responsive"
               alt={lan.locationsection.title2}
+              priority={true}
+              quality={100}
             />
           </div>
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
@@ -66,6 +68,8 @@ const Location = () => {
             src="/Images/location/GroupMobile.png"
             alt={lan.locationsection.title2}
             layout="fill"
+            priority={true}
+            quality={100}
           />
           {/* </div> */}
           <LocationSvgComp1 svgchange={svgchange} setSvgChange={setSvgChange} />

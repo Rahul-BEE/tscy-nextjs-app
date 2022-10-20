@@ -97,10 +97,11 @@ const Masterplandetail = ({ item, track, goback }) => {
               objectFit="cover"
               objectPosition="center"
               placeholder="blur"
-              unoptimized={true}
               blurDataURL={data[index].slideimg[slideIndex]}
               alt={data[index].name}
               onLoadingComplete={() => setShowGradient(true)}
+              quality={100}
+              priority={true}
             />
             {showGradient && track === null && (
               <div className={styles.masterplandetailgradient} />

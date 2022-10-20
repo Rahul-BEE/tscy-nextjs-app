@@ -28,8 +28,7 @@ const Bannersection = ({ banner }) => {
             );
           },
         }}
-        className={styles.app__bannerswiper}
-      >
+        className={styles.app__bannerswiper}>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
             src="/Images/map-pic.jpg"
@@ -39,8 +38,7 @@ const Bannersection = ({ banner }) => {
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority
-            unoptimized
+            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <motion.div className={styles.app__bannerslidecontent}>
@@ -57,8 +55,7 @@ const Bannersection = ({ banner }) => {
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority
-            unoptimized
+            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -75,8 +72,7 @@ const Bannersection = ({ banner }) => {
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority
-            unoptimized
+            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -93,8 +89,7 @@ const Bannersection = ({ banner }) => {
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority
-            unoptimized
+            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -112,8 +107,7 @@ const Bannersection = ({ banner }) => {
           stiffness: 10,
           repeat: Infinity,
           duration: 2,
-        }}
-      >
+        }}>
         <Image
           src={"/Svg/Polygon.svg"}
           alt="The Sustainable Villas Yiti"
@@ -128,8 +122,7 @@ const Bannersection = ({ banner }) => {
           stiffness: 10,
           repeat: Infinity,
           duration: 2,
-        }}
-      >
+        }}>
         <Image
           src={"/Svg/Polygon2.svg"}
           alt="The Sustainable Villas Yiti"

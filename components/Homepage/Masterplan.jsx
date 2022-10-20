@@ -254,7 +254,7 @@ const Masterplan = () => {
               className={styles.masterplan}
               animate={zoomAnimation}
               ref={imageContainerRef}
-              drag={zoom ? true : "x"}
+              drag={isBrowser ? "x" : false}
               onDrag={scrollHandler}
               dragListener={isBrowser}
               onDragEnd={dragHandler}
