@@ -60,9 +60,16 @@ const Masterplandetail = ({ item, track, goback }) => {
     );
   }, [slideIndex]);
 
+  useEffect(() => {
+    console.log("slide", slideIndex);
+  }, [index]);
+
   return (
     <>
-      <div className={styles.masterplandetailinner} id="masterplanslideparent">
+      <div
+        className={styles.masterplandetailinner}
+        id="masterplanslideparent"
+        key={track ? track : item}>
         {console.log("direction", direction)}
         <AnimatePresence custom={direction} initial={false}>
           <motion.div

@@ -36,30 +36,43 @@ const MasterplanInfoBox = ({
   };
 
   useEffect(() => {
-    setSlideIndex(imgIndex);
-  }, [imgIndex]);
+    setImgIndex(0);
+    setSlideIndex(0);
+  }, [index]);
 
-  const carouselHandler = ({ dir, id }) => {
-    if (dir) {
-      if (dir === 1 && imgIndex < data[index].slideimg.length - 1) {
+  const slideImageClickHandler = ({ id }) => {
+    setImgIndex(id);
+    setSlideIndex(id);
+  };
+  const carouselHandler = async ({ dir }) => {
+    if (dir === 1) {
+      if (slideIndex > data[index].slideimg.length - 2) {
+        return;
+      }
+      setImgIndex((prev) => prev + 1);
+      setSlideIndex((prev) => prev + 1);
+      if (data[index].slideimg.length > 3) {
         setScrolledWidth((prev) => prev + 120);
-        setImgIndex((prev) => prev + 1);
-        scrollAnimation.start({
+        await scrollAnimation.start({
           x: -(scrolledWIdth + 120),
         });
-      } else if (dir === -1 && imgIndex !== 0) {
+      }
+    } else if (dir === -1) {
+      if (slideIndex < 1) {
+        return;
+      }
+      setImgIndex((prev) => prev - 1);
+      setSlideIndex((prev) => prev - 1);
+      if (data[index].slideimg.length > 3) {
         setScrolledWidth((prev) => prev - 120);
-        setImgIndex((prev) => prev - 1);
-        scrollAnimation.start({
+        await scrollAnimation.start({
           x: -scrolledWIdth + 120,
         });
       }
-    } else {
-      setImgIndex(id);
     }
   };
   return (
-    <div className={styles.masterplaninfobox}>
+    <div className={styles.masterplaninfobox} key={track ? track : item}>
       {data[index] && (
         <div className={styles.masterplaninnerinfobox}>
           <div className={styles.infocontrols}>
@@ -93,101 +106,110 @@ const MasterplanInfoBox = ({
               )}
             </div>
           </div>
-
-          <div className={styles.infoboxheadicon}>{data[index].icon}</div>
-          <div className={styles.infoboxcontent}>
-            <h3>{data[index].name}</h3>
-            <div>
-              <h4
-                className={styles.subheading}
-                style={{
-                  marginBottom: "0.5rem",
-                }}>
-                {lan.commontext.description}
-              </h4>
-              <p>{data[index].description}</p>
-            </div>
-            {data[index].villadetails ? (
-              <div className={styles.villadetailsbtm}>
-                <h4 className={styles.subheading}>
-                  {lan.commontext.villatypes}
-                </h4>
-                <div className={styles.villaitem}>
-                  {data[index].villatype.map((villa, index) => (
-                    <div key={`${index}_${villa.type}`}>
-                      <h5>{villa.type}</h5>
-                      <p>
-                        {villa.noofbedrooms}{" "}
-                        <span>{lan.commontext.bedroom}</span>{" "}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <Link href={"/floorplan"} passHref>
-                  <button className={styles.seevillabtn}>
-                    {lan.commontext.seevillas}
-                  </button>
-                </Link>
-              </div>
-            ) : (
-              <div className={styles.itemdetailsbtm}>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}>
+            <div className={styles.infoboxheadicon}>{data[index].icon}</div>
+            <div className={styles.infoboxcontent}>
+              <h3>{data[index].name}</h3>
+              <div>
                 <h4
                   className={styles.subheading}
                   style={{
                     marginBottom: "0.5rem",
                   }}>
-                  {lan.commontext.details}
+                  {lan.commontext.description}
                 </h4>
-                <div className={styles.itemdetailsbtmdiv}>
-                  {Object.entries(data[index].contact).map((value, index) => (
-                    <div key={`${index}_values`}>
-                      <h5>{value[0]}</h5>
-                      <p>{value[1]}</p>
-                    </div>
-                  ))}
-                </div>
+                <p>{data[index].description}</p>
               </div>
-            )}
-          </div>
-          <h4 className={styles.subheading}>{lan.commontext.relatedimages}</h4>
-          <div className={styles.infoboxslider}>
-            <motion.div
-              className={styles.infoboxsliderinner}
-              animate={scrollAnimation}
-              data-align={data[index].slideimg.length > 3 ? "start" : "center"}>
-              {data[index].slideimg.map((item, index) => (
-                <div className={styles.infoslide} key={index}>
-                  <Image
-                    src={item}
-                    width={120}
-                    height={120}
-                    layout="responsive"
-                    objectFit="cover"
-                    alt={"slideimages"}
-                    onClick={() => carouselHandler({ id: index })}
-                  />
-                  <div
-                    className={styles.slideoverLay}
-                    style={{
-                      display: imgIndex === index ? "none" : "",
-                      pointerEvents: "none",
-                    }}
-                  />
+              {data[index].villadetails ? (
+                <div className={styles.villadetailsbtm}>
+                  <h4 className={styles.subheading}>
+                    {lan.commontext.villatypes}
+                  </h4>
+                  <div className={styles.villaitem}>
+                    {data[index].villatype.map((villa, index) => (
+                      <div key={`${index}_${villa.type}`}>
+                        <h5>{villa.type}</h5>
+                        <p>
+                          {villa.noofbedrooms}{" "}
+                          <span>{lan.commontext.bedroom}</span>{" "}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href={"/floorplan"} passHref>
+                    <button className={styles.seevillabtn}>
+                      {lan.commontext.seevillas}
+                    </button>
+                  </Link>
                 </div>
-              ))}
-            </motion.div>
+              ) : (
+                <div className={styles.itemdetailsbtm}>
+                  <h4
+                    className={styles.subheading}
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}>
+                    {lan.commontext.details}
+                  </h4>
+                  <div className={styles.itemdetailsbtmdiv}>
+                    {Object.entries(data[index].contact).map((value, index) => (
+                      <div key={`${index}_values`}>
+                        <h5>{value[0]}</h5>
+                        <p>{value[1]}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
           <div
-            className={styles.slidenav}
             style={{
-              display: data[index].slideimg.length > 3 ? "" : "none",
+              width: "100%",
+              textAlign: "center",
             }}>
-            <GoChevronLeft
-              onClick={() => carouselHandler({ dir: -1, index })}
-            />
-            <GoChevronRight
-              onClick={() => carouselHandler({ dir: 1, index })}
-            />
+            <h4 className={styles.subheading}>
+              {lan.commontext.relatedimages}
+            </h4>
+            <div className={styles.infoboxslider}>
+              <motion.div
+                className={styles.infoboxsliderinner}
+                animate={scrollAnimation}
+                data-align={
+                  data[index].slideimg.length > 3 ? "start" : "center"
+                }>
+                {data[index].slideimg.map((item, index) => (
+                  <div className={styles.infoslide} key={index}>
+                    <Image
+                      src={item}
+                      width={120}
+                      height={120}
+                      layout="responsive"
+                      objectFit="cover"
+                      alt={"slideimages"}
+                      onClick={() => slideImageClickHandler({ id: index })}
+                    />
+                    <div
+                      className={styles.slideoverLay}
+                      style={{
+                        display: imgIndex === index ? "none" : "",
+                        pointerEvents: "none",
+                      }}
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+            <div className={styles.slidenav}>
+              <GoChevronLeft onClick={() => carouselHandler({ dir: -1 })} />
+              <GoChevronRight onClick={() => carouselHandler({ dir: 1 })} />
+            </div>
           </div>
         </div>
       )}

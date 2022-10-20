@@ -299,7 +299,11 @@
       height: 100%;
       overflow: hidden;
       position: relative;
+      border-radius: 15px;
 
+      @media(max-width:600px) {
+        border-radius: 0;
+      }
 
       .masterplaninnerslideimg {
         min-height: 100%;
@@ -316,10 +320,10 @@
 
       .masterplaninfobox {
         position: absolute;
-        width: 32%;
-        height: 90%;
-        top: 5%;
-        right: 8%;
+        width: 36%;
+        height: 95%;
+        top: 2%;
+        right: 4%;
         border-radius: 10px;
         background: linear-gradient(167deg, rgba(255, 255, 255, 0.35) 4.47%, rgba(255, 255, 255, 0.05) 92.71%);
         box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
@@ -431,6 +435,8 @@
             font-weight: 400;
             font-size: 12px;
             text-align: center;
+            max-height: 72px;
+            overflow-y: auto;
           }
 
 
