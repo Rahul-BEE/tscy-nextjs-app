@@ -74,11 +74,16 @@
                         .dd_button {
                             background: #058DA6;
                             border-radius: 17px;
-                            width: fit-content;
+                            font-size: 0.8125rem;
                             padding: 8px 16px;
                             margin-top: 24px;
                             color: white;
                             margin-bottom: 2rem;
+
+                            @media (max-width:600px) {
+                                margin-block: 1rem;
+
+                            }
                         }
 
                         .hero_desktop {
@@ -211,6 +216,7 @@
 
                                     @media (max-width:600px) {
                                         padding-inline: 8%;
+                                        font-size: 0.8125rem;
                                     }
                                 }
 
@@ -245,10 +251,7 @@
                                 }
 
                                 @media (max-width:600px) {
-                                    p {
-                                        font-size: 13px;
-
-                                    }
+                                    margin-block: 1.5rem 0.5rem;
                                 }
                             }
                         }

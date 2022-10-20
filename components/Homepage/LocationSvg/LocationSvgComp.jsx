@@ -111,7 +111,8 @@ function LocationSvgComp({ svgchange, setSvgChange }) {
           height={872}
           layout="responsive"
           alt="Sustainable city Yiti Location Map "
-          // layout="fill"
+          quality={100}
+          priority
         />
       )}
     </div>

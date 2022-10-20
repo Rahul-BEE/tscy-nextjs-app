@@ -234,55 +234,69 @@ const SustainableFeatures = () => {
         </Col>
       </Row>
       {showData && (
-      <Row className={featurestyles.rowtablet}>
-        <Col md={3} className={featurestyles.sustainImgCol}>
-          <motion.div animate={controls} initial="hidden" variants={variant1} style={{height:"100%",width:"100%"}}>
-            <Image
-              src={showData?.leftimg}
-              width={357}
-              height={453}
+        <Row className={featurestyles.rowtablet}>
+          <Col md={3} className={featurestyles.sustainImgCol}>
+            <motion.div
+              animate={controls}
+              initial="hidden"
+              variants={variant1}
+              style={{ height: "100%", width: "100%" }}>
+              <Image
+                src={showData?.leftimg}
+                width={357}
+                height={453}
+                priority
+                quality={100}
+                className={featurestyles.susimage1}
+                alt="Sustainale feature image"
+              />
+            </motion.div>
+          </Col>
+          <Col
+            className={featurestyles.sustainablefeaturecontent}
+            md={6}
+            sm={6}
+            lg={6}>
+            <Container className={`${featurestyles.sustainablefeatures}`} fluid>
+              <SustainableIcons />
+              {showData && <SustainableContents />}
+            </Container>
+          </Col>
+          <Col md={3} className={featurestyles.sustainImgCol1}>
+            <motion.div
+              animate={controls}
+              initial="hidden"
+              variants={variant2}
+              className={featurestyles.animateright}
+              style={{ height: "100%", width: "100%" }}>
+              <Image
+                src={showData?.rightimg}
+                width={369}
+                height={431}
+                style={{ float: "right" }}
+                className={featurestyles.susimage2}
+                priority
+                quality={100}
+                alt="Sustainbale feature Image"
+              />
+            </motion.div>
+          </Col>
 
-              className={featurestyles.susimage1}
-              alt="Sustainale feature image"
-            />
-          </motion.div>
-        </Col>
-        <Col
-          className={featurestyles.sustainablefeaturecontent}
-          md={6}
-          sm={6}
-          lg={6}>
-          <Container className={`${featurestyles.sustainablefeatures}`} fluid>
-            <SustainableIcons />
-            {showData && <SustainableContents />}
-          </Container>
-        </Col>
-        <Col md={3} className={featurestyles.sustainImgCol1}>
-          <motion.div animate={controls} initial="hidden" variants={variant2} className={featurestyles.animateright} style={{height:"100%",width:"100%"}}>
-            <Image
-              src={showData?.rightimg}
-              width={369}
-              height={431}
-              style={{float: "right"}}
-              className={featurestyles.susimage2}
-              alt="Sustainbale feature Image"
-            />
-          </motion.div>
-        </Col>
-
-        <Col md={12} className={featurestyles.sustainImgCol2}>
-          <motion.div animate={controls} initial="hidden" variants={variant2}>
-            <Image
-              src={showData?.mobimg}
-              width={470}
-              height={400}
-              className={featurestyles.susimage2}
-              alt="Sustainbale feature Image"
-            />
-          </motion.div>
-        </Col>
-      </Row>
-        )}
+          <Col md={12} className={featurestyles.sustainImgCol2}>
+            <motion.div animate={controls} initial="hidden" variants={variant2}>
+              <Image
+                src={showData?.mobimg}
+                width={470}
+                height={400}
+                priority
+                quality={100}
+                className={featurestyles.susimage2}
+                alt="Sustainbale feature Image"
+              />
+            </motion.div>
+          </Col>
+        </Row>
+      )}
     </div>
   );
 };

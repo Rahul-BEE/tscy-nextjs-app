@@ -57,7 +57,20 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
               fill="#777777"
               fillOpacity="0.75"
             />
-            <path
+            <motion.path
+              animate={{
+                scale: [0.5, 1, 0.5],
+              }}
+              initial={{
+                scale: 0,
+                // originX: 0,
+                // originY: 0,
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                repeatDelay: 0,
+              }}
               d="M263.828 76.7381C258.759 73.8068 252.511 73.8068 247.443 76.7381L229.225 87.2742C224.168 90.1989 221.054 95.5976 221.054 101.439V122.561C221.054 128.402 224.168 133.801 229.225 136.726L247.443 147.262C252.511 150.193 258.759 150.193 263.828 147.262L282.045 136.726C287.102 133.801 290.216 128.402 290.216 122.561V101.439C290.216 95.5976 287.102 90.1989 282.045 87.2742L263.828 76.7381Z"
               fill="url(#paint1_radial_1300_7920)"
               fillOpacity="0.25"
@@ -106,9 +119,8 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
       ) : (
         <Image
           src="/Images/location/Group.png"
-          //   width={1028}
-          //   height={390}
-          //   layout="responsive"
+          quality={100}
+          priority
           alt="Sustainable city Yiti Location Map "
           layout="fill"
         />

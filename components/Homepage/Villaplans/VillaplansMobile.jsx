@@ -68,7 +68,7 @@ function VillaplansMobile() {
       <Row className="headingRow">
         <Col>
           {/* <h5 className="sectionsubHeading">Redefining living with our</h5> */}
-          <h2 className="sectionmainHeading">BEDROOM VILLA PLANS</h2>
+          <h2 className="sectionmainHeading">{lan.villaplansection.title2}</h2>
         </Col>
       </Row>
 
@@ -90,7 +90,13 @@ function VillaplansMobile() {
                 <div className={styles.content}>
                   <div className={styles.number}>{villa.bedrooms}</div>
                   <div className={styles.text}>
-                    <p>BEDROOM</p> {villa.type}
+                    <p
+                      style={{
+                        textTransform: "uppercase",
+                      }}>
+                      {lan.commontext.bedroom}
+                    </p>{" "}
+                    {villa.type}
                   </div>
                 </div>
               </div>

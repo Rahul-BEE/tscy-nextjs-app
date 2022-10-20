@@ -37,7 +37,9 @@ const Location = () => {
           </Col>
         </Row>
         <div className={`sectionmaindescription`}>
-          <p>{lan.locationsection.description}</p>
+          <p className={styles.locationdescription}>
+            {lan.locationsection.description}
+          </p>
         </div>
       </div>
 
