@@ -100,9 +100,9 @@ const InteriorFeatures = () => {
     <div className={styles.interiorfeaturesmain}>
       <div className={styles.interiorHeader}>
         <div>
-          <p className={`${styles.subHeading} sectionsubHeading`}>
+          {/* <p className={`${styles.subHeading} sectionsubHeading`}>
             {lan.commontext.caption}
-          </p>
+          </p> */}
           <h4 className={"sectionmainHeading"}>
             {lan.commontext.interiorHeading}
           </h4>

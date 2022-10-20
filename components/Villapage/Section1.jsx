@@ -5,6 +5,7 @@ import useLanguage from "../../utils/useLanguage";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { BsArrowDownCircle } from "react-icons/bs";
+import Link from "next/link";
 const Section1 = () => {
   const lan = useLanguage();
   const router = useRouter();
@@ -33,25 +34,27 @@ const Section1 = () => {
           </div>
           <div className={styles.downloadcomparison}>
             <p>
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                }}>
-                {lan.commontext.registerinterest}
-              </motion.button>
+              <Link href={"/contact"} passHref>
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                  }}>
+                  {lan.commontext.registerinterest}
+                </motion.button>
+              </Link>
               {lan.commontext.download} {lan.commontext.brochure}
               <BsArrowDownCircle />
             </p>
           </div>
           <div>
             <Image
-                className={styles.bgimg}
-                src={data.mainImg}
-                width={476}
-                height={200}
-                layout="responsive"
+              className={styles.bgimg}
+              src={data.mainImg}
+              width={476}
+              height={200}
+              layout="responsive"
             />
-            </div>
+          </div>
         </div>
       )}
     </div>

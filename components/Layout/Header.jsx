@@ -120,22 +120,19 @@ const Header = () => {
           </motion.button>
         </div>
         <nav
-          className={`${styles.app__header_middle} ${
-            domYOffset || location.pathname !== "/"
-              ? styles.header_middle_li2
-              : ""
-          } collapse navbar-collapse`}>
+          className={`${styles.app__header_middle} collapse navbar-collapse`}>
           <ul className={`flex`}>
             {lan.header.links.map((link, index) => {
               return (
                 <li key={`${index}_header_links`}>
                   <Link href={link.link}>
-                    <motion.a
-                      whileHover={{
-                        color: "#058DA6",
-                      }}>
+                    <a
+                      className={styles.atagnavlink}
+                      data-color={
+                        domYOffset || location.pathname !== "/" ? "g" : "w"
+                      }>
                       {link.text}
-                    </motion.a>
+                    </a>
                   </Link>
                 </li>
               );

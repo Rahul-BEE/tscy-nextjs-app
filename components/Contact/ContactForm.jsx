@@ -59,9 +59,6 @@ const ContactForm = ({ page }) => {
                   <div className={styles.formItem}>
                     <label htmlFor="company">{data.company.title}</label>
                     <input
-                      style={{
-                        padding: "0.3rem 0",
-                      }}
                       type="text"
                       id="company"
                       required
@@ -74,9 +71,6 @@ const ContactForm = ({ page }) => {
                       {data.companyContact.title}
                     </label>
                     <input
-                      style={{
-                        padding: "0.3rem 0",
-                      }}
                       type="text"
                       id="companycontact"
                       required
@@ -93,9 +87,6 @@ const ContactForm = ({ page }) => {
                 <input
                   type="text"
                   id="fullname"
-                  style={{
-                    padding: "0.3rem 0",
-                  }}
                   required
                   placeholder={data.name.placeholder}
                   value={fullname}
@@ -107,9 +98,6 @@ const ContactForm = ({ page }) => {
                   <input
                     type="email"
                     id="email"
-                    style={{
-                      padding: "0.3rem 0",
-                    }}
                     required
                     placeholder={data.email.placeholder}
                     value={email}

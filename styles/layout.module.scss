@@ -133,7 +133,6 @@
 
     li a {
       text-decoration: none;
-      color: white;
       white-space: nowrap;
       font-weight: 400;
       letter-spacing: 1px;
@@ -144,6 +143,14 @@
       }
     }
 
+    .atagnavlink {
+      color: #FFFFFF;
+      cursor: pointer;
+
+      &[data-color="g"] {
+        color: #777777;
+      }
+    }
 
     @media (max-width: 1200px) {
       gap: 2rem;
@@ -151,9 +158,10 @@
   }
 }
 
-.header_middle_li2 ul li a {
-  color: #777777;
-}
+
+
+
+
 
 .app__header_left {
   pointer-events: all;
@@ -648,12 +656,15 @@
 
     h4 {
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 1.5625rem;
 
       @media (max-width:1224px) {
         margin-bottom: 1.5rem;
       }
 
+      @media (max-width:600) {
+        font-size: 1.25rem;
+      }
 
     }
 
@@ -663,10 +674,12 @@
 
       @media (max-width:1224px) {
         margin-bottom: 1.5rem;
+        font-size: 1.25rem;
       }
 
       @media (max-width:600px) {
         margin-bottom: 0;
+        font-size: 16px;
       }
     }
 
@@ -713,6 +726,19 @@
       font-weight: 400;
       font-size: 13px;
       line-height: 20px;
+      padding-block: 1rem;
+    }
+
+    .accordHeaderbtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .accordcardheader[data-open="open"] {
+      font-weight: 600;
+
 
     }
 
@@ -722,15 +748,11 @@
       border-radius: 0;
     }
 
-    .accordHeaderbtn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-block: 1rem;
-    }
+
 
     .accordcardbody {
-      padding-inline: 0;
+      padding: 0;
+
     }
 
 
@@ -815,7 +837,7 @@
         justify-content: center;
         flex-direction: column-reverse;
         gap: 2rem;
-
+        margin-bottom: 2rem;
       }
     }
   }

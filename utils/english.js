@@ -99,9 +99,9 @@ const english = {
           "Autism Center",
           "A thriving hospitality sector that includes 4 and 5 star hotels",
         ],
-        rightimg:"/Images/sustainable/social_right.png",
-        leftimg:"/Images/sustainable/social_left.png",
-        mobimg:"/Images/sustainable/social_mobile.png"
+        rightimg: "/Images/sustainable/social_right.png",
+        leftimg: "/Images/sustainable/social_left.png",
+        mobimg: "/Images/sustainable/social_mobile.png",
       },
 
       {
@@ -114,9 +114,9 @@ const english = {
           "Smart design leading to lower operational costs",
           "Promotion of circular economy",
         ],
-        rightimg:"/Images/sustainable/economic_right.png",
-        leftimg:"/Images/sustainable/economic_left.png",
-        mobimg:"/Images/sustainable/economic_mobile.png"
+        rightimg: "/Images/sustainable/economic_right.png",
+        leftimg: "/Images/sustainable/economic_left.png",
+        mobimg: "/Images/sustainable/economic_mobile.png",
       },
       {
         heading: "Environmental Sustainability",
@@ -130,9 +130,9 @@ const english = {
           "EV charging stations",
           "Waste recycling",
         ],
-        rightimg:"/Images/sustainable/environmental_right.png",
-        leftimg:"/Images/sustainable/environmental_left.png",
-        mobimg:"/Images/sustainable/environmental_mobile.png"
+        rightimg: "/Images/sustainable/environmental_right.png",
+        leftimg: "/Images/sustainable/environmental_left.png",
+        mobimg: "/Images/sustainable/environmental_mobile.png",
       },
     ],
   },
@@ -1063,8 +1063,8 @@ const english = {
     parking: "Parking",
     press: "Press and News",
     ourstory: "Our Story",
-    diamonddevelopers: "Diamond Developers",
-    cpyright: "© Diamond Developers International Ltd. 2022",
+    diamonddevelopers: "The Sustainable City - Yiti",
+    cpyright: "© The Sustainable City - Yiti 2022",
     language: "Arabic",
     next: "Next",
     previous: "Previous",
@@ -1161,7 +1161,8 @@ const english = {
         discription: [
           "Muscat, Oman – The Sustainable City - Yiti, set to be the first fully sustainable community in Oman, has signed today a Memorandum of Understanding with Sohar Islamic Bank to open an Escrow Account for the newly launched master planned project in the capital city of Muscat.",
           "This agreement was made in abidance by the Sultanate’s Royal Decree No. 30/2018, aimed to protect developers’ funds. In light of that, The Sustainable City Yiti can now offer Escrow services for the buyers of its upcoming 1657 residential units - including 300 eco-friendly and energy-efficient villas, 1225 apartments, and 132 luxury serviced apartments. ",
-          "The agreement was signed by Mr. Hashil Bin Obaid Al Mahrougi, Chairman of Sustainable Development and Investment Company (SDIC), and Mr. Abdul Wahid Bin Mohammed Al Murshidi, Chief Islamic Banking Officer, Sohar Islamic. The ceremony was also attended by key stakeholders from OMRAN Group, Diamond Developers and Sohar Islamic.",,
+          "The agreement was signed by Mr. Hashil Bin Obaid Al Mahrougi, Chairman of Sustainable Development and Investment Company (SDIC), and Mr. Abdul Wahid Bin Mohammed Al Murshidi, Chief Islamic Banking Officer, Sohar Islamic. The ceremony was also attended by key stakeholders from OMRAN Group, Diamond Developers and Sohar Islamic.",
+          ,
           "Commenting on this partnership, Mr. Hashil Al Mahrouqi, Chairman of (SDIC), said: With an investment value of nearly one billion US dollars, this project marks a unique milestone in our journey as we continue to invest, develop, and maximize the limitless potential of Omans tourism sector. We are committed to working with our partners to ensure the smoothest experience for our buyers and investors. Our agreement with Sohar Islamic, one of the leading financial institutions in the country, not only protects customers but assists in attracting investors to Omans real estate market.",
           "Mr. Abdul Wahid Al Murshidi, Chief Islamic Banking Officer, Sohar Islamic, said: “We always aspire to collaborate with key strategic partners in the development space. This agreement was a result of a very detailed dialogue and requirements definition exercise between the teams from both sides, and we are delighted to be offering bespoke services to The Sustainable City - Yiti buyers and to support the property sector and the overall economic growth of the Sultanate.",
           "The Sustainable City - Yiti project is a partnership between OMRAN Group, the executive arm of the Sultanate for developing the tourism sector, and Diamond Developers – the leading company in developing sustainable communities. The project will be the largest operational sustainable community in the region, designed to deliver measurable outcomes across the three pillars of sustainability: social, environmental, and economic, and will achieve net-zero carbon targets by 2040.",
@@ -1190,7 +1191,7 @@ const english = {
           "Commenting on the occasion, Engineer Faris Saeed, Chairman of Diamond Developers said, “We are very excited to join hands with OMRAN to execute our first project in Oman, and to work together on preserving the Sultanate’s rich natural environmental resources in accordance with the best global green practices. Over the past decade, we have gained and harnessed invaluable knowledge from our working proof-of-concept, which we are leveraging to set new standards for building sustainable and resilient cities with the highest sustainable standards to achieve a carbon-neutral future that also suits the local culture, environment, and economy.”",
           "Founded in 2003, Diamond Developers embodies a fundamental change in the concept of future cities; building, and maintaining sustainable, evidence-driven and intelligent, live-work-and-thrive cities. Their replicable & scalable cities bring forward the 2050 Paris Agreement targets, enhance quality of life, and bring significant in-country value. The company is committed to enabling, empowering, and supporting partners around the world to realise the cities of tomorrow, today. ",
         ],
-      }, 
+      },
       {
         slug: "investment-value-news",
         title: [
@@ -1211,14 +1212,14 @@ const english = {
           "Dubai – 30th March 2022: Earning a commendable reputation for being the leading developers of sustainable communities in the UAE, Diamond Developers in partnership with the Oman Tourism Development Company (OMRAN Group), announced the launch of ‘The Sustainable City – Yiti’ in Muscat, today. With an investment value of nearly one billion US dollars, the city is the first project in Oman that meets the highest global green practices and adheres to the highest sustainability standards. ",
           "Spread over an area of 1 million square meters, ‘The Sustainable City – Yiti’ – will be developed within the phase 1 of the Yiti Integrated Tourism Development Masterplan - is the first project in Oman that meets the global green practices and is in adherence to the highest sustainability standards. This iconic destination is situated in the capital city of Muscat, overlooking the Sea of Oman and features a unique topography of majestic mountains that mingle with undisturbed valleys and pristine shores, which creates further competitive advantages to the destination.",
           "Engineer Faris Saeed, Chairman of Diamond Developers said, “The Sustainable City – Yiti is not only a benchmark for sustainable urban development, it is a working model for future cities. It is a thriving community made up of thousands of residents, visitors, students, researchers, and entrepreneurs” he added. “The project is expected to be one of the region’s most sustainable cities, and by adopting the latest solutions in energy production, vertical farming, humidity harvesting, and autonomous transportation, we aim to be net zero carbon by 2040, in line with Oman’s vision and national strategy. At Diamond Developers, we remain committed to empowering and supporting partners around the world to realise the cities of tomorrow, today to deliver a more sustainable future for all of us.”",
-          "Further commenting on the launch, Eng. Mohammed Salim Al Busaidi, Chairman of OMRAN Group, said, “Our partnership with Diamond Developers to launch ‘The Sustainable City – Yiti’ is a unique milestone in our journey as we continue to invest, develop, and maximise the limitless potential of Oman’s tourism sector. As it’s being developed withinone of the largest urban developments in the Middle East, Yiti will open avenues for numerous lucrative investment opportunities for both local and international investors in line with the directions of Oman Investment Authority. Mirroring the Sultanate’s goal of driving transformational change to attain a green, circular economy and emissions reduction, the city embraces the highest standards of sustainability and attests to our vision of creating an eco-conscious community that is harmoniously aligned with the distinct geography of the region.”"
-          ,"With sustainable innovation at the heart of the development, the project will feature 1657 residential units including 300 eco-friendly and energy-efficient villas. Designed for comfort, practicality, and style, the spacious 3 and 4 bedroom villas will also offer significant savings on utility bills."
-          ,"In line with the UN Sustainable Development Goals to reduce dependency on non-renewable sources of energy, the city is designed to produce 100 percent of its energy requirements from renewables which include solar panels and biogas. It will also recycle all its water and waste and use it for irrigation. Acknowledging the importance of creating a community that is self-sustaining, the city aims to grow its own food through productive farm areas and greenhouses. Encouraging community members to be a part of the process, private farming slots will also be allocated for residents to grow their own produce. "
-          ,"With a holistic approach to sustainability, the city will play a significant role in reducing carbon emissions by adopting clean mobility solutions like autonomies shuttles and electric cars, and by deploying EV charging stations around the project. The residential areas, designed to be car-free, will not only provide a safe environment for families but also encourage residents to build strong social connections within the community."
-          ,"Dedicated to nurturing a new generation that understands the value of sustainability, the city will include a sustainable school that will teach important concepts of sustainability through the school curriculum. It will feature a ‘SEE lab’ which will showcase the latest in sustainability solutions like renewable energy technologies, indoor vertical farming, and humidity harvesting. With an innovative carbon natural building, the ‘SEE Institute’ will, additionally, focus on promoting awareness on environmental issues and sustainable living."
-          ,"Striking the right balance between sustainability goals and promoting wellness, the city will feature a number of sports facilities which include jogging and cycling tracks, an equestrian club, and a horse track. It will also include a plaza that hosts a selection of commercial outlets, like shops, restaurants, and cafes."
-          ,"In an endeavor to support eco-tourism, the project will feature a four-star neighborhood hotel with 197 rooms, a five-star resort with 170 rooms and a range of restaurants, numerous leisure facilities, and beachfront access. The resort will also manage 132 luxury serviced apartments to further accommodate the diverse needs of visitors. "
-          ,"The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable."
+          "Further commenting on the launch, Eng. Mohammed Salim Al Busaidi, Chairman of OMRAN Group, said, “Our partnership with Diamond Developers to launch ‘The Sustainable City – Yiti’ is a unique milestone in our journey as we continue to invest, develop, and maximise the limitless potential of Oman’s tourism sector. As it’s being developed withinone of the largest urban developments in the Middle East, Yiti will open avenues for numerous lucrative investment opportunities for both local and international investors in line with the directions of Oman Investment Authority. Mirroring the Sultanate’s goal of driving transformational change to attain a green, circular economy and emissions reduction, the city embraces the highest standards of sustainability and attests to our vision of creating an eco-conscious community that is harmoniously aligned with the distinct geography of the region.”",
+          "With sustainable innovation at the heart of the development, the project will feature 1657 residential units including 300 eco-friendly and energy-efficient villas. Designed for comfort, practicality, and style, the spacious 3 and 4 bedroom villas will also offer significant savings on utility bills.",
+          "In line with the UN Sustainable Development Goals to reduce dependency on non-renewable sources of energy, the city is designed to produce 100 percent of its energy requirements from renewables which include solar panels and biogas. It will also recycle all its water and waste and use it for irrigation. Acknowledging the importance of creating a community that is self-sustaining, the city aims to grow its own food through productive farm areas and greenhouses. Encouraging community members to be a part of the process, private farming slots will also be allocated for residents to grow their own produce. ",
+          "With a holistic approach to sustainability, the city will play a significant role in reducing carbon emissions by adopting clean mobility solutions like autonomies shuttles and electric cars, and by deploying EV charging stations around the project. The residential areas, designed to be car-free, will not only provide a safe environment for families but also encourage residents to build strong social connections within the community.",
+          "Dedicated to nurturing a new generation that understands the value of sustainability, the city will include a sustainable school that will teach important concepts of sustainability through the school curriculum. It will feature a ‘SEE lab’ which will showcase the latest in sustainability solutions like renewable energy technologies, indoor vertical farming, and humidity harvesting. With an innovative carbon natural building, the ‘SEE Institute’ will, additionally, focus on promoting awareness on environmental issues and sustainable living.",
+          "Striking the right balance between sustainability goals and promoting wellness, the city will feature a number of sports facilities which include jogging and cycling tracks, an equestrian club, and a horse track. It will also include a plaza that hosts a selection of commercial outlets, like shops, restaurants, and cafes.",
+          "In an endeavor to support eco-tourism, the project will feature a four-star neighborhood hotel with 197 rooms, a five-star resort with 170 rooms and a range of restaurants, numerous leisure facilities, and beachfront access. The resort will also manage 132 luxury serviced apartments to further accommodate the diverse needs of visitors. ",
+          "The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable.",
         ],
       },
     ],

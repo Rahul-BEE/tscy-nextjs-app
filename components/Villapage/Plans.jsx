@@ -252,8 +252,27 @@ function Plans() {
             </div>
           )}
           <div className={styles.planPagination}>
-            <span>{expanded === 0 ? <Activeplandot /> : <Plandot />}</span>
-            <span> {expanded === 1 ? <Activeplandot /> : <Plandot />}</span>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                clickHandler(0);
+                setExpanded(0);
+              }}>
+              {expanded === 0 ? <Activeplandot /> : <Plandot />}
+            </span>
+            <span
+              onClick={() => {
+                clickHandler(1);
+                setExpanded(1);
+              }}
+              style={{
+                cursor: "pointer",
+              }}>
+              {" "}
+              {expanded === 1 ? <Activeplandot /> : <Plandot />}
+            </span>
           </div>
         </div>
       </div>

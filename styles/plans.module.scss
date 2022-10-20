@@ -403,6 +403,7 @@
                     grid-template-areas: 'select'
                         'properties'
                         'plan';
+                    margin-top: 0;
                 }
 
 
@@ -428,7 +429,7 @@
             }
 
             @media (max-width:600px) {
-                padding: 80px 0 40px;
+                padding: 40px 0 40px;
             }
 
 

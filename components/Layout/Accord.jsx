@@ -40,7 +40,9 @@ function Accord() {
           style={{
             borderTop: "2px solid rgba(119, 119, 119, 0.2)",
           }}>
-          <Card.Header className={styles.accordcardheader}>
+          <Card.Header
+            className={styles.accordcardheader}
+            data-open={isOpen === "0" ? "open" : ""}>
             <CustomToggle eventKey="0" callback={handleClick}>
               {data[0].title}{" "}
               {isOpen === "0" ? <AiOutlineMinus /> : <AiOutlinePlus />}
@@ -62,7 +64,9 @@ function Accord() {
       )}
       {data && (
         <Card className={styles.accordcard}>
-          <Card.Header className={styles.accordcardheader}>
+          <Card.Header
+            className={styles.accordcardheader}
+            data-open={isOpen === "1" ? "open" : ""}>
             <CustomToggle eventKey="1" callback={handleClick}>
               {data[1].title}{" "}
               {isOpen === "1" ? <AiOutlineMinus /> : <AiOutlinePlus />}
@@ -84,7 +88,9 @@ function Accord() {
       )}
       {data && (
         <Card className={styles.accordcard}>
-          <Card.Header className={styles.accordcardheader}>
+          <Card.Header
+            className={styles.accordcardheader}
+            data-open={isOpen === "2" ? "open" : ""}>
             <CustomToggle eventKey="2" callback={handleClick}>
               {data[2].title}{" "}
               {isOpen === "2" ? <AiOutlineMinus /> : <AiOutlinePlus />}
