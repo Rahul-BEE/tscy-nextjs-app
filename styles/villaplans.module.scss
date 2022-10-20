@@ -143,6 +143,9 @@
   gap: 16px;
   margin-top: 20px;
 
+  @media (max-width:600px) {
+    margin-top: 0;
+  }
 
   .download_content {
     background-color: #FFFFFF;
@@ -453,6 +456,7 @@
     overflow: hidden;
     width: 100vw;
     position: relative;
+    margin-top: 2rem;
 
     .container {
       display: flex;

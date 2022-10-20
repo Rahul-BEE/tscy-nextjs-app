@@ -52,7 +52,7 @@ const MasterplanPopup = ({
                 : "br"
             }>
             <div className={styles.popupheading}>
-              <Image src={data.icon} width="60" height="65" alt={data.name} />
+              <div className={styles.popiconcontainer}>{data.icon}</div>
               <div
                 style={{
                   display: "flex",
@@ -63,7 +63,7 @@ const MasterplanPopup = ({
                   height: 65,
                 }}>
                 <h3>{data.name}</h3>
-                <h5>{lan.commontext.description}</h5>
+                {/* <h5>{lan.commontext.description}</h5> */}
               </div>
             </div>
             <p className={styles.description}>{data.description}</p>

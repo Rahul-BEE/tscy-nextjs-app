@@ -103,10 +103,10 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
                 left: -innerwidth,
               }}
               key={`${selectedTab}_dragDiv`}>
-              {data.map((item) => {
+              {data.map((item, index) => {
                 return (
                   <motion.p
-                    key={item.name}
+                    key={index}
                     className={styles.normalItem}
                     onClick={() => clickHandler(item.id)}
                     initial={{

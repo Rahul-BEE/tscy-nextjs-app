@@ -18,17 +18,28 @@ const Location = () => {
     }, 15000);
   });
   return (
-    <div className={styles.app__locationsection}>
-      <Row className="headingRow">
-        <Col>
-          <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
-        </Col>
-      </Row>
-      <Row className={`${styles.location_description} flex`}>
-        <Col md={5} lg={5} sm={12}>
-          {lan.locationsection.description}
-        </Col>
-      </Row>
+    <div
+      className={styles.app__locationsection}
+      style={{
+        position: "relative",
+      }}>
+      <div className={styles.locationabheadingcontainer}>
+        <Row
+          className="headingRow"
+          style={{
+            paddingTop: "2rem",
+          }}>
+          <Col>
+            {/* <h5 className="sectionsubHeading mt-5">
+              {lan.locationsection.title1}
+            </h5> */}
+            <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
+          </Col>
+        </Row>
+        <div className={`sectionmaindescription`}>
+          <p>{lan.locationsection.description}</p>
+        </div>
+      </div>
 
       <motion.div
         className={
@@ -45,6 +56,8 @@ const Location = () => {
               height={872}
               layout="responsive"
               alt={lan.locationsection.title2}
+              priority={true}
+              quality={100}
             />
           </div>
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
@@ -55,6 +68,8 @@ const Location = () => {
             src="/Images/location/GroupMobile.png"
             alt={lan.locationsection.title2}
             layout="fill"
+            priority={true}
+            quality={100}
           />
           {/* </div> */}
           <LocationSvgComp1 svgchange={svgchange} setSvgChange={setSvgChange} />

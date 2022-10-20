@@ -281,6 +281,21 @@
   background: rgba(5, 141, 166, 0.1);
   padding-top: 5rem;
 
+  @media(max-width:600px) {
+    padding-top: 1rem;
+  }
+
+  .locationabheadingcontainer {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+
+    @media (max-width:600px) {
+      position: static;
+      margin-bottom: 1rem;
+    }
+  }
+
   // box-shadow: 0px -1px 44px rgba(0, 0, 0, 0.03);
   .location_description {
     margin: 1rem 0;

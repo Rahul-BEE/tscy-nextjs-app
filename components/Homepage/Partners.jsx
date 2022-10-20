@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import styles from "../../styles/home.module.scss";
 
 const Marquee = ({ dir }) => {
+  const MotionDiamond = motion(<Diamond />);
+
   useEffect(() => {
     const root = document.documentElement;
     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
@@ -36,12 +38,35 @@ const Marquee = ({ dir }) => {
             <a
               href="https://diamond-developers.ae/"
               target={"_blank"}
-              rel="noreferrer">
+              rel="noreferrer"
+              className="diamond">
               <Diamond />
             </a>
           </li>
           <li>
-            <a href="https://www.omran.om/" target={"_blank"} rel="noreferrer">
+            <a
+              href="https://www.omran.om/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="omran">
+              <Omran />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://diamond-developers.ae/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="diamond">
+              <Diamond />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.omran.om/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="omran">
               <Omran />
             </a>
           </li>
@@ -53,12 +78,35 @@ const Marquee = ({ dir }) => {
             <a
               href="https://diamond-developers.ae/"
               target={"_blank"}
-              rel="noreferrer">
+              rel="noreferrer"
+              className="diamond">
               <Diamond />
             </a>
           </li>
           <li>
-            <a href="https://www.omran.om/" target={"_blank"} rel="noreferrer">
+            <a
+              href="https://www.omran.om/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="omran">
+              <Omran />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://diamond-developers.ae/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="diamond">
+              <Diamond />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.omran.om/"
+              target={"_blank"}
+              rel="noreferrer"
+              className="omran">
               <Omran />
             </a>
           </li>
