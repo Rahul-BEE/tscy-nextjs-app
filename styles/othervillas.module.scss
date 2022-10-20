@@ -66,11 +66,12 @@
 }
 
 .primelocationmain {
-    margin-top: 120px;
-    margin-inline: 10%;
+    padding-top: 3rem;
+
 
     .locationinnercontainer {
         position: relative;
+        margin-inline: 10%;
 
         .locationimgContainer {
             margin-top: 2rem;
@@ -199,11 +200,13 @@
 
 
         }
+
+        @media (max-width:700px) {
+            margin-inline: 0%;
+        }
     }
 
-    @media (max-width:700px) {
-        margin-inline: 0%;
-    }
+
 }
 
 .amenetiesContainer {
@@ -213,10 +216,12 @@
     font-family: 'Poppins';
     font-style: normal;
 
+
     .amenetiesInner {
         position: absolute;
         inset: 0;
         top: -180px;
+        margin-inline: 10%;
         // background-color: red;
         padding: 2rem;
         color: #FFFFFF;
@@ -253,7 +258,7 @@
 
         .sliderControlsMob {
             display: none;
-            margin-top: 2rem;
+            margin-block: 2rem 3rem;
 
             @media (max-width:1224px) {
                 display: flex;
@@ -309,7 +314,6 @@
 
         .amenitiescarousels {
             width: 100%;
-            overflow: hidden;
             margin-top: 2rem;
 
 
@@ -363,6 +367,16 @@
         }
 
         @media (max-width:1224px) {
+            position: static;
+            margin-top: 50px;
+        }
+
+        @media (max-width:700px) {
+            position: static;
+            margin-top: 180px;
+        }
+
+        @media (max-width:321px) {
             position: static;
             margin-top: 200px;
         }

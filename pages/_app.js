@@ -5,13 +5,17 @@ import { AppWrapper } from "../context/AppContext";
 import { Header, Footer } from "../components";
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div
+      style={{
+        width: "100vw",
+        overflow: "hidden",
+      }}>
       <AppWrapper>
         <Header />
         <Component {...pageProps} />
         <Footer />
       </AppWrapper>
-    </>
+    </div>
   );
 }
 

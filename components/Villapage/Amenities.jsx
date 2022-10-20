@@ -63,7 +63,7 @@ const Amenities = () => {
       <div className={styles.amenetiesInner}>
         <div className={styles.amenetiesHeader}>
           <div className={styles.left}>
-            <p>{lan.commontext.nearby}</p>
+            {/* <p>{lan.commontext.nearby}</p> */}
             <h4>{lan.commontext.amenities}</h4>
           </div>
           <div className={styles.sliderControls}>
