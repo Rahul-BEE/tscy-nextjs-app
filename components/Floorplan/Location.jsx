@@ -33,6 +33,7 @@ const LocationFYV = () => {
           layout="responsive"
           objectFit="cover"
           alt="Yiti Location Map"
+          quality={100}
         />
       </div>
       <div className={styles.locationMobile}>

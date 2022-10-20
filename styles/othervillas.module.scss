@@ -1,6 +1,6 @@
 .othervillasmain {
     padding-inline: clamp(40px, 86px, 5%);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 
     .othervillainner {
 
@@ -211,7 +211,7 @@
 
 .amenetiesContainer {
     position: relative;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     font-family: 'Poppins';
     font-style: normal;
@@ -321,7 +321,7 @@
             .amenitiescarouselsInner {
                 color: #777777;
 
-                gap: 1.5rem;
+                gap: 2.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -362,6 +362,14 @@
                             font-size: 0.8125rem;
                         }
                     }
+                }
+
+                @media (max-width:1224px) {
+                    gap: 1.8rem;
+                }
+
+                @media (max-width:700px) {
+                    gap: 2rem;
                 }
             }
         }
