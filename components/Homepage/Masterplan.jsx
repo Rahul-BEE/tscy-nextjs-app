@@ -30,6 +30,7 @@ const Masterplan = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const [item, setItem] = useState(0);
   const [zoom, setZoom] = useState(false);
+  const [direction, setDirection] = useState(1);
   const [desktop, setDesktop] = useState(true);
   const [animating, setAnimating] = useState(false);
   const [constrains, setConstrains] = useState({
@@ -200,8 +201,13 @@ const Masterplan = () => {
     }
   };
 
-  const controlItem = (id) => {
-    setItem(id);
+  const controlItem = ({ item, track }) => {
+    console.log(item, track);
+    if (item) {
+      setItem(item);
+    } else if (track) {
+      setTrack(track);
+    }
   };
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
@@ -230,11 +236,14 @@ const Masterplan = () => {
               item={item}
               track={track}
               goback={getBacktoMasterplan}
+              direction={direction}
+              setDirection={setDirection}
             />
           </div>
           <Masterplandetailbtm
             item={item}
             track={track}
+            setDirection={setDirection}
             controlItem={controlItem}
           />
         </>

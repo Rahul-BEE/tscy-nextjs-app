@@ -4,12 +4,36 @@ import styles from "../../../styles/masterplan.module.scss";
 import useLanguage from "../../../utils/useLanguage";
 import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-const Masterplandetailbtm = ({ item, track, controlItem }) => {
+import { useEffect } from "react";
+const Masterplandetailbtm = ({ item, track, controlItem, setDirection }) => {
   const lan = useLanguage();
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
-  const [direction, setDirection] = useState(1);
-  const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
+  const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
+  useEffect(() => {
+    setData(track ? lan.tracks : lan.masterplan.markers);
+    setIndex(track ? track - 16 : item - 1);
+  }, [item, track]);
+
+  const navigating = (dir) => {
+    if (dir === 1) {
+      setDirection(1);
+      if (track && index < lan.tracks.length - 1) {
+        controlItem({ item: null, track: track + 1 });
+      }
+      if (item && index < lan.masterplan.markers.length - 1) {
+        controlItem({ item: item + 1, track: null });
+      }
+    } else if (dir === -1) {
+      setDirection(-1);
+      if (track && index !== 0) {
+        controlItem({ item: null, track: track - 1 });
+      }
+      if (item && index !== 0) {
+        controlItem({ item: item - 1, track: null });
+      }
+    }
+  };
   return (
     <div className={`${styles.mobilebtmindex} ${styles.mobilebtmdetailsindex}`}>
       <div
@@ -27,14 +51,10 @@ const Masterplandetailbtm = ({ item, track, controlItem }) => {
             alignItems: "center",
             justifyContent: "space-between",
           }}>
-          <p
-            className={styles.nextprevcontrol}
-            onClick={() => controlItem(item + 1)}>
+          <p className={styles.nextprevcontrol} onClick={() => navigating(-1)}>
             <FiChevronLeft color="#058DA6" /> <span>{lan.commontext.prev}</span>
           </p>
-          <p
-            className={styles.nextprevcontrol2}
-            onClick={() => controlItem(item - 1)}>
+          <p className={styles.nextprevcontrol2} onClick={() => navigating(1)}>
             <span>{lan.commontext.next}</span>{" "}
             <FiChevronRight color="#058DA6" />
           </p>

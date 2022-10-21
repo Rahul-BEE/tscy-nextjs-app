@@ -985,6 +985,10 @@
 
         }
       }
+
+      @media (max-width:600px) {
+        font-size: 1.5rem;
+      }
     }
 
     .nextprevcontrol2 {
@@ -1055,9 +1059,9 @@
         }
       }
 
-      @media (max-width:600px) {
-        justify-content: space-between;
-      }
+      // @media (max-width:600px) {
+      //   justify-content: space-between;
+      // }
 
     }
 
