@@ -11,6 +11,7 @@ import Garden from "../../public/Svg/homevillaplan/garden.svg";
 import Bathroom from "../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../public/Svg/homevillaplan/maidroom.svg";
 import VillaplansMobile from "./Villaplans/VillaplansMobile";
+import ArrowLeft from "../../public/Svg/homevillaplan/villaplanarrowleft.svg";
 import Link from "next/link";
 import { useAppContext } from "../../context/AppContext";
 
@@ -226,7 +227,9 @@ const Villplans = () => {
                   </div>
                 ) : (
                   <div className={styles.villaplanuserform}>
-                    <p className={styles.heading}>Add your details</p>
+                    <p className={styles.heading}>
+                      {lan.commontext.adddetails}
+                    </p>
                     <div className={styles.userformcontainer}>
                       <form className={styles.userform}>
                         <div className={styles.formItem}>
