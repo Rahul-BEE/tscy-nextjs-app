@@ -52,7 +52,9 @@ function Footer() {
             style={{
               cursor: "pointer",
             }}>
-            <Icon id="footericonhead" />
+            <a>
+              <Icon id="footericonhead" />
+            </a>
           </Link>
         </div>
         <div className={styles.footercontent}>

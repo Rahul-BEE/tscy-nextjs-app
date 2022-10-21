@@ -12,21 +12,21 @@ const parentVariant = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
     opacity: 0.75,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
     opacity: 0.75,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   }),
 };
@@ -59,10 +59,6 @@ const Masterplandetail = ({ item, track, goback }) => {
           .width
     );
   }, [slideIndex]);
-
-  useEffect(() => {
-    console.log("slide", slideIndex);
-  }, [index]);
 
   return (
     <>

@@ -85,7 +85,7 @@ const Masterplan = () => {
     setShow(true);
   };
   useEffect(() => {
-    console.log("calked use", track);
+    // console.log("calked use", track);
     if (track && desktop) {
       const path = document.getElementById(`path_${track}`);
       const rect = document.getElementById("something").getBoundingClientRect();
@@ -200,6 +200,9 @@ const Masterplan = () => {
     }
   };
 
+  const controlItem = (id) => {
+    setItem(id);
+  };
   return (
     <div className={styles.app__masterplan} id="masterplananchor">
       <Row
@@ -232,7 +235,7 @@ const Masterplan = () => {
           <Masterplandetailbtm
             item={item}
             track={track}
-            goback={getBacktoMasterplan}
+            controlItem={controlItem}
           />
         </>
       ) : (

@@ -3,33 +3,43 @@ import { useState } from "react";
 import styles from "../../../styles/masterplan.module.scss";
 import useLanguage from "../../../utils/useLanguage";
 import { motion } from "framer-motion";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-const Masterplandetailbtm = ({ item, track, goback }) => {
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+const Masterplandetailbtm = ({ item, track, controlItem }) => {
   const lan = useLanguage();
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
   const [direction, setDirection] = useState(1);
-
-  console.log(item, track, lan.masterplan.markers);
-  const [data, setData] = useState(track ? lan.tracks : lan.masterplan.markers);
+  const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
   return (
     <div className={`${styles.mobilebtmindex} ${styles.mobilebtmdetailsindex}`}>
-      <h4
+      <div
         style={{
-          position: "relative",
           width: "100%",
+          position: "relative",
           textAlign: "center",
         }}>
-        <span
+        <h4 className={styles.btmindexmobileheading}>{data[index].name}</h4>
+        <div
           style={{
             position: "absolute",
-            left: 0,
-            cursor: "pointer",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}>
-          <HiArrowNarrowLeft onClick={() => goback()} />
-        </span>
-        {data[index].name}
-      </h4>
+          <p
+            className={styles.nextprevcontrol}
+            onClick={() => controlItem(item + 1)}>
+            <FiChevronLeft color="#058DA6" /> <span>{lan.commontext.prev}</span>
+          </p>
+          <p
+            className={styles.nextprevcontrol2}
+            onClick={() => controlItem(item - 1)}>
+            <span>{lan.commontext.next}</span>{" "}
+            <FiChevronRight color="#058DA6" />
+          </p>
+        </div>
+      </div>
       <p>{data[index].description}</p>
       {data[index].villadetails ? (
         <div className={styles.villadetailsbtm}>

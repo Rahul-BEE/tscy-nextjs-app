@@ -17,10 +17,19 @@ export function AppWrapper({ children }) {
   }, [state, dispatch]);
 
   useEffect(() => {
+    if (JSON.parse(sessionStorage.getItem("userdata")) !== null) {
+      dispatch({
+        type: "init_stored",
+        value: JSON.parse(sessionStorage.getItem("userdata")),
+      });
+    }
+  }, []);
+  useEffect(() => {
     if (state !== initialState) {
       sessionStorage.setItem("userdata", JSON.stringify(state));
     }
   }, [state]);
+
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );

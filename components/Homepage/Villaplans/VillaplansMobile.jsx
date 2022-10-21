@@ -63,6 +63,14 @@ function VillaplansMobile() {
     }
   };
 
+  useEffect(() => {
+    if (state.userdata?.name !== "") {
+      setDataReceived(true);
+    } else {
+      setDataReceived(false);
+    }
+  }, [state]);
+
   return (
     <div className={styles.section_villaplan_mobile}>
       <Row className="headingRow">
@@ -195,7 +203,7 @@ function VillaplansMobile() {
         <>
           {dataReceived ? (
             <div className={styles.villaplanuserform}>
-              <p>Thanks for your response.</p>
+              <p className={styles.heading}>{lan.commontext.thanksnote}</p>
               <div className={styles.btncontainer}>
                 <motion.div
                   onClick={() => handleClick(1)}
@@ -234,7 +242,7 @@ function VillaplansMobile() {
             </div>
           ) : (
             <div className={styles.villaplanuserform}>
-              <p className={styles.heading}>Add your details</p>
+              <p className={styles.heading}>{lan.commontext.adddetails}</p>
               <div className={styles.userformcontainer}>
                 <form className={styles.userform}>
                   <div className={styles.formItem}>

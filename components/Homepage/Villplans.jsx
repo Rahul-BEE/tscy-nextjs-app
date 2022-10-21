@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import useLangage from "../../utils/useLanguage";
 import styles from "../../styles/villaplans.module.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
@@ -35,8 +35,8 @@ const Villplans = () => {
       type: "updateuser",
       value: data,
     });
-    //sent data to the backend
     setDataReceived(true);
+    //sent data to the backend
   };
   const handleClick = (id) => {
     setShowForm(true);
@@ -48,6 +48,13 @@ const Villplans = () => {
     setVilla(lan.villaplansection.villas[index]);
   };
 
+  useEffect(() => {
+    if (state.userdata?.name !== "") {
+      setDataReceived(true);
+    } else {
+      setDataReceived(false);
+    }
+  }, [state]);
   return (
     <div className={styles.app_villa_main}>
       <div className={styles.app__villaplanmaincontainer_desktop}>
@@ -178,7 +185,9 @@ const Villplans = () => {
               <>
                 {dataReceived ? (
                   <div className={styles.villaplanuserform}>
-                    <p>Thanks for your response.</p>
+                    <p className={styles.heading}>
+                      {lan.commontext.thanksnote}
+                    </p>
                     <div className={styles.btncontainer}>
                       <motion.div
                         onClick={() => handleClick(1)}
@@ -253,7 +262,7 @@ const Villplans = () => {
                             {lan.contact.register.formdata.phone.title}
                           </label>
                           <input
-                            type={"text"}
+                            type={"tel"}
                             value={phone}
                             required
                             onChange={(e) => setPhone(e.target.value)}

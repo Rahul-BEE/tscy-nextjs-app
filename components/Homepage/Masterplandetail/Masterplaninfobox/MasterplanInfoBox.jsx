@@ -41,6 +41,12 @@ const MasterplanInfoBox = ({
   }, [index]);
 
   const slideImageClickHandler = ({ id }) => {
+    if (id < slideIndex) {
+      setDirection(-1);
+    } else {
+      setDirection(1);
+    }
+
     setImgIndex(id);
     setSlideIndex(id);
   };
@@ -49,6 +55,7 @@ const MasterplanInfoBox = ({
       if (slideIndex > data[index].slideimg.length - 2) {
         return;
       }
+      setDirection(1);
       setImgIndex((prev) => prev + 1);
       setSlideIndex((prev) => prev + 1);
       if (data[index].slideimg.length > 3) {
@@ -61,6 +68,7 @@ const MasterplanInfoBox = ({
       if (slideIndex < 1) {
         return;
       }
+      setDirection(-1);
       setImgIndex((prev) => prev - 1);
       setSlideIndex((prev) => prev - 1);
       if (data[index].slideimg.length > 3) {
