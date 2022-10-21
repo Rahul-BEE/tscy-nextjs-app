@@ -4,6 +4,10 @@ import useLanguage from "../../utils/useLanguage";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { motion } from "framer-motion";
+import sendEmail from "../../utils/emailservice";
+import { BsArrowDownCircle } from "react-icons/bs";
+import Loader from "../Loader/Loader";
+import Link from "next/link";
 const ContactForm = ({ page }) => {
   const lan = useLanguage();
   const [select, setSelect] = useState(0);
@@ -13,13 +17,46 @@ const ContactForm = ({ page }) => {
   const [company, setCompany] = useState("");
   const [villa, setVilla] = useState(0);
   const [companyContact, setCompanyContact] = useState("");
+  const [emailSend, setEmailSend] = useState(false);
   const [license, setLicense] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const data = lan.contact.register.formdata;
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(e);
+
+    if (phone === "") {
+      setError(true);
+      setErrorMessage(
+        errorMessage ? errorMessage : "Please fill all the fields"
+      );
+      return;
+    }
+    setLoading(true);
+    const data =
+      select === 0
+        ? {
+            fullname,
+            email,
+            phone,
+          }
+        : {
+            company,
+            license,
+            email,
+            phone,
+            fullname,
+            type: select === 1 ? "Cooperate" : "Individual",
+          };
+    let result = await sendEmail({ data, type: select === 1 ? 1 : 0 });
+    if (result === "success") {
+      setEmailSend(true);
+      setLoading(false);
+    } else {
+      setEmailSend(false);
+      setLoading(false);
+    }
   };
 
   const handleChange = (_, country) => {
@@ -53,9 +90,9 @@ const ContactForm = ({ page }) => {
             </div>
           )}
           <div className={styles.formContainer}>
-            <form onSubmit={submitHandler} className={styles.forms}>
-              {select === 1 && (
-                <div className={styles.companyrow1}>
+            {!emailSend ? (
+              <form onSubmit={submitHandler} className={styles.forms}>
+                {select === 1 && (
                   <div className={styles.formItem}>
                     <label htmlFor="company">{data.company.title}</label>
                     <input
@@ -66,80 +103,81 @@ const ContactForm = ({ page }) => {
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}></input>
                   </div>
+                  //   <div className={styles.companyrow1}>
+
+                  //  <div className={styles.formItem}>
+                  //       <label htmlFor="companycontact">
+                  //         {data.companyContact.title}
+                  //       </label>
+                  //       <input
+                  //         type="text"
+                  //         id="companycontact"
+                  //         required
+                  //         placeholder={data.companyContact.placeholder}
+                  //         value={companyContact}
+                  //         onChange={(e) =>
+                  //           setCompanyContact(e.target.value)
+                  //         }></input>
+                  //     </div>
+                  //   </div>
+                )}
+                <div className={styles.formItem}>
+                  <label htmlFor="fullname">{data.name.title}</label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    required
+                    placeholder={data.name.placeholder}
+                    value={fullname}
+                    onChange={(e) => setFullname(e.target.value)}></input>
+                </div>
+                <div className={styles.namemailRow} data-select={select}>
                   <div className={styles.formItem}>
-                    <label htmlFor="companycontact">
-                      {data.companyContact.title}
-                    </label>
+                    <label htmlFor="email">{data.email.title}</label>
                     <input
-                      type="text"
-                      id="companycontact"
+                      type="email"
+                      id="email"
                       required
-                      placeholder={data.companyContact.placeholder}
-                      value={companyContact}
-                      onChange={(e) =>
-                        setCompanyContact(e.target.value)
-                      }></input>
+                      placeholder={data.email.placeholder}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}></input>
+                  </div>
+                  <div className={styles.formItem}>
+                    <label htmlFor="phone">{data.phone.title}</label>
+                    <PhoneInput
+                      country={"om"}
+                      value={phone}
+                      containerClass={styles.picontainerclass}
+                      inputClass={styles.piinputclass}
+                      buttonClass={styles.buttonClass}
+                      onChange={(val) => setPhone(val)}
+                      enableSearch={true}
+                      searchClass={styles.searchClass}
+                      // onBlur={handleChange}
+                      countryCodeEditable={false}
+                      searchNotFound={"No country found"}
+                      // isValid={(value, country) => {
+                      //   if (value.match(/12345/)) {
+                      //     setError(true);
+                      //     return false;
+                      //   } else if (value.match(/1234/)) {
+                      //     setError(true);
+                      //     return false;
+                      //   } else {
+                      //     setError(false);
+                      //     return true;
+                      //   }
+                      // }}
+                    />
+
+                    {error && (
+                      <small className={styles.phoneErrorDiv}>
+                        {errorMessage}
+                      </small>
+                    )}
                   </div>
                 </div>
-              )}
-              <div className={styles.formItem}>
-                <label htmlFor="fullname">{data.name.title}</label>
-                <input
-                  type="text"
-                  id="fullname"
-                  required
-                  placeholder={data.name.placeholder}
-                  value={fullname}
-                  onChange={(e) => setFullname(e.target.value)}></input>
-              </div>
-              <div className={styles.namemailRow} data-select={select}>
-                <div className={styles.formItem}>
-                  <label htmlFor="email">{data.email.title}</label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    placeholder={data.email.placeholder}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}></input>
-                </div>
-                <div className={styles.formItem}>
-                  <label htmlFor="phone">{data.phone.title}</label>
-                  <PhoneInput
-                    country={"om"}
-                    value={phone}
-                    containerClass={styles.picontainerclass}
-                    inputClass={styles.piinputclass}
-                    buttonClass={styles.buttonClass}
-                    onChange={(val) => setPhone(val)}
-                    enableSearch={true}
-                    searchClass={styles.searchClass}
-                    onBlur={handleChange}
-                    countryCodeEditable={false}
-                    searchNotFound={"No country found"}
-                    isValid={(value, country) => {
-                      if (value.match(/12345/)) {
-                        setError(true);
-                        return false;
-                      } else if (value.match(/1234/)) {
-                        setError(true);
-                        return false;
-                      } else {
-                        setError(false);
-                        return true;
-                      }
-                    }}
-                  />
-                  <small
-                    className={styles.phoneErrorDiv}
-                    style={{
-                      display: error ? "block" : "none",
-                    }}>
-                    {errorMessage}
-                  </small>
-                </div>
-              </div>
-              {/* {page !== "true" && (
+                {/* {page !== "true" && (
                 <div className={styles.formItem}>
                   <label htmlFor="villa" style={{ marginBottom: "0.5rem" }}>
                     {data.villas.title}
@@ -159,32 +197,57 @@ const ContactForm = ({ page }) => {
                   </select>
                 </div>
               )} */}
-              {select === 1 && (
-                <div className={styles.formItem}>
-                  <label htmlFor="license">{data.license.title}</label>
-                  <input
-                    style={{
-                      padding: "0.3rem 0",
-                    }}
-                    type="text"
-                    id="license"
-                    required
-                    placeholder={data.license.placeholder}
-                    value={license}
-                    onChange={(e) => setLicense(e.target.value)}></input>
-                </div>
-              )}
+                {select === 1 && (
+                  <div className={styles.formItem}>
+                    <label htmlFor="license">{data.license.title}</label>
+                    <input
+                      style={{
+                        padding: "0.3rem 0",
+                      }}
+                      type="text"
+                      id="license"
+                      required
+                      placeholder={data.license.placeholder}
+                      value={license}
+                      onChange={(e) => setLicense(e.target.value)}></input>
+                  </div>
+                )}
 
-              <div className={styles.btnholder}>
-                <motion.button
-                  type="submit"
-                  whileHover={{
-                    scale: 1.1,
-                  }}>
-                  {lan.commontext.sendmessage}
-                </motion.button>
+                <div className={styles.btnholder}>
+                  <motion.button
+                    type="submit"
+                    whileHover={{
+                      scale: 1.1,
+                    }}>
+                    {loading ? <Loader /> : lan.commontext.sendmessage}
+                  </motion.button>
+                </div>
+              </form>
+            ) : (
+              <div className={styles.thankscontainer}>
+                <h4>{lan.commontext.thanksnote}</h4>
+                <p>{lan.contact.thanksdesc}</p>
+                <div className={styles.thanksbtncontainer}>
+                  <motion.button
+                    onClick={() => {
+                      setEmailSend(false);
+                      setError(false);
+                      setErrorMessage(false);
+                    }}
+                    className={styles.borderbtn}
+                    whileHover={{
+                      scale: 1.05,
+                    }}>
+                    {lan.contact.submitanotherinterest}
+                  </motion.button>
+                  <Link href="#visitus" passHref>
+                    <button>
+                      {lan.commontext.visitouroffice} <BsArrowDownCircle />{" "}
+                    </button>
+                  </Link>
+                </div>
               </div>
-            </form>
+            )}
           </div>
         </>
       )}

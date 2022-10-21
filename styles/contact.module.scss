@@ -339,6 +339,72 @@
                             justify-content: center;
                             color: #FFFFFF;
                             border-radius: 10px;
+                            min-width: 200px;
+                            // cursor: pointer;
+                        }
+                    }
+
+                    .thankscontainer {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+
+                        h4 {
+                            font-weight: 600;
+                            font-size: 1.5625rem;
+                            color: #777777;
+
+                            @media(max-width:600px) {
+                                font-size: 1.25rem;
+                            }
+                        }
+
+                        p {
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: #B5B5B5;
+
+                            @media(max-width:600px) {
+                                font-size: 0.8125rem;
+                            }
+                        }
+
+                        .thanksbtncontainer {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 1rem;
+
+                            button {
+                                border: none;
+                                align-items: center;
+                                display: flex;
+                                justify-content: center;
+                                font-weight: 500;
+                                font-size: 13px;
+                                color: #058DA6;
+                                background: none;
+
+                                @media (max-width:600px) {
+                                    padding: 0.5rem 0.5rem;
+                                    font-size: 10px;
+                                }
+                            }
+
+                            .borderbtn {
+                                border: 1px solid #058DA6;
+                            }
+
+                            @media(max-width:1224px) {
+                                justify-content: center;
+                            }
+
+                            @media(max-width:600px) {
+                                justify-content: center;
+                                gap: 0.5rem;
+                            }
                         }
                     }
                 }
@@ -393,6 +459,10 @@
 
                 @media (max-width:1224px) {
                     min-height: 50vh;
+                }
+
+                @media(max-width:600px) {
+                    min-height: 70vh;
                 }
             }
 
@@ -460,6 +530,10 @@
                     height: 25px;
                 }
             }
+        }
+
+        @media (max-width:600px) {
+            padding: 2% 5% 5%;
         }
     }
 }

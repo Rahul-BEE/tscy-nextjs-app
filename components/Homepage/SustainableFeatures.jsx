@@ -124,16 +124,13 @@ const SustainableFeatures = () => {
             <div className={styles.socialIconIcon}>
               <People />
             </div>
-          </div>
-          <div
-            className={`${styles.sustainableicons} ${
-              featureSelected !== 1 ? styles.iconEco : styles.iconEcoActive
-            }`}
-            onClick={() => setFeatureSelected(1)}>
-            <Polygon />
-            <div className={styles.ecoIconIcon}>
-              <Eco />
-            </div>
+            {featureSelected === 0 ? (
+              <motion.div
+                className={styles.underline}
+                layoutId="underline"
+                data-id={0}
+              />
+            ) : null}
           </div>
           <div
             className={`${styles.sustainableicons} ${
@@ -144,6 +141,30 @@ const SustainableFeatures = () => {
             <div className={styles.envIconIcon}>
               <Env />
             </div>
+            {featureSelected === 2 ? (
+              <motion.div
+                className={styles.underline}
+                layoutId="underline"
+                data-id={2}
+              />
+            ) : null}
+          </div>
+          <div
+            className={`${styles.sustainableicons} ${
+              featureSelected !== 1 ? styles.iconEco : styles.iconEcoActive
+            }`}
+            onClick={() => setFeatureSelected(1)}>
+            <Polygon />
+            <div className={styles.ecoIconIcon}>
+              <Eco />
+            </div>
+            {featureSelected === 1 ? (
+              <motion.div
+                className={styles.underline}
+                layoutId="underline"
+                data-id={1}
+              />
+            ) : null}
           </div>
 
           <RiArrowRightSLine
@@ -176,13 +197,19 @@ const SustainableFeatures = () => {
                   <p className="px-4 my-4">{showData?.sub}</p>
                   <Swiper
                     className={featurestyles.featureBullets}
-                    modules={[Autoplay, FreeMode]}
+                    modules={[Autoplay]}
+                    noSwiping={true}
+                    noSwipingClass={"swiper-slide"}
                     direction="vertical"
                     slidesPerView={7}
                     loop={true}
                     freeMode={true}
                     speed={1500}
-                    autoplay={{ delay: 1000, disableOnInteraction: false }}>
+                    autoplay={{
+                      delay: 1000,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: false,
+                    }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>
                         <h5 className={featurestyles.bulletSustainable}>

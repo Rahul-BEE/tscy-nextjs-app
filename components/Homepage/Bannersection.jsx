@@ -17,6 +17,8 @@ const Bannersection = ({ banner }) => {
         slidesPerView={1}
         speed={2500}
         loop={true}
+        noSwiping={true}
+        noSwipingClass="swiper-slide"
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{
           clickable: true,

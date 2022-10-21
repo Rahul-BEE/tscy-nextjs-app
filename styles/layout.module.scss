@@ -296,8 +296,8 @@
   z-index: 15;
   direction: ltr !important;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 30px;
+  right: 25px;
 }
 
 .imageContainermobmenu {
@@ -484,59 +484,6 @@
 
 
 
-// .header_topImage {
-//   position: absolute;
-//   top: -55px;
-//   right: -50px;
-//   width: 300px;
-//   height: 320px;
-//   transition: all 0.2s ease-in-out;
-
-//   @media (max-width: 992px) {
-//     width: 250px;
-//     height: 270px;
-//   }
-
-//   @media (max-width: 610px) {
-//     width: 200px;
-//     height: 220px;
-//   }
-// }
-
-// .header__modalbottom {
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-end;
-
-//   .header_btmImage {
-//     width: 370px;
-//     height: 320px;
-//     position: absolute;
-//     left: -100px;
-//     bottom: -35px;
-//     transition: all 0.2s ease-in-out;
-
-//     @media (max-width: 610px) {
-//       width: 250px;
-//       height: 200px;
-//     }
-//   }
-
-//   .btmImage2 {
-//     width: 270px;
-//     height: 370px;
-//     left: 85%;
-//     bottom: -70px;
-
-//     @media (max-width: 610px) {
-//       display: none;
-//     }
-//   }
-// }
-
-
-
 // footer
 
 .footer {
@@ -687,7 +634,12 @@
     p {
       font-weight: 400;
       font-size: 1.25rem;
+      color: #777777 !important;
 
+      @media (max-width:600px) {
+        font-size: 16px;
+        cursor: pointer;
+      }
     }
 
     .socialIcons {
@@ -814,7 +766,7 @@
           gap: 0.5rem;
 
           p {
-            font-size: 10px;
+            font-size: 13px;
           }
         }
 

@@ -111,7 +111,6 @@ function Plans() {
                       {/* mobile heading */}
                       <div className={styles.heading_item_mobile}>
                         <motion.div
-                          drag="x"
                           className={styles.innerHeading}
                           animate={mobileIndexAnimation2}>
                           <div

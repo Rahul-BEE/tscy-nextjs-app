@@ -164,9 +164,6 @@ const english = {
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
           "/Images/masterplan/autismcenter/3.png",
-          "/Images/masterplan/autismcenter/1.png",
-          "/Images/masterplan/autismcenter/2.png",
-          "/Images/masterplan/autismcenter/3.png",
         ],
       },
       {
@@ -189,6 +186,7 @@ const english = {
           "/Images/masterplan/equistrian/1.png",
           "/Images/masterplan/equistrian/2.png",
           "/Images/masterplan/equistrian/3.png",
+          "/Images/masterplan/equistrian/4.png",
         ],
       },
       {
@@ -275,6 +273,7 @@ const english = {
           "/Images/masterplan/brandedresidencies/1.png",
           "/Images/masterplan/brandedresidencies/2.png",
           "/Images/masterplan/brandedresidencies/3.png",
+          "/Images/masterplan/brandedresidencies/4.png",
         ],
       },
       {
@@ -1071,6 +1070,7 @@ const english = {
     thanksnote: "Thank you for your response",
     adddetails: "Add your details",
     prev: "Prev",
+    visitouroffice: "Visit our office",
   },
   tracks: [
     {
@@ -1470,6 +1470,9 @@ const english = {
         "The project is designed to improve the quality of life for residents without compromising the needs of future generations.",
       location: "Mina Al Sultan Qaboos Centre Yiti",
     },
+    submitanotherinterest: "Submit another interest",
+    thanksdesc:
+      "Our Sales and Marketing team will get back to you soon on your given contact number and email. Don’t forget to keep checking your emails inbox and spam folder.",
   },
   footer: [
     {

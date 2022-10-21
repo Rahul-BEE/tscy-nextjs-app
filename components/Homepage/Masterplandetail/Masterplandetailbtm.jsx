@@ -5,6 +5,7 @@ import useLanguage from "../../../utils/useLanguage";
 import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useEffect } from "react";
+import Link from "next/link";
 const Masterplandetailbtm = ({ item, track, controlItem, setDirection }) => {
   const lan = useLanguage();
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
@@ -74,9 +75,11 @@ const Masterplandetailbtm = ({ item, track, controlItem, setDirection }) => {
               </div>
             ))}
           </div>
-          <motion.button className={styles.seevillabtn}>
-            {lan.commontext.seevillas}
-          </motion.button>
+          <Link href={"/floorplan"} passHref>
+            <motion.button className={styles.seevillabtn}>
+              {lan.commontext.seevillas}
+            </motion.button>
+          </Link>
         </div>
       ) : (
         <div className={styles.itemdetailsbtm}>

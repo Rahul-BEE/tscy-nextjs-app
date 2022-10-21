@@ -92,11 +92,13 @@ const MasterplanPopup = ({
                 </div>
               </div>
             )}
-            <button
-              className={styles.popupcardbtn}
-              onClick={() => setShowDetail(true)}>
-              <HiOutlineArrowSmRight />
-            </button>
+            {!track && (
+              <button
+                className={styles.popupcardbtn}
+                onClick={() => setShowDetail(true)}>
+                <HiOutlineArrowSmRight />
+              </button>
+            )}
           </motion.div>
 
           <svg

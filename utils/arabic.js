@@ -182,6 +182,7 @@ const arabic = {
           "/Images/masterplan/equistrian/1.png",
           "/Images/masterplan/equistrian/2.png",
           "/Images/masterplan/equistrian/3.png",
+          "/Images/masterplan/equistrian/4.png",
         ],
       },
       {
@@ -270,6 +271,7 @@ const arabic = {
           "/Images/masterplan/brandedresidencies/1.png",
           "/Images/masterplan/brandedresidencies/2.png",
           "/Images/masterplan/brandedresidencies/3.png",
+          "/Images/masterplan/brandedresidencies/4.png",
         ],
       },
       {
@@ -1010,6 +1012,7 @@ const arabic = {
     tranksnote: "Thank you for your response",
     adddetails: "Add your details",
     prev: "Prev",
+    visitouroffice: "Visit our office",
   },
   propertyFeatures: [
     {
@@ -1483,6 +1486,9 @@ const arabic = {
         "تم تصميم هذا المشروع لتوفير أسلوب حياة صحية للعائلات القاطنة فيه دون الإضرار بالبيئة ومواردها. ",
       location: "مركز ميناء السلطان قابوس",
     },
+    thanksdesc:
+      "Our Sales and Marketing team will get back to you soon on your given contact number and email. Don’t forget to keep checking your emails inbox and spam folder.",
+    submitanotherinterest: "Submit another interest",
   },
   footer: [
     {
