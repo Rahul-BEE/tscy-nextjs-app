@@ -98,10 +98,17 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
               drag="x"
               ref={innerRow}
               dragListener={isMobile}
-              dragConstraints={{
-                right: 0,
-                left: -innerwidth,
-              }}
+              dragConstraints={
+                lan.language === 1
+                  ? {
+                      right: 0,
+                      left: -innerwidth,
+                    }
+                  : {
+                      left: 0,
+                      right: innerwidth,
+                    }
+              }
               key={`${selectedTab}_dragDiv`}>
               {data.map((item, index) => {
                 return (

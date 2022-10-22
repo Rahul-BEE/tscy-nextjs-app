@@ -53,11 +53,11 @@ function VillaplansMobile() {
     setShowForm(false);
     if (index === 1) {
       test.start({
-        x: -100,
+        x: lan.language === 1 ? -100 : 100,
       });
     } else if (index === 2) {
       test.start({
-        x: -200,
+        x: lan.language === 1 ? -200 : 200,
       });
     } else {
       test.start({
