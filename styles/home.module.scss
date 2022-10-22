@@ -175,6 +175,8 @@
 }
 
 .rotate_icon {
+  cursor: pointer;
+
   @media(max-width:1224px) {
     display: none;
   }

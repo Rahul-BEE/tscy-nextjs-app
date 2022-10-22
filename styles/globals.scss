@@ -267,6 +267,7 @@ a {
   overflow: hidden;
   position: relative;
   margin-block: 3rem;
+  direction: ltr !important;
 }
 
 .marquee:before,

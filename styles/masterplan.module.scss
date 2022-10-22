@@ -797,6 +797,11 @@
       border-bottom-right-radius: 23px;
       border-bottom-left-radius: 23px;
 
+      &:lang(ar) {
+        padding-left: 0;
+        padding-right: 24px
+      }
+
       .mobilebtmcontentinner {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
