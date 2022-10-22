@@ -4,6 +4,7 @@ import styles from "../../styles/newspage.module.scss";
 import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
+import { Col, Row } from "react-bootstrap";
 function NewsPage() {
   const lan = useLanguage();
   const ar = lan.newssection.post
@@ -13,8 +14,14 @@ function NewsPage() {
 
       <div className={styles.hero_container}>
         <div className={styles.second_heading}>
-          <p>Know more about us in our</p>
-          <h2>LATEST STORIES</h2>
+          <Row className="headingRow">
+          <Col>
+            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+            <h2 className="sectionmainHeading">
+              {lan.commontext.stories}
+            </h2>
+          </Col>
+        </Row>
 
           <div className={styles.container_boxs}>
             {ar.map((e,index) => (

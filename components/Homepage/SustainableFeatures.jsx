@@ -271,7 +271,7 @@ const SustainableFeatures = () => {
               <Image
                 src={showData?.leftimg}
                 width={357}
-                height={453}
+                height={357}
                 priority
                 quality={100}
                 className={featurestyles.susimage1}
@@ -298,8 +298,8 @@ const SustainableFeatures = () => {
               style={{ height: "100%", width: "100%" }}>
               <Image
                 src={showData?.rightimg}
-                width={369}
-                height={431}
+                width={327}
+                height={357}
                 style={{ float: "right" }}
                 className={featurestyles.susimage2}
                 priority

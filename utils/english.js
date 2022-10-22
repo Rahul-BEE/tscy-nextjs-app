@@ -1074,6 +1074,10 @@ const english = {
     adddetails: "Add your details",
     prev: "Prev",
     visitouroffice: "Visit our office",
+    stories: "Latest Stories",
+    featured: "featured news",
+    featureddesc: "See what they",
+    featureddesc2: "say in",
   },
   tracks: [
     {
