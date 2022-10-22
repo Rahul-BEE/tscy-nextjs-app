@@ -16,6 +16,8 @@ import { useEffect } from "react";
 import Masterplandetail from "./Masterplandetail/Masterplandetail";
 import Masterplandetailbtm from "./Masterplandetail/Masterplandetailbtm";
 import { useCallback } from "react";
+import { useRouter } from "next/router";
+import { useAppContext } from "../../context/AppContext";
 
 const Masterplan = () => {
   const lan = useLanguage();
@@ -33,6 +35,9 @@ const Masterplan = () => {
   const [direction, setDirection] = useState(1);
   const [desktop, setDesktop] = useState(true);
   const [animating, setAnimating] = useState(false);
+
+  const { state, dispatch } = useAppContext();
+
   const [constrains, setConstrains] = useState({
     right: 0,
     left: 0,
@@ -164,6 +169,17 @@ const Masterplan = () => {
       window.removeEventListener("resize", setNewConstraints);
     };
   }, [setNewConstraints, zoom, imageContainerRef]);
+
+  useEffect(() => {
+    if (state && state.district != "") {
+      if (state.district === 1) {
+        getPath({ id: 10 });
+      } else getPath({ id: 13 });
+      dispatch({
+        type: "resetdistrict",
+      });
+    }
+  }, []);
 
   //Guesture
 

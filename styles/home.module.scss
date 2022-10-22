@@ -322,7 +322,7 @@
 
   .locationabheadingcontainer {
     position: absolute;
-    top: 150px;
+    top: 120px;
     width: 100%;
 
     @media (max-width:1224px) {
@@ -466,6 +466,20 @@
 
   .locationdescription {
     padding-inline: 5%;
+  }
+
+  .getdirectionlocationbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: white;
+    color: #058DA6;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
   }
 }
 

@@ -33,15 +33,15 @@ const Section1 = () => {
             <p>{data.description}</p>
           </div>
           <div className={styles.downloadcomparison}>
+            <Link href={"/contact"} passHref>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                }}>
+                {lan.commontext.registerinterest}
+              </motion.button>
+            </Link>
             <p>
-              <Link href={"/contact"} passHref>
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                  }}>
-                  {lan.commontext.registerinterest}
-                </motion.button>
-              </Link>
               {lan.commontext.download} {lan.commontext.brochure}
               <BsArrowDownCircle />
             </p>

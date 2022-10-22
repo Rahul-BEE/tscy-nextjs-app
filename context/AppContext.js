@@ -17,7 +17,7 @@ export function AppWrapper({ children }) {
   }, [state, dispatch]);
 
   useEffect(() => {
-    if (JSON.parse(sessionStorage.getItem("userdata")) !== null) {
+    if (JSON.parse(sessionStorage.getItem("userdata"))) {
       dispatch({
         type: "init_stored",
         value: JSON.parse(sessionStorage.getItem("userdata")),
@@ -26,7 +26,7 @@ export function AppWrapper({ children }) {
   }, []);
   useEffect(() => {
     if (state !== initialState) {
-      sessionStorage.setItem("userdata", JSON.stringify(state));
+      sessionStorage.setItem("userdata", JSON.stringify(state.userdata));
     }
   }, [state]);
 

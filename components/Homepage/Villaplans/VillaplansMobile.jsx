@@ -181,6 +181,8 @@ function VillaplansMobile() {
           width={900}
           height={500}
           layout="responsive"
+          objectFit="cover"
+          objectPosition={"center"}
         />
       </div>
       {!showForm ? (

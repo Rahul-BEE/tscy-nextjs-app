@@ -574,6 +574,7 @@ const english = {
         maidroom: "1",
         type: "Courtyard Villa",
         location: "West District",
+        locationid: 1,
         locationImg: "/Images/villas/westdistrict.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],
@@ -727,6 +728,7 @@ const english = {
         maidroom: "1",
         type: "Courtyard Villa",
         location: "West District",
+        locationid: 1,
         locationImg: "/Images/villas/westdistrict.png",
         gfa: "266",
         bua: "285",
@@ -840,6 +842,7 @@ const english = {
         maidroom: "1",
         type: "Garden Villa ",
         location: "East District",
+        locationid: 2,
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         locationImg: "/Images/villas/eastdistrict.png",

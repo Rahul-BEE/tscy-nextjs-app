@@ -605,6 +605,7 @@ const arabic = {
         bathrooms: 5,
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
+        locationid: 1,
         gfa: "238",
         bua: "256",
         description:
@@ -716,6 +717,7 @@ const arabic = {
         bathrooms: 5,
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
+        locationid: 1,
         gfa: "266",
         bua: "285",
         description:
@@ -827,6 +829,7 @@ const arabic = {
         bathrooms: 6,
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
+        locationid: 2,
         gfa: "378",
         bua: "459",
         description:

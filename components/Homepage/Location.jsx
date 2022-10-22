@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import LocationSvgComp from "./LocationSvg/LocationSvgComp";
 import LocationSvgComp1 from "./LocationSvg/LocationSvgComp1";
-import { motion } from "framer-motion";
+import { LazyMotion, motion } from "framer-motion";
+import Link from "next/link";
 
 const Location = () => {
   const lan = useLanguage();
@@ -40,6 +41,15 @@ const Location = () => {
           <p className={styles.locationdescription}>
             {lan.locationsection.description}
           </p>
+        </div>
+        <div>
+          <Link href={"https://goo.gl/maps/pztjf2ZTzSj9PAoV6"}>
+            <a target={"_blank"} rel="noreferrer">
+              <button className={styles.getdirectionlocationbtn}>
+                {lan.commontext.getdirection}
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
 

@@ -12,7 +12,7 @@
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
             align-items: start;
-            margin-block: 2rem;
+            margin-block: 3.125rem;
             margin-inline: auto;
             max-width: 1500px;
             row-gap: 40px;
@@ -138,7 +138,7 @@
         }
 
         @media (max-width:1224px) {
-            padding: 5%;
+            padding: 5% 5% 64px;
 
         }
 

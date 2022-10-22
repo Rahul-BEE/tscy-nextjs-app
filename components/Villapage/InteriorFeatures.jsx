@@ -16,6 +16,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import SliderComponent from "./SliderComponent";
+import Image from "next/image";
 const InteriorFeatures = () => {
   const lan = useLanguage();
   const router = useRouter();
@@ -37,8 +38,10 @@ const InteriorFeatures = () => {
     setContainerWidth(
       carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
     );
-    setItemWidth(itemRef.current?.getBoundingClientRect().width);
-  }, [carouselRef]);
+    setItemWidth(
+      carouselRef.current?.scrollWidth / data?.interior.length - 2.5
+    );
+  }, [carouselRef, data, scrolledWidth]);
 
   useEffect(() => {
     setNewComponentWidth();
@@ -86,7 +89,7 @@ const InteriorFeatures = () => {
       starterAnimation.start({
         x: -(scrolledWidth + itemWidth),
       });
-    } else if (id === "-" && scrolledWidth > 0) {
+    } else if (id === "-" && scrolledWidth > 5) {
       setScrolledWidth((prev) => prev - itemWidth);
       starterAnimation.start({
         x: -scrolledWidth + itemWidth,
@@ -163,6 +166,11 @@ const InteriorFeatures = () => {
               </motion.div>
             </LayoutGroup>
           </AnimatePresence>
+        </div>
+      )}
+      {!open && (
+        <div className={styles.polygondiv}>
+          <Image src="/Images/villas/interiorfeaurepolygon.png" layout="fill" />
         </div>
       )}
     </div>

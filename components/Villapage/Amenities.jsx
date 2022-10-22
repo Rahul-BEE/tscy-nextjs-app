@@ -45,9 +45,9 @@ const Amenities = () => {
   };
 
   const setNewComponentWidth = useCallback(() => {
-    setComponentWidth(itemRef.current?.getBoundingClientRect().width);
+    setComponentWidth(containerRef.current?.scrollWidth / data?.nearby.length);
     setContainerWidth(containerRef.current?.getBoundingClientRect().width);
-  }, [itemRef]);
+  }, [itemRef, data]);
 
   useEffect(() => {
     setNewComponentWidth();
@@ -89,7 +89,7 @@ const Amenities = () => {
               ref={containerRef}
               onLoad={setNewComponentWidth}
               className={styles.amenitiescarouselsInner}
-              drag="x"
+              // drag="x"
               animate={slideAnimation}
               onDrag={(_, info) => console.log(info)}
               dragConstraints={{

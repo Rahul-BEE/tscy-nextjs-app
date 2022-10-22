@@ -24,7 +24,7 @@ const SliderComponent = ({
   return (
     <motion.div
       className={styles.sliderItemContainer}
-      drag="x"
+      // drag="x"
       animate={animation}
       onLoad={setNewComponentWidth}
       ref={carouselRef}
