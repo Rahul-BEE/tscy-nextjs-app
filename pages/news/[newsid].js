@@ -20,7 +20,7 @@ const News = () => {
       <div>
            
       <div className={styles.mainHeader}>
-         <span className={styles.verticalAlignMiddle}>
+         {/* <span className={styles.verticalAlignMiddle}>
        
          <Image
             src="/Images/Book.jpg"
@@ -29,8 +29,8 @@ const News = () => {
             alt="The sustainable city image"
           />
           
-         </span>
-            <span className={styles.ml14}>5 min. Read</span>   
+         </span> */}
+            {/* <span className={styles.ml14}>5 min. Read</span>    */}
          </div>
          {data && (
         <div>

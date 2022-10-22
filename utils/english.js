@@ -1068,6 +1068,10 @@ const english = {
     language: "Arabic",
     next: "Next",
     previous: "Previous",
+    stories:"Latest Stories",
+    featured: "featured news",
+    featureddesc:"See what they",
+    featureddesc2:"say in",
   },
   tracks: [
     {

@@ -4,7 +4,7 @@
   color: $font_color_gray;
   position: relative;
   overflow: hidden !important;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .hero_container {
@@ -23,7 +23,8 @@
     // color: $primary__button_color;
     // background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.4) 101.52%);
     background: #058da6;
-    background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
+   // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
+   background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -42,7 +43,7 @@
   // flex-wrap: wrap;
   grid-template-columns: 65% 35%;
   // gap: 2.563rem;
-  margin-top: 4.688rem;
+  margin-top: 3rem;
 
   &:lang(ar) {
     direction: rtl !important;
@@ -284,20 +285,68 @@
   h3 {
     color: $white__font_color;
 
-    @media (max-width: 565px) {
+    @media (max-width: 332px) {
       font-size: 16px;
       line-height: 24px;
       padding: 10px;
       position: absolute;
-      top: -100%;
+      top: -155%;
     }
-
-    @media only screen and (max-width: 768px) and (min-width: 566px) {
+    @media only screen and (max-width: 350px) and (min-width: 333px) {
+      top: -145%;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+    }
+    @media only screen and (max-width: 360px) and (min-width: 351px) {
+      top: -140%;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+    }
+    @media only screen and (max-width: 369px) and (min-width: 361px) {
+      top: -130%;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+    }
+    @media only screen and (max-width: 405px) and (min-width: 370px) {
+      top: -115%;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+    }
+    @media only screen and (max-width: 500px) and (min-width: 406px) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+      top: -85%;
+    }
+    @media only screen and (max-width: 565px) and (min-width: 501px) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+      top: -65%;
+    }
+    @media only screen and (max-width: 720px) and (min-width: 566px) {
       font-size: 16px;
       line-height: 24px;
       padding: 10px;
       position: absolute;
       top: -40%;
+    }
+    @media only screen and (max-width: 768px) and (min-width: 721px) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      position: absolute;
+      top: -35%;
     }
   }
 }

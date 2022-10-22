@@ -5,13 +5,21 @@ import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import Link from "next/link";
+import { Col, Row } from "react-bootstrap";
+import useLanguage from "../../../utils/useLanguage";
 function NewsMobile({ data }) {
-  //hh
+  //hh  
+  const lan = useLanguage();
   return (
     <div className={styles.hero_mobile_box}>
-      <div className={`${styles.hero_text_center}`}>
-        <h2 style={{ marginBottom: "3.5rem" }}>press and news</h2>
-      </div>
+      <Row className="headingRow">
+          <Col>
+            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+            <h2 className="sectionmainHeading">
+              {lan.commontext.press}
+            </h2>
+          </Col>
+        </Row>
       <Swiper
         slidesPerView={1}
         centeredSlides={true}

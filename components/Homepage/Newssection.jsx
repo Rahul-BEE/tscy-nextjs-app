@@ -7,6 +7,7 @@ import { useState } from "react";
 import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import { Col, Row } from "react-bootstrap";
 function Newssection() {
   const lan = useLanguage();
   const controls = useAnimation();
@@ -133,12 +134,23 @@ function Newssection() {
 
   return (
     <div className={styles.hero_newssection}>
+       
       <div className={styles.hero_container}>
+        
         <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
           {/* <p>See what they say in</p> */}
-          <h2>{lan.commontext.press}</h2>
+          <Row className="headingRow">
+          <Col>
+            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+            <h2 className="sectionmainHeading">
+              {lan.commontext.press}
+            </h2>
+          </Col>
+        </Row>
+        
+          
         </div>
-
+      
         {/* layout */}
 
         <div className={styles.shape_hex}>
