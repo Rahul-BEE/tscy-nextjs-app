@@ -78,6 +78,8 @@
 .primelocationmain {
     padding-top: 90px;
     padding-bottom: 40px;
+    width: 100vw;
+    overflow-x: hidden;
 
     .locationinnercontainer {
         position: relative;
