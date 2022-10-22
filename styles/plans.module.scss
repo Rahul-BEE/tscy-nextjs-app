@@ -1,25 +1,28 @@
 .hero_box {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
     padding-inline: 5%;
-    position: relative;
+
+    max-height: 1062px;
 
     .realtiveParent {
-        width: 90%;
-        height: 110%;
+        width: 100%;
+        height: 100%;
         background-color: white;
-        position: absolute;
-        top: -10%;
+        position: relative;
 
-        border-collapse: separate;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
+        max-width: 2000px;
+        margin-inline: auto;
 
         .hero_main {
             background-color: white;
+            position: absolute;
+            inset: 0;
+            top: -10%;
             padding: 80px 80px 40px;
-            border-radius: 10px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
 
             .hero_container {
                 display: grid;
@@ -80,7 +83,7 @@
                             padding: 8px 16px;
                             // margin-top: 24px;
                             color: white;
-                            // margin-bottom: 2rem;
+                            margin-bottom: 2rem;
                             cursor: pointer;
 
                             @media (max-width:600px) {
@@ -96,7 +99,6 @@
 
                         .hero_tablet {
                             display: none;
-                            margin-top: 24px;
 
                             .heading_item_mobile {
                                 display: none;
@@ -381,10 +383,19 @@
                                 }
                             }
 
+                            &:lang(ar) {
+                                padding-left: 0;
+                                padding-right: 32px;
+                            }
+
                             @media (max-width:1224px) {
                                 grid-template-columns: 1fr 1fr;
                                 margin-left: 3rem;
 
+                                &:lang(ar) {
+                                    margin-left: 0;
+                                    margin-right: 3rem;
+                                }
                             }
 
                             @media (max-width:600px) {
@@ -443,17 +454,12 @@
 
         }
 
-        @media(max-width:1224px) {
-            position: static;
-            width: 100%;
-            // min-height: 100vh;
-            height: unset;
-        }
+
     }
 
     @media(max-width:1224px) {
         padding: 0;
-        height: 100%;
+        height: unset;
     }
 }
 

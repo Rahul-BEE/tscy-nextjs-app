@@ -606,6 +606,7 @@ const arabic = {
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
         locationid: 1,
+        locationImg: "/Images/villas/westdistrict.png",
         gfa: "238",
         bua: "256",
         description:
@@ -718,6 +719,7 @@ const arabic = {
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
         locationid: 1,
+        locationImg: "/Images/villas/westdistrict.png",
         gfa: "266",
         bua: "285",
         description:
@@ -830,6 +832,7 @@ const arabic = {
         type: "كورتيارد فيلا",
         location: "الفلل الغربية",
         locationid: 2,
+        locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",
         description:

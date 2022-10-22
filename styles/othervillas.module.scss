@@ -247,6 +247,7 @@
             justify-content: center;
             gap: 3rem;
             margin-right: 2rem;
+            direction: ltr;
 
             span {
                 width: 36px;
@@ -472,6 +473,7 @@
         gap: 1rem;
         font-size: 2rem;
         color: #058da6;
+        direction: ltr;
 
         svg {
             cursor: pointer;
@@ -680,6 +682,13 @@
         bottom: 0;
         width: 300px;
         height: 270px;
+
+        &:lang(ar) {
+            right: 0;
+            left: unset;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
 
         @media (max-width:1224px) {
             display: none;

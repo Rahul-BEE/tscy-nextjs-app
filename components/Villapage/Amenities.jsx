@@ -22,25 +22,48 @@ const Amenities = () => {
   const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef(null);
   const handlerCarousel = (id) => {
-    if (
-      id === 1 &&
-      slideIndex < data.nearby.length - 1 &&
-      scrolledWidth <
-        containerRef.current?.scrollWidth - containerRef.current?.clientWidth
-    ) {
-      setScrolledWidth((prev) => prev + componentWidth);
-      setSlideIndex((prev) => prev + 1);
-      slideAnimation.start({
-        x: -(scrolledWidth + componentWidth),
-      });
-    } else if (id === -1 && slideIndex !== 0) {
-      setScrolledWidth((prev) => prev - componentWidth);
-      setSlideIndex((prev) => prev - 1);
-      slideAnimation.start({
-        x: -scrolledWidth + componentWidth,
-      });
+    if (lan.language === 1) {
+      if (
+        id === 1 &&
+        slideIndex < data.nearby.length - 1 &&
+        scrolledWidth <
+          containerRef.current?.scrollWidth - containerRef.current?.clientWidth
+      ) {
+        setScrolledWidth((prev) => prev + componentWidth);
+        setSlideIndex((prev) => prev + 1);
+        slideAnimation.start({
+          x: -(scrolledWidth + componentWidth),
+        });
+      } else if (id === -1 && slideIndex !== 0) {
+        setScrolledWidth((prev) => prev - componentWidth);
+        setSlideIndex((prev) => prev - 1);
+        slideAnimation.start({
+          x: -scrolledWidth + componentWidth,
+        });
+      } else {
+        return;
+      }
     } else {
-      return;
+      if (id === -1 && slideIndex !== 0) {
+        setScrolledWidth((prev) => prev + componentWidth);
+        setSlideIndex((prev) => prev + 1);
+        slideAnimation.start({
+          x: -(scrolledWidth + componentWidth),
+        });
+      } else if (
+        id === 1 &&
+        slideIndex < data.nearby.length - 1 &&
+        scrolledWidth >
+          containerRef.current?.clientWidth - containerRef.current?.scrollWidth
+      ) {
+        setScrolledWidth((prev) => prev - componentWidth);
+        setSlideIndex((prev) => prev - 1);
+        slideAnimation.start({
+          x: -scrolledWidth + componentWidth,
+        });
+      } else {
+        return;
+      }
     }
   };
 

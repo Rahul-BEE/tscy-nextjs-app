@@ -191,7 +191,11 @@ function Plans() {
                 </div>
               </div>
               {/* center */}
-              <div className={`${styles.hero_items} ${styles.floorplanGrid}`}>
+              <div
+                className={`${styles.hero_items} ${styles.floorplanGrid}`}
+                style={{
+                  position: "relative",
+                }}>
                 <Image
                   className={styles.mobile_img}
                   src={data.floorplan[expanded]}
