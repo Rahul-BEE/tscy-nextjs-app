@@ -1,5 +1,5 @@
 .hero_box {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
     padding-inline: 5%;
@@ -7,7 +7,7 @@
 
     .realtiveParent {
         width: 90%;
-        height: 100vh;
+        height: 110%;
         background-color: white;
         position: absolute;
         top: -10%;
@@ -80,7 +80,7 @@
                             padding: 8px 16px;
                             // margin-top: 24px;
                             color: white;
-                            margin-bottom: 2rem;
+                            // margin-bottom: 2rem;
                             cursor: pointer;
 
                             @media (max-width:600px) {
@@ -96,6 +96,7 @@
 
                         .hero_tablet {
                             display: none;
+                            margin-top: 24px;
 
                             .heading_item_mobile {
                                 display: none;
