@@ -109,9 +109,9 @@
                         display: none;
                     }
 
-                    
+
                 }
-               
+
                 .polygoncontainer2 {
                     top: -100px;
                     right: -220px;
@@ -121,7 +121,7 @@
                         right: -50px;
                         width: 200px;
                         height: 200px;
-                    }  
+                    }
                 }
             }
 
@@ -142,6 +142,7 @@
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     margin-bottom: 22px;
+
                     @media (max-width:600px) {
                         font-size: 1.5625rem;
                     }
@@ -189,12 +190,14 @@
 
                 .partnercontainer {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 40% 40%;
                     margin-top: 2.5rem;
+                    grid-auto-rows: min-content;
                     margin-bottom: 1rem;
                     gap: 2rem;
                     justify-items: stretch;
                     position: relative;
+                    justify-content: center;
 
                     .partneritem {
                         height: 100%;
@@ -204,25 +207,35 @@
                         justify-content: center;
                         align-items: center;
                         padding: 40px 32px;
-                       
-                       // max-width: 500px;
+
+                        // max-width: 500px;
                         // box-shadow: none;
 
                         // &:hover {
                         //     border: none;
                         //     box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.1);
                         // }
+                        svg {
+                            width: 80%;
+                            height: 80%;
+                            max-height: 60px;
+                        }
+
                         @media (max-width:600px) {
-                    
+
                             padding: 40px 0px;
                         }
-                       
+
+                    }
+
+                    @media(max-width:1224px) {
+                        grid-template-columns: 50% 50%;
                     }
 
                     @media (max-width:600px) {
                         grid-template-columns: 1fr;
                         grid-template-rows: 1fr;
-                      
+
                     }
                 }
             }
@@ -364,10 +377,11 @@
             gap: 2rem;
             // font-family: 'Poppins';
             font-style: normal;
-            .topheading
-            {
+
+            .topheading {
                 margin-top: 25px;
             }
+
             .heading {
                 padding: 0;
                 margin: 0;
@@ -451,6 +465,7 @@
             right: 0px;
             width: 250px;
             height: 250px;
+
             @media(max-width:1400px) {
                 top: -100px;
                 right: 0px;

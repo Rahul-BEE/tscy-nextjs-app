@@ -8,7 +8,6 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState } from "react";
 function CustomToggle({ children, eventKey, callback }) {
   const decoratedOnClick = useAccordionButton(eventKey, () => {
-    console.log(eventKey);
     callback(eventKey);
   });
   return (

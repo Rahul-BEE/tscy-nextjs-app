@@ -12,30 +12,30 @@ const parentVariant = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   },
   hidden: (direction) => ({
     x: direction === 1 ? "100%" : "-100%",
     opacity: 0.75,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   }),
   exit: (direction) => ({
     x: direction === 1 ? "-100%" : "100%",
     opacity: 0.75,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   }),
 };
-const Masterplandetail = ({ item, track, goback }) => {
+const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
   const lan = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
   const [sliderWidth, setSliderWidth] = useState(0);
   const [index, setIndex] = useState(track ? track - 16 : item - 1);
-  const [direction, setDirection] = useState(1);
+  // const [direction, setDirection] = useState(1);
   const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
@@ -52,17 +52,14 @@ const Masterplandetail = ({ item, track, goback }) => {
   };
 
   useEffect(() => {
+    setIndex(track ? track - 16 : item - 1);
     setSliderWidth(
       document.getElementById("masterplanslider").getBoundingClientRect()
         .width -
         document.getElementById("masterplanslideparent").getBoundingClientRect()
           .width
     );
-  }, [slideIndex]);
-
-  useEffect(() => {
-    console.log("slide", slideIndex);
-  }, [index]);
+  }, [slideIndex, item, track]);
 
   return (
     <>

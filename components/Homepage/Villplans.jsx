@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import useLangage from "../../utils/useLanguage";
 import styles from "../../styles/villaplans.module.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
@@ -10,16 +10,19 @@ import Parking from "../../public/Svg/homevillaplan/parking.svg";
 import Garden from "../../public/Svg/homevillaplan/garden.svg";
 import Bathroom from "../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../public/Svg/homevillaplan/maidroom.svg";
+import Arrowleft from "../../public/Svg/homevillaplan/villaplanarrowleft.svg";
 import VillaplansMobile from "./Villaplans/VillaplansMobile";
 import Link from "next/link";
 import { useAppContext } from "../../context/AppContext";
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
   const [villaIndex, setIndex] = useState(1);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[1]);
-
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
   const [name, setName] = useState("");
@@ -35,8 +38,8 @@ const Villplans = () => {
       type: "updateuser",
       value: data,
     });
-    //sent data to the backend
     setDataReceived(true);
+    //sent data to the backend
   };
   const handleClick = (id) => {
     setShowForm(true);
@@ -47,7 +50,23 @@ const Villplans = () => {
     setShowForm(false);
     setVilla(lan.villaplansection.villas[index]);
   };
-
+  const handleChange = (_, country) => {
+    const mobLength = country.format.split(".").length - 1;
+    if (phone.split("").length - 1 !== mobLength) {
+      setError(true);
+      setErrorMessage("Enter Valid Mobile Number");
+    } else {
+      setError(false);
+      setErrorMessage("r");
+    }
+  };
+  useEffect(() => {
+    if (state.userdata?.name !== "") {
+      setDataReceived(true);
+    } else {
+      setDataReceived(false);
+    }
+  }, [state]);
   return (
     <div className={styles.app_villa_main}>
       <div className={styles.app__villaplanmaincontainer_desktop}>
@@ -144,25 +163,27 @@ const Villplans = () => {
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>
             {!showForm ? (
-              <>
+              <div className={styles.villaplanfeatureinner}>
                 <p className={styles.heading}>
                   {lan.commontext.propsubheading_1}
                 </p>
-                <p>
-                  <Bedroom /> <span>{lan.commontext.bedroom}</span>
-                </p>
-                <p>
-                  <Bathroom /> <span>{lan.commontext.bathroom}</span>
-                </p>
-                <p>
-                  <Maidroom /> <span>{lan.commontext.maidroom}</span>
-                </p>
-                <p>
-                  <Garden /> <span>{lan.commontext.privategarden}</span>
-                </p>
-                <p>
-                  <Parking /> <span>{lan.commontext.parking}</span>
-                </p>
+                <div className={styles.featurediv}>
+                  <p>
+                    <Bedroom /> <span>{lan.commontext.bedroom}</span>
+                  </p>
+                  <p>
+                    <Bathroom /> <span>{lan.commontext.bathroom}</span>
+                  </p>
+                  <p>
+                    <Maidroom /> <span>{lan.commontext.maidroom}</span>
+                  </p>
+                  <p>
+                    <Garden /> <span>{lan.commontext.privategarden}</span>
+                  </p>
+                  <p>
+                    <Parking /> <span>{lan.commontext.parking}</span>
+                  </p>
+                </div>
 
                 <div>
                   <motion.button
@@ -173,12 +194,17 @@ const Villplans = () => {
                     {lan.commontext.registerinterest}
                   </motion.button>
                 </div>
-              </>
+              </div>
             ) : (
               <>
                 {dataReceived ? (
                   <div className={styles.villaplanuserform}>
-                    <p>Thanks for your response.</p>
+                    <div className={styles.gobackformbtn}>
+                      <Arrowleft onClick={() => setShowForm(false)} />
+                    </div>
+                    <p className={styles.heading}>
+                      {lan.commontext.thanksnote}
+                    </p>
                     <div className={styles.btncontainer}>
                       <motion.div
                         onClick={() => handleClick(1)}
@@ -217,7 +243,12 @@ const Villplans = () => {
                   </div>
                 ) : (
                   <div className={styles.villaplanuserform}>
-                    <p className={styles.heading}>Add your details</p>
+                    <div className={styles.gobackformbtn}>
+                      <Arrowleft onClick={() => setShowForm(false)} />
+                    </div>
+                    <p className={styles.heading}>
+                      {lan.commontext.adddetails}
+                    </p>
                     <div className={styles.userformcontainer}>
                       <form className={styles.userform}>
                         <div className={styles.formItem}>
@@ -241,6 +272,7 @@ const Villplans = () => {
                           <input
                             type={"email"}
                             value={email}
+                            name="email"
                             required
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder={
@@ -252,14 +284,30 @@ const Villplans = () => {
                           <label htmlFor="name">
                             {lan.contact.register.formdata.phone.title}
                           </label>
-                          <input
-                            type={"text"}
+                          <PhoneInput
+                            country={"om"}
                             value={phone}
-                            required
-                            onChange={(e) => setPhone(e.target.value)}
-                            placeholder={
-                              lan.contact.register.formdata.phone.placeholder
-                            }
+                            containerClass={styles.picontainerclass}
+                            inputClass={styles.piinputclass}
+                            buttonClass={styles.buttonClass}
+                            onChange={(val) => setPhone(val)}
+                            enableSearch={true}
+                            searchClass={styles.searchClass}
+                            onBlur={handleChange}
+                            countryCodeEditable={false}
+                            searchNotFound={"No country found"}
+                            isValid={(value, country) => {
+                              if (value.match(/12345/)) {
+                                setError(true);
+                                return false;
+                              } else if (value.match(/1234/)) {
+                                setError(true);
+                                return false;
+                              } else {
+                                setError(false);
+                                return true;
+                              }
+                            }}
                           />
                         </div>
                       </form>

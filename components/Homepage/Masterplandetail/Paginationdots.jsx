@@ -8,6 +8,9 @@ const Paginationdots = ({ slideIndex, length, setSlideIndex }) => {
         {[...Array(length).keys()].map((item) => {
           return (
             <motion.li
+              style={{
+                cursor: "pointer",
+              }}
               onClick={() => setSlideIndex(item)}
               key={item}
               initial={{

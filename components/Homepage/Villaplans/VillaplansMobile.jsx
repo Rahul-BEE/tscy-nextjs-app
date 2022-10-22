@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef } from "react";
 import useLanguage from "../../../utils/useLanguage";
 import Image from "next/image";
-
+import Arrowleft from "../../../public/Svg/homevillaplan/villaplanarrowleft.svg";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../../public/Svg/homevillaplan/bedroom.svg";
 import Parking from "../../../public/Svg/homevillaplan/parking.svg";
@@ -14,7 +14,8 @@ import Bathroom from "../../../public/Svg/homevillaplan/bathroom.svg";
 import Bedroom from "../../../public/Svg/homevillaplan/maidroom.svg";
 import Link from "next/link";
 import { useAppContext } from "../../../context/AppContext";
-
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
@@ -22,6 +23,8 @@ function VillaplansMobile() {
   const test = useAnimation();
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -63,6 +66,23 @@ function VillaplansMobile() {
     }
   };
 
+  useEffect(() => {
+    if (state.userdata?.name !== "") {
+      setDataReceived(true);
+    } else {
+      setDataReceived(false);
+    }
+  }, [state]);
+  const handleChange = (_, country) => {
+    const mobLength = country.format.split(".").length - 1;
+    if (phone.split("").length - 1 !== mobLength) {
+      setError(true);
+      setErrorMessage("Enter Valid Mobile Number");
+    } else {
+      setError(false);
+      setErrorMessage("r");
+    }
+  };
   return (
     <div className={styles.section_villaplan_mobile}>
       <Row className="headingRow">
@@ -195,7 +215,14 @@ function VillaplansMobile() {
         <>
           {dataReceived ? (
             <div className={styles.villaplanuserform}>
-              <p>Thanks for your response.</p>
+              <div
+                className={styles.gobackformbtn}
+                style={{
+                  left: "2rem",
+                }}>
+                <Arrowleft onClick={() => setShowForm(false)} />
+              </div>
+              <p className={styles.heading}>{lan.commontext.thanksnote}</p>
               <div className={styles.btncontainer}>
                 <motion.div
                   onClick={() => handleClick(1)}
@@ -234,7 +261,14 @@ function VillaplansMobile() {
             </div>
           ) : (
             <div className={styles.villaplanuserform}>
-              <p className={styles.heading}>Add your details</p>
+              <div
+                className={styles.gobackformbtn}
+                style={{
+                  left: "2rem",
+                }}>
+                <Arrowleft onClick={() => setShowForm(false)} />
+              </div>
+              <p className={styles.heading}>{lan.commontext.adddetails}</p>
               <div className={styles.userformcontainer}>
                 <form className={styles.userform}>
                   <div className={styles.formItem}>
@@ -269,14 +303,30 @@ function VillaplansMobile() {
                     <label htmlFor="name">
                       {lan.contact.register.formdata.phone.title}
                     </label>
-                    <input
-                      type={"text"}
+                    <PhoneInput
+                      country={"om"}
                       value={phone}
-                      required
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder={
-                        lan.contact.register.formdata.phone.placeholder
-                      }
+                      containerClass={styles.picontainerclass}
+                      inputClass={styles.piinputclass}
+                      buttonClass={styles.buttonClass}
+                      onChange={(val) => setPhone(val)}
+                      enableSearch={true}
+                      searchClass={styles.searchClass}
+                      onBlur={handleChange}
+                      countryCodeEditable={false}
+                      searchNotFound={"No country found"}
+                      isValid={(value, country) => {
+                        if (value.match(/12345/)) {
+                          setError(true);
+                          return false;
+                        } else if (value.match(/1234/)) {
+                          setError(true);
+                          return false;
+                        } else {
+                          setError(false);
+                          return true;
+                        }
+                      }}
                     />
                   </div>
                 </form>
