@@ -40,7 +40,7 @@ function Plans() {
     if (id === 1) {
       mobileIndexAnimation.start("visible");
       await mobileIndexAnimation2.start({
-        x: "-100%",
+        x: lan.language === 1 ? "-100%" : "100%",
       });
     } else if (id === 0) {
       mobileIndexAnimation.start("hidden");
@@ -125,7 +125,8 @@ function Plans() {
                                 },
                                 visible: {
                                   position: "absolute",
-                                  right: "-20%",
+                                  right: lan.language === 1 ? "-20%" : "unset",
+                                  left: lan.language === 1 ? "unset" : "-15%",
                                 },
                               }}
                               animate={mobileIndexAnimation}
@@ -152,7 +153,8 @@ function Plans() {
                                 },
                                 hidden: {
                                   position: "absolute",
-                                  left: "-10%",
+                                  left: lan.language === 1 ? "-10%" : "unset",
+                                  right: lan.language === 1 ? "unset" : "-10%",
                                 },
                               }}
                               animate={mobileIndexAnimation}
