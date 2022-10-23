@@ -16,6 +16,8 @@ import Link from "next/link";
 import { useAppContext } from "../../context/AppContext";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Loader from "../Loader/Loader";
+import sendEmail from "../../utils/emailservice";
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
@@ -23,23 +25,31 @@ const Villplans = () => {
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[1]);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const handleUserInput = () => {
+  const handleUserInput = async () => {
+    setLoading(true);
     let data = {
       email,
       name,
       phone,
     };
+
+    let result = await sendEmail({ data, type: 0 });
+    if (result === "success") {
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
     dispatch({
       type: "updateuser",
       value: data,
     });
     setDataReceived(true);
-    //sent data to the backend
   };
   const handleClick = (id) => {
     setShowForm(true);
@@ -49,16 +59,6 @@ const Villplans = () => {
     setIndex(index);
     setShowForm(false);
     setVilla(lan.villaplansection.villas[index]);
-  };
-  const handleChange = (_, country) => {
-    const mobLength = country.format.split(".").length - 1;
-    if (phone.split("").length - 1 !== mobLength) {
-      setError(true);
-      setErrorMessage("Enter Valid Mobile Number");
-    } else {
-      setError(false);
-      setErrorMessage("r");
-    }
   };
   useEffect(() => {
     if (state.userdata?.name !== "") {
@@ -185,7 +185,7 @@ const Villplans = () => {
                   </p>
                 </div>
 
-                <div>
+                <div className={styles.resgisterinterestbtn}>
                   <motion.button
                     onClick={() => handleClick()}
                     whileHover={{
@@ -293,21 +293,8 @@ const Villplans = () => {
                             onChange={(val) => setPhone(val)}
                             enableSearch={true}
                             searchClass={styles.searchClass}
-                            onBlur={handleChange}
                             countryCodeEditable={false}
                             searchNotFound={"No country found"}
-                            isValid={(value, country) => {
-                              if (value.match(/12345/)) {
-                                setError(true);
-                                return false;
-                              } else if (value.match(/1234/)) {
-                                setError(true);
-                                return false;
-                              } else {
-                                setError(false);
-                                return true;
-                              }
-                            }}
                           />
                         </div>
                       </form>
@@ -318,7 +305,7 @@ const Villplans = () => {
                         whileHover={{
                           scale: 1.02,
                         }}>
-                        {lan.commontext.registerinterest}
+                        {loading ? <Loader /> : lan.commontext.registerinterest}
                       </motion.button>
                     </div>
                   </div>

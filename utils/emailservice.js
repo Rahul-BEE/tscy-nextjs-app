@@ -15,9 +15,11 @@ const sendEmail = async ({ data, type }) => {
     )
     .then(
       (result) => {
+        console.log("suceess");
         return "success";
       },
       (error) => {
+        console.log("error");
         return "error";
       }
     );

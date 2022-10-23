@@ -16,6 +16,8 @@ import Link from "next/link";
 import { useAppContext } from "../../../context/AppContext";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import sendEmail from "../../../utils/emailservice";
+import Loader from "../../Loader/Loader";
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
@@ -29,18 +31,26 @@ function VillaplansMobile() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [activeVilla, setActiveVilla] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
-  const handleUserInput = () => {
+  const handleUserInput = async () => {
     let data = {
       email,
       name,
       phone,
     };
+    setLoading(true);
+    //sent data to the backend
+    let result = await sendEmail({ data, type: 0 });
+    if (result === "success") {
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
     dispatch({
       type: "updateuser",
       value: data,
     });
-    //sent data to the backend
     setDataReceived(true);
   };
   const handleClick = (id) => {
@@ -73,16 +83,6 @@ function VillaplansMobile() {
       setDataReceived(false);
     }
   }, [state]);
-  const handleChange = (_, country) => {
-    const mobLength = country.format.split(".").length - 1;
-    if (phone.split("").length - 1 !== mobLength) {
-      setError(true);
-      setErrorMessage("Enter Valid Mobile Number");
-    } else {
-      setError(false);
-      setErrorMessage("r");
-    }
-  };
   return (
     <div className={styles.section_villaplan_mobile}>
       <Row className="headingRow">
@@ -314,21 +314,8 @@ function VillaplansMobile() {
                       onChange={(val) => setPhone(val)}
                       enableSearch={true}
                       searchClass={styles.searchClass}
-                      onBlur={handleChange}
                       countryCodeEditable={false}
                       searchNotFound={"No country found"}
-                      isValid={(value, country) => {
-                        if (value.match(/12345/)) {
-                          setError(true);
-                          return false;
-                        } else if (value.match(/1234/)) {
-                          setError(true);
-                          return false;
-                        } else {
-                          setError(false);
-                          return true;
-                        }
-                      }}
                     />
                   </div>
                 </form>
@@ -339,7 +326,7 @@ function VillaplansMobile() {
                   whileHover={{
                     scale: 1.02,
                   }}>
-                  {lan.commontext.registerinterest}
+                  {loading ? <Loader /> : lan.commontext.registerinterest}
                 </motion.button>
               </div>
             </div>
