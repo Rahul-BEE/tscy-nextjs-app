@@ -46,13 +46,16 @@ const Section1 = () => {
               <BsArrowDownCircle />
             </p>
           </div>
-          <div>
+          <div className={styles.section1villaimagecontainer}>
             <Image
               className={styles.bgimg}
               src={data.mainImg}
               width={476}
               height={200}
-              layout="responsive"
+              layout="fill"
+              quality={100}
+              priority
+              // objectFit="contain"
             />
           </div>
         </div>
