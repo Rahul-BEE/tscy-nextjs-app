@@ -73,7 +73,7 @@
 
 .villaplanindexrow {
   justify-content: center;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 2.5rem;
 
   &:lang(ar) {
     direction: rtl;
@@ -293,7 +293,10 @@
     font-size: 1rem;
     text-transform: uppercase;
     color: #777777;
-
+    width: 50%;
+    margin-inline: auto;
+    text-align: center;
+    justify-content: center !important;
   }
 
   .picontainerclass input {

@@ -986,6 +986,7 @@ const arabic = {
     details: "التفاصيل",
     description: "الوصف",
     gobacktomasterplan: "خريطة المشروع",
+    primelocationText: "Prime Location in Master Plan",
     villatypes: "أنواع الفيلات",
     seevillas: "اعرف المزيد",
     previousto: "السابق",

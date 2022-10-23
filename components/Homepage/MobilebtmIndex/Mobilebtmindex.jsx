@@ -102,11 +102,11 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
                 lan.language === 1
                   ? {
                       right: 0,
-                      left: -innerwidth,
+                      left: -innerwidth - 20,
                     }
                   : {
                       left: 0,
-                      right: innerwidth,
+                      right: innerwidth + 20,
                     }
               }
               key={`${selectedTab}_dragDiv`}>

@@ -114,22 +114,49 @@ const InteriorFeatures = () => {
     }
   };
   const carouselHandler2 = (id) => {
-    if (
-      id === "+" &&
-      scrolledWidth <
-        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
-    ) {
-      setScrolledWidth((prev) => prev + itemWidth);
-      starterAnimation.start({
-        x: -(scrolledWidth + itemWidth),
-      });
-    } else if (id === "-" && scrolledWidth > 5) {
-      setScrolledWidth((prev) => prev - itemWidth);
-      starterAnimation.start({
-        x: -scrolledWidth + itemWidth,
-      });
+    if (lan.language === 1) {
+      if (
+        id === "+" &&
+        scrolledWidth <
+          carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
+      ) {
+        setScrolledWidth((prev) => prev + itemWidth);
+        starterAnimation.start({
+          x: -(scrolledWidth + itemWidth),
+        });
+      } else if (id === "-" && scrolledWidth > 5) {
+        setScrolledWidth((prev) => prev - itemWidth);
+        starterAnimation.start({
+          x: -scrolledWidth + itemWidth,
+        });
+      } else {
+        return;
+      }
     } else {
-      return;
+      console.log(id);
+      console.log(
+        scrolledWidth,
+        carouselRef.current?.scrollWidth,
+        carouselRef.current?.clientWidth,
+        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
+      );
+      if (id === "+" && scrolledWidth < 0) {
+        setScrolledWidth((prev) => prev + itemWidth);
+        starterAnimation.start({
+          x: -(scrolledWidth + itemWidth),
+        });
+      } else if (
+        id === "-" &&
+        Math.abs(scrolledWidth) <
+          carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
+      ) {
+        setScrolledWidth((prev) => prev - itemWidth);
+        starterAnimation.start({
+          x: -scrolledWidth + itemWidth,
+        });
+      } else {
+        return;
+      }
     }
   };
 

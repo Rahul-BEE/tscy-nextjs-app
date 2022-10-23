@@ -39,7 +39,10 @@ const VillaCards = ({ filterId }) => {
                   ? "grayscale(0)"
                   : "grayscale(1)",
             }}>
-            <div>
+            <div
+              style={{
+                paddingBottom: "1rem",
+              }}>
               <h5>
                 {villa.bedrooms} {lan.commontext.bedroom}
               </h5>
@@ -59,6 +62,7 @@ const VillaCards = ({ filterId }) => {
               width={476}
               height={222}
               layout={"responsive"}
+              objectFit="cover"
               alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
             />
           </div>
@@ -79,7 +83,10 @@ const VillaCards = ({ filterId }) => {
                   ? "grayscale(0)"
                   : "grayscale(1)",
             }}>
-            <div>
+            <div
+              style={{
+                paddingBottom: "1rem",
+              }}>
               <h5>
                 {villa.bedrooms} {lan.commontext.bedroom}
               </h5>
@@ -99,6 +106,7 @@ const VillaCards = ({ filterId }) => {
               width={476}
               height={222}
               layout={"responsive"}
+              objectFit="cover"
               alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
             />
           </div>

@@ -79,7 +79,7 @@
     padding-top: 90px;
     padding-bottom: 40px;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .locationinnercontainer {
         position: relative;
@@ -176,6 +176,11 @@
                     h6 {
                         display: none;
                     }
+
+                    &:lang(ar) {
+                        transform: translatex(0);
+                    }
+
                 }
 
                 .infoBoxHeader {
@@ -335,6 +340,14 @@
             margin-top: 2rem;
 
 
+            @media(max-width:600px) {
+                padding-inline: 2.5rem 0;
+
+                &:lang(ar) {
+                    padding-inline: 0 2.5rem;
+                }
+            }
+
 
             .amenitiescarouselsInner {
                 color: #777777;
@@ -399,14 +412,14 @@
 
         @media (max-width:700px) {
             position: static;
-            margin-top: 180px;
+            margin-top: 170px;
             margin-inline: 0;
             padding-block: 40px;
         }
 
         @media (max-width:321px) {
             position: static;
-            margin-top: 200px;
+            margin-top: 250px;
         }
     }
 
@@ -514,6 +527,7 @@
 
                 @media (max-width:700px) {
                     font-size: 0.8125rem;
+                    padding-inline: 40px;
                 }
             }
 
@@ -624,6 +638,11 @@
                     height: 100%;
                     padding-left: 20vw;
                     margin-bottom: 40px;
+
+                    &:lang(ar) {
+                        padding-left: 0;
+                        padding-right: 20vw;
+                    }
                 }
             }
 

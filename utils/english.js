@@ -577,8 +577,8 @@ const english = {
         locationid: 1,
         locationImg: "/Images/villas/westdistrict.png",
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3],
+          first: [5, 6, 7, 4],
         },
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
