@@ -388,3 +388,9 @@ a {
     width: 5rem;
   }
 }
+
+.arrowright {
+  &:lang(ar) {
+    rotate: 180deg;
+  }
+}

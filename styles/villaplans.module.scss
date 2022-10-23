@@ -151,12 +151,8 @@
 
   .download_content {
     background-color: #FFFFFF;
-    // width: 161px;
-    // height: 28px;
     border-radius: 17.5px;
-    // padding:20px ;
     padding: 5px 10px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -168,7 +164,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    gap: 0.5rem;
     cursor: pointer;
 
   }
@@ -566,8 +562,16 @@
 
     .container {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20%;
+      gap: 5%;
+      width: fit-content;
 
+      &:lang(ar) {
+        padding-left: 0;
+        margin-right: 30%;
+      }
 
       .activeVilla {
         opacity: 1 !important;
@@ -579,8 +583,8 @@
 
 
       .content_container {
-        flex: 0 0 40%;
-        margin: 0 0 0 40px;
+        flex: 0 0 33%;
+        // margin: 0 0 0 40px;
         opacity: 0.5;
 
 

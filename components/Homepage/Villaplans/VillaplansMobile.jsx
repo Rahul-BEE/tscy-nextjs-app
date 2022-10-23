@@ -63,11 +63,11 @@ function VillaplansMobile() {
     setShowForm(false);
     if (index === 1) {
       test.start({
-        x: lan.language === 1 ? -100 : 100,
+        x: lan.language === 1 ? "-38%" : "38%",
       });
     } else if (index === 2) {
       test.start({
-        x: lan.language === 1 ? -200 : 200,
+        x: lan.language === 1 ? "-71%" : "71%",
       });
     } else {
       test.start({
@@ -167,6 +167,7 @@ function VillaplansMobile() {
             }}>
             {lan.commontext.seedetails}{" "}
             <BsArrowRightCircle
+              className={"arrowright"}
               style={{
                 marginLeft: "0.5rem",
               }}
