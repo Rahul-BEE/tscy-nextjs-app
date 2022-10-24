@@ -18,3 +18,4 @@ export { default as Joinus } from "./Aboutus/Joinus";
 export { default as Othercities } from "./Aboutus/Othercities";
 export { default as Registration } from "./Contact/Registration";
 export { default as Visitus } from "./Contact/Visitus";
+export { default as HeadComponent } from "./HeadComponent";
