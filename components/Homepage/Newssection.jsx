@@ -35,6 +35,13 @@ const Newssection=(props)=> {
       date: lan.newssection.post[2].date,
     },
     {
+      slug: lan.newssection.post[3].slug,
+      heading: lan.newssection.post[3].heading,
+      discription: lan.newssection.post[3].discription,
+      image: lan.newssection.post[3].image,
+      date: lan.newssection.post[3].date,
+    },
+    {
       slug: lan.newssection.post[0].slug,
       heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
