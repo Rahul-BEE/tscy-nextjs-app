@@ -1369,29 +1369,30 @@ const arabic = {
 
     statistics: [
       {
-        title: "Hectares",
-        data: "100",
+        title: "متر مربع",
+        data: "١",
+        sub: "مليون ",
       },
 
       {
-        title: "Solar powered",
-        data: "100",
-        sub: "%",
-      },
-      {
-        title: "Water and waste recycling",
-        data: "100",
-        sub: "%",
-      },
-      {
-        title: "Food self sufficiency",
-        data: "80",
-        sub: "%",
-      },
-      {
-        title: "Residents",
-        data: "10000",
+        title: "وحدات سكنية",
+        data: "1650",
         sub: "+",
+      },
+      {
+        title: "إعادة تدوير المياه",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "مسارات الجري",
+        data: "7.4",
+        sub: "Km",
+      },
+      {
+        title: "تخفيض البصمة الكربونية",
+        data: "75",
+        sub: "%",
       },
     ],
     story: {
