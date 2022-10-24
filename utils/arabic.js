@@ -569,31 +569,31 @@ const arabic = {
         ],
         nearby: [
           {
-            name: "Plaza",
+            name: "بلازا",
             description:
               "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
             img: "/Images/villas/amenities/plaza.png",
           },
           {
-            name: "AUTISM VILLAGE",
+            name: "مركز التوحد",
             description:
               "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
             img: "/Images/villas/amenities/autism.png",
           },
           {
-            name: "MOSQUE",
+            name: "المسجد",
             description:
               "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
             img: "/Images/villas/amenities/mosque.png",
           },
           {
-            name: "EQUISTRIAN CENTRE",
+            name: "مركز الفروسية",
             description:
               "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
             img: "/Images/villas/amenities/equistrian.png",
           },
           {
-            name: "BRIDGES",
+            name: "الجسور",
             description:
               "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
             img: "/Images/villas/amenities/bridge.png",
@@ -1017,45 +1017,48 @@ const arabic = {
     next: "التالي",
     previous: "السابق",
     tranksnote: "Thank you for your response",
-    adddetails: "Add your details",
-    prev: "Prev",
-    visitouroffice: "Visit our office",
-    stories: "Latest Stories",
+    adddetails: "أضف معلوماتك",
+    prev: "السابق",
+    visitouroffice: "زيارة مكتبنا",
+    stories: "أحدث القصص",
     featured: "featured news",
     featureddesc: "See what they",
     featureddesc2: "say in",
+    gfa: "إجمالي المساحة الأرضية",
+    bua: "مساحة البناء",
+    unit: "م",
   },
   propertyFeatures: [
     {
-      name: "Bedrooms",
+      name: "غرف نوم",
       icon: <Bedroomp />,
     },
     {
-      name: "Maid Room",
+      name: "غرفة خادمة",
       icon: <MaidRoomp />,
     },
     {
-      name: "Bathrooms",
+      name: "حمامات",
       icon: <Bathroomp />,
     },
     {
-      name: "Living Room",
+      name: "صالة",
       icon: <Livingp />,
     },
     {
-      name: "Kitchen",
+      name: "مطبخ",
       icon: <Kitchenp />,
     },
     {
-      name: "Laundry",
+      name: "غرفة الغسيل",
       icon: <Laundryp />,
     },
     {
-      name: "Parking",
+      name: "موقف سيارات",
       icon: <Parkingp />,
     },
     {
-      name: "Private Garden",
+      name: "حديقة خاصة",
       icon: <Gardenp />,
     },
   ],
