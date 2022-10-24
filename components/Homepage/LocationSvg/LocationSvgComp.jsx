@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "../../../styles/home.module.scss";
-
+import ProjectLocation from "../../../public/Svg/homelocation/ProjectDesk.svg";
 function LocationSvgComp({ svgchange, setSvgChange }) {
   return (
     <div
@@ -105,15 +105,7 @@ function LocationSvgComp({ svgchange, setSvgChange }) {
           </svg>
         </>
       ) : (
-        <Image
-          src="/Images/location/Project Location.png"
-          width={1728}
-          height={872}
-          layout="responsive"
-          alt="Sustainable city Yiti Location Map "
-          quality={100}
-          priority
-        />
+        <ProjectLocation />
       )}
     </div>
   );
