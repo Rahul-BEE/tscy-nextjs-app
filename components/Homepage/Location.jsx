@@ -75,15 +75,6 @@ const Location = () => {
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />
         </div>
         <div className={styles.locationImagecontainer2}>
-          <Image
-            className={styles.mobile_img}
-            src="/Images/location/GroupMobile.png"
-            alt={lan.locationsection.title2}
-            layout="fill"
-            priority={true}
-            quality={100}
-          />
-          {/* </div> */}
           <LocationSvgComp1 svgchange={svgchange} setSvgChange={setSvgChange} />
         </div>
       </motion.div>
