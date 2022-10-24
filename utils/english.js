@@ -1208,8 +1208,8 @@ const english = {
       {
         slug: "investment-value-news",
         title: [
-          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment ",
-          "value of nearly one billion US dollars",
+          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’  ",
+          "with an investment value of nearly one billion US dollars",
         ],
         date: "30th March, 2022",
         city: "Dubai",
