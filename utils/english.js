@@ -256,7 +256,7 @@ const english = {
       },
       {
         id: 6,
-        name: "Branded Residence",
+        name: "Luxury Apartments",
         icon: <Popbranded />,
         description: "....",
         details: {
