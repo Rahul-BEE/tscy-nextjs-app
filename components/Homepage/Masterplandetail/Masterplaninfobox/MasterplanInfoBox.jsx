@@ -211,44 +211,50 @@ const MasterplanInfoBox = ({
           </div>
           <div
             style={{
+              flex: 1,
               width: "100%",
               textAlign: "center",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
             }}>
-            <h4 className={styles.subheading}>
-              {lan.commontext.relatedimages}
-            </h4>
-            <div className={styles.infoboxslider}>
-              <motion.div
-                className={styles.infoboxsliderinner}
-                animate={scrollAnimation}
-                data-align={
-                  data[index].slideimg.length > 3 ? "start" : "center"
-                }>
-                {data[index].slideimg.map((item, index) => (
-                  <div className={styles.infoslide} key={index}>
-                    <Image
-                      src={item}
-                      width={120}
-                      height={120}
-                      layout="responsive"
-                      objectFit="cover"
-                      alt={"slideimages"}
-                      onClick={() => slideImageClickHandler({ id: index })}
-                    />
-                    <div
-                      className={styles.slideoverLay}
-                      style={{
-                        display: imgIndex === index ? "none" : "",
-                        pointerEvents: "none",
-                      }}
-                    />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-            <div className={styles.slidenav}>
-              <GoChevronLeft onClick={() => carouselHandler({ dir: -1 })} />
-              <GoChevronRight onClick={() => carouselHandler({ dir: 1 })} />
+            <div style={{ width: "100%", textAlign: "center" }}>
+              <h4 className={styles.subheading}>
+                {lan.commontext.relatedimages}
+              </h4>
+              <div className={styles.infoboxslider}>
+                <motion.div
+                  className={styles.infoboxsliderinner}
+                  animate={scrollAnimation}
+                  data-align={
+                    data[index].slideimg.length > 3 ? "start" : "center"
+                  }>
+                  {data[index].slideimg.map((item, index) => (
+                    <div className={styles.infoslide} key={index}>
+                      <Image
+                        src={item}
+                        width={120}
+                        height={120}
+                        layout="responsive"
+                        objectFit="cover"
+                        alt={"slideimages"}
+                        onClick={() => slideImageClickHandler({ id: index })}
+                      />
+                      <div
+                        className={styles.slideoverLay}
+                        style={{
+                          display: imgIndex === index ? "none" : "",
+                          pointerEvents: "none",
+                        }}
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+              <div className={styles.slidenav}>
+                <GoChevronLeft onClick={() => carouselHandler({ dir: -1 })} />
+                <GoChevronRight onClick={() => carouselHandler({ dir: 1 })} />
+              </div>
             </div>
           </div>
         </div>

@@ -18,6 +18,7 @@ import Masterplandetailbtm from "./Masterplandetail/Masterplandetailbtm";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 import { useAppContext } from "../../context/AppContext";
+import Masterplanmarkerarabic from "./Masterplanmarkerarabic";
 
 const Masterplan = () => {
   const lan = useLanguage();
@@ -320,19 +321,33 @@ const Masterplan = () => {
               {track === 19 && <Ebuggy />}
               {track === 16 && <JoggingTrack />}
               {track === 17 && <EquistrainTrack />}
-
-              <Masterplanmarker
-                getPath={getPath}
-                x={x}
-                y={y}
-                w={w}
-                h={h}
-                show={show}
-                setShow={setShow}
-                item={item}
-                track={track}
-                setShowDetail={setShowDetail}
-              />
+              {lan.language === 1 ? (
+                <Masterplanmarker
+                  getPath={getPath}
+                  x={x}
+                  y={y}
+                  w={w}
+                  h={h}
+                  show={show}
+                  setShow={setShow}
+                  item={item}
+                  track={track}
+                  setShowDetail={setShowDetail}
+                />
+              ) : (
+                <Masterplanmarkerarabic
+                  getPath={getPath}
+                  x={x}
+                  y={y}
+                  w={w}
+                  h={h}
+                  show={show}
+                  setShow={setShow}
+                  item={item}
+                  track={track}
+                  setShowDetail={setShowDetail}
+                />
+              )}
             </motion.div>
           </div>
           <Mobilebtmindex

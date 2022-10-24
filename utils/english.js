@@ -256,7 +256,7 @@ const english = {
       },
       {
         id: 6,
-        name: "Branded Residence",
+        name: "Luxury Apartments",
         icon: <Popbranded />,
         description: "....",
         details: {
@@ -1078,6 +1078,9 @@ const english = {
     featured: "featured news",
     featureddesc: "See what they",
     featureddesc2: "say in",
+    gfa: "Gross Floor Area",
+    bua: "Built Up Area",
+    unit: "m",
   },
   tracks: [
     {
@@ -1335,29 +1338,30 @@ const english = {
 
     statistics: [
       {
-        title: "Hectares",
-        data: "100",
+        title: "Square Meters",
+        data: "1",
+        sub: "M",
       },
 
       {
-        title: "Solar powered",
-        data: "100",
-        sub: "%",
-      },
-      {
-        title: "Water and waste recycling",
-        data: "100",
-        sub: "%",
-      },
-      {
-        title: "Food self sufficiency",
-        data: "80",
-        sub: "%",
-      },
-      {
-        title: "Residents",
-        data: "10000",
+        title: "Residential Units",
+        data: "1650",
         sub: "+",
+      },
+      {
+        title: "Water Recycling",
+        data: "100",
+        sub: "%",
+      },
+      {
+        title: "Jogging Tracks",
+        data: "7.4",
+        sub: "Km",
+      },
+      {
+        title: "Carbon Footprint Reduction",
+        data: "75",
+        sub: "%",
       },
     ],
     story: {

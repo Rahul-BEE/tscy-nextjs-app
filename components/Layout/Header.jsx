@@ -57,9 +57,11 @@ const Header = () => {
     }
     localStorage.setItem("language", JSON.stringify(lan));
     setLanguage(lan);
-    location.push(location.asPath, location.asPath, { locale: lan });
-    // window.location.reload(true);
 
+    location.push(location.asPath, location.asPath, { locale: lan });
+    location.events.on("routeChangeComplete", () => {
+      location.reload();
+    });
     setloading(!loading);
   };
   useEffect(() => {
