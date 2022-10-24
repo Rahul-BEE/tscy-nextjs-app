@@ -1,11 +1,14 @@
-import { Registration, Visitus } from "../../components";
+import { HeadComponent, Registration, Visitus } from "../../components";
 import styles from "../../styles/contact.module.scss";
 const Contact = () => {
   return (
-    <div className={styles.contact}>
-      <Registration />
-      <Visitus />
-    </div>
+    <>
+      <HeadComponent title={"TSC-Contact Us"} />
+      <div className={styles.contact}>
+        <Registration />
+        <Visitus />
+      </div>
+    </>
   );
 };
 

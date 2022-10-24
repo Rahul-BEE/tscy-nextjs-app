@@ -7,6 +7,7 @@ import {
   SustainableFeatures,
   Villaplans,
   Newssection,
+  HeadComponent,
 } from "../components";
 import styles from "../styles/home.module.scss";
 import { useEffect, useState } from "react";
@@ -25,16 +26,15 @@ export default function Home() {
   }, [location.pathname]);
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width user-scalable=1" />
-      </Head>
+      <HeadComponent title={"TSC-Homepage"} />
+
       <div className={styles.app__home}>
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />
         <Location />
         <Villaplans />
-        <Newssection pagename={'NewsHomePage'}/>
+        <Newssection pagename={"NewsHomePage"} />
         <Partners />
       </div>
     </>

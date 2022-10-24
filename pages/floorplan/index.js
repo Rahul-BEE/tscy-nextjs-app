@@ -7,18 +7,21 @@ import useLanguage from "../../utils/useLanguage";
 import { BsArrowDownCircle } from "react-icons/bs";
 import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
+import { HeadComponent } from "../../components";
 
 const Floorplan = () => {
   const lan = useLanguage();
   // const [text, setText] = useState("PERFECT FOR YOU.");
   const [filterId, setFilterId] = useState(0);
   return (
-    <div className={styles.app__floorplanmain}>
-      <div className={styles.floorplanHeading}>
-        <p>
-          {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
-        </p>
-        {/* <p>Let’s find a home</p>
+    <>
+      <HeadComponent title={"TSC-Floorplan"} />
+      <div className={styles.app__floorplanmain}>
+        <div className={styles.floorplanHeading}>
+          <p>
+            {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
+          </p>
+          {/* <p>Let’s find a home</p>
         <AnimatePresence>
           <p>
             that’s{" "}
@@ -57,23 +60,24 @@ const Floorplan = () => {
             </motion.span>
           </p>
         </AnimatePresence> */}
-      </div>
+        </div>
 
-      {/* <Filters
+        {/* <Filters
         filterId={filterId}
         setFilterId={setFilterId}
         // setText={setText}
       /> */}
-      <VillaCards filterId={filterId} />
-      <div className={styles.downloadcomparison}>
-        <p>
-          {lan.commontext.download} {lan.commontext.comparison}{" "}
-          <BsArrowDownCircle />
-        </p>
+        <VillaCards filterId={filterId} />
+        <div className={styles.downloadcomparison}>
+          <p>
+            {lan.commontext.download} {lan.commontext.comparison}{" "}
+            <BsArrowDownCircle />
+          </p>
+        </div>
+        <CardSection />
+        <LocationFYV />
       </div>
-      <CardSection />
-      <LocationFYV />
-    </div>
+    </>
   );
 };
 

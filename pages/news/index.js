@@ -1,10 +1,14 @@
+import { HeadComponent } from "../../components";
 import NewsPage from "../../components/News/NewsPage";
 
 const NewsList = () => {
   return (
-    <div>
-      <NewsPage />
-    </div>
+    <>
+      <HeadComponent title={"TSC-News"} />
+      <div>
+        <NewsPage />
+      </div>
+    </>
   );
 };
 
