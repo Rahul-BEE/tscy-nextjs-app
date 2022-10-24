@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
 import useLanguage from "../../../utils/useLanguage";
@@ -20,30 +21,40 @@ function NewsMobile({ data }) {
             </h2>
           </Col>
         </Row>
-      <Swiper
+        <Swiper
         slidesPerView={1}
-        centeredSlides={true}
-        spaceBetween={0}
+        centeredSlides={false}
+        spaceBetween={20}
         pagination={{
           clickable: true,
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+           // centeredSlides: true,
+          },
         }}
         className={styles.mySwiper}>
         {data.map((e, index) => (
           <SwiperSlide key={index}>
           <Link href={`news/${e.slug}`}  passHref>
-            <div className={styles.test_box}>
+            
+            <div className={styles.hero_tab_box}>
+                <h6 style={{height: "100px"}}>{e.heading} </h6>
+                <p>{e.date}</p>
               <Image
                 className={styles.test_box}
                 src={e.image}
-                width={476}
-                height={200}
+                width={450}
+                height={300}
                 layout="responsive"
               />
 
-              <div className={styles.bottom_text}>
-                <h3 style={{ color: "black" }}>{e.heading}</h3>
+             
+            <div className={styles.readmore}>
+              <p>Read More <FaChevronRight className={styles.icon} /></p>
               </div>
-              <p>Read here </p>
             </div>
             </Link>
           </SwiperSlide>
