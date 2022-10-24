@@ -14,7 +14,17 @@
     display: none;
   }
 }
-
+.topnewsspanheading
+{
+  text-transform: initial;
+    font-size: 1.9375rem;
+}
+.newsspanheading
+{
+  -webkit-text-fill-color: #777777;
+  text-transform: lowercase;
+    font-size: 1.9375rem;
+}
 .hero_text_center {
   text-align: center;
   text-transform: uppercase;
