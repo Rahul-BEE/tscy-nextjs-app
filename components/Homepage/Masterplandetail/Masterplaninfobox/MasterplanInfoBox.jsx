@@ -59,10 +59,10 @@ const MasterplanInfoBox = ({
         setDirection(1);
         setImgIndex((prev) => prev + 1);
         setSlideIndex((prev) => prev + 1);
-        if (data[index].slideimg.length > 3) {
-          setScrolledWidth((prev) => prev + 120);
+        if (data[index].slideimg.length > 3 && slideIndex > 1) {
+          setScrolledWidth((prev) => prev + 136);
           await scrollAnimation.start({
-            x: -(scrolledWIdth + 120),
+            x: -(scrolledWIdth + 136),
           });
         }
       } else if (dir === -1) {
@@ -72,10 +72,10 @@ const MasterplanInfoBox = ({
         setDirection(-1);
         setImgIndex((prev) => prev - 1);
         setSlideIndex((prev) => prev - 1);
-        if (data[index].slideimg.length > 3) {
-          setScrolledWidth((prev) => prev - 120);
+        if (data[index].slideimg.length > 3 && slideIndex > 2) {
+          setScrolledWidth((prev) => prev - 136);
           await scrollAnimation.start({
-            x: -scrolledWIdth + 120,
+            x: -scrolledWIdth + 136,
           });
         }
       }
@@ -87,10 +87,11 @@ const MasterplanInfoBox = ({
         setDirection(1);
         setImgIndex((prev) => prev + 1);
         setSlideIndex((prev) => prev + 1);
-        if (data[index].slideimg.length > 3) {
-          setScrolledWidth((prev) => prev - 120);
+        if (data[index].slideimg.length > 3 && slideIndex > 1) {
+          console.log(slideIndex);
+          setScrolledWidth((prev) => prev - 136);
           await scrollAnimation.start({
-            x: -scrolledWIdth + 120,
+            x: -scrolledWIdth + 136,
           });
         }
       } else if (dir === 1) {
@@ -100,10 +101,11 @@ const MasterplanInfoBox = ({
         setDirection(-1);
         setImgIndex((prev) => prev - 1);
         setSlideIndex((prev) => prev - 1);
-        if (data[index].slideimg.length > 3) {
-          setScrolledWidth((prev) => prev + 120);
+        if (data[index].slideimg.length > 3 && slideIndex > 2) {
+          console.log(slideIndex);
+          setScrolledWidth((prev) => prev + 136);
           await scrollAnimation.start({
-            x: -(scrolledWIdth + 120),
+            x: -(scrolledWIdth + 136),
           });
         }
       }
