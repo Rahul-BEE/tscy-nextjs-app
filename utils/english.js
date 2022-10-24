@@ -1235,6 +1235,33 @@ const english = {
           "The Sustainable City- Yiti positions itself as a working model for future cities that meets the highest sustainability standards. Upon completion in 2025, the city will go beyond enhancing the quality of life of its residents, taking an integrated and inclusive approach to urban life and amalgamating green, energy efficient designs with a people-centric philosophy. By addressing local social, environmental, and economic concerns, The Sustainable City acts as a catalyst for change that is intelligent, scalable, resilient, and replicable.",
         ],
       },
+      {
+        slug: "environment-clean-marinedebris",
+        title: [
+          "The Sustainable City - Yiti and The Environment Society of Oman Partner   ",
+          "to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
+        ],
+        date: "18th September, 2022",
+        city: "Oman",
+        country: "Muscat",
+        image: "/Images/news/news_img4.jpg",
+        type: "news",
+        heading:
+          "The beach cleanup took place, along Al Hail beach to mark World Cleanup Day.",
+        discription: [
+          "•	Attendance exceeded expectation as more than 125 members of the community rallied to clear over 1.5 tons of trash from Oman’s beaches  ",
+          "•	Protecting the environment and conserving Oman’s rich biodiversity are among the key objectives of The Sustainable City – Yiti, in line with Oman’s vision 2040. ",
+          "Muscat, Oman – To mark World Cleanup Day, The Sustainable City- Yiti, alongside Oman Tourism Development Company (OMRAN Group), Diamond Developers, and the Environment Society of Oman (ESO), organized a community cleanup campaign along Al Hail beach, resulting in more than 1.5 tons of marine litter being removed from the beaches. The cleanup saw an astonishing attendance from the Omani community, with more than 125 volunteers rallying to clear trash from one of Oman’s most popular beaches. As a result, millions of plastic and micro-plastic particles have been held from entering the marine ecosystem, helping to preserve the environment and wildlife bionetwork.",
+          "Eng Ammar Al Kharusi, Development Director, Yiti Tourism Development Company, said; Protecting the environment and preserving its natural resources and biodiversity are among the strategic priorities of the Sustainable City - Yiti. The 1 million square meters project is designed to preserve natural resources and provide residents with a sustainable lifestyle.",
+          "Al Kharusi praised the efforts of the Environment Society of Oman, saying: We hope that such campaigns can contribute to raising awareness about the importance of maintaining a clean environment, and properly reducing waste production and disposal, as well as instilling a culture of volunteerism among youth.",
+          "Suaad Al Harthi, ESO Director, said It has been a pleasure to collaborate with The Sustainable City - Yiti to bring this campaign to life. The response from the community was inspiring and serves as a reminder to us all of our shared responsibility for the conservation of our environment. On the occasion of World Cleanup Day however, we also remind the community that where there is no waste, there is no need for cleanups! There are many steps we can take to reduce the amount of waste we produce and to dispose of the waste we do create responsibly. Oman is blessed with one of the most stunning coastlines in the region and we hope that this beach cleanup inspires the community to continue maintaining its natural resources.",
+          "The campaign was organized in recognition of World Cleanup Day, an annual global social action program aimed at combatting the global waste problem, whilst also raising awareness about the dangers of waste to both human and environmental health. ",
+          "Additionally, protecting the environment and conserving Oman’s rich biodiversity are among the key objectives of The Sustainable City – Yiti, which aligns with Oman’s Vision 2040. The project, which is a partnership between OMRAN Group and Diamond Developers, will be the largest and most sustainable operational sustainable community in the region. It is designed to deliver measurable outcomes across all the three pillars of sustainability: social, environmental, and economic, bringing forward the UN emission reduction targets for 2050. Waste management will also be a key priority within the community, with sufficient in-built recycling and disposable systems designed to keep waste out of landfill and the environment. ",
+          "As part of their mission to help conserve Oman's natural heritage, ESO undertakes numerous beach and underwater clean ups each year. To date in 2022, ESO, with the support of over two hundred volunteers, has cleared more than 72 tons of marine debris from our beaches and coral reefs.  These events are not possible without the help of the community. To do your part, sign up to become an ESO member at www.eso.org.om. ",
+          "To learn more about The Sustainable City Yiti, visit www.thesustainablecity-yiti.com ",
+
+        ],
+      },
     ],
   },
   newspage: {
