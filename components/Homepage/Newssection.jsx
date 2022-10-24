@@ -8,10 +8,10 @@ import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
-function Newssection() {
+const Newssection=(props)=> {
   const lan = useLanguage();
   const controls = useAnimation();
-
+//console.log(props.pagename)
   const data = [
     {
       slug: lan.newssection.post[0].slug,
@@ -142,9 +142,18 @@ function Newssection() {
           <Row className="headingRow">
           <Col>
             {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+            {props.pagename == 'NewsMainPage'? 
+           
+            <span className={styles.topnewsspanheading}>
+               {lan.commontext.featureddesc} 
+              <h2>
+              <span className={styles.newsspanheading}>{lan.commontext.featureddesc2}</span> <span className="sectionmainHeading"> {lan.commontext.featured} </span>
+            </h2>
+              </span>
+              :
             <h2 className="sectionmainHeading">
               {lan.commontext.press}
-            </h2>
+            </h2>}
           </Col>
         </Row>
         
@@ -198,7 +207,8 @@ function Newssection() {
           {/* small boxes */}
 
           <div className={styles.hero_secondry_box}>
-            <div className={styles.news_nav}>
+          {props.pagename == 'NewsMainPage'?
+           null: <div className={styles.news_nav}>
               <motion.p
                 onClick={(e) => handelChnagePrev(e)}
                 whileTap={{ scale: 0.9 }}
@@ -210,14 +220,16 @@ function Newssection() {
                 onClick={(e) => handelChange(e)}
                 whileTap={{ scale: 0.9 }}
               >
+                
                 {lan.commontext.next} <FaChevronRight className={styles.icon} />
               </motion.p>
-            </div>
-
-            {data
-              .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
+            </div> }
+            {props.pagename == 'NewsDetailPage'? 
+            <span>
+              {data.slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
               .map((item, index) => (
-                <Link href={`news/${item.slug}`} key={index} passHref>
+       
+                <Link href={`${item.slug}`} key={index} passHref>
                   <a>
                     <div className={styles.secondry_box}>
                       <Image
@@ -233,6 +245,30 @@ function Newssection() {
                   </a>
                 </Link>
               ))}
+            </span>:
+            <span>
+            {data.slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
+            .map((item, index) => (
+     
+              <Link href={`news/${item.slug}`} key={index} passHref>
+                <a>
+                  <div className={styles.secondry_box}>
+                    <Image
+                      className={styles.test_box}
+                      src={item.image}
+                      width={476}
+                      height={200}
+                      layout="responsive"
+                    />
+                    <h3>{item.heading}</h3>
+                    <div className={styles.news_date}>{item.date}</div>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </span>
+            
+            }
           </div>
         </div>
 
