@@ -514,6 +514,7 @@ const english = {
         gross: "Gross Floor Area 238 m2",
         build: "Built Up Area 256 m2",
         mainImg: "/Images/villas/3bcv/3bcv.png",
+        blurImg: "/Images/villas/3bcv/3bcvblur.png",
         floorplan: [
           "/Images/villas/3bcv/floorplan/groundfloor.png",
           "/Images/villas/3bcv/floorplan/firstfloor.png",
@@ -631,6 +632,7 @@ const english = {
         build: "Built Up Area 285 m2",
         link: "/floorplans/2",
         mainImg: "/Images/villas/4bcv/4bcv.png",
+        blurImg: "/Images/villas/4bcv/4bcvblur.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],
           first: [5, 6, 7],
@@ -747,6 +749,7 @@ const english = {
         build: "Built Up Area 459 m2",
         link: "/floorplans/3",
         mainImg: "/Images/villas/4bgv/4bgv.png",
+        blurImg: "/Images/villas/4bgv/4bgvblur.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],
           first: [5, 6, 7],

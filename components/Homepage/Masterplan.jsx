@@ -310,7 +310,7 @@ const Masterplan = () => {
                 src="/Images/masterplanimage.png"
                 layout="fill"
                 className={styles.masterplanmap}
-                blurDataURL="/Images/masterplanimage.png"
+                blurDataURL="/Images/masterplanimageblur.png"
                 placeholder="blur"
                 priority
                 unoptimized={true}

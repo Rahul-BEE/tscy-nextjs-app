@@ -55,6 +55,8 @@ const Section1 = () => {
               layout="fill"
               quality={100}
               priority
+              blurDataURL={data.blurImg}
+              placeholder="blur"
               // objectFit="contain"
             />
           </div>

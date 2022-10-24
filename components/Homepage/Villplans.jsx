@@ -159,6 +159,8 @@ const Villplans = () => {
             width={1531}
             height={439}
             layout="responsive"
+            blurDataURL={currentvilla.blurImg}
+            placeholder="blur"
           />
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>
