@@ -2,8 +2,6 @@
 @import "./variable.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
-html {}
-
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -386,5 +384,11 @@ a {
   .marquee2:before,
   .marquee2:after {
     width: 5rem;
+  }
+}
+
+.arrowright {
+  &:lang(ar) {
+    rotate: 180deg;
   }
 }

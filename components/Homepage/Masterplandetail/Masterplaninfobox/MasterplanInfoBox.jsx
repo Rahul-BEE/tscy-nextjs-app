@@ -51,31 +51,63 @@ const MasterplanInfoBox = ({
     setSlideIndex(id);
   };
   const carouselHandler = async ({ dir }) => {
-    if (dir === 1) {
-      if (slideIndex > data[index].slideimg.length - 2) {
-        return;
+    if (lan.language === 1) {
+      if (dir === 1) {
+        if (slideIndex > data[index].slideimg.length - 2) {
+          return;
+        }
+        setDirection(1);
+        setImgIndex((prev) => prev + 1);
+        setSlideIndex((prev) => prev + 1);
+        if (data[index].slideimg.length > 3 && slideIndex > 1) {
+          setScrolledWidth((prev) => prev + 136);
+          await scrollAnimation.start({
+            x: -(scrolledWIdth + 136),
+          });
+        }
+      } else if (dir === -1) {
+        if (slideIndex < 1) {
+          return;
+        }
+        setDirection(-1);
+        setImgIndex((prev) => prev - 1);
+        setSlideIndex((prev) => prev - 1);
+        if (data[index].slideimg.length > 3 && slideIndex > 2) {
+          setScrolledWidth((prev) => prev - 136);
+          await scrollAnimation.start({
+            x: -scrolledWIdth + 136,
+          });
+        }
       }
-      setDirection(1);
-      setImgIndex((prev) => prev + 1);
-      setSlideIndex((prev) => prev + 1);
-      if (data[index].slideimg.length > 3) {
-        setScrolledWidth((prev) => prev + 120);
-        await scrollAnimation.start({
-          x: -(scrolledWIdth + 120),
-        });
-      }
-    } else if (dir === -1) {
-      if (slideIndex < 1) {
-        return;
-      }
-      setDirection(-1);
-      setImgIndex((prev) => prev - 1);
-      setSlideIndex((prev) => prev - 1);
-      if (data[index].slideimg.length > 3) {
-        setScrolledWidth((prev) => prev - 120);
-        await scrollAnimation.start({
-          x: -scrolledWIdth + 120,
-        });
+    } else {
+      if (dir === -1) {
+        if (slideIndex > data[index].slideimg.length - 2) {
+          return;
+        }
+        setDirection(1);
+        setImgIndex((prev) => prev + 1);
+        setSlideIndex((prev) => prev + 1);
+        if (data[index].slideimg.length > 3 && slideIndex > 1) {
+          console.log(slideIndex);
+          setScrolledWidth((prev) => prev - 136);
+          await scrollAnimation.start({
+            x: -scrolledWIdth + 136,
+          });
+        }
+      } else if (dir === 1) {
+        if (slideIndex < 1) {
+          return;
+        }
+        setDirection(-1);
+        setImgIndex((prev) => prev - 1);
+        setSlideIndex((prev) => prev - 1);
+        if (data[index].slideimg.length > 3 && slideIndex > 2) {
+          console.log(slideIndex);
+          setScrolledWidth((prev) => prev + 136);
+          await scrollAnimation.start({
+            x: -(scrolledWIdth + 136),
+          });
+        }
       }
     }
   };

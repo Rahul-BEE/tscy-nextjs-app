@@ -340,23 +340,15 @@
             margin-top: 2rem;
 
 
-            @media(max-width:600px) {
-                padding-inline: 2.5rem 0;
-
-                &:lang(ar) {
-                    padding-inline: 0 2.5rem;
-                }
-            }
-
-
             .amenitiescarouselsInner {
                 color: #777777;
 
-                gap: 40px;
+                gap: 2.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
+                padding-inline: 2.5rem;
 
                 .carouselItem {
                     min-width: 280px;
@@ -395,12 +387,14 @@
                     }
                 }
 
-                @media (max-width:1224px) {
-                    gap: 1.8rem;
-                }
 
                 @media (max-width:700px) {
+                    gap: 2.5rem;
+                }
+
+                @media (max-width:321px) {
                     gap: 2rem;
+                    padding-inline: 1rem;
                 }
             }
         }
@@ -414,7 +408,7 @@
             position: static;
             margin-top: 170px;
             margin-inline: 0;
-            padding-block: 40px;
+            padding: 40px 0;
         }
 
         @media (max-width:321px) {
