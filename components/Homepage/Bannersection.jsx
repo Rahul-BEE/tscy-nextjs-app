@@ -37,7 +37,7 @@ const Bannersection = ({ banner }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
-            quality={75}
+            quality={100}
             alt="The sustainable city image"
             as="image"
             priority={true}
@@ -54,7 +54,7 @@ const Bannersection = ({ banner }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
-            quality={75}
+            quality={100}
             alt="The sustainable city image"
             as="image"
             priority={true}
@@ -71,7 +71,7 @@ const Bannersection = ({ banner }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
-            quality={75}
+            quality={100}
             alt="The sustainable city image"
             as="image"
           />
@@ -87,7 +87,7 @@ const Bannersection = ({ banner }) => {
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
-            quality={75}
+            quality={100}
             alt="The sustainable city image"
             as="image"
           />
