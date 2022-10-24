@@ -348,6 +348,9 @@
     box-shadow: none !important;
     background: transparent !important;
 
+    &:lang(ar) {
+      padding-right: 10px !important;
+    }
 
     // div {
     //     opacity: 0;
@@ -356,6 +359,10 @@
 
   .gobackformbtn {
     position: relative;
+
+    &:lang(ar) {
+      rotate: 180deg;
+    }
 
     svg {
       padding-block: 1px 2px;
@@ -436,9 +443,17 @@
         }
       }
 
+      &:lang(ar) {
+        padding-left: 0;
+        padding-right: 1rem;
+        border-right: 2px solid #058DA6;
+        border-left: 0;
+      }
+
       @media (max-width:1224px) {
         border: none;
       }
+
     }
 
     ::placeholder {
