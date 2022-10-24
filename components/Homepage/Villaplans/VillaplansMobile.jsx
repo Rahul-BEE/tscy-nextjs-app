@@ -192,13 +192,22 @@ function VillaplansMobile() {
 
           <div className={styles.items}>
             <p>
-              <Bedroom /> <span>{lan.commontext.bedroom}</span>
+              <Bedroom />{" "}
+              <span>
+                {currentvilla.bedrooms} {lan.commontext.bedroom}
+              </span>
             </p>
             <p>
-              <Bathroom /> <span>{lan.commontext.bathroom}</span>
+              <Bathroom />{" "}
+              <span>
+                {currentvilla.bathrooms} {lan.commontext.bathroom}
+              </span>
             </p>
             <p>
-              <Maidroom /> <span>{lan.commontext.maidroom}</span>
+              <Maidroom />{" "}
+              <span>
+                {currentvilla.maidroom} {lan.commontext.maidroom}
+              </span>
             </p>
             <p>
               <Garden /> <span>{lan.commontext.privategarden}</span>
