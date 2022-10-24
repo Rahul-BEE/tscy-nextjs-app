@@ -33,7 +33,7 @@ const Bannersection = ({ banner }) => {
         className={styles.app__bannerswiper}>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
-            src="/Images/map-pic.jpg"
+            src="/Images/map-pic.png"
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
@@ -50,7 +50,7 @@ const Bannersection = ({ banner }) => {
         </SwiperSlide>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
-            src="/Images/banner2.jpg"
+            src="/Images/banner2.png"
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
@@ -67,14 +67,13 @@ const Bannersection = ({ banner }) => {
         </SwiperSlide>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
-            src="/Images/banner3.jpg"
+            src="/Images/banner3.png"
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>
@@ -84,14 +83,13 @@ const Bannersection = ({ banner }) => {
         </SwiperSlide>
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
-            src="/Images/banner4.jpg"
+            src="/Images/banner4.png"
             layout="fill"
             objectFit="cover"
             objectPosition="50% 50%"
             quality={75}
             alt="The sustainable city image"
             as="image"
-            priority={true}
           />
           <div className={styles.app__slider_overlay}></div>
           <div className={styles.app__bannerslidecontent}>

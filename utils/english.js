@@ -1247,7 +1247,7 @@ const english = {
         date: "18th September, 2022",
         city: "Oman",
         country: "Muscat",
-        image: "/Images/news/news_img4.jpg",
+        image: "/Images/news/news_img4.png",
         type: "news",
         heading:
           "The beach cleanup took place, along Al Hail beach to mark World Cleanup Day.",
@@ -1262,7 +1262,6 @@ const english = {
           "Additionally, protecting the environment and conserving Oman’s rich biodiversity are among the key objectives of The Sustainable City – Yiti, which aligns with Oman’s Vision 2040. The project, which is a partnership between OMRAN Group and Diamond Developers, will be the largest and most sustainable operational sustainable community in the region. It is designed to deliver measurable outcomes across all the three pillars of sustainability: social, environmental, and economic, bringing forward the UN emission reduction targets for 2050. Waste management will also be a key priority within the community, with sufficient in-built recycling and disposable systems designed to keep waste out of landfill and the environment. ",
           "As part of their mission to help conserve Oman's natural heritage, ESO undertakes numerous beach and underwater clean ups each year. To date in 2022, ESO, with the support of over two hundred volunteers, has cleared more than 72 tons of marine debris from our beaches and coral reefs.  These events are not possible without the help of the community. To do your part, sign up to become an ESO member at www.eso.org.om. ",
           "To learn more about The Sustainable City Yiti, visit www.thesustainablecity-yiti.com ",
-
         ],
       },
     ],
