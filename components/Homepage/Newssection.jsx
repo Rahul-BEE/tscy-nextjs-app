@@ -202,6 +202,7 @@ const Newssection=(props)=> {
                           width={476}
                           height={200}
                           layout="responsive"
+                          alt="Sustainable City Yiti Villa"
                         />
                       </motion.div>
                       <p>{item.discription}</p>
@@ -245,6 +246,7 @@ const Newssection=(props)=> {
                         width={476}
                         height={200}
                         layout="responsive"
+                        alt="Sustainable City Yiti Villa"
                       />
                       <h3>{item.heading}</h3>
                       <div className={styles.news_date}>{item.date}</div>
@@ -266,6 +268,7 @@ const Newssection=(props)=> {
                       width={476}
                       height={200}
                       layout="responsive"
+                      alt="Sustainable City Yiti Villa"
                     />
                     <h3>{item.heading}</h3>
                     <div className={styles.news_date}>{item.date}</div>
@@ -278,13 +281,12 @@ const Newssection=(props)=> {
             }
           </div>
         </div>
-
         {/* tablet view */}
-        <NewsCarousel data={data} />
+        <NewsCarousel data={data} props={props} />
       </div>
 
       {/* mobile */}
-      <NewsMobile data={data} />
+      <NewsMobile data={data} props={props}/>
     </div>
   );
 }

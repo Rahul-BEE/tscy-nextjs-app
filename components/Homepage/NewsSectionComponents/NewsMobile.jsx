@@ -8,7 +8,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
 import useLanguage from "../../../utils/useLanguage";
-function NewsMobile({ data }) {
+function NewsMobile({ data,props }) {
   //hh  
   const lan = useLanguage();
   return (
@@ -36,9 +36,11 @@ function NewsMobile({ data }) {
           },
         }}
         className={styles.mySwiper}>
-        {data.map((e, index) => (
+            {props.pagename == 'NewsDetailPage'? 
+        <span>
+          {data.map((e, index) => (
           <SwiperSlide key={index}>
-          <Link href={`news/${e.slug}`}  passHref>
+          <Link href={`${e.slug}`}  passHref>
             
             <div className={styles.hero_tab_box}>
                 <h6 style={{height: "100px"}}>{e.heading} </h6>
@@ -49,6 +51,7 @@ function NewsMobile({ data }) {
                 width={450}
                 height={300}
                 layout="responsive"
+                alt="Sustainable City Yiti Villa"
               />
 
              
@@ -59,6 +62,35 @@ function NewsMobile({ data }) {
             </Link>
           </SwiperSlide>
         ))}
+        </span>:
+        <span>
+        {data.map((e, index) => (
+        <SwiperSlide key={index}>
+        <Link href={`news/${e.slug}`}  passHref>
+          
+          <div className={styles.hero_tab_box}>
+              <h6 style={{height: "100px"}}>{e.heading} </h6>
+              <p>{e.date}</p>
+            <Image
+              className={styles.test_box}
+              src={e.image}
+              width={450}
+              height={300}
+              layout="responsive"
+            />
+
+           
+          <div className={styles.readmore}>
+            <p>Read More <FaChevronRight className={styles.icon} /></p>
+            </div>
+          </div>
+          </Link>
+        </SwiperSlide>
+      ))}
+      </span>
+        
+        
+        }
       </Swiper>
     </div>
   );

@@ -16,10 +16,10 @@ const Section1 = () => {
   return (
     <div className={styles.app__villasection1planmain}>
       <div className={styles.poly1}>
-        <Image src="/Images/villapoly2.png" width={300} height={300} />
+        <Image src="/Images/villapoly2.png" width={300} height={300} alt="Sustainable City Yiti Villa" />
       </div>
       <div className={styles.poly2}>
-        <Image src="/Images/villapoly1.png" width={200} height={250} />
+        <Image src="/Images/villapoly1.png" width={200} height={250} alt="Sustainable City Yiti Villa"/>
       </div>
       {data && (
         <div>
@@ -57,6 +57,7 @@ const Section1 = () => {
               priority
               blurDataURL={data.blurImg}
               placeholder="blur"
+              alt="Sustainable City Yiti Villa"
               // objectFit="contain"
             />
           </div>
