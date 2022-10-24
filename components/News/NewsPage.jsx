@@ -10,7 +10,7 @@ function NewsPage() {
   const ar = lan.newssection.post
   return (
     <div className={styles.news_main_page}>
-      <Newssection />
+      <Newssection pagename={'NewsMainPage'}/>
 
       <div className={styles.hero_container}>
         <div className={styles.second_heading}>

@@ -1078,6 +1078,9 @@ const english = {
     featured: "featured news",
     featureddesc: "See what they",
     featureddesc2: "say in",
+    gfa: "Gross Floor Area",
+    bua: "Built Up Area",
+    unit: "m",
   },
   tracks: [
     {

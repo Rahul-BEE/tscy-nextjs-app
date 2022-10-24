@@ -134,7 +134,7 @@ const News = () => {
    </div>
   
     </div>
-    <Newssection/>
+    <Newssection pagename={'NewsDetailPage'}/>
     </div>
   )
 };
