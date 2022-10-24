@@ -510,6 +510,7 @@ const arabic = {
         build: "مساحة البناء 285 متر مربع",
         link: "/floorplan/1",
         mainImg: "/Images/villas/3bcv/3bcv.png",
+        blurImg: "/Images/villas/3bcv/3bcvblur.png",
         floorplan: [
           "/Images/villas/3bcv/floorplan/groundfloor.png",
           "/Images/villas/3bcv/floorplan/firstfloor.png",
@@ -624,6 +625,7 @@ const arabic = {
         link: "/floorplans/2",
         slug: "courtyard-villa-4bedroom",
         mainImg: "/Images/villas/4bcv/4bcv.png",
+        blurImg: "/Images/villas/4bcv/4bcvblur.png",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
@@ -738,6 +740,7 @@ const arabic = {
         build: "مساحة البناء 459 متراً مربعاً",
         link: "/floorplans/3",
         mainImg: "/Images/villas/4bgv/4bgv.png",
+        blurImg: "/Images/villas/4bgv/4bgvblur.png",
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4],
           first: [5, 6, 7],
