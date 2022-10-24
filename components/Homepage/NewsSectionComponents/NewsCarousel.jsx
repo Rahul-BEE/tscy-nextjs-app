@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 function NewsCarousel({ data }) {
   return (
     <div className={`${styles.hero_container} ${styles.hero_tablet}`}>
@@ -18,9 +18,9 @@ function NewsCarousel({ data }) {
         }}
         breakpoints={{
           768: {
-            slidesPerView: 1.3,
-            spaceBetween: 70,
-            centeredSlides: true,
+            slidesPerView: 1.2,
+            //spaceBetween: 70,
+           // centeredSlides: true,
           },
         }}
         className={styles.mySwiper}>
@@ -30,6 +30,7 @@ function NewsCarousel({ data }) {
              <Link href={`news/${e.slug}`}  passHref>
             <div className={styles.hero_tab_box}>
               <h3>{e.heading}</h3>
+              <span style={{fontWeight: "400"}}>{e.date}</span>
               <Image
                 className={styles.test_box}
                 src={e.image}
@@ -37,6 +38,9 @@ function NewsCarousel({ data }) {
                 height={200}
                 layout="responsive"
             />
+              <div className={styles.readmore_tab}>
+              <p>Read More <FaChevronRight className={styles.icon} /></p>
+              </div>
               <p>{e.discription}</p>
             </div>
             </Link>
