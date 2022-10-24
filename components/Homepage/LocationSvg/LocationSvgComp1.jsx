@@ -5,7 +5,11 @@ import styles from "../../../styles/home.module.scss";
 import ProjectLocation from "../../../public/Svg/homelocation/ProjectMob.svg";
 function LocationSvgComp1({ svgchange, setSvgChange }) {
   return (
-    <div className={styles.svg_location_comp}>
+    <div
+      className={styles.svg_location_comp}
+      style={{
+        position: "relative",
+      }}>
       {svgchange === true ? (
         <>
           <Image
