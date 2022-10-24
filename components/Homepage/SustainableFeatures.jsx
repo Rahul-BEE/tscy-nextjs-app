@@ -78,14 +78,14 @@ const SustainableFeatures = () => {
     }
   }, [featureSelected, lan]);
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    if (!inView) {
-      controls.start("hidden");
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible");
+  //   }
+  //   if (!inView) {
+  //     controls.start("hidden");
+  //   }
+  // }, [inView]);
 
   const changeShowData = (value) => {
     if (value === 1) {
@@ -262,66 +262,67 @@ const SustainableFeatures = () => {
       </Row>
       {showData && (
         <Row className={featurestyles.rowtablet}>
-          <Col md={3} className={featurestyles.sustainImgCol}>
-            <motion.div
-              animate={controls}
-              initial="hidden"
-              variants={variant1}
-              style={{ height: "100%", width: "100%" }}>
-              <Image
-                src={showData?.leftimg}
-                width={357}
-                height={357}
-                priority
-                quality={100}
-                className={featurestyles.susimage1}
-                alt="Sustainale feature image"
-              />
-            </motion.div>
-          </Col>
           <Col
             className={featurestyles.sustainablefeaturecontent}
-            md={6}
-            sm={6}
+            md={12}
+            sm={12}
             lg={6}>
             <Container className={`${featurestyles.sustainablefeatures}`} fluid>
               <SustainableIcons />
               {showData && <SustainableContents />}
             </Container>
           </Col>
-          <Col md={3} className={featurestyles.sustainImgCol1}>
+          <div className={featurestyles.imgcontainer}>
             <motion.div
-              animate={controls}
+              className={featurestyles.centersusImg}
+              // animate={controls}
               initial="hidden"
-              variants={variant2}
-              className={featurestyles.animateright}
-              style={{ height: "100%", width: "100%" }}>
+              // variants={variant1}
+            >
+              <Image
+                src={showData?.leftimg}
+                width={466}
+                height={453}
+                priority
+                quality={100}
+                layout="responsive"
+                className={featurestyles.susimage1}
+                alt="Sustainale feature image"
+              />
+            </motion.div>
+            <motion.div
+              // animate={controls}
+              initial="hidden"
+              // variants={variant2}
+              className={featurestyles.centersusImg1}>
               <Image
                 src={showData?.rightimg}
-                width={327}
-                height={357}
-                style={{ float: "right" }}
+                width={403}
+                height={430}
                 className={featurestyles.susimage2}
                 priority
+                layout="responsive"
                 quality={100}
                 alt="Sustainbale feature Image"
               />
             </motion.div>
-          </Col>
-
-          <Col md={12} className={featurestyles.sustainImgCol2}>
-            <motion.div animate={controls} initial="hidden" variants={variant2}>
+            <motion.div
+              // animate={controls}
+              initial="hidden"
+              // variants={variant2}
+              className={featurestyles.mobilesustainImg}>
               <Image
                 src={showData?.mobimg}
-                width={470}
-                height={400}
+                width={495}
+                height={310}
                 priority
                 quality={100}
-                className={featurestyles.susimage2}
+                layout="responsive"
+                className={featurestyles.susimagemob}
                 alt="Sustainbale feature Image"
               />
             </motion.div>
-          </Col>
+          </div>
         </Row>
       )}
     </div>

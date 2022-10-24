@@ -21,9 +21,7 @@
   }
 
   .featuresoverLay {
-    @media (max-width: 620px) {
-      display: none;
-    }
+
 
     top: 0;
     left: 0;
@@ -32,10 +30,14 @@
     height: 100%;
     pointer-events: none;
     background: linear-gradient(180deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0) 45.49%);
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 45.49%);
     transform: matrix(1, 0, 0, -1, 0, 0);
     z-index: 2;
+
+    @media (max-width: 1224px) {
+      display: none;
+    }
   }
 }
 
@@ -43,7 +45,7 @@
   height: 32rem;
   overflow: hidden;
 
-  @media (max-width: 620px) {
+  @media (max-width: 742px) {
     display: none;
     overflow: visible;
   }
@@ -65,7 +67,7 @@
   max-width: 70%;
   pointer-events: none;
 
-  @media (max-width: 620px) {
+  @media (max-width: 742px) {
     margin: 1rem auto;
     max-width: 100%;
     font-size: 14px;
@@ -79,7 +81,7 @@
   overflow: hidden;
   margin-top: 1rem;
 
-  @media (max-width: 620px) {
+  @media (max-width: 742px) {
     overflow: visible;
     display: block;
   }
@@ -101,85 +103,149 @@
 }
 
 .rowtablet {
-  @media (max-width: 1200px) {
-    position: relative;
-
-
-  }
-}
-
-.sustainImgCol {
-  @media (max-width: 1200px) {
-    position: absolute;
-    top: 45%;
-    width: 30%;
-
-  }
-
-  @media (max-width: 620px) {
-    display: none;
-  }
-
-  display: flex;
-  align-items: center;
+  height: 100%;
+  padding-block: 3rem;
+  // align-items: center;
   justify-content: center;
+  position: relative;
 
-  .susimage1 {
-    left: -50% !important;
-  }
 
-  .susimage2 {
-    right: -40% !important;
-  }
-}
 
-.sustainImgCol1 {
-  @media (max-width: 1200px) {
+  .imgcontainer {
     position: absolute;
-    top: 45%;
-    width: 30%;
-    right: 0%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
 
+    .centersusImg,
+    .centersusImg1 {
+      width: 25%;
+      height: 50%;
+      position: absolute;
+      left: -70px;
+      max-width: 466px;
+      max-height: 453px;
+      min-width: 300px;
+      min-height: 291px;
+
+      @media (max-width:742px) {
+        display: none;
+      }
+    }
+
+    .centersusImg1 {
+      right: -70px;
+      left: unset;
+    }
+
+    .mobilesustainImg {
+      display: none;
+      height: 100%;
+      width: 100%;
+
+      @media (max-width:742px) {
+        display: block;
+      }
+    }
+
+
+
+    @media (max-width:1224px) {
+      align-items: flex-end;
+    }
+
+    @media (max-width:742px) {
+      position: relative;
+      justify-content: center;
+    }
   }
 
-  @media (max-width: 620px) {
-    display: none;
+  @media (max-width: 1200px) {
+    padding-block: 1rem;
   }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .susimage1 {
-    left: -50% !important;
-  }
-
-  .susimage2 {
-    right: -40% !important;
+  @media (max-width: 742px) {
+    padding-block: 0rem;
   }
 }
 
-.sustainImgCol2 {
-  display: none;
 
-  @media (max-width: 620px) {
-    display: block;
-    margin-top: 20px;
-    padding: 0px;
+.susimage1,
+.susimage2 {
+  &:lang(ar) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
 }
 
-.animateright {
-  span {
-    float: right;
-  }
-}
+// .sustainImgCol {
+//   @media (max-width: 1200px) {
+//     position: absolute;
+//     top: 45%;
+//     width: 30%;
+
+//   }
+
+//   @media (max-width: 620px) {
+//     display: none;
+//   }
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .susimage1 {
+//     left: -50% !important;
+//   }
+
+//   .susimage2 {
+//     right: -40% !important;
+//   }
+// }
+
+// .sustainImgCol1 {
+//   @media (max-width: 1200px) {
+//     position: absolute;
+//     top: 45%;
+//     width: 30%;
+//     right: 0%;
+
+//   }
+
+//   @media (max-width: 620px) {
+//     display: none;
+//   }
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .susimage1 {
+//     left: -50% !important;
+//   }
+
+//   .susimage2 {
+//     right: -40% !important;
+//   }
+// }
+
+// .sustainImgCol2 {
+//   display: none;
+
+//   @media (max-width: 620px) {
+//     display: block;
+//     margin-top: 20px;
+//     padding: 0px;
+//   }
+// }
+
+// .centersusimg {
+
+// }
 
 .sustainablefeaturecontent {
-  @media (max-width: 1200px) {
-    width: 100% !important;
-
-  }
 
   .sustainablefeatures {
     width: 100%;
@@ -194,6 +260,10 @@
       .rotate_icon {
         transform: rotate(180deg);
       }
+    }
+
+    @media(max-width:742px) {
+      padding-bottom: 2rem;
     }
   }
 }
