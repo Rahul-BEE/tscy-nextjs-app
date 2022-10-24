@@ -131,10 +131,10 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
         <>
           <Image
             src="/Images/location/locationmobbg.png"
-            quality={75}
+            quality={100}
             height={1069}
             width={390}
-            priority
+            priority={true}
             alt="Sustainable city Yiti Location Map "
             layout="responsive"
           />
