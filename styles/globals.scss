@@ -99,12 +99,22 @@ a {
     bottom: 70px;
     left: 2rem;
     transform: translate(0);
+
+    &:lang(ar) {
+      left: unset;
+      right: 2rem;
+    }
   }
 
 
   @media (max-width: 321px) {
     left: 0.8rem;
-    bottom: 50px
+    bottom: 50px;
+
+    &:lang(ar) {
+      left: unset;
+      right: 0.8rem;
+    }
   }
 }
 
