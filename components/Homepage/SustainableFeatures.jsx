@@ -78,14 +78,14 @@ const SustainableFeatures = () => {
     }
   }, [featureSelected, lan]);
 
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  //   if (!inView) {
-  //     controls.start("hidden");
-  //   }
-  // }, [inView]);
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [inView, showData]);
 
   const changeShowData = (value) => {
     if (value === 1) {
@@ -275,11 +275,11 @@ const SustainableFeatures = () => {
           </Col>
           <div className={featurestyles.imgcontainer}>
             <motion.div
+              key={showData.heading}
               className={featurestyles.centersusImg}
-              // animate={controls}
+              animate={controls}
               initial="hidden"
-              // variants={variant1}
-            >
+              variants={variant1}>
               <Image
                 src={showData?.leftimg}
                 width={466}
@@ -292,9 +292,10 @@ const SustainableFeatures = () => {
               />
             </motion.div>
             <motion.div
-              // animate={controls}
+              key={`${showData.heading}_2`}
+              animate={controls}
               initial="hidden"
-              // variants={variant2}
+              variants={variant2}
               className={featurestyles.centersusImg1}>
               <Image
                 src={showData?.rightimg}
@@ -308,9 +309,10 @@ const SustainableFeatures = () => {
               />
             </motion.div>
             <motion.div
-              // animate={controls}
+              animate={controls}
               initial="hidden"
-              // variants={variant2}
+              key={`${showData.heading}_3`}
+              variants={variant2}
               className={featurestyles.mobilesustainImg}>
               <Image
                 src={showData?.mobimg}
