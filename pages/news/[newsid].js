@@ -52,7 +52,7 @@ const News = () => {
                             size={16}
                             style={{ transform: "rotateY(180deg)" }}
                           />
-                          Share
+                          {lan.commontext.share}
                         </button>
                       </div>
                     </div>

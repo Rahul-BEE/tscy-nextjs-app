@@ -493,7 +493,7 @@ const arabic = {
     title1: "Dont miss anything with",
     title2: "موقع المشروع",
     description:
-      "Our project location is thoroughly surrounded by touristic locations with a world-class experience.",
+      "تقع المدينة المستدامة في موقع استراتيجي يربطها بالعديد من المواقع السياحية.",
   },
   villaplansection: {
     title1: "Redefining living with our",
@@ -507,7 +507,7 @@ const arabic = {
         homepagetitle: "غرف كورتيارد",
         slug: "courtyard-villa-3bedroom",
         gross: "إجمالي المساحة الأرضية 238 متر مربع ",
-        build: "مساحة البناء 285 متر مربع",
+        build: "مساحة البناء 256 متر مربع",
         link: "/floorplan/1",
         mainImg: "/Images/villas/3bcv/3bcv.png",
         blurImg: "/Images/villas/3bcv/3bcvblur.png",
@@ -1027,12 +1027,13 @@ const arabic = {
     prev: "السابق",
     visitouroffice: "زيارة مكتبنا",
     stories: "أحدث القصص",
-    featured: "featured news",
+    featured: "الصحافة",
     featureddesc: "See what they",
     featureddesc2: "say in",
     gfa: "إجمالي المساحة الأرضية",
     bua: "مساحة البناء",
     unit: "م",
+    share: "شارك",
   },
   propertyFeatures: [
     {
@@ -1325,7 +1326,7 @@ const arabic = {
     title1: "Caption",
     title2: "عيش الحياة المستدامة",
     description:
-      "The project is designed to improve The Sustainable City Yiti has gone to great lengths in increasing the sense of community feel with the facilities and services provided.",
+      "صممت المدينة المستدامة ضمــن رؤيــة تســتهدُ فتحســين جــودة حيــاة الســكان والارتقــاء بنمــط معيشــتهم، وتوفيــر كل مــا يتوافــق مــع احتياجــات الأجيـال المقبلـة ومتطلباتهـم،",
     cards: [
       {
         id: 0,
