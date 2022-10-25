@@ -68,7 +68,12 @@ const Floorplan = () => {
         // setText={setText}
       /> */}
         <VillaCards filterId={filterId} />
-        <div className={styles.downloadcomparison}>
+        <div
+          className={styles.downloadcomparison}
+          style={{
+            opacity: 0,
+            pointerEvents: "none",
+          }}>
           <p>
             {lan.commontext.download} {lan.commontext.comparison}{" "}
             <BsArrowDownCircle />
