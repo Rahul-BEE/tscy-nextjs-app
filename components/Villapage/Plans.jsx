@@ -83,7 +83,18 @@ function Plans() {
                       data={data}
                     />
                   </div>
-
+                  <p className={styles.fw_500}>
+                    {lan.commontext.gfa}:{" "}
+                    <span>
+                      {data.gfa} {lan.commontext.unit}&sup2;
+                    </span>
+                  </p>
+                  <p className={styles.fw_500}>
+                    {lan.commontext.bua}:{" "}
+                    <span>
+                      {data.bua} {lan.commontext.unit}&sup2;
+                    </span>
+                  </p>
                   {/* Button */}
                   <div className={styles.dd_button}>
                     {lan.commontext.download} {lan.commontext.floorplan}
@@ -175,7 +186,7 @@ function Plans() {
                         <p className={styles.descp}>
                           {data.floordesc[expanded]}
                         </p>
-                        {/* <div className={styles.col_2}>
+                        <div className={styles.col_2}>
                           <div className={styles.fw_500}>
                             <p>{lan.commontext.gfa}</p>
                             <span>{data.gfa} m&sup2;</span>
@@ -184,7 +195,7 @@ function Plans() {
                             <p>{lan.commontext.bua}</p>
                             <span>{data.bua} m&sup2;</span>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -310,18 +321,6 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
             style={{ overflow: "hidden" }}
             className={styles.details}>
             <p>{data.floordesc[expanded]}</p>
-            {/* <p className={styles.fw_500}>
-              {lan.commontext.gfa}:{" "}
-              <span>
-                {data.gfa} {lan.commontext.unit}&sup2;
-              </span>
-            </p>
-            <p className={styles.fw_500}>
-              {lan.commontext.bua}:{" "}
-              <span>
-                {data.bua} {lan.commontext.unit}&sup2;
-              </span>
-            </p> */}
           </motion.section>
         )}
       </AnimatePresence>
