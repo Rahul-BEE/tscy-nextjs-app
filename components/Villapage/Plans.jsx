@@ -83,22 +83,41 @@ function Plans() {
                       data={data}
                     />
                   </div>
-                  <p className={styles.fw_500}>
-                    {lan.commontext.gfa}:{" "}
-                    <span>
-                      {data.gfa} {lan.commontext.unit}&sup2;
-                    </span>
-                  </p>
-                  <p className={styles.fw_500}>
-                    {lan.commontext.bua}:{" "}
-                    <span>
-                      {data.bua} {lan.commontext.unit}&sup2;
-                    </span>
-                  </p>
-                  {/* Button */}
-                  <div className={styles.dd_button}>
-                    {lan.commontext.download} {lan.commontext.floorplan}
+                  <div className={styles.buadetailsdeskp}>
+                    <p className={styles.fw_500}>
+                      {lan.commontext.gfa}:{" "}
+                      <span>
+                        {data.gfa} {lan.commontext.unit}&sup2;
+                      </span>
+                    </p>
+                    <p className={styles.fw_500}>
+                      {lan.commontext.bua}:{" "}
+                      <span>
+                        {data.bua} {lan.commontext.unit}&sup2;
+                      </span>
+                    </p>
                   </div>
+
+                  <div className={styles.buadetailsmob}>
+                    <div className={styles.fw_500}>
+                      <p>{lan.commontext.gfa}</p>
+                      <span>{data.gfa} m&sup2;</span>
+                    </div>
+                    <div className={styles.fw_500}>
+                      <p>{lan.commontext.bua}</p>
+                      <span>{data.bua} m&sup2;</span>
+                    </div>
+                  </div>
+                  {/* Button */}
+                  <motion.div
+                    className={styles.dd_button}
+                    whileHover={{
+                      color: "#058DA6",
+                      background: "#fff",
+                      outline: "1px solid #058da6",
+                    }}>
+                    {lan.commontext.download} {lan.commontext.floorplan}
+                  </motion.div>
 
                   <div className={styles.hero_tablet}>
                     <div className={styles.item}>
@@ -186,16 +205,6 @@ function Plans() {
                         <p className={styles.descp}>
                           {data.floordesc[expanded]}
                         </p>
-                        <div className={styles.col_2}>
-                          <div className={styles.fw_500}>
-                            <p>{lan.commontext.gfa}</p>
-                            <span>{data.gfa} m&sup2;</span>
-                          </div>
-                          <div className={styles.fw_500}>
-                            <p>{lan.commontext.bua}</p>
-                            <span>{data.bua} m&sup2;</span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
