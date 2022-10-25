@@ -180,7 +180,42 @@ const Newssection=(props)=> {
 
         <div className={styles.hero_main_box}>
           {/* main box */}
-          {data
+          {props.pagename == 'NewsDetailPage'? 
+         <span>
+           {data
+            .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
+            .map((item, index) => (
+              <Link href={`${item.slug}`} key={index} passHref>
+                <a>
+                  <div className={styles.hero_box}>
+                    <div>
+                      <div className={styles.news_heading}>
+                        <h3>{item.heading}</h3>
+                      </div>
+                      <div className={styles.news_date}>{item.date}</div>
+                      <motion.div
+                        animate={controls}
+                        initial="hidden"
+                        variants={variants}
+                      >
+                        <Image
+                          className={styles.test_box}
+                          src={item.image}
+                          width={476}
+                          height={200}
+                          layout="responsive"
+                          alt="Sustainable City Yiti Villa"
+                        />
+                      </motion.div>
+                      <p>{item.discription}</p>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            ))}
+         </span>:
+           <span>
+           {data
             .slice(sliceNumber.firstSlice, sliceNumber.secondSlice)
             .map((item, index) => (
               <Link href={`news/${item.slug}`} key={index} passHref>
@@ -211,7 +246,8 @@ const Newssection=(props)=> {
                 </a>
               </Link>
             ))}
-
+         </span>
+          }
           {/* small boxes */}
 
           <div className={styles.hero_secondry_box}>
