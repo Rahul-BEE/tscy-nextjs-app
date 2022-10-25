@@ -223,6 +223,8 @@ function Plans() {
                   width={556}
                   height={800}
                   objectFit="cover"
+                  quality={100}
+                  priority
                 />
               </div>
 

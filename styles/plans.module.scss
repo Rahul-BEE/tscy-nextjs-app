@@ -36,7 +36,7 @@
 
                 .selectFloor {
                     grid-area: select;
-                    padding-top: 0.3rem;
+                    padding-top: 2rem;
 
                     .item_container1 {
                         border-top: 2px solid #777777;
@@ -88,7 +88,7 @@
                             padding: 8px 16px;
                             // margin-top: 24px;
                             color: white;
-                            margin-bottom: 2rem;
+
                             cursor: pointer;
 
                             @media (max-width:600px) {
@@ -271,7 +271,7 @@
 
                     }
 
-                    @media(max-width:122px) {
+                    @media(max-width:1224px) {
                         padding-top: unset;
                     }
                 }
@@ -287,6 +287,7 @@
                 .propertiesgrid {
                     grid-area: properties;
                     position: relative;
+                    padding-top: 2rem;
 
                     .item_container2 {
                         display: flex;
@@ -374,7 +375,7 @@
                                     align-items: flex-end;
 
                                     span {
-                                        margin-right: 0.3rem;
+                                        margin-inline: 0.3rem;
                                     }
 
                                     @media (max-width:600px) {
@@ -438,6 +439,10 @@
                             position: static;
                         }
                     }
+
+                    @media(max-width:1224px) {
+                        padding-top: unset;
+                    }
                 }
 
                 @media (max-width:1224px) {
@@ -488,6 +493,15 @@
 
     .buadetailsdeskp {
         display: block;
+        font-size: 1rem;
+
+        p {
+            font-weight: 500;
+        }
+
+        span {
+            font-weight: 400;
+        }
 
         @media (max-width:1224px) {
             display: none;

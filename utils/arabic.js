@@ -512,9 +512,10 @@ const arabic = {
         mainImg: "/Images/villas/3bcv/3bcv.png",
         blurImg: "/Images/villas/3bcv/3bcvblur.png",
         floorplan: [
-          "/Images/villas/3bcv/floorplan/groundfloor.png",
-          "/Images/villas/3bcv/floorplan/firstfloor.png",
+          "/Images/villas/3bcv/floorplan/argroundfloor.png",
+          "/Images/villas/3bcv/floorplan/arfirstfloor.png",
         ],
+
         floordesc: [
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
@@ -631,8 +632,8 @@ const arabic = {
         mainImg: "/Images/villas/4bcv/4bcv.png",
         blurImg: "/Images/villas/4bcv/4bcvblur.png",
         floorplan: [
-          "/Images/villas/4bcv/floorplan/groundfloor.png",
-          "/Images/villas/4bcv/floorplan/firstfloor.png",
+          "/Images/villas/4bcv/floorplan/argroundfloor.png",
+          "/Images/villas/4bcv/floorplan/arfirstfloor.png",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4, 7],
@@ -754,8 +755,8 @@ const arabic = {
           // first: [5, 6, 7],
         },
         floorplan: [
-          "/Images/villas/4bgv/floorplan/groundfloor.png",
-          "/Images/villas/4bgv/floorplan/firstfloor.png",
+          "/Images/villas/4bgv/floorplan/argroundfloor.png",
+          "/Images/villas/4bgv/floorplan/arfirstfloor.png",
         ],
         floordesc: [
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
