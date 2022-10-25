@@ -184,6 +184,7 @@ function VillaplansMobile() {
           layout="responsive"
           objectFit="cover"
           objectPosition={"center"}
+          alt="Sustainable City Yiti"
         />
       </div>
       {!showForm ? (

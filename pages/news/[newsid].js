@@ -82,6 +82,7 @@ const News = () => {
                         width={1300}
                         height={400}
                         className={styles.headerimg}
+                        alt="Sustainable City Yiti"
                       />
                     </div>
                     <div className={styles.hero_newspagesection}>

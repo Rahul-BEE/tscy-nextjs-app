@@ -25,14 +25,22 @@ function NewsMobile({ data,props }) {
         slidesPerView={1}
         centeredSlides={false}
         spaceBetween={20}
-        pagination={{
-          clickable: true,
-        }}
+  
         breakpoints={{
           320: {
             slidesPerView: 1.1,
             spaceBetween: 20,
            // centeredSlides: true,
+          },
+        }}
+        pagination={{
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '"><img class="pagination-bullet"/></span>'
+            );
           },
         }}
         className={styles.mySwiper}>
@@ -77,6 +85,7 @@ function NewsMobile({ data,props }) {
               width={450}
               height={300}
               layout="responsive"
+              alt="Sustainable City Yiti"
             />
 
            
