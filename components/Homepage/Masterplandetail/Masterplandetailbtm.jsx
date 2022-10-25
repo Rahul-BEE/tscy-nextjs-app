@@ -62,35 +62,43 @@ const Masterplandetailbtm = ({ item, track, controlItem, setDirection }) => {
         </div>
       </div>
       <p>{data[index].description}</p>
-      {data[index].villadetails ? (
-        <div className={styles.villadetailsbtm}>
-          <h4>{lan.commontext.villatypes}</h4>
-          <div className={styles.villaitem}>
-            {data[index].villatype.map((villa, index) => (
-              <div key={index}>
-                <h5>{villa.type}</h5>
-                <p>
-                  {villa.noofbedrooms} <span>{lan.commontext.bedroom}</span>{" "}
-                </p>
-              </div>
-            ))}
-          </div>
+
+      {data[index].details && (
+        <div className={styles.itemdetailsbtm}>
+          {Object.entries(data[index].details).map((value, i) => (
+            <div key={`${i}_values`} className={styles.detailItem}>
+              <h6>{value[0]}</h6>
+              {data[index].ground ? (
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    flexDirection: "column",
+                    paddingTop: "10px",
+                    gap: "0.8rem",
+                  }}>
+                  {value[1].map((item) => (
+                    <p key={item}>{item}</p>
+                  ))}
+                </div>
+              ) : (
+                <p style={{ paddingTop: "10px" }}>{value[1]}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        {data[index].villadetails && (
           <Link href={"/floorplan"} passHref>
             <motion.button className={styles.seevillabtn}>
               {lan.commontext.seevillas}
             </motion.button>
           </Link>
-        </div>
-      ) : (
-        <div className={styles.itemdetailsbtm}>
-          {Object.entries(data[index].contact).map((value, index) => (
-            <div key={`${index}_values`} className={styles.detailItem}>
-              <h6>{value[0]}</h6>
-              <p>{value[1]}</p>
-            </div>
-          ))}
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

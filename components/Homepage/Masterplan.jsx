@@ -372,13 +372,9 @@ const Masterplan = () => {
                   style={{
                     color: index === activeIndex - 1 ? "#058da6" : "#777777",
                   }}>
-                  {/* <motion.span
-                    style={{
-                      display: index === activeIndex - 1 ? "" : "none",
-                    }}>
-                    -
-                  </motion.span> */}
-                  {marker.name}
+                  {marker.id === 13 || marker.id === 10
+                    ? marker.shortname
+                    : marker.name}
                 </motion.p>
               ))}
             </div>

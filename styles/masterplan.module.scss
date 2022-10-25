@@ -321,7 +321,7 @@
 
       .masterplaninfobox {
         position: absolute;
-        width: 36%;
+        width: 40%;
         height: 95%;
         top: 2%;
         right: 4%;
@@ -329,6 +329,8 @@
         background: linear-gradient(167deg, rgba(255, 255, 255, 0.35) 4.47%, rgba(255, 255, 255, 0.05) 92.71%);
         box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(12px);
+        max-width: 460px;
+        max-height: 700px;
 
         .masterplaninnerinfobox {
           width: 100%;
@@ -344,8 +346,8 @@
           // box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
 
           .infoboxheadicon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -423,21 +425,19 @@
           h3,
           h4 {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.25em;
             text-transform: uppercase;
           }
 
           h4 {
-            font-size: 0.9rem;
+            font-size: 1rem;
             text-transform: capitalize;
           }
 
           p {
             font-weight: 400;
-            font-size: 12px;
+            font-size: .75rem;
             text-align: center;
-            max-height: 72px;
-            overflow-y: auto;
           }
 
 
@@ -470,7 +470,6 @@
 
           .itemdetailsbtm {
             width: 100%;
-            margin-bottom: 1rem;
             flex: 1;
             display: flex;
             align-items: center;
@@ -480,9 +479,10 @@
             .itemdetailsbtmdiv {
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              justify-content: space-evenly;
               width: 100%;
-              // gap: 0.6rem;
+              margin-bottom: 1rem;
+
 
               h5 {
                 text-transform: capitalize;
@@ -491,9 +491,7 @@
               h5,
               p {
                 font-weight: 700;
-                font-size: 0.8rem;
-                line-height: 24px;
-                // font-family: "Poppins";
+                font-size: 0.75rem;
                 font-style: normal;
 
               }
@@ -519,16 +517,16 @@
             gap: 0.5rem;
             justify-content: center;
 
-            &[data-align="start"] {
-              justify-content: flex-start;
-            }
+            // &[data-align="start"] {
+            //   justify-content: flex-start;
+            // }
           }
 
 
           .infoslide {
-            width: 30%;
+            width: 75px;
             height: auto;
-            flex: 0 0 30%;
+            // flex: 0 0 30%;
             overflow: hidden;
             position: relative;
             border-radius: 10px;
@@ -547,7 +545,7 @@
         }
 
         .subheading {
-          font-size: 1.25rem;
+          font-size: 1rem;
           font-weight: 500;
         }
 
@@ -861,7 +859,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding-inline: 8%;
 
 
     .indexdiv {
@@ -966,7 +964,7 @@
       margin: 0;
       padding: 0 2rem;
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.8rem;
       line-height: 150%;
 
       @media(max-width:600px) {
@@ -1083,10 +1081,14 @@
 
 
   .seevillabtn {
-    background-color: #058da6;
-    color: #fff;
+    background-color: white;
+    color: #058da6;
     width: 50%;
     font-size: 1rem;
 
+    @media(max-width:1224px) {
+      background-color: #058da6;
+      color: white;
+    }
   }
 }

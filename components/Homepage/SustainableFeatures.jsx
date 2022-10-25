@@ -58,25 +58,8 @@ const SustainableFeatures = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    switch (featureSelected) {
-      case 0: {
-        setShowData(lan.sustainablesection.features[0]);
-        return;
-      }
-      case 1: {
-        setShowData(lan.sustainablesection.features[1]);
-        return;
-      }
-      case 2: {
-        setShowData(lan.sustainablesection.features[2]);
-        return;
-      }
-      default: {
-        setShowData(lan.sustainablesection.features[0]);
-        return;
-      }
-    }
-  }, [featureSelected, lan]);
+    setShowData(lan.sustainablesection.features[featureSelected]);
+  }, [featureSelected]);
 
   useEffect(() => {
     if (inView) {
@@ -88,18 +71,35 @@ const SustainableFeatures = () => {
   }, [inView, showData]);
 
   const changeShowData = (value) => {
-    if (value === 1) {
-      if (featureSelected === 2) {
-        setFeatureSelected(0);
-      } else {
-        setFeatureSelected(featureSelected + 1);
+    if (lan.language === 1) {
+      if (value === -1) {
+        if (featureSelected === 2) {
+          setFeatureSelected(0);
+        } else {
+          setFeatureSelected(featureSelected + 1);
+        }
       }
-    }
-    if (value === -1) {
-      if (featureSelected === 0) {
-        setFeatureSelected(2);
-      } else {
-        setFeatureSelected(featureSelected - 1);
+      if (value === 1) {
+        if (featureSelected === 0) {
+          setFeatureSelected(2);
+        } else {
+          setFeatureSelected(featureSelected - 1);
+        }
+      }
+    } else {
+      if (value === 1) {
+        if (featureSelected === 2) {
+          setFeatureSelected(0);
+        } else {
+          setFeatureSelected(featureSelected + 1);
+        }
+      }
+      if (value === -1) {
+        if (featureSelected === 0) {
+          setFeatureSelected(2);
+        } else {
+          setFeatureSelected(featureSelected - 1);
+        }
       }
     }
   };

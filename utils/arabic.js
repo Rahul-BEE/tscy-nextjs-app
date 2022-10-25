@@ -515,9 +515,13 @@ const arabic = {
           "/Images/villas/3bcv/floorplan/groundfloor.png",
           "/Images/villas/3bcv/floorplan/firstfloor.png",
         ],
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+        ],
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3, 7, 4],
+          // first: [5, 6, 7, 4],
         },
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -631,9 +635,13 @@ const arabic = {
           "/Images/villas/4bcv/floorplan/firstfloor.png",
         ],
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3, 4, 7],
+          // first: [5, 6, 7],
         },
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+        ],
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
         interior: [
@@ -742,12 +750,16 @@ const arabic = {
         mainImg: "/Images/villas/4bgv/4bgv.png",
         blurImg: "/Images/villas/4bgv/4bgvblur.png",
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3, 4, 6, 7],
+          // first: [5, 6, 7],
         },
         floorplan: [
           "/Images/villas/4bgv/floorplan/groundfloor.png",
           "/Images/villas/4bgv/floorplan/firstfloor.png",
+        ],
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -1033,6 +1045,7 @@ const arabic = {
     gfa: "إجمالي المساحة الأرضية",
     bua: "مساحة البناء",
     unit: "م",
+    features: "Features",
   },
   propertyFeatures: [
     {

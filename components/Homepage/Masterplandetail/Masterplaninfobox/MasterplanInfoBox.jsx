@@ -152,43 +152,23 @@ const MasterplanInfoBox = ({
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
+              paddingTop: "1rem",
             }}>
             <div className={styles.infoboxheadicon}>{data[index].icon}</div>
             <div className={styles.infoboxcontent}>
               <h3>{data[index].name}</h3>
               <div>
-                <h4
+                {/* <h4
                   className={styles.subheading}
                   style={{
                     marginBottom: "0.5rem",
                   }}>
                   {lan.commontext.description}
-                </h4>
+                </h4> */}
                 <p>{data[index].description}</p>
               </div>
-              {data[index].villadetails ? (
-                <div className={styles.villadetailsbtm}>
-                  <h4 className={styles.subheading}>
-                    {lan.commontext.villatypes}
-                  </h4>
-                  <div className={styles.villaitem}>
-                    {data[index].villatype.map((villa, index) => (
-                      <div key={`${index}_${villa.type}`}>
-                        <h5>{villa.type}</h5>
-                        <p>
-                          {villa.noofbedrooms}{" "}
-                          <span>{lan.commontext.bedroom}</span>{" "}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                  <Link href={"/floorplan"} passHref>
-                    <button className={styles.seevillabtn}>
-                      {lan.commontext.seevillas}
-                    </button>
-                  </Link>
-                </div>
-              ) : (
+
+              {data[index].details && (
                 <div className={styles.itemdetailsbtm}>
                   <h4
                     className={styles.subheading}
@@ -198,13 +178,39 @@ const MasterplanInfoBox = ({
                     {lan.commontext.details}
                   </h4>
                   <div className={styles.itemdetailsbtmdiv}>
-                    {Object.entries(data[index].contact).map((value, index) => (
-                      <div key={`${index}_values`}>
+                    {Object.entries(data[index].details).map((value, i) => (
+                      <div
+                        key={`${i}_values`}
+                        style={{
+                          flex: data[index].ground ? "0 0 100%" : "0 0 33%",
+                        }}>
                         <h5>{value[0]}</h5>
-                        <p>{value[1]}</p>
+                        {data[index].ground ? (
+                          <div
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "flex-start",
+                              justifyContent: "space-around",
+                              paddingTop: "10px",
+                            }}>
+                            {value[1].map((item) => (
+                              <p key={item}>{item}</p>
+                            ))}
+                          </div>
+                        ) : (
+                          <p style={{ paddingTop: "10px" }}>{value[1]}</p>
+                        )}
                       </div>
                     ))}
                   </div>
+                  {data[index].villadetails && (
+                    <Link href={"/floorplan"} passHref>
+                      <button className={styles.seevillabtn}>
+                        {lan.commontext.seevillas}
+                      </button>
+                    </Link>
+                  )}
                 </div>
               )}
             </div>
@@ -233,8 +239,8 @@ const MasterplanInfoBox = ({
                     <div className={styles.infoslide} key={index}>
                       <Image
                         src={item}
-                        width={120}
-                        height={120}
+                        width={75}
+                        height={75}
                         layout="responsive"
                         objectFit="cover"
                         alt={"slideimages"}
@@ -251,10 +257,10 @@ const MasterplanInfoBox = ({
                   ))}
                 </motion.div>
               </div>
-              <div className={styles.slidenav}>
+              {/* <div className={styles.slidenav}>
                 <GoChevronLeft onClick={() => carouselHandler({ dir: -1 })} />
                 <GoChevronRight onClick={() => carouselHandler({ dir: 1 })} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

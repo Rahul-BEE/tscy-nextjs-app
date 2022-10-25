@@ -150,16 +150,7 @@ const english = {
 
         description:
           "One of the region’s largest centres offering a comprehensive and integrated approach towards autism spectrum disorders (ASD) and other related disorders. The center’s holistic approach is designed to empower both affected individuals and their families to navigate daily life.",
-        details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
@@ -171,16 +162,11 @@ const english = {
         name: "Equestrian center",
         icon: <Popequestrian />,
         description:
-          "The equestrian center features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
+          "The equestrian centre features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          "area stable": "2571 sqm",
+          stables: 3000,
+          "area arena": 2020,
         },
         slideimg: [
           "/Images/masterplan/equistrian/1.png",
@@ -195,16 +181,7 @@ const english = {
         icon: <Popseelab />,
         description:
           "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
-        details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/seelab/1.png",
           "/Images/masterplan/seelab/2.png",
@@ -215,16 +192,10 @@ const english = {
         id: 4,
         name: "Sustainable mosque",
         icon: <Popmosque />,
-        description: "....",
+        description:
+          "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          worshippers: "833 ",
         },
         slideimg: [
           "/Images/masterplan/sustainablemosque/1.png",
@@ -237,16 +208,9 @@ const english = {
         icon: <Popspine />,
         name: "Green Spine",
         description:
-          "The green spine runs along the majority of the development and is planted with trees and shrubs that thrive in Oman’s environment. Being a productive landscape, residents can farm the community allotments and greenhouses are used to grow herbs and leafy green vegetables.",
+          "A continuous green spine that runs the length of the development is formed by plants and trees that are well adapted to the climate of Oman. Greenhouses are utilized in the process of growing herbs and leafy greens, and community allotments are available for residents to use for agricultural purposes.  ",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          Greenhouses: "4",
         },
         slideimg: [
           "/Images/masterplan/greenspine/1.png",
@@ -259,16 +223,6 @@ const english = {
         name: "Luxury Apartments",
         icon: <Popbranded />,
         description: "....",
-        details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
         slideimg: [
           "/Images/masterplan/brandedresidencies/1.png",
           "/Images/masterplan/brandedresidencies/2.png",
@@ -281,17 +235,7 @@ const english = {
         name: "Wellness center",
         icon: <Popwellness />,
         description:
-          "A wellness center providing high quality holistic medical services.",
-        details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+          "A wellness centre providing high quality holistic medical services",
         slideimg: [
           "/Images/masterplan/wellnesscenter/1.png",
           "/Images/masterplan/wellnesscenter/2.png",
@@ -301,20 +245,14 @@ const english = {
       {
         id: 8,
         name: "Sports complex",
-
+        ground: true,
         icon: <Popsports />,
         description:
           "As part of an all-encompassing approach to sustainable development, the city facilitates an active lifestyle through the integration of gyms, a sports complex, a 7.4km running and cycling track, outdoor fitness stations, tennis courts, basketball courts, a skate park, 11 playgrounds, swimming pools, an equestrian club and riding track, over 3km of hiking trails and access to non-motorised water-sports on the beach.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
+          grounds: ["Roller Sports", "Paddle Tennis", "Mini Football"],
         },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/sportcomplex/1.png",
           "/Images/masterplan/sportcomplex/2.png",
@@ -328,14 +266,7 @@ const english = {
         description:
           "The four-star Hotel is characterized by a neighbour-hood spirit and friendly atmosphere and echoes the community’s sustainability ethos.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          rooms: "197",
         },
         slideimg: [
           "/Images/masterplan/4starresort/1.png",
@@ -346,34 +277,31 @@ const english = {
       {
         id: 10,
         villadetails: true,
-        name: "West District",
+        name: "Sustainable District West",
+        shortname: "West District",
         icon: <Popwest />,
-        description: "....",
+        description:
+          "The Garden and Courtyard Villas employ Demand Side Management strategies such as passive and active design to reduce energy consumption. The villas use less energy than any comparable unit in Oman thanks to their innovative active design.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          area: "72000 sqm",
+          villas: 264,
+          types: "3, 4 Bedrooms",
         },
         slideimg: [
           "/Images/masterplan/westdistrict/1.png",
           "/Images/masterplan/westdistrict/2.png",
           "/Images/masterplan/westdistrict/3.png",
         ],
-        villatype: [
-          {
-            type: "Courtyyard Villa",
-            noofbedrooms: 4,
-          },
-          {
-            type: "Courtyyard Villa",
-            noofbedrooms: 5,
-          },
-        ],
+        // villatype: [
+        //   {
+        //     type: "Courtyyard Villa",
+        //     noofbedrooms: 4,
+        //   },
+        //   {
+        //     type: "Courtyyard Villa",
+        //     noofbedrooms: 5,
+        //   },
+        // ],
       },
       {
         id: 11,
@@ -382,14 +310,9 @@ const english = {
         description:
           "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          Students: 1070,
+          Kids: 192,
+          Classrooms: 50,
         },
         slideimg: [
           "/Images/masterplan/school/1.png",
@@ -404,14 +327,8 @@ const english = {
         description:
           "This five-star resort has a range of restaurants, leisure facilities, lounges and beach front access. The resort also manages 132 luxury branded apartments.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          rooms: 170,
+          operator: "Nikki Beach",
         },
         slideimg: [
           "/Images/masterplan/5starresort/1.png",
@@ -423,29 +340,20 @@ const english = {
       {
         id: 13,
         villadetails: true,
-        name: "East District",
+        name: "Sustainable District East",
+        shortname: "East District",
         icon: <Popeast />,
-        description: "....",
+        description:
+          " The Garden and Courtyard  villas reduce energy consumption through Demand Side Management, including passive and active design. Using active design, the villas consume less energy than any comparable unit in Oman, with guaranteed savings. ",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          area: "16000 sqm",
+          Villas: 36,
+          Types: "4 Bedrooms",
         },
         slideimg: [
           "/Images/masterplan/eastdistrict/1.png",
           "/Images/masterplan/eastdistrict/2.png",
           "/Images/masterplan/eastdistrict/3.png",
-        ],
-        villatype: [
-          {
-            type: "Garden Villa",
-            noofbedrooms: 4,
-          },
         ],
       },
       {
@@ -453,16 +361,11 @@ const english = {
         name: "Plaza",
         icon: <Popplaza />,
         description:
-          "A vibrant community plaza, with commercial facilities including shops, restaurants, cafes, offices, and apartments.",
+          "A lively community plaza with commercial facilities such as shops, restaurants, cafes, offices, and apartments. Festivals, celebrations, and exhibitions are some of the activities that are planned to take place there as part of an extensive calendar of arts, culture, and entertainment-related events. 17 residential buildings and 2 office buildings.",
         details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          Studios: "1250 sq.ft",
+          Bedrooms: 1057,
+          Types: "1,2,3 Bedrooms",
         },
         slideimg: [
           "/Images/masterplan/plaza/1.png",
@@ -475,16 +378,6 @@ const english = {
         name: "Festival Park",
         icon: <Popfestival />,
         description: "....",
-        details: {
-          area: "1250 sq.ft",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
         slideimg: [
           "/Images/masterplan/festivalpark/1.png",
           "/Images/masterplan/festivalpark/2.png",
@@ -518,6 +411,10 @@ const english = {
         floorplan: [
           "/Images/villas/3bcv/floorplan/groundfloor.png",
           "/Images/villas/3bcv/floorplan/firstfloor.png",
+        ],
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         interior: [
           {
@@ -578,8 +475,8 @@ const english = {
         locationid: 1,
         locationImg: "/Images/villas/westdistrict.png",
         propertyFeatures: {
-          ground: [0, 1, 2, 3],
-          first: [5, 6, 7, 4],
+          ground: [0, 1, 2, 3, 7, 4],
+          // first: [5, 6, 7, 4],
         },
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -633,9 +530,13 @@ const english = {
         link: "/floorplans/2",
         mainImg: "/Images/villas/4bcv/4bcv.png",
         blurImg: "/Images/villas/4bcv/4bcvblur.png",
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+        ],
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3, 4, 7],
+          // first: [5, 6, 7],
         },
         locationDesc:
           "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
@@ -741,7 +642,7 @@ const english = {
       },
       {
         id: 3,
-        keys: [0, 3, 4, 8, 9, 12],
+        keys: [0, 3, 4, 8, 9, 12], //for filter
         slug: "garden-villa-4bedroom",
         title: "Garden Villa – 4 Bedroom Unit – East Villas",
         homepagetitle: "Bedroom Garden Villa",
@@ -750,9 +651,13 @@ const english = {
         link: "/floorplans/3",
         mainImg: "/Images/villas/4bgv/4bgv.png",
         blurImg: "/Images/villas/4bgv/4bgvblur.png",
+        floordesc: [
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+        ],
         propertyFeatures: {
-          ground: [0, 1, 2, 3, 4],
-          first: [5, 6, 7],
+          ground: [0, 1, 2, 3, 4, 6, 7],
+          // first: [5, 6, 7],
         },
         floorplan: [
           "/Images/villas/4bgv/floorplan/groundfloor.png",
@@ -1084,6 +989,7 @@ const english = {
     gfa: "Gross Floor Area",
     bua: "Built Up Area",
     unit: "m",
+    features: "Features",
   },
   tracks: [
     {

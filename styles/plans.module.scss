@@ -36,6 +36,7 @@
 
                 .selectFloor {
                     grid-area: select;
+                    padding-top: 0.3rem;
 
                     .item_container1 {
                         border-top: 2px solid #777777;
@@ -269,6 +270,10 @@
 
 
                     }
+
+                    @media(max-width:122px) {
+                        padding-top: unset;
+                    }
                 }
 
                 .floorplanGrid {
@@ -316,7 +321,7 @@
                             display: grid;
                             grid-template-columns: 1fr;
                             grid-auto-columns: 1fr;
-                            gap: 3rem;
+                            gap: 2rem;
                             margin-bottom: 0;
                             padding-left: 16px;
 
