@@ -161,6 +161,7 @@ const Villplans = () => {
             layout="responsive"
             blurDataURL={currentvilla.blurImg}
             placeholder="blur"
+            alt="Sustainable City Yiti"
           />
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>

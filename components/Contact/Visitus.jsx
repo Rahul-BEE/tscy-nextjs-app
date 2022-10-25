@@ -30,6 +30,7 @@ const Visitus = () => {
             objectFit="cover"
             quality={100}
             className={styles.imgdesk}
+            alt="Sustainable City Yiti"
           />
           {/* <Image
             src={"/Images/contact/tabletmap.png"}

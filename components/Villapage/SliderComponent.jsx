@@ -52,6 +52,7 @@ const SliderComponent = ({
                 layout="fill"
                 objectFit="cover"
                 objectPosition={"center"}
+                alt="Sustainable City Yiti"
               />
             </div>
             <div

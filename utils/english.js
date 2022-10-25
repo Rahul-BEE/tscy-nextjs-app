@@ -390,7 +390,7 @@ const english = {
     title1: "Dont miss anything with",
     title2: "OUR PROJECT LOCATION",
     description:
-      "Our project location is thoroughly surrounded by touristic locations with a world-class experience.",
+      "The Sustainable City - Yiti is strategically located and is also close to several touristic destinations.",
   },
   villaplansection: {
     title1: "Redefining living with our",
@@ -990,6 +990,7 @@ const english = {
     bua: "Built Up Area",
     unit: "m",
     features: "Features",
+    share: "Share",
   },
   tracks: [
     {
@@ -1200,7 +1201,7 @@ const english = {
     title1: "Caption",
     title2: "Experience Sustainable Living",
     description:
-      "The project is designed to improve The Sustainable City Yiti has gone to great lengths in increasing the sense of community feel with the facilities and services provided.",
+      "The Sustainable City Yiti is designed to improve quality of life for residents, making no compromises on the needs of future generations.",
     cards: [
       {
         id: 0,
@@ -1208,7 +1209,7 @@ const english = {
         title1: "Shared EV",
         title2: "Network",
         description:
-          "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars..",
+          "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars.",
       },
       {
         id: 1,

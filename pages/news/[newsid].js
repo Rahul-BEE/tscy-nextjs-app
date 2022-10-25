@@ -46,13 +46,13 @@ const News = () => {
                     </div>
                     <div className={styles.mt22}>
                       <span className={styles.datestyling}>{data.date}</span>
-                      <div style={{ textAlign: "-webkit-center" }}>
+                      <div className={styles.centeraligned}>
                         <button className={styles.btn_blue}>
                           <BiShare
                             size={16}
                             style={{ transform: "rotateY(180deg)" }}
                           />
-                          Share
+                          {lan.commontext.share}
                         </button>
                       </div>
                     </div>
@@ -82,6 +82,7 @@ const News = () => {
                         width={1300}
                         height={400}
                         className={styles.headerimg}
+                        alt="Sustainable City Yiti"
                       />
                     </div>
                     <div className={styles.hero_newspagesection}>

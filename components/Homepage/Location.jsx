@@ -23,13 +23,15 @@ const Location = () => {
       className={styles.app__locationsection}
       style={{
         position: "relative",
-      }}>
+      }}
+    >
       <div className={styles.locationabheadingcontainer}>
         <Row
           className="headingRow"
           style={{
             paddingTop: "2rem",
-          }}>
+          }}
+        >
           <Col>
             {/* <h5 className="sectionsubHeading mt-5">
               {lan.locationsection.title1}
@@ -58,7 +60,8 @@ const Location = () => {
           svgchange === true
             ? styles.container_location
             : styles.container_location_mobile
-        }>
+        }
+      >
         <div className={styles.locationImagecontainer1}>
           <div className={styles.first_img}>
             <Image
