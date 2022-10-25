@@ -7,8 +7,6 @@ import { useEffect } from "react";
 import styles from "../../styles/home.module.scss";
 
 const Marquee = ({ dir }) => {
-  const MotionDiamond = motion(<Diamond />);
-
   useEffect(() => {
     const root = document.documentElement;
     const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(

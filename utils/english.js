@@ -322,7 +322,7 @@ const english = {
         ],
       },
       {
-        name: "4 Star resort",
+        name: "4 Star Hotel",
         id: 9,
         icon: <Pop4star />,
         description:
