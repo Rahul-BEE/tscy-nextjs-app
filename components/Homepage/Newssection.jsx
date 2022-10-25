@@ -8,10 +8,10 @@ import useLanguage from "../../utils/useLanguage";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
-const Newssection=(props)=> {
+const Newssection = (props) => {
   const lan = useLanguage();
   const controls = useAnimation();
-//console.log(props.pagename)
+  //console.log(props.pagename)
   const data = [
     {
       slug: lan.newssection.post[0].slug,
@@ -141,32 +141,32 @@ const Newssection=(props)=> {
 
   return (
     <div className={styles.hero_newssection}>
-       
       <div className={styles.hero_container}>
-        
         <div className={`${styles.hero_text_center} ${styles.hero_mobile}`}>
           {/* <p>See what they say in</p> */}
           <Row className="headingRow">
-          <Col>
-            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
-            {props.pagename == 'NewsMainPage'? 
-           
-            <span className={styles.topnewsspanheading}>
-               {lan.commontext.featureddesc} 
-              <h2>
-              <span className={styles.newsspanheading}>{lan.commontext.featureddesc2}</span> <span className="sectionmainHeading"> {lan.commontext.featured} </span>
-            </h2>
-              </span>
-              :
-            <h2 className="sectionmainHeading">
-              {lan.commontext.press}
-            </h2>}
-          </Col>
-        </Row>
-        
-          
+            <Col>
+              {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+              {props.pagename == "NewsMainPage" ? (
+                <span className={styles.topnewsspanheading}>
+                  {/* {lan.commontext.featureddesc}  */}
+                  <h2>
+                    <span className={styles.newsspanheading}>
+                      {/* {lan.commontext.featureddesc2} */}
+                    </span>{" "}
+                    <span className="sectionmainHeading">
+                      {" "}
+                      {lan.commontext.featured}{" "}
+                    </span>
+                  </h2>
+                </span>
+              ) : (
+                <h2 className="sectionmainHeading">{lan.commontext.press}</h2>
+              )}
+            </Col>
+          </Row>
         </div>
-      
+
         {/* layout */}
 
         <div className={styles.shape_hex}>
@@ -251,70 +251,71 @@ const Newssection=(props)=> {
           {/* small boxes */}
 
           <div className={styles.hero_secondry_box}>
-          {props.pagename == 'NewsMainPage'?
-           null: <div className={styles.news_nav}>
-              <motion.p
-                onClick={(e) => handelChnagePrev(e)}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaChevronLeft className={styles.icon} />{" "}
-                {lan.commontext.previous}
-              </motion.p>
-              <motion.p
-                onClick={(e) => handelChange(e)}
-                whileTap={{ scale: 0.9 }}
-              >
-                
-                {lan.commontext.next} <FaChevronRight className={styles.icon} />
-              </motion.p>
-            </div> }
-            {props.pagename == 'NewsDetailPage'? 
-            <span>
-              {data.slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
-              .map((item, index) => (
-       
-                <Link href={`${item.slug}`} key={index} passHref>
-                  <a>
-                    <div className={styles.secondry_box}>
-                      <Image
-                        className={styles.test_box}
-                        src={item.image}
-                        width={476}
-                        height={200}
-                        layout="responsive"
-                        alt="Sustainable City Yiti Villa"
-                      />
-                      <h3>{item.heading}</h3>
-                      <div className={styles.news_date}>{item.date}</div>
-                    </div>
-                  </a>
-                </Link>
-              ))}
-            </span>:
-            <span>
-            {data.slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
-            .map((item, index) => (
-     
-              <Link href={`news/${item.slug}`} key={index} passHref>
-                <a>
-                  <div className={styles.secondry_box}>
-                    <Image
-                      className={styles.test_box}
-                      src={item.image}
-                      width={476}
-                      height={200}
-                      layout="responsive"
-                      alt="Sustainable City Yiti Villa"
-                    />
-                    <h3>{item.heading}</h3>
-                    <div className={styles.news_date}>{item.date}</div>
-                  </div>
-                </a>
-              </Link>
-            ))}
-          </span>
-            
-            }
+            {props.pagename == "NewsMainPage" ? null : (
+              <div className={styles.news_nav}>
+                <motion.p
+                  onClick={(e) => handelChnagePrev(e)}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaChevronLeft className={styles.icon} />{" "}
+                  {lan.commontext.previous}
+                </motion.p>
+                <motion.p
+                  onClick={(e) => handelChange(e)}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {lan.commontext.next}{" "}
+                  <FaChevronRight className={styles.icon} />
+                </motion.p>
+              </div>
+            )}
+            {props.pagename == "NewsDetailPage" ? (
+              <span>
+                {data
+                  .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
+                  .map((item, index) => (
+                    <Link href={`${item.slug}`} key={index} passHref>
+                      <a>
+                        <div className={styles.secondry_box}>
+                          <Image
+                            className={styles.test_box}
+                            src={item.image}
+                            width={476}
+                            height={200}
+                            layout="responsive"
+                            alt="Sustainable City Yiti Villa"
+                          />
+                          <h3>{item.heading}</h3>
+                          <div className={styles.news_date}>{item.date}</div>
+                        </div>
+                      </a>
+                    </Link>
+                  ))}
+              </span>
+            ) : (
+              <span>
+                {data
+                  .slice(sliceNumber.secondSlice, sliceNumber.lastSlice)
+                  .map((item, index) => (
+                    <Link href={`news/${item.slug}`} key={index} passHref>
+                      <a>
+                        <div className={styles.secondry_box}>
+                          <Image
+                            className={styles.test_box}
+                            src={item.image}
+                            width={476}
+                            height={200}
+                            layout="responsive"
+                            alt="Sustainable City Yiti Villa"
+                          />
+                          <h3>{item.heading}</h3>
+                          <div className={styles.news_date}>{item.date}</div>
+                        </div>
+                      </a>
+                    </Link>
+                  ))}
+              </span>
+            )}
           </div>
         </div>
         {/* tablet view */}
@@ -322,9 +323,9 @@ const Newssection=(props)=> {
       </div>
 
       {/* mobile */}
-      <NewsMobile data={data} props={props}/>
+      <NewsMobile data={data} props={props} />
     </div>
   );
-}
+};
 
 export default Newssection;
