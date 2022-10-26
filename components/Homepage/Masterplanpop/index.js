@@ -67,7 +67,7 @@ const MasterplanPopup = ({
               </div>
             </div>
             <p className={styles.description}>{data.description}</p>
-            {track && (
+            {track && data.details && (
               <div className={styles.contentbox}>
                 <h5>{lan.commontext.details}</h5>
                 <div className={styles.detailsContainer}>
