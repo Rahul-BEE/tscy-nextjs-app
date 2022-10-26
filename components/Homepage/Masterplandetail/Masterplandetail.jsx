@@ -52,7 +52,7 @@ const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
   };
 
   useEffect(() => {
-    setIndex(track ? track - 16 : item - 1);
+    // setIndex(track ? track - 16 : item - 1);
     setSliderWidth(
       document.getElementById("masterplanslider").getBoundingClientRect()
         .width -
@@ -61,6 +61,9 @@ const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
     );
   }, [slideIndex, item, track]);
 
+  const updateIndex = (id) => {
+    setIndex(id);
+  };
   return (
     <>
       <div
@@ -117,7 +120,7 @@ const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
           track={track}
           slideIndex={slideIndex}
           setSlideIndex={setSlideIndex}
-          updateIndex={setIndex}
+          updateIndex={updateIndex}
           setDirection={setDirection}
         />
         <div className={styles.detailtopbar}>
