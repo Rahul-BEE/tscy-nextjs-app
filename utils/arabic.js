@@ -145,7 +145,7 @@ const arabic = {
         name: "مركز توحد",
         icon: <Popplaza />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "أحد أكبر المراكز في المنطقة التي تقدم نهجًا شاملاً ومتكاملاً تجاه اضطرابات طيف التوحد (ASD) والاضطرابات الأخرى ذات الصلة. تم تصميم النهج الشامل للمركز لتمكين اصحاب الهمم وعائلاتهم من مواكبة الحياة اليومية و تحدياتها",
         details: {
           area: 1250,
           capacity: 3000,
@@ -167,17 +167,13 @@ const arabic = {
         name: "مركز الفروسية",
         icon: <Popequestrian />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "يضم نادي الفروسية 77 خيلًا مُدرَّبًا ليلائم مجموعة من القدرات ويتضمن مسارًا لركوب الخيل بطول 1.2 كم.",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
+          "مساحة الاسطبلات": "٣٥٤٥ م",
+          "عدد الاسطبلات": "٧٥",
+          "مساحة الساحة": "٢٠٢٠ م",
         },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/equistrian/1.png",
           "/Images/masterplan/equistrian/2.png",
@@ -189,8 +185,7 @@ const arabic = {
         id: 3,
         name: "مختبر سي",
         icon: <Popseelab />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "",
         details: {
           area: 1250,
           capacity: 3000,
@@ -212,11 +207,9 @@ const arabic = {
         name: "مسجد مستدام",
         icon: <Popmosque />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "تخيل مسجدًا تم بناؤه من الألف إلى الياء على اسس مستدامة تم تصميمه خصيصًا للمجتمع الذي يخدمه. المسجد البيئي هو مبنى فريد من نوعه يعتمد بالكامل على الهندسة المعمارية والتصميم الصديقين للبيئة.",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
+          "عدد المصليين": "٨٣٣",
         },
         contact: {
           contact: "0123456",
@@ -233,17 +226,9 @@ const arabic = {
         id: 5,
         name: "الحزام الأخضر",
         icon: <Popspine />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          "بيوت خضراء": "٤",
         },
         slideimg: [
           "/Images/masterplan/greenspine/1.png",
@@ -255,18 +240,8 @@ const arabic = {
         id: 6,
         name: "شقق فاخرة",
         icon: <Popbranded />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+        description: "",
+
         slideimg: [
           "/Images/masterplan/brandedresidencies/1.png",
           "/Images/masterplan/brandedresidencies/2.png",
@@ -278,18 +253,8 @@ const arabic = {
         id: 7,
         name: "مركز صحي",
         icon: <Popwellness />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+        description: "مركز صحي يقدم خدمات طبية شاملة عالية الجودة",
+
         slideimg: [
           "/Images/masterplan/wellnesscenter/1.png",
           "/Images/masterplan/wellnesscenter/2.png",
@@ -301,17 +266,11 @@ const arabic = {
         name: "مجمع رياضي",
         icon: <Popsports />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "كجزء من نهج شامل للتنمية المستدامة ، تسهل المدينة أسلوب حياة نشط من خلال دمج صالات رياضية ومجمع رياضي ومسار للجري وركوب الدراجات بطول 7.4 كم ومحطات اللياقة البدنية الخارجية وملاعب التنس وملاعب كرة السلة ومنتزه التزلج ، 11 ملعبًا وحوض سباحة وناديًا للفروسية ومسارًا لركوب الخيل وأكثر من 3 كيلومترات من مسارات المشي لمسافات طويلة والوصول إلى الرياضات المائية غير الآلية على الشاطئ.",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
+          grounds: ["الرياضات الدوارة", "تنس", "كرة القدم"],
         },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/sportcomplex/1.png",
           "/Images/masterplan/sportcomplex/2.png",
@@ -322,17 +281,9 @@ const arabic = {
         name: "فندق 4 نجوم",
         id: 9,
         icon: <Pop4star />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          الغرف: "١٩٧",
         },
         slideimg: [
           "/Images/masterplan/4starresort/1.png",
@@ -345,17 +296,11 @@ const arabic = {
         villadetails: true,
         name: "الحي الغربي",
         icon: <Popwest />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          المساحة: "٧٢٠٠٠ متر مربع",
+          الفلل: 264,
+          الانواع: "٣، ٤ غرف نوم",
         },
         slideimg: [
           "/Images/masterplan/westdistrict/1.png",
@@ -364,11 +309,11 @@ const arabic = {
         ],
         villatype: [
           {
-            type: "Courtyyard Villa",
+            type: "Courtyard Villa",
             noofbedrooms: 4,
           },
           {
-            type: "Courtyyard Villa",
+            type: "Courtyard Villa",
             noofbedrooms: 5,
           },
         ],
@@ -378,16 +323,10 @@ const arabic = {
         name: "مدرسة وحضانة",
         icon: <Popschool />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "يمكن الوصول إلى المدرسة والحضانة عن طريق المشي أو ركوب الدراجات دون الحاجة إلى عبور أي طريق. تتبع المدرسة والحضانة روح الاستدامة ويتم تشغيلهما أيضًا بواسطة الطاقة الشمسية.",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          الطلاب: "١٢٥٠",
+          "غرفة دراسة": 50,
         },
         slideimg: [
           "/Images/masterplan/school/1.png",
@@ -400,16 +339,9 @@ const arabic = {
         name: "منتجع 5 نجوم",
         icon: <Pop5star />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "يحتوي المنتجع من فئة الخمس نجوم على مجموعة من المطاعم والمرافق الترفيهية والصالات اللتي تطل على الواجهة المائية. كما يدير المنتجع 132 شقة فاخرة ذات علامات تجارية.",
         details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          الغرف: "١٧٠",
         },
         slideimg: [
           "/Images/masterplan/5starresort/1.png",
@@ -422,17 +354,11 @@ const arabic = {
         villadetails: true,
         name: "الحي الشرقي",
         icon: <Popeast />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+        description: "",
         details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
+          المساحة: "١٦٠٠٠ متر مربع",
+          الفلل: "٣٦",
+          الانواع: "٤ غرف نوم",
         },
         slideimg: [
           "/Images/masterplan/eastdistrict/1.png",
@@ -452,11 +378,12 @@ const arabic = {
 
         icon: <Popplaza />,
         description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "ساحة مجتمعية نابضة بالحياة مع مرافق تجارية مثل المحلات التجارية والمطاعم والمقاهي والمكاتب والشقق. المهرجانات والاحتفالات والمعارض هي بعض الأنشطة المخطط لها هناك كجزء من تقويم شامل للفنون والثقافة والأحداث المتعلقة بالترفيه. 17 مبنى سكني و2 مباني ادارية.",
         details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
+          الاستديوهات: "١٦٨",
+          "١ غرفة نوم": "٤٥١",
+          "٢ غرف نوم": "٥٢٧",
+          "٣ غرف نوم": "٧٩",
         },
         slideimg: [
           "/Images/masterplan/plaza/1.png",
@@ -469,18 +396,7 @@ const arabic = {
         id: 15,
         name: "ساحة المهرجانات",
         icon: <Popfestival />,
-        description:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-        details: {
-          area: "1250",
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+        description: "",
         slideimg: [
           "/Images/masterplan/festivalpark/1.png",
           "/Images/masterplan/festivalpark/2.png",
@@ -1096,17 +1012,7 @@ const arabic = {
       icon: <Popjogging />,
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
+        "يمتد مسار الركض بطول 7.4 كم على امتداد العمود الفقري الأخضر ومنتزه الواجهة البحرية.",
     },
     {
       id: 17,
@@ -1114,35 +1020,14 @@ const arabic = {
       icon: <Popequestraiantrack />,
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
+        "مسار للفروسية بطول 1.2 كم يمتد على طول الواجهة البحرية ويربط الإسطبلات بالحديقة العامة.",
     },
     {
       id: 18,
       name: "الدراجات الهوائية",
       icon: <Popcycling />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
-      description:
-        "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
+      description: "",
     },
     {
       id: 19,
@@ -1150,17 +1035,7 @@ const arabic = {
       icon: <Popebuggy />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
-        "Car free areas to create safe zones for kids and promote walkability.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
+        "مناطق خالية من السيارات حرصاً على سلامة الأطفال وتعزيز إمكانية المشي",
     },
   ],
   // newssection: {
