@@ -15,9 +15,9 @@ export default function Document() {
           rel="stylesheet"
         />
         <Script
-          async
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-B8E357DD7R"></Script>
-        <Script>
+        <Script id="google-analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
