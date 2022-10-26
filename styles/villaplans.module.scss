@@ -580,14 +580,13 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding-left: 20%;
-      gap: 5%;
+      margin-inline: 40px;
+      gap: 1rem;
       width: fit-content;
 
-      &:lang(ar) {
-        padding-left: 0;
-        margin-right: 30%;
-      }
+      // &:lang(ar) {
+      //   margin-right: 30%;
+      // }
 
       .activeVilla {
         opacity: 1 !important;
