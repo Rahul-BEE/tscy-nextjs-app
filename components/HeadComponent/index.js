@@ -9,7 +9,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       {lan.language === 1 ? (
         <meta
           name="description"
-          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
+          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman."
         />
       ) : (
         <meta
@@ -33,7 +33,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       {lan.language === 1 ? (
         <meta
           property="og:description"
-          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
+          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman."
         />
       ) : (
         <meta
