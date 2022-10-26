@@ -3,7 +3,7 @@ import styles from "../../styles/contact.module.scss";
 const Contact = () => {
   return (
     <>
-      <HeadComponent title={"TSC-Contact Us"} />
+      <HeadComponent title={"TSC-Contact Us"}></HeadComponent>
       <div className={styles.contact}>
         <Registration />
         <Visitus />
