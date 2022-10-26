@@ -49,6 +49,7 @@ function Plans() {
       });
     }
   };
+  const planheaderRef = useRef(null);
 
   return (
     <div className={styles.hero_box}>
@@ -141,6 +142,19 @@ function Plans() {
                       {/* mobile heading */}
                       <div className={styles.heading_item_mobile}>
                         <motion.div
+                          drag="x"
+                          dragConstraints={
+                            lan.language === 1
+                              ? {
+                                  right: 0,
+                                  left: -150,
+                                }
+                              : {
+                                  right: 150,
+                                  left: 0,
+                                }
+                          }
+                          ref={planheaderRef}
                           className={styles.innerHeading}
                           animate={mobileIndexAnimation2}>
                           <div
