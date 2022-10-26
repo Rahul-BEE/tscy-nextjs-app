@@ -164,9 +164,9 @@ const english = {
         description:
           "The equestrian centre features 77 Trained horses to suit a range of abilities and includes a 1.2km riding track.",
         details: {
-          "area stable": "2571 sqm",
-          stables: 3000,
-          "area arena": 2020,
+          "stables area": "2571 sqm",
+          stables: 75,
+          "area arena": "3545 sqm",
         },
         slideimg: [
           "/Images/masterplan/equistrian/1.png",
@@ -310,8 +310,7 @@ const english = {
         description:
           "An onsite school and nursery are accessible from all areas by walking or biking without having to cross any road. The school and the nursery follow sustainability ethos and are also powered by rooftop solar energy.",
         details: {
-          Students: 1070,
-          Kids: 192,
+          Students: 1250,
           Classrooms: 50,
         },
         slideimg: [
@@ -328,7 +327,6 @@ const english = {
           "This five-star resort has a range of restaurants, leisure facilities, lounges and beach front access. The resort also manages 132 luxury branded apartments.",
         details: {
           rooms: 170,
-          operator: "Nikki Beach",
         },
         slideimg: [
           "/Images/masterplan/5starresort/1.png",
@@ -363,9 +361,10 @@ const english = {
         description:
           "A lively community plaza with commercial facilities such as shops, restaurants, cafes, offices, and apartments. Festivals, celebrations, and exhibitions are some of the activities that are planned to take place there as part of an extensive calendar of arts, culture, and entertainment-related events. 17 residential buildings and 2 office buildings.",
         details: {
-          Studios: "1250 sq.ft",
-          Bedrooms: 1057,
-          Types: "1,2,3 Bedrooms",
+          Studios: "168",
+          "1-bedroom": 451,
+          "2-bedroom": 527,
+          "3-bedroom": 79,
         },
         slideimg: [
           "/Images/masterplan/plaza/1.png",
@@ -1000,16 +999,6 @@ const english = {
       slideimg: ["/Images/masterplan/tracks/joggingtrack.png"],
       description:
         "A 7.4 km jogging track runs along the entire stretch of the green spine and the waterfront promenade.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
     },
     {
       id: 17,
@@ -1017,17 +1006,7 @@ const english = {
       icon: <Popequestraiantrack />,
       slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
       description:
-        "=1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
+        "1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
     },
     {
       id: 18,
@@ -1036,16 +1015,6 @@ const english = {
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "The dedicated cycling track encourages people to go car-free by providing non-vehicular Sikkas within the sustainable district.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
     },
     {
       id: 19,
@@ -1054,16 +1023,6 @@ const english = {
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
       description:
         "Car free areas to create safe zones for kids and promote walkability.",
-      details: {
-        area: "1250 sq.ft",
-        capacity: 3000,
-        built: 2020,
-      },
-      contact: {
-        contact: "0123456",
-        email: "come@yiti.com",
-        Phone: " 0312547",
-      },
     },
   ],
   newssection: {
