@@ -1,13 +1,22 @@
 import React from "react";
 import Head from "next/head";
+import useLanguage from "../../utils/useLanguage";
 const HeadComponent = ({ title, description, keyword, children }) => {
+  const lan = useLanguage();
   return (
     <Head>
       <title>{title}</title>
-      <meta
-        name="description"
-        content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
-      />
+      {lan.language === 1 ? (
+        <meta
+          name="description"
+          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
+        />
+      ) : (
+        <meta
+          name="description"
+          content="المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان."
+        />
+      )}
       <meta name="viewport" content="width=device-width user-scalable=1" />
       <meta
         property="og:url"
@@ -21,10 +30,18 @@ const HeadComponent = ({ title, description, keyword, children }) => {
         itemprop="image"
         content="%PUBLIC_URL%/Images/map-pic.png"
       />
-      <meta
-        property="og:description"
-        content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
-      />
+      {lan.language === 1 ? (
+        <meta
+          property="og:description"
+          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a The Sustainable City Yiti, a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability."
+        />
+      ) : (
+        <meta
+          property="og:description"
+          content="المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان."
+        />
+      )}
+
       <meta property="og:site_name" content="The Sustainable City Yiti" />
       <meta
         property="article:modified_time"
