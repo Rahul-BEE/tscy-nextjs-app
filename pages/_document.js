@@ -16,12 +16,12 @@ export default function Document() {
         />
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-B8E357DD7R"></Script>
+          src="https://www.googletagmanager.com/gtag/js?id=G-N7B3CL66SQ"></Script>
         <Script id="google-analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'G-B8E357DD7R');`}
+      gtag('config', 'G-N7B3CL66SQ');`}
         </Script>
       </Head>
       <body>
