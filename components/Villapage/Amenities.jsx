@@ -17,6 +17,7 @@ const Amenities = () => {
 
   const itemRef = useRef(null);
   const slideAnimation = useAnimation();
+
   const [componentWidth, setComponentWidth] = useState(0);
   const [scrolledWidth, setScrolledWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
@@ -81,6 +82,10 @@ const Amenities = () => {
       window.removeEventListener("resize", setNewComponentWidth);
     };
   }, [itemRef.current, setNewComponentWidth]);
+
+  const updateIndex = () => {
+    // console.log(containerRef.current?.getBoundingClientRect());
+  };
   return (
     <div className={styles.amenetiesContainer}>
       <div className={styles.amenetiesInner}>
@@ -106,15 +111,16 @@ const Amenities = () => {
             </span>
           </div>
         </div>
+        {console.log("ss")}
         <div className={styles.amenitiescarousels} id="amenitiesdiv">
           {data && (
             <motion.div
               ref={containerRef}
               onLoad={setNewComponentWidth}
               className={styles.amenitiescarouselsInner}
-              // drag="x"
+              drag="x"
               animate={slideAnimation}
-              onDrag={(_, info) => console.log(info)}
+              onDrag={() => updateIndex()}
               dragConstraints={{
                 right: 0,
                 left: -(
@@ -156,7 +162,7 @@ const Amenities = () => {
             </motion.div>
           )}
         </div>
-        <div className={`${styles.sliderControls} ${styles.sliderControlsMob}`}>
+        {/* <div className={`${styles.sliderControls} ${styles.sliderControlsMob}`}>
           <span
             onClick={() => handlerCarousel(-1)}
             style={{
@@ -171,7 +177,7 @@ const Amenities = () => {
             }}>
             <IoChevronForward />
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
