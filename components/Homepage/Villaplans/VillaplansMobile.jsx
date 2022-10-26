@@ -61,13 +61,14 @@ function VillaplansMobile() {
     setActiveVilla(index);
     setVilla(lan.villaplansection.villas[index]);
     setShowForm(false);
+    console.log("w", ref.current?.clientWidth - window.innerWidth);
     if (index === 1) {
       test.start({
-        x: lan.language === 1 ? "-38%" : "38%",
+        x: lan.language === 1 ? "-62px" : "62px",
       });
     } else if (index === 2) {
       test.start({
-        x: lan.language === 1 ? "-71%" : "71%",
+        x: lan.language === 1 ? "-160px" : "160px",
       });
     } else {
       test.start({
@@ -96,7 +97,7 @@ function VillaplansMobile() {
         <motion.div
           className={styles.container}
           drag={"x"}
-          dragConstraints={{ right: 0, left: -200 }}
+          dragConstraints={{ right: 0, left: -250 }}
           ref={ref}
           animate={test}>
           {lan &&
