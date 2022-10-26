@@ -29,7 +29,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       <meta
         property="og:image"
         itemProp="image"
-        content="%PUBLIC_URL%/Images/map-pic.png"
+        content="/Images/map-pic.png"
       />
       {lan.language === 1 ? (
         <meta
@@ -54,9 +54,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
         property="twitter:url"
         content="https://www.thesustainablecity-yiti.com/"
       />
-      <meta
-        name="twitter:image"
-        content="%PUBLIC_URL%/Images/map-pic.png"></meta>
+      <meta name="twitter:image" content="/Images/map-pic.png" />
       <title>Homepage | The Sustainable City Yiti</title>
 
       {children}
