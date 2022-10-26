@@ -24,6 +24,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="ar_AR" />
+      <meta property="og:locale:alternate" content="ar_AR" />
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
