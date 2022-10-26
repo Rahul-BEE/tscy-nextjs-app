@@ -28,7 +28,7 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        itemprop="image"
+        itemProp="image"
         content="%PUBLIC_URL%/Images/map-pic.png"
       />
       {lan.language === 1 ? (
