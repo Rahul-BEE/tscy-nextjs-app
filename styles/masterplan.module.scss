@@ -302,7 +302,7 @@
       position: relative;
       border-radius: 15px;
 
-      @media(max-width:600px) {
+      @media(max-width:1224px) {
         border-radius: 0;
       }
 
@@ -589,11 +589,10 @@
         background: radial-gradient(50% 64.45% at 50% 50%,
             rgba(0, 0, 0, 0) 39.23%,
             rgba(0, 0, 0, 0.6) 100%);
-      }
-
-      @media (max-width: 700px) {
         border-radius: 0;
       }
+
+
     }
 
     .detailtopbar {
@@ -956,6 +955,7 @@
 
       @media (max-width:600px) {
         width: min-content;
+        font-size: 1.2rem;
 
       }
     }
@@ -1040,6 +1040,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      gap: 0.5rem;
 
       .detailItem {
         display: flex;
@@ -1051,6 +1052,8 @@
           flex-direction: column;
           gap: 0.2rem;
         }
+
+
       }
 
       p,
@@ -1061,6 +1064,10 @@
         font-style: normal;
         margin: 0;
         padding: 0;
+
+        @media (max-width:400px) {
+          font-size: 0.7rem;
+        }
       }
 
       p {

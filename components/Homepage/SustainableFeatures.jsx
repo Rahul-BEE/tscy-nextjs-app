@@ -110,6 +110,7 @@ const SustainableFeatures = () => {
           className="d-flex justify-content-between align-items-center"
           style={{ gap: "2.5rem" }}>
           <RiArrowLeftSLine
+            color="#058DA6"
             className={styles.rotate_icon}
             onClick={() => changeShowData(-1)}
           />
@@ -168,6 +169,7 @@ const SustainableFeatures = () => {
           </div>
 
           <RiArrowRightSLine
+            color="#058DA6"
             className={styles.rotate_icon}
             onClick={() => changeShowData(1)}
           />

@@ -50,35 +50,42 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    if (id === item || track) {
-      setItem(null);
-      setShow(null);
-      setActiveIndex(null);
-      setTrack(null);
-      return;
-    }
-    if (track !== null) {
-      setTrack(null);
-    }
-    const path = document.getElementById(`path_${id}`);
-    const rect = document.getElementById("something").getBoundingClientRect();
+    console.log(window.innerWidth);
+    if (window.innerWidth > 1224) {
+      console.log("ih");
+      if (id === item || track) {
+        setItem(null);
+        setShow(null);
+        setActiveIndex(null);
+        setTrack(null);
+        return;
+      }
+      if (track !== null) {
+        setTrack(null);
+      }
+      const path = document.getElementById(`path_${id}`);
+      const rect = document.getElementById("something").getBoundingClientRect();
 
-    setItem(id);
-    setActiveIndex(id);
-    setX(
-      path.getBoundingClientRect().x -
-        rect.left +
-        Number(path.getBoundingClientRect().width) / 2
-    );
-    setY(
-      path.getBoundingClientRect().y -
-        rect.top +
-        Number(path.getBoundingClientRect().height) / 2
-    );
-    setW(Number(path.getBoundingClientRect().width));
-    setH(Number(path.getBoundingClientRect().height));
+      setItem(id);
+      setActiveIndex(id);
+      setX(
+        path.getBoundingClientRect().x -
+          rect.left +
+          Number(path.getBoundingClientRect().width) / 2
+      );
+      setY(
+        path.getBoundingClientRect().y -
+          rect.top +
+          Number(path.getBoundingClientRect().height) / 2
+      );
+      setW(Number(path.getBoundingClientRect().width));
+      setH(Number(path.getBoundingClientRect().height));
 
-    setShow(true);
+      setShow(true);
+    } else {
+      setItem(id);
+      setShowDetail(true);
+    }
   };
 
   const getTrackPath = ({ id }) => {
