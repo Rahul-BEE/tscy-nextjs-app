@@ -478,7 +478,7 @@ const english = {
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         nearby: [
           {
             name: "Plaza",
@@ -538,7 +538,7 @@ const english = {
           // first: [5, 6, 7],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
@@ -747,11 +747,11 @@ const english = {
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "Garden Villa ",
+        type: "Garden Villa",
         location: "East District",
         locationid: 2,
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The East Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",

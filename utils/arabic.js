@@ -429,7 +429,7 @@ const arabic = {
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -548,7 +548,7 @@ const arabic = {
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         locationDesc:
-          "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -667,7 +667,7 @@ const arabic = {
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الشرقية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         nearby: [
           {
             name: "Plaza",
@@ -752,8 +752,8 @@ const arabic = {
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "كورتيارد فيلا",
-        location: "الفلل الغربية",
+        type: "جاردن فيلا",
+        location: "الفلل الشرقية",
         locationid: 2,
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
@@ -909,7 +909,7 @@ const arabic = {
     details: "التفاصيل",
     description: "الوصف",
     gobacktomasterplan: "خريطة المشروع",
-    primelocationText: "Prime Location in Master Plan",
+    primelocationText: "الموقع",
     villatypes: "أنواع الفيلات",
     seevillas: "اعرف المزيد",
     previousto: "السابق",
