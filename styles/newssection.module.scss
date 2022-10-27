@@ -508,13 +508,24 @@
 
 .centeraligned
 {
-  text-align: -webkit-center;
-  text-align: -moz-center;
+  width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
 
+}
+.network
+{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  margin: 1.5rem 0.5rem 1.5rem;
 }
 .mt22 {
   margin-top: 22px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
 
   @media (max-width: 400px) {
