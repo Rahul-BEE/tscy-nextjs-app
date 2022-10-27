@@ -6,7 +6,12 @@ import useLanguage from "../../utils/useLanguage";
 import Newssection from "../../components/Homepage/Newssection";
 import { useRouter } from "next/router";
 import { HeadComponent } from "../../components";
-import { FacebookShareButton, TwitterShareButton, LinkedinShareButton, WhatsappShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+  WhatsappShareButton,
+} from "react-share";
 import FacebookIcon from "../../public/Svg/facebook.svg";
 import TwitterIcon from "../../public/Svg/twitter.svg";
 import LinkedinIcon from "../../public/Svg/linkedin.svg";
@@ -16,15 +21,16 @@ const News = () => {
   const router = useRouter();
   const { newsid } = router.query;
   const data = lan.newssection.post.find((villa) => villa.slug === newsid);
-  console.log(data)
   return (
     <>
-      <HeadComponent
-        title={"News Detail | The Sustainable City - Yiti"}
-        description={lan.seo.newspage.description}
-        og={lan.seo.newspage.og}
-        keyword={lan.seo.newspage.keyword}
-      />
+      {data && (
+        <HeadComponent
+          title={"News Detail | The Sustainable City - Yiti"}
+          description={lan.seo.newspage.description}
+          og={lan.seo.newspage.og}
+          keyword={lan.seo.newspage.keyword}
+        />
+      )}
       <div>
         <div className={styles.newspage_container}>
           <div className="mb-3">
@@ -45,41 +51,38 @@ const News = () => {
                     <div className={styles.mt22}>
                       <span className={styles.datestyling}>{data.date}</span>
                       <div className={styles.centeraligned}>
-                      <div className={styles.network}>
-                      <FacebookShareButton
-                        url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                        quote={data.title}>
-                        <FacebookIcon/>
-                      </FacebookShareButton>
+                        <div className={styles.network}>
+                          <FacebookShareButton
+                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
+                            quote={data.title}>
+                            <FacebookIcon />
+                          </FacebookShareButton>
                         </div>
                         <div className={styles.network}>
-                      <LinkedinShareButton
-                        url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                        title={data.title}
-                        windowWidth={750}
-                        windowHeight={600}
-                      >
-                        <LinkedinIcon/>
-                      </LinkedinShareButton>
-                      </div>
+                          <LinkedinShareButton
+                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
+                            title={data.title}
+                            windowWidth={750}
+                            windowHeight={600}>
+                            <LinkedinIcon />
+                          </LinkedinShareButton>
+                        </div>
                         <div className={styles.network}>
-                      <WhatsappShareButton
-                         url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                        title={data.title}
-                        separator=":: "
-                      >
-                        <WhatsappIcon/>
-                      </WhatsappShareButton>
-                      </div>
+                          <WhatsappShareButton
+                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
+                            title={data.title}
+                            separator=":: ">
+                            <WhatsappIcon />
+                          </WhatsappShareButton>
+                        </div>
                         <div className={styles.network}>
-                      <TwitterShareButton
-                        title={data.title}
-                        url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                      >
-                        <TwitterIcon/>
-                      </TwitterShareButton>
-                      </div>
-            
+                          <TwitterShareButton
+                            title={data.title}
+                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}>
+                            <TwitterIcon />
+                          </TwitterShareButton>
+                        </div>
+
                         {/* <button className={styles.btn_blue}>
                           <BiShare
                             size={16}

@@ -117,7 +117,7 @@ function Plans() {
                         className={styles.dd_button}
                         whileHover={{
                           color: "#058DA6",
-                          background: "#fffff",
+                          background: "#ffffff",
                           outline: "1px solid #058da6",
                         }}>
                         {lan.commontext.download} {lan.commontext.floorplan}
