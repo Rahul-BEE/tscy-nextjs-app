@@ -1329,7 +1329,7 @@ const english = {
             icon: <Clock />,
           },
           {
-            title: "Toll-Free",
+            title: "Toll-Free(OMAN)",
             content: "8000 33 33",
             icon: <Tel />,
           },
@@ -1478,11 +1478,29 @@ const english = {
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
       // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City Yiti",
-        url: "",
+        url: "https://www.thesustainablecity-yiti.com/",
         description:
           "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
       },
@@ -1491,11 +1509,29 @@ const english = {
       title: "Floorplan | The Sustainable City Yiti", // 50-50 characters only
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City Yiti",
-        url: "",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
           "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.",
       },
@@ -1504,11 +1540,29 @@ const english = {
       title: "Villa Detail | The Sustainable City Yiti", // 50-50 characters only
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City- Yiti",
-        url: "",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
           "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.",
       },
@@ -1517,23 +1571,60 @@ const english = {
       title: "About Us | The Sustainable City Yiti", // 50-50 characters only
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City- Yiti",
-        url: "",
-        description: "",
+        url: "https://www.thesustainablecity-yiti.com/aboutus",
+        description:
+          "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
       },
     },
     contactus: {
       title: "Contact Us | The Sustainable City Yiti", // 50-50 characters only
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City Yiti",
-        url: "",
+        url: "https://www.thesustainablecity-yiti.com/contact-us",
         description:
           "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.",
       },
@@ -1542,11 +1633,29 @@ const english = {
       title: "News | The Sustainable City Yiti", // 50-50 characters only
       description:
         "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.", // add the words which users could search 150-160 character max
-      keyword: "",
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City-Yiti",
-        url: "",
+        url: "https://www.thesustainablecity-yiti.com/news",
         description:
           "Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman.",
       },

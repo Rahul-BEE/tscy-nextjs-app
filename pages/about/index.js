@@ -9,6 +9,7 @@ const About = () => {
         title={lan.seo.aboutus.title}
         description={lan.seo.aboutus.description}
         og={lan.seo.aboutus.og}
+        keyword={lan.seo.aboutus.keyword}
       />
       <div className={styles.app__about}>
         <Ourstory />

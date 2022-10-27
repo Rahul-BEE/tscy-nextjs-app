@@ -19,6 +19,7 @@ const Floorplan = () => {
         title={lan.seo.floorplan.title}
         description={lan.seo.floorplan.description}
         og={lan.seo.floorplan.og}
+        keyword={lan.seo.floorplan.keyword}
       />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>

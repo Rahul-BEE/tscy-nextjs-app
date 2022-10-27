@@ -10,6 +10,7 @@ const Contact = () => {
         title={lan.seo.contactus.title}
         description={lan.seo.contactus.description}
         og={lan.seo.contactus.og}
+        keyword={lan.seo.contactus.keyword}
       />
       <div className={styles.contact}>
         <Registration />

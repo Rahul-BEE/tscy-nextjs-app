@@ -25,6 +25,7 @@ const Villa = () => {
         title={`${lan.seo.villapage.title}| ${data?.title}`}
         description={lan.seo.villapage.description}
         og={lan.seo.villapage.og}
+        keyword={lan.seo.villapage.keyword}
       />
       <div className={styles.villapagemain}>
         <Section1 />

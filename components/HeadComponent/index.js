@@ -5,12 +5,9 @@ const HeadComponent = ({ title, description, keyword, children, og }) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-
+      <meta name="keyword" content={keyword} />
       <meta name="viewport" content="width=device-width user-scalable=1" />
-      <meta
-        property="og:url"
-        content="https://www.thesustainablecity-yiti.com/"
-      />
+      <meta property="og:url" content={og.url} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="ar_AR" />
       <meta property="og:locale:alternate" content="ar_AR" />
@@ -26,10 +23,7 @@ const HeadComponent = ({ title, description, keyword, children, og }) => {
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="thesustainablecity-yiti.com" />
-      <meta
-        property="twitter:url"
-        content="https://www.thesustainablecity-yiti.com/"
-      />
+      <meta property="twitter:url" content={og.url} />
       <meta name="twitter:image" content={og.img} />
       {children}
     </Head>

@@ -10,6 +10,7 @@ const NewsList = () => {
         title={lan.seo.newspage.title}
         description={lan.seo.newspage.description}
         og={lan.seo.newspage.og}
+        keyword={lan.seo.newspage.keyword}
       />
       <div>
         <NewsPage />

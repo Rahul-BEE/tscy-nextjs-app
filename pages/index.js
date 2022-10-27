@@ -32,6 +32,7 @@ export default function Home() {
         title={lan.seo.home.title}
         description={lan.seo.home.description}
         og={lan.seo.home.og}
+        keyword={lan.seo.newspage.keyword}
       />
 
       <div className={styles.app__home}>
