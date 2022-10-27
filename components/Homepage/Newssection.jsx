@@ -14,6 +14,14 @@ const Newssection = (props) => {
   //console.log(props.pagename)
   const data = [
     {
+      slug: lan.newssection.post[3].slug,
+      heading: lan.newssection.post[3].heading,
+      discription: lan.newssection.post[3].discription,
+      image: lan.newssection.post[3].image,
+      date: lan.newssection.post[3].date,
+    },
+   
+    {
       slug: lan.newssection.post[0].slug,
       heading: lan.newssection.post[0].heading,
       discription: lan.newssection.post[0].discription,
@@ -21,18 +29,18 @@ const Newssection = (props) => {
       date: lan.newssection.post[0].date,
     },
     {
-      slug: lan.newssection.post[1].slug,
-      heading: lan.newssection.post[1].heading,
-      discription: lan.newssection.post[1].discription,
-      image: lan.newssection.post[1].image,
-      date: lan.newssection.post[1].date,
-    },
-    {
       slug: lan.newssection.post[2].slug,
       heading: lan.newssection.post[2].heading,
       discription: lan.newssection.post[2].discription,
       image: lan.newssection.post[2].image,
       date: lan.newssection.post[2].date,
+    },
+    {
+      slug: lan.newssection.post[1].slug,
+      heading: lan.newssection.post[1].heading,
+      discription: lan.newssection.post[1].discription,
+      image: lan.newssection.post[1].image,
+      date: lan.newssection.post[1].date,
     },
     {
       slug: lan.newssection.post[3].slug,
@@ -48,13 +56,7 @@ const Newssection = (props) => {
       image: lan.newssection.post[0].image,
       date: lan.newssection.post[0].date,
     },
-    {
-      slug: lan.newssection.post[1].slug,
-      heading: lan.newssection.post[1].heading,
-      discription: lan.newssection.post[1].discription,
-      image: lan.newssection.post[1].image,
-      date: lan.newssection.post[1].date,
-    },
+
   ];
 
   const initialData = {
