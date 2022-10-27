@@ -64,7 +64,7 @@ const arabic = {
   header: {
     langbtn: "English",
     links: [
-      { text: "ابحث عن فيلا", link: "/floorplan" },
+      { text: "اكتشف منزلك المثالي", link: "/floorplan" },
       { text: "من نحن", link: "/about" },
       { text: "الأخبار", link: "/news" },
     ],
@@ -1511,6 +1511,10 @@ const arabic = {
         {
           title: "رقم الهاتف",
           link: "+968 8000 33 33",
+        },
+        {
+          title: "Telephone:",
+          link: "+968 2471 0700",
         },
       ],
     },

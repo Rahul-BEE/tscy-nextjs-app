@@ -108,23 +108,32 @@ function Footer() {
               </div>
             ))}
             <div className={styles.socialIcons}>
-              <Link href={"/"}>
-                <a>
+              <Link
+                href={
+                  "https://www.linkedin.com/company/the-sustainable-city-yiti/"
+                }>
+                <a target={"_blank"} rel="noreferrer">
                   <FaLinkedin color="#0077B5" />
                 </a>
               </Link>
-              <Link href={"/"}>
-                <a>
+              <Link
+                href={
+                  "https://twitter.com/TSCYiti?s=20&t=YSRqGJh4w6nxJuNR23i_rw"
+                }>
+                <a target={"_blank"} rel="noreferrer">
                   <FaTwitterSquare color="#50ABF1" />
                 </a>
               </Link>
-              <Link href={"/"}>
-                <a>
+              <Link
+                href={
+                  "https://www.facebook.com/ThesustainablecityYiti?ref=py_c"
+                }>
+                <a target={"_blank"} rel="noreferrer">
                   <FaFacebookSquare color="#3A559F" />
                 </a>
               </Link>
-              <Link href={"/"}>
-                <a>
+              <Link href={"https://www.instagram.com/thesustainablecity_yiti"}>
+                <a target={"_blank"} rel="noreferrer">
                   <FaInstagramSquare color="#E14478" />
                 </a>
               </Link>

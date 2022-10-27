@@ -1347,19 +1347,19 @@ const english = {
         socialmedia: [
           {
             icon: <Facebook />,
-            link: "/",
+            link: "https://www.facebook.com/ThesustainablecityYiti?ref=py_c",
           },
           {
             icon: <Linkedin />,
-            link: "/",
+            link: "https://www.linkedin.com/company/the-sustainable-city-yiti/",
           },
           {
             icon: <Instagram />,
-            link: "/",
+            link: "https://www.instagram.com/thesustainablecity_yiti",
           },
           {
             icon: <Twitter />,
-            link: "/",
+            link: "https://twitter.com/TSCYiti?s=20&t=YSRqGJh4w6nxJuNR23i_rw",
           },
         ],
       },
@@ -1466,8 +1466,12 @@ const english = {
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          title: "Toll-free:",
-          link: "+968 8000 33 33",
+          title: "Toll-free(OMAN):",
+          link: "8000 33 33",
+        },
+        {
+          title: "Telephone:",
+          link: "+968 2471 0700",
         },
       ],
     },

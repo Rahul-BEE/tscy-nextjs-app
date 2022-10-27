@@ -52,18 +52,20 @@ const Registration = () => {
             {lan.contact.register.info.socialmedia.map((item, index) => {
               return (
                 <Link href={item.link} key={`${index}_social`}>
-                  <motion.div
-                    whileHover={{
-                      scale: 1.5,
-                    }}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                    }}>
-                    {item.icon}
-                  </motion.div>
+                  <a target={"_blank"} rel="noreferrrer">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.5,
+                      }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                      }}>
+                      {item.icon}
+                    </motion.div>
+                  </a>
                 </Link>
               );
             })}
