@@ -65,7 +65,12 @@ function Footer() {
                 <div className={styles.footercardlink}>
                   {data[0].links.map((item, index) => (
                     <Link key={index} href={item.link}>
-                      <motion.a>{item.text}</motion.a>
+                      <motion.a
+                        whileHover={{
+                          color: "#000",
+                        }}>
+                        {item.text}
+                      </motion.a>
                     </Link>
                   ))}
                 </div>
@@ -77,7 +82,12 @@ function Footer() {
                 <div className={styles.footercardlink}>
                   {data[1].links.map((item, index) => (
                     <Link key={index} href={item.link}>
-                      <motion.a>{item.text}</motion.a>
+                      <motion.a
+                        whileHover={{
+                          color: "#000",
+                        }}>
+                        {item.text}
+                      </motion.a>
                     </Link>
                   ))}
                 </div>
@@ -89,9 +99,14 @@ function Footer() {
                 <div className={styles.footercardlink}>
                   {data[2].links.map((item, index) => (
                     <Link key={index} href={item.link}>
-                      <motion.a target={"_blank"} rel="noreferrer">
-                        {item.text}
-                      </motion.a>
+                      <a target={"_blank"} rel="noreferrer">
+                        <motion.p
+                          whileHover={{
+                            color: "#000",
+                          }}>
+                          {item.text}
+                        </motion.p>
+                      </a>
                     </Link>
                   ))}
                 </div>
