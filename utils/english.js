@@ -1467,74 +1467,74 @@ const english = {
       ],
     },
   ],
-  // seo: {
-  //   home: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  //   floorplan: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  //   villapage: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  //   aboutus: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  //   contactus: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  //   newspage: {
-  //     title: "", // 50-50 characters only
-  //     description: "", // add the words which users could search 150-160 character max
-  //     keyword: "",
-  //     og: {
-  //       img: "",
-  //       title: "",
-  //       url: "",
-  //       description: "",
-  //     },
-  //   },
-  // },
+  seo: {
+    home: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    floorplan: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    villapage: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    aboutus: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    contactus: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    newspage: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+  },
 };
 
 export default english;

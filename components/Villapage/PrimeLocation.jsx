@@ -94,7 +94,7 @@ const PrimeLocation = () => {
           </div>
         )}
       </div>
-      <Amenities />
+      {/* <Amenities /> */}
     </div>
   );
 };

@@ -7,7 +7,7 @@ import useLanguage from "../../utils/useLanguage";
 import { BsArrowDownCircle } from "react-icons/bs";
 import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
-import { HeadComponent } from "../../components";
+import { HeadComponent, Location } from "../../components";
 
 const Floorplan = () => {
   const lan = useLanguage();

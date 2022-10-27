@@ -102,7 +102,7 @@ const Bannersection = ({ banner }) => {
         <h1>{lan.bannersection.slides[0].title2}</h1>
       </motion.div>
       <motion.div
-        className={`${styles.app__banner_polygon1}`}
+        className={`${styles.app__banner_polygon}`}
         animate={{ y: [10, 0, 10] }}
         transition={{
           type: "spring",
@@ -111,12 +111,12 @@ const Bannersection = ({ banner }) => {
           duration: 2,
         }}>
         <Image
-          src={"/Svg/Polygon.svg"}
+          src={"/Images/bannersection/bannerpoly.png"}
           alt="The Sustainable Villas Yiti"
           layout="fill"
         />
       </motion.div>
-      <motion.div
+      {/* <motion.div
         className={`${styles.app__banner_polygon2}`}
         animate={{ y: [10, 0, 10] }}
         transition={{
@@ -130,7 +130,7 @@ const Bannersection = ({ banner }) => {
           alt="The Sustainable Villas Yiti"
           layout="fill"
         />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
