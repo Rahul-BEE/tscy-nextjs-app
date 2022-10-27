@@ -51,10 +51,14 @@ const Section1 = () => {
                 {lan.commontext.registerinterest}
               </motion.button>
             </Link>
-            <p>
-              {lan.commontext.download} {lan.commontext.brochure}
-              <BsArrowDownCircle />
-            </p>
+            <Link href={"/brochure/Yiti Brochure.pdf"}>
+              <a target={"_blank"}>
+                <p>
+                  {lan.commontext.download} {lan.commontext.brochure}
+                  <BsArrowDownCircle />
+                </p>
+              </a>
+            </Link>
           </div>
           <div className={styles.section1villaimagecontainer}>
             <Image

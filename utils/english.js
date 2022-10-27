@@ -1318,25 +1318,30 @@ const english = {
           "Fill up the form and our team will try to help you with your query.",
         data: [
           {
-            title: "Email",
-            content: "hello@thesustainablecity-yiti.com",
-            icon: <Email />,
-          },
-          {
             title: "Address",
             content: "Mina Al Sultan Qaboos Centre Yiti, Sultanate of Oman",
             icon: <Pin />,
-          },
-          {
-            title: "Toll-Free",
-            content: "+968 8000 33 33",
-            icon: <Tel />,
           },
           {
             title: "Working Hours",
             content: "Sun - Thu: 09:00AM - 07:00PM",
             content2: "Sat: 10:00AM - 7:00PM",
             icon: <Clock />,
+          },
+          {
+            title: "Toll-Free",
+            content: "8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "Telephone:",
+            content: "+968 2471 0700",
+            icon: <Tel />,
+          },
+          {
+            title: "Email",
+            content: "hello@thesustainablecity-yiti.com",
+            icon: <Email />,
           },
         ],
         socialmedia: [

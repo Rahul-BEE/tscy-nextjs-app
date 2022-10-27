@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    position: relative;
 
     @media (max-width: 1224px) {
         margin-top: 120px;
@@ -110,6 +111,7 @@
 
                 @media (max-width:1224px) {
                     max-width: unset;
+                    margin-block: 34px;
                 }
 
                 @media (max-width:600px) {
@@ -340,7 +342,16 @@
                             color: #FFFFFF;
                             border-radius: 10px;
                             min-width: 200px;
+
                             // cursor: pointer;
+                            @media (max-width:700px) {
+                                width: 60%;
+                                margin-top: 1rem;
+                            }
+                        }
+
+                        @media (max-width:700px) {
+                            justify-content: center;
                         }
                     }
 
@@ -411,6 +422,7 @@
 
                 @media (max-width:1224px) {
                     padding: 40px;
+
                 }
 
                 @media (max-width:700px) {
@@ -419,7 +431,7 @@
             }
 
             @media (max-width:1224px) {
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
 
             @media (max-width:700px) {
@@ -543,6 +555,20 @@
 
         @media (max-width:374px) {
             padding: 2% 3% 5%;
+        }
+    }
+
+    .polygon {
+        position: absolute;
+        top: -200px;
+        left: -120px;
+        width: 400px;
+        height: 426px;
+
+        @media (max-width:1224px) {}
+
+        @media (max-width:700px) {
+            display: none;
         }
     }
 }

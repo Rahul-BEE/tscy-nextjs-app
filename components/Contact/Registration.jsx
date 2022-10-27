@@ -5,6 +5,7 @@ import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+
 const Registration = () => {
   const lan = useLanguage();
   const router = useRouter();

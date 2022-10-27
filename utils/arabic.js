@@ -1360,25 +1360,31 @@ const arabic = {
           "يرجى تعبئة النموذج أدناه لتسجيل إهتمامك. سيتم التواصل معكم في أقرب وقت ممكن.",
         data: [
           {
-            title: "البريد الإلكتروني",
-            content: "hello@thesustainablecity-yiti.com",
-            icon: <Email />,
-          },
-          {
             title: "العنوان",
             content: "مركز ميناء السلطان قابوس، سلطنة عمان",
             icon: <Pin />,
-          },
-          {
-            title: "رقم الهاتف",
-            content: "+968 8000 33 33",
-            icon: <Tel />,
           },
           {
             title: "أوقات العمل",
             content: "09:00AM - 07:00PM : الأحد - الخميس",
             content2: "10:00AM - 7:00PM : السبت",
             icon: <Clock />,
+          },
+
+          {
+            title: "رقم الهاتف",
+            content: "+968 8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "Telephone:",
+            content: "8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "البريد الإلكتروني",
+            content: "hello@thesustainablecity-yiti.com",
+            icon: <Email />,
           },
         ],
         socialmedia: [
