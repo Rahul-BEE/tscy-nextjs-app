@@ -472,21 +472,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         link: "/floorplan/1",
         ff_plan: "",
@@ -503,12 +503,12 @@ const english = {
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         nearby: [
           {
             name: "Plaza",
             description:
-              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+              "A lively community plaza with commercial facilities such as shops, restaurants, cafes, offices, and apartments. Festivals, celebrations, and exhibitions are some of the activities that are planned to take place there as part of an extensive calendar of arts, culture, and entertainment-related events.",
             img: "/Images/villas/amenities/plaza.png",
           },
           {
@@ -563,7 +563,7 @@ const english = {
           // first: [5, 6, 7],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
@@ -600,21 +600,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -719,21 +719,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -772,11 +772,11 @@ const english = {
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "Garden Villa ",
+        type: "Garden Villa",
         location: "East District",
         locationid: 2,
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The East Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",
@@ -950,7 +950,7 @@ const english = {
     },
   ],
   commontext: {
-    sendmessage: "Send Message",
+    sendmessage: "Submit",
     getdirection: "Get Directions",
     nearby: "Nearby",
     amenities: "Amenities",
@@ -984,7 +984,7 @@ const english = {
     dontforget: "Dont forget to check our",
     othervillatypes: "Other Villa Types",
     situated: "Situated at a ",
-    primelocationText: "Prime Location in Master Plan",
+    primelocationText: "Location in the Master Plan",
     viewin: "View In",
     masterplan: "Master Plan",
     interiorHeading: "Interior Features",

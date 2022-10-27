@@ -454,7 +454,7 @@ const arabic = {
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -486,21 +486,21 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -573,7 +573,7 @@ const arabic = {
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -605,21 +605,21 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -667,7 +667,7 @@ const arabic = {
         description:
           "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
       },
       {
         id: 3,
@@ -692,7 +692,7 @@ const arabic = {
           "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
         ],
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الشرقية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         nearby: [
           {
             name: "Plaza",
@@ -756,29 +756,29 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         gf_image: "",
         ff_image: "",
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "كورتيارد فيلا",
-        location: "الفلل الغربية",
+        type: "جاردن فيلا",
+        location: "الفلل الشرقية",
         locationid: 2,
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
@@ -786,7 +786,7 @@ const arabic = {
         description:
           "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء",
       },
     ],
     filters: [
@@ -934,7 +934,7 @@ const arabic = {
     details: "التفاصيل",
     description: "الوصف",
     gobacktomasterplan: "خريطة المشروع",
-    primelocationText: "Prime Location in Master Plan",
+    primelocationText: "الموقع",
     villatypes: "أنواع الفيلات",
     seevillas: "اعرف المزيد",
     previousto: "السابق",
@@ -958,7 +958,7 @@ const arabic = {
     parking: "موقف سيارات",
     press: "الصحافة",
     ourstory: "قصتنا",
-    sendmessage: "إرسال رسالة",
+    sendmessage: "إرسل",
     diamonddevelopers: "The Sustainable City - Yiti",
     cpyright: "© The Sustainable City - Yiti 2022",
     language: "English",
