@@ -130,7 +130,7 @@
                 gap: 2rem;
 
                 &:lang(ar) {
-                    padding-right: 80px;
+                    padding-inline: 40px;
                 }
 
                 .typeSelector {
@@ -435,7 +435,8 @@
             }
 
             @media (max-width:700px) {
-                padding: 10px 20px;
+                padding-inline: 30px;
+                margin-top: 0;
             }
         }
 
