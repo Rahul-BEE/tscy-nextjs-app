@@ -421,8 +421,8 @@ const arabic = {
         ],
 
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يتكون الطابق الأرضي من مساحة واسعة للمطبخ بجوار غرفة الخادمة مصحوبة بحمام للضيوف يفصل بين منطقة غرفة المعيشة الفسيحة.",
+          "يحتوي الطابق الأول على ثلاث غرف نوم بحمامات داخلية مع مساحة كبيرة للدراسة والنوم والتخزين. غرفة النوم الرئيسية ، كاملة مع خزانة ملابس واسعة ، وحمام واسع المساحة ، وإمكانية الوصول إلى الشرفة.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 7, 4],
@@ -544,8 +544,8 @@ const arabic = {
           // first: [5, 6, 7],
         },
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يحتوي الطابق السفلي على غرفة معيشة فسيحة ، ويحتوي المطبخ على تجهيزات راقية ومساحة كبيرة لإلهام إبداع الطهي ، وحمام للضيوف ، وغرفة خادمة وغرفة طعام مجاورة.",
+          "يحتوي هذا التصميم على ثلاث غرف نوم بحمامات داخلية وغرفة نوم رئيسية كبيرة في الطابق العلوي. تحتوي غرفة النوم الرئيسية على نوافذ كبيرة ومساحة واسعة لخزانة الملابس وحمام داخلي فاخر مع حوض استحمام وشرفة مظللة تطل على الفناء",
         ],
         locationDesc:
           "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
@@ -663,8 +663,8 @@ const arabic = {
           "/Images/villas/4bgv/floorplan/arfirstfloor.png",
         ],
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يحتوي الطابق الأرضي على بهو ترحيبي. شرفة مظللة كبيرة مجاورة لغرفة المعيشة. يعتبر المرآب الذي يتسع لسيارتين والذي يمكن الوصول إليه من الفناء خلف غرفة الخادمة مناسبًا.",
+          "يحتوي الطابق الأول على أربع غرف نوم بحمامات داخلية. تحتوي غرفة النوم الرئيسية على مساحة خزانة واسعة ، وحمام داخلي كبير ، وشرفة واسعة تطل على المساحات الخضراء المورقة في الفناء.",
         ],
         locationDesc:
           "المنطقة الشرقية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",

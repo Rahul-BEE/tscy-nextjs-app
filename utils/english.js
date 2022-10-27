@@ -412,8 +412,8 @@ const english = {
           "/Images/villas/3bcv/floorplan/firstfloor.png",
         ],
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The ground floor is made up of ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area.",
+          "The first floor has three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access.",
         ],
         interior: [
           {
@@ -514,9 +514,9 @@ const english = {
         gfa: "238",
         bua: "256",
         description:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area.",
       },
       {
         id: 2,
@@ -530,8 +530,8 @@ const english = {
         mainImg: "/Images/villas/4bcv/4bcv.png",
         blurImg: "/Images/villas/4bcv/4bcvblur.png",
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The lower level has a spacious living room, the kitchen has high-end fixtures and plenty of space to inspire culinary creativity, a guest-bathroom, maid's room and an adjacent dining room.",
+          "This layout has three en-suite bedrooms and a large master bedroom upstairs. The master bedroom has large windows, ample wardrobe space, a luxurious en-suite bathroom with a soaking tub, and a shaded balcony overlooking the courtyard.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4, 7],
@@ -651,8 +651,8 @@ const english = {
         mainImg: "/Images/villas/4bgv/4bgv.png",
         blurImg: "/Images/villas/4bgv/4bgvblur.png",
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The ground floor has a welcoming foyer. A large shaded terrace adjoins the living room. The courtyard-accessible two-car garage behind the maid's room is convenient.",
+          "The first floor has four en-suite bedrooms. The master bedroom has ample wardrobe space, a large en-suite bathroom, and a wide balcony overlooking the courtyard's lush greenery.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4, 6, 7],
