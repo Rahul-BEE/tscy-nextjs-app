@@ -16,10 +16,20 @@ const Section1 = () => {
   return (
     <div className={styles.app__villasection1planmain}>
       <div className={styles.poly1}>
-        <Image src="/Images/villapoly2.png" width={300} height={300} alt="Sustainable City Yiti Villa" />
+        <Image
+          src="/Images/villapoly2.png"
+          width={300}
+          height={300}
+          alt="Sustainable City Yiti Villa"
+        />
       </div>
       <div className={styles.poly2}>
-        <Image src="/Images/villapoly1.png" width={200} height={250} alt="Sustainable City Yiti Villa"/>
+        <Image
+          src="/Images/villapoly1.png"
+          width={200}
+          height={250}
+          alt="Sustainable City Yiti Villa"
+        />
       </div>
       {data && (
         <div>
@@ -33,7 +43,7 @@ const Section1 = () => {
             <p>{data.description}</p>
           </div>
           <div className={styles.downloadcomparison}>
-            <Link href={"/contact"} passHref>
+            <Link href={"/contact-us"} passHref>
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -41,10 +51,14 @@ const Section1 = () => {
                 {lan.commontext.registerinterest}
               </motion.button>
             </Link>
-            <p>
-              {lan.commontext.download} {lan.commontext.brochure}
-              <BsArrowDownCircle />
-            </p>
+            <Link href={"/brochure/Yiti Brochure.pdf"}>
+              <a target={"_blank"}>
+                <p>
+                  {lan.commontext.download} {lan.commontext.brochure}
+                  <BsArrowDownCircle />
+                </p>
+              </a>
+            </Link>
           </div>
           <div className={styles.section1villaimagecontainer}>
             <Image

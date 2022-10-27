@@ -12,8 +12,10 @@ import {
 import styles from "../styles/home.module.scss";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import useLanguage from "../utils/useLanguage";
 export default function Home() {
   const [language, setLanguage] = useState("en");
+  const lan = useLanguage();
   const location = useRouter();
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -26,7 +28,12 @@ export default function Home() {
   }, [location.pathname]);
   return (
     <>
-      <HeadComponent title={"TSC-Homepage"} />
+      <HeadComponent
+        title={lan.seo.home.title}
+        description={lan.seo.home.description}
+        og={lan.seo.home.og}
+        keyword={lan.seo.newspage.keyword}
+      />
 
       <div className={styles.app__home}>
         <BannerSection />

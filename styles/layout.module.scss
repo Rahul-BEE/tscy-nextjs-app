@@ -205,6 +205,7 @@
       &:lang(ar) {
         margin-left: 0;
         margin-right: 1rem;
+        font-size: 1rem;
       }
     }
 
@@ -584,9 +585,11 @@
     font-weight: 400;
     font-size: 1rem;
 
-    a {
+    a,
+    p {
       cursor: pointer;
       color: #777777;
+      margin: 0;
     }
 
     @media (max-width:1224px) {

@@ -19,7 +19,12 @@ const News = () => {
   console.log(data)
   return (
     <>
-      <HeadComponent title={"TSC-Newsdetail"} />
+      <HeadComponent
+        title={"News Detail | The Sustainable City - Yiti"}
+        description={lan.seo.newspage.description}
+        og={lan.seo.newspage.og}
+        keyword={lan.seo.newspage.keyword}
+      />
       <div>
         <div className={styles.newspage_container}>
           <div className="mb-3">

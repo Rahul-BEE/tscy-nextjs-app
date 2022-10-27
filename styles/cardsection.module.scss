@@ -1,5 +1,5 @@
     .cardsSectionmain {
-        padding: 8% 10%;
+        padding: 8% 10% 80px;
         background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
 
         .cardSectionInner {
@@ -11,24 +11,25 @@
             column-gap: 40px;
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
-            align-items: start;
+            justify-content: center;
             margin-block: 3.125rem;
-            margin-inline: auto;
             max-width: 1500px;
             row-gap: 40px;
+            margin-inline: auto;
 
             .card {
                 background-color: white;
                 border-radius: 10px;
-                padding: 1rem;
+                padding: 1.5rem;
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
                 flex-direction: column;
                 gap: 1rem;
-                max-width: 288px;
+                max-width: 317px;
                 width: 100%;
                 height: 100%;
+                min-height: 292px;
 
                 p,
                 h5 {
@@ -60,7 +61,7 @@
                 }
 
                 .cardContents {
-                    font-family: 'Poppins';
+                    // font-family: 'Poppins';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 1rem;
@@ -72,8 +73,9 @@
                 }
             }
 
-            @media (max-width:968px) {
+            @media (max-width:1224px) {
                 grid-template-columns: repeat(2, 1fr);
+                padding-inline: 20%;
 
             }
 
@@ -84,10 +86,17 @@
             }
 
             &[data-page="true"] {
+                .card {
+                    border: 0.5px solid #cfcdcd8f;
+                    border-radius: 10px;
+                }
+
                 @media (max-width:700px) {
 
                     display: none;
                 }
+
+
             }
         }
 
@@ -118,7 +127,7 @@
 
                 .cardContents {
                     p {
-                        font-family: 'Poppins';
+                        // font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 500;
                         font-size: 16px;
@@ -138,6 +147,10 @@
                     grid-template-columns: 1fr 1fr;
                 }
             }
+        }
+
+        @media (max-width:1320px) {
+            padding: 8% 5%;
         }
 
         @media (max-width:1224px) {

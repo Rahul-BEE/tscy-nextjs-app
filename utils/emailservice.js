@@ -6,7 +6,7 @@ const sendEmail = async ({ data, type }) => {
       ? process.env.NEXT_PUBLIC_BROKER_EMAIL_TEMPLATE_ID
       : process.env.NEXT_PUBLIC_REGISTER_INTEREST_TEMPLATE_ID;
 
-  await emailjs
+  const result = await emailjs
     .send(
       process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
       temmplateId,
@@ -16,13 +16,15 @@ const sendEmail = async ({ data, type }) => {
     .then(
       (result) => {
         console.log("suceess");
-        return "success";
+        return true;
       },
       (error) => {
         console.log("error");
-        return "error";
+        return false;
       }
     );
+
+  return result;
 };
 
 export default sendEmail;

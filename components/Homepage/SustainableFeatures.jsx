@@ -318,13 +318,13 @@ const SustainableFeatures = () => {
               className={featurestyles.mobilesustainImg}>
               <Image
                 src={showData?.mobimg}
-                width={750}
+                width={680}
                 height={550}
                 priority
                 quality={100}
                 layout="responsive"
                 objectFit="cover"
-                objectPosition={"60%"}
+                objectPosition={"85%"}
                 className={featurestyles.susimagemob}
                 alt="Sustainbale feature Image"
               />

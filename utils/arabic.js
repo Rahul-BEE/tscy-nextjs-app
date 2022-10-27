@@ -64,7 +64,7 @@ const arabic = {
   header: {
     langbtn: "English",
     links: [
-      { text: "ابحث عن فيلا", link: "/floorplan" },
+      { text: "اكتشف منزلك المثالي", link: "/floorplan" },
       { text: "من نحن", link: "/about" },
       { text: "الأخبار", link: "/news" },
     ],
@@ -73,8 +73,33 @@ const arabic = {
   },
 
   bannersection: {
-    title1: "نمط حياة مستدام",
-    title2: "لغدٍ أفضل",
+    slides: [
+      {
+        img: "/Images/map-pic.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner5.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner2.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner3.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner4.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+    ],
   },
 
   sustainablesection: {
@@ -146,16 +171,7 @@ const arabic = {
         icon: <Popplaza />,
         description:
           "أحد أكبر المراكز في المنطقة التي تقدم نهجًا شاملاً ومتكاملاً تجاه اضطرابات طيف التوحد (ASD) والاضطرابات الأخرى ذات الصلة. تم تصميم النهج الشامل للمركز لتمكين اصحاب الهمم وعائلاتهم من مواكبة الحياة اليومية و تحدياتها",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          تكلم: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
@@ -183,19 +199,11 @@ const arabic = {
       },
       {
         id: 3,
-        name: "مختبر سي",
+        name: "مختبرالاستدامة سي",
         icon: <Popseelab />,
-        description: "",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+        description:
+          "يعرض مختبر سي الطاقة المتجددة ، والتقنيات ، والزراعة العمودية الداخلية ، وتربية الألبان على نطاق صغير ، وحصاد الرطوبة ، ومعالجة النفايات الصلبة ، والتنقل الذكي. يضم مختبر سي أيضًا معهد سي ، وهو منشأة تعليمية خالية من الكربون للمهنيين العاملين في ممارسات الاستدامة الحضرية.",
+
         slideimg: [
           "/Images/masterplan/seelab/1.png",
           "/Images/masterplan/seelab/2.png",
@@ -207,7 +215,7 @@ const arabic = {
         name: "مسجد مستدام",
         icon: <Popmosque />,
         description:
-          "تخيل مسجدًا تم بناؤه من الألف إلى الياء على اسس مستدامة تم تصميمه خصيصًا للمجتمع الذي يخدمه. المسجد البيئي هو مبنى فريد من نوعه يعتمد بالكامل على الهندسة المعمارية والتصميم الصديقين للبيئة.",
+          "تخيل مسجدًا تم بناؤه على اسس مستدامة. تم تصميمه خصيصًا للمجتمع الذي يخدمه. المسجد البيئي هو مبنى فريد من نوعه يعتمد بالكامل على الهندسة المعمارية والتصميم الصديقين للبيئة.",
         details: {
           "عدد المصليين": "٨٣٣",
         },
@@ -226,7 +234,8 @@ const arabic = {
         id: 5,
         name: "الحزام الأخضر",
         icon: <Popspine />,
-        description: "",
+        description:
+          "يتكون الحزام الأخضر، الممتد على طول المدينة، من النباتات والأشجار التي تتكيف مع مناخ عٌمان. يتم استخدام البيوت الخضراء في عملية زراعة الأعشاب والخضر الورقية.",
         details: {
           "بيوت خضراء": "٤",
         },
@@ -240,7 +249,8 @@ const arabic = {
         id: 6,
         name: "شقق فاخرة",
         icon: <Popbranded />,
-        description: "",
+        description:
+          "تعد الشقق الفاخرة الآن واحدة من أكثر جوانب الحياة العصرية. يوفر Nikki Beach ، المشغل المشهور عالميًا ، 178 شقة تحمل علامة تجارية, في مدينة يتي المستدامة.",
 
         slideimg: [
           "/Images/masterplan/brandedresidencies/1.png",
@@ -281,7 +291,8 @@ const arabic = {
         name: "فندق 4 نجوم",
         id: 9,
         icon: <Pop4star />,
-        description: "",
+        description:
+          "يتميز الفندق من فئة الأربع نجوم بروح الجار وأجواء ودية ويردد صدى روح الاستدامة في المجتمع.",
         details: {
           الغرف: "١٩٧",
         },
@@ -296,7 +307,8 @@ const arabic = {
         villadetails: true,
         name: "الحي الغربي",
         icon: <Popwest />,
-        description: "",
+        description:
+          "تم تصميم المنازل في الحي المستدام على نحو ترشيد استهلاك الطاقة من خلال إدارة جانب الطلب ، بما في ذلك التصميم السلبي والنشط. باستخدام التصميم النشط ، تستهلك المنازل طاقة أقل من أي وحدة مماثلة في عٌمان ، مع توفير مضمون.",
         details: {
           المساحة: "٧٢٠٠٠ متر مربع",
           الفلل: 264,
@@ -323,7 +335,7 @@ const arabic = {
         name: "مدرسة وحضانة",
         icon: <Popschool />,
         description:
-          "يمكن الوصول إلى المدرسة والحضانة عن طريق المشي أو ركوب الدراجات دون الحاجة إلى عبور أي طريق. تتبع المدرسة والحضانة روح الاستدامة ويتم تشغيلهما أيضًا بواسطة الطاقة الشمسية.",
+          "يمكن الوصول إلى المدرسة والحضانة عن طريق المشي أو ركوب الدراجات دون الحاجة إلى عبور أي طريق. تتبع المدرسة والحضانة نهج الاستدامة ويتم تشغيلهما بواسطة الطاقة الشمسية.",
         details: {
           الطلاب: "١٢٥٠",
           "غرفة دراسة": 50,
@@ -354,7 +366,8 @@ const arabic = {
         villadetails: true,
         name: "الحي الشرقي",
         icon: <Popeast />,
-        description: "",
+        description:
+          "تم تصميم المنازل في الحي المستدام على نحو ترشيد استهلاك الطاقة من خلال إدارة جانب الطلب ، بما في ذلك التصميم السلبي والنشط. باستخدام التصميم النشط ، تستهلك المنازل طاقة أقل من أي وحدة مماثلة في عٌمان ، مع توفير مضمون.",
         details: {
           المساحة: "١٦٠٠٠ متر مربع",
           الفلل: "٣٦",
@@ -378,7 +391,7 @@ const arabic = {
 
         icon: <Popplaza />,
         description:
-          "ساحة مجتمعية نابضة بالحياة مع مرافق تجارية مثل المحلات التجارية والمطاعم والمقاهي والمكاتب والشقق. المهرجانات والاحتفالات والمعارض هي بعض الأنشطة المخطط لها هناك كجزء من تقويم شامل للفنون والثقافة والأحداث المتعلقة بالترفيه. 17 مبنى سكني و2 مباني ادارية.",
+          "ساحة مجتمعية نابضة بالحياة مع مرافق تجارية مثل المحلات التجارية والمطاعم والمقاهي والمكاتب والشقق. المهرجانات والاحتفالات والمعارض هي بعض الأنشطة المخطط لها هناك كجزء من تقويم شامل للفنون والثقافة والأحداث المتعلقة بالترفيه. 17 مبنى سكني و2 مباني ادارية.  ",
         details: {
           الاستديوهات: "١٦٨",
           "١ غرفة نوم": "٤٥١",
@@ -433,15 +446,15 @@ const arabic = {
         ],
 
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يتكون الطابق الأرضي من مساحة واسعة للمطبخ بجوار غرفة الخادمة مصحوبة بحمام للضيوف يفصل بين منطقة غرفة المعيشة الفسيحة.",
+          "يحتوي الطابق الأول على ثلاث غرف نوم بحمامات داخلية مع مساحة كبيرة للدراسة والنوم والتخزين. غرفة النوم الرئيسية ، كاملة مع خزانة ملابس واسعة ، وحمام واسع المساحة ، وإمكانية الوصول إلى الشرفة.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 7, 4],
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -473,21 +486,21 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -556,11 +569,11 @@ const arabic = {
           // first: [5, 6, 7],
         },
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يحتوي الطابق السفلي على غرفة معيشة فسيحة ، ويحتوي المطبخ على تجهيزات راقية ومساحة كبيرة لإلهام إبداع الطهي ، وحمام للضيوف ، وغرفة خادمة وغرفة طعام مجاورة.",
+          "يحتوي هذا التصميم على ثلاث غرف نوم بحمامات داخلية وغرفة نوم رئيسية كبيرة في الطابق العلوي. تحتوي غرفة النوم الرئيسية على نوافذ كبيرة ومساحة واسعة لخزانة الملابس وحمام داخلي فاخر مع حوض استحمام وشرفة مظللة تطل على الفناء",
         ],
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الغربية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         interior: [
           {
             title: "التجهيزات",
@@ -592,21 +605,21 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -654,7 +667,7 @@ const arabic = {
         description:
           "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "يشتمل هذا التصميم المذهل للفيلا المكونة من أربع غرف نوم على طابق سفلي يمتاز بإضاءة طبيعية مشرقة، ويأتي مُلحقاً بغرفة معيشة فسيحة للغاية. وقد زُوّدَ المطبخ بمستلزمات وتجهيزات فاخرة ضمن مساحة واسعة تحفّز وتزيد من متعة تحضير الأطباق الشهية والمأكولات. وتتميز منطقة تناول الطعام المجاورة برحابة ملفتة وبإضاءة طبيعية تضفي سحراً خاصاً ممزوجاً بلمسات عصرية رائعة. أما الطابق الأرضي، فيضم حماماً صغيراً (نصف حمام) وغرفة مخصصة للخادمة. وفي الطابق العلوي من هذا التصميم توجد ثلاث غرف نوم ملحقة بحمامات داخلية، إلى جانب غرفة نوم رئيسة واسعة لها نوافذ كبيرة الحجم، وفيها مساحة كبيرة مخصصة لخزانة الملابس وحمام داخلي فخم مجهز بحوض استحمام، مع شرفة مظللة تطل على الفناء.",
       },
       {
         id: 3,
@@ -675,11 +688,11 @@ const arabic = {
           "/Images/villas/4bgv/floorplan/arfirstfloor.png",
         ],
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "يحتوي الطابق الأرضي على بهو ترحيبي. شرفة مظللة كبيرة مجاورة لغرفة المعيشة. يعتبر المرآب الذي يتسع لسيارتين والذي يمكن الوصول إليه من الفناء خلف غرفة الخادمة مناسبًا.",
+          "يحتوي الطابق الأول على أربع غرف نوم بحمامات داخلية. تحتوي غرفة النوم الرئيسية على مساحة خزانة واسعة ، وحمام داخلي كبير ، وشرفة واسعة تطل على المساحات الخضراء المورقة في الفناء.",
         ],
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "المنطقة الشرقية المستدامة هي المكون السكني الرئيسي المتمركز بشكل استراتيجي في قلب المدينة مع وصول خالٍ من السيارات إلى جميع المكونات الأخرى.",
         nearby: [
           {
             name: "Plaza",
@@ -743,29 +756,29 @@ const arabic = {
             description: "دهان فينوماستيك عالي الجودة",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         gf_image: "",
         ff_image: "",
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "كورتيارد فيلا",
-        location: "الفلل الغربية",
+        type: "جاردن فيلا",
+        location: "الفلل الشرقية",
         locationid: 2,
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
@@ -773,7 +786,7 @@ const arabic = {
         description:
           "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "صُممت فلل الحديقة المكونة من أربع غرف نوم ببراعة لتشكل مكاناً مثالياً للأشخاص الذين يولون البيئة وسلامتها اهتماماً بالغاً. وتتضمن هذه الفئة من الفلل ردهة استقبال واسعة وأنيقة ومرحّبة، وغرفة جلوس شاسعة مرفقة بشرفة مظللة بمساحة ممتدة، وفيها كذلك موقف يتسع لسيارتين يقع خلف غرفة الخادمة ويمكن الوصول إليه عبر فناء الحديقة. وتتصل المساحة المخصصة لتناول الطعام بأسلوب مريح وسلس مع المطبخ المصمم على شكل حرف U، ما يتيح مساحةً تتسع لإبداعات عشاق إعداد الطعام. أما الطابق الأول فيتألف من أربع غرف نوم مرفقة بحمامات داخلية، وتحتوي غرفة النوم الرئيسة على مساحة وافرة لخزانة الملابس وحمام داخلي واسع رائع التصميم، وشرفة رحبة تقع فوق المساحة الخضراء الفخمة في الفناء",
       },
     ],
     filters: [
@@ -921,7 +934,7 @@ const arabic = {
     details: "التفاصيل",
     description: "الوصف",
     gobacktomasterplan: "خريطة المشروع",
-    primelocationText: "Prime Location in Master Plan",
+    primelocationText: "الموقع",
     villatypes: "أنواع الفيلات",
     seevillas: "اعرف المزيد",
     previousto: "السابق",
@@ -945,7 +958,7 @@ const arabic = {
     parking: "موقف سيارات",
     press: "الصحافة",
     ourstory: "قصتنا",
-    sendmessage: "إرسال رسالة",
+    sendmessage: "إرسل",
     diamonddevelopers: "The Sustainable City - Yiti",
     cpyright: "© The Sustainable City - Yiti 2022",
     language: "English",
@@ -1027,7 +1040,8 @@ const arabic = {
       name: "الدراجات الهوائية",
       icon: <Popcycling />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
-      description: "",
+      description:
+        "يشجع مسار الدراجات المخصص الناس على الابتعاد عن السيارات من خلال توفير سيكاس غير المركبات داخل المدينة المستدامة.",
     },
     {
       id: 19,
@@ -1223,63 +1237,63 @@ const arabic = {
         title1: "شبكة سيارات",
         title2: "كهرباء مشتركة",
         description:
-          "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars..",
+          "تعمل خطوط المركبات و العربات الكهربائية داخل المجتمع على تسهيل التنقل النظيف وتشجع المستخدمين على التخلي عن سياراتهم.",
       },
       {
         id: 1,
         icon: <Drop />,
-        title1: "Wastewater",
-        title2: "Recycling",
+        title1: "إعادة تدويز",
+        title2: "المياه",
         description:
-          "Our cities aim to recycle 100% of their wastewater and use the resulting treated sewage effluent to irrigate the landscape.",
+          "تهدف مدننا إلى إعادة تدوير 100٪ من مياه الصرف الصحي واستخدام المياه المعالجة الناتجة لري البساتين الطبيعية.",
       },
       {
         id: 2,
         icon: <House />,
-        title1: "Thermal",
-        title2: "Insulation",
+        title1: "العزل",
+        title2: "الحراري",
         description:
-          "By using products with high insulation levels in our buildings, we are able to create a well insulated envelope that significantly reduces energy demand.",
+          "يمكننا إنشاء غلاف معزول جيدًا يقلل بشكل كبير من استهلاك الطاقة باستخدام منتجات ذات مستويات عزل عالية في مبانينا.",
       },
       {
         id: 3,
         icon: <Bin />,
-        title1: "Waste to",
-        title2: "Energy",
+        title1: "الطاقة",
+        title2: "المتجددة",
         description:
-          "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+          "نحن نعتمد على مصادر متجددة نظيفة لتوليد الطاقة لمدننا. تشمل هذه الأنظمة على الخلايا الكهروضوئية الشمسية ومحطات الغاز الحيوي وتوربينات الرياح.",
       },
       {
         id: 4,
         icon: <Station />,
-        title1: "EV Charging",
-        title2: "Stations",
+        title1: "محطات شحن",
+        title2: "المركبات الكهربائية",
         description:
-          "EV chargers are distributed around our cities to further promote the use of electric cars.",
+          "يتم توزيع شواحن المركبات الكهربائية في جميع أنحاء مدننا لزيادة الترويج لاستخدام السيارات الكهربائية.",
       },
       {
         id: 5,
         icon: <SmartHouse />,
-        title1: "Smart",
-        title2: "Home",
+        title1: "المنازل",
+        title2: "الذكية",
         description:
-          "By integrating smart technologies to manage our systems, we are able to drive higher efficiencies across all platforms, allowing us to maximise the use of our assets and resources.",
+          "يمكننا تحقيق كفاءات أعلى عبر جميع منصاتنا الأساسية من خلال دمج التقنيات الذكية لإدارة أنظمتنا، مما يسمح لنا بزيادة مواردنا وممتلكاتنا ",
       },
       {
         id: 6,
         icon: <Plant />,
-        title1: "Low-Carbon",
-        title2: "Embodiment",
+        title1: "الحد من",
+        title2: "الانبعاثات",
         description:
-          "We aim to maximise the use of low-embodied carbon materials and products in order to help us achieve our net zero carbon goals.",
+          "نحن نهدف إلى تعظيم استخدام المواد والمنتجات منخفضة الكربون من أجل مساعدتنا في تحقيق أهدافنا الكربونية الصافية.",
       },
       {
         id: 7,
         icon: <World />,
-        title1: "Food",
-        title2: "Production",
+        title1: "الإنتاج الغذائي",
+        title2: "المحلي",
         description:
-          "By facilitating community gardening initiatives, residents are encouraged to grow their own food and further promote local food production within our developments.",
+          "من خلال تسهيل مبادرات البستنة المجتمعية ، يتم تشجيع السكان على زراعة طعامهم وتعزيز إنتاج الغذاء المحلي في مشاريعنا.",
       },
     ],
   },
@@ -1346,25 +1360,31 @@ const arabic = {
           "يرجى تعبئة النموذج أدناه لتسجيل إهتمامك. سيتم التواصل معكم في أقرب وقت ممكن.",
         data: [
           {
-            title: "البريد الإلكتروني",
-            content: "hello@thesustainablecity-yiti.com",
-            icon: <Email />,
-          },
-          {
             title: "العنوان",
             content: "مركز ميناء السلطان قابوس، سلطنة عمان",
             icon: <Pin />,
-          },
-          {
-            title: "رقم الهاتف",
-            content: "+968 8000 33 33",
-            icon: <Tel />,
           },
           {
             title: "أوقات العمل",
             content: "09:00AM - 07:00PM : الأحد - الخميس",
             content2: "10:00AM - 7:00PM : السبت",
             icon: <Clock />,
+          },
+
+          {
+            title: "رقم الهاتف",
+            content: "+968 8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "Telephone:",
+            content: "8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "البريد الإلكتروني",
+            content: "hello@thesustainablecity-yiti.com",
+            icon: <Email />,
           },
         ],
         socialmedia: [
@@ -1456,11 +1476,11 @@ const arabic = {
       links: [
         {
           text: "سجل إهتمامك",
-          link: "/contact",
+          link: "/contact-us",
         },
         {
           text: "كن وسيطاً عقاريا",
-          link: "/contact?broker=true",
+          link: "/contact-us?broker=true",
         },
       ],
     },
@@ -1492,9 +1512,93 @@ const arabic = {
           title: "رقم الهاتف",
           link: "+968 8000 33 33",
         },
+        {
+          title: "Telephone:",
+          link: "+968 2471 0700",
+        },
       ],
     },
   ],
+  seo: {
+    home: {
+      title: "الصفحة الرئيسية | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "الصفحة الرئيسية | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+    },
+    floorplan: {
+      title: "معلومات الفلل | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "معلومات الفلل | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+    },
+    villapage: {
+      title: "مخططات الفلل | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "مخططات الفلل | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+    },
+    aboutus: {
+      title: "من نعن | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "من نعن | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/aboutus",
+        description: "",
+      },
+    },
+    contactus: {
+      title: "تواصل معنا | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "تواصل معنا | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/contact-us",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+    },
+    newspage: {
+      title: "الصحاغة | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "الصحاغة | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/news",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+    },
+  },
 };
 
 export default arabic;

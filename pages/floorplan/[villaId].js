@@ -9,10 +9,24 @@ import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
 import Plans from "../../components/Villapage/Plans";
 import styles from "../../styles/villapage.module.scss";
+import useLanguage from "../../utils/useLanguage";
+import { useRouter } from "next/router";
 const Villa = () => {
+  const lan = useLanguage();
+  const router = useRouter();
+  const { villaId } = router.query;
+  const data = lan.villaplansection.villas.find(
+    (villa) => villa.slug === villaId
+  );
+
   return (
     <>
-      <HeadComponent title={"TSC-Villapage"} />
+      <HeadComponent
+        title={`${lan.seo.villapage.title}| ${data?.title}`}
+        description={lan.seo.villapage.description}
+        og={lan.seo.villapage.og}
+        keyword={lan.seo.villapage.keyword}
+      />
       <div className={styles.villapagemain}>
         <Section1 />
         <Plans />

@@ -1,47 +1,20 @@
 import React from "react";
 import Head from "next/head";
-import useLanguage from "../../utils/useLanguage";
-const HeadComponent = ({ title, description, keyword, children }) => {
-  const lan = useLanguage();
+const HeadComponent = ({ title, description, keyword, children, og }) => {
   return (
     <Head>
       <title>{title}</title>
-      {lan.language === 1 ? (
-        <meta
-          name="description"
-          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman."
-        />
-      ) : (
-        <meta
-          name="description"
-          content="المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان."
-        />
-      )}
+      <meta name="description" content={description} />
+      <meta name="keyword" content={keyword} />
       <meta name="viewport" content="width=device-width user-scalable=1" />
-      <meta
-        property="og:url"
-        content="https://www.thesustainablecity-yiti.com/"
-      />
+      <meta property="og:url" content={og.url} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="ar_AR" />
       <meta property="og:locale:alternate" content="ar_AR" />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:image"
-        itemProp="image"
-        content="/Images/map-pic.png"
-      />
-      {lan.language === 1 ? (
-        <meta
-          property="og:description"
-          content="Oman Tourism Development Company (Omran) and Diamond Developers have joined forces to develop a world-class, mixed use project that meets the highest standards of social, environmental, and economic sustainability. Perched on the picturesque coastline, overlooking the Gulf of Oman, The Sustainable City Yiti (TSC Yiti) brings together a pioneering vision of sustainability and an unparalleled quality of community living to Oman."
-        />
-      ) : (
-        <meta
-          property="og:description"
-          content="المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان."
-        />
-      )}
+      <meta property="og:image" itemProp="image" content={og.img} />
+
+      <meta property="og:description" content={og.description} />
 
       <meta property="og:site_name" content="The Sustainable City Yiti" />
       <meta
@@ -50,13 +23,8 @@ const HeadComponent = ({ title, description, keyword, children }) => {
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="thesustainablecity-yiti.com" />
-      <meta
-        property="twitter:url"
-        content="https://www.thesustainablecity-yiti.com/"
-      />
-      <meta name="twitter:image" content="/Images/map-pic.png" />
-      <title>Homepage | The Sustainable City Yiti</title>
-
+      <meta property="twitter:url" content={og.url} />
+      <meta name="twitter:image" content={og.img} />
       {children}
     </Head>
   );

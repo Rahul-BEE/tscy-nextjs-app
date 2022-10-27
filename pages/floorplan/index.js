@@ -7,7 +7,7 @@ import useLanguage from "../../utils/useLanguage";
 import { BsArrowDownCircle } from "react-icons/bs";
 import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
-import { HeadComponent } from "../../components";
+import { HeadComponent, Location } from "../../components";
 
 const Floorplan = () => {
   const lan = useLanguage();
@@ -15,7 +15,12 @@ const Floorplan = () => {
   const [filterId, setFilterId] = useState(0);
   return (
     <>
-      <HeadComponent title={"TSC-Floorplan"} />
+      <HeadComponent
+        title={lan.seo.floorplan.title}
+        description={lan.seo.floorplan.description}
+        og={lan.seo.floorplan.og}
+        keyword={lan.seo.floorplan.keyword}
+      />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>
           <p>

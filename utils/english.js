@@ -75,8 +75,33 @@ const english = {
   },
 
   bannersection: {
-    title1: "A Sustainable Lifestyle",
-    title2: "For a Better Tomorrow",
+    slides: [
+      {
+        img: "/Images/map-pic.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner5.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner2.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner3.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner4.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+    ],
   },
 
   sustainablesection: {
@@ -412,8 +437,8 @@ const english = {
           "/Images/villas/3bcv/floorplan/firstfloor.png",
         ],
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The ground floor is made up of ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area.",
+          "The first floor has three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access.",
         ],
         interior: [
           {
@@ -447,21 +472,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         link: "/floorplan/1",
         ff_plan: "",
@@ -478,12 +503,12 @@ const english = {
           // first: [5, 6, 7, 4],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         nearby: [
           {
             name: "Plaza",
             description:
-              "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+              "A lively community plaza with commercial facilities such as shops, restaurants, cafes, offices, and apartments. Festivals, celebrations, and exhibitions are some of the activities that are planned to take place there as part of an extensive calendar of arts, culture, and entertainment-related events.",
             img: "/Images/villas/amenities/plaza.png",
           },
           {
@@ -514,9 +539,9 @@ const english = {
         gfa: "238",
         bua: "256",
         description:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area. Upstairs there are three en-suite bedrooms with plenty of room for study, sleep, and storage. The master bedroom, complete with an extensive wardrobe area, lavishly accommodated bathroom, and balcony access overlooking the meticulously groomed courtyard, provides all of the necessary elements for tranquil and comfortable living.",
         interiorDescription:
-          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a half bathroom separating the spacious living room area.",
+          "Our three-bedroom villas are spacious and stylishly contemporary. This functional layout takes an enlightened approach to the ground floor with ample kitchen space adjacent to the maid’s quarters accompanied by a guest bathroom separating the spacious living room area.",
       },
       {
         id: 2,
@@ -530,15 +555,15 @@ const english = {
         mainImg: "/Images/villas/4bcv/4bcv.png",
         blurImg: "/Images/villas/4bcv/4bcvblur.png",
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The lower level has a spacious living room, the kitchen has high-end fixtures and plenty of space to inspire culinary creativity, a guest-bathroom, maid's room and an adjacent dining room.",
+          "This layout has three en-suite bedrooms and a large master bedroom upstairs. The master bedroom has large windows, ample wardrobe space, a luxurious en-suite bathroom with a soaking tub, and a shaded balcony overlooking the courtyard.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4, 7],
           // first: [5, 6, 7],
         },
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The West Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         floorplan: [
           "/Images/villas/4bcv/floorplan/groundfloor.png",
           "/Images/villas/4bcv/floorplan/firstfloor.png",
@@ -575,21 +600,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -651,8 +676,8 @@ const english = {
         mainImg: "/Images/villas/4bgv/4bgv.png",
         blurImg: "/Images/villas/4bgv/4bgvblur.png",
         floordesc: [
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
-          "Transform your home office into your new favorite meeting room—and your desk into a shared table where you can gather with your team.",
+          "The ground floor has a welcoming foyer. A large shaded terrace adjoins the living room. The courtyard-accessible two-car garage behind the maid's room is convenient.",
+          "The first floor has four en-suite bedrooms. The master bedroom has ample wardrobe space, a large en-suite bathroom, and a wide balcony overlooking the courtyard's lush greenery.",
         ],
         propertyFeatures: {
           ground: [0, 1, 2, 3, 4, 6, 7],
@@ -694,21 +719,21 @@ const english = {
             description: "High finishing fenomastic paint",
             img: "/Images/villas/3bcv/3bcvInterior/3.png",
           },
-          {
-            title: "Wardrobes",
-            description: "Custom made high gloss veneer finish",
-            img: "/Images/villas/3bcv/3bcvInterior/1.png",
-          },
-          {
-            title: "Sanitary",
-            description: "Modern designed sanitary",
-            img: "/Images/villas/3bcv/3bcvInterior/2.png",
-          },
-          {
-            title: "Wall Paint",
-            description: "High finishing fenomastic paint",
-            img: "/Images/villas/3bcv/3bcvInterior/3.png",
-          },
+          // {
+          //   title: "Wardrobes",
+          //   description: "Custom made high gloss veneer finish",
+          //   img: "/Images/villas/3bcv/3bcvInterior/1.png",
+          // },
+          // {
+          //   title: "Sanitary",
+          //   description: "Modern designed sanitary",
+          //   img: "/Images/villas/3bcv/3bcvInterior/2.png",
+          // },
+          // {
+          //   title: "Wall Paint",
+          //   description: "High finishing fenomastic paint",
+          //   img: "/Images/villas/3bcv/3bcvInterior/3.png",
+          // },
         ],
         nearby: [
           {
@@ -747,11 +772,11 @@ const english = {
         bedrooms: "4",
         bathrooms: "6",
         maidroom: "1",
-        type: "Garden Villa ",
+        type: "Garden Villa",
         location: "East District",
         locationid: 2,
         locationDesc:
-          "The YITI Sustainable commercial center comes with all the necessities of life just at a hands distance.",
+          "The East Sustainable District is the main residential component strategically positioned in the heart of the city with car-free access to all other components.",
         locationImg: "/Images/villas/eastdistrict.png",
         gfa: "378",
         bua: "459",
@@ -925,7 +950,7 @@ const english = {
     },
   ],
   commontext: {
-    sendmessage: "Send Message",
+    sendmessage: "Submit",
     getdirection: "Get Directions",
     nearby: "Nearby",
     amenities: "Amenities",
@@ -959,7 +984,7 @@ const english = {
     dontforget: "Dont forget to check our",
     othervillatypes: "Other Villa Types",
     situated: "Situated at a ",
-    primelocationText: "Prime Location in Master Plan",
+    primelocationText: "Location in the Master Plan",
     viewin: "View In",
     masterplan: "Master Plan",
     interiorHeading: "Interior Features",
@@ -1293,19 +1318,9 @@ const english = {
           "Fill up the form and our team will try to help you with your query.",
         data: [
           {
-            title: "Email",
-            content: "hello@thesustainablecity-yiti.com",
-            icon: <Email />,
-          },
-          {
             title: "Address",
             content: "Mina Al Sultan Qaboos Centre Yiti, Sultanate of Oman",
             icon: <Pin />,
-          },
-          {
-            title: "Toll-Free",
-            content: "+968 8000 33 33",
-            icon: <Tel />,
           },
           {
             title: "Working Hours",
@@ -1313,23 +1328,38 @@ const english = {
             content2: "Sat: 10:00AM - 7:00PM",
             icon: <Clock />,
           },
+          {
+            title: "Toll-Free(OMAN)",
+            content: "8000 33 33",
+            icon: <Tel />,
+          },
+          {
+            title: "Telephone:",
+            content: "+968 2471 0700",
+            icon: <Tel />,
+          },
+          {
+            title: "Email",
+            content: "hello@thesustainablecity-yiti.com",
+            icon: <Email />,
+          },
         ],
         socialmedia: [
           {
             icon: <Facebook />,
-            link: "/",
+            link: "https://www.facebook.com/ThesustainablecityYiti?ref=py_c",
           },
           {
             icon: <Linkedin />,
-            link: "/",
+            link: "https://www.linkedin.com/company/the-sustainable-city-yiti/",
           },
           {
             icon: <Instagram />,
-            link: "/",
+            link: "https://www.instagram.com/thesustainablecity_yiti",
           },
           {
             icon: <Twitter />,
-            link: "/",
+            link: "https://twitter.com/TSCYiti?s=20&t=YSRqGJh4w6nxJuNR23i_rw",
           },
         ],
       },
@@ -1403,11 +1433,11 @@ const english = {
       links: [
         {
           text: "Reach out to us",
-          link: "/contact",
+          link: "/contact-us",
         },
         {
           text: "Become a broker",
-          link: "/contact?broker=true",
+          link: "/contact-us?broker=true",
         },
       ],
     },
@@ -1436,12 +1466,205 @@ const english = {
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          title: "Toll-free:",
-          link: "+968 8000 33 33",
+          title: "Toll-free(OMAN):",
+          link: "8000 33 33",
+        },
+        {
+          title: "Telephone:",
+          link: "+968 2471 0700",
         },
       ],
     },
   ],
+  seo: {
+    home: {
+      title: "Homepage | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City Yiti",
+        url: "https://www.thesustainablecity-yiti.com/",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      },
+    },
+    floorplan: {
+      title: "Floorplan | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City Yiti",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+      },
+    },
+    villapage: {
+      title: "Villa Detail | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City- Yiti",
+        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+      },
+    },
+    aboutus: {
+      title: "About Us | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City- Yiti",
+        url: "https://www.thesustainablecity-yiti.com/aboutus",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      },
+    },
+    contactus: {
+      title: "Contact Us | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City Yiti",
+        url: "https://www.thesustainablecity-yiti.com/contact-us",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+      },
+    },
+    newspage: {
+      title: "News | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City-Yiti",
+        url: "https://www.thesustainablecity-yiti.com/news",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+      },
+    },
+  },
 };
 
 export default english;

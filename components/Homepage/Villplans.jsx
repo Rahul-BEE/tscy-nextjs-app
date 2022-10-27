@@ -28,6 +28,7 @@ const Villplans = () => {
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
+  const [brochureDownload, setBrochureDownload] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -40,19 +41,29 @@ const Villplans = () => {
     };
 
     let result = await sendEmail({ data, type: 0 });
-    if (result === "success") {
+    console.log(result);
+    if (result) {
       setLoading(false);
     } else {
       setLoading(false);
+      return;
     }
     dispatch({
       type: "updateuser",
       value: data,
     });
     setDataReceived(true);
+    if (brochureDownload === 1) {
+      window.open("/brochure/Yiti Brochure.pdf");
+    } else if (brochureDownload === 2) {
+      window.open("/brochure/Villa Brochure Final.pdf");
+    } else {
+      return;
+    }
   };
   const handleClick = (id) => {
     setShowForm(true);
+    setBrochureDownload(id);
   };
 
   const changeVilla = (index) => {

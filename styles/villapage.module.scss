@@ -88,6 +88,10 @@
         justify-content: center;
         gap: 2rem;
 
+        a {
+            color: #058DA6;
+        }
+
         &:lang(ar) {
             font-size: 1.2rem;
         }

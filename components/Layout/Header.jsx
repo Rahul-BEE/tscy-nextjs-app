@@ -147,7 +147,7 @@ const Header = () => {
               ? styles.header_left_btn2
               : ""
           } `}>
-          <Link href={"/contact"} passHref>
+          <Link href={"/contact-us"} passHref>
             <button className={`btn ${styles.contactbtn}`}>
               {lan.commontext.registerinterest}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
