@@ -73,8 +73,33 @@ const arabic = {
   },
 
   bannersection: {
-    title1: "نمط حياة مستدام",
-    title2: "لغدٍ أفضل",
+    slides: [
+      {
+        img: "/Images/map-pic.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner5.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner2.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner3.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+      {
+        img: "/Images/bannersection/banner4.png",
+        title1: "نمط حياة مستدام",
+        title2: "لغدٍ أفضل",
+      },
+    ],
   },
 
   sustainablesection: {
