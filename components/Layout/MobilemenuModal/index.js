@@ -128,10 +128,10 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                 );
               })}
               <div className={styles.linkdiv}>
-                <Link href="/contact">
+                <Link href="/contact-us">
                   <a
                     className={` ${
-                      router.pathname === "/contact"
+                      router.pathname === "/contact-us"
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}
@@ -228,10 +228,10 @@ const MobileMenu = ({ show, onHide, handleLang, currentLang }) => {
                     </div>
                   );
                 })}
-                <Link href="/contact">
+                <Link href="/contact-us">
                   <a
                     className={`d-flex  align-items-center ${
-                      router.pathname === "/contact"
+                      router.pathname === "/contact-us"
                         ? styles.menuactive
                         : styles.menuinactive
                     }`}

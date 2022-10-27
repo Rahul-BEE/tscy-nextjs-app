@@ -15,7 +15,11 @@ const Floorplan = () => {
   const [filterId, setFilterId] = useState(0);
   return (
     <>
-      <HeadComponent title={"TSC-Floorplan"} />
+      <HeadComponent
+        title={lan.seo.floorplan.title}
+        description={lan.seo.floorplan.description}
+        og={lan.seo.floorplan.og}
+      />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>
           <p>
