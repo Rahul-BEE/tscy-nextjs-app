@@ -51,7 +51,13 @@ function Plans() {
     }
   };
   const planheaderRef = useRef(null);
-
+  const planDragController = (info) => {
+    if (info.velocity.x > 60) {
+      setExpanded(0);
+    } else if (info.velocity.x < -10) {
+      setExpanded(1);
+    }
+  };
   return (
     <div className={styles.hero_box}>
       <div className={styles.realtiveParent}>
@@ -230,7 +236,14 @@ function Plans() {
                 </div>
               </div>
               {/* center */}
-              <div
+              <motion.div
+                drag="x"
+                key={expanded}
+                dragConstraints={{
+                  right: 0,
+                  left: 0,
+                }}
+                onDragEnd={(_, info) => planDragController(info)}
                 className={`${styles.hero_items} ${styles.floorplanGrid}`}
                 style={{
                   position: "relative",
@@ -244,8 +257,11 @@ function Plans() {
                   objectFit="cover"
                   quality={100}
                   priority
+                  style={{
+                    pointerEvents: "none",
+                  }}
                 />
-              </div>
+              </motion.div>
 
               <div className={`${styles.hero_items} ${styles.propertiesgrid}`}>
                 <div className={styles.item_container2}>
