@@ -171,16 +171,7 @@ const arabic = {
         icon: <Popplaza />,
         description:
           "أحد أكبر المراكز في المنطقة التي تقدم نهجًا شاملاً ومتكاملاً تجاه اضطرابات طيف التوحد (ASD) والاضطرابات الأخرى ذات الصلة. تم تصميم النهج الشامل للمركز لتمكين اصحاب الهمم وعائلاتهم من مواكبة الحياة اليومية و تحدياتها",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          تكلم: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+
         slideimg: [
           "/Images/masterplan/autismcenter/1.png",
           "/Images/masterplan/autismcenter/2.png",
@@ -208,19 +199,11 @@ const arabic = {
       },
       {
         id: 3,
-        name: "مختبر سي",
+        name: "مختبرالاستدامة سي",
         icon: <Popseelab />,
-        description: "",
-        details: {
-          area: 1250,
-          capacity: 3000,
-          built: 2020,
-        },
-        contact: {
-          contact: "0123456",
-          email: "come@yiti.com",
-          Phone: " 0312547",
-        },
+        description:
+          "يعرض مختبر سي الطاقة المتجددة ، والتقنيات ، والزراعة العمودية الداخلية ، وتربية الألبان على نطاق صغير ، وحصاد الرطوبة ، ومعالجة النفايات الصلبة ، والتنقل الذكي. يضم مختبر سي أيضًا معهد سي ، وهو منشأة تعليمية خالية من الكربون للمهنيين العاملين في ممارسات الاستدامة الحضرية.",
+
         slideimg: [
           "/Images/masterplan/seelab/1.png",
           "/Images/masterplan/seelab/2.png",
@@ -232,7 +215,7 @@ const arabic = {
         name: "مسجد مستدام",
         icon: <Popmosque />,
         description:
-          "تخيل مسجدًا تم بناؤه من الألف إلى الياء على اسس مستدامة تم تصميمه خصيصًا للمجتمع الذي يخدمه. المسجد البيئي هو مبنى فريد من نوعه يعتمد بالكامل على الهندسة المعمارية والتصميم الصديقين للبيئة.",
+          "تخيل مسجدًا تم بناؤه على اسس مستدامة. تم تصميمه خصيصًا للمجتمع الذي يخدمه. المسجد البيئي هو مبنى فريد من نوعه يعتمد بالكامل على الهندسة المعمارية والتصميم الصديقين للبيئة.",
         details: {
           "عدد المصليين": "٨٣٣",
         },
@@ -251,7 +234,8 @@ const arabic = {
         id: 5,
         name: "الحزام الأخضر",
         icon: <Popspine />,
-        description: "",
+        description:
+          "يتكون الحزام الأخضر، الممتد على طول المدينة، من النباتات والأشجار التي تتكيف مع مناخ عٌمان. يتم استخدام البيوت الخضراء في عملية زراعة الأعشاب والخضر الورقية.",
         details: {
           "بيوت خضراء": "٤",
         },
@@ -265,7 +249,8 @@ const arabic = {
         id: 6,
         name: "شقق فاخرة",
         icon: <Popbranded />,
-        description: "",
+        description:
+          "تعد الشقق الفاخرة الآن واحدة من أكثر جوانب الحياة العصرية. يوفر Nikki Beach ، المشغل المشهور عالميًا ، 178 شقة تحمل علامة تجارية, في مدينة يتي المستدامة.",
 
         slideimg: [
           "/Images/masterplan/brandedresidencies/1.png",
@@ -306,7 +291,8 @@ const arabic = {
         name: "فندق 4 نجوم",
         id: 9,
         icon: <Pop4star />,
-        description: "",
+        description:
+          "يتميز الفندق من فئة الأربع نجوم بروح الجار وأجواء ودية ويردد صدى روح الاستدامة في المجتمع.",
         details: {
           الغرف: "١٩٧",
         },
@@ -321,7 +307,8 @@ const arabic = {
         villadetails: true,
         name: "الحي الغربي",
         icon: <Popwest />,
-        description: "",
+        description:
+          "تم تصميم المنازل في الحي المستدام على نحو ترشيد استهلاك الطاقة من خلال إدارة جانب الطلب ، بما في ذلك التصميم السلبي والنشط. باستخدام التصميم النشط ، تستهلك المنازل طاقة أقل من أي وحدة مماثلة في عٌمان ، مع توفير مضمون.",
         details: {
           المساحة: "٧٢٠٠٠ متر مربع",
           الفلل: 264,
@@ -348,7 +335,7 @@ const arabic = {
         name: "مدرسة وحضانة",
         icon: <Popschool />,
         description:
-          "يمكن الوصول إلى المدرسة والحضانة عن طريق المشي أو ركوب الدراجات دون الحاجة إلى عبور أي طريق. تتبع المدرسة والحضانة روح الاستدامة ويتم تشغيلهما أيضًا بواسطة الطاقة الشمسية.",
+          "يمكن الوصول إلى المدرسة والحضانة عن طريق المشي أو ركوب الدراجات دون الحاجة إلى عبور أي طريق. تتبع المدرسة والحضانة نهج الاستدامة ويتم تشغيلهما بواسطة الطاقة الشمسية.",
         details: {
           الطلاب: "١٢٥٠",
           "غرفة دراسة": 50,
@@ -379,7 +366,8 @@ const arabic = {
         villadetails: true,
         name: "الحي الشرقي",
         icon: <Popeast />,
-        description: "",
+        description:
+          "تم تصميم المنازل في الحي المستدام على نحو ترشيد استهلاك الطاقة من خلال إدارة جانب الطلب ، بما في ذلك التصميم السلبي والنشط. باستخدام التصميم النشط ، تستهلك المنازل طاقة أقل من أي وحدة مماثلة في عٌمان ، مع توفير مضمون.",
         details: {
           المساحة: "١٦٠٠٠ متر مربع",
           الفلل: "٣٦",
@@ -403,7 +391,7 @@ const arabic = {
 
         icon: <Popplaza />,
         description:
-          "ساحة مجتمعية نابضة بالحياة مع مرافق تجارية مثل المحلات التجارية والمطاعم والمقاهي والمكاتب والشقق. المهرجانات والاحتفالات والمعارض هي بعض الأنشطة المخطط لها هناك كجزء من تقويم شامل للفنون والثقافة والأحداث المتعلقة بالترفيه. 17 مبنى سكني و2 مباني ادارية.",
+          "ساحة مجتمعية نابضة بالحياة مع مرافق تجارية مثل المحلات التجارية والمطاعم والمقاهي والمكاتب والشقق. المهرجانات والاحتفالات والمعارض هي بعض الأنشطة المخطط لها هناك كجزء من تقويم شامل للفنون والثقافة والأحداث المتعلقة بالترفيه. 17 مبنى سكني و2 مباني ادارية.  ",
         details: {
           الاستديوهات: "١٦٨",
           "١ غرفة نوم": "٤٥١",
@@ -1052,7 +1040,8 @@ const arabic = {
       name: "الدراجات الهوائية",
       icon: <Popcycling />,
       slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
-      description: "",
+      description:
+        "يشجع مسار الدراجات المخصص الناس على الابتعاد عن السيارات من خلال توفير سيكاس غير المركبات داخل المدينة المستدامة.",
     },
     {
       id: 19,
@@ -1248,63 +1237,63 @@ const arabic = {
         title1: "شبكة سيارات",
         title2: "كهرباء مشتركة",
         description:
-          "Shared EV or buggy networks within the community further facilitates clean mobility and encourages users to forgo their cars..",
+          "تعمل خطوط المركبات و العربات الكهربائية داخل المجتمع على تسهيل التنقل النظيف وتشجع المستخدمين على التخلي عن سياراتهم.",
       },
       {
         id: 1,
         icon: <Drop />,
-        title1: "Wastewater",
-        title2: "Recycling",
+        title1: "إعادة تدويز",
+        title2: "المياه",
         description:
-          "Our cities aim to recycle 100% of their wastewater and use the resulting treated sewage effluent to irrigate the landscape.",
+          "تهدف مدننا إلى إعادة تدوير 100٪ من مياه الصرف الصحي واستخدام المياه المعالجة الناتجة لري البساتين الطبيعية.",
       },
       {
         id: 2,
         icon: <House />,
-        title1: "Thermal",
-        title2: "Insulation",
+        title1: "العزل",
+        title2: "الحراري",
         description:
-          "By using products with high insulation levels in our buildings, we are able to create a well insulated envelope that significantly reduces energy demand.",
+          "يمكننا إنشاء غلاف معزول جيدًا يقلل بشكل كبير من استهلاك الطاقة باستخدام منتجات ذات مستويات عزل عالية في مبانينا.",
       },
       {
         id: 3,
         icon: <Bin />,
-        title1: "Waste to",
-        title2: "Energy",
+        title1: "الطاقة",
+        title2: "المتجددة",
         description:
-          "Biogas plants are used to generate energy using green organic waste collected from our cities.",
+          "نحن نعتمد على مصادر متجددة نظيفة لتوليد الطاقة لمدننا. تشمل هذه الأنظمة على الخلايا الكهروضوئية الشمسية ومحطات الغاز الحيوي وتوربينات الرياح.",
       },
       {
         id: 4,
         icon: <Station />,
-        title1: "EV Charging",
-        title2: "Stations",
+        title1: "محطات شحن",
+        title2: "المركبات الكهربائية",
         description:
-          "EV chargers are distributed around our cities to further promote the use of electric cars.",
+          "يتم توزيع شواحن المركبات الكهربائية في جميع أنحاء مدننا لزيادة الترويج لاستخدام السيارات الكهربائية.",
       },
       {
         id: 5,
         icon: <SmartHouse />,
-        title1: "Smart",
-        title2: "Home",
+        title1: "المنازل",
+        title2: "الذكية",
         description:
-          "By integrating smart technologies to manage our systems, we are able to drive higher efficiencies across all platforms, allowing us to maximise the use of our assets and resources.",
+          "يمكننا تحقيق كفاءات أعلى عبر جميع منصاتنا الأساسية من خلال دمج التقنيات الذكية لإدارة أنظمتنا، مما يسمح لنا بزيادة مواردنا وممتلكاتنا ",
       },
       {
         id: 6,
         icon: <Plant />,
-        title1: "Low-Carbon",
-        title2: "Embodiment",
+        title1: "الحد من",
+        title2: "الانبعاثات",
         description:
-          "We aim to maximise the use of low-embodied carbon materials and products in order to help us achieve our net zero carbon goals.",
+          "نحن نهدف إلى تعظيم استخدام المواد والمنتجات منخفضة الكربون من أجل مساعدتنا في تحقيق أهدافنا الكربونية الصافية.",
       },
       {
         id: 7,
         icon: <World />,
-        title1: "Food",
-        title2: "Production",
+        title1: "الإنتاج الغذائي",
+        title2: "المحلي",
         description:
-          "By facilitating community gardening initiatives, residents are encouraged to grow their own food and further promote local food production within our developments.",
+          "من خلال تسهيل مبادرات البستنة المجتمعية ، يتم تشجيع السكان على زراعة طعامهم وتعزيز إنتاج الغذاء المحلي في مشاريعنا.",
       },
     ],
   },
