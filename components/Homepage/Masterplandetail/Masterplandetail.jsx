@@ -30,12 +30,20 @@ const parentVariant = {
     },
   }),
 };
-const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
+const Masterplandetail = ({
+  item,
+  track,
+  goback,
+  direction,
+  setDirection,
+  controlItem,
+}) => {
   const lan = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
   const [sliderWidth, setSliderWidth] = useState(0);
-  const [index, setIndex] = useState(track ? track - 16 : item - 1);
+  // const [index, setIndex] = useState(track ? track - 16 : item - 1);
   // const [direction, setDirection] = useState(1);
+  const index = track ? track - 16 : item - 1;
   const [showGradient, setShowGradient] = useState(false);
   const [data, _] = useState(track ? lan.tracks : lan.masterplan.markers);
   const length = data[index]?.slideimg.length;
@@ -62,7 +70,18 @@ const Masterplandetail = ({ item, track, goback, direction, setDirection }) => {
   }, [slideIndex, item, track]);
 
   const updateIndex = (id) => {
-    setIndex(id);
+    if (track && index < lan.tracks.length - 1) {
+      controlItem({ item: null, track: track + 1 });
+    }
+    if (item && index < lan.masterplan.markers.length - 1) {
+      controlItem({ item: item + 1, track: null });
+    }
+    if (track && index !== 0) {
+      controlItem({ item: null, track: track - 1 });
+    }
+    if (item && index !== 0) {
+      controlItem({ item: item - 1, track: null });
+    }
   };
   return (
     <>

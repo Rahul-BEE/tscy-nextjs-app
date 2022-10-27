@@ -50,9 +50,7 @@ const Masterplan = () => {
   const containerRef = useRef();
   const imageContainerRef = useRef();
   const getPath = ({ id }) => {
-    console.log(window.innerWidth);
     if (window.innerWidth > 1224) {
-      console.log("ih");
       if (id === item || track) {
         setItem(null);
         setShow(null);
@@ -99,7 +97,6 @@ const Masterplan = () => {
     setShow(true);
   };
   useEffect(() => {
-    // console.log("calked use", track);
     if (track && desktop) {
       const path = document.getElementById(`path_${track}`);
       const rect = document.getElementById("something").getBoundingClientRect();
@@ -226,7 +223,6 @@ const Masterplan = () => {
   };
 
   const controlItem = ({ item, track }) => {
-    console.log(item, track);
     if (item) {
       setItem(item);
     } else if (track) {
@@ -234,183 +230,188 @@ const Masterplan = () => {
     }
   };
   return (
-    <div className={styles.app__masterplan} id="masterplananchor">
-      <Row
-        className="headingRow"
-        style={{
-          paddingTop: "2rem",
-        }}>
-        <Col>
-          {/* <h5 className="sectionsubHeading mt-5">
+    <>
+      <div className={styles.app__masterplan} id="masterplananchor">
+        <Row
+          className="headingRow"
+          style={{
+            paddingTop: "2rem",
+          }}>
+          <Col>
+            {/* <h5 className="sectionsubHeading mt-5">
               {lan.locationsection.title1}
             </h5> */}
-          <h2 className="sectionmainHeading">{lan.masterplan.title2}</h2>
-        </Col>
-      </Row>
-      <div className={`sectionmaindescription`}>
-        <p>{lan.masterplan.description}</p>
-      </div>
-      {showDetail ? (
-        <>
-          <div
-            className={styles.masterplanContainer}
-            id="masterplancontainer"
-            ref={containerRef}>
-            <Masterplandetail
+            <h2 className="sectionmainHeading">{lan.masterplan.title2}</h2>
+          </Col>
+        </Row>
+        <div className={`sectionmaindescription`}>
+          <p>{lan.masterplan.description}</p>
+        </div>
+        {showDetail ? (
+          <>
+            <div
+              className={styles.masterplanContainer}
+              id="masterplancontainer"
+              ref={containerRef}>
+              <Masterplandetail
+                item={item}
+                track={track}
+                goback={getBacktoMasterplan}
+                direction={direction}
+                setDirection={setDirection}
+                controlItem={controlItem}
+              />
+            </div>
+            <Masterplandetailbtm
               item={item}
               track={track}
-              goback={getBacktoMasterplan}
-              direction={direction}
               setDirection={setDirection}
+              controlItem={controlItem}
             />
-          </div>
-          <Masterplandetailbtm
-            item={item}
-            track={track}
-            setDirection={setDirection}
-            controlItem={controlItem}
-          />
-        </>
-      ) : (
-        <>
-          <div
-            className={styles.masterplanContainer}
-            id="masterplancontainer"
-            ref={containerRef}>
-            {/* <div className={styles.zoombtn}>
+          </>
+        ) : (
+          <>
+            <div
+              className={styles.masterplanContainer}
+              id="masterplancontainer"
+              ref={containerRef}>
+              {/* <div className={styles.zoombtn}>
               {zoom ? (
                 <AiFillMinusCircle onClick={() => zoomHandler(false)} />
               ) : (
                 <BsFillPlusCircleFill onClick={() => zoomHandler(true)} />
               )}
             </div> */}
-            <motion.div
-              onLoad={setNewConstraints}
-              id="masterplanimageinner"
-              className={styles.masterplan}
-              animate={zoomAnimation}
-              ref={imageContainerRef}
-              drag={isBrowser ? "x" : false}
-              onDrag={scrollHandler}
-              dragListener={isBrowser}
-              onDragEnd={dragHandler}
-              dragElastic={0}
-              dragConstraints={
-                lan.language === 1
-                  ? {
-                      right: constrains.right,
-                      left: constrains.left,
-                      top: constrains.top,
-                      bottom: constrains.bottom,
-                    }
-                  : {
-                      left: constrains.right,
-                      right: -constrains.left,
-                      top: constrains.top,
-                      bottom: constrains.bottom,
-                    }
-              }
-              dragMomentum={true}
-              initial="hidden">
-              <Image
-                id="masterplanmap"
-                src="/Images/masterplanimage.png"
-                layout="fill"
-                className={styles.masterplanmap}
-                blurDataURL="/Images/masterplanimageblur.png"
-                placeholder="blur"
-                priority
-                unoptimized={true}
-                quality={100}
-                alt="MasterPlan"
-              />
-              {track === 18 && <CyclingTrack />}
-              {track === 19 && <Ebuggy />}
-              {track === 16 && <JoggingTrack />}
-              {track === 17 && <EquistrainTrack />}
-              {lan.language === 1 ? (
-                <Masterplanmarker
-                  getPath={getPath}
-                  x={x}
-                  y={y}
-                  w={w}
-                  h={h}
-                  show={show}
-                  setShow={setShow}
-                  item={item}
-                  track={track}
-                  setShowDetail={setShowDetail}
+              <motion.div
+                onLoad={setNewConstraints}
+                id="masterplanimageinner"
+                className={styles.masterplan}
+                animate={zoomAnimation}
+                ref={imageContainerRef}
+                drag={isBrowser ? "x" : false}
+                onDrag={scrollHandler}
+                dragListener={isBrowser}
+                onDragEnd={dragHandler}
+                dragElastic={0}
+                dragConstraints={
+                  lan.language === 1
+                    ? {
+                        right: constrains.right,
+                        left: constrains.left,
+                        top: constrains.top,
+                        bottom: constrains.bottom,
+                      }
+                    : {
+                        left: constrains.right,
+                        right: -constrains.left,
+                        top: constrains.top,
+                        bottom: constrains.bottom,
+                      }
+                }
+                dragMomentum={true}
+                initial="hidden">
+                <Image
+                  id="masterplanmap"
+                  src="/Images/masterplanimage.png"
+                  layout="fill"
+                  className={styles.masterplanmap}
+                  blurDataURL="/Images/masterplanimageblur.png"
+                  placeholder="blur"
+                  priority
+                  unoptimized={true}
+                  quality={100}
+                  alt="MasterPlan"
                 />
-              ) : (
-                <Masterplanmarkerarabic
-                  getPath={getPath}
-                  x={x}
-                  y={y}
-                  w={w}
-                  h={h}
-                  show={show}
-                  setShow={setShow}
-                  item={item}
-                  track={track}
-                  setShowDetail={setShowDetail}
-                />
-              )}
-            </motion.div>
-          </div>
-          <Mobilebtmindex
-            setShowDetail={setShowDetail}
-            setItem={setItem}
-            setTrack={setTrack}
-            setDesktop={setDesktop}
-          />
-        </>
-      )}
-      {!showDetail && (
-        <div className={styles.masterplan_bottomindex}>
-          <div className={styles.indexdiv}>
-            <div className={styles.componentheading}>
-              {lan.commontext.components}
+                {track === 18 && <CyclingTrack />}
+                {track === 19 && <Ebuggy />}
+                {track === 16 && <JoggingTrack />}
+                {track === 17 && <EquistrainTrack />}
+                {lan.language === 1 ? (
+                  <Masterplanmarker
+                    getPath={getPath}
+                    x={x}
+                    y={y}
+                    w={w}
+                    h={h}
+                    show={show}
+                    setShow={setShow}
+                    item={item}
+                    track={track}
+                    setShowDetail={setShowDetail}
+                  />
+                ) : (
+                  <Masterplanmarkerarabic
+                    getPath={getPath}
+                    x={x}
+                    y={y}
+                    w={w}
+                    h={h}
+                    show={show}
+                    setShow={setShow}
+                    item={item}
+                    track={track}
+                    setShowDetail={setShowDetail}
+                  />
+                )}
+              </motion.div>
             </div>
-            <div className={styles.components}>
-              {lan.masterplan.markers.map((marker, index) => (
-                <motion.p
-                  key={`${marker.name}_${index}_${marker.id}`}
-                  onClick={() => getPath({ id: marker.id })}
-                  style={{
-                    color: index === activeIndex - 1 ? "#058da6" : "#777777",
-                  }}>
-                  {marker.id === 13 || marker.id === 10
-                    ? marker.shortname
-                    : marker.name}
-                </motion.p>
-              ))}
-            </div>
-            <div className={styles.seperator}></div>
-            <div className={styles.tracksheading}>{lan.commontext.tracks}</div>
-            <div className={styles.tracks}>
-              {lan.tracks.map((marker, index) => (
-                <motion.p
-                  key={`${marker.name}_${index}_${marker.id}`}
-                  onClick={() => {
-                    getTrackPath({ id: marker.id });
-                  }}
-                  style={{
-                    color: index + 15 === track - 1 ? "#058da6" : "#777777",
-                  }}>
-                  {/* <motion.span
+            <Mobilebtmindex
+              setShowDetail={setShowDetail}
+              setItem={setItem}
+              setTrack={setTrack}
+              setDesktop={setDesktop}
+            />
+          </>
+        )}
+        {!showDetail && (
+          <div className={styles.masterplan_bottomindex}>
+            <div className={styles.indexdiv}>
+              <div className={styles.componentheading}>
+                {lan.commontext.components}
+              </div>
+              <div className={styles.components}>
+                {lan.masterplan.markers.map((marker, index) => (
+                  <motion.p
+                    key={`${marker.name}_${index}_${marker.id}`}
+                    onClick={() => getPath({ id: marker.id })}
+                    style={{
+                      color: index === activeIndex - 1 ? "#058da6" : "#777777",
+                    }}>
+                    {marker.id === 13 || marker.id === 10
+                      ? marker.shortname
+                      : marker.name}
+                  </motion.p>
+                ))}
+              </div>
+              <div className={styles.seperator}></div>
+              <div className={styles.tracksheading}>
+                {lan.commontext.tracks}
+              </div>
+              <div className={styles.tracks}>
+                {lan.tracks.map((marker, index) => (
+                  <motion.p
+                    key={`${marker.name}_${index}_${marker.id}`}
+                    onClick={() => {
+                      getTrackPath({ id: marker.id });
+                    }}
+                    style={{
+                      color: index + 15 === track - 1 ? "#058da6" : "#777777",
+                    }}>
+                    {/* <motion.span
                     style={{
                       display: index + 15 === track - 1 ? "" : "none",
                     }}>
                     -
                   </motion.span> */}
-                  {marker.name}
-                </motion.p>
-              ))}
+                    {marker.name}
+                  </motion.p>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 
