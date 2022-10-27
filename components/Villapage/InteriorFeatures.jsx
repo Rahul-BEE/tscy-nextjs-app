@@ -198,7 +198,7 @@ const InteriorFeatures = () => {
                     <button className={styles.btn1}>
                       {lan.commontext.registerinterest}
                     </button>
-                    <Link href="/brochure/Villa Brochure Final.pdf">
+                    <Link href="/brochure/Yiti Brochure.pdf">
                       <a target="_blank" rel="noreferrer">
                         <button className={styles.btn2}>
                           {lan.commontext.download} {lan.commontext.brochure}

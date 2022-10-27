@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Plandot from "../../public/Svg/floorplans/plandots/plandot.svg";
 import Activeplandot from "../../public/Svg/floorplans/plandots/activeplandot.svg";
 import { Col, Row } from "react-bootstrap";
+import Link from "next/link";
 
 function Plans() {
   const lan = useLanguage();
@@ -110,16 +111,19 @@ function Plans() {
                     </div>
                   </div>
                   {/* Button */}
-                  <motion.div
-                    className={styles.dd_button}
-                    whileHover={{
-                      color: "#058DA6",
-                      background: "#fff",
-                      outline: "1px solid #058da6",
-                    }}
-                  >
-                    {lan.commontext.download} {lan.commontext.floorplan}
-                  </motion.div>
+                  <Link href="/brochure/Villa Brochure Final.pdf">
+                    <a target={"_blank"} rel="noreferrer">
+                      <motion.div
+                        className={styles.dd_button}
+                        whileHover={{
+                          color: "#058DA6",
+                          background: "#fffff",
+                          outline: "1px solid #058da6",
+                        }}>
+                        {lan.commontext.download} {lan.commontext.floorplan}
+                      </motion.div>
+                    </a>
+                  </Link>
 
                   <div className={styles.hero_tablet}>
                     <div className={styles.item}>
@@ -128,8 +132,7 @@ function Plans() {
                           onClick={() => setExpanded(0)}
                           className={
                             expanded === 0 ? styles.active : styles.noactive
-                          }
-                        >
+                          }>
                           <h3>{lan.commontext.groundfloor}</h3>
                         </div>
                         <span className={styles.seperator}></span>
@@ -137,8 +140,7 @@ function Plans() {
                           onClick={() => setExpanded(1)}
                           className={
                             expanded === 1 ? styles.active : styles.noactive
-                          }
-                        >
+                          }>
                           <h3>{lan.commontext.firstfloor}</h3>
                         </div>
                       </div>
@@ -159,14 +161,12 @@ function Plans() {
                           }
                           ref={planheaderRef}
                           className={styles.innerHeading}
-                          animate={mobileIndexAnimation2}
-                        >
+                          animate={mobileIndexAnimation2}>
                           <div
                             onClick={() => clickHandler(0)}
                             className={`${styles.flexItem1} ${
                               expanded === 0 ? styles.active : styles.noactive
-                            }`}
-                          >
+                            }`}>
                             <motion.h3
                               variants={{
                                 hidden: {
@@ -179,8 +179,7 @@ function Plans() {
                                 },
                               }}
                               animate={mobileIndexAnimation}
-                              initial="hidden"
-                            >
+                              initial="hidden">
                               {lan.commontext.groundfloor}
                             </motion.h3>
                             {expanded === 0 ? (
@@ -195,8 +194,7 @@ function Plans() {
                             onClick={() => clickHandler(1)}
                             className={`${styles.flexItem2} ${
                               expanded === 1 ? styles.active : styles.noactive
-                            }`}
-                          >
+                            }`}>
                             <motion.h3
                               variants={{
                                 visible: {
@@ -209,8 +207,7 @@ function Plans() {
                                 },
                               }}
                               animate={mobileIndexAnimation}
-                              initial="hidden"
-                            >
+                              initial="hidden">
                               {lan.commontext.firstfloor}
                             </motion.h3>
                             {expanded === 1 ? (
@@ -237,8 +234,7 @@ function Plans() {
                 className={`${styles.hero_items} ${styles.floorplanGrid}`}
                 style={{
                   position: "relative",
-                }}
-              >
+                }}>
                 <Image
                   className={styles.mobile_img}
                   src={data.floorplan[expanded]}
@@ -303,8 +299,7 @@ function Plans() {
               onClick={() => {
                 clickHandler(0);
                 setExpanded(0);
-              }}
-            >
+              }}>
               {expanded === 0 ? <Activeplandot /> : <Plandot />}
             </span>
             <span
@@ -314,8 +309,7 @@ function Plans() {
               }}
               style={{
                 cursor: "pointer",
-              }}
-            >
+              }}>
               {" "}
               {expanded === 1 ? <Activeplandot /> : <Plandot />}
             </span>
@@ -339,8 +333,7 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
           color: "#777777",
           opacity: isOpen ? 1 : 0.5,
         }}
-        className={styles.heading_accord}
-      >
+        className={styles.heading_accord}>
         {i === 0 ? lan.commontext.groundfloor : lan.commontext.firstfloor}
       </motion.div>
       <AnimatePresence initial={false} exitBeforeEnter>
@@ -356,8 +349,7 @@ const Accordion = ({ i, expanded, setExpanded, data }) => {
             }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
             style={{ overflow: "hidden" }}
-            className={styles.details}
-          >
+            className={styles.details}>
             <p>{data.floordesc[expanded]}</p>
           </motion.section>
         )}
