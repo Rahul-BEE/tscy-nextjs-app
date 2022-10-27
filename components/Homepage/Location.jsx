@@ -5,33 +5,28 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import LocationSvgComp from "./LocationSvg/LocationSvgComp";
 import LocationSvgComp1 from "./LocationSvg/LocationSvgComp1";
-import { LazyMotion, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Location = () => {
+const Location = ({ external }) => {
   const lan = useLanguage();
   const [show, setShow] = useState(false);
+  const router = useRouter();
   const [svgchange, setSvgChange] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShow(false);
-    }, 15000);
-  });
   return (
     <div
       className={styles.app__locationsection}
       style={{
         position: "relative",
-      }}
-    >
+      }}>
       <div className={styles.locationabheadingcontainer}>
         <Row
           className="headingRow"
           style={{
             paddingTop: "2rem",
-          }}
-        >
+          }}>
           <Col>
             {/* <h5 className="sectionsubHeading mt-5">
               {lan.locationsection.title1}
@@ -60,8 +55,7 @@ const Location = () => {
           svgchange === true
             ? styles.container_location
             : styles.container_location_mobile
-        }
-      >
+        }>
         <div className={styles.locationImagecontainer1}>
           <div className={styles.first_img}>
             <Image

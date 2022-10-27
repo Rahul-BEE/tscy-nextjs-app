@@ -31,23 +31,22 @@ const Bannersection = ({ banner }) => {
           },
         }}
         className={styles.app__bannerswiper}>
-        <SwiperSlide className={styles.app__bannerswiperslide}>
-          <Image
-            src="/Images/map-pic.png"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="50% 50%"
-            quality={100}
-            alt="The sustainable city image"
-            as="image"
-            priority={true}
-          />
-          <div className={styles.app__slider_overlay}></div>
-          <motion.div className={styles.app__bannerslidecontent}>
-            <h2>{lan.bannersection.title1}</h2>
-            <h1>{lan.bannersection.title2}</h1>
-          </motion.div>
-        </SwiperSlide>
+        {lan.bannersection.slides.map((slide, index) => (
+          <SwiperSlide className={styles.app__bannerswiperslide} key={index}>
+            <Image
+              src={slide.img}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="50% 50%"
+              quality={100}
+              alt="The sustainable city image"
+              as="image"
+              priority={true}
+            />
+            <div className={styles.app__slider_overlay}></div>
+          </SwiperSlide>
+        ))}
+        {/* 
         <SwiperSlide className={styles.app__bannerswiperslide}>
           <Image
             src="/Images/banner2.png"
@@ -96,11 +95,14 @@ const Bannersection = ({ banner }) => {
             <h2>{lan.bannersection.title1}</h2>
             <h1>{lan.bannersection.title2}</h1>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
-
+      <motion.div className={styles.app__bannerslidecontent}>
+        <h2>{lan.bannersection.slides[0].title1}</h2>
+        <h1>{lan.bannersection.slides[0].title2}</h1>
+      </motion.div>
       <motion.div
-        className={`${styles.app__banner_polygon1}`}
+        className={`${styles.app__banner_polygon}`}
         animate={{ y: [10, 0, 10] }}
         transition={{
           type: "spring",
@@ -109,12 +111,12 @@ const Bannersection = ({ banner }) => {
           duration: 2,
         }}>
         <Image
-          src={"/Svg/Polygon.svg"}
+          src={"/Images/bannersection/bannerpoly.png"}
           alt="The Sustainable Villas Yiti"
           layout="fill"
         />
       </motion.div>
-      <motion.div
+      {/* <motion.div
         className={`${styles.app__banner_polygon2}`}
         animate={{ y: [10, 0, 10] }}
         transition={{
@@ -128,7 +130,7 @@ const Bannersection = ({ banner }) => {
           alt="The Sustainable Villas Yiti"
           layout="fill"
         />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

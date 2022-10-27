@@ -75,8 +75,33 @@ const english = {
   },
 
   bannersection: {
-    title1: "A Sustainable Lifestyle",
-    title2: "For a Better Tomorrow",
+    slides: [
+      {
+        img: "/Images/map-pic.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner5.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner2.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner3.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+      {
+        img: "/Images/bannersection/banner4.png",
+        title1: "A Sustainable Lifestyle",
+        title2: "For a Better Tomorrow",
+      },
+    ],
   },
 
   sustainablesection: {
@@ -1442,6 +1467,74 @@ const english = {
       ],
     },
   ],
+  seo: {
+    home: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    floorplan: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    villapage: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    aboutus: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    contactus: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+    newspage: {
+      title: "", // 50-50 characters only
+      description: "", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "",
+        title: "",
+        url: "",
+        description: "",
+      },
+    },
+  },
 };
 
 export default english;

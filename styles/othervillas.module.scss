@@ -31,7 +31,7 @@
 
             p,
             h5 {
-                font-family: 'Poppins';
+                // font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 600;
                 font-size: 1.25rem;
@@ -111,7 +111,7 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 0.5rem;
-                font-family: 'Poppins';
+                // font-family: 'Poppins';
                 font-style: normal;
                 color: white;
                 max-width: 500px;
@@ -233,7 +233,7 @@
     position: relative;
     height: 50vh;
     width: 100%;
-    font-family: 'Poppins';
+    // font-family: 'Poppins';
     font-style: normal;
     max-width: 1800px;
     margin: auto;
@@ -372,7 +372,7 @@
 
                     .amenitiesdetails {
                         flex: 1;
-                        font-family: 'Poppins';
+                        // font-family: 'Poppins';
                         font-style: normal;
 
                         h6 {
@@ -507,13 +507,17 @@
             margin-bottom: 5rem;
 
             p {
-                font-family: 'Poppins';
+                // font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 0.9rem;
                 line-height: 24px;
                 color: #777777;
                 text-align: left;
+
+                &:lang(ar) {
+                    text-align: right;
+                }
 
                 @media(max-width:1224px) {
                     text-align: center;
@@ -585,7 +589,7 @@
                     flex-direction: column;
                     position: relative;
                     border-right: 2.5px solid #afafaf;
-                    font-family: 'Poppins';
+                    // font-family: 'Poppins';
                     font-style: normal;
                     pointer-events: none;
                     max-width: 280px;
@@ -642,11 +646,19 @@
 
             .sliderItemContainer .sliderItem:first-child {
                 align-items: flex-start;
+
+                &:lang(ar) {
+                    border-right: none;
+                }
             }
 
             .sliderItemContainer .sliderItem:last-child {
                 align-items: flex-end;
                 border-right: none;
+
+                &:lang(ar) {
+                    border-right: 2.5px solid #afafaf;
+                }
             }
 
             .sliderItemContainer .sliderItem:nth-child(odd) {
