@@ -11,6 +11,7 @@ const Contact = () => {
         description={lan.seo.contactus.description}
         og={lan.seo.contactus.og}
         keyword={lan.seo.contactus.keyword}
+        canonicaltag={lan.seo.contactus.canonicaltag}
       />
       <div className={styles.contact}>
         <Registration />

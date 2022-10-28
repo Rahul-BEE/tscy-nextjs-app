@@ -1508,6 +1508,7 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/",
     },
     floorplan: {
       title: "Floorplan | The Sustainable City Yiti", // 50-50 characters only
@@ -1539,6 +1540,7 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/floorplan",
     },
     villapage: {
       title: "Villa Detail | The Sustainable City Yiti", // 50-50 characters only
@@ -1570,6 +1572,7 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/floorplan/",
     },
     aboutus: {
       title: "About Us | The Sustainable City Yiti", // 50-50 characters only
@@ -1601,6 +1604,7 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/about",
     },
     contactus: {
       title: "Contact Us | The Sustainable City Yiti", // 50-50 characters only
@@ -1632,6 +1636,7 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/contact-us",
     },
     newspage: {
       title: "News | The Sustainable City Yiti", // 50-50 characters only
@@ -1663,6 +1668,39 @@ const english = {
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/news",
+    },
+    newsdetails: {
+      title: "News | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      keyword: [
+        "Sustainable City",
+        "Yiti Oman",
+        "Muscat Oman",
+        "Villa",
+        "Courtyard Villas",
+        "Sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "apartments",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+      ],
+      og: {
+        img: "/Images/map-pic.png",
+        title: "Homepage | The Sustainable City-Yiti",
+        url: "https://www.thesustainablecity-yiti.com/news/",
+        description:
+          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+      },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/news/",
     },
   },
 };

@@ -11,6 +11,7 @@ const NewsList = () => {
         description={lan.seo.newspage.description}
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
+        canonicaltag={lan.seo.newspage.canonicaltag}
       />
       <div>
         <NewsPage />

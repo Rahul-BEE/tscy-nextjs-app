@@ -20,6 +20,7 @@ const Floorplan = () => {
         description={lan.seo.floorplan.description}
         og={lan.seo.floorplan.og}
         keyword={lan.seo.floorplan.keyword}
+        canonicaltag={lan.seo.floorplan.canonicaltag}
       />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>
@@ -78,7 +79,8 @@ const Floorplan = () => {
           style={{
             opacity: 0,
             pointerEvents: "none",
-          }}>
+          }}
+        >
           <p>
             {lan.commontext.download} {lan.commontext.comparison}{" "}
             <BsArrowDownCircle />

@@ -1,6 +1,13 @@
 import React from "react";
 import Head from "next/head";
-const HeadComponent = ({ title, description, keyword, children, og }) => {
+const HeadComponent = ({
+  title,
+  description,
+  keyword,
+  children,
+  og,
+  canonicaltag,
+}) => {
   return (
     <Head>
       <title>{title}</title>
@@ -26,6 +33,7 @@ const HeadComponent = ({ title, description, keyword, children, og }) => {
       <meta property="twitter:url" content={og.url} />
       <meta name="twitter:image" content={og.img} />
       {children}
+      <link rel="canonical" href={canonicaltag} />
     </Head>
   );
 };

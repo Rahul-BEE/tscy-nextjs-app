@@ -10,6 +10,7 @@ const About = () => {
         description={lan.seo.aboutus.description}
         og={lan.seo.aboutus.og}
         keyword={lan.seo.aboutus.keyword}
+        canonicaltag={lan.seo.aboutus.canonicaltag}
       />
       <div className={styles.app__about}>
         <Ourstory />

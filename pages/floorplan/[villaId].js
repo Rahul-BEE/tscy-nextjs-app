@@ -19,6 +19,8 @@ const Villa = () => {
     (villa) => villa.slug === villaId
   );
 
+  const canonicaltag = lan.seo.villapage.canonicaltag + villaId;
+
   return (
     <>
       <HeadComponent
@@ -26,6 +28,7 @@ const Villa = () => {
         description={lan.seo.villapage.description}
         og={lan.seo.villapage.og}
         keyword={lan.seo.villapage.keyword}
+        canonicaltag={canonicaltag}
       />
       <div className={styles.villapagemain}>
         <Section1 />

@@ -1530,10 +1530,11 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "الصفحة الرئيسية | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/",
+        url: "https://www.thesustainablecity-yiti.com/ar",
         description:
           "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar",
     },
     floorplan: {
       title: "معلومات الفلل | المدينة المستدامة يتي", // 50-50 characters only
@@ -1543,10 +1544,11 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "معلومات الفلل | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        url: "https://www.thesustainablecity-yiti.com/ar/floorplan",
         description:
           "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/floorplan",
     },
     villapage: {
       title: "مخططات الفلل | المدينة المستدامة يتي", // 50-50 characters only
@@ -1556,10 +1558,11 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "مخططات الفلل | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        url: "https://www.thesustainablecity-yiti.com/ar/floorplan/",
         description:
           "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/floorplan/",
     },
     aboutus: {
       title: "من نعن | المدينة المستدامة يتي", // 50-50 characters only
@@ -1569,9 +1572,10 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "من نعن | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/aboutus",
+        url: "https://www.thesustainablecity-yiti.com/ar/aboutus",
         description: "",
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/aboutus",
     },
     contactus: {
       title: "تواصل معنا | المدينة المستدامة يتي", // 50-50 characters only
@@ -1581,10 +1585,11 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "تواصل معنا | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/contact-us",
+        url: "https://www.thesustainablecity-yiti.com/ar/contact-us",
         description:
           "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/contact-us",
     },
     newspage: {
       title: "الصحاغة | المدينة المستدامة يتي", // 50-50 characters only
@@ -1594,10 +1599,25 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "الصحاغة | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/news",
+        url: "https://www.thesustainablecity-yiti.com/ar/news",
         description:
           "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/news",
+    },
+    newsdetails: {
+      title: "الصحاغة | المدينة المستدامة يتي", // 50-50 characters only
+      description:
+        "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      keyword: "",
+      og: {
+        img: "/Images/map-pic.png",
+        title: "الصحاغة | المدينة المستدامة يتي",
+        url: "https://www.thesustainablecity-yiti.com/ar/news/",
+        description:
+          "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
+      },
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/news/",
     },
   },
 };

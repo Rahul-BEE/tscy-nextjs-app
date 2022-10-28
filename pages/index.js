@@ -33,6 +33,7 @@ export default function Home() {
         description={lan.seo.home.description}
         og={lan.seo.home.og}
         keyword={lan.seo.newspage.keyword}
+        canonicaltag={lan.seo.home.canonicaltag}
       />
 
       <div className={styles.app__home}>
