@@ -29,6 +29,7 @@ const HeadComponent = ({
         content="2022-07-28T06:50:17+00:00"
       />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:description" content={og.description} />
       <meta property="twitter:domain" content="thesustainablecity-yiti.com" />
       <meta property="twitter:url" content={og.url} />
       <meta name="twitter:image" content={og.img} />

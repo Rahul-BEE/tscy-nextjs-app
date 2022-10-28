@@ -17,6 +17,7 @@ import {
 import { useRef } from "react";
 import SliderComponent from "./SliderComponent";
 import Image from "next/image";
+import Link from "next/link";
 const InteriorFeatures = () => {
   const lan = useLanguage();
   const router = useRouter();
@@ -197,12 +198,16 @@ const InteriorFeatures = () => {
                     <button className={styles.btn1}>
                       {lan.commontext.registerinterest}
                     </button>
-                    <button className={styles.btn2}>
-                      {lan.commontext.download} {lan.commontext.brochure}
-                      <span>
-                        <BsArrowDownCircle />
-                      </span>
-                    </button>
+                    <Link href="/brochure/Yiti Brochure.pdf">
+                      <a target="_blank" rel="noreferrer">
+                        <button className={styles.btn2}>
+                          {lan.commontext.download} {lan.commontext.brochure}
+                          <span>
+                            <BsArrowDownCircle />
+                          </span>
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </motion.div>
               )}

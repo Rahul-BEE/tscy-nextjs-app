@@ -26,13 +26,15 @@ const News = () => {
 
   return (
     <>
-      <HeadComponent
-        title={"News Detail | The Sustainable City - Yiti"}
-        description={lan.seo.newspage.description}
-        og={lan.seo.newspage.og}
-        keyword={lan.seo.newspage.keyword}
-        canonicaltag={canonicaltag}
-      />
+      {data && (
+        <HeadComponent
+          title={"News Detail | The Sustainable City - Yiti"}
+          description={lan.seo.newspage.description}
+          og={lan.seo.newspage.og}
+          keyword={lan.seo.newspage.keyword}
+          canonicaltag={canonicaltag}
+        />
+      )}
       <div>
         <div className={styles.newspage_container}>
           <div className="mb-3">
