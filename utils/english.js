@@ -1258,9 +1258,9 @@ const english = {
 
     statistics: [
       {
-        title: "Square Meters",
+        title: "Project Area",
         data: "1",
-        sub: "M",
+        sub: "SQM",
       },
 
       {
@@ -1279,9 +1279,9 @@ const english = {
         sub: "Km",
       },
       {
-        title: "Carbon Footprint Reduction",
-        data: "75",
-        sub: "%",
+        title: "Net-Zero",
+        data: "2040",
+        sub: "",
       },
     ],
     story: {
