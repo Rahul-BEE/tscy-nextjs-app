@@ -252,7 +252,7 @@ function VillaplansMobile() {
               </div>
               <p className={styles.heading}>{lan.commontext.thanksnote}</p>
               <div className={styles.btncontainer}>
-                <Link href={"/brochure/Villa Brochure Final.pdf"}>
+                <Link href={"/brochure/Yiti Brochure.pdf"}>
                   <a target={"_blank"} rel="noreferrer">
                     <motion.div
                       onClick={() => handleClick(1)}
@@ -266,7 +266,7 @@ function VillaplansMobile() {
                     </motion.div>
                   </a>
                 </Link>
-                <Link href={"/brochure/Yiti Brochure.pdf"}>
+                <Link href={"/brochure/Villa Brochure Final.pdf"}>
                   <a target={"_blank"} rel="noreferrer">
                     <motion.div
                       onClick={() => handleClick(2)}
