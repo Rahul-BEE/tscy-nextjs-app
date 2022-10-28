@@ -1370,17 +1370,18 @@ const arabic = {
             content2: "10:00AM - 7:00PM : السبت",
             icon: <Clock />,
           },
+          {
+            title: "رقم الهاتف",
+            content: "8000 33 33",
+            icon: <Tel />,
+          },
 
           {
             title: "رقم الهاتف",
             content: "+968 8000 33 33",
             icon: <Tel />,
           },
-          {
-            title: "Telephone:",
-            content: "8000 33 33",
-            icon: <Tel />,
-          },
+
           {
             title: "البريد الإلكتروني",
             content: "hello@thesustainablecity-yiti.com",
@@ -1510,10 +1511,10 @@ const arabic = {
         },
         {
           title: "رقم الهاتف",
-          link: "+968 8000 33 33",
+          link: "8000 33 33",
         },
         {
-          title: "Telephone:",
+          title: "رقم الهاتف",
           link: "+968 2471 0700",
         },
       ],

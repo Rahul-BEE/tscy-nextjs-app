@@ -1334,7 +1334,7 @@ const english = {
             icon: <Tel />,
           },
           {
-            title: "Telephone:",
+            title: "Telephone",
             content: "+968 2471 0700",
             icon: <Tel />,
           },
@@ -1462,15 +1462,15 @@ const english = {
       title: "Contact Information",
       links: [
         {
-          title: "Email:",
+          title: "Email",
           link: "hello@thesustainablecity-yiti.com",
         },
         {
-          title: "Toll-free(OMAN):",
+          title: "Toll-free(OMAN)",
           link: "8000 33 33",
         },
         {
-          title: "Telephone:",
+          title: "Telephone",
           link: "+968 2471 0700",
         },
       ],
