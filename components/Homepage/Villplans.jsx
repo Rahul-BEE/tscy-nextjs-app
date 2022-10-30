@@ -40,7 +40,7 @@ const Villplans = () => {
       phone,
     };
 
-    let result = await sendEmail({ data, type: 0 });
+    let result = sendEmail({ data, type: 0 });
     if (result) {
       setLoading(false);
     } else {
@@ -324,8 +324,9 @@ const Villplans = () => {
                       <motion.button
                         onClick={() => handleUserInput()}
                         whileHover={{
-                          scale: 1.02,
+                          scale: !loading ? 1.02 : 1,
                         }}
+                        disabled={loading}
                       >
                         {loading ? <Loader /> : lan.commontext.registerinterest}
                       </motion.button>
