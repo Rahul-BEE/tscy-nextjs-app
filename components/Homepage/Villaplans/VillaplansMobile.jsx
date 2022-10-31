@@ -99,9 +99,9 @@ function VillaplansMobile() {
       return;
     }
   };
-  const handleClick = ({ id, scroll }) => {
+  const handleClick = async ({ id, scroll }) => {
     if (scroll && !dataReceived) {
-      formRef.current?.scrollIntoView({
+      await formRef.current.scrollIntoView({
         alignToTop: false,
         behavior: "smooth",
         block: "center",
@@ -296,173 +296,174 @@ function VillaplansMobile() {
           </motion.div>
         </AnimatePresence>
       </div>
+      <div ref={formRef}>
+        {!showForm ? (
+          <div className={styles.villaplanfeatures_mobile}>
+            <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
 
-      {!showForm ? (
-        <div className={styles.villaplanfeatures_mobile}>
-          <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
+            <div className={styles.items}>
+              <p>
+                <Bedroom />{" "}
+                <span>
+                  {currentvilla.bedrooms} {lan.commontext.bedroom}
+                </span>
+              </p>
+              <p>
+                <Bathroom />{" "}
+                <span>
+                  {currentvilla.bathrooms} {lan.commontext.bathroom}
+                </span>
+              </p>
+              <p>
+                <Maidroom />{" "}
+                <span>
+                  {currentvilla.maidroom} {lan.commontext.maidroom}
+                </span>
+              </p>
+              <p>
+                <Garden /> <span>{lan.commontext.privategarden}</span>
+              </p>
+              <p>
+                <Parking /> <span>{lan.commontext.parking}</span>
+              </p>
+            </div>
 
-          <div className={styles.items}>
-            <p>
-              <Bedroom />{" "}
-              <span>
-                {currentvilla.bedrooms} {lan.commontext.bedroom}
-              </span>
-            </p>
-            <p>
-              <Bathroom />{" "}
-              <span>
-                {currentvilla.bathrooms} {lan.commontext.bathroom}
-              </span>
-            </p>
-            <p>
-              <Maidroom />{" "}
-              <span>
-                {currentvilla.maidroom} {lan.commontext.maidroom}
-              </span>
-            </p>
-            <p>
-              <Garden /> <span>{lan.commontext.privategarden}</span>
-            </p>
-            <p>
-              <Parking /> <span>{lan.commontext.parking}</span>
-            </p>
+            <div>
+              <Button onClick={() => handleClick({ scroll: false })}>
+                {lan.commontext.registerinterest}
+              </Button>
+            </div>
           </div>
-
-          <div>
-            <Button onClick={() => handleClick({ scroll: false })}>
-              {lan.commontext.registerinterest}
-            </Button>
-          </div>
-        </div>
-      ) : (
-        <>
-          {dataReceived ? (
-            <div className={styles.villaplanuserform}>
-              <div
-                className={styles.gobackformbtn}
-                style={{
-                  left: "2rem",
-                }}>
-                <Arrowleft onClick={() => setShowForm(false)} />
+        ) : (
+          <>
+            {dataReceived ? (
+              <div className={styles.villaplanuserform}>
+                <div
+                  className={styles.gobackformbtn}
+                  style={{
+                    left: "2rem",
+                  }}>
+                  <Arrowleft onClick={() => setShowForm(false)} />
+                </div>
+                <p className={styles.heading}>{lan.commontext.thanksnote}</p>
+                <div className={styles.btncontainer}>
+                  <Link href={"/brochure/Yiti Brochure.pdf"}>
+                    <a target={"_blank"} rel="noreferrer">
+                      <motion.div
+                        onClick={() => handleClick({ id: 1, scroll: false })}
+                        className={styles.download_content}
+                        whileHover={{
+                          color: "#058DA6",
+                          backgroundColor: "#fff",
+                        }}>
+                        {lan.commontext.download} {lan.commontext.brochure}{" "}
+                      </motion.div>
+                    </a>
+                  </Link>
+                  <Link href={"/brochure/Villa Brochure Final.pdf"}>
+                    <a target={"_blank"} rel="noreferrer">
+                      <motion.div
+                        onClick={() => handleClick({ id: 1, scroll: false })}
+                        className={styles.download_content}
+                        whileHover={{
+                          color: "#058DA6",
+                          backgroundColor: "#fff",
+                        }}>
+                        {lan.commontext.download} {lan.commontext.floorplan}{" "}
+                      </motion.div>
+                    </a>
+                  </Link>
+                  <Link href={`/floorplan/${currentvilla.slug}`} passHref>
+                    <motion.div
+                      className={styles.download_content}
+                      whileHover={{
+                        color: "#058DA6",
+                        backgroundColor: "#fff",
+                      }}>
+                      {lan.commontext.seedetails}{" "}
+                      <BsArrowRightCircle
+                        style={{
+                          marginLeft: "0.5rem",
+                        }}
+                      />
+                    </motion.div>
+                  </Link>
+                </div>
               </div>
-              <p className={styles.heading}>{lan.commontext.thanksnote}</p>
-              <div className={styles.btncontainer}>
-                <Link href={"/brochure/Yiti Brochure.pdf"}>
-                  <a target={"_blank"} rel="noreferrer">
-                    <motion.div
-                      onClick={() => handleClick({ id: 1, scroll: false })}
-                      className={styles.download_content}
-                      whileHover={{
-                        color: "#058DA6",
-                        backgroundColor: "#fff",
-                      }}>
-                      {lan.commontext.download} {lan.commontext.brochure}{" "}
-                    </motion.div>
-                  </a>
-                </Link>
-                <Link href={"/brochure/Villa Brochure Final.pdf"}>
-                  <a target={"_blank"} rel="noreferrer">
-                    <motion.div
-                      onClick={() => handleClick({ id: 1, scroll: false })}
-                      className={styles.download_content}
-                      whileHover={{
-                        color: "#058DA6",
-                        backgroundColor: "#fff",
-                      }}>
-                      {lan.commontext.download} {lan.commontext.floorplan}{" "}
-                    </motion.div>
-                  </a>
-                </Link>
-                <Link href={`/floorplan/${currentvilla.slug}`} passHref>
-                  <motion.div
-                    className={styles.download_content}
+            ) : (
+              <div className={styles.villaplanuserform}>
+                <div
+                  className={styles.gobackformbtn}
+                  style={{
+                    left: "2rem",
+                  }}>
+                  <Arrowleft onClick={() => setShowForm(false)} />
+                </div>
+                <p className={styles.heading}>{lan.commontext.adddetails}</p>
+                <div className={styles.userformcontainer}>
+                  <form className={styles.userform}>
+                    <div className={styles.formItem}>
+                      <label htmlFor="name">
+                        {lan.contact.register.formdata.name.title}
+                      </label>
+                      <input
+                        type={"text"}
+                        value={name}
+                        required
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder={
+                          lan.contact.register.formdata.name.placeholder
+                        }
+                      />
+                    </div>
+                    <div className={styles.formItem}>
+                      <label htmlFor="email">
+                        {lan.contact.register.formdata.email.title}
+                      </label>
+                      <input
+                        type={"email"}
+                        value={email}
+                        required
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder={
+                          lan.contact.register.formdata.email.placeholder
+                        }
+                      />
+                    </div>
+                    <div className={styles.formItem}>
+                      <label htmlFor="name">
+                        {lan.contact.register.formdata.phone.title}
+                      </label>
+                      <PhoneInput
+                        country={"om"}
+                        value={phone}
+                        containerClass={styles.picontainerclass}
+                        inputClass={styles.piinputclass}
+                        buttonClass={styles.buttonClass}
+                        onChange={(val) => setPhone(val)}
+                        enableSearch={true}
+                        searchClass={styles.searchClass}
+                        countryCodeEditable={false}
+                        searchNotFound={"No country found"}
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div className={styles.registerinterestbtn}>
+                  <motion.button
+                    onClick={() => handleUserInput()}
                     whileHover={{
-                      color: "#058DA6",
-                      backgroundColor: "#fff",
-                    }}>
-                    {lan.commontext.seedetails}{" "}
-                    <BsArrowRightCircle
-                      style={{
-                        marginLeft: "0.5rem",
-                      }}
-                    />
-                  </motion.div>
-                </Link>
+                      scale: !loading ? 1.02 : 1,
+                    }}
+                    disabled={loading}>
+                    {loading ? <Loader /> : lan.commontext.registerinterest}
+                  </motion.button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div className={styles.villaplanuserform}>
-              <div
-                className={styles.gobackformbtn}
-                style={{
-                  left: "2rem",
-                }}>
-                <Arrowleft onClick={() => setShowForm(false)} />
-              </div>
-              <p className={styles.heading}>{lan.commontext.adddetails}</p>
-              <div className={styles.userformcontainer} ref={formRef}>
-                <form className={styles.userform}>
-                  <div className={styles.formItem}>
-                    <label htmlFor="name">
-                      {lan.contact.register.formdata.name.title}
-                    </label>
-                    <input
-                      type={"text"}
-                      value={name}
-                      required
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder={
-                        lan.contact.register.formdata.name.placeholder
-                      }
-                    />
-                  </div>
-                  <div className={styles.formItem}>
-                    <label htmlFor="email">
-                      {lan.contact.register.formdata.email.title}
-                    </label>
-                    <input
-                      type={"email"}
-                      value={email}
-                      required
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder={
-                        lan.contact.register.formdata.email.placeholder
-                      }
-                    />
-                  </div>
-                  <div className={styles.formItem}>
-                    <label htmlFor="name">
-                      {lan.contact.register.formdata.phone.title}
-                    </label>
-                    <PhoneInput
-                      country={"om"}
-                      value={phone}
-                      containerClass={styles.picontainerclass}
-                      inputClass={styles.piinputclass}
-                      buttonClass={styles.buttonClass}
-                      onChange={(val) => setPhone(val)}
-                      enableSearch={true}
-                      searchClass={styles.searchClass}
-                      countryCodeEditable={false}
-                      searchNotFound={"No country found"}
-                    />
-                  </div>
-                </form>
-              </div>
-              <div className={styles.registerinterestbtn}>
-                <motion.button
-                  onClick={() => handleUserInput()}
-                  whileHover={{
-                    scale: !loading ? 1.02 : 1,
-                  }}
-                  disabled={loading}>
-                  {loading ? <Loader /> : lan.commontext.registerinterest}
-                </motion.button>
-              </div>
-            </div>
-          )}
-        </>
-      )}
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
