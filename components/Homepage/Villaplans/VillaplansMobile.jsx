@@ -18,6 +18,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import sendEmail from "../../../utils/emailservice";
 import Loader from "../../Loader/Loader";
+import { useInView } from "react-intersection-observer";
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
@@ -34,43 +35,64 @@ function VillaplansMobile() {
   const [loading, setLoading] = useState(false);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
   const [brochureDownload, setBrochureDownload] = useState(null);
+
+  const [formRef, isInView] = useInView({
+    threshold: 0.8,
+  });
   const handleUserInput = async () => {
-    setLoading(true);
-    let data = {
-      email,
-      name,
-      phone,
-    };
-    //sent data to the backend
-    let result = sendEmail({ data, type: 0 });
-    if (result === "success") {
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
-    dispatch({
-      type: "updateuser",
-      value: data,
-    });
-    setDataReceived(true);
-    if (brochureDownload === 1) {
-      window.open("/brochure/Yiti Brochure.pdf");
-    } else if (brochureDownload === 2) {
-      window.open("/brochure/Villa Brochure Final.pdf");
+    if (name !== "") {
+      setLoading(true);
+      let data = {
+        email,
+        name,
+        phone,
+      };
+      //sent data to the backend
+
+      let result = sendEmail({ data, type: 0 });
+      if (result) {
+        setLoading(false);
+      } else {
+        setLoading(false);
+      }
+      dispatch({
+        type: "updateuser",
+        value: data,
+      });
+      setDataReceived(true);
+      if (brochureDownload === 1) {
+        window.open("/brochure/Yiti Brochure.pdf");
+      } else if (brochureDownload === 2) {
+        window.open("/brochure/Villa Brochure Final.pdf");
+      } else {
+        return;
+      }
     } else {
       return;
     }
   };
-  const handleClick = (id) => {
-    setShowForm(true);
-    setBrochureDownload(id);
+  const handleClick = ({ id, scroll }) => {
+    if (!isInView && scroll && !dataReceived) {
+      scrollBy(0, window.innerHeight / 1.2);
+    }
+    if (dataReceived) {
+      if (id === 1) {
+        window.open("/brochure/Yiti Brochure.pdf");
+      } else if (id === 2) {
+        window.open("/brochure/Villa Brochure Final.pdf");
+      } else {
+        return;
+      }
+    } else {
+      setShowForm(true);
+      setBrochureDownload(id);
+    }
   };
 
   const changeVilla = (index) => {
     setActiveVilla(index);
     setVilla(lan.villaplansection.villas[index]);
     setShowForm(false);
-    console.log("w", ref.current?.clientWidth - window.innerWidth);
     if (index === 1) {
       test.start({
         x: lan.language === 1 ? "-62px" : "62px",
@@ -108,8 +130,7 @@ function VillaplansMobile() {
           drag={"x"}
           dragConstraints={{ right: 0, left: -250 }}
           ref={ref}
-          animate={test}
-        >
+          animate={test}>
           {lan &&
             lan.villaplansection.villas.map((villa, index) => (
               <div
@@ -117,16 +138,14 @@ function VillaplansMobile() {
                 className={`${styles.content_container} flex ${
                   currentvilla.id === index + 1 ? styles.activeVilla : ""
                 }`}
-                onClick={() => changeVilla(index)}
-              >
+                onClick={() => changeVilla(index)}>
                 <div className={styles.content}>
                   <div className={styles.number}>{villa.bedrooms}</div>
                   <div className={styles.text}>
                     <p
                       style={{
                         textTransform: "uppercase",
-                      }}
-                    >
+                      }}>
                       {lan.commontext.bedroom}
                     </p>{" "}
                     {villa.type}
@@ -144,13 +163,12 @@ function VillaplansMobile() {
       </Row>
       <div className={styles.villadownload}>
         <motion.div
-          onClick={() => handleClick(1)}
+          onClick={() => handleClick({ id: 1, scroll: true })}
           className={styles.download_content}
           whileHover={{
             backgroundColor: "#058DA6",
             color: "#fff",
-          }}
-        >
+          }}>
           {lan.commontext.download} {lan.commontext.brochure}{" "}
           <BsArrowDownCircle
             style={{
@@ -159,13 +177,12 @@ function VillaplansMobile() {
           />
         </motion.div>
         <motion.div
-          onClick={() => handleClick(2)}
+          onClick={() => handleClick({ id: 1, scroll: true })}
           className={styles.download_content}
           whileHover={{
             backgroundColor: "#058DA6",
             color: "#fff",
-          }}
-        >
+          }}>
           {lan.commontext.download} {lan.commontext.floorplan}{" "}
           <BsArrowDownCircle
             style={{
@@ -179,8 +196,7 @@ function VillaplansMobile() {
             whileHover={{
               backgroundColor: "#058DA6",
               color: "#fff",
-            }}
-          >
+            }}>
             {lan.commontext.seedetails}{" "}
             <BsArrowRightCircle
               className={"arrowright"}
@@ -235,7 +251,9 @@ function VillaplansMobile() {
           </div>
 
           <div>
-            <Button onClick={() => handleClick()}>{lan.commontext.registerinterest}</Button>
+            <Button onClick={() => handleClick({ scroll: false })}>
+              {lan.commontext.registerinterest}
+            </Button>
           </div>
         </div>
       ) : (
@@ -246,8 +264,7 @@ function VillaplansMobile() {
                 className={styles.gobackformbtn}
                 style={{
                   left: "2rem",
-                }}
-              >
+                }}>
                 <Arrowleft onClick={() => setShowForm(false)} />
               </div>
               <p className={styles.heading}>{lan.commontext.thanksnote}</p>
@@ -255,13 +272,12 @@ function VillaplansMobile() {
                 <Link href={"/brochure/Yiti Brochure.pdf"}>
                   <a target={"_blank"} rel="noreferrer">
                     <motion.div
-                      onClick={() => handleClick(1)}
+                      onClick={() => handleClick({ id: 1, scroll: false })}
                       className={styles.download_content}
                       whileHover={{
                         color: "#058DA6",
                         backgroundColor: "#fff",
-                      }}
-                    >
+                      }}>
                       {lan.commontext.download} {lan.commontext.brochure}{" "}
                     </motion.div>
                   </a>
@@ -269,13 +285,12 @@ function VillaplansMobile() {
                 <Link href={"/brochure/Villa Brochure Final.pdf"}>
                   <a target={"_blank"} rel="noreferrer">
                     <motion.div
-                      onClick={() => handleClick(2)}
+                      onClick={() => handleClick({ id: 1, scroll: false })}
                       className={styles.download_content}
                       whileHover={{
                         color: "#058DA6",
                         backgroundColor: "#fff",
-                      }}
-                    >
+                      }}>
                       {lan.commontext.download} {lan.commontext.floorplan}{" "}
                     </motion.div>
                   </a>
@@ -286,8 +301,7 @@ function VillaplansMobile() {
                     whileHover={{
                       color: "#058DA6",
                       backgroundColor: "#fff",
-                    }}
-                  >
+                    }}>
                     {lan.commontext.seedetails}{" "}
                     <BsArrowRightCircle
                       style={{
@@ -304,35 +318,44 @@ function VillaplansMobile() {
                 className={styles.gobackformbtn}
                 style={{
                   left: "2rem",
-                }}
-              >
+                }}>
                 <Arrowleft onClick={() => setShowForm(false)} />
               </div>
               <p className={styles.heading}>{lan.commontext.adddetails}</p>
-              <div className={styles.userformcontainer}>
+              <div className={styles.userformcontainer} ref={formRef}>
                 <form className={styles.userform}>
                   <div className={styles.formItem}>
-                    <label htmlFor="name">{lan.contact.register.formdata.name.title}</label>
+                    <label htmlFor="name">
+                      {lan.contact.register.formdata.name.title}
+                    </label>
                     <input
                       type={"text"}
                       value={name}
                       required
                       onChange={(e) => setName(e.target.value)}
-                      placeholder={lan.contact.register.formdata.name.placeholder}
+                      placeholder={
+                        lan.contact.register.formdata.name.placeholder
+                      }
                     />
                   </div>
                   <div className={styles.formItem}>
-                    <label htmlFor="email">{lan.contact.register.formdata.email.title}</label>
+                    <label htmlFor="email">
+                      {lan.contact.register.formdata.email.title}
+                    </label>
                     <input
                       type={"email"}
                       value={email}
                       required
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder={lan.contact.register.formdata.email.placeholder}
+                      placeholder={
+                        lan.contact.register.formdata.email.placeholder
+                      }
                     />
                   </div>
                   <div className={styles.formItem}>
-                    <label htmlFor="name">{lan.contact.register.formdata.phone.title}</label>
+                    <label htmlFor="name">
+                      {lan.contact.register.formdata.phone.title}
+                    </label>
                     <PhoneInput
                       country={"om"}
                       value={phone}
@@ -348,14 +371,13 @@ function VillaplansMobile() {
                   </div>
                 </form>
               </div>
-              <div className={styles.resgisterinterestdbtn}>
+              <div className={styles.registerinterestbtn}>
                 <motion.button
                   onClick={() => handleUserInput()}
                   whileHover={{
                     scale: !loading ? 1.02 : 1,
                   }}
-                  disabled={loading}
-                >
+                  disabled={loading}>
                   {loading ? <Loader /> : lan.commontext.registerinterest}
                 </motion.button>
               </div>
