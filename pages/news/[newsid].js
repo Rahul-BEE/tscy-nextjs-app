@@ -140,6 +140,7 @@ const News = () => {
                                 {e}
                               </h6>
                             ))}
+                            <h6 className={styles.source}>{lan.commontext.source}: <a className={styles.sourcehref} href={data.source} target='_blank'>{data.source}</a></h6>
                           </div>
                         </div>
                       </div>

@@ -977,6 +977,7 @@ const arabic = {
     unit: "م",
     features: "Features",
     share: "شارك",
+    source:"مصدر"
   },
   propertyFeatures: [
     {
@@ -1111,6 +1112,7 @@ const arabic = {
         country: "سلطنة عمان ",
         image: "/Images/news/news_img1.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "حسابات الضمان العقاري للمشروع التطويري الذي يقع ضمن أكبر مشروع سياحي متكامل في سلطنة عُمان",
         discription: [
@@ -1132,6 +1134,7 @@ const arabic = {
         country: "الإمارات العربية المتحدة",
         image: "/Images/news/news_img2.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "ضمن نهجها التوسعي في المشروعات المستدامة والمستقبلية في المنطقة",
         discription: [
@@ -1155,6 +1158,7 @@ const arabic = {
         country: "الإمارات العربية المتحدة",
         image: "/Images/news/news_img3.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading: "مشروع حضري متكامل في مسقط يلبي أعلى معايير الاستدامة",
         discription: [
           "•	المشروع يمتد على مساحة تصل إلى المليون متر مربع",
@@ -1184,6 +1188,7 @@ const arabic = {
         country: "مسقط",
         image: "/Images/news/news_img4.png",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "بمناسبة اليوم العالمي للتنظيف، جرت حملة تنظيف الشواطئ على امتداد شاطئ الحيل",
         discription: [

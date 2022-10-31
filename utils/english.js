@@ -1015,6 +1015,7 @@ const english = {
     unit: "m",
     features: "Features",
     share: "Share",
+    source:"Source"
   },
   tracks: [
     {
@@ -1062,6 +1063,7 @@ const english = {
         country: "Oman",
         image: "/Images/news/news_img1.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "Understanding with Sohar Islamic Bank to open an Escrow Account for the newly launched master planned project in the capital city of Muscat.",
         discription: [
@@ -1084,6 +1086,7 @@ const english = {
         country: "UAE",
         image: "/Images/news/news_img2.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "As part of its ongoing efforts to expand sustainable projects in the region",
         discription: [
@@ -1107,6 +1110,7 @@ const english = {
         country: "UAE",
         image: "/Images/news/news_img3.jpg",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "Strategic partnership between OMRAN Group and Diamond Developers.",
         discription: [
@@ -1137,6 +1141,7 @@ const english = {
         country: "Muscat",
         image: "/Images/news/news_img4.png",
         type: "news",
+        source:"https://www.thesustainablecity-yiti.com/news/",
         heading:
           "The beach cleanup took place, along Al Hail beach to mark World Cleanup Day.",
         discription: [
