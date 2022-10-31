@@ -1255,9 +1255,9 @@ const english = {
 
     statistics: [
       {
-        title: "Project Area",
+        title: "SQM",
         data: "1",
-        sub: "SQM",
+        sub: "million",
       },
 
       {
