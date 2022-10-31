@@ -1055,8 +1055,7 @@ const english = {
       {
         slug: "newly-launched-plan",
         title: [
-          "The Sustainable City - Yiti Signs Escrow",
-          "Agreement with Sohar Islamic",
+          "The Sustainable City - Yiti Signs Escrow Agreement with Sohar Islamic",
         ],
         date: "29th June, 2022",
         city: "Muscat",
@@ -1078,8 +1077,7 @@ const english = {
       {
         slug: "tourism-partnership-omran",
         title: [
-          "Diamond Developers signs partnership with The Oman Tourism ",
-          "Development Company (OMRAN Group)",
+          "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
         ],
         date: "13th January, 2022",
         city: "Dubai",
@@ -1102,8 +1100,7 @@ const english = {
       {
         slug: "investment-value-news",
         title: [
-          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’  ",
-          "with an investment value of nearly one billion US dollars",
+          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",
         ],
         date: "30th March, 2022",
         city: "Dubai",
