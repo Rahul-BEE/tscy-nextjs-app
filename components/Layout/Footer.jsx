@@ -31,7 +31,9 @@ function Footer() {
     localStorage.setItem("language", JSON.stringify(lan));
     setLanguage(lan);
     location.push(location.asPath, location.asPath, { locale: lan });
-    // window.location.reload(true);
+    location.events.on("routeChangeComplete", async () => {
+      location.reload();
+    });
   };
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -116,12 +118,25 @@ function Footer() {
           <Accord />
           <div className={styles.contactinfo}>
             <h4>{data[3].title}</h4>
-            {data[3].links.map((item, index) => (
-              <div key={index}>
-                <h6>{item.title}</h6>
-                <p>{item.link}</p>
-              </div>
-            ))}
+
+            <div className={styles.iteminfo}>
+              <h6>{data[3].links[0].title}</h6>
+              <a href={`mailto:${data[3].links[0].link}`}>
+                {data[3].links[0].link}
+              </a>
+            </div>
+            <div className={styles.iteminfo}>
+              <h6>{data[3].links[1].title}</h6>
+              <a href={`tel:+968${data[3].links[1].link}`}>
+                {data[3].links[1].link}
+              </a>
+            </div>
+            <div className={styles.iteminfo}>
+              <h6>{data[3].links[2].title}</h6>
+              <a href={`tel:+968${data[3].links[1].link}`}>
+                {data[3].links[2].link}
+              </a>
+            </div>
             <div className={styles.socialIcons}>
               <Link
                 href={

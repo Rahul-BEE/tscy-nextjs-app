@@ -1030,7 +1030,7 @@ const english = {
       id: 17,
       name: "Equestrian",
       icon: <Popequestraiantrack />,
-      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
+      slideimg: ["/Images/masterplan/tracks/equestriantrack.png"],
       description:
         "1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
     },
@@ -1046,7 +1046,7 @@ const english = {
       id: 19,
       name: "E-Buggy",
       icon: <Popebuggy />,
-      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      slideimg: ["/Images/masterplan/tracks/ebuggytrack.png"],
       description:
         "Car free areas to create safe zones for kids and promote walkability.",
     },
@@ -1133,8 +1133,7 @@ const english = {
       {
         slug: "environment-clean-marinedebris",
         title: [
-          "The Sustainable City - Yiti and The Environment Society of Oman Partner   ",
-          "to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
+          "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
         ],
         date: "18th September, 2022",
         city: "Oman",

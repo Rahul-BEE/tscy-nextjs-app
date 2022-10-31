@@ -70,18 +70,20 @@ const Masterplandetail = ({
   }, [slideIndex, item, track]);
 
   const updateIndex = (id) => {
-    if (track && index < lan.tracks.length - 1) {
-      controlItem({ item: null, track: track + 1 });
+    if (track) {
+      controlItem({ item: null, track: id + 1 });
+    } else if (item) {
+      controlItem({ item: id + 1, track: null });
     }
-    if (item && index < lan.masterplan.markers.length - 1) {
-      controlItem({ item: item + 1, track: null });
-    }
-    if (track && index !== 0) {
-      controlItem({ item: null, track: track - 1 });
-    }
-    if (item && index !== 0) {
-      controlItem({ item: item - 1, track: null });
-    }
+    // if (track && index < lan.tracks.length - 1) {
+    //   controlItem({ item: null, track: track + 1 });
+    // } else if (track && index !== 0) {
+    //   controlItem({ item: null, track: track - 1 });
+    // } else if (item && index < lan.masterplan.markers.length - 1) {
+    //   controlItem({ item: item + 1, track: null });
+    // } else if (item && index !== 0) {
+    //   controlItem({ item: item - 1, track: null });
+    // }
   };
   return (
     <>

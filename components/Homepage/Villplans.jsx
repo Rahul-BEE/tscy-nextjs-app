@@ -33,36 +33,50 @@ const Villplans = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const handleUserInput = async () => {
-    setLoading(true);
-    let data = {
-      email,
-      name,
-      phone,
-    };
+    if (name !== "") {
+      setLoading(true);
+      let data = {
+        email,
+        name,
+        phone,
+      };
 
-    let result = sendEmail({ data, type: 0 });
-    if (result) {
-      setLoading(false);
-    } else {
-      setLoading(false);
-      return;
-    }
-    dispatch({
-      type: "updateuser",
-      value: data,
-    });
-    setDataReceived(true);
-    if (brochureDownload === 1) {
-      window.open("/brochure/Yiti Brochure.pdf");
-    } else if (brochureDownload === 2) {
-      window.open("/brochure/Villa Brochure Final.pdf");
+      let result = sendEmail({ data, type: 0 });
+      if (result) {
+        setLoading(false);
+      } else {
+        setLoading(false);
+        return;
+      }
+      dispatch({
+        type: "updateuser",
+        value: data,
+      });
+      setDataReceived(true);
+      if (brochureDownload === 1) {
+        window.open("/brochure/Yiti Brochure.pdf");
+      } else if (brochureDownload === 2) {
+        window.open("/brochure/Villa Brochure Final.pdf");
+      } else {
+        return;
+      }
     } else {
       return;
     }
   };
   const handleClick = (id) => {
-    setShowForm(true);
-    setBrochureDownload(id);
+    if (dataReceived) {
+      if (id === 1) {
+        window.open("/brochure/Yiti Brochure.pdf");
+      } else if (id === 2) {
+        window.open("/brochure/Villa Brochure Final.pdf");
+      } else {
+        return;
+      }
+    } else {
+      setShowForm(true);
+      setBrochureDownload(id);
+    }
   };
 
   const changeVilla = (index) => {
@@ -83,7 +97,9 @@ const Villplans = () => {
         <Row className="headingRow">
           <Col>
             {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
-            <h2 className="sectionmainHeading">{lan.villaplansection.title2}</h2>
+            <h2 className="sectionmainHeading">
+              {lan.villaplansection.title2}
+            </h2>
           </Col>
         </Row>
         <Row className={` ${styles.villaplanindexrow} flex`}>
@@ -97,13 +113,11 @@ const Villplans = () => {
                 lg={3}
                 sm={3}
                 key={`${index}_villas`}
-                onClick={() => changeVilla(index)}
-              >
+                onClick={() => changeVilla(index)}>
                 <motion.h5
                   whileHover={{ scale: 1.2 }}
                   onHoverStart={(e) => {}}
-                  onHoverEnd={(e) => {}}
-                >
+                  onHoverEnd={(e) => {}}>
                   {villa.bedrooms}
                 </motion.h5>
                 <p>{villa.homepagetitle}</p>
@@ -124,8 +138,7 @@ const Villplans = () => {
             whileHover={{
               backgroundColor: "#058DA6",
               color: "#fff",
-            }}
-          >
+            }}>
             {lan.commontext.download} {lan.commontext.brochure}{" "}
             <BsArrowDownCircle
               style={{
@@ -139,8 +152,7 @@ const Villplans = () => {
             whileHover={{
               backgroundColor: "#058DA6",
               color: "#fff",
-            }}
-          >
+            }}>
             {lan.commontext.download} {lan.commontext.floorplan}{" "}
             <BsArrowDownCircle
               style={{
@@ -154,8 +166,7 @@ const Villplans = () => {
               whileHover={{
                 backgroundColor: "#058DA6",
                 color: "#fff",
-              }}
-            >
+              }}>
               {lan.commontext.seedetails}{" "}
               <BsArrowRightCircle
                 style={{
@@ -180,7 +191,9 @@ const Villplans = () => {
           <div className={styles.villaplanfeatures}>
             {!showForm ? (
               <div className={styles.villaplanfeatureinner}>
-                <p className={styles.heading}>{lan.commontext.propsubheading_1}</p>
+                <p className={styles.heading}>
+                  {lan.commontext.propsubheading_1}
+                </p>
                 <div className={styles.featurediv}>
                   <p>
                     <Bedroom />{" "}
@@ -213,8 +226,7 @@ const Villplans = () => {
                     onClick={() => handleClick()}
                     whileHover={{
                       scale: 1.02,
-                    }}
-                  >
+                    }}>
                     {lan.commontext.registerinterest}
                   </motion.button>
                 </div>
@@ -226,7 +238,9 @@ const Villplans = () => {
                     <div className={styles.gobackformbtn}>
                       <Arrowleft onClick={() => setShowForm(false)} />
                     </div>
-                    <p className={styles.heading}>{lan.commontext.thanksnote}</p>
+                    <p className={styles.heading}>
+                      {lan.commontext.thanksnote}
+                    </p>
                     <div className={styles.btncontainer}>
                       <Link href={"/brochure/Yiti Brochure.pdf"}>
                         <a target={"_blank"} rel="noreferrer">
@@ -236,8 +250,7 @@ const Villplans = () => {
                             whileHover={{
                               color: "#058DA6",
                               backgroundColor: "#fff",
-                            }}
-                          >
+                            }}>
                             {lan.commontext.download} {lan.commontext.brochure}{" "}
                           </motion.div>
                         </a>
@@ -250,8 +263,7 @@ const Villplans = () => {
                             whileHover={{
                               color: "#058DA6",
                               backgroundColor: "#fff",
-                            }}
-                          >
+                            }}>
                             {lan.commontext.download} {lan.commontext.floorplan}{" "}
                           </motion.div>
                         </a>
@@ -262,8 +274,7 @@ const Villplans = () => {
                           whileHover={{
                             color: "#058DA6",
                             backgroundColor: "#fff",
-                          }}
-                        >
+                          }}>
                           {lan.commontext.seedetails}{" "}
                           <BsArrowRightCircle
                             style={{
@@ -279,32 +290,44 @@ const Villplans = () => {
                     <div className={styles.gobackformbtn}>
                       <Arrowleft onClick={() => setShowForm(false)} />
                     </div>
-                    <p className={styles.heading}>{lan.commontext.adddetails}</p>
+                    <p className={styles.heading}>
+                      {lan.commontext.adddetails}
+                    </p>
                     <div className={styles.userformcontainer}>
                       <form className={styles.userform}>
                         <div className={styles.formItem}>
-                          <label htmlFor="name">{lan.contact.register.formdata.name.title}</label>
+                          <label htmlFor="name">
+                            {lan.contact.register.formdata.name.title}
+                          </label>
                           <input
                             type={"text"}
                             value={name}
                             required
                             onChange={(e) => setName(e.target.value)}
-                            placeholder={lan.contact.register.formdata.name.placeholder}
+                            placeholder={
+                              lan.contact.register.formdata.name.placeholder
+                            }
                           />
                         </div>
                         <div className={styles.formItem}>
-                          <label htmlFor="email">{lan.contact.register.formdata.email.title}</label>
+                          <label htmlFor="email">
+                            {lan.contact.register.formdata.email.title}
+                          </label>
                           <input
                             type={"email"}
                             value={email}
                             name="email"
                             required
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder={lan.contact.register.formdata.email.placeholder}
+                            placeholder={
+                              lan.contact.register.formdata.email.placeholder
+                            }
                           />
                         </div>
                         <div className={styles.formItem}>
-                          <label htmlFor="name">{lan.contact.register.formdata.phone.title}</label>
+                          <label htmlFor="name">
+                            {lan.contact.register.formdata.phone.title}
+                          </label>
                           <PhoneInput
                             country={"om"}
                             value={phone}
@@ -326,8 +349,7 @@ const Villplans = () => {
                         whileHover={{
                           scale: !loading ? 1.02 : 1,
                         }}
-                        disabled={loading}
-                      >
+                        disabled={loading}>
                         {loading ? <Loader /> : lan.commontext.registerinterest}
                       </motion.button>
                     </div>

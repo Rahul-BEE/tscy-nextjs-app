@@ -21,12 +21,11 @@ const News = () => {
   const router = useRouter();
   const { newsid } = router.query;
   const data = lan.newssection.post.find((villa) => villa.slug === newsid);
-  console.log(data);
   const canonicaltag = lan.seo.newsdetails.canonicaltag + newsid;
 
   return (
     <>
-      {data && (
+      {data && canonicaltag && (
         <HeadComponent
           title={"News Detail | The Sustainable City - Yiti"}
           description={lan.seo.newspage.description}
@@ -58,8 +57,7 @@ const News = () => {
                         <div className={styles.network}>
                           <FacebookShareButton
                             url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                            quote={data.title}
-                          >
+                            quote={data.title}>
                             <FacebookIcon />
                           </FacebookShareButton>
                         </div>
@@ -68,8 +66,7 @@ const News = () => {
                             url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
                             title={data.title}
                             windowWidth={750}
-                            windowHeight={600}
-                          >
+                            windowHeight={600}>
                             <LinkedinIcon />
                           </LinkedinShareButton>
                         </div>
@@ -77,16 +74,14 @@ const News = () => {
                           <WhatsappShareButton
                             url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
                             title={data.title}
-                            separator=":: "
-                          >
+                            separator=":: ">
                             <WhatsappIcon />
                           </WhatsappShareButton>
                         </div>
                         <div className={styles.network}>
                           <TwitterShareButton
                             title={data.title}
-                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}
-                          >
+                            url={`https://www.thesustainablecity-yiti.com/news/${data.slug}`}>
                             <TwitterIcon />
                           </TwitterShareButton>
                         </div>

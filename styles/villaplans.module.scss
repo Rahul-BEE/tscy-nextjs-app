@@ -525,7 +525,7 @@
   }
 }
 
-.resgisterinterestbtn {
+.registerinterestbtn {
 
   display: flex;
   align-items: center;
@@ -741,5 +741,24 @@
 
   }
 
+  .villaplandetailmain {
+    margin-top: 1.5rem;
+    overflow: hidden;
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    min-height: 548px;
+    max-height: 600px;
+
+    .villaplaninnercontainer {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
 
 }

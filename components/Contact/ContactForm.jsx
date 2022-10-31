@@ -28,7 +28,9 @@ const ContactForm = ({ page }) => {
 
     if (phone === "") {
       setError(true);
-      setErrorMessage(errorMessage ? errorMessage : "Please fill all the fields");
+      setErrorMessage(
+        errorMessage ? errorMessage : "Please fill all the fields"
+      );
       return;
     }
     setLoading(true);
@@ -74,10 +76,14 @@ const ContactForm = ({ page }) => {
           {page === "true" && (
             <div className={styles.typeSelector}>
               <div className={styles.innertypeselector}>
-                <p className={select === 0 ? styles.active : ""} onClick={() => setSelect(0)}>
+                <p
+                  className={select === 0 ? styles.active : ""}
+                  onClick={() => setSelect(0)}>
                   {lan.contact.register.individual}
                 </p>
-                <p className={select === 1 ? styles.active : ""} onClick={() => setSelect(1)}>
+                <p
+                  className={select === 1 ? styles.active : ""}
+                  onClick={() => setSelect(1)}>
                   {lan.contact.register.corporate}
                 </p>
               </div>
@@ -95,8 +101,7 @@ const ContactForm = ({ page }) => {
                       required
                       placeholder={data.company.placeholder}
                       value={company}
-                      onChange={(e) => setCompany(e.target.value)}
-                    ></input>
+                      onChange={(e) => setCompany(e.target.value)}></input>
                   </div>
                   //   <div className={styles.companyrow1}>
 
@@ -124,8 +129,7 @@ const ContactForm = ({ page }) => {
                     required
                     placeholder={data.name.placeholder}
                     value={fullname}
-                    onChange={(e) => setFullname(e.target.value)}
-                  ></input>
+                    onChange={(e) => setFullname(e.target.value)}></input>
                 </div>
                 <div className={styles.namemailRow} data-select={select}>
                   <div className={styles.formItem}>
@@ -136,8 +140,7 @@ const ContactForm = ({ page }) => {
                       required
                       placeholder={data.email.placeholder}
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    ></input>
+                      onChange={(e) => setEmail(e.target.value)}></input>
                   </div>
                   <div className={styles.formItem}>
                     <label htmlFor="phone">{data.phone.title}</label>
@@ -167,7 +170,11 @@ const ContactForm = ({ page }) => {
                       // }}
                     />
 
-                    {error && <small className={styles.phoneErrorDiv}>{errorMessage}</small>}
+                    {error && (
+                      <small className={styles.phoneErrorDiv}>
+                        {errorMessage}
+                      </small>
+                    )}
                   </div>
                 </div>
                 {/* {page !== "true" && (
@@ -202,8 +209,7 @@ const ContactForm = ({ page }) => {
                       required
                       placeholder={data.license.placeholder}
                       value={license}
-                      onChange={(e) => setLicense(e.target.value)}
-                    ></input>
+                      onChange={(e) => setLicense(e.target.value)}></input>
                   </div>
                 )}
 
@@ -213,8 +219,7 @@ const ContactForm = ({ page }) => {
                     whileHover={{
                       scale: !loading ? 1.1 : 1,
                     }}
-                    disabled={loading}
-                  >
+                    disabled={loading}>
                     {loading ? <Loader /> : lan.commontext.sendmessage}
                   </motion.button>
                 </div>
@@ -233,8 +238,7 @@ const ContactForm = ({ page }) => {
                     className={styles.borderbtn}
                     whileHover={{
                       scale: 1.05,
-                    }}
-                  >
+                    }}>
                     {lan.contact.submitanotherinterest}
                   </motion.button>
                   <Link href="#visitus" passHref>

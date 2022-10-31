@@ -610,6 +610,17 @@
   .contactinfo {
     color: #777777;
 
+    .iteminfo {
+      a {
+        display: inline-block;
+        margin-bottom: 1.2rem;
+      }
+
+      @media(max-width: 700px) {
+        margin-block: 1rem;
+      }
+    }
+
     h4 {
       font-weight: 600;
       font-size: 1.5625rem;
@@ -639,11 +650,13 @@
       }
     }
 
-    p {
+    a {
       font-weight: 400;
       font-size: 1.25rem;
       color: #777777 !important;
       direction: ltr;
+
+
 
       @media (max-width:600px) {
         font-size: 16px;
@@ -687,8 +700,7 @@
       padding-left: 0;
       font-weight: 400;
       font-size: 13px;
-      line-height: 20px;
-      padding-block: 1rem;
+      padding-block: 0.8rem;
     }
 
     .accordHeaderbtn {

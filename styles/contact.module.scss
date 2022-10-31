@@ -36,7 +36,7 @@
                 // font-family: 'Poppins';
                 font-style: normal;
                 color: #777777;
-
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -107,6 +107,25 @@
                     grid-template-columns: repeat(4, 1fr);
                     width: 50%;
                     max-width: 300px;
+                }
+
+
+                .infopolygon {
+                    width: 200px;
+                    height: 120px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    &:lang(ar) {
+                        right: unset;
+                        left: 0;
+                    }
+
+                    @media (max-width:700px) {
+                        width: 86px;
+                        height: 55px;
+                    }
                 }
 
                 @media (max-width:1224px) {
