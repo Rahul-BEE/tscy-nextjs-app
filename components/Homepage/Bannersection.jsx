@@ -15,11 +15,11 @@ const Bannersection = ({ banner }) => {
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
-        speed={2500}
+        speed={2000}
         loop={true}
         noSwiping={true}
         noSwipingClass="swiper-slide"
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {

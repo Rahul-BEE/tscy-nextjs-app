@@ -31,7 +31,9 @@ function Footer() {
     localStorage.setItem("language", JSON.stringify(lan));
     setLanguage(lan);
     location.push(location.asPath, location.asPath, { locale: lan });
-    // window.location.reload(true);
+    location.events.on("routeChangeComplete", async () => {
+      location.reload();
+    });
   };
   useEffect(() => {
     if (typeof window !== "undefined") {
