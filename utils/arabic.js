@@ -977,7 +977,7 @@ const arabic = {
     unit: "م",
     features: "Features",
     share: "شارك",
-    source:"مصدر"
+    source: "مصدر",
   },
   propertyFeatures: [
     {
@@ -1112,7 +1112,7 @@ const arabic = {
         country: "سلطنة عمان ",
         image: "/Images/news/news_img1.jpg",
         type: "news",
-        source:"https://www.thesustainablecity-yiti.com/news/",
+        source: "https://www.thesustainablecity-yiti.com/news/",
         heading:
           "حسابات الضمان العقاري للمشروع التطويري الذي يقع ضمن أكبر مشروع سياحي متكامل في سلطنة عُمان",
         discription: [
@@ -1134,7 +1134,7 @@ const arabic = {
         country: "الإمارات العربية المتحدة",
         image: "/Images/news/news_img2.jpg",
         type: "news",
-        source:"https://www.thesustainablecity-yiti.com/news/",
+        source: "https://www.thesustainablecity-yiti.com/news/",
         heading:
           "ضمن نهجها التوسعي في المشروعات المستدامة والمستقبلية في المنطقة",
         discription: [
@@ -1158,7 +1158,7 @@ const arabic = {
         country: "الإمارات العربية المتحدة",
         image: "/Images/news/news_img3.jpg",
         type: "news",
-        source:"https://www.thesustainablecity-yiti.com/news/",
+        source: "https://www.thesustainablecity-yiti.com/news/",
         heading: "مشروع حضري متكامل في مسقط يلبي أعلى معايير الاستدامة",
         discription: [
           "•	المشروع يمتد على مساحة تصل إلى المليون متر مربع",
@@ -1188,7 +1188,7 @@ const arabic = {
         country: "مسقط",
         image: "/Images/news/news_img4.png",
         type: "news",
-        source:"https://www.thesustainablecity-yiti.com/news/",
+        source: "https://www.thesustainablecity-yiti.com/news/",
         heading:
           "بمناسبة اليوم العالمي للتنظيف، جرت حملة تنظيف الشواطئ على امتداد شاطئ الحيل",
         discription: [
@@ -1654,7 +1654,7 @@ const arabic = {
       canonicaltag: "https://www.thesustainablecity-yiti.com/ar/floorplan/",
     },
     aboutus: {
-      title: "من نعن | المدينة المستدامة يتي", // 50-50 characters only
+      title: "من نحن | المدينة المستدامة يتي", // 50-50 characters only
       description:
         "المدينة المُستدامة - يتي هي مشروعٌ نوعيٌّ جديد جاء ثمرة تضافر الجهود والرؤى بين الشركة العمانية للتنمية السياحية (عمران) وشركة دايموند ديفلوبرز لتطوير مشروع عالمي المستوى ومتعدد الاستخدامات يعتمدُ أعلى معايير الاستدامة الاجتماعية والبيئية والاقتصادية. اختيرَ للمدينة موقعٌ ساحليٌّ رائع على شريط ساحلي خلاب مطل على خليج عُمان، وهي تشكلُ أيقونةً معماريةً تجتمع فيها مقومات الريادة في مفاهيم الاستدامة مع جودة لا تُضاهى في أسلوب العيش والحياة ضمن مجتمع متكامل على أرض سلطنة عُمان.", // add the words which users could search 150-160 character max
       keyword: [
