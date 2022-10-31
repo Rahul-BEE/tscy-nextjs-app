@@ -25,14 +25,14 @@ const Header = () => {
         animation.start({
           y: -300,
           transition: {
-            duration: 0.5,
+            duration: 0.2,
           },
         });
       } else if (scrollDirection === "UP" && !isMobile) {
         animation.start({
           y: 0,
           transition: {
-            duration: 0.5,
+            duration: 0.2,
           },
         });
       }
@@ -48,7 +48,7 @@ const Header = () => {
       );
     }
   }, []);
-  const handelLanguageChange = (lang) => {
+  const handelLanguageChange = async (lang) => {
     let lan = "";
     if (language === "en") {
       lan = "ar";
@@ -59,7 +59,7 @@ const Header = () => {
     setLanguage(lan);
 
     location.push(location.asPath, location.asPath, { locale: lan });
-    location.events.on("routeChangeComplete", () => {
+    location.events.on("routeChangeComplete", async () => {
       location.reload();
     });
     setloading(!loading);

@@ -22,6 +22,7 @@ import { useInView } from "react-intersection-observer";
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
+  const formRef = useRef(null);
   const { state, dispatch } = useAppContext();
   const test = useAnimation();
   const [showForm, setShowForm] = useState(false);
@@ -36,9 +37,9 @@ function VillaplansMobile() {
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
   const [brochureDownload, setBrochureDownload] = useState(null);
 
-  const [formRef, isInView] = useInView({
-    threshold: 0.8,
-  });
+  // const [formRef, isInView] = useInView({
+  //   threshold: 0.8,
+  // });
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);
@@ -72,8 +73,12 @@ function VillaplansMobile() {
     }
   };
   const handleClick = ({ id, scroll }) => {
-    if (!isInView && scroll && !dataReceived) {
-      scrollBy(0, window.innerHeight / 1.2);
+    if (scroll && !dataReceived) {
+      formRef.current?.scrollIntoView({
+        alignToTop: false,
+        behavior: "smooth",
+        block: "center",
+      });
     }
     if (dataReceived) {
       if (id === 1) {
@@ -211,7 +216,7 @@ function VillaplansMobile() {
       <div className={styles.villaplanImageContainer}>
         <Image
           src={lan.villaplansection.villas[activeVilla].mainImg}
-          width={900}
+          width={1100}
           height={500}
           layout="responsive"
           objectFit="cover"
