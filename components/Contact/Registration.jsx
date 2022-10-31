@@ -5,6 +5,7 @@ import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Registration = () => {
   const lan = useLanguage();
@@ -69,6 +70,14 @@ const Registration = () => {
                 </Link>
               );
             })}
+          </div>
+          <div className={styles.infopolygon}>
+            <Image
+              width={214}
+              height={134}
+              layout="responsive"
+              src={"/Images/contact/contactinfopoly.png"}
+            />
           </div>
         </div>
         <ContactForm page={broker} />
