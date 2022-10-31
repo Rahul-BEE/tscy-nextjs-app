@@ -1031,7 +1031,7 @@ const arabic = {
       id: 17,
       name: "الخيول",
       icon: <Popequestraiantrack />,
-      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
+      slideimg: ["/Images/masterplan/tracks/equestriantrack.png"],
       description:
         "مسار للفروسية بطول 1.2 كم يمتد على طول الواجهة البحرية ويربط الإسطبلات بالحديقة العامة.",
     },
@@ -1047,7 +1047,7 @@ const arabic = {
       id: 19,
       name: "المركبات الكهربائية",
       icon: <Popebuggy />,
-      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      slideimg: ["/Images/masterplan/tracks/ebuggytrack.png"],
       description:
         "مناطق خالية من السيارات حرصاً على سلامة الأطفال وتعزيز إمكانية المشي",
     },

@@ -1029,7 +1029,7 @@ const english = {
       id: 17,
       name: "Equestrian",
       icon: <Popequestraiantrack />,
-      slideimg: ["/Images/masterplan/tracks/equistriantrack.png"],
+      slideimg: ["/Images/masterplan/tracks/equestriantrack.png"],
       description:
         "1.2 Km long equestrian track that runs along the waterfront promenade connecting the stables with the public park.",
     },
@@ -1045,7 +1045,7 @@ const english = {
       id: 19,
       name: "E-Buggy",
       icon: <Popebuggy />,
-      slideimg: ["/Images/masterplan/tracks/cyclingtrack.png"],
+      slideimg: ["/Images/masterplan/tracks/ebuggytrack.png"],
       description:
         "Car free areas to create safe zones for kids and promote walkability.",
     },
