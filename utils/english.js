@@ -1129,8 +1129,7 @@ const english = {
       {
         slug: "environment-clean-marinedebris",
         title: [
-          "The Sustainable City - Yiti and The Environment Society of Oman Partner   ",
-          "to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
+          "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
         ],
         date: "18th September, 2022",
         city: "Oman",
