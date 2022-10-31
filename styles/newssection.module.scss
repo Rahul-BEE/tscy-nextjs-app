@@ -14,17 +14,18 @@
     display: none;
   }
 }
-.topnewsspanheading
-{
+
+.topnewsspanheading {
   text-transform: initial;
-    font-size: 1.9375rem;
+  font-size: 1.9375rem;
 }
-.newsspanheading
-{
+
+.newsspanheading {
   -webkit-text-fill-color: #777777;
   text-transform: lowercase;
-    font-size: 1.9375rem;
+  font-size: 1.9375rem;
 }
+
 .hero_text_center {
   text-align: center;
   text-transform: uppercase;
@@ -33,8 +34,8 @@
     // color: $primary__button_color;
     // background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.4) 101.52%);
     background: #058da6;
-   // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
-   background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
+    // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
+    background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -292,40 +293,42 @@
     color: $white__font_color;
   }
 }
-.readmore
-{
+
+.readmore {
   padding: 10px;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    bottom: 0px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    text-align: right;
-    color: white;
-    border-radius: 10px;
-    
-    p{
-      font-weight: 400;
-      font-size: 14px;
-    }
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  text-align: right;
+  color: white;
+  border-radius: 10px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
-.readmore_tab
-{
+
+.readmore_tab {
   padding: 10px;
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
   //  height: 50px;
-    bottom: 0px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    text-align: right;
-    color: white;
-    border-radius: 10px;
-    margin-top: -97px;
-    p{
-      font-weight: 400;
-      font-size: 14px;
-    }
+  bottom: 0px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  text-align: right;
+  color: white;
+  border-radius: 10px;
+  margin-top: -97px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
+
 .mySwiper {
   @media (max-width: 565px) {
     //margin-top: 150px;
@@ -347,6 +350,7 @@
       position: absolute;
       top: -155%;
     }
+
     @media only screen and (max-width: 350px) and (min-width: 333px) {
       top: -145%;
       font-size: 16px;
@@ -354,6 +358,7 @@
       padding: 10px;
       position: absolute;
     }
+
     @media only screen and (max-width: 360px) and (min-width: 351px) {
       top: -140%;
       font-size: 16px;
@@ -361,6 +366,7 @@
       padding: 10px;
       position: absolute;
     }
+
     @media only screen and (max-width: 369px) and (min-width: 361px) {
       top: -130%;
       font-size: 16px;
@@ -368,6 +374,7 @@
       padding: 10px;
       position: absolute;
     }
+
     @media only screen and (max-width: 405px) and (min-width: 370px) {
       top: -115%;
       font-size: 16px;
@@ -375,6 +382,7 @@
       padding: 10px;
       position: absolute;
     }
+
     @media only screen and (max-width: 500px) and (min-width: 406px) {
       font-size: 16px;
       line-height: 24px;
@@ -382,6 +390,7 @@
       position: absolute;
       top: -85%;
     }
+
     @media only screen and (max-width: 565px) and (min-width: 501px) {
       font-size: 16px;
       line-height: 24px;
@@ -389,6 +398,7 @@
       position: absolute;
       top: -65%;
     }
+
     @media only screen and (max-width: 720px) and (min-width: 566px) {
       font-size: 16px;
       line-height: 24px;
@@ -396,6 +406,7 @@
       position: absolute;
       top: -40%;
     }
+
     @media only screen and (max-width: 768px) and (min-width: 721px) {
       font-size: 16px;
       line-height: 24px;
@@ -506,23 +517,28 @@
   }
 }
 
-.centeraligned
-{
+.centeraligned {
   width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
 
 }
-.network
-{
+
+.network {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   margin: 1.5rem 0.5rem 1.5rem;
+
+  button {
+    width: 24px;
+    height: 25px;
+  }
 }
+
 .mt22 {
   margin-top: 22px;
   margin-bottom: 10px;
