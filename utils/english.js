@@ -1391,7 +1391,7 @@ const english = {
         },
         name: {
           title: "Full Name",
-          placeholder: "John Doe",
+          placeholder: "Ahmad Rashad",
         },
         villas: {
           title: "Villa you are interested in ",
@@ -1402,10 +1402,10 @@ const english = {
           ],
         },
         leadfrom: {
-          title: "How did you hear about us ? ",
+          title: "How did you hear about us?",
           placeholder: "Please select one option",
           options: [
-            "Sharjah Sustainable City Employee",
+            "The Sustainable City Yiti Employee",
             "Online Browsing",
             "Media Advertising",
             "Word of Mouth",
@@ -1415,7 +1415,7 @@ const english = {
           ],
         },
         email: {
-          title: "Mail",
+          title: "Email",
           placeholder: "example@gmail.com",
         },
         phone: {
