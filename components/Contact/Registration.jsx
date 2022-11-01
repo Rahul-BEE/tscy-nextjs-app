@@ -47,7 +47,7 @@ const Registration = () => {
                     data-type={item.type}
                     href={item?.link}
                     target="_blank"
-                    rel="norefferer"
+                    rel="noreferrer"
                     style={{
                       display: "block",
                       marginTop: "5px",
