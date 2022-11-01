@@ -125,7 +125,7 @@ const Masterplandetail = ({
               objectFit="cover"
               objectPosition="center"
               placeholder="blur"
-              blurDataURL={data[index].slideimg[slideIndex]}
+              blurDataURL="/Images/blur.png"
               alt={data[index].name}
               onLoadingComplete={() => setShowGradient(true)}
               quality={100}
