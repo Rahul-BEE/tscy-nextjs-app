@@ -36,6 +36,7 @@ import Omran from "../public/Logos/omran.svg";
 import Email from "../public/Svg/contactus/email.svg";
 import Pin from "../public/Svg/contactus/pin.svg";
 import Tel from "../public/Svg/contactus/tel.svg";
+import Call from "../public/Svg/contactus/call2.svg";
 import Clock from "../public/Svg/contactus/clock.svg";
 import Facebook from "../public/Svg/contactus/fb.svg";
 import Linkedin from "../public/Svg/contactus/linkedin.svg";
@@ -1338,7 +1339,7 @@ const english = {
           {
             title: "Telephone",
             content: "+968 2471 0700",
-            icon: <Tel />,
+            icon: <Call />,
           },
           {
             title: "Email",

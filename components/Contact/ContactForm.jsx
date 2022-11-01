@@ -175,11 +175,7 @@ const ContactForm = ({ page }) => {
                 </div>
                 {page !== "true" && (
                   <div className={styles.formItem}>
-                    <label
-                      htmlFor="leadfrom"
-                      style={{ marginBottom: "0.5rem" }}>
-                      {data.leadfrom.title}
-                    </label>
+                    <label htmlFor="leadfrom">{data.leadfrom.title}</label>
                     <select
                       className={styles.selectcontent}
                       value={leadfrom}
