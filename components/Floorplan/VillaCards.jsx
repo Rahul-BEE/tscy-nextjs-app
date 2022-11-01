@@ -64,6 +64,8 @@ const VillaCards = ({ filterId }) => {
               layout={"responsive"}
               objectFit="cover"
               alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
+              placeholder="blur"
+              blurDataURL="/Images/blur.png"
             />
           </div>
         ))}
@@ -108,6 +110,8 @@ const VillaCards = ({ filterId }) => {
               layout={"responsive"}
               objectFit="cover"
               alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
+              placeholder="blur"
+              blurDataURL="/Images/blur.png"
             />
           </div>
         ))}

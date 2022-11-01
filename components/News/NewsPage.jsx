@@ -33,6 +33,8 @@ function NewsPage() {
                         width={900}
                         height={500}
                         layout="responsive"
+                        placeholder="blur"
+                        blurDataURL="/Images/blur.png"
                       />
                     </div>
                     <div className={styles.content}>

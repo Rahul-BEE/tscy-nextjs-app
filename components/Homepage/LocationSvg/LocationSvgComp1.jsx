@@ -22,6 +22,8 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
             layout="fill"
             priority={true}
             quality={100}
+            placeholder="blur"
+            blurDataURL="/Images/blur.png"
           />
           <div
             style={{
@@ -241,6 +243,8 @@ function LocationSvgComp1({ svgchange, setSvgChange }) {
             priority={true}
             alt="Sustainable city Yiti Location Map "
             layout="responsive"
+            placeholder="blur"
+            blurDataURL="/Images/blur.png"
           />
           <div
             style={{

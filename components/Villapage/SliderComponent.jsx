@@ -53,6 +53,8 @@ const SliderComponent = ({
                 objectFit="cover"
                 objectPosition={"center"}
                 alt="Sustainable City Yiti"
+                placeholder="blur"
+                blurDataURL="/Images/blur.png"
               />
             </div>
             <div

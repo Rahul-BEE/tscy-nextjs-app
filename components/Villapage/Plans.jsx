@@ -256,6 +256,8 @@ function Plans() {
                   height={800}
                   objectFit="cover"
                   quality={100}
+                  placeholder="blur"
+                  blurDataURL="/Images/blur.png"
                   priority
                   style={{
                     pointerEvents: "none",

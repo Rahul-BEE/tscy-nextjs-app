@@ -67,6 +67,8 @@ const Location = () => {
               alt={lan.locationsection.title2}
               priority={true}
               quality={100}
+              placeholder="blur"
+              blurDataURL="/Images/blur.png"
             />
           </div>
           <LocationSvgComp svgchange={svgchange} setSvgChange={setSvgChange} />

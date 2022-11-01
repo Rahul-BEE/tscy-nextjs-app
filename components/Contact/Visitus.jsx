@@ -30,24 +30,10 @@ const Visitus = () => {
             objectFit="cover"
             quality={100}
             className={styles.imgdesk}
+            placeholder="blur"
+            blurDataURL="/Images/blur.png"
             alt="Sustainable City Yiti"
           />
-          {/* <Image
-            src={"/Images/contact/tabletmap.png"}
-            priority
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            className={styles.imgtablet}
-          /> */}
-          {/* <Image
-            src={"/Images/contact/contactmap.png"}
-            priority
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            className={styles.mobile}
-          /> */}
           <div className={styles.getDirectionRow}>
             <div className={styles.getdirelement}>
               {lan.contact.visitus.location}

@@ -33,6 +33,8 @@ const Ourstory = () => {
               objectPosition="80%"
               priority
               alt="Sustainable City Yiti Masterplan"
+              placeholder="blur"
+              blurDataURL="/Images/blur.png"
             />
           </div>
           <div className={styles.polygoncontainer1}>
@@ -67,42 +69,42 @@ const Ourstory = () => {
             {data.story.p1}
             <Link href={"https://omran.om/"} passHref>
               <a target={"_blank"}>
-            <span
-             style={{
-              textDecoration: "underline",
-            }}
-            >{data.story.s1}</span>
-            </a>
+                <span
+                  style={{
+                    textDecoration: "underline",
+                  }}>
+                  {data.story.s1}
+                </span>
+              </a>
             </Link>
             {data.story.p2}
             <Link href={"https://diamond-developers.ae/"} passHref>
               <a target={"_blank"}>
-            <span
-             style={{
-              textDecoration: "underline",
-            }}
-            >{data.story.s2}</span>
-            </a>
+                <span
+                  style={{
+                    textDecoration: "underline",
+                  }}>
+                  {data.story.s2}
+                </span>
+              </a>
             </Link>
             {data.story.p3}
           </p>
-          
+
           <p
             style={{
               marginTop: "2rem",
-            }}
-          >
+            }}>
             {data.story.p4} <span>{data.story.s3}</span> {data.story.p5}
             <Link href={"https://www.thesustainablecity.ae/"} passHref>
               <a target={"_blank"}>
-            <span
-              style={{
-                textDecoration: "underline",
-              }}
-            >
-              {data.story.s4}
-            </span>
-            </a>
+                <span
+                  style={{
+                    textDecoration: "underline",
+                  }}>
+                  {data.story.s4}
+                </span>
+              </a>
             </Link>
             {data.story.p6}
           </p>
@@ -117,8 +119,7 @@ const Ourstory = () => {
                   whileHover={{
                     boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
                     border: "1px solid white",
-                  }}
-                >
+                  }}>
                   {lan.partners.diamond}
                 </motion.div>
               </a>
@@ -130,8 +131,7 @@ const Ourstory = () => {
                   whileHover={{
                     boxShadow: "3px 5px 16px rgba(0, 0, 0, 0.1)",
                     border: "1px solid white",
-                  }}
-                >
+                  }}>
                   {lan.partners.omran}
                 </motion.div>
               </a>

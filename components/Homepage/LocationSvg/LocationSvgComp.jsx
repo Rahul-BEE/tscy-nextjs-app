@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import styles from "../../../styles/home.module.scss";
 import ProjectLocation from "../../../public/Svg/homelocation/ProjectDesk.svg";
 import ProjectLocationar from "../../../public/Svg/homelocation/arProjectDesk.svg";

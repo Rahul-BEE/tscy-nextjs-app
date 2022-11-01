@@ -30,6 +30,8 @@ const Othercities = () => {
                     height={400}
                     objectFit="cover"
                     alt={data.othercity.city1}
+                    placeholder="blur"
+                    blurDataURL="/Images/blur.png"
                   />
                 </motion.div>
                 <p>{data.othercity.city1}</p>
@@ -52,6 +54,8 @@ const Othercities = () => {
                     height={400}
                     objectFit="cover"
                     alt={data.othercity.city2}
+                    placeholder="blur"
+                    blurDataURL="/Images/blur.png"
                   />
                 </motion.div>
                 <p>{data.othercity.city2}</p>

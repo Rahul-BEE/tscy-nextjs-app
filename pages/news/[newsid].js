@@ -122,6 +122,8 @@ const News = () => {
                         height={400}
                         className={styles.headerimg}
                         alt="Sustainable City Yiti"
+                        placeholder="blur"
+                        blurDataURL="/Images/blur.png"
                       />
                     </div>
                     <div className={styles.hero_newspagesection}>
