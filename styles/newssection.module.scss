@@ -245,6 +245,11 @@
     -webkit-box-orient: vertical;
     white-space: normal;
 
+    .icon:lang(ar) {
+      rotate: 180deg;
+    }
+
+
     @media (max-width: 768px) {
       margin-bottom: 0px;
       font-size: 14px;
@@ -308,6 +313,10 @@
   p {
     font-weight: 400;
     font-size: 14px;
+
+    &:lang(ar) {
+      text-align: left;
+    }
   }
 }
 
@@ -326,6 +335,10 @@
   p {
     font-weight: 400;
     font-size: 14px;
+
+    &:lang(ar) {
+      text-align: left;
+    }
   }
 }
 
@@ -516,20 +529,21 @@
 
   }
 }
-.source
-{
+
+.source {
   font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #B5B5B5;
-    margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B5B5B5;
+  margin-top: 24px;
 }
-.sourcehref
-{
-  color: #B5B5B5!important;
-    text-decoration: underline;
+
+.sourcehref {
+  color: #B5B5B5 !important;
+  text-decoration: underline;
 }
+
 .centeraligned {
   width: 100%;
   max-width: 100%;

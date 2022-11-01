@@ -45,7 +45,7 @@ function NewsCarousel({ data, props }) {
                     />
                     <div className={styles.readmore_tab}>
                       <p>
-                        {lan.commontext.readmore} 
+                        {lan.commontext.readmore}{" "}
                         <FaChevronRight className={styles.icon} />
                       </p>
                     </div>
@@ -73,7 +73,8 @@ function NewsCarousel({ data, props }) {
                     />
                     <div className={styles.readmore_tab}>
                       <p>
-                        Read More <FaChevronRight className={styles.icon} />
+                        {lan.commontext.readmore}{" "}
+                        <FaChevronRight className={styles.icon} />
                       </p>
                     </div>
                     <p>{e.discription}</p>
