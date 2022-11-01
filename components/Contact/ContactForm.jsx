@@ -223,7 +223,7 @@ const ContactForm = ({ page }) => {
                   <motion.button
                     type="submit"
                     whileHover={{
-                      scale: !loading ? 1.1 : 1,
+                      scale: !loading ? 1.02 : 1,
                     }}
                     disabled={loading}>
                     {loading ? <Loader /> : lan.commontext.sendmessage}
