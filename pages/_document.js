@@ -5,10 +5,10 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="icon" href="/Logos/logo.png" />
+        <link rel="icon" href="/favicon.ico" />
         {/* <link rel="icon" sizes="16x16" href="/Logos/logo.png" /> */}
-        <link rel="shortcut icon" href="/Logos/logo.png" />
-        <link rel="apple-touch-icon" href="/Logos/logo.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
