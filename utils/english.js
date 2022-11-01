@@ -1324,6 +1324,8 @@ const english = {
             title: "Address",
             content: "Mina Al Sultan Qaboos Centre Yiti, Sultanate of Oman",
             icon: <Pin />,
+            type: "link",
+            link: "https://www.google.com/maps/place/The+Sustainable+City+-+Yiti+Experience+Center+(TSCY)/@23.6254328,58.5788909,17z/data=!3m1!4b1!4m5!3m4!1s0x3e91f7fd475123d5:0xdf8ff3ebfaec4d72!8m2!3d23.6254328!4d58.5788909",
           },
           {
             title: "Working Hours",
@@ -1335,16 +1337,22 @@ const english = {
             title: "Toll-Free(OMAN)",
             content: "8000 33 33",
             icon: <Tel />,
+            type: "link",
+            link: "tel:+96880003333",
           },
           {
             title: "Telephone",
             content: "+968 2471 0700",
             icon: <Call />,
+            type: "link",
+            link: "tel:+96824710700",
           },
           {
             title: "Email",
             content: "hello@thesustainablecity-yiti.com",
             icon: <Email />,
+            type: "link",
+            link: "mailto:hello@thesustainablecity-yiti.com",
           },
         ],
         socialmedia: [

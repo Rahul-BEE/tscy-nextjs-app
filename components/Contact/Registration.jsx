@@ -43,7 +43,17 @@ const Registration = () => {
                 <div>{item.icon}</div>
                 <div>
                   <h5>{item.title}</h5>
-                  <p>{item.content}</p>
+                  <a
+                    data-type={item.type}
+                    href={item?.link}
+                    target="_blank"
+                    rel="norefferer"
+                    style={{
+                      display: "block",
+                      marginTop: "5px",
+                    }}>
+                    {item.content}
+                  </a>
                   {item.content2 && <p>{item.content2}</p>}
                 </div>
               </div>
@@ -56,7 +66,7 @@ const Registration = () => {
                   <a target={"_blank"} rel="noreferrrer">
                     <motion.div
                       whileHover={{
-                        scale: 1.5,
+                        scale: 1.1,
                       }}
                       style={{
                         display: "flex",
