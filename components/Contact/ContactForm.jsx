@@ -21,6 +21,7 @@ const ContactForm = ({ page }) => {
   const [license, setLicense] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [leadfrom, setLeadFrom] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const data = lan.contact.register.formdata;
   const submitHandler = async (e) => {
@@ -32,6 +33,19 @@ const ContactForm = ({ page }) => {
         errorMessage ? errorMessage : "Please fill all the fields"
       );
       return;
+    } else {
+      setError(false);
+      setErrorMessage("");
+    }
+    if (select === 0 && leadfrom === "") {
+      setError(true);
+      setErrorMessage(
+        errorMessage ? errorMessage : "Please fill all the fields"
+      );
+      return;
+    } else {
+      setError(false);
+      setErrorMessage("");
     }
     setLoading(true);
     const data =
@@ -40,6 +54,7 @@ const ContactForm = ({ page }) => {
             fullname,
             email,
             phone,
+            leadfrom,
           }
         : {
             company,
@@ -153,50 +168,42 @@ const ContactForm = ({ page }) => {
                       onChange={(val) => setPhone(val)}
                       enableSearch={true}
                       searchClass={styles.searchClass}
-                      // onBlur={handleChange}
                       countryCodeEditable={false}
                       searchNotFound={"No country found"}
-                      // isValid={(value, country) => {
-                      //   if (value.match(/12345/)) {
-                      //     setError(true);
-                      //     return false;
-                      //   } else if (value.match(/1234/)) {
-                      //     setError(true);
-                      //     return false;
-                      //   } else {
-                      //     setError(false);
-                      //     return true;
-                      //   }
-                      // }}
                     />
-
-                    {error && (
-                      <small className={styles.phoneErrorDiv}>
-                        {errorMessage}
-                      </small>
-                    )}
                   </div>
                 </div>
-                {/* {page !== "true" && (
-                <div className={styles.formItem}>
-                  <label htmlFor="villa" style={{ marginBottom: "0.5rem" }}>
-                    {data.villas.title}
-                  </label>
-                  <select
-                    className={styles.selectcontent}
-                    value={villa}
-                    onChange={(e) => setVilla(e.target.value)}>
-                    {data.villas.villa.map((item, index) => (
+                {page !== "true" && (
+                  <div className={styles.formItem}>
+                    <label
+                      htmlFor="leadfrom"
+                      style={{ marginBottom: "0.5rem" }}>
+                      {data.leadfrom.title}
+                    </label>
+                    <select
+                      className={styles.selectcontent}
+                      value={leadfrom}
+                      style={{
+                        color: leadfrom === "" ? "#B5b5b5" : "#777777",
+                      }}
+                      onChange={(e) => setLeadFrom(e.target.value)}>
                       <option
-                        value={item}
-                        key={index}
-                        className={styles.optionvalue}>
-                        {item}
+                        defaultValue={leadfrom}
+                        hidden
+                        className={`${styles.optionvalue} ${styles.optionselect1}`}>
+                        {data.leadfrom.placeholder}
                       </option>
-                    ))}
-                  </select>
-                </div>
-              )} */}
+                      {data.leadfrom.options.map((item, index) => (
+                        <option
+                          value={item}
+                          key={index}
+                          className={styles.optionvalue}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
                 {select === 1 && (
                   <div className={styles.formItem}>
                     <label htmlFor="license">{data.license.title}</label>
@@ -213,6 +220,9 @@ const ContactForm = ({ page }) => {
                   </div>
                 )}
 
+                {error && (
+                  <small className={styles.phoneErrorDiv}>{errorMessage}</small>
+                )}
                 <div className={styles.btnholder}>
                   <motion.button
                     type="submit"

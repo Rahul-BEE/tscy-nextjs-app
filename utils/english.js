@@ -1392,6 +1392,19 @@ const english = {
             "3 Bedroom Courtyard Villa",
           ],
         },
+        leadfrom: {
+          title: "How did you hear about us ? ",
+          placeholder: "Please select one option",
+          options: [
+            "Sharjah Sustainable City Employee",
+            "Online Browsing",
+            "Media Advertising",
+            "Word of Mouth",
+            "Social Media",
+            "Promotional Stand",
+            "Broker",
+          ],
+        },
         email: {
           title: "Mail",
           placeholder: "example@gmail.com",

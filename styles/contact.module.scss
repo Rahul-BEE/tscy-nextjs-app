@@ -276,6 +276,7 @@
 
                         input {
                             padding: 0.5rem 0;
+                            color: #777777;
                         }
 
                         .picontainerclass input {
@@ -315,7 +316,9 @@
                             font-size: 1rem;
                             // font-family: "Poppins";
                             font-weight: 400;
-                            color: #777777;
+                            color: #B5B5B5;
+
+
                         }
 
                         .optionvalue {
@@ -323,6 +326,7 @@
                             // font-family: "Poppins";
                             font-weight: 400;
                             background: white;
+                            color: #777777 !important;
                         }
 
                         .formItem {
