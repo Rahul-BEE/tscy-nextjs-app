@@ -42,6 +42,7 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 gap: 2rem;
+                overflow: hidden;
 
                 h4 {
                     margin: 0;
@@ -120,6 +121,7 @@
                     &:lang(ar) {
                         right: unset;
                         left: 0;
+                        transform: scaleX(-1);
                     }
 
                     @media (max-width:700px) {
