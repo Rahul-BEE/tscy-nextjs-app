@@ -1,134 +1,84 @@
+import React from "react";
+import * as fs from "fs";
+import english from "../utils/english";
 const Sitemap = () => {
   return null;
 };
 
 export const getServerSideProps = async ({ res }) => {
+  const BASE_URL = "https://www.thesustainablecity-yiti.com";
+
+  const staticPaths = fs
+    .readdirSync("pages")
+    .filter((staticPage) => {
+      return ![
+        "api",
+        "_app.js",
+        "_document.js",
+        "404.js",
+        "index.js",
+        "sitemap.xml.js",
+      ].includes(staticPage);
+    })
+    .map((staticPagePath) => {
+      return `${BASE_URL}/${staticPagePath}`;
+    });
+
+  let dynamicPaths1 = [];
+  let dynamicPaths2 = [];
+
+  english.newssection.post.map((item) =>
+    dynamicPaths1.push(`${BASE_URL}/news/${item.slug}`)
+  );
+
+  english.villaplansection.villas.map((item) =>
+    dynamicPaths2.push(`${BASE_URL}/floorplan/${item.slug}`)
+  );
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>1.00</priority>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+<loc>https://www.thesustainablecity-yiti.com/</loc>
+<lastmod>2022-11-02T06:28:11+00:00</lastmod>
+<priority>1.00</priority>
 </url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/floorplan</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-3bedroom</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-4bedroom</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/floorplan/garden-villa-4bedroom</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/about</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/news</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/news/environment-clean-marinedebris</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/news/newly-launched-plan</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/news/investment-value-news</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/contact-us</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/contact-us?broker=true</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/news/tourism-partnership-omran</loc>
-  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/floorplan</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/about</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/news</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/news/environment-clean-marinedebris</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/news/newly-launched-plan</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/news/investment-value-news</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/contact-us</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/contact-us?broker=true</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.thesustainablecity-yiti.com/ar/news/tourism-partnership-omran</loc>
-  <lastmod>2022-11-02T06:48:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-</urlset>
+      ${staticPaths
+        .map((url) => {
+          return `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>1.0</priority>
+            </url>
+          `;
+        })
+        .join("")}
+      ${dynamicPaths2
+        .map((url) => {
+          return `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+          `;
+        })
+        .join("")}
+      ${dynamicPaths1
+        .map((url) => {
+          return `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>0.64</priority>
+            </url>
+          `;
+        })
+        .join("")}
+    </urlset>
   `;
 
   res.setHeader("Content-Type", "text/xml");
