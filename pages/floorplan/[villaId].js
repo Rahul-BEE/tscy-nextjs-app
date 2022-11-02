@@ -15,16 +15,11 @@ const Villa = () => {
   const lan = useLanguage();
   const router = useRouter();
   const { villaId } = router.query;
-  const data = lan.villaplansection.villas.find(
-    (villa) => villa.slug === villaId
-  );
-
-  const canonicaltag = lan.seo.villapage.canonicaltag + villaId;
 
   return (
     <>
       <HeadComponent
-        title={`${lan.seo.villapage.title}| ${data?.title}`}
+        title={`${lan.seo.villapage.title}| ${villaId}`}
         description={lan.seo.villapage.description}
         og={lan.seo.villapage.og}
         keyword={lan.seo.villapage.keyword}
