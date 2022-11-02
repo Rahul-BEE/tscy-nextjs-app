@@ -37,22 +37,7 @@ const itemVariant = {
     },
   }),
 };
-const zeroservicevariant = {
-  visible: {
-    opacity: 1,
-    x: "0",
-    width: "100%",
-    transition: {
-      type: "spring",
-      duration: 1.2,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    x: "100%",
-    width: "0%",
-  },
-};
+
 function VillaplansMobile() {
   const lan = useLanguage();
   const ref = useRef(null);
@@ -76,6 +61,22 @@ function VillaplansMobile() {
   const [contaierRef, isInView] = useInView({
     threshold: 0.9,
   });
+  const zeroservicevariant = {
+    visible: {
+      opacity: 1,
+      x: "0",
+      width: "100%",
+      transition: {
+        type: "spring",
+        duration: 1.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: lan.language === 1 ? "100%" : "-100%",
+      width: "0%",
+    },
+  };
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);

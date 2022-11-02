@@ -21,23 +21,6 @@ import sendEmail from "../../utils/emailservice";
 import Info from "../../public/Svg/homevillaplan/info.svg";
 import { useInView } from "react-intersection-observer";
 
-const zeroservicevariant = {
-  visible: {
-    opacity: 1,
-    x: "0",
-    width: "100%",
-    transition: {
-      type: "spring",
-      duration: 1.2,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    x: "100%",
-    width: "0%",
-  },
-};
-
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
@@ -56,6 +39,22 @@ const Villplans = () => {
   const [contaierRef, isInView] = useInView({
     threshold: 0.6,
   });
+  const zeroservicevariant = {
+    visible: {
+      opacity: 1,
+      x: "0",
+      width: "100%",
+      transition: {
+        type: "spring",
+        duration: 1.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: lan.language === 1 ? "100%" : "-100%",
+      width: "0%",
+    },
+  };
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);

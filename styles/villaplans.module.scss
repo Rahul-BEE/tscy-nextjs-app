@@ -191,6 +191,16 @@
 
   }
 
+  &:lang(ar) {
+    right: unset;
+    left: 40px;
+
+    @media(max-width:1224px) {
+      right: unset;
+      left: 20px;
+    }
+  }
+
   @media(max-width:1224px) {
     top: 20px;
     right: 20px;
@@ -222,6 +232,11 @@
         height: 24px;
       }
     }
+  }
+
+  &:lang(ar) {
+    right: unset;
+    left: 16px;
   }
 
   @media (max-width:600px) {
