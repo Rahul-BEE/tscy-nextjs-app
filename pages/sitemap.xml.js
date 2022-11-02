@@ -23,6 +23,21 @@ export const getServerSideProps = async ({ res }) => {
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-3bedroom</loc>
+  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-4bedroom</loc>
+  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.thesustainablecity-yiti.com/floorplan/garden-villa-4bedroom</loc>
+  <lastmod>2022-11-02T06:28:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.thesustainablecity-yiti.com/about</loc>
   <lastmod>2022-11-02T06:28:11+00:00</lastmod>
   <priority>0.80</priority>
