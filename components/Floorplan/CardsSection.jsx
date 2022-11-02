@@ -11,7 +11,7 @@ const CardSection = ({ page }) => {
         <Row className="headingRow">
           <Col>
             {/* <h5 className="sectionsubHeading">{lan.findyourvilla.title1}</h5> */}
-            <h2 className="sectionmainHeading">{lan.findyourvilla.title2}</h2>
+            <h1 className="sectionmainHeading">{lan.findyourvilla.title2}</h1>
           </Col>
         </Row>
         <div className={`sectionmaindescription`}>

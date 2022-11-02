@@ -48,9 +48,9 @@ const PrimeLocation = () => {
       <Row className="headingRow">
         <Col>
           {/* <h5 className="sectionsubHeading">{lan.commontext.situated}</h5> */}
-          <h2 className="sectionmainHeading">
+          <h1 className="sectionmainHeading">
             {lan.commontext.primelocationText}
-          </h2>
+          </h1>
         </Col>
       </Row>
       <div className={styles.locationinnercontainer}>

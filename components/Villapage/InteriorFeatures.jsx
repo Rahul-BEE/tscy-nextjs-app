@@ -168,9 +168,9 @@ const InteriorFeatures = () => {
           {/* <p className={`${styles.subHeading} sectionsubHeading`}>
             {lan.commontext.caption}
           </p> */}
-          <h4 className={"sectionmainHeading"}>
+          <h1 className={"sectionmainHeading"}>
             {lan.commontext.interiorHeading}
-          </h4>
+          </h1>
         </div>
         <div className={styles.interiorcontrols}>
           <IoChevronBackCircleOutline

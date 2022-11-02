@@ -1,71 +1,73 @@
+.news_main_page {
+    margin-top: 120px;
 
-.news_main_page{
-    margin-top: 180px;
 
-
-    .second_heading{
+    .second_heading {
         text-align: center;
 
-        p:first-child{
+        p:first-child {
             color: #B5B5B5;
         }
 
-        h2{
-           // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
+        h2 {
+            // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
             -webkit-background-clip: text;
-            background-clip: text ;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 60px;
         }
 
     }
+
     .test_box {
         background: #ffffff;
         border-radius: 10px;
         object-fit: cover;
         object-position: center;
-      
+
         @media (max-width: 768px) {
-          width: 90%;
-      
-          p {
-      
-            text-align: right;
-            color: white;
-            padding-right: 25px;
-            position: absolute;
-            right: 10%;
-            bottom: 0%;
-          }
-      
-      
+            width: 90%;
+
+            p {
+
+                text-align: right;
+                color: white;
+                padding-right: 25px;
+                position: absolute;
+                right: 10%;
+                bottom: 0%;
+            }
+
+
         }
-      }
+    }
+
     // blog container
 
-    .hero_container{
+    .hero_container {
         margin-top: 80px;
+
         @media (max-width:600px) {
-    
+
             margin-top: 50px;
         }
     }
 
-    .container_boxs{
+    .container_boxs {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-gap: 2rem;
         margin: 0 30px;
 
-        .box{
+        .box {
             text-align: start;
 
-            .content{
-                :first-child{
+            .content {
+                :first-child {
                     margin-top: 16px;
                 }
 
-                .description{
+                .description {
                     font-family: 'Poppins';
                     font-style: normal;
                     font-weight: 500;
@@ -74,7 +76,8 @@
 
                     color: #777777;
                 }
-                :last-child{
+
+                :last-child {
                     font-family: 'Poppins';
                     color: #777777;
                 }
@@ -84,14 +87,15 @@
         @media (max-width:998px) {
             grid-template-columns: auto auto;
         }
+
         @media (max-width:600px) {
             grid-template-columns: auto;
- 
+
         }
     }
+
     @media (max-width:600px) {
-    
-        margin-top: 120px;
+
+        margin-top: 100px;
     }
 }
-

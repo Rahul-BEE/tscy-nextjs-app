@@ -65,7 +65,7 @@ function Plans() {
           {/* heading */}
           <Row className="headingRow">
             <Col>
-              <h2 className="sectionmainHeading">{lan.commontext.floorplan}</h2>
+              <h1 className="sectionmainHeading">{lan.commontext.floorplan}</h1>
             </Col>
           </Row>
 

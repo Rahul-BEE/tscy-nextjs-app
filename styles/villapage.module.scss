@@ -26,12 +26,16 @@
     .floorplanHeading {
         text-align: center;
         margin-bottom: 2rem;
-        font-weight: 600;
-        font-size: 39px;
+
         background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         padding-top: 112px;
+
+        h1 {
+            font-weight: 600;
+            font-size: 39px;
+        }
 
         @media (max-width:1200px) {
             padding-top: 112px;

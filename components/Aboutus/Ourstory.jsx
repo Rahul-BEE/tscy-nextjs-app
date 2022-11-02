@@ -11,7 +11,7 @@ const Ourstory = () => {
     <section className={styles.ourstory}>
       <div className={styles.ourstoryInner}>
         <div className={styles.heading}>
-          <p className="sectionmainHeading">{data.title}</p>
+          <h1 className="sectionmainHeading">{data.title}</h1>
         </div>
         <div className={styles.statistics}>
           {data.statistics.map((item, index) => (

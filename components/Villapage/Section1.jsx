@@ -34,10 +34,10 @@ const Section1 = () => {
       {data && (
         <div>
           <div className={styles.floorplanHeading}>
-            <p style={{ marginBottom: "0rem" }}>
+            <h1 style={{ marginBottom: "0rem" }}>
               {data.bedrooms} {lan.commontext.bedroom}
-            </p>
-            <p>{data.type}</p>
+            </h1>
+            <h1>{data.type}</h1>
           </div>
           <div className={styles.floorplansubHeading}>
             <p>{data.description}</p>

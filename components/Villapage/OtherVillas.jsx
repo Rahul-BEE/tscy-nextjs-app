@@ -20,9 +20,9 @@ const OtherVillas = () => {
       <Row className="headingRow">
         <Col>
           {/* <h5 className="sectionsubHeading">{lan.commontext.dontforget}</h5> */}
-          <h2 className="sectionmainHeading">
+          <h1 className="sectionmainHeading">
             {lan.commontext.othervillatypes}
-          </h2>
+          </h1>
         </Col>
       </Row>
       {data && (

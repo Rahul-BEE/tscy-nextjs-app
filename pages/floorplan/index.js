@@ -24,9 +24,9 @@ const Floorplan = () => {
       />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>
-          <p>
+          <h1>
             {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
-          </p>
+          </h1>
           {/* <p>Let’s find a home</p>
         <AnimatePresence>
           <p>
@@ -79,8 +79,7 @@ const Floorplan = () => {
           style={{
             opacity: 0,
             pointerEvents: "none",
-          }}
-        >
+          }}>
           <p>
             {lan.commontext.download} {lan.commontext.comparison}{" "}
             <BsArrowDownCircle />
