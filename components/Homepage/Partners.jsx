@@ -121,7 +121,7 @@ const Partners = () => {
       <Row className="headingRow">
         <Col>
           {/* <h5 className="sectionsubHeading">{lan.partners.title1}</h5> */}
-          <h2 className="sectionmainHeading">{lan.partners.title2}</h2>
+          <h1 className="sectionmainHeading">{lan.partners.title2}</h1>
         </Col>
       </Row>
       <Marquee />

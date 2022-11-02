@@ -31,7 +31,7 @@ const Location = ({ external }) => {
             {/* <h5 className="sectionsubHeading mt-5">
               {lan.locationsection.title1}
             </h5> */}
-            <h2 className="sectionmainHeading">{lan.locationsection.title2}</h2>
+            <h1 className="sectionmainHeading">{lan.locationsection.title2}</h1>
           </Col>
         </Row>
         <div className={`sectionmaindescription`}>

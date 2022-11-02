@@ -64,7 +64,7 @@ const PrimeLocation = () => {
               objectPosition={"center"}
               quality={"100"}
               placeholder="blur"
-              blurDataURL="/Images/masterplanimageblur"
+              blurDataURL="/Images/masterplanimageblur2.png"
               style={{
                 borderRadius: isMobile ? 0 : "15px",
               }}

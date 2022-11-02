@@ -142,6 +142,8 @@ const Amenities = () => {
                       alt={item.name}
                       objectFit="cover"
                       objectPosition={"center"}
+                      placeholder="blur"
+                      blurDataURL="Images/blur.png"
                       style={{
                         borderRadius: "10px",
                       }}
