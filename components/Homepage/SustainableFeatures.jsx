@@ -22,7 +22,7 @@ const SustainableFeatures = () => {
 
   // Framer motiom setting
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.8,
   });
 
   const variant1 = {
@@ -66,7 +66,7 @@ const SustainableFeatures = () => {
       controls.start("visible");
     }
     if (!inView) {
-      controls.start("hidden");
+      // controls.start("hidden");
     }
   }, [inView, showData]);
 

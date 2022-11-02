@@ -7,6 +7,7 @@ import LocationSvgComp from "./LocationSvg/LocationSvgComp";
 import LocationSvgComp1 from "./LocationSvg/LocationSvgComp1";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
 import { useRouter } from "next/router";
 
 const Location = ({ external }) => {

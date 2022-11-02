@@ -3,7 +3,7 @@ import useLangage from "../../utils/useLanguage";
 import styles from "../../styles/villaplans.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import Maidroom from "../../public/Svg/homevillaplan/bedroom.svg";
 import Parking from "../../public/Svg/homevillaplan/parking.svg";
@@ -18,6 +18,26 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Loader from "../Loader/Loader";
 import sendEmail from "../../utils/emailservice";
+import Info from "../../public/Svg/homevillaplan/info.svg";
+import { useInView } from "react-intersection-observer";
+
+const zeroservicevariant = {
+  visible: {
+    opacity: 1,
+    x: "0",
+    width: "100%",
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: "100%",
+    width: "0%",
+  },
+};
+
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
@@ -32,6 +52,10 @@ const Villplans = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const zeroserviceanimation = useAnimation();
+  const [contaierRef, isInView] = useInView({
+    threshold: 0.6,
+  });
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);
@@ -91,17 +115,34 @@ const Villplans = () => {
       setDataReceived(false);
     }
   }, [state]);
+
+  useEffect(() => {
+    if (isInView) {
+      zeroserviceanimation.start("visible");
+    }
+  }, [isInView]);
   return (
     <div className={styles.app_villa_main}>
-      <div className={styles.app__villaplanmaincontainer_desktop}>
-        <Row className="headingRow">
-          <Col>
-            {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
-            <h2 className="sectionmainHeading">
-              {lan.villaplansection.title2}
-            </h2>
-          </Col>
-        </Row>
+      <div
+        className={styles.app__villaplanmaincontainer_desktop}
+        ref={contaierRef}>
+        <div className={styles.zeroservice}>
+          <div className={styles.zeroserviceitem}>
+            <motion.p
+              animate={zeroserviceanimation}
+              variants={zeroservicevariant}
+              initial="hidden">
+              {lan.commontext.zeroservice}
+            </motion.p>
+            <span>
+              <Info />
+            </span>
+          </div>
+        </div>
+        <div className={`headingRow ${styles.headingmargin}`}>
+          {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
+          <h2 className="sectionmainHeading">{lan.villaplansection.title2}</h2>
+        </div>
         <Row className={` ${styles.villaplanindexrow} flex`}>
           {lan &&
             lan.villaplansection.villas.map((villa, index) => (

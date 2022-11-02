@@ -17,6 +17,7 @@ import { useAppContext } from "../../../context/AppContext";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import sendEmail from "../../../utils/emailservice";
+import Info from "../../../public/Svg/homevillaplan/info.svg";
 import Loader from "../../Loader/Loader";
 import { useInView } from "react-intersection-observer";
 const itemVariant = {
@@ -36,16 +37,21 @@ const itemVariant = {
     },
   }),
 };
-const childVariant = {
+const zeroservicevariant = {
   visible: {
-    x: 0,
+    opacity: 1,
+    x: "0",
+    width: "100%",
+    transition: {
+      type: "spring",
+      duration: 1.2,
+    },
   },
-  hidden: (direction) => ({
-    x: direction === 1 ? "100%" : "-100%",
-  }),
-  exit: (direction) => ({
-    x: direction === 1 ? "-100%" : "100%",
-  }),
+  hidden: {
+    opacity: 0,
+    x: "100%",
+    width: "0%",
+  },
 };
 function VillaplansMobile() {
   const lan = useLanguage();
@@ -66,7 +72,10 @@ function VillaplansMobile() {
   const [loading, setLoading] = useState(false);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
   const [brochureDownload, setBrochureDownload] = useState(null);
-
+  const zeroserviceanimation = useAnimation();
+  const [contaierRef, isInView] = useInView({
+    threshold: 0.9,
+  });
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);
@@ -171,6 +180,12 @@ function VillaplansMobile() {
       return;
     }
   };
+
+  useEffect(() => {
+    if (isInView) {
+      zeroserviceanimation.start("visible");
+    }
+  }, [isInView]);
   return (
     <div className={styles.section_villaplan_mobile}>
       <Row className="headingRow">
@@ -282,7 +297,7 @@ function VillaplansMobile() {
                 </motion.div>
               </Link>
             </div>
-            <div className={styles.villaplanImageContainer}>
+            <div className={styles.villaplanImageContainer} ref={contaierRef}>
               <Image
                 src={lan.villaplansection.villas[activeVilla].mainImg}
                 width={1100}
@@ -292,6 +307,20 @@ function VillaplansMobile() {
                 objectPosition={"center"}
                 alt="Sustainable City Yiti"
               />
+              <div
+                className={`${styles.zeroservice} ${styles.zeroservicemobile}`}>
+                <div className={styles.zeroserviceitem}>
+                  <motion.p
+                    animate={zeroserviceanimation}
+                    variants={zeroservicevariant}
+                    initial="hidden">
+                    {lan.commontext.zeroservice}
+                  </motion.p>
+                  <span>
+                    <Info />
+                  </span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

@@ -951,6 +951,7 @@ const english = {
     },
   ],
   commontext: {
+    zeroservice: "Zero Service Fees",
     sendmessage: "Submit",
     getdirection: "Get Directions",
     nearby: "Nearby",
