@@ -1470,7 +1470,7 @@ const english = {
       title: "More from TSC",
       links: [
         {
-          text: "About diamond developers",
+          text: "Diamond developers",
           link: "https://diamond-developers.ae/",
         },
         {

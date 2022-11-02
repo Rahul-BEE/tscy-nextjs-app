@@ -68,6 +68,9 @@ function Footer() {
                   {data[0].links.map((item, index) => (
                     <Link key={index} href={item.link}>
                       <motion.a
+                        initial={{
+                          color: "#777777",
+                        }}
                         whileHover={{
                           color: "#000",
                         }}>
@@ -85,6 +88,9 @@ function Footer() {
                   {data[1].links.map((item, index) => (
                     <Link key={index} href={item.link}>
                       <motion.a
+                        initial={{
+                          color: "#777777",
+                        }}
                         whileHover={{
                           color: "#000",
                         }}>
@@ -103,6 +109,9 @@ function Footer() {
                     <Link key={index} href={item.link}>
                       <a target={"_blank"} rel="noreferrer">
                         <motion.p
+                          initial={{
+                            color: "#777777",
+                          }}
                           whileHover={{
                             color: "#000",
                           }}>
