@@ -209,6 +209,7 @@ const Villplans = () => {
               }}>
               {lan.commontext.seedetails}{" "}
               <BsArrowRightCircle
+                className={styles.rightarrow}
                 style={{
                   marginLeft: "0.5rem",
                 }}
