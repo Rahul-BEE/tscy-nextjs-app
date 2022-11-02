@@ -15,6 +15,11 @@ const Villa = () => {
   const lan = useLanguage();
   const router = useRouter();
   const { villaId } = router.query;
+  // const data = lan.villaplansection.villas.find(
+  //   (villa) => villa.slug === villaId
+  // );
+
+  const canonicaltag = lan.seo.villapage.canonicaltag + villaId;
 
   return (
     <>
