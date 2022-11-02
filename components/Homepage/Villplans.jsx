@@ -140,7 +140,7 @@ const Villplans = () => {
         </div>
         <div className={`headingRow ${styles.headingmargin}`}>
           {/* <h5 className="sectionsubHeading">{lan.villaplansection.title1}</h5> */}
-          <h2 className="sectionmainHeading">{lan.villaplansection.title2}</h2>
+          <h1 className="sectionmainHeading">{lan.villaplansection.title2}</h1>
         </div>
         <Row className={` ${styles.villaplanindexrow} flex`}>
           {lan &&
