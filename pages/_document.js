@@ -7,16 +7,6 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/favicon.ico" sizes="192x192" />
-        <link
-          rel="alternate"
-          href="https://thesustainablecity-yiti.com/ar"
-          hrefLang="ar_AR"
-        />
-        <link
-          rel="alternate"
-          href="https://thesustainablecity-yiti.com/"
-          hrefLang="en_US"
-        />
         <meta name="robots" content="all" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="182x182" />
