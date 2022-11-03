@@ -30,7 +30,7 @@ const News = () => {
         description={lan.seo.newspage.description}
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
-        canonicaltag={canonicaltag}
+        canonicaltag={lan.seo.newsdetails.canonicaltag + newsid}
       />
       {data && (
         <div>
