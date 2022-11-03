@@ -24,6 +24,7 @@ const Contact = () => {
             layout="responsive"
             priority
             quality={100}
+            alt="Sustainable City diamond"
           />
         </div>
       </div>

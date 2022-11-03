@@ -64,6 +64,7 @@ const PrimeLocation = () => {
               objectPosition={"center"}
               quality={"100"}
               placeholder="blur"
+              alt="Sustainable city prime location"
               blurDataURL="/Images/masterplanimageblur2.png"
               style={{
                 borderRadius: isMobile ? 0 : "15px",

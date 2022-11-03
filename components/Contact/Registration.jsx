@@ -87,6 +87,7 @@ const Registration = () => {
               height={134}
               layout="responsive"
               src={"/Images/contact/contactinfopoly.png"}
+              alt="Sustainable City diamond"
             />
           </div>
         </div>

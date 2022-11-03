@@ -35,6 +35,7 @@ function NewsPage() {
                         layout="responsive"
                         placeholder="blur"
                         blurDataURL="/Images/blur.png"
+                        alt={e.heading}
                       />
                     </div>
                     <div className={styles.content}>

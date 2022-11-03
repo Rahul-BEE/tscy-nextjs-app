@@ -258,6 +258,7 @@ function Plans() {
                   quality={100}
                   placeholder="blur"
                   blurDataURL="/Images/blur.png"
+                  alt={`${data.title}-${floorindex}`}
                   priority
                   style={{
                     pointerEvents: "none",

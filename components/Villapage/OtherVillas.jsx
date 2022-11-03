@@ -49,6 +49,7 @@ const OtherVillas = () => {
                   layout={"responsive"}
                   placeholder="blur"
                   blurDataURL="/Images/blur.png"
+                  alt={villa.title}
                 />
               </motion.div>
             </Link>
