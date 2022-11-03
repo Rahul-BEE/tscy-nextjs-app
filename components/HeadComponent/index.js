@@ -18,7 +18,6 @@ const HeadComponent = ({
       <meta property="og:url" content={og.url} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="ar_AR" />
-      <meta property="og:locale:alternate" content="ar_AR" />
       <meta property="og:type" content="website" />
       <meta property="og:image" itemProp="image" content={og.img} />
 
