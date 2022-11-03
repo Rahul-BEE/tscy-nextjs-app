@@ -236,7 +236,11 @@ const InteriorFeatures = () => {
       )}
       {!open && (
         <div className={styles.polygondiv}>
-          <Image src="/Images/villas/interiorfeaurepolygon.png" layout="fill" />
+          <Image
+            src="/Images/villas/interiorfeaurepolygon.png"
+            layout="fill"
+            alt="Sustainable city Polygon"
+          />
         </div>
       )}
     </div>
