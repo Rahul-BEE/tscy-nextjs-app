@@ -257,9 +257,9 @@ const SustainableFeatures = () => {
       <Row>
         <Col className={featurestyles.sustainablesection_heading}>
           {/* <h5 className="sectionsubHeading">{lan.sustainablesection.title1}</h5> */}
-          <h2 className="sectionmainHeading">
+          <h1 className="sectionmainHeading">
             {lan.sustainablesection.title2}
-          </h2>
+          </h1>
         </Col>
       </Row>
       {showData && (
