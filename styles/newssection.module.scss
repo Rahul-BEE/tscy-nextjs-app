@@ -964,7 +964,7 @@
 .hero_text_center1 {
   text-align: center;
 
-  h2 {
+  h1 {
     // color: $primary__button_color;
     // background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.4) 101.52%);
     background: #058da6;
@@ -972,10 +972,17 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 1.95rem;
+    font-weight: 600;
 
-    @media (max-width: 400px) {
-      font-size: 14px;
-      font-weight: 800;
+    @media (max-width: 1224px) {
+      font-size: 1.625rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+      font-weight: 600;
     }
   }
 

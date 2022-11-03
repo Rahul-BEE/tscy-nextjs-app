@@ -21,6 +21,10 @@
     border: none;
     box-shadow: none;
     outline: none;
+
+    @media (max-width:332px) {
+      padding-inline: 5px 0;
+    }
   }
 
   &:lang(ar) {
@@ -206,6 +210,9 @@
 
   .findyourhome {
     display: none;
+    background-color: white;
+    color: #058da6;
+    outline: 1px solid #058da6;
 
     @media (max-width: 992px) {
       display: inline-block;

@@ -26,7 +26,7 @@ const News = () => {
   return (
     <>
       <HeadComponent
-        title={`News Detail | The Sustainable City - Yiti-${newsid}`}
+        title={`News Detail | The Sustainable City - Yiti`}
         description={lan.seo.newspage.description}
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
@@ -45,9 +45,9 @@ const News = () => {
                       </h6>
                       <div className={styles.hero_text_center1}>
                         {data.title.map((e, index) => (
-                          <h2 className={styles.fontWeight8} key={index}>
+                          <h1 className={styles.fontWeight8} key={index}>
                             {e}
-                          </h2>
+                          </h1>
                         ))}
                       </div>
                       <div className={styles.mt22}>

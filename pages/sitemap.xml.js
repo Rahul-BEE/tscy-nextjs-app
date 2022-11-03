@@ -6,7 +6,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "https://www.thesustainablecity-yiti.com";
+  const BASE_URL = "https://thesustainablecity-yiti.com";
 
   const staticPaths = fs
     .readdirSync("pages")
@@ -23,26 +23,60 @@ export const getServerSideProps = async ({ res }) => {
     .map((staticPagePath) => {
       return `${BASE_URL}/${staticPagePath}`;
     });
+  const staticPaths2 = fs
+    .readdirSync("pages")
+    .filter((staticPage) => {
+      return ![
+        "api",
+        "_app.js",
+        "_document.js",
+        "404.js",
+        "index.js",
+        "sitemap.xml.js",
+      ].includes(staticPage);
+    })
+    .map((staticPagePath) => {
+      return `${BASE_URL}/ar/${staticPagePath}`;
+    });
 
   let dynamicPaths1 = [];
   let dynamicPaths2 = [];
 
-  english.newssection.post.map((item) =>
-    dynamicPaths1.push(`${BASE_URL}/news/${item.slug}`)
-  );
+  english.newssection.post.map((item) => {
+    dynamicPaths1.push(`${BASE_URL}/news/${item.slug}`);
+    dynamicPaths1.push(`${BASE_URL}/ar/news/${item.slug}`);
+  });
 
-  english.villaplansection.villas.map((item) =>
-    dynamicPaths2.push(`${BASE_URL}/floorplan/${item.slug}`)
-  );
+  english.villaplansection.villas.map((item) => {
+    dynamicPaths2.push(`${BASE_URL}/floorplan/${item.slug}`);
+    dynamicPaths2.push(`${BASE_URL}/ar/floorplan/${item.slug}`);
+  });
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-<loc>https://www.thesustainablecity-yiti.com/</loc>
+<loc>https://thesustainablecity-yiti.com/</loc>
+<lastmod>2022-11-02T06:28:11+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+    <url>
+<loc>https://thesustainablecity-yiti.com/ar</loc>
 <lastmod>2022-11-02T06:28:11+00:00</lastmod>
 <priority>1.00</priority>
 </url>
       ${staticPaths
+        .map((url) => {
+          return `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>1.0</priority>
+            </url>
+          `;
+        })
+        .join("")}
+      ${staticPaths2
         .map((url) => {
           return `
             <url>

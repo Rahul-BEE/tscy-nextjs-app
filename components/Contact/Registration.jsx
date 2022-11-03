@@ -14,7 +14,7 @@ const Registration = () => {
   return (
     <div className={styles.registration}>
       <div className="headingRow">
-        <p
+        <h1
           className="sectionmainHeading"
           style={{
             width: "100%",
@@ -24,7 +24,7 @@ const Registration = () => {
           {broker === "true"
             ? lan.contact.register.title
             : lan.commontext.registerinterest}
-        </p>
+        </h1>
       </div>
       <div className={styles.infoContainer}>
         <div className={styles.infoBox}>
