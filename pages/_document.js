@@ -10,12 +10,12 @@ export default function Document() {
         <link
           rel="alternate"
           href="https://thesustainablecity-yiti.com/ar"
-          hreflang="ar_AR"
+          hrefLang="ar_AR"
         />
         <link
           rel="alternate"
           href="https://thesustainablecity-yiti.com/"
-          hreflang="en_US"
+          hrefLang="en_US"
         />
         <meta name="robots" content="all" />
         <link rel="shortcut icon" href="/favicon.ico" />
