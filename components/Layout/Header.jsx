@@ -14,9 +14,11 @@ const Header = () => {
   const [loading, setloading] = useState(true);
   const [domYOffset, setDomYOffset] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [hoverme, setHoverme] = useState(null);
   const lan = useLanguage(loading);
   const location = useRouter();
   const animation = useAnimation();
+  const underlineAnimation = useAnimation();
   const { scrollDirection } = useScrollDirection();
 
   useEffect(() => {
@@ -111,7 +113,7 @@ const Header = () => {
               />
             </a>
           </Link>
-          <motion.button
+          <button
             className={`btn ${
               domYOffset || location.pathname !== "/"
                 ? styles.header_right_langbtn2
@@ -119,14 +121,24 @@ const Header = () => {
             }`}
             onClick={() => handelLanguageChange()}>
             {lan.header.langbtn}
-          </motion.button>
+          </button>
         </div>
         <nav
           className={`${styles.app__header_middle} collapse navbar-collapse`}>
           <ul className={`flex`}>
             {lan.header.links.map((link, index) => {
               return (
-                <li key={`${index}_header_links`}>
+                <li
+                  onMouseOver={() => {
+                    setHoverme(index);
+                  }}
+                  onMouseLeave={() => {
+                    setHoverme(null);
+                  }}
+                  key={`${index}_header_links`}
+                  style={{
+                    position: "relative",
+                  }}>
                   <Link href={link.link}>
                     <a
                       className={styles.atagnavlink}
@@ -136,6 +148,25 @@ const Header = () => {
                       {link.text}
                     </a>
                   </Link>
+                  <motion.div
+                    // animate={underlineAnimation}
+                    transition={{
+                      duration: 0.2,
+                    }}
+                    style={{
+                      position: "absolute",
+                      bottom: "-8px",
+                      pointerEvents: "none",
+                      width: "100%",
+                      height: "1.5px",
+                      borderRadius: "45px",
+                      opacity: hoverme === index ? 1 : 0,
+                      background:
+                        domYOffset || location.pathname !== "/"
+                          ? "#058da6"
+                          : "#fff",
+                    }}
+                  />
                 </li>
               );
             })}
