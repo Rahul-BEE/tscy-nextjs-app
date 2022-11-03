@@ -914,7 +914,7 @@ const arabic = {
     ],
   },
   commontext: {
-    zeroservice: "Zero Service Fees",
+    zeroservice: "صفر رسوم خدمات",
     getdirection: "الاتجاهات",
     brochure: "الكتيب",
     floorplan: "المخططات",
