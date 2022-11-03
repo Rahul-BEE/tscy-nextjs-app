@@ -1539,7 +1539,7 @@ const english = {
         "oman tourism",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/",
         description:
@@ -1571,7 +1571,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
@@ -1610,7 +1610,7 @@ const english = {
         "renewable energy",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City- Yiti",
         url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
@@ -1648,7 +1648,7 @@ const english = {
         "clean energy",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City- Yiti",
         url: "https://www.thesustainablecity-yiti.com/about",
         description:
@@ -1680,7 +1680,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/contact-us",
         description:
@@ -1712,8 +1712,8 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/map-pic.png",
-        title: "Homepage | The Sustainable City-Yiti",
+        img: "/Images/masterplanimage.png",
+        title: "News | The Sustainable City-Yiti",
         url: "https://www.thesustainablecity-yiti.com/news",
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
@@ -1744,8 +1744,8 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/map-pic.png",
-        title: "Homepage | The Sustainable City-Yiti",
+        img: "/Images/masterplanimage.png",
+        title: "News | The Sustainable City-Yiti",
         url: "https://www.thesustainablecity-yiti.com/news/",
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",

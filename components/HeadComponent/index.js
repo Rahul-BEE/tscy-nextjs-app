@@ -31,7 +31,9 @@ const HeadComponent = ({
       <meta property="twitter:description" content={og.description} />
       <meta property="twitter:domain" content="thesustainablecity-yiti.com" />
       <meta property="twitter:url" content={og.url} />
+      <meta property="twitter:title" content={og.title} />
       <meta name="twitter:image" content={og.img} />
+      <meta name="twitter:site" content="@TSCYiti" />
       {children}
       <link rel="canonical" href={canonicaltag} />
     </Head>
