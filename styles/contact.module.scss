@@ -496,21 +496,14 @@
 
             .contactimgcontainer {
                 width: 100%;
-                min-height: 65vh;
+                min-height: 508px;
                 position: relative;
                 overflow: auto;
                 border-radius: 10px;
                 max-width: 1600px;
-                max-height: 500px;
+                max-height: 510px;
                 filter: drop-shadow(3px 5px 16px rgba(0, 0, 0, 0.1));
 
-                @media (max-width:1224px) {
-                    min-height: 50vh;
-                }
-
-                @media(max-width:600px) {
-                    min-height: 70vh;
-                }
             }
 
             .getDirectionRow {

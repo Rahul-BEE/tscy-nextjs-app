@@ -148,7 +148,9 @@ const Header = () => {
               : ""
           } `}>
           <Link href={"/contact-us"} passHref>
-            <button className={`btn ${styles.contactbtn}`}>
+            <button
+              className={`btn ${styles.contactbtn}`}
+              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}>
               {lan.commontext.registerinterest}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>

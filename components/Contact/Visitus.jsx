@@ -24,7 +24,11 @@ const Visitus = () => {
       <div className={styles.contactmapcontainer}>
         <div className={styles.contactimgcontainer}>
           <Image
-            src={"/Images/contact/contactmap.png"}
+            src={
+              lan.language === 1
+                ? "/Images/contact/contactmap.png"
+                : "/Images/contact/contactmapar.png"
+            }
             priority
             layout="fill"
             objectFit="cover"
