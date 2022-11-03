@@ -26,7 +26,7 @@ const News = () => {
   return (
     <>
       <HeadComponent
-        title={"News Detail | The Sustainable City - Yiti"}
+        title={`News Detail | The Sustainable City - Yiti-${newsid}`}
         description={lan.seo.newspage.description}
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
