@@ -1713,10 +1713,10 @@ const arabic = {
       og: {
         img: "/Images/map-pic.png",
         title: "من نعن | المدينة المستدامة يتي",
-        url: "https://www.thesustainablecity-yiti.com/ar/aboutus",
+        url: "https://www.thesustainablecity-yiti.com/ar/about",
         description: "",
       },
-      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/aboutus",
+      canonicaltag: "https://www.thesustainablecity-yiti.com/ar/about",
     },
     contactus: {
       title: "تواصل معنا | المدينة المستدامة يتي", // 50-50 characters only

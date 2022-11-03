@@ -1650,7 +1650,7 @@ const english = {
       og: {
         img: "/Images/map-pic.png",
         title: "Homepage | The Sustainable City- Yiti",
-        url: "https://www.thesustainablecity-yiti.com/aboutus",
+        url: "https://www.thesustainablecity-yiti.com/about",
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
       },
