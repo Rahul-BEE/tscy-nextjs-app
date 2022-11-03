@@ -6,7 +6,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "https://thesustainablecity-yiti.com";
+  const BASE_URL = "https://www.thesustainablecity-yiti.com";
 
   const staticPaths = fs
     .readdirSync("pages")
@@ -55,12 +55,12 @@ export const getServerSideProps = async ({ res }) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-<loc>https://thesustainablecity-yiti.com/</loc>
+<loc>https://www.thesustainablecity-yiti.com/</loc>
 <lastmod>2022-11-02T06:28:11+00:00</lastmod>
 <priority>1.00</priority>
 </url>
     <url>
-<loc>https://thesustainablecity-yiti.com/ar</loc>
+<loc>https://www.thesustainablecity-yiti.com/ar</loc>
 <lastmod>2022-11-02T06:28:11+00:00</lastmod>
 <priority>1.00</priority>
 </url>
