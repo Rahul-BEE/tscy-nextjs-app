@@ -1539,7 +1539,7 @@ const english = {
         "oman tourism",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/",
         description:
@@ -1571,7 +1571,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
@@ -1610,7 +1610,7 @@ const english = {
         "renewable energy",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City- Yiti",
         url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
@@ -1648,7 +1648,7 @@ const english = {
         "clean energy",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City- Yiti",
         url: "https://www.thesustainablecity-yiti.com/about",
         description:
@@ -1680,7 +1680,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "Homepage | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/contact-us",
         description:
@@ -1712,7 +1712,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "News | The Sustainable City-Yiti",
         url: "https://www.thesustainablecity-yiti.com/news",
         description:
@@ -1744,7 +1744,7 @@ const english = {
         "sustainable mosque",
       ],
       og: {
-        img: "/Images/masterplanimage.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "News | The Sustainable City-Yiti",
         url: "https://www.thesustainablecity-yiti.com/news/",
         description:
