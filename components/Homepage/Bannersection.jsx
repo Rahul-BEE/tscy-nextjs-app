@@ -19,16 +19,16 @@ const Bannersection = ({ banner }) => {
         loop={true}
         noSwiping={true}
         noSwipingClass="swiper-slide"
-        // autoplay={{ delay: 1000, disableOnInteraction: false }}
-        onImagesReady={(s) => {
-          if (!s.autoplay.running) {
-            s.params.autoplay = {
-              delay: 2000,
-              disableOnInteraction: false,
-            };
-            s.autoplay.start();
-          }
-        }}
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
+        // onImagesReady={(s) => {
+        //   if (!s.autoplay.running) {
+        //     s.params.autoplay = {
+        //       delay: 2000,
+        //       disableOnInteraction: false,
+        //     };
+        //     s.autoplay.start();
+        //   }
+        // }}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {

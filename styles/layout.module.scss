@@ -149,7 +149,12 @@
 
       &[data-color="g"] {
         color: #777777;
+
+        &:hover {
+          color: #058da6
+        }
       }
+
     }
 
     @media (max-width: 1200px) {
