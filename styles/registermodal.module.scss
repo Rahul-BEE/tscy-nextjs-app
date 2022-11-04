@@ -13,6 +13,13 @@
     .closebtn {
         position: absolute;
         right: 40px;
+
+
+        &:lang(ar) {
+            right: unset;
+            left: 40px;
+        }
+
         cursor: pointer;
 
         svg {
