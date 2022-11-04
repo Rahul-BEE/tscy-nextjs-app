@@ -52,6 +52,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       centered
       dialogClassName={styles.dialogClassName}
       autoFocus
+      className={styles.modalClassName}
       contentClassName={styles.contentClass}>
       <Modal.Header className={styles.modalheader}>
         <Modal.Title

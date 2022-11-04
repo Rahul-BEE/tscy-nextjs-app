@@ -19,8 +19,10 @@ export default function Home() {
   const lan = useLanguage();
   const [showModal, setShowModal] = useState(false);
   const location = useRouter();
+  const [isMobile, setisMobile] = useState(false);
   useEffect(() => {
     if (typeof window !== undefined) {
+      setisMobile(window.innerWidth < 700);
       setLanguage(
         JSON.parse(localStorage.getItem("language"))
           ? JSON.parse(localStorage.getItem("language"))
@@ -54,7 +56,9 @@ export default function Home() {
       />
 
       <main className={styles.app__home}>
-        <RegisterModal show={showModal} setshowmodal={setShowModal} />
+        {!isMobile && (
+          <RegisterModal show={showModal} setshowmodal={setShowModal} />
+        )}
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />
