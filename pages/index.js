@@ -8,6 +8,7 @@ import {
   Villaplans,
   Newssection,
   HeadComponent,
+  RegisterModal,
 } from "../components";
 import styles from "../styles/home.module.scss";
 import { useEffect, useState } from "react";
@@ -16,6 +17,7 @@ import useLanguage from "../utils/useLanguage";
 export default function Home() {
   const [language, setLanguage] = useState("en");
   const lan = useLanguage();
+  const [showModal, setShowModal] = useState(false);
   const location = useRouter();
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -26,6 +28,20 @@ export default function Home() {
       );
     }
   }, [location.pathname]);
+
+  const modalTimer = function () {
+    setTimeout(() => {
+      setShowModal(true);
+      sessionStorage.setItem("modalshow", "true");
+    }, 5000);
+  };
+  useEffect(() => {
+    if (sessionStorage.getItem("modalshow")) {
+      clearTimeout(modalTimer);
+    } else {
+      modalTimer();
+    }
+  }, []);
   return (
     <>
       <HeadComponent
@@ -37,7 +53,8 @@ export default function Home() {
         language={lan.language === 1 ? "en" : "ar"}
       />
 
-      <div className={styles.app__home}>
+      <main className={styles.app__home}>
+        <RegisterModal show={showModal} setshowmodal={setShowModal} />
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />
@@ -45,7 +62,7 @@ export default function Home() {
         <Villaplans />
         <Newssection pagename={"NewsHomePage"} />
         <Partners />
-      </div>
+      </main>
     </>
   );
 }
