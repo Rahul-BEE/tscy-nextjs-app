@@ -1585,7 +1585,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "الصفحة الرئيسية | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar",
         description:
@@ -1627,7 +1627,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "معلومات الفلل | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/floorplan",
         description:
@@ -1669,7 +1669,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "مخططات الفلل | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/floorplan/",
         description:
@@ -1711,7 +1711,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "من نعن | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/about",
         description: "",
@@ -1752,7 +1752,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "تواصل معنا | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/contact-us",
         description:
@@ -1794,7 +1794,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "الصحاغة | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/news",
         description:
@@ -1836,7 +1836,7 @@ const arabic = {
         "مركز ميناء السلطان قابوس",
       ],
       og: {
-        img: "/Images/map-pic.png",
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
         title: "الصحاغة | المدينة المستدامة يتي",
         url: "https://www.thesustainablecity-yiti.com/ar/news/",
         description:
