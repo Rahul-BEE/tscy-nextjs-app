@@ -31,6 +31,7 @@ const News = () => {
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.newsdetails.canonicaltag + newsid}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       {data && (
         <div>

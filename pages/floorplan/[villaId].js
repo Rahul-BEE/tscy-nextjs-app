@@ -29,6 +29,7 @@ const Villa = () => {
         og={lan.seo.villapage.og}
         keyword={lan.seo.villapage.keyword}
         canonicaltag={canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       <div className={styles.villapagemain}>
         <Section1 />

@@ -7,12 +7,12 @@ const HeadComponent = ({
   children,
   og,
   canonicaltag,
+  language,
 }) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="alternate" href={canonicaltag} hrefLang="en" />
-      <link rel="alternate" href={canonicaltag} hrefLang="ar" />
+      <link rel="alternate" href={canonicaltag} hrefLang={language} />
       <link rel="canonical" href={canonicaltag} />
       <meta name="description" content={description} />
       <meta name="keyword" content={keyword} />

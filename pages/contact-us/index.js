@@ -12,6 +12,7 @@ const Contact = () => {
         og={lan.seo.contactus.og}
         keyword={lan.seo.contactus.keyword}
         canonicaltag={lan.seo.contactus.canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       <div className={styles.contact}>
         <Registration />

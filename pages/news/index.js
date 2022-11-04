@@ -12,6 +12,7 @@ const NewsList = () => {
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.newspage.canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       <div>
         <NewsPage />

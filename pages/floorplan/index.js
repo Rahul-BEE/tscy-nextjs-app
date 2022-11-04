@@ -21,6 +21,7 @@ const Floorplan = () => {
         og={lan.seo.floorplan.og}
         keyword={lan.seo.floorplan.keyword}
         canonicaltag={lan.seo.floorplan.canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       <div className={styles.app__floorplanmain}>
         <div className={styles.floorplanHeading}>

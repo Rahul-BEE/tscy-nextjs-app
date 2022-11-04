@@ -11,6 +11,7 @@ const About = () => {
         og={lan.seo.aboutus.og}
         keyword={lan.seo.aboutus.keyword}
         canonicaltag={lan.seo.aboutus.canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
       <div className={styles.app__about}>
         <Ourstory />

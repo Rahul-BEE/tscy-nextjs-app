@@ -34,6 +34,7 @@ export default function Home() {
         og={lan.seo.home.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.home.canonicaltag}
+        language={lan.language === 1 ? "en" : "ar"}
       />
 
       <div className={styles.app__home}>
