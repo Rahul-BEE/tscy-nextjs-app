@@ -9,16 +9,6 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" sizes="192x192" />
         <meta name="robots" content="all" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="alternate"
-          href="https://thesustainablecity-yiti.com/"
-          hrefLang="en"
-        />
-        <link
-          rel="alternate"
-          href="https://thesustainablecity-yiti.com/ar"
-          hrefLang="ar"
-        />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="182x182" />
         <link
           rel="preconnect"
