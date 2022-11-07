@@ -1,5 +1,6 @@
 import styles from "../../styles/layout.module.scss";
-import { BiChevronRightCircle, BiMenuAltLeft } from "react-icons/bi";
+import { BiChevronRightCircle } from "react-icons/bi";
+import MenuToggle from "../../public/Svg/Menutoggle.svg";
 import Image from "next/image";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
@@ -91,11 +92,12 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <motion.header className={`${styles.app__header} navbar navbar-expand-lg`} animate={animation}>
+    <motion.header
+      className={`${styles.app__header} navbar navbar-expand-lg`}
+      animate={animation}>
       <div
         className={` ${styles.headermain}`}
-        data-scrolled={domYOffset || location.pathname !== "/" ? "true" : ""}
-      >
+        data-scrolled={domYOffset || location.pathname !== "/" ? "true" : ""}>
         <div className={`${styles.app__header_right} flex`}>
           <Link href="/" passHref>
             <a>
@@ -118,12 +120,12 @@ const Header = () => {
                 ? styles.header_right_langbtn2
                 : styles.header_right_langbtn
             }`}
-            onClick={() => handelLanguageChange()}
-          >
+            onClick={() => handelLanguageChange()}>
             {lan.header.langbtn}
           </button>
         </div>
-        <nav className={`${styles.app__header_middle} collapse navbar-collapse`}>
+        <nav
+          className={`${styles.app__header_middle} collapse navbar-collapse`}>
           <ul className={`flex`}>
             {lan.header.links.map((link, index) => {
               return (
@@ -137,13 +139,13 @@ const Header = () => {
                   key={`${index}_header_links`}
                   style={{
                     position: "relative",
-                  }}
-                >
+                  }}>
                   <Link href={link.link}>
                     <a
                       className={styles.atagnavlink}
-                      data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}
-                    >
+                      data-color={
+                        domYOffset || location.pathname !== "/" ? "g" : "w"
+                      }>
                       {link.text}
                     </a>
                   </Link>
@@ -160,7 +162,10 @@ const Header = () => {
                       height: "1.5px",
                       borderRadius: "45px",
                       opacity: hoverme === index ? 1 : 0,
-                      background: domYOffset || location.pathname !== "/" ? "#058da6" : "#fff",
+                      background:
+                        domYOffset || location.pathname !== "/"
+                          ? "#058da6"
+                          : "#fff",
                     }}
                   />
                 </li>
@@ -170,14 +175,14 @@ const Header = () => {
         </nav>
         <div
           className={`${styles.app__header_left} ${
-            domYOffset || location.pathname !== "/" ? styles.header_left_btn2 : ""
-          } `}
-        >
+            domYOffset || location.pathname !== "/"
+              ? styles.header_left_btn2
+              : ""
+          } `}>
           <Link href={"/contact-us"} passHref>
             <button
               className={`btn ${styles.contactbtn}`}
-              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}
-            >
+              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}>
               {lan.commontext.registerinterest}
               <BiChevronRightCircle className={styles.arrow_icon} size={20} />
             </button>
@@ -185,8 +190,7 @@ const Header = () => {
           <Link href={"/floorplan"} passHref>
             <button
               className={`btn ${styles.findyourhome}`}
-              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}
-            >
+              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}>
               {lan.header.links[0].text}
             </button>
           </Link>
@@ -198,11 +202,12 @@ const Header = () => {
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <BiMenuAltLeft
-            color={domYOffset || location.pathname !== "/" ? "#058da6" : "white"}
-            size={35}
+          aria-label="Toggle navigation">
+          <MenuToggle
+            className={styles.hamburgertoggle}
+            data-color={
+              domYOffset || location.pathname !== "/" ? "#777" : "#fff"
+            }
             onClick={() => setShow(true)}
           />
         </button>

@@ -11,12 +11,10 @@
   z-index: 5;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.25) 50.13%,
-    rgba(217, 217, 217, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.25) 50.13%,
+      rgba(217, 217, 217, 0) 100%);
 
   .navbar__menubtn {
     pointer-events: all;
@@ -63,6 +61,26 @@
     @media (max-width: 600px) {
       padding: 25px 10px 0;
     }
+  }
+}
+
+.hamburgertoggle {
+  width: 20px;
+  height: 20px;
+  margin-inline: 8px;
+
+  path {
+    stroke: #fff
+  }
+
+  &[data-color="#777"] {
+    path {
+      stroke: #777
+    }
+  }
+
+  &:lang(ar) {
+    transform: scaleX(-1);
   }
 }
 
@@ -215,6 +233,7 @@
     background-color: transparent;
     color: #fff;
     outline: 1px solid #fff;
+
     &[data-color="g"] {
       color: #058da6;
       outline: 1px solid #058da6;
@@ -309,7 +328,7 @@
   z-index: 15;
   direction: ltr !important;
   position: absolute;
-  top: 30px;
+  top: 38px;
   right: 25px;
 }
 
