@@ -7,7 +7,6 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { IoClose } from "react-icons/io5";
 import sendEmail from "../../../utils/emailservice";
-import * as ga from "../../../utils/ga";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
   const [error, setError] = useState(false);
@@ -38,12 +37,6 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     };
 
     sendEmail({ data, type: 0 });
-    ga.event({
-      action: "submit_lead",
-      params: {
-        name: fullname,
-      },
-    });
     setshowmodal(false);
   };
 
