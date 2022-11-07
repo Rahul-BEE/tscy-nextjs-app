@@ -150,13 +150,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
             * {errorMessage}
           </small>
 
-          <motion.button
-            onClick={submitHandler}
-            whileHover={{
-              background: "#fff",
-              color: "#058DA6",
-              outline: "1px solid #058DA6",
-            }}>
+          <motion.button onClick={submitHandler}>
             {lan.commontext.sendmessage}
           </motion.button>
         </div>
