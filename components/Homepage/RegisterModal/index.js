@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { IoClose } from "react-icons/io5";
 import sendEmail from "../../../utils/emailservice";
+import TagManager from "react-gtm-module";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
   const [error, setError] = useState(false);
@@ -143,7 +144,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
             * {errorMessage}
           </small>
 
-          <motion.button onClick={submitHandler}>
+          <motion.button onClick={submitHandler} className="regmodalsubmitbtn">
             {lan.commontext.sendmessage}
           </motion.button>
         </div>
