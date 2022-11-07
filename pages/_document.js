@@ -26,7 +26,7 @@ export default function Document() {
           {`window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'G-B8E357DD7R');`}
+      gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');`}
         </Script>
       </Head>
       <body>

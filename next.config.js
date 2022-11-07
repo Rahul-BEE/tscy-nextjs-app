@@ -23,6 +23,7 @@ const nextConfig = {
     NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: "service_p7b4tsl",
     NEXT_PUBLIC_BROKER_EMAIL_TEMPLATE_ID: "template_bs7cvpn",
     NEXT_PUBLIC_REGISTER_INTEREST_TEMPLATE_ID: "template_q9yq3pa",
+    NEXT_PUBLIC_GA_TRACKING_ID: "G-B8E357DD7R",
   },
 };
 
