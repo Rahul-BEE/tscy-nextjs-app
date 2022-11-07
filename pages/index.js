@@ -56,9 +56,8 @@ export default function Home() {
       />
 
       <main className={styles.app__home}>
-        {!isMobile && (
-          <RegisterModal show={showModal} setshowmodal={setShowModal} />
-        )}
+        <RegisterModal show={showModal} setshowmodal={setShowModal} />
+
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />

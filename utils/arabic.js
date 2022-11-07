@@ -1439,8 +1439,8 @@ const arabic = {
           placeholder: "0000000000",
         },
         name: {
-          title: "الاسم",
-          placeholder: "محمد علي",
+          title: "إسمك الكامل",
+          placeholder: "الإسم الكامل",
         },
         villas: {
           title: "Villa you are interested in ",
