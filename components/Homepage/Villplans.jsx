@@ -93,12 +93,15 @@ const Villplans = () => {
     }
   };
   const handleClick = (id) => {
+    console.log("hi");
     if (dataReceived) {
+      console.log("hiii");
       if (id === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
       } else if (id === 2) {
         window.open("/brochure/Villa Brochure Final.pdf");
       } else {
+        setShowForm(true);
         return;
       }
     } else {
