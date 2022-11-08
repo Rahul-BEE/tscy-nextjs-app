@@ -20,7 +20,7 @@ import Loader from "../Loader/Loader";
 import sendEmail from "../../utils/emailservice";
 import Info from "../../public/Svg/homevillaplan/info.svg";
 import { useInView } from "react-intersection-observer";
-
+import TagManager from "react-gtm-module";
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
@@ -76,6 +76,11 @@ const Villplans = () => {
         value: data,
       });
       setDataReceived(true);
+      TagManager.dataLayer({
+        dataLayer: {
+          event: "register_interest_from_villa_plan",
+        },
+      });
       if (brochureDownload === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
       } else if (brochureDownload === 2) {

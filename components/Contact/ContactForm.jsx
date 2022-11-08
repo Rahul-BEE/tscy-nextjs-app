@@ -8,6 +8,7 @@ import sendEmail from "../../utils/emailservice";
 import { BsArrowDownCircle } from "react-icons/bs";
 import Loader from "../Loader/Loader";
 import Link from "next/link";
+import TagManager from "react-gtm-module";
 const ContactForm = ({ page }) => {
   const lan = useLanguage();
   const [select, setSelect] = useState(0);
@@ -65,6 +66,11 @@ const ContactForm = ({ page }) => {
             type: select === 1 ? "Cooperate" : "Individual",
           };
     let result = await sendEmail({ data, type: select === 1 ? 1 : 0 });
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "register_interest_contact",
+      },
+    });
     if (result) {
       setEmailSend(true);
       setLoading(false);

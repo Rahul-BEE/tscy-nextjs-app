@@ -36,6 +36,14 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       phone,
       leadfrom,
     };
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "register_interest_from_modal",
+        params: {
+          submitted_on: "Homepage Modal",
+        },
+      },
+    });
 
     sendEmail({ data, type: 0 });
     setshowmodal(false);
@@ -61,7 +69,10 @@ const RegsiterModal = ({ show, setshowmodal }) => {
           className={styles.modaltitle}>
           {lan.commontext.registerinterest}
         </Modal.Title>
-        <span className={styles.closebtn} onClick={() => setshowmodal(false)}>
+        <span
+          className={styles.closebtn}
+          id="registermodalclosebtn"
+          onClick={() => setshowmodal(false)}>
           <IoClose />
         </span>
       </Modal.Header>
