@@ -93,9 +93,7 @@ const Villplans = () => {
     }
   };
   const handleClick = (id) => {
-    console.log("hi");
     if (dataReceived) {
-      console.log("hiii");
       if (id === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
       } else if (id === 2) {
