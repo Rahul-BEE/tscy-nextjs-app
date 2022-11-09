@@ -94,6 +94,7 @@ const Header = () => {
   return (
     <motion.header
       className={`${styles.app__header} navbar navbar-expand-lg`}
+      data-scrolled={domYOffset || location.pathname !== "/" ? "true" : ""}
       animate={animation}>
       <div
         className={` ${styles.headermain}`}
