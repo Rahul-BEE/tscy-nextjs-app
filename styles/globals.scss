@@ -89,7 +89,7 @@ a {
 
 .swiper-pagination {
   position: absolute;
-  bottom: 45%;
+  top: calc(35vh + 135px);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -100,28 +100,29 @@ a {
   gap: 3px;
   padding: 1%;
 
-
   @media (max-width: 1224px) {
-    bottom: 70px;
-    left: 2rem;
+    top: calc(75vh + 110px);
+    left: 1rem;
     transform: translate(0);
 
     &:lang(ar) {
       left: unset;
-      right: 2rem;
+      right: 1rem;
     }
   }
 
-
-  @media (max-width: 321px) {
-    left: 0.8rem;
-    bottom: 50px;
+  @media (max-width: 600px) {
+    top: calc(80vh + 70px);
+    left: 10px;
+    transform: translate(0);
 
     &:lang(ar) {
       left: unset;
-      right: 0.8rem;
+      right: 10px;
     }
   }
+
+
 }
 
 .swiper-pagination-bullet>img {
