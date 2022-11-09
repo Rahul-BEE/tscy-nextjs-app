@@ -359,6 +359,10 @@
   background: rgba(5, 141, 166, 0.1);
   padding-top: 10rem;
 
+  &[data-use="true"] {
+    padding-top: 3rem;
+  }
+
   @media(max-width:600px) {
     padding-top: 1rem;
   }
@@ -367,6 +371,10 @@
     position: absolute;
     top: 120px;
     width: 100%;
+
+    &[data-use="true"] {
+      top: 0;
+    }
 
     @media (max-width:1224px) {
       top: 5%;
@@ -480,6 +488,8 @@
     height: 100%;
     display: block;
     top: 2px;
+    max-width: 1538px;
+    margin-inline: auto;
 
     @media (max-width:600px) {
       transform: rotate(270deg);

@@ -205,12 +205,10 @@ const SustainableFeatures = () => {
                     direction="vertical"
                     slidesPerView={7}
                     loop={true}
-                    freeMode={true}
                     speed={1500}
                     autoplay={{
                       delay: 1000,
                       disableOnInteraction: false,
-                      pauseOnMouseEnter: false,
                     }}>
                     {showData?.bullets.map((bullet, index) => (
                       <SwiperSlide key={`${index}_feature_bullet`}>

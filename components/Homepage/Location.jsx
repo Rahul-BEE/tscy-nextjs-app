@@ -10,7 +10,7 @@ import Link from "next/link";
 
 import { useRouter } from "next/router";
 
-const Location = ({ external }) => {
+const Location = () => {
   const lan = useLanguage();
   const [show, setShow] = useState(false);
   const router = useRouter();

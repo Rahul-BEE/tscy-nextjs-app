@@ -8,6 +8,7 @@ import { BsArrowDownCircle } from "react-icons/bs";
 import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
 import { HeadComponent, Location } from "../../components";
+import { Col, Row } from "react-bootstrap";
 
 const Floorplan = () => {
   const lan = useLanguage();
@@ -23,51 +24,19 @@ const Floorplan = () => {
         canonicaltag={lan.seo.floorplan.canonicaltag}
         language={lan.language === 1 ? "en" : "ar"}
       />
+
       <div className={styles.app__floorplanmain}>
-        <div className={styles.floorplanHeading}>
-          <h1>
-            {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
-          </h1>
-          {/* <p>Let’s find a home</p>
-        <AnimatePresence>
-          <p>
-            that’s{" "}
-            <motion.span
-              key={text}
-              animate="visible"
-              initial="hidden"
-              variants={{
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.1,
-                    duration: 0.6,
-                  },
-                },
-                hidden: {
-                  opacity: 0,
-                },
-              }}>
-              {text.split("").map((char, index) => (
-                <motion.span
-                  key={`${text}_${index}`}
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      x: 5,
-                    },
-                    visible: {
-                      opacity: 1,
-                      x: 0,
-                    },
-                  }}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.span>
-          </p>
-        </AnimatePresence> */}
-        </div>
+        <Row
+          className="headingRow"
+          style={{
+            paddingTop: "2rem",
+          }}>
+          <Col>
+            <h1 className="sectionmainHeading">
+              {lan.commontext.findyour} {lan.commontext.dreamHome}
+            </h1>
+          </Col>
+        </Row>
 
         {/* <Filters
         filterId={filterId}

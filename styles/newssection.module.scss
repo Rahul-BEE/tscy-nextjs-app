@@ -4,11 +4,13 @@
   color: $font_color_gray;
   position: relative;
   overflow: hidden !important;
-  padding-top: 20px;
+  padding-top: 36px;
 }
 
 .hero_container {
-  margin: 0 4%;
+  margin: 0 auto;
+  max-width: 1738px;
+  padding-inline: 100px;
 
   @media (max-width: 768px) {
     display: none;
