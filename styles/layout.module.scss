@@ -538,6 +538,7 @@
       width: 20vw;
       height: auto;
       cursor: pointer;
+      max-width: 400px;
 
       @media (max-width: 1224px) {
         width: 40vw;
@@ -554,8 +555,9 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    padding: 5% 8%;
-    max-width: 1600px;
+    padding-block: 50px 30px;
+    padding-inline: 120px;
+    max-width: 1538px;
     margin-inline: auto;
 
     @media (max-width: 1224px) {
@@ -740,7 +742,9 @@
 
   .footercopyright {
     width: 100%;
-    padding-inline: 8%;
+    padding-inline: 120px;
+    max-width: 1538px;
+    margin-inline: auto;
 
     hr {
       width: 100%;

@@ -50,6 +50,7 @@ const VillaCards = ({ filterId }) => {
               <p>{villa.location}</p>
               <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
+                  className="floorplan_villacard_learnmorebtn"
                   whileHover={{
                     scale: 1.05,
                   }}>
@@ -66,6 +67,7 @@ const VillaCards = ({ filterId }) => {
               alt={`${villa.bedrooms} ${lan.commontext.bedroom}`}
               placeholder="blur"
               blurDataURL="/Images/blur.png"
+              objectPosition={index === 0 ? "20% 50%" : "50% 50%"}
             />
           </div>
         ))}
@@ -96,6 +98,7 @@ const VillaCards = ({ filterId }) => {
               <p>{villa.location}</p>
               <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
+                  className="floorplan_villacard_learnmorebtn"
                   whileHover={{
                     scale: 1.05,
                   }}>

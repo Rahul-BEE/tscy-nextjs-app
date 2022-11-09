@@ -44,12 +44,13 @@ const OtherVillas = () => {
                 </div>
                 <Image
                   src={villa.mainImg}
-                  width={476}
-                  height={222}
+                  width={780}
+                  height={280}
                   layout={"responsive"}
                   placeholder="blur"
                   blurDataURL="/Images/blur.png"
                   alt={villa.title}
+                  objectFit="cover"
                 />
               </motion.div>
             </Link>

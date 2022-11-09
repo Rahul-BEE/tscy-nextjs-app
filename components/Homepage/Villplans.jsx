@@ -93,6 +93,14 @@ const Villplans = () => {
     }
   };
   const handleClick = (id) => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "register_interest",
+        params: {
+          villa: currentvilla.title,
+        },
+      },
+    });
     if (dataReceived) {
       if (id === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
@@ -195,6 +203,7 @@ const Villplans = () => {
           <motion.div
             onClick={() => handleClick(2)}
             className={styles.download_content}
+            data-villa={currentvilla.slug}
             whileHover={{
               backgroundColor: "#058DA6",
               color: "#fff",
@@ -306,6 +315,7 @@ const Villplans = () => {
                         <a target={"_blank"} rel="noreferrer">
                           <motion.div
                             onClick={() => handleClick(2)}
+                            data-villa={currentvilla.slug}
                             className={styles.download_content}
                             whileHover={{
                               color: "#058DA6",
@@ -317,7 +327,8 @@ const Villplans = () => {
                       </Link>
                       <Link href={`/floorplan/${currentvilla.slug}`} passHref>
                         <motion.div
-                          className={styles.download_content}
+                          data-villa={currentvilla.slug}
+                          className={`${styles.download_content} floorplan_villacard_learnmorebtn`}
                           whileHover={{
                             color: "#058DA6",
                             backgroundColor: "#fff",
