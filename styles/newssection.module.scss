@@ -4,7 +4,7 @@
   color: $font_color_gray;
   position: relative;
   overflow: hidden !important;
-  padding-top: 36px;
+  padding-top: 32px;
 }
 
 .hero_container {
@@ -32,16 +32,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  h2 {
-    // color: $primary__button_color;
-    // background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.4) 101.52%);
-    background: #058da6;
-    // background: linear-gradient(to right, #058da6 44%, #cfcfcf 68%);
-    background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
   p {
     // background: -webkit-linear-gradient(#eee, $font_color_gray);
@@ -587,7 +577,7 @@
   /* position: relative; */
   /* max-height: 800px; */
   margin: 0 auto;
-  
+
 
   @media (max-width: 400px) {
     margin: 0 7%;
@@ -666,7 +656,7 @@
 .hero_newspagesection {
   color: $font_color_gray;
   z-index: 1;
-    position: relative;
+  position: relative;
 }
 
 .hero_newspageadjustment {
