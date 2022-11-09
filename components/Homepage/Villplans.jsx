@@ -217,7 +217,8 @@ const Villplans = () => {
           </motion.div>
           <Link href={`/floorplan/${currentvilla.slug}`} passHref>
             <motion.div
-              className={styles.download_content}
+              data-villa={currentvilla.title}
+              className={`${styles.download_content} floorplan_villacard_learnmorebtn`}
               whileHover={{
                 backgroundColor: "#058DA6",
                 color: "#fff",
@@ -327,7 +328,7 @@ const Villplans = () => {
                       </Link>
                       <Link href={`/floorplan/${currentvilla.slug}`} passHref>
                         <motion.div
-                          data-villa={currentvilla.slug}
+                          data-villa={currentvilla.title}
                           className={`${styles.download_content} floorplan_villacard_learnmorebtn`}
                           whileHover={{
                             color: "#058DA6",

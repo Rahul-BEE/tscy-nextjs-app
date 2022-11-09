@@ -50,6 +50,7 @@ const VillaCards = ({ filterId }) => {
               <p>{villa.location}</p>
               <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
+                  data-villa={villa.title}
                   className="floorplan_villacard_learnmorebtn"
                   whileHover={{
                     scale: 1.05,
@@ -98,6 +99,7 @@ const VillaCards = ({ filterId }) => {
               <p>{villa.location}</p>
               <Link href={`floorplan/${villa.slug}`} passHref>
                 <motion.button
+                  data-villa={villa.title}
                   className="floorplan_villacard_learnmorebtn"
                   whileHover={{
                     scale: 1.05,

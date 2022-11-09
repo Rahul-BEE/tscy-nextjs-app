@@ -30,28 +30,38 @@ const OtherVillas = () => {
           {data.map((villa, index) => (
             <Link href={`/floorplan/${villa.slug}`} passHref key={index}>
               <motion.div
+                data-villa={villa.title}
                 whileHover={{
                   scale: 1.02,
                 }}
-                className={styles.villacard}
+                className={`${styles.villacard} floorplan_villacard_learnmorebtn`}
                 key={`${index}_villacards`}>
-                <div className={styles.cardHeader}>
+                <div
+                  className={styles.cardHeader}
+                  style={{
+                    pointerEvents: "none",
+                  }}>
                   <h5>
                     {villa.bedrooms} {lan.commontext.bedroom}
                   </h5>
                   <h5>{villa.type}</h5>
                   <p>{villa.location}</p>
                 </div>
-                <Image
-                  src={villa.mainImg}
-                  width={780}
-                  height={280}
-                  layout={"responsive"}
-                  placeholder="blur"
-                  blurDataURL="/Images/blur.png"
-                  alt={villa.title}
-                  objectFit="cover"
-                />
+                <div
+                  style={{
+                    pointerEvents: "none",
+                  }}>
+                  <Image
+                    src={villa.mainImg}
+                    width={780}
+                    height={280}
+                    layout={"responsive"}
+                    placeholder="blur"
+                    blurDataURL="/Images/blur.png"
+                    alt={villa.title}
+                    objectFit="cover"
+                  />
+                </div>
               </motion.div>
             </Link>
           ))}
