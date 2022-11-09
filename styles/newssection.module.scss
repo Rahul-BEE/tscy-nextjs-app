@@ -579,7 +579,13 @@
 }
 
 .newspage_container {
-  margin: 0 10%;
+  width: 80vw;
+  /* height: 100vh; */
+  max-width: 1528px;
+  /* position: relative; */
+  /* max-height: 800px; */
+  margin: 0 auto;
+  
 
   @media (max-width: 400px) {
     margin: 0 7%;
@@ -657,6 +663,8 @@
 
 .hero_newspagesection {
   color: $font_color_gray;
+  z-index: 1;
+    position: relative;
 }
 
 .hero_newspageadjustment {
