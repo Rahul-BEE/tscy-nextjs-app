@@ -180,13 +180,17 @@ const Header = () => {
               ? styles.header_left_btn2
               : ""
           } `}>
-          <Link href={"/contact-us"} passHref>
-            <button
-              className={`btn ${styles.contactbtn}`}
-              data-color={domYOffset || location.pathname !== "/" ? "g" : "w"}>
-              {lan.commontext.registerinterest}
-              <BiChevronRightCircle className={styles.arrow_icon} size={20} />
-            </button>
+          <Link href={"/contact-us"}>
+            <a>
+              <button
+                className={`btn ${styles.contactbtn}`}
+                data-color={
+                  domYOffset || location.pathname !== "/" ? "g" : "w"
+                }>
+                {lan.commontext.registerinterest}
+                <BiChevronRightCircle className={styles.arrow_icon} size={20} />
+              </button>
+            </a>
           </Link>
           <Link href={"/floorplan"} passHref>
             <button
