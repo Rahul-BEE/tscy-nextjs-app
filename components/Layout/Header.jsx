@@ -202,6 +202,9 @@ const Header = () => {
         </div>
         <button
           className={`navbar-toggler ${styles.navbar__menubtn}`}
+          style={{
+            padding: 0,
+          }}
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"

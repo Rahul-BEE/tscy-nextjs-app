@@ -53,20 +53,20 @@
 
 
       @media (max-width: 992px) {
-        padding: 25px 50px 0;
+        padding: 12.5px 50px;
       }
 
       @media (max-width: 600px) {
-        padding: 10px 10px 0;
+        padding: 10px 10px;
       }
     }
 
     @media (max-width: 992px) {
-      padding: 25px 50px 0;
+      padding: 12.5px 50px;
     }
 
     @media (max-width: 600px) {
-      padding: 25px 10px 0;
+      padding: 12.5px 10px;
     }
   }
 }
@@ -105,8 +105,8 @@
     @media (max-width: 610px) {
       min-width: 100px;
       min-height: 45px;
-      max-height: 60px;
-      max-width: 100px;
+      max-height: 55px;
+      max-width: 90px;
     }
   }
 
@@ -120,6 +120,10 @@
     width: 100px;
     height: 46px;
     transition: all 0.2s ease-in-out;
+
+    @media (max-width:1224px) {
+      height: 46px;
+    }
 
     @media (max-width: 676px) {
       display: none;
@@ -240,6 +244,7 @@
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
+    height: 46px;
 
     &[data-color="g"] {
       color: #058da6;
@@ -250,21 +255,22 @@
       display: inline-block;
       font-size: 0.625rem;
       padding: 0.5rem 0.8rem;
-      margin-left: 1rem;
+      margin-inline: 0.5rem;
 
       &:lang(ar) {
-        margin-left: 0;
-        margin-right: 1rem;
         font-size: 1rem;
       }
     }
 
-    @media (max-width: 321px) {
-      margin-left: 10px;
+    @media (max-width:600px) {
+      height: 31px;
+    }
+
+    @media (max-width: 337px) {
+      margin-inline: 10px;
 
       &:lang(ar) {
-        margin-left: 0;
-        margin-right: 10px;
+        margin-inline: 10px;
         font-size: 1rem;
       }
     }
