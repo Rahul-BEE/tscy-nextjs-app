@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
+import BrokerForm from "./BrokerForm";
 import styles from "../../styles/contact.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const Registration = () => {
     <div className={styles.registration}>
       <div className="headingRow">
         <h1
-          className="sectionmainHeading"
+          className={`sectionmainHeading ${styles.mainheadingContactus}`}
           style={{
             width: "100%",
             margin: 0,
@@ -91,7 +92,7 @@ const Registration = () => {
             />
           </div>
         </div>
-        <ContactForm page={broker} />
+        {broker === "true" ? <BrokerForm /> : <ContactForm />}
       </div>
     </div>
   );

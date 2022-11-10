@@ -1442,8 +1442,12 @@ const arabic = {
           placeholder: "0000000000",
         },
         name: {
-          title: "إسمك الكامل",
+          title: "الاسم الاول",
           placeholder: "الإسم الكامل",
+        },
+        lastname: {
+          title: "اللقب",
+          placeholder: "اسمك الاخير",
         },
         villas: {
           title: "Villa you are interested in ",
