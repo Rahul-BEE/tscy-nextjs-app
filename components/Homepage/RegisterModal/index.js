@@ -92,13 +92,13 @@ const RegsiterModal = ({ show, setshowmodal }) => {
         <form className={styles.forms}>
           <div className={styles.modalbody}>
             <div className={styles.formItem}>
-              <label htmlFor="fullname">{data.name.title}</label>
+              <label htmlFor="fullname">{data.fullname.title}</label>
               <input
                 autoFocus={true}
                 type="text"
                 id="fullname"
                 required
-                placeholder={data.name.placeholder}
+                placeholder={data.fullname.placeholder}
                 value={fullname}
                 onChange={(e) => setFullname(e.target.value)}></input>
             </div>
