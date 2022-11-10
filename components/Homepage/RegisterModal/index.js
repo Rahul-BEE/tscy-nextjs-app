@@ -44,8 +44,20 @@ const RegsiterModal = ({ show, setshowmodal }) => {
         },
       },
     });
-
-    sendEmail({ data, type: 0 });
+    const config = {
+      method: "POST",
+      mode: "no-cors",
+    };
+    await fetch(
+      `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${fullname}&email=${email}&lead_source=${leadfrom}&phone=${phone}`,
+      config
+    )
+      .then((result) => {
+        setError(false);
+      })
+      .catch((error) => {
+        setError(true);
+      });
     setshowmodal(false);
   };
 

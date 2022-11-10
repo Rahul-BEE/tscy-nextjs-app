@@ -1395,11 +1395,15 @@ const english = {
         },
         name: {
           title: "First Name",
-          placeholder: "Your full name",
+          placeholder: "Your first name",
+        },
+        fullname: {
+          title: "Full Name",
+          placeholder: "Your Full name",
         },
         lastname: {
-          title: "Last Name",
-          placeholder: "Your last name",
+          title: "Full Name",
+          placeholder: "Your Full name",
         },
         villas: {
           title: "Villa you are interested in ",

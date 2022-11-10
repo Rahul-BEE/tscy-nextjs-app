@@ -1445,6 +1445,10 @@ const arabic = {
           title: "الاسم الاول",
           placeholder: "الإسم الكامل",
         },
+        fullname: {
+          title: "Full Name",
+          placeholder: "Your Full name",
+        },
         lastname: {
           title: "اللقب",
           placeholder: "اسمك الاخير",

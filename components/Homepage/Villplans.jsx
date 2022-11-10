@@ -58,36 +58,44 @@ const Villplans = () => {
   const handleUserInput = async () => {
     if (name !== "") {
       setLoading(true);
-      let data = {
-        email,
+      const data = {
+        oid: "00D250000009OKo",
         name,
+        email,
         phone,
       };
-
-      let result = sendEmail({ data, type: 0 });
-      if (result) {
-        setLoading(false);
-      } else {
-        setLoading(false);
-        return;
-      }
-      dispatch({
-        type: "updateuser",
-        value: data,
-      });
-      setDataReceived(true);
-      TagManager.dataLayer({
-        dataLayer: {
-          event: "register_interest_from_villa_plan",
-        },
-      });
-      if (brochureDownload === 1) {
-        window.open("/brochure/Yiti Brochure.pdf");
-      } else if (brochureDownload === 2) {
-        window.open("/brochure/Villa Brochure Final.pdf");
-      } else {
-        return;
-      }
+      const config = {
+        method: "POST",
+        mode: "no-cors",
+      };
+      await fetch(
+        `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${name}&email=${email}&phone=${phone}`,
+        config
+      )
+        .then((result) => {
+          setLoading(false);
+          dispatch({
+            type: "updateuser",
+            value: data,
+          });
+          setDataReceived(true);
+          TagManager.dataLayer({
+            dataLayer: {
+              event: "register_interest_from_villa_plan",
+            },
+          });
+          if (brochureDownload === 1) {
+            window.open("/brochure/Yiti Brochure.pdf");
+          } else if (brochureDownload === 2) {
+            window.open("/brochure/Villa Brochure Final.pdf");
+          } else {
+            return;
+          }
+        })
+        .catch((error) => {
+          setLoading(false);
+          return;
+        });
     } else {
       return;
     }
@@ -356,7 +364,7 @@ const Villplans = () => {
                       <form className={styles.userform}>
                         <div className={styles.formItem}>
                           <label htmlFor="name">
-                            {lan.contact.register.formdata.name.title}
+                            {lan.contact.register.formdata.fullname.title}
                           </label>
                           <input
                             type={"text"}
@@ -364,7 +372,7 @@ const Villplans = () => {
                             required
                             onChange={(e) => setName(e.target.value)}
                             placeholder={
-                              lan.contact.register.formdata.name.placeholder
+                              lan.contact.register.formdata.fullname.placeholder
                             }
                           />
                         </div>
