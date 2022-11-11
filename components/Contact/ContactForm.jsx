@@ -49,14 +49,26 @@ const ContactForm = () => {
     }
     setLoading(true);
     const data = {
-      oid: "00D250000009OKo",
       firstname,
       lastname,
       email,
       phone,
       leadfrom,
     };
+    //email js
 
+    let result = await sendEmail({
+      data,
+      temmplate: 0,
+    });
+
+    if (result) {
+      setEmailSend(true);
+      setLoading(false);
+    } else {
+      setEmailSend(false);
+      setLoading(false);
+    }
     //salesforce code
     // const config = {
     //   method: "POST",

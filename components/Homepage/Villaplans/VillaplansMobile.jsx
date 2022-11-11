@@ -78,18 +78,19 @@ function VillaplansMobile() {
     },
   };
   const handleUserInput = async () => {
-    if (name !== "") {
+    if (name !== "" && email !== "" && phone !== "") {
       setLoading(true);
       let data = {
         email,
-        name,
+        firstname: name,
         phone,
       };
       //sent data to the backend
 
-      let result = sendEmail({ data, type: 0 });
+      let result = await sendEmail({ data, temmplate: 0 });
       if (result) {
         setLoading(false);
+        setDataReceived(true);
       } else {
         setLoading(false);
       }
@@ -97,7 +98,7 @@ function VillaplansMobile() {
         type: "updateuser",
         value: data,
       });
-      setDataReceived(true);
+
       if (brochureDownload === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
       } else if (brochureDownload === 2) {
