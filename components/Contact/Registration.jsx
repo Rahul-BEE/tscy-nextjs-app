@@ -29,7 +29,7 @@ const Registration = () => {
       </div>
       <div className={styles.infoContainer}>
         <div className={styles.infoBox}>
-          <div>
+          <div className={styles.infoBoxHeading}>
             <h4>{lan.contact.register.info.title}</h4>
             <p
               style={{
@@ -59,8 +59,36 @@ const Registration = () => {
                 </div>
               </div>
             ))}
+            <div className={styles.infoRow} style={{ placeSelf: "stretch" }}>
+              <div
+                className={styles.infosocial}
+                style={{
+                  zIndex: 1,
+                }}>
+                {lan.contact.register.info.socialmedia.map((item, index) => {
+                  return (
+                    <Link href={item.link} key={`${index}_social`}>
+                      <a target={"_blank"} rel="noreferrrer">
+                        <motion.div
+                          whileHover={{
+                            scale: 1.1,
+                          }}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            cursor: "pointer",
+                          }}>
+                          {item.icon}
+                        </motion.div>
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className={styles.infosocial}>
+          {/* <div className={styles.infosocial}>
             {lan.contact.register.info.socialmedia.map((item, index) => {
               return (
                 <Link href={item.link} key={`${index}_social`}>
@@ -81,8 +109,12 @@ const Registration = () => {
                 </Link>
               );
             })}
-          </div>
-          <div className={styles.infopolygon}>
+          </div> */}
+          <div
+            className={styles.infopolygon}
+            style={{
+              pointerEvents: "none",
+            }}>
             <Image
               width={214}
               height={134}

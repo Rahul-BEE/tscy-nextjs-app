@@ -32,8 +32,8 @@ const Floorplan = () => {
             paddingTop: "2rem",
           }}>
           <Col>
-            <h1 className="sectionmainHeading">
-              {lan.commontext.findyour} {lan.commontext.dreamHome}
+            <h1 className={`sectionmainHeading ${styles.floorplanHeading}`}>
+              {lan.commontext.findyour} <span>{lan.commontext.dreamHome}</span>
             </h1>
           </Col>
         </Row>

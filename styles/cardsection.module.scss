@@ -71,6 +71,10 @@
                         font-size: 0.8125rem;
                     }
                 }
+
+                @media (max-width:600px) {
+                    min-height: unset;
+                }
             }
 
             @media (max-width:1224px) {
@@ -82,7 +86,7 @@
             @media (max-width:700px) {
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
-
+                margin-bottom: 1rem;
             }
 
             &[data-page="true"] {
@@ -149,12 +153,12 @@
             }
         }
 
-        @media (max-width:1320px) {
+        @media (max-width:1224px) {
             padding: 8% 5%;
         }
 
         @media (max-width:1224px) {
-            padding: 5% 5% 64px;
+            padding: 5% 5% 20px;
 
         }
 

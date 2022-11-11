@@ -56,46 +56,70 @@ const Villplans = () => {
     },
   };
   const handleUserInput = async () => {
-    if (name !== "") {
+    if (name !== "" && email !== "" && phone !== "") {
       setLoading(true);
       const data = {
-        oid: "00D250000009OKo",
-        name,
+        firstname: name,
         email,
         phone,
       };
-      const config = {
-        method: "POST",
-        mode: "no-cors",
-      };
-      await fetch(
-        `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${name}&email=${email}&phone=${phone}`,
-        config
-      )
-        .then((result) => {
-          setLoading(false);
-          dispatch({
-            type: "updateuser",
-            value: data,
-          });
-          setDataReceived(true);
-          TagManager.dataLayer({
-            dataLayer: {
-              event: "register_interest_from_villa_plan",
-            },
-          });
-          if (brochureDownload === 1) {
-            window.open("/brochure/Yiti Brochure.pdf");
-          } else if (brochureDownload === 2) {
-            window.open("/brochure/Villa Brochure Final.pdf");
-          } else {
-            return;
-          }
-        })
-        .catch((error) => {
-          setLoading(false);
-          return;
-        });
+      let result = sendEmail({ data, temmplate: 0 });
+      if (result) {
+        setLoading(false);
+      } else {
+        setLoading(false);
+      }
+      dispatch({
+        type: "updateuser",
+        value: data,
+      });
+      setDataReceived(true);
+      TagManager.dataLayer({
+        dataLayer: {
+          event: "register_interest_from_villa_plan",
+        },
+      });
+      if (brochureDownload === 1) {
+        window.open("/brochure/Yiti Brochure.pdf");
+      } else if (brochureDownload === 2) {
+        window.open("/brochure/Villa Brochure Final.pdf");
+      } else {
+        return;
+      }
+
+      //saleforce
+      // const config = {
+      //   method: "POST",
+      //   mode: "no-cors",
+      // };
+      // await fetch(
+      //   `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${name}&email=${email}&phone=${phone}`,
+      //   config
+      // )
+      //   .then((result) => {
+      //     setLoading(false);
+      //     dispatch({
+      //       type: "updateuser",
+      //       value: data,
+      //     });
+      //     setDataReceived(true);
+      // TagManager.dataLayer({
+      //   dataLayer: {
+      //     event: "register_interest_from_villa_plan",
+      //   },
+      // });
+      //     if (brochureDownload === 1) {
+      //       window.open("/brochure/Yiti Brochure.pdf");
+      //     } else if (brochureDownload === 2) {
+      //       window.open("/brochure/Villa Brochure Final.pdf");
+      //     } else {
+      //       return;
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     setLoading(false);
+      //     return;
+      //   });
     } else {
       return;
     }

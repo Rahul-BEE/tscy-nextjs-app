@@ -64,12 +64,8 @@ function VillaplansMobile() {
   const zeroservicevariant = {
     visible: {
       opacity: 1,
-      x: "0",
+      x: "0%",
       width: "100%",
-      transition: {
-        type: "spring",
-        duration: 1.2,
-      },
     },
     hidden: {
       opacity: 0,
@@ -78,18 +74,19 @@ function VillaplansMobile() {
     },
   };
   const handleUserInput = async () => {
-    if (name !== "") {
+    if (name !== "" && email !== "" && phone !== "") {
       setLoading(true);
       let data = {
         email,
-        name,
+        firstname: name,
         phone,
       };
       //sent data to the backend
 
-      let result = sendEmail({ data, type: 0 });
+      let result = await sendEmail({ data, temmplate: 0 });
       if (result) {
         setLoading(false);
+        setDataReceived(true);
       } else {
         setLoading(false);
       }
@@ -97,7 +94,7 @@ function VillaplansMobile() {
         type: "updateuser",
         value: data,
       });
-      setDataReceived(true);
+
       if (brochureDownload === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
       } else if (brochureDownload === 2) {
@@ -305,7 +302,7 @@ function VillaplansMobile() {
                 height={500}
                 layout="responsive"
                 objectFit="cover"
-                objectPosition={"center"}
+                objectPosition={activeVilla === 0 ? "20% 50%" : "50% 50%"}
                 alt="Sustainable City Yiti"
               />
               <div

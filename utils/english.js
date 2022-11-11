@@ -1402,8 +1402,8 @@ const english = {
           placeholder: "Your Full name",
         },
         lastname: {
-          title: "Full Name",
-          placeholder: "Your Full name",
+          title: "Last Name",
+          placeholder: "Your Last name",
         },
         villas: {
           title: "Villa you are interested in ",
