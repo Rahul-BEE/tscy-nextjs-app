@@ -121,10 +121,12 @@ const Villplans = () => {
       //     return;
       //   });
     } else {
+      console.log("no over here");
       return;
     }
   };
   const handleClick = (id) => {
+    console.log("Over here");
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest",

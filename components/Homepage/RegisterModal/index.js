@@ -29,7 +29,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     if (
       phone === "" ||
       leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
-      fullname === "" ||
+      fullname.trim().length < 1 ||
       email === ""
     ) {
       setError(true);

@@ -324,6 +324,7 @@
                             font-weight: 400;
                             color: #777777;
 
+
                         }
 
                         input,
@@ -334,11 +335,13 @@
                         .picontainerclass input {
                             padding-left: 48px;
                             height: auto;
+                            color: #777777;
 
-
-                            &[data-color="true"] {
-                                color: #777777
+                            &[data-color="false"] {
+                                color: #B5B5B5;
                             }
+
+
 
                             &:lang(ar) {
                                 padding-left: 0;
@@ -346,6 +349,17 @@
                             }
                         }
 
+                        input::placeholder {
+                            color: #B5B5B5;
+                        }
+
+                        input.error {
+                            color: #FE8392
+                        }
+
+                        input.error::placeholder {
+                            color: #FE8392;
+                        }
 
                         .searchClass {
                             padding: 1rem;
@@ -409,6 +423,7 @@
                                 padding: 0 !important;
                             }
                         }
+
 
 
                     }
@@ -710,6 +725,7 @@
         justify-content: space-between;
         width: 100%;
         user-select: none;
+        font-weight: 400;
         cursor: pointer;
     }
 

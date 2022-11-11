@@ -25,8 +25,7 @@ body {
 
 // Scrollbar design and settings
 ::-webkit-scrollbar {
-  width: 10px;
-  display: none;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,12 +33,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #777777;
+
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+
 
 //Button Settings
 

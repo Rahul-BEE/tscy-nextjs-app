@@ -31,11 +31,10 @@ const ContactForm = () => {
   const data = lan.contact.register.formdata;
   const submitHandler = async (e) => {
     e.preventDefault();
-
     if (
       phone === "" ||
       leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
-      firstname === "" ||
+      firstname.trim().length < 3 ||
       email === ""
     ) {
       setError(true);
@@ -149,6 +148,7 @@ const ContactForm = () => {
                       id="firstname"
                       name="first_name"
                       required
+                      data-error={error && firstname === "" ? "true" : "false"}
                       placeholder={data.name.placeholder}
                       value={firstname}
                       onChange={(e) => setFirstname(e.target.value)}></input>
@@ -182,6 +182,9 @@ const ContactForm = () => {
                     country={"om"}
                     value={phone}
                     name="phone"
+                    inputProps={{
+                      "data-color": phone.length > 3 ? "true" : "false",
+                    }}
                     containerClass={styles.picontainerclass}
                     inputClass={styles.piinputclass}
                     buttonClass={styles.buttonClass}
@@ -211,14 +214,25 @@ const ContactForm = () => {
                       className={styles.customdropdown}
                       data-dir={dropDirection}>
                       {data.leadfrom.options.map((item, index) => (
-                        <p
+                        <motion.p
                           key={index}
+                          whileHover={{
+                            backgroundColor: "#f5f5f5",
+                            transition: {
+                              type: "tween",
+                            },
+                          }}
+                          style={{
+                            margin: 0,
+                            padding: "10px",
+                            backgroundColor: "#ffffff",
+                          }}
                           onClick={() => {
                             setLeadFrom(item);
                             setShowDropDown(false);
                           }}>
                           {item}
-                        </p>
+                        </motion.p>
                       ))}
                     </div>
                   )}
