@@ -19,6 +19,7 @@ const Bannersection = ({ banner }) => {
         loop={true}
         noSwiping={true}
         noSwipingClass="swiper-slide"
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {

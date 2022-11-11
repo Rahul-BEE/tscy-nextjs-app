@@ -202,29 +202,6 @@ const ContactForm = () => {
                       ))}
                     </div>
                   )}
-                  {/* <select
-                    className={styles.selectcontent}
-                    value={leadfrom}
-                    name="lead_source"
-                    style={{
-                      color: leadfrom === "" ? "#B5b5b5" : "#777777",
-                    }}
-                    onChange={(e) => setLeadFrom(e.target.value)}>
-                    <option
-                      defaultValue={leadfrom}
-                      hidden
-                      className={`${styles.optionvalue} ${styles.optionselect1}`}>
-                      {data.leadfrom.placeholder}
-                    </option>
-                    {data.leadfrom.options.map((item, index) => (
-                      <option
-                        value={item}
-                        key={index}
-                        className={styles.optionvalue}>
-                        {item}
-                      </option>
-                    ))}
-                  </select> */}
                 </div>
                 {error && (
                   <small className={styles.phoneErrorDiv}>{errorMessage}</small>

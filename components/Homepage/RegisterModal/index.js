@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Modal from "react-bootstrap/Modal";
 import useLanguage from "../../../utils/useLanguage";
@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { IoClose } from "react-icons/io5";
 import sendEmail from "../../../utils/emailservice";
+import { HiChevronDown } from "react-icons/hi";
 import TagManager from "react-gtm-module";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
@@ -14,10 +15,15 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   const [errorMessage, setErrorMessage] = useState(
     "Please fill all the fields"
   );
+  const [showDropDown, setShowDropDown] = useState(false);
+  const [dropDirection, setDropDirection] = useState("1");
+  const customSelect = useRef(null);
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [leadfrom, setLeadFrom] = useState("");
+  const [leadfrom, setLeadFrom] = useState(
+    lan.contact.register.formdata.leadfrom.placeholder
+  );
   const data = lan.contact.register.formdata;
   const submitHandler = async () => {
     if (phone === "" || leadfrom === "") {
@@ -65,6 +71,29 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     const selectMode = document.getElementById("registermodalselect");
     selectMode.style.borderBottomColor = "2px";
   };
+  const openSelectDrop = () => {
+    setShowDropDown(!showDropDown);
+  };
+
+  const setDropDirectionNew = useCallback(() => {
+    let pos = customSelect.current?.getBoundingClientRect();
+    if (pos) {
+      if (window.innerHeight - pos.y > 300) {
+        setDropDirection("1");
+      } else {
+        setDropDirection("0");
+      }
+    }
+  }, [customSelect.current]);
+  useEffect(() => {
+    setDropDirectionNew();
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", setDropDirectionNew);
+    }
+    return () => {
+      window.removeEventListener("scroll", setDropDirectionNew);
+    };
+  }, []);
   return (
     <Modal
       show={show}
@@ -131,6 +160,35 @@ const RegsiterModal = ({ show, setshowmodal }) => {
             </div>
             <div className={styles.formItem}>
               <label htmlFor="leadfrom">{data.leadfrom.title}</label>
+              <motion.div
+                className={styles.customSelect}
+                ref={customSelect}
+                style={{
+                  color:
+                    leadfrom !== data.leadfrom.placeholder
+                      ? "#777777"
+                      : "#B5B5B5",
+                }}
+                onClick={() => openSelectDrop()}>
+                {leadfrom} <HiChevronDown />
+              </motion.div>
+              {showDropDown && (
+                <div className={styles.customdropdown} data-dir={dropDirection}>
+                  {data.leadfrom.options.map((item, index) => (
+                    <p
+                      key={index}
+                      onClick={() => {
+                        setLeadFrom(item);
+                        setShowDropDown(false);
+                      }}>
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+            {/* <div className={styles.formItem}>
+              <label htmlFor="leadfrom">{data.leadfrom.title}</label>
               <select
                 className={styles.selectcontent}
                 value={leadfrom}
@@ -154,7 +212,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
                   </option>
                 ))}
               </select>
-            </div>
+            </div> */}
           </div>
         </form>
         <div className={styles.modalfooter}>
