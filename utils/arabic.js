@@ -1431,27 +1431,27 @@ const arabic = {
       formdata: {
         company: {
           title: "إسم الشركة",
-          placeholder: "Wallace Co.",
+          placeholder: "أدخل الاسم الكامل",
         },
-        companyContact: {
-          title: "رقم الهاتف",
-          placeholder: "xyz.company.com",
-        },
+        // companyContact: {
+        //   title: "رقم الهاتف",
+        //   placeholder: "xyz.company.com",
+        // },
         license: {
           title: "رقم الترخيص",
-          placeholder: "0000000000",
+          placeholder: "أدخل رقم الترخيص",
         },
         name: {
           title: "الاسم الاول",
-          placeholder: "الإسم الكامل",
+          placeholder: "أدخل الإسم الاول",
         },
         fullname: {
-          title: "Full Name",
-          placeholder: "Your Full name",
+          title: "الاسم الكامل",
+          placeholder: "أدخل الاسم الكامل",
         },
         lastname: {
-          title: "اللقب",
-          placeholder: "اسمك الاخير",
+          title: "اسم العائلة",
+          placeholder: "أدخل اسم العائلة",
         },
         villas: {
           title: "Villa you are interested in ",
@@ -1465,16 +1465,21 @@ const arabic = {
           title: "كيف سمعت عنا؟",
           placeholder: "",
           options: [
-            "موقع الكتروني",
+            "عبر موقع الكتروني",
             "إنستغرام",
+            "لنكد ان",
             "فيسبوك",
-            "هاتف",
-            "وكيل خارجي ",
-            "بروبرتي فايندر",
-            "شريك",
-            "Word of mouth",
+            "عبر الهاتف",
+            "وسيط",
+            "من خلال ندوة نقاشية داخلية",
+            "من خلال ندوة نقاشية",
+            "أحد موظفين المدينة المستدامة بالصدفة",
+            "زيارة مركز المبيعات بالصدفة",
+            "بوابة الكترونية عقارية",
+            "عبر احد الشركاء",
+            "عبر أحد المقربين",
             "عرض تجاري",
-            "العلاقات العامة",
+            "وسائل الإعلام",
             "الإعلانات",
             "تويتر",
             "أخرى",
@@ -1482,7 +1487,7 @@ const arabic = {
         },
         email: {
           title: "البريد الإلكتروني",
-          placeholder: "example@gmail.com",
+          placeholder: "ادخل البريد الإلكتروني",
         },
         phone: {
           title: "رقم الهاتف",

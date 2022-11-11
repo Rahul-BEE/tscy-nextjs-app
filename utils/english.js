@@ -1382,28 +1382,28 @@ const english = {
       corporate: "Corporate",
       formdata: {
         company: {
-          title: "Company Name",
-          placeholder: "Wallace Co.",
+          title: "Company Name *",
+          placeholder: "Enter Company Name",
         },
-        companyContact: {
-          title: "Company Contact",
-          placeholder: "xyz.company.com",
-        },
+        // companyContact: {
+        //   title: "Company Contact Email*",
+        //   placeholder: "Enter Email",
+        // },
         license: {
           title: "Cooperate License Number",
           placeholder: "0000000000",
         },
         name: {
-          title: "First Name",
-          placeholder: "Your first name",
+          title: "First Name *",
+          placeholder: "Enter First Name",
         },
         fullname: {
-          title: "Full Name",
-          placeholder: "Your Full name",
+          title: "Full Name *",
+          placeholder: "Enter Full Name",
         },
         lastname: {
-          title: "Last Name",
-          placeholder: "Your Last name",
+          title: "Last Name *",
+          placeholder: "Enter Last name",
         },
         villas: {
           title: "Villa you are interested in ",
@@ -1414,7 +1414,7 @@ const english = {
           ],
         },
         leadfrom: {
-          title: "How did you hear about us?",
+          title: "How did you hear about us? *",
           placeholder: "Please select one option",
           options: [
             "Website",
@@ -1427,22 +1427,22 @@ const english = {
             "Seminar - Partner",
             "Employee Referral",
             "Walk-In",
-            "Property Finder",
+            "Property Portal",
             "Partner",
-            "Other",
             "Word of mouth",
             "Trade Show",
             "Public Relations",
             "Advertisement",
             "Twitter",
+            "Other",
           ],
         },
         email: {
-          title: "Email",
-          placeholder: "example@gmail.com",
+          title: "Email Address *",
+          placeholder: "Enter Email Address",
         },
         phone: {
-          title: "Phone",
+          title: "Phone Number *",
           placeholder: "+968 000 000000",
         },
       },
