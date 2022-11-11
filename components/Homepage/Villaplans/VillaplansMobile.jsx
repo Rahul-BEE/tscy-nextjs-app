@@ -367,12 +367,12 @@ function VillaplansMobile() {
         ) : (
           <>
             {dataReceived ? (
-              <div className={styles.villaplanuserform}>
-                <div
-                  className={styles.gobackformbtn}
-                  style={{
-                    left: "2rem",
-                  }}>
+              <div
+                className={styles.villaplanuserform}
+                style={{
+                  paddingInline: "25px",
+                }}>
+                <div className={styles.gobackformbtn}>
                   <Arrowleft onClick={() => setShowForm(false)} />
                 </div>
                 <p className={styles.heading}>{lan.commontext.thanksnote}</p>
@@ -421,12 +421,12 @@ function VillaplansMobile() {
                 </div>
               </div>
             ) : (
-              <div className={styles.villaplanuserform}>
-                <div
-                  className={styles.gobackformbtn}
-                  style={{
-                    left: "2rem",
-                  }}>
+              <div
+                className={styles.villaplanuserform}
+                style={{
+                  paddingInline: "25px",
+                }}>
+                <div className={styles.gobackformbtn}>
                   <Arrowleft onClick={() => setShowForm(false)} />
                 </div>
                 <p className={styles.heading}>{lan.commontext.adddetails}</p>

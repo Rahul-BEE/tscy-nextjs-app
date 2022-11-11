@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "../../styles/contact.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import PhoneInput from "react-phone-input-2";
@@ -8,10 +8,14 @@ import { BsArrowDownCircle } from "react-icons/bs";
 import Loader from "../Loader/Loader";
 import Link from "next/link";
 import TagManager from "react-gtm-module";
-import axios from "axios";
+import { HiChevronDown } from "react-icons/hi";
+import { useEffect } from "react";
+import { useCallback } from "react";
 const ContactForm = () => {
   const lan = useLanguage();
-  const [select, setSelect] = useState(0);
+  const customSelect = useRef(null);
+  const [showDropDown, setShowDropDown] = useState(false);
+  const [dropDirection, setDropDirection] = useState("1");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +23,9 @@ const ContactForm = () => {
   const [emailSend, setEmailSend] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [leadfrom, setLeadFrom] = useState("");
+  const [leadfrom, setLeadFrom] = useState(
+    lan.contact.register.formdata.leadfrom.placeholder
+  );
   const [errorMessage, setErrorMessage] = useState("");
   const data = lan.contact.register.formdata;
   const submitHandler = async (e) => {
@@ -65,7 +71,6 @@ const ContactForm = () => {
         event: "register_interest_contact",
       },
     });
-    // set loading to false and set emailsend to true
   };
   const submitanotherinterest = () => {
     setEmailSend(false);
@@ -76,6 +81,28 @@ const ContactForm = () => {
     setPhone("");
     setEmail("");
   };
+
+  const openSelectDrop = () => {
+    setShowDropDown(!showDropDown);
+  };
+
+  const setDropDirectionNew = useCallback(() => {
+    let pos = customSelect.current?.getBoundingClientRect();
+    if (window.innerHeight - pos.y > 300) {
+      setDropDirection("1");
+    } else {
+      setDropDirection("0");
+    }
+  }, []);
+  useEffect(() => {
+    setDropDirectionNew();
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", setDropDirectionNew);
+    }
+    return () => {
+      window.removeEventListener("scroll", setDropDirectionNew);
+    };
+  }, []);
   return (
     <div className={styles.contactform}>
       {data && (
@@ -147,7 +174,35 @@ const ContactForm = () => {
                 </div>
                 <div className={styles.formItem}>
                   <label htmlFor="leadfrom">{data.leadfrom.title}</label>
-                  <select
+                  <motion.div
+                    className={styles.customSelect}
+                    ref={customSelect}
+                    style={{
+                      color:
+                        leadfrom !== data.leadfrom.placeholder
+                          ? "#777777"
+                          : "#B5B5B5",
+                    }}
+                    onClick={() => openSelectDrop()}>
+                    {leadfrom} <HiChevronDown />
+                  </motion.div>
+                  {showDropDown && (
+                    <div
+                      className={styles.customdropdown}
+                      data-dir={dropDirection}>
+                      {data.leadfrom.options.map((item, index) => (
+                        <p
+                          key={index}
+                          onClick={() => {
+                            setLeadFrom(item);
+                            setShowDropDown(false);
+                          }}>
+                          {item}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                  {/* <select
                     className={styles.selectcontent}
                     value={leadfrom}
                     name="lead_source"
@@ -169,7 +224,7 @@ const ContactForm = () => {
                         {item}
                       </option>
                     ))}
-                  </select>
+                  </select> */}
                 </div>
                 {error && (
                   <small className={styles.phoneErrorDiv}>{errorMessage}</small>

@@ -299,29 +299,31 @@
                             border-radius: 0;
                             outline: none;
                             box-shadow: none;
-
-                            &::placeholder {
-                                font-weight: 400;
-                                color: #777777;
-                            }
+                            font-weight: 400;
+                            color: #777777;
 
                         }
 
                         input,
                         select {
                             padding: 11px 0;
-                            color: #777777;
                         }
 
                         .picontainerclass input {
                             padding-left: 48px;
-                            height: auto !important;
+
+                            color: #B5B5B5;
+
+                            &[data-color="true"] {
+                                color: #777777
+                            }
 
                             &:lang(ar) {
                                 padding-left: 0;
                                 padding-right: 35px;
                             }
                         }
+
 
                         .searchClass {
                             padding: 1rem;
@@ -370,6 +372,7 @@
                             justify-content: flex-start;
                             flex-direction: column;
                             margin-bottom: 2rem;
+                            position: relative;
 
                         }
 
@@ -633,5 +636,43 @@
         @media (max-width:700px) {
             display: none;
         }
+    }
+
+    .customSelect {
+        border-bottom: 1px solid #B5B5B5;
+        padding: 11px 0;
+        color: #777777;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .customdropdown {
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        max-height: 200px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        background-color: white;
+        padding: 10px 16px 0;
+
+        &[data-dir="1"] {
+            top: calc(100% + 0.5rem);
+        }
+
+        &[data-dir="0"] {
+            bottom: calc(0% + 0.5rem);
+        }
+
+        p {
+            cursor: pointer;
+        }
+
+
     }
 }

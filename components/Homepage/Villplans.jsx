@@ -403,6 +403,7 @@ const Villplans = () => {
                             buttonClass={styles.buttonClass}
                             onChange={(val) => setPhone(val)}
                             enableSearch={true}
+                            placeholder={"&nbsp;"}
                             searchClass={styles.searchClass}
                             countryCodeEditable={false}
                             searchNotFound={"No country found"}
