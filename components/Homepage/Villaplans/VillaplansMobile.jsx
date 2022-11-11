@@ -305,7 +305,7 @@ function VillaplansMobile() {
                 height={500}
                 layout="responsive"
                 objectFit="cover"
-                objectPosition={"center"}
+                objectPosition={activeVilla === 0 ? "20% 50%" : "50% 50%"}
                 alt="Sustainable City Yiti"
               />
               <div

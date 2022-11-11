@@ -13,36 +13,12 @@
     }
 
     .floorplanHeading {
-        text-align: center;
-        margin-bottom: 4rem;
-
-        h1 {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 39px;
-            text-align: center;
-            color: #777777;
-
-            @media (max-width:1224px) {
-                font-size: 25px;
-            }
-
-            @media (max-width:600px) {
-                font-size: 20px;
-            }
-        }
-
         span {
             display: inline;
-            background: linear-gradient(90deg, #058DA6 -2.78%, rgba(5, 141, 166, 0.3) 101.52%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
 
+            @media (max-width:600px) {
+                display: block;
+            }
         }
     }
 
