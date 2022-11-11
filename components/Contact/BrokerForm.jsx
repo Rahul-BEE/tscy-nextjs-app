@@ -86,6 +86,7 @@ const BrokerForm = () => {
             justifyContent: "flex-start",
             flexDirection: "column",
             gap: "2rem",
+            width: "100%",
           }}>
           <div className={styles.typeSelector}>
             <div className={styles.innertypeselector}>

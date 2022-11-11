@@ -11,6 +11,7 @@ import TagManager from "react-gtm-module";
 import { HiChevronDown } from "react-icons/hi";
 import { useEffect } from "react";
 import { useCallback } from "react";
+import sendEmail from "../../utils/emailservice";
 const ContactForm = () => {
   const lan = useLanguage();
   const customSelect = useRef(null);
@@ -31,7 +32,12 @@ const ContactForm = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    if (phone === "" || leadfrom === "") {
+    if (
+      phone === "" ||
+      leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
+      firstname === "" ||
+      email === ""
+    ) {
       setError(true);
       setErrorMessage(
         errorMessage ? errorMessage : "Please fill all the fields"
@@ -50,22 +56,24 @@ const ContactForm = () => {
       phone,
       leadfrom,
     };
-    const config = {
-      method: "POST",
-      mode: "no-cors",
-    };
-    await fetch(
-      `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${firstname}&last_name=${lastname}&email=${email}&lead_source=${leadfrom}&phone=${phone}`,
-      config
-    )
-      .then((result) => {
-        setEmailSend(true);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setEmailSend(false);
-        setLoading(false);
-      });
+
+    //salesforce code
+    // const config = {
+    //   method: "POST",
+    //   mode: "no-cors",
+    // };
+    // await fetch(
+    //   `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${firstname}&last_name=${lastname}&email=${email}&lead_source=${leadfrom}&phone=${phone}`,
+    //   config
+    // )
+    //   .then((result) => {
+    //     setEmailSend(true);
+    //     setLoading(false);
+    //   })
+    //   .catch((error) => {
+    //     setEmailSend(false);
+    //     setLoading(false);
+    //   });
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_contact",

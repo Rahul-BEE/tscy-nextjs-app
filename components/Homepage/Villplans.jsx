@@ -56,7 +56,7 @@ const Villplans = () => {
     },
   };
   const handleUserInput = async () => {
-    if (name !== "") {
+    if (name !== "" || email !== "" || phone !== "") {
       setLoading(true);
       const data = {
         oid: "00D250000009OKo",

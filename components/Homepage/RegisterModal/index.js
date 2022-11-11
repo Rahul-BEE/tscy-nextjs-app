@@ -26,7 +26,12 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   );
   const data = lan.contact.register.formdata;
   const submitHandler = async () => {
-    if (phone === "" || leadfrom === "") {
+    if (
+      phone === "" ||
+      leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
+      fullname === "" ||
+      email === ""
+    ) {
       setError(true);
       setErrorMessage(
         errorMessage ? errorMessage : "Please fill all the fields"
