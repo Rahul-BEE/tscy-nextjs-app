@@ -68,24 +68,22 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
             className={selectedTab === 0 ? styles.selectedTab : ""}
             onClick={() => {
               clickTabHandler(0);
-            }}
-          >
+            }}>
             {lan.commontext.components}
-            {selectedTab === 0 ? (
+            {selectedTab === 0 && (
               <motion.div className={styles.underline} layoutId="underline" />
-            ) : null}
+            )}
           </li>
           <li
             key={"trackstab"}
             className={selectedTab === 1 ? styles.selectedTab : ""}
             onClick={() => {
               clickTabHandler(1);
-            }}
-          >
+            }}>
             {lan.commontext.tracks}
-            {selectedTab === 1 ? (
+            {selectedTab === 1 && (
               <motion.div className={styles.underline} layoutId="underline" />
-            ) : null}
+            )}
           </li>
         </ul>
       </nav>
@@ -111,8 +109,7 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
                       right: innerwidth + 20,
                     }
               }
-              key={`${selectedTab}_dragDiv`}
-            >
+              key={`${selectedTab}_dragDiv`}>
               {data.map((item, index) => {
                 return (
                   <motion.p
@@ -128,8 +125,7 @@ const Mobilebtmindex = ({ setShowDetail, setItem, setTrack, setDesktop }) => {
                     transition={{
                       duration: 0.6,
                       ease: "easeIn",
-                    }}
-                  >
+                    }}>
                     {item.name}
                   </motion.p>
                 );
