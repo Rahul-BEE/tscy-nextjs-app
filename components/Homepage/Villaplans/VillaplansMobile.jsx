@@ -64,12 +64,8 @@ function VillaplansMobile() {
   const zeroservicevariant = {
     visible: {
       opacity: 1,
-      x: "0",
+      x: "0%",
       width: "100%",
-      transition: {
-        type: "spring",
-        duration: 1.2,
-      },
     },
     hidden: {
       opacity: 0,
