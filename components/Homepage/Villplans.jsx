@@ -121,7 +121,6 @@ const Villplans = () => {
       //     return;
       //   });
     } else {
-      console.log("no over here");
       return;
     }
   };

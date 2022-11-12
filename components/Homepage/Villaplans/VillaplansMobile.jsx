@@ -107,7 +107,6 @@ function VillaplansMobile() {
     }
   };
   const handleClick = async ({ id, scroll }) => {
-    console.log("here");
     if (scroll && !dataReceived) {
       await formRef.current.scrollIntoView({
         alignToTop: false,
