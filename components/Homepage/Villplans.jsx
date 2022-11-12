@@ -126,7 +126,6 @@ const Villplans = () => {
     }
   };
   const handleClick = (id) => {
-    console.log("Over here");
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest",
@@ -395,7 +394,6 @@ const Villplans = () => {
                           <input
                             type={"text"}
                             value={name}
-                            required
                             onChange={(e) => setName(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.fullname.placeholder

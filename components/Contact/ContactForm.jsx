@@ -31,6 +31,7 @@ const ContactForm = () => {
   const data = lan.contact.register.formdata;
   const submitHandler = async (e) => {
     e.preventDefault();
+
     if (
       phone === "" ||
       leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
@@ -68,23 +69,7 @@ const ContactForm = () => {
       setEmailSend(false);
       setLoading(false);
     }
-    //salesforce code
-    // const config = {
-    //   method: "POST",
-    //   mode: "no-cors",
-    // };
-    // await fetch(
-    //   `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${firstname}&last_name=${lastname}&email=${email}&lead_source=${leadfrom}&phone=${phone}`,
-    //   config
-    // )
-    //   .then((result) => {
-    //     setEmailSend(true);
-    //     setLoading(false);
-    //   })
-    //   .catch((error) => {
-    //     setEmailSend(false);
-    //     setLoading(false);
-    //   });
+
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_contact",

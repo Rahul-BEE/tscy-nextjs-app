@@ -74,7 +74,7 @@ function VillaplansMobile() {
     },
   };
   const handleUserInput = async () => {
-    if (name !== "" && email !== "" && phone !== "") {
+    if (name.trim().length > 0 && email !== "" && phone.trim().length > 2) {
       setLoading(true);
       let data = {
         email,
@@ -107,6 +107,7 @@ function VillaplansMobile() {
     }
   };
   const handleClick = async ({ id, scroll }) => {
+    console.log("here");
     if (scroll && !dataReceived) {
       await formRef.current.scrollIntoView({
         alignToTop: false,
@@ -120,6 +121,7 @@ function VillaplansMobile() {
       } else if (id === 2) {
         window.open("/brochure/Villa Brochure Final.pdf");
       } else {
+        setShowForm(true);
         return;
       }
     } else {
@@ -431,15 +433,14 @@ function VillaplansMobile() {
                   <form className={styles.userform}>
                     <div className={styles.formItem}>
                       <label htmlFor="name">
-                        {lan.contact.register.formdata.name.title}
+                        {lan.contact.register.formdata.fullname.title}
                       </label>
                       <input
                         type={"text"}
                         value={name}
-                        required
                         onChange={(e) => setName(e.target.value)}
                         placeholder={
-                          lan.contact.register.formdata.name.placeholder
+                          lan.contact.register.formdata.fullname.placeholder
                         }
                       />
                     </div>

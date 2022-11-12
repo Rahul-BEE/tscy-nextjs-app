@@ -265,15 +265,17 @@
     }
 
     @media (max-width:600px) {
-      height: 31px;
+      height: 34px;
     }
 
     @media (max-width: 337px) {
-      margin-inline: 10px;
+      margin-left: 10px;
+      margin-right: unset;
 
       &:lang(ar) {
-        margin-inline: 10px;
-        font-size: 1rem;
+        margin-right: 10px;
+        margin-left: unset;
+        font-size: 13px;
       }
     }
   }

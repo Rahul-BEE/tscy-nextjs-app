@@ -84,7 +84,7 @@
 
     .locationinnercontainer {
         position: relative;
-        margin-inline: 10%;
+        margin-inline: 100px;
 
         .locationimgContainer {
             margin-top: 2rem;
@@ -94,6 +94,7 @@
             // overflow: hidden;
             // border-radius: 10px;
             max-width: 1800px;
+            max-height: 800px;
             margin-inline: auto;
 
             .infoBox {
@@ -112,7 +113,6 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 0.5rem;
-                // font-family: 'Poppins';
                 font-style: normal;
                 color: white;
                 max-width: 500px;
@@ -123,6 +123,11 @@
                 h6 {
                     font-size: 1.5rem;
                     font-weight: 600;
+                    width: 100%;
+
+                    @media (max-width:768px) {
+                        text-align: center;
+                    }
                 }
 
                 h6 {
@@ -142,6 +147,7 @@
 
                     @media (max-width:1224px) {
                         font-weight: 400;
+                        font-size: 13px;
                     }
                 }
 
@@ -158,6 +164,9 @@
 
                     @media (max-width:768px) {
                         display: block;
+                        background-color: #058DA6;
+                        color: white;
+                        font-size: 13px;
                     }
                 }
 
@@ -193,12 +202,14 @@
 
                     button {
                         display: none;
-                        max-width: 50%;
+                        max-width: 280px;
+                        width: 80%;
                         margin-block: auto;
 
                         @media (max-width:1224px) {
                             display: inline-block;
-
+                            background-color: #058DA6;
+                            color: white;
                         }
 
                         @media (max-width:768px) {
@@ -213,19 +224,36 @@
             }
 
             @media (max-width:1224px) {
-                height: 70vh;
+                max-height: 650px;
+
+            }
+
+            @media (max-width:768px) {
+                max-height: 480px;
+
             }
 
 
         }
 
+        @media (max-width:1224px) {
+            margin-inline: 48px;
+            min-height: 700px;
+        }
+
         @media (max-width:700px) {
             margin-inline: 0%;
+            min-height: 630px;
+        }
+
+        @media (max-width:321px) {
+            min-height: 650px;
         }
     }
 
     @media (max-width:600px) {
         padding-top: 40px;
+
     }
 
 }
