@@ -5,7 +5,6 @@ const sendEmail = async ({ data, temmplate }) => {
     temmplate === 1
       ? process.env.NEXT_PUBLIC_BROKER_EMAIL_TEMPLATE_ID
       : process.env.NEXT_PUBLIC_REGISTER_INTEREST_TEMPLATE_ID;
-  console.log(data);
   const result = await emailjs
     .send(
       process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,

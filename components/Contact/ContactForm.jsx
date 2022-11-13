@@ -23,30 +23,39 @@ const ContactForm = () => {
   const [phone, setPhone] = useState("");
   const [emailSend, setEmailSend] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(0);
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const [leadfrom, setLeadFrom] = useState(
     lan.contact.register.formdata.leadfrom.placeholder
   );
-  const [errorMessage, setErrorMessage] = useState("");
+
   const data = lan.contact.register.formdata;
   const submitHandler = async (e) => {
     e.preventDefault();
-
-    if (
-      phone === "" ||
-      leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
-      firstname.trim().length < 3 ||
-      email === ""
-    ) {
-      setError(true);
-      setErrorMessage(
-        errorMessage ? errorMessage : "Please fill all the fields"
-      );
+    setError(0);
+    if (firstname.trim().length < 1) {
+      setError(1);
       return;
-    } else {
-      setError(false);
-      setErrorMessage("");
     }
+    if (lastname.trim().length < 1) {
+      setError(5);
+      return;
+    }
+    if (!email.trim().match(emailRegex)) {
+      setError(2);
+      return;
+    }
+    if (phone.trim().length < 10) {
+      setError(3);
+      return;
+    }
+    if (leadfrom === lan.contact.register.formdata.leadfrom.placeholder) {
+      setError(4);
+      return;
+    }
+
     setLoading(true);
     const data = {
       firstname,
@@ -55,7 +64,7 @@ const ContactForm = () => {
       phone,
       leadfrom,
     };
-    //email js
+    // //email js
 
     let result = await sendEmail({
       data,
@@ -78,8 +87,7 @@ const ContactForm = () => {
   };
   const submitanotherinterest = () => {
     setEmailSend(false);
-    setError(false);
-    setErrorMessage(false);
+    setError(0);
     setFirstname("");
     setLastName("");
     setPhone("");
@@ -89,9 +97,17 @@ const ContactForm = () => {
   const openSelectDrop = () => {
     setShowDropDown(!showDropDown);
   };
+  const onFocusFunc = (id) => {
+    if (id === error) {
+      setError(0);
+    }
+  };
 
   const setDropDirectionNew = useCallback(() => {
     let pos = customSelect.current?.getBoundingClientRect();
+    if (!pos) {
+      return;
+    }
     if (window.innerHeight - pos.y > 300) {
       setDropDirection("1");
     } else {
@@ -123,55 +139,64 @@ const ContactForm = () => {
                 onSubmit={submitHandler}
                 className={styles.forms}>
                 <div className={styles.namerow}>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 1 ? "true" : "false"}>
                     <input type="hidden" name="oid" value="00D250000009OKo" />
-
                     <label htmlFor="firstname">{data.name.title}</label>
-
                     <input
                       type="text"
-                      id="firstname"
+                      id="firstnamecontact"
                       name="first_name"
-                      required
-                      data-error={error && firstname === "" ? "true" : "false"}
+                      onFocus={() => onFocusFunc(1)}
+                      className={error === 1 ? styles.error : ""}
                       placeholder={data.name.placeholder}
                       value={firstname}
                       onChange={(e) => setFirstname(e.target.value)}></input>
                   </div>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 5 ? "true" : "false"}>
                     <label htmlFor="lastname">{data.lastname.title}</label>
                     <input
                       type="text"
                       id="lastname"
                       name="last_name"
-                      required
+                      onFocus={() => onFocusFunc(5)}
+                      className={error === 5 ? styles.error : ""}
                       placeholder={data.lastname.placeholder}
                       value={lastname}
                       onChange={(e) => setLastName(e.target.value)}></input>
                   </div>
                 </div>
-                <div className={styles.formItem}>
+                <div
+                  className={styles.formItem}
+                  data-error={error === 2 ? "true" : "false"}>
                   <label htmlFor="email">{data.email.title}</label>
                   <input
-                    type="email"
+                    type="text"
                     id="email"
                     name="email"
-                    required
+                    onFocus={() => onFocusFunc(2)}
+                    className={error === 2 ? styles.error : ""}
                     placeholder={data.email.placeholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}></input>
                 </div>
-                <div className={styles.formItem}>
+                <div
+                  className={styles.formItem}
+                  data-error={error === 3 ? "true" : "false"}>
                   <label htmlFor="phone">{data.phone.title}</label>
                   <PhoneInput
                     country={"om"}
                     value={phone}
                     name="phone"
+                    onFocus={() => onFocusFunc(3)}
                     inputProps={{
                       "data-color": phone.length > 3 ? "true" : "false",
                     }}
                     containerClass={styles.picontainerclass}
-                    inputClass={styles.piinputclass}
+                    inputClass={error === 3 ? styles.error : ""}
                     buttonClass={styles.buttonClass}
                     onChange={(val) => setPhone(val)}
                     enableSearch={true}
@@ -180,18 +205,26 @@ const ContactForm = () => {
                     searchNotFound={"No country found"}
                   />
                 </div>
-                <div className={styles.formItem}>
+                <div
+                  className={styles.formItem}
+                  data-error={error === 4 ? "true" : "false"}>
                   <label htmlFor="leadfrom">{data.leadfrom.title}</label>
                   <motion.div
                     className={styles.customSelect}
+                    data-error={error === 4 ? "true" : "false"}
                     ref={customSelect}
                     style={{
                       color:
                         leadfrom !== data.leadfrom.placeholder
                           ? "#777777"
+                          : error == 4
+                          ? "#FE8392"
                           : "#B5B5B5",
                     }}
-                    onClick={() => openSelectDrop()}>
+                    onClick={() => {
+                      openSelectDrop();
+                      onFocusFunc(4);
+                    }}>
                     {leadfrom} <HiChevronDown />
                   </motion.div>
                   {showDropDown && (
@@ -222,9 +255,9 @@ const ContactForm = () => {
                     </div>
                   )}
                 </div>
-                {error && (
+                {/* {error && (
                   <small className={styles.phoneErrorDiv}>{errorMessage}</small>
-                )}
+                )} */}
                 <div className={styles.btnholder}>
                   <motion.button
                     type="submit"

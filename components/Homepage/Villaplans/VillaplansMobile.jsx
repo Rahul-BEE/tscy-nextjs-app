@@ -20,6 +20,7 @@ import sendEmail from "../../../utils/emailservice";
 import Info from "../../../public/Svg/homevillaplan/info.svg";
 import Loader from "../../Loader/Loader";
 import { useInView } from "react-intersection-observer";
+import TagManager from "react-gtm-module";
 const itemVariant = {
   visible: {
     x: 0,
@@ -46,13 +47,14 @@ function VillaplansMobile() {
   const test = useAnimation();
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = useState(0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [direction, setDirection] = useState(1);
   const [phone, setPhone] = useState("");
   const [activeVilla, setActiveVilla] = useState(0);
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const [loading, setLoading] = useState(false);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[0]);
@@ -61,6 +63,11 @@ function VillaplansMobile() {
   const [contaierRef, isInView] = useInView({
     threshold: 0.9,
   });
+  const onFocusFunc = (id) => {
+    if (id === error) {
+      setError(0);
+    }
+  };
   const zeroservicevariant = {
     visible: {
       opacity: 1,
@@ -74,37 +81,83 @@ function VillaplansMobile() {
     },
   };
   const handleUserInput = async () => {
-    if (name.trim().length > 0 && email !== "" && phone.trim().length > 2) {
-      setLoading(true);
-      let data = {
-        email,
-        firstname: name,
-        phone,
-      };
-      //sent data to the backend
+    setError(0);
+    if (name.trim().length < 1) {
+      setError(1);
+      return;
+    }
+    if (!email.trim().match(emailRegex)) {
+      setError(2);
+      return;
+    }
+    if (phone.trim().length < 10) {
+      setError(3);
+      return;
+    }
 
-      let result = await sendEmail({ data, temmplate: 0 });
-      if (result) {
-        setLoading(false);
-        setDataReceived(true);
-      } else {
-        setLoading(false);
-      }
-      dispatch({
-        type: "updateuser",
-        value: data,
-      });
-
-      if (brochureDownload === 1) {
-        window.open("/brochure/Yiti Brochure.pdf");
-      } else if (brochureDownload === 2) {
-        window.open("/brochure/Villa Brochure Final.pdf");
-      } else {
-        return;
-      }
+    setLoading(true);
+    const data = {
+      firstname: name,
+      email,
+      phone,
+    };
+    let result = sendEmail({ data, temmplate: 0 });
+    if (result) {
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
+    dispatch({
+      type: "updateuser",
+      value: data,
+    });
+    setDataReceived(true);
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "register_interest_from_villa_plan",
+      },
+    });
+    if (brochureDownload === 1) {
+      window.open("/brochure/Yiti Brochure.pdf");
+    } else if (brochureDownload === 2) {
+      window.open("/brochure/Villa Brochure Final.pdf");
     } else {
       return;
     }
+
+    //saleforce
+    // const config = {
+    //   method: "POST",
+    //   mode: "no-cors",
+    // };
+    // await fetch(
+    //   `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${name}&email=${email}&phone=${phone}`,
+    //   config
+    // )
+    //   .then((result) => {
+    //     setLoading(false);
+    //     dispatch({
+    //       type: "updateuser",
+    //       value: data,
+    //     });
+    //     setDataReceived(true);
+    // TagManager.dataLayer({
+    //   dataLayer: {
+    //     event: "register_interest_from_villa_plan",
+    //   },
+    // });
+    //     if (brochureDownload === 1) {
+    //       window.open("/brochure/Yiti Brochure.pdf");
+    //     } else if (brochureDownload === 2) {
+    //       window.open("/brochure/Villa Brochure Final.pdf");
+    //     } else {
+    //       return;
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     setLoading(false);
+    //     return;
+    //   });
   };
   const handleClick = async ({ id, scroll }) => {
     if (scroll && !dataReceived) {
@@ -430,42 +483,55 @@ function VillaplansMobile() {
                 <p className={styles.heading}>{lan.commontext.adddetails}</p>
                 <div className={styles.userformcontainer}>
                   <form className={styles.userform}>
-                    <div className={styles.formItem}>
+                    <div
+                      className={styles.formItem}
+                      data-error={error === 1 ? "true" : "false"}>
                       <label htmlFor="name">
                         {lan.contact.register.formdata.fullname.title}
                       </label>
                       <input
                         type={"text"}
                         value={name}
+                        onFocus={() => onFocusFunc(1)}
+                        className={error === 1 ? styles.error : ""}
                         onChange={(e) => setName(e.target.value)}
                         placeholder={
                           lan.contact.register.formdata.fullname.placeholder
                         }
                       />
                     </div>
-                    <div className={styles.formItem}>
+                    <div
+                      className={styles.formItem}
+                      data-error={error === 2 ? "true" : "false"}>
                       <label htmlFor="email">
                         {lan.contact.register.formdata.email.title}
                       </label>
                       <input
                         type={"email"}
                         value={email}
-                        required
+                        onFocus={() => onFocusFunc(2)}
+                        className={error === 2 ? styles.error : ""}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder={
                           lan.contact.register.formdata.email.placeholder
                         }
                       />
                     </div>
-                    <div className={styles.formItem}>
+                    <div
+                      className={styles.formItem}
+                      data-error={error === 3 ? "true" : "false"}>
                       <label htmlFor="name">
                         {lan.contact.register.formdata.phone.title}
                       </label>
                       <PhoneInput
                         country={"om"}
                         value={phone}
+                        onFocus={() => onFocusFunc(3)}
+                        inputProps={{
+                          "data-color": phone.length > 3 ? "true" : "false",
+                        }}
                         containerClass={styles.picontainerclass}
-                        inputClass={styles.piinputclass}
+                        inputClass={error === 3 ? styles.error : ""}
                         buttonClass={styles.buttonClass}
                         onChange={(val) => setPhone(val)}
                         enableSearch={true}

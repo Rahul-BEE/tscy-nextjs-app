@@ -11,10 +11,7 @@ import { HiChevronDown } from "react-icons/hi";
 import TagManager from "react-gtm-module";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(
-    "Please fill all the fields"
-  );
+  const [error, setError] = useState(0);
   const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
   const customSelect = useRef(null);
@@ -25,28 +22,40 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     lan.contact.register.formdata.leadfrom.placeholder
   );
   const data = lan.contact.register.formdata;
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const submitHandler = async () => {
-    if (
-      phone === "" ||
-      leadfrom === lan.contact.register.formdata.leadfrom.placeholder ||
-      fullname.trim().length < 1 ||
-      email === ""
-    ) {
-      setError(true);
-      setErrorMessage(
-        errorMessage ? errorMessage : "Please fill all the fields"
-      );
+    setError(0);
+    if (fullname.trim().length < 1) {
+      setError(1);
       return;
-    } else {
-      setError(false);
-      setErrorMessage("");
     }
+    if (!email.trim().match(emailRegex)) {
+      setError(2);
+      return;
+    }
+    if (phone.trim().length < 10) {
+      setError(3);
+      return;
+    }
+    if (leadfrom === lan.contact.register.formdata.leadfrom.placeholder) {
+      setError(4);
+      return;
+    }
+
     const data = {
       firstname: fullname,
       email,
       phone,
       leadfrom,
     };
+
+    sendEmail({
+      data,
+      temmplate: 0,
+    });
+
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_from_modal",
@@ -56,24 +65,6 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       },
     });
 
-    sendEmail({
-      data,
-      temmplate: 0,
-    });
-    // const config = {
-    //   method: "POST",
-    //   mode: "no-cors",
-    // };
-    // await fetch(
-    //   `https://test.salesforce.com/servlet/servlet.WebToLead?oid=00D250000009OKo&first_name=${fullname}&email=${email}&lead_source=${leadfrom}&phone=${phone}`,
-    //   config
-    // )
-    //   .then((result) => {
-    //     setError(false);
-    //   })
-    //   .catch((error) => {
-    //     setError(true);
-    //   });
     setshowmodal(false);
   };
 
@@ -85,6 +76,11 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     setShowDropDown(!showDropDown);
   };
 
+  const onFocusFunc = (id) => {
+    if (id === error) {
+      setError(0);
+    }
+  };
   const setDropDirectionNew = useCallback(() => {
     let pos = customSelect.current?.getBoundingClientRect();
     if (pos) {
@@ -130,36 +126,48 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       <Modal.Body>
         <form className={styles.forms}>
           <div className={styles.modalbody}>
-            <div className={styles.formItem}>
+            <div
+              className={styles.formItem}
+              data-error={error === 1 ? "true" : "false"}>
               <label htmlFor="fullname">{data.fullname.title}</label>
               <input
                 autoFocus={true}
                 type="text"
                 id="fullname"
-                required
+                onFocus={() => onFocusFunc(1)}
+                className={error === 1 ? styles.error : ""}
                 placeholder={data.fullname.placeholder}
                 value={fullname}
                 onChange={(e) => setFullname(e.target.value)}></input>
             </div>
 
-            <div className={styles.formItem}>
+            <div
+              className={styles.formItem}
+              data-error={error === 2 ? "true" : "false"}>
               <label htmlFor="email">{data.email.title}</label>
               <input
                 type="email"
                 id="email"
-                required
+                onFocus={() => onFocusFunc(2)}
+                className={error === 2 ? styles.error : ""}
                 placeholder={data.email.placeholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}></input>
             </div>
 
-            <div className={styles.formItem}>
+            <div
+              className={styles.formItem}
+              data-error={error === 3 ? "true" : "false"}>
               <label htmlFor="phone">{data.phone.title}</label>
               <PhoneInput
                 country={"om"}
                 value={phone}
+                onFocus={() => onFocusFunc(3)}
+                inputProps={{
+                  "data-color": phone.length > 3 ? "true" : "false",
+                }}
                 containerClass={styles.picontainerclass}
-                inputClass={styles.piinputclass}
+                inputClass={error === 3 ? styles.error : ""}
                 buttonClass={styles.buttonClass}
                 onChange={(val) => setPhone(val)}
                 enableSearch={true}
@@ -168,18 +176,26 @@ const RegsiterModal = ({ show, setshowmodal }) => {
                 searchNotFound={"No country found"}
               />
             </div>
-            <div className={styles.formItem}>
+            <div
+              className={styles.formItem}
+              data-error={error === 4 ? "true" : "false"}>
               <label htmlFor="leadfrom">{data.leadfrom.title}</label>
               <motion.div
                 className={styles.customSelect}
                 ref={customSelect}
+                data-error={error === 4 ? "true" : "false"}
                 style={{
                   color:
                     leadfrom !== data.leadfrom.placeholder
                       ? "#777777"
+                      : error == 4
+                      ? "#FE8392"
                       : "#B5B5B5",
                 }}
-                onClick={() => openSelectDrop()}>
+                onClick={() => {
+                  openSelectDrop();
+                  onFocusFunc(4);
+                }}>
                 {leadfrom} <HiChevronDown />
               </motion.div>
               {showDropDown && (
@@ -226,15 +242,6 @@ const RegsiterModal = ({ show, setshowmodal }) => {
           </div>
         </form>
         <div className={styles.modalfooter}>
-          <small
-            style={{
-              opacity: error ? 1 : 0,
-              pointerEvents: "none",
-            }}
-            className={styles.registermodalerror}>
-            * {errorMessage}
-          </small>
-
           <motion.button onClick={submitHandler} className="regmodalsubmitbtn">
             {lan.commontext.sendmessage}
           </motion.button>

@@ -544,6 +544,18 @@
       width: 100%;
       border-left: 2px solid #058DA6;
       padding-left: 1rem;
+      position: relative;
+
+      &[data-error="true"] {
+        &::after {
+          content: url("/Svg/errorform.svg");
+          position: absolute;
+          width: 0.82rem;
+          height: 0.825rem;
+          top: 24px;
+          right: 5px;
+        }
+      }
 
       input,
       input:focus {
@@ -577,6 +589,14 @@
         }
       }
 
+      input.error {
+        color: #FE8392 !important;
+      }
+
+      input.error::placeholder {
+        color: #FE8392;
+      }
+
       .picontainerclass input {
         margin-top: 0;
         width: 100%;
@@ -586,6 +606,10 @@
         box-shadow: none;
         padding-left: 48px;
         color: #777;
+
+        &[data-color="false"] {
+          color: #B5B5B5;
+        }
 
         &:lang(ar) {
           padding-left: 0;

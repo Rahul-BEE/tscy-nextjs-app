@@ -21,52 +21,76 @@ const BrokerForm = () => {
   const [emailSend, setEmailSend] = useState(false);
   const [license, setLicense] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [error, setError] = useState(0);
   const data = lan.contact.register.formdata;
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    if (phone === "") {
-      setError(true);
-      setErrorMessage(
-        errorMessage ? errorMessage : "Please fill all the fields"
-      );
+    if (company.trim().length < 2 && select === 1) {
+      setError(1);
       return;
-    } else {
-      setError(false);
-      setErrorMessage("");
     }
-    setLoading(true);
-    const data = {
-      company,
-      license,
-      email,
-      phone,
-      firstname,
-      lastname,
-      type: select === 1 ? "Cooperate" : "Individual",
-    };
-    let result = await sendEmail({ data });
-    TagManager.dataLayer({
-      dataLayer: {
-        event: "register_interest_contact",
-      },
-    });
-    if (result) {
-      setEmailSend(true);
-      setLoading(false);
-    } else {
-      setEmailSend(false);
-      setLoading(false);
+    if (firstname.trim().length < 1) {
+      setError(2);
+      return;
+    }
+    if (lastname.trim().length < 1) {
+      setError(5);
+      return;
+    }
+    if (!email.trim().match(emailRegex)) {
+      setError(3);
+      return;
+    }
+    if (phone.trim().length < 10) {
+      setError(4);
+      return;
+    }
+    // if (phone === "") {
+    //   setError(true);
+    //   setErrorMessage(
+    //     errorMessage ? errorMessage : "Please fill all the fields"
+    //   );
+    //   return;
+    // } else {
+    //   setError(false);
+    //   setErrorMessage("");
+    // }
+    // setLoading(true);
+    // const data = {
+    //   company,
+    //   license,
+    //   email,
+    //   phone,
+    //   firstname,
+    //   lastname,
+    //   type: select === 1 ? "Cooperate" : "Individual",
+    // };
+    // let result = await sendEmail({ data });
+    // TagManager.dataLayer({
+    //   dataLayer: {
+    //     event: "register_interest_contact",
+    //   },
+    // });
+    // if (result) {
+    //   setEmailSend(true);
+    //   setLoading(false);
+    // } else {
+    //   setEmailSend(false);
+    //   setLoading(false);
+    // }
+  };
+  const onFocusFunc = (id) => {
+    if (id === error) {
+      setError(0);
     }
   };
-
   const submitanotherinterest = () => {
     setEmailSend(false);
-    setError(false);
-    setErrorMessage(false);
+    setError(0);
     setFirstname("");
     setLastName("");
     setPhone("");
@@ -106,57 +130,75 @@ const BrokerForm = () => {
             {!emailSend ? (
               <form onSubmit={submitHandler} className={styles.forms}>
                 {select === 1 && (
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 1 ? "true" : "false"}>
                     <label htmlFor="company">{data.company.title}</label>
                     <input
                       type="text"
                       id="company"
-                      required
+                      onFocus={() => onFocusFunc(1)}
+                      className={error === 1 ? styles.error : ""}
                       placeholder={data.company.placeholder}
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}></input>
                   </div>
                 )}
                 <div className={styles.namerow}>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 2 ? "true" : "false"}>
                     <label htmlFor="firstname">{data.name.title}</label>
                     <input
                       type="text"
                       id="firstname"
-                      required
+                      onFocus={() => onFocusFunc(2)}
+                      className={error === 2 ? styles.error : ""}
                       placeholder={data.name.placeholder}
                       value={firstname}
                       onChange={(e) => setFirstname(e.target.value)}></input>
                   </div>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 5 ? "true" : "false"}>
                     <label htmlFor="lastname">{data.lastname.title}</label>
                     <input
                       type="text"
                       id="lastname"
-                      required
+                      onFocus={() => onFocusFunc(5)}
+                      className={error === 5 ? styles.error : ""}
                       placeholder={data.lastname.placeholder}
                       value={lastname}
                       onChange={(e) => setLastName(e.target.value)}></input>
                   </div>
                 </div>
                 <div className={styles.namemailRow} data-select={select}>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 3 ? "true" : "false"}>
                     <label htmlFor="email">{data.email.title}</label>
                     <input
-                      type="email"
+                      type="text"
                       id="email"
-                      required
+                      onFocus={() => onFocusFunc(3)}
+                      className={error === 3 ? styles.error : ""}
                       placeholder={data.email.placeholder}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}></input>
                   </div>
-                  <div className={styles.formItem}>
+                  <div
+                    className={styles.formItem}
+                    data-error={error === 4 ? "true" : "false"}>
                     <label htmlFor="phone">{data.phone.title}</label>
                     <PhoneInput
                       country={"om"}
                       value={phone}
+                      onFocus={() => onFocusFunc(4)}
+                      inputProps={{
+                        "data-color": phone.length > 3 ? "true" : "false",
+                      }}
                       containerClass={styles.picontainerclass}
-                      inputClass={styles.piinputclass}
+                      inputClass={error === 4 ? styles.error : ""}
                       buttonClass={styles.buttonClass}
                       onChange={(val) => setPhone(val)}
                       enableSearch={true}
@@ -175,15 +217,10 @@ const BrokerForm = () => {
                       }}
                       type="text"
                       id="license"
-                      required
                       placeholder={data.license.placeholder}
                       value={license}
                       onChange={(e) => setLicense(e.target.value)}></input>
                   </div>
-                )}
-
-                {error && (
-                  <small className={styles.phoneErrorDiv}>{errorMessage}</small>
                 )}
                 <div className={styles.btnholder}>
                   <motion.button
