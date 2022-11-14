@@ -41,6 +41,7 @@ const HeadComponent = ({
           "@type": "Organization",
           "name": "The Sustainable City Yiti",
           "legalName" : "The Sustainable City Yiti, Oman",
+          "image": "https://www.thesustainablecity-yiti.com/Images/masterplanimage.png",
            "url": "https://thesustainablecity-yiti.com/",
           "logo": "https://thesustainablecity-yiti.com/Logos/tsc-logo.svg",
           "foundingDate": "2022",
