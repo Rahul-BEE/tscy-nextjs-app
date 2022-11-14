@@ -173,7 +173,7 @@ const Villplans = () => {
   const handleClick = (id) => {
     TagManager.dataLayer({
       dataLayer: {
-        event: "register_interest",
+        event: "register_interest_from_villa_plan",
         params: {
           villa: currentvilla.title,
         },

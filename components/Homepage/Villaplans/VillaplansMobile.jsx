@@ -145,6 +145,9 @@ function VillaplansMobile() {
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_from_villa_plan",
+        params: {
+          villa: currentvilla.title,
+        },
       },
     });
     if (brochureDownload === 1) {
