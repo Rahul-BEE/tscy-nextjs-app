@@ -553,8 +553,16 @@
           width: 0.82rem;
           height: 0.825rem;
           top: 24px;
-          right: 5px;
+          right: 1rem;
         }
+
+        &:lang(ar) {
+          &::after {
+            right: unset;
+            left: 1rem;
+          }
+        }
+
       }
 
       input,

@@ -202,6 +202,13 @@
                 top: 24px;
                 right: 0;
             }
+
+            &:lang(ar) {
+                &::after {
+                    right: unset;
+                    left: 0;
+                }
+            }
         }
     }
 
