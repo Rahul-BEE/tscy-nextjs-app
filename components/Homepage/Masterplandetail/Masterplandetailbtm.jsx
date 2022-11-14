@@ -79,7 +79,7 @@ const Masterplandetailbtm = ({ item, track, controlItem, setDirection }) => {
           <div className={styles.itemdetailsbtm}>
             {Object.entries(data[index].details).map((value, i) => (
               <div key={`${i}_values`} className={styles.detailItem}>
-                <h6>{value[0]}</h6>
+                <h6 style={{ paddingTop: "10px" }}>{value[0]}</h6>
                 {data[index].ground ? (
                   <div
                     style={{
