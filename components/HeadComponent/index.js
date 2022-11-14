@@ -36,7 +36,7 @@ const HeadComponent = ({
       <meta name="twitter:image" content={og.img} />
       <meta name="twitter:site" content="@TSCYiti" />
       <script type="application/ld+json">
-        {`
+        {`{ 
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "The Sustainable City Yiti",
@@ -72,7 +72,7 @@ const HeadComponent = ({
     "https://www.facebook.com/ThesustainablecityYiti?ref=py_c",
     "https://www.instagram.com/thesustainablecity_yiti/",
     ]
-`}
+}`}
       </script>
       {children}
     </Head>
