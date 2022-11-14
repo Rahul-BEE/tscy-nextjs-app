@@ -25,7 +25,7 @@ const About = () => {
         <link
           rel="alternate"
           href="https://www.thesustainablecity-yiti.com/about/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
       <div className={styles.app__about}>

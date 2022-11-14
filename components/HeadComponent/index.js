@@ -35,6 +35,43 @@ const HeadComponent = ({
       <meta property="twitter:title" content={og.title} />
       <meta name="twitter:image" content={og.img} />
       <meta name="twitter:site" content="@TSCYiti" />
+      <script type="application/ld+json">
+        {`{ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "The Sustainable City Yiti",
+ "legalName" : "The Sustainable City Yiti, Oman",
+ "url": "https://thesustainablecity-yiti.com/",
+ "logo": "https://thesustainablecity-yiti.com/Logos/tsc-logo.svg",
+ "foundingDate": "2022",
+ "founders": [
+ {
+ "@type": "company",
+ "name": "Diamond Developers"
+ },
+ {
+ "@type": "company",
+ "name": "Omran"
+ } ],
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "Al Bahri Rd, Muscat, Oman",
+ "addressLocality": "Al Bahri Rd, مسقط",
+ "addressRegion": "Yiti",
+ "addressCountry": "OMAN"
+ },
+ "contactPoint": {
+ "@type": "ContactPoint",
+ "contactType": "customer support",
+ "telephone": "[+96880003333]",
+ "email": "hello@thesustainablecity-yiti.com"
+ },
+ "sameAs": [ 
+"https://www.linkedin.com/company/the-sustainable-city-yiti/",
+ "https://twitter.com/TSCYiti?s=20&t=YSRqGJh4w6nxJuNR23i_rw",
+ "https://www.facebook.com/ThesustainablecityYiti?ref=py_c",
+ "https://www.instagram.com/thesustainablecity_yiti/",
+ ]}`}
+      </script>
       {children}
     </Head>
   );

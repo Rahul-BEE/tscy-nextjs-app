@@ -26,7 +26,7 @@ const NewsList = () => {
         <link
           rel="alternate"
           href={"https://www.thesustainablecity-yiti.com/news/"}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
       <div>

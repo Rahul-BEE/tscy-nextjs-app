@@ -67,7 +67,7 @@ export default function Home() {
         <link
           rel="alternate"
           href={"https://www.thesustainablecity-yiti.com/"}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
 

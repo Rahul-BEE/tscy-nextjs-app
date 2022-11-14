@@ -26,7 +26,7 @@ const Contact = () => {
         <link
           rel="alternate"
           href={"https://www.thesustainablecity-yiti.com/contact-us/"}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
       <div className={styles.contact}>

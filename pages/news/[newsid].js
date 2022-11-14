@@ -45,7 +45,7 @@ const News = () => {
         <link
           rel="alternate"
           href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
       {data && (

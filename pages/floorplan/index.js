@@ -36,7 +36,7 @@ const Floorplan = () => {
         <link
           rel="alternate"
           href={"https://www.thesustainablecity-yiti.com/floorplan/"}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
       </HeadComponent>
 
