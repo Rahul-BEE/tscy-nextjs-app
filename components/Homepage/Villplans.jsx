@@ -321,6 +321,9 @@ const Villplans = () => {
             blurDataURL={currentvilla.blurImg}
             placeholder="blur"
             alt="Sustainable City Yiti"
+            style={{
+              borderRadius: "10px",
+            }}
           />
           <div className={styles.radialbg}></div>
           <div className={styles.villaplanfeatures}>

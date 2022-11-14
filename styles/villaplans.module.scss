@@ -16,7 +16,7 @@
     border-radius: 15px;
     max-width: 1530px;
     width: 100%;
-    overflow: hidden;
+
 
 
 
@@ -286,6 +286,7 @@
   position: relative;
   padding-top: 3rem;
 
+
   .radialbg {
     position: absolute;
     inset: 0;
@@ -413,7 +414,12 @@
 
 
   .searchClass {
-    padding: 1rem;
+    overflow-x: hidden;
+
+    input {
+      padding: 16px !important;
+
+    }
 
     span {
       display: none;
