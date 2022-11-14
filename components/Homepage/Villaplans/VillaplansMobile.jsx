@@ -47,7 +47,10 @@ function VillaplansMobile() {
   const test = useAnimation();
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
-  const [error, setError] = useState(0);
+  const [error, setError] = useState(false);
+  const [ferror, setferror] = useState(false);
+  const [eerror, seteerror] = useState(false);
+  const [perror, setperror] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [direction, setDirection] = useState(1);
@@ -64,8 +67,22 @@ function VillaplansMobile() {
     threshold: 0.9,
   });
   const onFocusFunc = (id) => {
-    if (id === error) {
-      setError(0);
+    switch (id) {
+      case 1: {
+        setferror(false);
+        return;
+      }
+      case 2: {
+        seteerror(false);
+        return;
+      }
+      case 3: {
+        setperror(false);
+        return;
+      }
+      default: {
+        setError(false);
+      }
     }
   };
   const zeroservicevariant = {
@@ -81,20 +98,33 @@ function VillaplansMobile() {
     },
   };
   const handleUserInput = async () => {
-    setError(0);
+    setError(false);
+    let e = false;
     if (name.trim().length < 1) {
-      setError(1);
-      return;
+      setError(true);
+      setferror(true);
+      e = true;
+    } else {
+      setferror(false);
     }
     if (!email.trim().match(emailRegex)) {
-      setError(2);
-      return;
+      setError(true);
+      seteerror(true);
+      e = true;
+    } else {
+      seteerror(false);
     }
     if (phone.trim().length < 10) {
-      setError(3);
-      return;
+      setError(true);
+      setperror(true);
+      e = true;
+    } else {
+      setperror(false);
     }
 
+    if (e) {
+      return;
+    }
     setLoading(true);
     const data = {
       firstname: name,
@@ -485,7 +515,7 @@ function VillaplansMobile() {
                   <form className={styles.userform}>
                     <div
                       className={styles.formItem}
-                      data-error={error === 1 ? "true" : "false"}>
+                      data-error={ferror ? "true" : "false"}>
                       <label htmlFor="name">
                         {lan.contact.register.formdata.fullname.title}
                       </label>
@@ -493,7 +523,7 @@ function VillaplansMobile() {
                         type={"text"}
                         value={name}
                         onFocus={() => onFocusFunc(1)}
-                        className={error === 1 ? styles.error : ""}
+                        className={ferror ? styles.error : ""}
                         onChange={(e) => setName(e.target.value)}
                         placeholder={
                           lan.contact.register.formdata.fullname.placeholder
@@ -502,7 +532,7 @@ function VillaplansMobile() {
                     </div>
                     <div
                       className={styles.formItem}
-                      data-error={error === 2 ? "true" : "false"}>
+                      data-error={eerror ? "true" : "false"}>
                       <label htmlFor="email">
                         {lan.contact.register.formdata.email.title}
                       </label>
@@ -510,7 +540,7 @@ function VillaplansMobile() {
                         type={"email"}
                         value={email}
                         onFocus={() => onFocusFunc(2)}
-                        className={error === 2 ? styles.error : ""}
+                        className={eerror ? styles.error : ""}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder={
                           lan.contact.register.formdata.email.placeholder
@@ -519,7 +549,7 @@ function VillaplansMobile() {
                     </div>
                     <div
                       className={styles.formItem}
-                      data-error={error === 3 ? "true" : "false"}>
+                      data-error={perror ? "true" : "false"}>
                       <label htmlFor="name">
                         {lan.contact.register.formdata.phone.title}
                       </label>
@@ -531,7 +561,7 @@ function VillaplansMobile() {
                           "data-color": phone.length > 3 ? "true" : "false",
                         }}
                         containerClass={styles.picontainerclass}
-                        inputClass={error === 3 ? styles.error : ""}
+                        inputClass={perror ? styles.error : ""}
                         buttonClass={styles.buttonClass}
                         onChange={(val) => setPhone(val)}
                         enableSearch={true}

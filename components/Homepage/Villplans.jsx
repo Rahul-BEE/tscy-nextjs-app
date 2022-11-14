@@ -26,7 +26,7 @@ const Villplans = () => {
   const lan = useLangage();
   const [villaIndex, setIndex] = useState(1);
   const [currentvilla, setVilla] = useState(lan.villaplansection.villas[1]);
-  const [error, setError] = useState(0);
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [dataReceived, setDataReceived] = useState(false);
@@ -34,6 +34,9 @@ const Villplans = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [ferror, setferror] = useState(false);
+  const [eerror, seteerror] = useState(false);
+  const [perror, setperror] = useState(false);
   const zeroserviceanimation = useAnimation();
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -57,25 +60,52 @@ const Villplans = () => {
     },
   };
   const onFocusFunc = (id) => {
-    if (id === error) {
-      setError(0);
+    switch (id) {
+      case 1: {
+        setferror(false);
+        return;
+      }
+      case 2: {
+        seteerror(false);
+        return;
+      }
+      case 3: {
+        setperror(false);
+        return;
+      }
+      default: {
+        setError(false);
+      }
     }
   };
   const handleUserInput = async () => {
-    setError(0);
+    setError(false);
+    let e = false;
     if (name.trim().length < 1) {
-      setError(1);
-      return;
+      setError(true);
+      setferror(true);
+      e = true;
+    } else {
+      setferror(false);
     }
     if (!email.trim().match(emailRegex)) {
-      setError(2);
-      return;
+      setError(true);
+      seteerror(true);
+      e = true;
+    } else {
+      seteerror(false);
     }
     if (phone.trim().length < 10) {
-      setError(3);
-      return;
+      setError(true);
+      setperror(true);
+      e = true;
+    } else {
+      setperror(false);
     }
 
+    if (e) {
+      return;
+    }
     setLoading(true);
     const data = {
       firstname: name,
@@ -404,7 +434,7 @@ const Villplans = () => {
                       <form className={styles.userform}>
                         <div
                           className={styles.formItem}
-                          data-error={error === 1 ? "true" : "false"}>
+                          data-error={ferror ? "true" : "false"}>
                           <label htmlFor="name">
                             {lan.contact.register.formdata.fullname.title}
                           </label>
@@ -412,7 +442,7 @@ const Villplans = () => {
                             type={"text"}
                             value={name}
                             onFocus={() => onFocusFunc(1)}
-                            className={error === 1 ? styles.error : ""}
+                            className={ferror ? styles.error : ""}
                             onChange={(e) => setName(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.fullname.placeholder
@@ -421,7 +451,7 @@ const Villplans = () => {
                         </div>
                         <div
                           className={styles.formItem}
-                          data-error={error === 2 ? "true" : "false"}>
+                          data-error={eerror ? "true" : "false"}>
                           <label htmlFor="email">
                             {lan.contact.register.formdata.email.title}
                           </label>
@@ -430,7 +460,7 @@ const Villplans = () => {
                             value={email}
                             name="email"
                             onFocus={() => onFocusFunc(2)}
-                            className={error === 2 ? styles.error : ""}
+                            className={eerror ? styles.error : ""}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder={
                               lan.contact.register.formdata.email.placeholder
@@ -439,7 +469,7 @@ const Villplans = () => {
                         </div>
                         <div
                           className={styles.formItem}
-                          data-error={error === 3 ? "true" : "false"}>
+                          data-error={perror ? "true" : "false"}>
                           <label htmlFor="name">
                             {lan.contact.register.formdata.phone.title}
                           </label>
@@ -451,7 +481,7 @@ const Villplans = () => {
                               "data-color": phone.length > 3 ? "true" : "false",
                             }}
                             containerClass={styles.picontainerclass}
-                            inputClass={error === 3 ? styles.error : ""}
+                            inputClass={perror ? styles.error : ""}
                             buttonClass={styles.buttonClass}
                             onChange={(val) => setPhone(val)}
                             enableSearch={true}

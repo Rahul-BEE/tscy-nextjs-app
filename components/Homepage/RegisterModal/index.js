@@ -11,7 +11,12 @@ import { HiChevronDown } from "react-icons/hi";
 import TagManager from "react-gtm-module";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
-  const [error, setError] = useState(0);
+  const [error, setError] = useState(false);
+  const [ferror, setferror] = useState(false);
+  const [lerror, setlerror] = useState(false);
+  const [eerror, seteerror] = useState(false);
+  const [perror, setperror] = useState(false);
+  const [herror, setherror] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
   const customSelect = useRef(null);
@@ -26,24 +31,40 @@ const RegsiterModal = ({ show, setshowmodal }) => {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const submitHandler = async () => {
-    setError(0);
+    setError(false);
+    let e = false;
     if (fullname.trim().length < 1) {
-      setError(1);
-      return;
+      setError(true);
+      setferror(true);
+      e = true;
+    } else {
+      setferror(false);
     }
     if (!email.trim().match(emailRegex)) {
-      setError(2);
-      return;
+      setError(true);
+      seteerror(true);
+      e = true;
+    } else {
+      seteerror(false);
     }
     if (phone.trim().length < 10) {
-      setError(3);
-      return;
+      setError(true);
+      setperror(true);
+      e = true;
+    } else {
+      setperror(false);
     }
     if (leadfrom === lan.contact.register.formdata.leadfrom.placeholder) {
-      setError(4);
-      return;
+      setError(true);
+      setherror(true);
+      e = true;
+    } else {
+      setherror(false);
     }
 
+    if (e) {
+      return;
+    }
     const data = {
       firstname: fullname,
       email,
@@ -77,8 +98,26 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   };
 
   const onFocusFunc = (id) => {
-    if (id === error) {
-      setError(0);
+    switch (id) {
+      case 1: {
+        setferror(false);
+        return;
+      }
+      case 2: {
+        seteerror(false);
+        return;
+      }
+      case 3: {
+        setperror(false);
+        return;
+      }
+      case 4: {
+        setherror(false);
+        return;
+      }
+      default: {
+        setError(false);
+      }
     }
   };
   const setDropDirectionNew = useCallback(() => {
@@ -128,14 +167,14 @@ const RegsiterModal = ({ show, setshowmodal }) => {
           <div className={styles.modalbody}>
             <div
               className={styles.formItem}
-              data-error={error === 1 ? "true" : "false"}>
+              data-error={ferror ? "true" : "false"}>
               <label htmlFor="fullname">{data.fullname.title}</label>
               <input
                 autoFocus={true}
                 type="text"
                 id="fullname"
                 onFocus={() => onFocusFunc(1)}
-                className={error === 1 ? styles.error : ""}
+                className={ferror ? styles.error : ""}
                 placeholder={data.fullname.placeholder}
                 value={fullname}
                 onChange={(e) => setFullname(e.target.value)}></input>
@@ -143,13 +182,13 @@ const RegsiterModal = ({ show, setshowmodal }) => {
 
             <div
               className={styles.formItem}
-              data-error={error === 2 ? "true" : "false"}>
+              data-error={eerror ? "true" : "false"}>
               <label htmlFor="email">{data.email.title}</label>
               <input
                 type="email"
                 id="email"
                 onFocus={() => onFocusFunc(2)}
-                className={error === 2 ? styles.error : ""}
+                className={eerror ? styles.error : ""}
                 placeholder={data.email.placeholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}></input>
@@ -157,7 +196,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
 
             <div
               className={styles.formItem}
-              data-error={error === 3 ? "true" : "false"}>
+              data-error={perror ? "true" : "false"}>
               <label htmlFor="phone">{data.phone.title}</label>
               <PhoneInput
                 country={"om"}
@@ -167,7 +206,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
                   "data-color": phone.length > 3 ? "true" : "false",
                 }}
                 containerClass={styles.picontainerclass}
-                inputClass={error === 3 ? styles.error : ""}
+                inputClass={perror ? styles.error : ""}
                 buttonClass={styles.buttonClass}
                 onChange={(val) => setPhone(val)}
                 enableSearch={true}
@@ -178,17 +217,17 @@ const RegsiterModal = ({ show, setshowmodal }) => {
             </div>
             <div
               className={styles.formItem}
-              data-error={error === 4 ? "true" : "false"}>
+              data-error={herror ? "true" : "false"}>
               <label htmlFor="leadfrom">{data.leadfrom.title}</label>
               <motion.div
                 className={styles.customSelect}
                 ref={customSelect}
-                data-error={error === 4 ? "true" : "false"}
+                data-error={herror ? "true" : "false"}
                 style={{
                   color:
                     leadfrom !== data.leadfrom.placeholder
                       ? "#777777"
-                      : error == 4
+                      : herror
                       ? "#FE8392"
                       : "#B5B5B5",
                 }}

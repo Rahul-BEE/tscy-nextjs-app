@@ -21,76 +21,114 @@ const BrokerForm = () => {
   const [emailSend, setEmailSend] = useState(false);
   const [license, setLicense] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(0);
+  const [error, setError] = useState(false);
+  const [ferror, setferror] = useState(false);
+  const [lerror, setlerror] = useState(false);
+  const [eerror, seteerror] = useState(false);
+  const [perror, setperror] = useState(false);
+  const [herror, setherror] = useState(false);
+  const [cerror, setcerror] = useState(false);
+
   const data = lan.contact.register.formdata;
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-
-    if (company.trim().length < 2 && select === 1) {
-      setError(1);
-      return;
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    setError(false);
+    let e = false;
+    if (company.trim().length < 1) {
+      setError(true);
+      setcerror(true);
+    } else {
+      setcerror(false);
     }
     if (firstname.trim().length < 1) {
-      setError(2);
-      return;
+      setError(true);
+      setferror(true);
+      e = true;
+    } else {
+      setferror(false);
     }
     if (lastname.trim().length < 1) {
-      setError(5);
-      return;
+      setError(true);
+      setlerror(true);
+      e = true;
+    } else {
+      setlerror(false);
     }
     if (!email.trim().match(emailRegex)) {
-      setError(3);
-      return;
+      setError(true);
+      seteerror(true);
+      e = true;
+    } else {
+      seteerror(false);
     }
     if (phone.trim().length < 10) {
-      setError(4);
+      setError(true);
+      setperror(true);
+      e = true;
+    } else {
+      setperror(false);
+    }
+
+    if (e) {
       return;
     }
-    // if (phone === "") {
-    //   setError(true);
-    //   setErrorMessage(
-    //     errorMessage ? errorMessage : "Please fill all the fields"
-    //   );
-    //   return;
-    // } else {
-    //   setError(false);
-    //   setErrorMessage("");
-    // }
-    // setLoading(true);
-    // const data = {
-    //   company,
-    //   license,
-    //   email,
-    //   phone,
-    //   firstname,
-    //   lastname,
-    //   type: select === 1 ? "Cooperate" : "Individual",
-    // };
-    // let result = await sendEmail({ data });
-    // TagManager.dataLayer({
-    //   dataLayer: {
-    //     event: "register_interest_contact",
-    //   },
-    // });
-    // if (result) {
-    //   setEmailSend(true);
-    //   setLoading(false);
-    // } else {
-    //   setEmailSend(false);
-    //   setLoading(false);
-    // }
+    setLoading(true);
+    const data = {
+      company,
+      license,
+      email,
+      phone,
+      firstname,
+      lastname,
+      type: select === 1 ? "Cooperate" : "Individual",
+    };
+    let result = await sendEmail({ data, temmplate: 1 });
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "register_interest_contact",
+      },
+    });
+    if (result) {
+      setEmailSend(true);
+      setLoading(false);
+    } else {
+      setEmailSend(false);
+      setLoading(false);
+    }
   };
   const onFocusFunc = (id) => {
-    if (id === error) {
-      setError(0);
+    switch (id) {
+      case 1: {
+        setcerror(false);
+        return;
+      }
+      case 5: {
+        setlerror(false);
+        return;
+      }
+      case 2: {
+        setferror(false);
+        return;
+      }
+      case 3: {
+        seteerror(false);
+        return;
+      }
+      case 4: {
+        setperror(false);
+        return;
+      }
+      default: {
+        setError(false);
+      }
     }
   };
   const submitanotherinterest = () => {
     setEmailSend(false);
-    setError(0);
+    setError(false);
     setFirstname("");
     setLastName("");
     setPhone("");
@@ -116,11 +154,17 @@ const BrokerForm = () => {
             <div className={styles.innertypeselector}>
               <p
                 className={select === 0 ? styles.active : ""}
-                onClick={() => setSelect(0)}>
+                onClick={() => setSelect(0)}
+                style={{
+                  pointerEvents: loading ? "none" : "all",
+                }}>
                 {lan.contact.register.individual}
               </p>
               <p
                 className={select === 1 ? styles.active : ""}
+                style={{
+                  pointerEvents: loading ? "none" : "all",
+                }}
                 onClick={() => setSelect(1)}>
                 {lan.contact.register.corporate}
               </p>
@@ -132,13 +176,13 @@ const BrokerForm = () => {
                 {select === 1 && (
                   <div
                     className={styles.formItem}
-                    data-error={error === 1 ? "true" : "false"}>
+                    data-error={cerror ? "true" : "false"}>
                     <label htmlFor="company">{data.company.title}</label>
                     <input
                       type="text"
                       id="company"
                       onFocus={() => onFocusFunc(1)}
-                      className={error === 1 ? styles.error : ""}
+                      className={cerror ? styles.error : ""}
                       placeholder={data.company.placeholder}
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}></input>
@@ -147,26 +191,26 @@ const BrokerForm = () => {
                 <div className={styles.namerow}>
                   <div
                     className={styles.formItem}
-                    data-error={error === 2 ? "true" : "false"}>
+                    data-error={ferror ? "true" : "false"}>
                     <label htmlFor="firstname">{data.name.title}</label>
                     <input
                       type="text"
                       id="firstname"
                       onFocus={() => onFocusFunc(2)}
-                      className={error === 2 ? styles.error : ""}
+                      className={ferror ? styles.error : ""}
                       placeholder={data.name.placeholder}
                       value={firstname}
                       onChange={(e) => setFirstname(e.target.value)}></input>
                   </div>
                   <div
                     className={styles.formItem}
-                    data-error={error === 5 ? "true" : "false"}>
+                    data-error={lerror ? "true" : "false"}>
                     <label htmlFor="lastname">{data.lastname.title}</label>
                     <input
                       type="text"
                       id="lastname"
                       onFocus={() => onFocusFunc(5)}
-                      className={error === 5 ? styles.error : ""}
+                      className={lerror ? styles.error : ""}
                       placeholder={data.lastname.placeholder}
                       value={lastname}
                       onChange={(e) => setLastName(e.target.value)}></input>
@@ -175,20 +219,20 @@ const BrokerForm = () => {
                 <div className={styles.namemailRow} data-select={select}>
                   <div
                     className={styles.formItem}
-                    data-error={error === 3 ? "true" : "false"}>
+                    data-error={eerror ? "true" : "false"}>
                     <label htmlFor="email">{data.email.title}</label>
                     <input
                       type="text"
                       id="email"
                       onFocus={() => onFocusFunc(3)}
-                      className={error === 3 ? styles.error : ""}
+                      className={eerror ? styles.error : ""}
                       placeholder={data.email.placeholder}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}></input>
                   </div>
                   <div
                     className={styles.formItem}
-                    data-error={error === 4 ? "true" : "false"}>
+                    data-error={perror ? "true" : "false"}>
                     <label htmlFor="phone">{data.phone.title}</label>
                     <PhoneInput
                       country={"om"}
@@ -198,7 +242,7 @@ const BrokerForm = () => {
                         "data-color": phone.length > 3 ? "true" : "false",
                       }}
                       containerClass={styles.picontainerclass}
-                      inputClass={error === 4 ? styles.error : ""}
+                      inputClass={perror ? styles.error : ""}
                       buttonClass={styles.buttonClass}
                       onChange={(val) => setPhone(val)}
                       enableSearch={true}
