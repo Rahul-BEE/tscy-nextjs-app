@@ -23,6 +23,11 @@ const NewsList = () => {
           href={"https://www.thesustainablecity-yiti.com/news/"}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={"https://www.thesustainablecity-yiti.com/news/"}
+          hreflang="x-default"
+        />
       </HeadComponent>
       <div>
         <NewsPage />

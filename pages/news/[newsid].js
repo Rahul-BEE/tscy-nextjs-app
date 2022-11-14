@@ -42,6 +42,11 @@ const News = () => {
           href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
+          hreflang="x-default"
+        />
       </HeadComponent>
       {data && (
         <div>

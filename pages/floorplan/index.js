@@ -33,6 +33,11 @@ const Floorplan = () => {
           href={"https://www.thesustainablecity-yiti.com/floorplan/"}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={"https://www.thesustainablecity-yiti.com/floorplan/"}
+          hreflang="x-default"
+        />
       </HeadComponent>
 
       <div className={styles.app__floorplanmain}>

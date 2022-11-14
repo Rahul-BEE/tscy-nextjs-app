@@ -23,6 +23,11 @@ const Contact = () => {
           href={"https://www.thesustainablecity-yiti.com/contact-us/"}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={"https://www.thesustainablecity-yiti.com/contact-us/"}
+          hreflang="x-default"
+        />
       </HeadComponent>
       <div className={styles.contact}>
         <Registration />

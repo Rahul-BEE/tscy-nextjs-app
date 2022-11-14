@@ -64,6 +64,11 @@ export default function Home() {
           href={"https://www.thesustainablecity-yiti.com/"}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={"https://www.thesustainablecity-yiti.com/"}
+          hreflang="x-default"
+        />
       </HeadComponent>
 
       <main className={styles.app__home}>

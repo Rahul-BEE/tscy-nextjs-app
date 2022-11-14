@@ -40,6 +40,11 @@ const Villa = () => {
           href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
           hrefLang={"en"}
         />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
+          hreflang="x-default"
+        />
       </HeadComponent>
       <div className={styles.villapagemain}>
         <Section1 />
