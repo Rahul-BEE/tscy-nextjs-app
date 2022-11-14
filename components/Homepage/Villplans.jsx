@@ -126,6 +126,9 @@ const Villplans = () => {
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_from_villa_plan",
+        params: {
+          villa: currentvilla.title,
+        },
       },
     });
     if (brochureDownload === 1) {
@@ -171,14 +174,6 @@ const Villplans = () => {
     //   });
   };
   const handleClick = (id) => {
-    TagManager.dataLayer({
-      dataLayer: {
-        event: "register_interest_from_villa_plan",
-        params: {
-          villa: currentvilla.title,
-        },
-      },
-    });
     if (dataReceived) {
       if (id === 1) {
         window.open("/brochure/Yiti Brochure.pdf");
