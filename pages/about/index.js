@@ -14,12 +14,12 @@ const About = () => {
         language={lan.language === 1 ? "en" : "ar"}>
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/ar/about/"}
+          href={"https://www.thesustainablecity-yiti.com/ar/about/"}
           hrefLang={"ar"}
         />
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/about/"}
+          href={"https://www.thesustainablecity-yiti.com/about/"}
           hrefLang={"en"}
         />
       </HeadComponent>

@@ -32,12 +32,12 @@ const Villa = () => {
         language={lan.language === 1 ? "en" : "ar"}>
         <link
           rel="alternate"
-          href={`https://thesustainablecity-yiti.com/ar/floorplan/${villaId}`}
+          href={`https://www.wthesustainablecity-yiti.com/ar/floorplan/${villaId}`}
           hrefLang={"ar"}
         />
         <link
           rel="alternate"
-          href={`https://thesustainablecity-yiti.com/floorplan/${villaId}`}
+          href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
           hrefLang={"en"}
         />
       </HeadComponent>

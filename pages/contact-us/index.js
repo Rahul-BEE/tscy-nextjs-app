@@ -15,12 +15,12 @@ const Contact = () => {
         language={lan.language === 1 ? "en" : "ar"}>
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/ar/contact-us/"}
+          href={"https://www.thesustainablecity-yiti.com/ar/contact-us/"}
           hrefLang={"ar"}
         />
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/contact-us/"}
+          href={"https://www.thesustainablecity-yiti.com/contact-us/"}
           hrefLang={"en"}
         />
       </HeadComponent>

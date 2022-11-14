@@ -15,12 +15,12 @@ const NewsList = () => {
         language={lan.language === 1 ? "en" : "ar"}>
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/ar/news/"}
+          href={"https://www.thesustainablecity-yiti.com/ar/news/"}
           hrefLang={"ar"}
         />
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/news/"}
+          href={"https://www.thesustainablecity-yiti.com/news/"}
           hrefLang={"en"}
         />
       </HeadComponent>

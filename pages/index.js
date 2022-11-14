@@ -56,12 +56,12 @@ export default function Home() {
         language={lan.language === 1 ? "en" : "ar"}>
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/ar"}
+          href={"https://www.thesustainablecity-yiti.com/ar"}
           hrefLang={"ar"}
         />
         <link
           rel="alternate"
-          href={"https://thesustainablecity-yiti.com/"}
+          href={"https://www.thesustainablecity-yiti.com/"}
           hrefLang={"en"}
         />
       </HeadComponent>
