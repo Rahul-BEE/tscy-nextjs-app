@@ -12,8 +12,6 @@ const HeadComponent = ({
   return (
     <Head>
       <title>{title}</title>
-      <link rel="alternate" href={canonicaltag} hrefLang={"ar"} />
-      <link rel="alternate" href={canonicaltag} hrefLang={"x-default"} />
       <link rel="canonical" href={canonicaltag} />
       <meta name="description" content={description} />
       <meta name="keyword" content={keyword} />

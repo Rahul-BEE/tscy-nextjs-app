@@ -31,8 +31,18 @@ const News = () => {
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.newsdetails.canonicaltag + newsid}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={`https://thesustainablecity-yiti.com/ar/news/${newsid}`}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={`https://thesustainablecity-yiti.com/news/${newsid}`}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
       {data && (
         <div>
           <div className={styles.newspage_container}>

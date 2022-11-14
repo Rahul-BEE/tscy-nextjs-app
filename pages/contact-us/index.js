@@ -12,8 +12,18 @@ const Contact = () => {
         og={lan.seo.contactus.og}
         keyword={lan.seo.contactus.keyword}
         canonicaltag={lan.seo.contactus.canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/ar/contact-us/"}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/contact-us/"}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
       <div className={styles.contact}>
         <Registration />
         <Visitus />

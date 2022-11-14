@@ -29,8 +29,18 @@ const Villa = () => {
         og={lan.seo.villapage.og}
         keyword={lan.seo.villapage.keyword}
         canonicaltag={canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={`https://thesustainablecity-yiti.com/ar/floorplan/${villaId}`}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={`https://thesustainablecity-yiti.com/floorplan/${villaId}`}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
       <div className={styles.villapagemain}>
         <Section1 />
         <Plans />

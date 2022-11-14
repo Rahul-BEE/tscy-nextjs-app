@@ -22,8 +22,18 @@ const Floorplan = () => {
         og={lan.seo.floorplan.og}
         keyword={lan.seo.floorplan.keyword}
         canonicaltag={lan.seo.floorplan.canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/ar/floorplan"}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/floorplan/"}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
 
       <div className={styles.app__floorplanmain}>
         <Row

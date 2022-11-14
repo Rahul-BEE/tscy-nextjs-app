@@ -12,8 +12,18 @@ const NewsList = () => {
         og={lan.seo.newspage.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.newspage.canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/ar/news/"}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/news/"}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
       <div>
         <NewsPage />
       </div>

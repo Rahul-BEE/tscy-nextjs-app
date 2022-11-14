@@ -53,8 +53,18 @@ export default function Home() {
         og={lan.seo.home.og}
         keyword={lan.seo.newspage.keyword}
         canonicaltag={lan.seo.home.canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/ar"}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/"}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
 
       <main className={styles.app__home}>
         <RegisterModal show={showModal} setshowmodal={setShowModal} />

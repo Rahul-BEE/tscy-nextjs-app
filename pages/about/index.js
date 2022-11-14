@@ -11,8 +11,18 @@ const About = () => {
         og={lan.seo.aboutus.og}
         keyword={lan.seo.aboutus.keyword}
         canonicaltag={lan.seo.aboutus.canonicaltag}
-        language={lan.language === 1 ? "en" : "ar"}
-      />
+        language={lan.language === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/ar/about/"}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={"https://thesustainablecity-yiti.com/about/"}
+          hrefLang={"en"}
+        />
+      </HeadComponent>
       <div className={styles.app__about}>
         <Ourstory />
         <Joinus />
