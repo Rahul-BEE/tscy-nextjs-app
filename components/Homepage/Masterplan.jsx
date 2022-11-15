@@ -283,6 +283,8 @@ const Masterplan = () => {
               )}
             </div> */}
               <motion.div
+                itemScope
+                itemType="https://schema.org/Place/Residence/GatedResidenceCommunity"
                 onLoad={setNewConstraints}
                 id="masterplanimageinner"
                 className={styles.masterplan}
