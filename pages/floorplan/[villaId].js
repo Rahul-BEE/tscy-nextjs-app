@@ -15,9 +15,9 @@ const Villa = () => {
   const lan = useLanguage();
   const router = useRouter();
   const { villaId } = router.query;
-  // const data = lan.villaplansection.villas.find(
-  //   (villa) => villa.slug === villaId
-  // );
+  const data = lan.villaplansection.villas.find(
+    (villa) => villa.slug === villaId
+  );
 
   const canonicaltag = lan.seo.villapage.canonicaltag + villaId;
 
@@ -45,6 +45,16 @@ const Villa = () => {
           href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
           hrefLang="x-default"
         />
+        <script type="application/ld+json">
+          {`{
+  "@context": "http://www.schema.org",
+  "@type": "product",
+  "brand": "The Sustainable City Yiti",
+  "name":${data.title},
+  "image": https://thesustainablecity-yiti.com${data.mainImg},
+  "description": ${data.description}
+}`}
+        </script>
       </HeadComponent>
       <div className={styles.villapagemain}>
         <Section1 />
