@@ -53,7 +53,12 @@ const Villa = () => {
   "brand": "The Sustainable City Yiti",
   "name":"${data.title}",
   "image": "https://thesustainablecity-yiti.com${data.mainImg}",
-  "description":" ${data.description}"
+  "description":" ${data.description}",
+    "aggregateRating": {
+    "@type": "aggregateRating",
+    "ratingValue": "0",
+    "reviewCount": "0"
+  }
 }`}
         </script>
       </HeadComponent>
