@@ -46,7 +46,8 @@ const Villa = () => {
           hrefLang="x-default"
         />
         <script type="application/ld+json">
-          {`{
+          {data &&
+            `{
   "@context": "http://www.schema.org",
   "@type": "product",
   "brand": "The Sustainable City Yiti",
