@@ -45,22 +45,6 @@ const Villa = () => {
           href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
           hrefLang="x-default"
         />
-        <script type="application/ld+json">
-          {data &&
-            `{
-  "@context": "http://www.schema.org",
-  "@type": "product",
-  "brand": "The Sustainable City Yiti",
-  "name":"${data.title}",
-  "image": "https://thesustainablecity-yiti.com${data.mainImg}",
-  "description":" ${data.description}",
-    "aggregateRating": {
-    "@type": "aggregateRating",
-    "ratingValue": "0",
-    "reviewCount": "0"
-  }
-}`}
-        </script>
       </HeadComponent>
       <div className={styles.villapagemain}>
         <Section1 />

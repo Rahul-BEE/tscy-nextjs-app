@@ -85,8 +85,13 @@ export default function Home() {
     "addressRegion": "Yiti",
     "addressCountry": "Oman"
   },
+    "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "23.625585158676095",
+    "longitude": "58.578837255823366"
+  },
   "hasMap": "https://www.google.com/maps/place/The+Sustainable+City+-+Yiti+Experience+Center+(TSCY)/@23.6254328,58.5788909,17z/data=!3m1!4b1!4m5!3m4!1s0x3e91f7fd475123d5:0xdf8ff3ebfaec4d72!8m2!3d23.6254328!4d58.5788909",
-  "openingHours": "Mo, Tu, We, Th, Fr 08:30-17:30",
+  "openingHours": "Mo, Tu, We, Th, Su 08:30-17:30",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+968 800 33 33",
