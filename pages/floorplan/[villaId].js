@@ -51,9 +51,9 @@ const Villa = () => {
   "@context": "http://www.schema.org",
   "@type": "product",
   "brand": "The Sustainable City Yiti",
-  "name":${data.title},
-  "image": https://thesustainablecity-yiti.com${data.mainImg},
-  "description": ${data.description}
+  "name":"${data.title}",
+  "image": "https://thesustainablecity-yiti.com${data.mainImg}",
+  "description":" ${data.description}"
 }`}
         </script>
       </HeadComponent>
