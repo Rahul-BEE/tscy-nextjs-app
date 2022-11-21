@@ -12,6 +12,7 @@ import { HiChevronDown } from "react-icons/hi";
 import { useEffect } from "react";
 import { useCallback } from "react";
 import sendEmail from "../../utils/emailservice";
+import { useRouter } from "next/router";
 const ContactForm = () => {
   const lan = useLanguage();
   const customSelect = useRef(null);
@@ -30,11 +31,13 @@ const ContactForm = () => {
   const [perror, setperror] = useState(false);
   const [herror, setherror] = useState(false);
 
+  const router = useRouter();
+  const social = router.query.social;
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const [leadfrom, setLeadFrom] = useState(
-    lan.contact.register.formdata.leadfrom.placeholder
+    social ? social : lan.contact.register.formdata.leadfrom.placeholder
   );
 
   const data = lan.contact.register.formdata;
@@ -164,13 +167,17 @@ const ContactForm = () => {
   }, []);
   useEffect(() => {
     setDropDirectionNew();
+    if (router.query.social) {
+      setLeadFrom(router.query.social);
+    }
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", setDropDirectionNew);
     }
     return () => {
       window.removeEventListener("scroll", setDropDirectionNew);
     };
-  }, []);
+  }, [router]);
+
   return (
     <div className={styles.contactform}>
       {data && (
@@ -261,6 +268,7 @@ const ContactForm = () => {
                     data-error={herror ? "true" : "false"}
                     ref={customSelect}
                     style={{
+                      pointerEvents: social ? "none" : "all",
                       color:
                         leadfrom !== data.leadfrom.placeholder
                           ? "#777777"

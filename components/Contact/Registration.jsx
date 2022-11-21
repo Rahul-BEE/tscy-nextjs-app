@@ -12,6 +12,7 @@ const Registration = () => {
   const lan = useLanguage();
   const router = useRouter();
   const broker = router.query.broker;
+
   return (
     <div className={styles.registration}>
       <div className="headingRow">
