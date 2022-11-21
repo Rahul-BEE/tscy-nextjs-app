@@ -168,7 +168,11 @@ const ContactForm = () => {
   useEffect(() => {
     setDropDirectionNew();
     if (router.query.social) {
-      setLeadFrom(router.query.social);
+      if (data.leadfrom.options.includes(social)) {
+        setLeadFrom(router.query.social);
+      } else {
+        router.push("/contact-us");
+      }
     }
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", setDropDirectionNew);
@@ -269,6 +273,7 @@ const ContactForm = () => {
                     ref={customSelect}
                     style={{
                       pointerEvents: social ? "none" : "all",
+                      textTransform: "capitalize",
                       color:
                         leadfrom !== data.leadfrom.placeholder
                           ? "#777777"
@@ -303,6 +308,7 @@ const ContactForm = () => {
                           margin: 0,
                           padding: "10px",
                           backgroundColor: "#ffffff",
+                          textTransform: "capitalize",
                         }}
                         onClick={() => {
                           setLeadFrom(item);
