@@ -1912,7 +1912,7 @@ const english = {
           "sustainable mosque",
         ],
         og: {
-          img: "https://thesustainablecity-yiti.com/Images/news/news_img4.jpg",
+          img: "https://thesustainablecity-yiti.com/Images/news/news_img4.png",
           title:
             "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches | The Sustainable City Yiti",
           url: "https://thesustainablecity-yiti.com/news/environment-clean-marinedebris",
