@@ -16,38 +16,45 @@ import FacebookIcon from "../../public/Svg/facebook.svg";
 import TwitterIcon from "../../public/Svg/twitter.svg";
 import LinkedinIcon from "../../public/Svg/linkedin.svg";
 import WhatsappIcon from "../../public/Svg/whatsapp.svg";
+import { useEffect, useState } from "react";
 const News = () => {
   const lan = useLanguage();
   const router = useRouter();
   const { newsid } = router.query;
+  const [news, setNews] = useState(newsid);
   const data = lan.newssection.post.find((villa) => villa.slug === newsid);
-  const canonicaltag = lan.seo.newsdetails.canonicaltag + newsid;
-
+  useEffect(() => {
+    if (router) {
+      setNews(router.query.newsid);
+    }
+  }, [router]);
   return (
     <>
-      <HeadComponent
-        title={`News Detail | The Sustainable City - Yiti`}
-        description={lan.seo.newspage.description}
-        og={lan.seo.newspage.og}
-        keyword={lan.seo.newspage.keyword}
-        canonicaltag={lan.seo.newsdetails.canonicaltag + newsid}
-        language={lan.language === 1 ? "en" : "ar"}>
-        <link
-          rel="alternate"
-          href={`https://www.thesustainablecity-yiti.com/ar/news/${newsid}`}
-          hrefLang={"ar"}
-        />
-        <link
-          rel="alternate"
-          href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
-          hrefLang={"en"}
-        />
-        <link
-          rel="alternate"
-          href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
-          hrefLang="x-default"
-        />
-      </HeadComponent>
+      {news && (
+        <HeadComponent
+          title={lan.seo.newsdetails[newsid].title}
+          description={lan.seo.newsdetails[newsid].description}
+          og={lan.seo.newsdetails[newsid].og}
+          keyword={lan.seo.newsdetails[newsid].keyword}
+          canonicaltag={lan.seo.newsdetails[newsid].canonicaltag}
+          language={lan.language === 1 ? "en" : "ar"}>
+          <link
+            rel="alternate"
+            href={`https://www.thesustainablecity-yiti.com/ar/news/${newsid}`}
+            hrefLang={"ar"}
+          />
+          <link
+            rel="alternate"
+            href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
+            hrefLang={"en"}
+          />
+          <link
+            rel="alternate"
+            href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
+            hrefLang="x-default"
+          />
+        </HeadComponent>
+      )}
       {data && (
         <div>
           <div className={styles.newspage_container}>

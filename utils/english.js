@@ -1527,7 +1527,7 @@ const english = {
     home: {
       title: "Homepage | The Sustainable City Yiti", // 50-50 characters only
       description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+        "The Sustainable City Yiti will be the largest sustainable community in the world, with ambitions to be the first Net Zero Emissions community in Oman by 2040.", // add the words which users could search 150-160 character max
       // add the words which users could search 150-160 character max
       keyword: [
         "Sustainable City",
@@ -1570,9 +1570,9 @@ const english = {
       canonicaltag: "https://www.thesustainablecity-yiti.com/",
     },
     floorplan: {
-      title: "Floorplan | The Sustainable City Yiti", // 50-50 characters only
+      title: "Sustainable District Villas | The Sustainable City Yiti", // 50-50 characters only
       description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+        "Find your dream home at The Sustainable City Yiti and get the sustainable living experience with 0 service fees and reduced electricity and water bills!", // add the words which users could search 150-160 character max
       keyword: [
         "Sustainable City",
         "Yiti Oman",
@@ -1594,17 +1594,17 @@ const english = {
       ],
       og: {
         img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
-        title: "Homepage | The Sustainable City Yiti",
+        title: "Sustainable District Villas | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/floorplan",
         description:
-          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+          "Find your dream home at The Sustainable City Yiti and get the sustainable living experience with 0 service fees and reduced electricity and water bills!",
       },
       canonicaltag: "https://www.thesustainablecity-yiti.com/floorplan",
     },
-    villapage: {
-      title: "Villa Detail | The Sustainable City Yiti", // 50-50 characters only
+    "courtyard-villa-3bedroom": {
+      title: "3 Bedroom Courtyard Villa | The Sustainable City Yiti", // 50-50 characters only
       description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+        "Designed to allow up to 100% reduction in your electricity bill, check out the 3 Bedroom Courtyard Villas in the Sustainable West District", // add the words which users could search 150-160 character max
       keyword: [
         "sustainable city",
         "yiti",
@@ -1633,12 +1633,93 @@ const english = {
       ],
       og: {
         img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
-        title: "Homepage | The Sustainable City- Yiti",
-        url: "https://www.thesustainablecity-yiti.com/floorplan",
+        title: "3 Bedroom Courtyard Villa | The Sustainable City Yiti",
+        url: "https://thesustainablecity-yiti.com/floorplan/courtyard-villa-3bedroom",
         description:
-          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+          "Designed to allow up to 100% reduction in your electricity bill, check out the 3 Bedroom Courtyard Villas in the Sustainable West District",
       },
-      canonicaltag: "https://www.thesustainablecity-yiti.com/floorplan/",
+      canonicaltag:
+        "https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-3bedroom",
+    },
+    "courtyard-villa-4bedroom": {
+      title: "4 Bedroom Courtyard Villa | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Equipped with home automation and solar photovoltiac panels, check out the 4 Bedroom Courtyard Villas in the Sustainable West District", // add the words which users could search 150-160 character max
+      keyword: [
+        "sustainable city",
+        "yiti",
+        "muscat",
+        "Villa",
+        "courtyard villa",
+        "sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+        "electric car",
+        "solar energy",
+        "water recycling",
+        "green building",
+        "zero service fees",
+        "zero service charges",
+        "reduced utility bills",
+        "renewable energy",
+      ],
+      og: {
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
+        title: "4 Bedroom Courtyard Villa | The Sustainable City Yiti",
+        url: "https://thesustainablecity-yiti.com/floorplan/courtyard-villa-4bedroom",
+        description:
+          "Equipped with home automation and solar photovoltiac panels, check out the 4 Bedroom Courtyard Villas in the Sustainable West District",
+      },
+      canonicaltag:
+        "https://www.thesustainablecity-yiti.com/floorplan/courtyard-villa-4bedroom",
+    },
+    "garden-villa-4bedroom": {
+      title: "4 Bedroom Garden Villa | The Sustainable City Yiti", // 50-50 characters only
+      description:
+        "Designed to allow up to 100% reduction in your electricity bill, check out the 4 Bedroom Garden Villas in the Sustainable East District", // add the words which users could search 150-160 character max
+      keyword: [
+        "sustainable city",
+        "yiti",
+        "muscat",
+        "Villa",
+        "courtyard villa",
+        "sustainability",
+        "Smart City",
+        "Yitti",
+        "Yenkit",
+        "real estate",
+        "beach",
+        "equestrian",
+        "luxury apartments",
+        "resorts",
+        "autism center",
+        "sustainable mosque",
+        "electric car",
+        "solar energy",
+        "water recycling",
+        "green building",
+        "zero service fees",
+        "zero service charges",
+        "reduced utility bills",
+        "renewable energy",
+      ],
+      og: {
+        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
+        title: "4 Bedroom Garden Villa | The Sustainable City Yiti",
+        url: "https://thesustainablecity-yiti.com/floorplan/garden-villa-4bedroom",
+        description:
+          "Designed to allow up to 100% reduction in your electricity bill, check out the 4 Bedroom Garden Villas in the Sustainable East District",
+      },
+      canonicaltag:
+        "https://www.thesustainablecity-yiti.com/floorplan/garden-villa-4bedroom",
     },
     aboutus: {
       title: "About Us | The Sustainable City Yiti", // 50-50 characters only
@@ -1671,7 +1752,7 @@ const english = {
       ],
       og: {
         img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
-        title: "Homepage | The Sustainable City- Yiti",
+        title: "About Us | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/about",
         description:
           "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
@@ -1680,8 +1761,7 @@ const english = {
     },
     contactus: {
       title: "Contact Us | The Sustainable City Yiti", // 50-50 characters only
-      description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+      description: "Register your interest in The Sustainable City Yiti now!", // add the words which users could search 150-160 character max
       keyword: [
         "Sustainable City",
         "Yiti Oman",
@@ -1703,17 +1783,16 @@ const english = {
       ],
       og: {
         img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
-        title: "Homepage | The Sustainable City Yiti",
+        title: "Contact Us | The Sustainable City Yiti",
         url: "https://www.thesustainablecity-yiti.com/contact-us",
-        description:
-          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+        description: "Register your interest in The Sustainable City Yiti now!",
       },
       canonicaltag: "https://www.thesustainablecity-yiti.com/contact-us",
     },
     newspage: {
       title: "News | The Sustainable City Yiti", // 50-50 characters only
       description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
+        "The latest news and project updates from The Sustainable City Yiti.", // add the words which users could search 150-160 character max
       keyword: [
         "Sustainable City",
         "Yiti Oman",
@@ -1738,41 +1817,111 @@ const english = {
         title: "News | The Sustainable City-Yiti",
         url: "https://www.thesustainablecity-yiti.com/news",
         description:
-          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+          "The latest news and project updates from The Sustainable City Yiti.",
       },
       canonicaltag: "https://www.thesustainablecity-yiti.com/news",
     },
     newsdetails: {
-      title: "News | The Sustainable City Yiti", // 50-50 characters only
-      description:
-        "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.", // add the words which users could search 150-160 character max
-      keyword: [
-        "Sustainable City",
-        "Yiti Oman",
-        "Muscat Oman",
-        "Villa",
-        "Courtyard Villas",
-        "Sustainability",
-        "Smart City",
-        "Yitti",
-        "Yenkit",
-        "real estate",
-        "apartments",
-        "beach",
-        "equestrian",
-        "luxury apartments",
-        "resorts",
-        "autism center",
-        "sustainable mosque",
-      ],
-      og: {
-        img: "https://thesustainablecity-yiti.com/Images/masterplanimage.png",
-        title: "News | The Sustainable City-Yiti",
-        url: "https://www.thesustainablecity-yiti.com/news/",
+      "newly-launched-plan": {
+        title:
+          "The Sustainable City - Yiti Signs Escrow Agreement with Sohar Islamic | The Sustainable City Yiti",
         description:
-          "Diamond Developers and Omran have joined forces to develop a world-class project that meets the highest standards of social, environmental, and economic sustainability.",
+          "The Sustainable City - Yiti Signs Escrow Agreement with Sohar Islamic",
+        keyword: [
+          "apartments",
+          "beach",
+          "equestrian",
+          "luxury apartments",
+          "resorts",
+          "autism center",
+          "sustainable mosque",
+        ],
+        og: {
+          img: "https://thesustainablecity-yiti.com/Images/news/news_img1.jpg",
+          title:
+            "The Sustainable City - Yiti Signs Escrow Agreement with Sohar Islamic | The Sustainable City Yiti",
+          url: "https://thesustainablecity-yiti.com/news/newly-launched-plan",
+          description:
+            "The Sustainable City - Yiti Signs Escrow Agreement with Sohar Islamic",
+        },
+        canonicaltag:
+          "https://www.thesustainablecity-yiti.com/news/newly-launched-plan",
       },
-      canonicaltag: "https://www.thesustainablecity-yiti.com/news/",
+      "tourism-partnership-omran": {
+        title:
+          "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group) | The Sustainable City Yiti",
+        description:
+          "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
+        keyword: [
+          "apartments",
+          "beach",
+          "equestrian",
+          "luxury apartments",
+          "resorts",
+          "autism center",
+          "sustainable mosque",
+        ],
+        og: {
+          img: "https://thesustainablecity-yiti.com/Images/news/news_img1.jpg",
+          title:
+            "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group) | The Sustainable City Yiti",
+          url: "https://thesustainablecity-yiti.com/news/tourism-partnership-omran",
+          description:
+            "Diamond Developers signs partnership with The Oman Tourism Development Company (OMRAN Group)",
+        },
+        canonicaltag:
+          "https://www.thesustainablecity-yiti.com/news/tourism-partnership-omran",
+      },
+      "investment-value-news": {
+        title:
+          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars | The Sustainable City Yiti",
+        description:
+          "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",
+        keyword: [
+          "apartments",
+          "beach",
+          "equestrian",
+          "luxury apartments",
+          "resorts",
+          "autism center",
+          "sustainable mosque",
+        ],
+        og: {
+          img: "https://thesustainablecity-yiti.com/Images/news/news_img3.jpg",
+          title:
+            "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars | The Sustainable City Yiti",
+          url: "https://thesustainablecity-yiti.com/news/investment-value-news",
+          description:
+            "Diamond Developers announce the launch of ‘The Sustainable City – Yiti’ with an investment value of nearly one billion US dollars",
+        },
+        canonicaltag:
+          "https://www.thesustainablecity-yiti.com/news/investment-value-news",
+      },
+      "environment-clean-marinedebris": {
+        title:
+          "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches | The Sustainable City Yiti",
+        description:
+          "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
+        keyword: [
+          "apartments",
+          "beach",
+          "equestrian",
+          "luxury apartments",
+          "resorts",
+          "autism center",
+          "sustainable mosque",
+        ],
+        og: {
+          img: "https://thesustainablecity-yiti.com/Images/news/news_img4.jpg",
+          title:
+            "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches | The Sustainable City Yiti",
+          url: "https://thesustainablecity-yiti.com/news/environment-clean-marinedebris",
+          description:
+            "The Sustainable City - Yiti and The Environment Society of Oman Partner to Clear over 1.5 Tons of Marine Debris from Muscat’s beaches",
+        },
+        canonicaltag:
+          "https://www.thesustainablecity-yiti.com/news/environment-clean-marinedebris",
+      },
     },
   },
 };
