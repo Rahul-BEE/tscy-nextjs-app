@@ -95,6 +95,12 @@
                                 margin-block: 1rem;
 
                             }
+
+                            &:hover {
+                                background: transparent;
+                                color: #058DA6;
+                                border: 1px solid #058DA6;
+                            }
                         }
 
                         .hero_desktop {

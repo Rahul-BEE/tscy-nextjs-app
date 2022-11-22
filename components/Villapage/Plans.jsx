@@ -119,13 +119,7 @@ function Plans() {
                   {/* Button */}
                   <Link href="https://thesustainablecity-yiti.com/brochure/Villa Brochure Final.pdf">
                     <a target={"_blank"} rel="noreferrer">
-                      <motion.div
-                        className={styles.dd_button}
-                        whileHover={{
-                          color: "#058DA6",
-                          background: "#ffffff",
-                          outline: "1px solid #058da6",
-                        }}>
+                      <motion.div className={styles.dd_button}>
                         {lan.commontext.download} {lan.commontext.floorplan}
                       </motion.div>
                     </a>
