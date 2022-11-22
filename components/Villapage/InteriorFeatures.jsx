@@ -191,9 +191,13 @@ const InteriorFeatures = ({ data }) => {
                   <p>{data.interiorDescription}</p>
                   <div className={styles.buttoncontainer}>
                     <Link href="/contact-us" passHref>
-                      <button className={styles.btn1}>
+                      <motion.button
+                        className={styles.btn1}
+                        whileHover={{
+                          scale: 1.05,
+                        }}>
                         {lan.commontext.registerinterest}
-                      </button>
+                      </motion.button>
                     </Link>
                     <Link href="https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf">
                       <a target="_blank" rel="noreferrer">

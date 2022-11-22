@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { BsArrowDownCircle } from "react-icons/bs";
 import Link from "next/link";
-const Section1 = ({ data }) => {
+const Section1 = ({ data, setShowModal }) => {
   const lan = useLanguage();
   const router = useRouter();
   const { villaId } = router.query;
@@ -41,14 +41,14 @@ const Section1 = ({ data }) => {
             <p>{data.description}</p>
           </div>
           <div className={styles.downloadcomparison}>
-            <Link href={"/contact-us"} passHref>
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                }}>
-                {lan.commontext.registerinterest}
-              </motion.button>
-            </Link>
+            <motion.button
+              onClick={() => setShowModal(true)}
+              whileHover={{
+                scale: 1.05,
+              }}>
+              {lan.commontext.registerinterest}
+            </motion.button>
+
             <Link
               href={
                 "https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf"

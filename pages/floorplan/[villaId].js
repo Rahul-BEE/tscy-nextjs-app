@@ -3,6 +3,7 @@ import {
   InteriorFeatures,
   OtherVillas,
   PrimeLocation,
+  RegisterModal,
 } from "../../components";
 import english from "../../utils/english";
 import arabic from "../../utils/arabic";
@@ -11,10 +12,9 @@ import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
 import Plans from "../../components/Villapage/Plans";
 import styles from "../../styles/villapage.module.scss";
-import useLanguage from "../../utils/useLanguage";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const Villa = (props) => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <HeadComponent
@@ -42,7 +42,8 @@ const Villa = (props) => {
       </HeadComponent>
 
       <div className={styles.villapagemain}>
-        <Section1 data={props.data} />
+        <RegisterModal show={showModal} setshowmodal={setShowModal} />
+        <Section1 data={props.data} setShowModal={setShowModal} />
         <Plans data={props.data} />
         <CardSection page={true} />
         <InteriorFeatures data={props.data} />
