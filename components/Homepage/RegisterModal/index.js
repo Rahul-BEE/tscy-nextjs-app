@@ -162,7 +162,10 @@ const RegsiterModal = ({ show, setshowmodal }) => {
           <IoClose />
         </span>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body
+        onClick={() => {
+          if (showDropDown) setShowDropDown(false);
+        }}>
         <form className={styles.forms}>
           <div className={styles.modalbody}>
             <div

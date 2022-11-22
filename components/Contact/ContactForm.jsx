@@ -13,10 +13,10 @@ import { useEffect } from "react";
 import { useCallback } from "react";
 import sendEmail from "../../utils/emailservice";
 import { useRouter } from "next/router";
-const ContactForm = () => {
+const ContactForm = ({ showDropDown, setShowDropDown }) => {
   const lan = useLanguage();
   const customSelect = useRef(null);
-  const [showDropDown, setShowDropDown] = useState(false);
+  // const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastName] = useState("");

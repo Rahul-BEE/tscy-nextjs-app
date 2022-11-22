@@ -7,14 +7,19 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useState } from "react";
 
 const Registration = () => {
   const lan = useLanguage();
   const router = useRouter();
   const broker = router.query.broker;
-
+  const [showDropDown, setShowDropDown] = useState(false);
   return (
-    <div className={styles.registration}>
+    <div
+      className={styles.registration}
+      onClick={() => {
+        if (showDropDown) setShowDropDown(false);
+      }}>
       <div className="headingRow">
         <h1
           className={`sectionmainHeading ${styles.mainheadingContactus}`}
@@ -125,7 +130,14 @@ const Registration = () => {
             />
           </div>
         </div>
-        {broker === "true" ? <BrokerForm /> : <ContactForm />}
+        {broker === "true" ? (
+          <BrokerForm />
+        ) : (
+          <ContactForm
+            showDropDown={showDropDown}
+            setShowDropDown={setShowDropDown}
+          />
+        )}
       </div>
     </div>
   );
