@@ -190,9 +190,11 @@ const InteriorFeatures = ({ data }) => {
                 <motion.div key={open} className={styles.description}>
                   <p>{data.interiorDescription}</p>
                   <div className={styles.buttoncontainer}>
-                    <button className={styles.btn1}>
-                      {lan.commontext.registerinterest}
-                    </button>
+                    <Link href="/contact-us" passHref>
+                      <button className={styles.btn1}>
+                        {lan.commontext.registerinterest}
+                      </button>
+                    </Link>
                     <Link href="https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf">
                       <a target="_blank" rel="noreferrer">
                         <button className={styles.btn2}>
