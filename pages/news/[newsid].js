@@ -5,6 +5,8 @@ import Polygon from "../../public/Svg/Polygonorg.svg";
 import useLanguage from "../../utils/useLanguage";
 import Newssection from "../../components/Homepage/Newssection";
 import { useRouter } from "next/router";
+import english from "../../utils/english";
+import arabic from "../../utils/arabic";
 import { HeadComponent } from "../../components";
 import {
   FacebookShareButton,
@@ -17,44 +19,35 @@ import TwitterIcon from "../../public/Svg/twitter.svg";
 import LinkedinIcon from "../../public/Svg/linkedin.svg";
 import WhatsappIcon from "../../public/Svg/whatsapp.svg";
 import { useEffect, useState } from "react";
-const News = () => {
+const News = (props) => {
   const lan = useLanguage();
-  const router = useRouter();
-  const { newsid } = router.query;
-  const [news, setNews] = useState(newsid);
-  const data = lan.newssection.post.find((villa) => villa.slug === newsid);
-  useEffect(() => {
-    if (router) {
-      setNews(router.query.newsid);
-    }
-  }, [router]);
+  const data = props.data;
   return (
     <>
-      {news && (
-        <HeadComponent
-          title={lan.seo.newsdetails[newsid].title}
-          description={lan.seo.newsdetails[newsid].description}
-          og={lan.seo.newsdetails[newsid].og}
-          keyword={lan.seo.newsdetails[newsid].keyword}
-          canonicaltag={lan.seo.newsdetails[newsid].canonicaltag}
-          language={lan.language === 1 ? "en" : "ar"}>
-          <link
-            rel="alternate"
-            href={`https://www.thesustainablecity-yiti.com/ar/news/${newsid}`}
-            hrefLang={"ar"}
-          />
-          <link
-            rel="alternate"
-            href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
-            hrefLang={"en"}
-          />
-          <link
-            rel="alternate"
-            href={`https://www.thesustainablecity-yiti.com/news/${newsid}`}
-            hrefLang="x-default"
-          />
-        </HeadComponent>
-      )}
+      <HeadComponent
+        title={props.seo.title}
+        description={props.seo.description}
+        og={props.seo.og}
+        keyword={props.seo.keyword}
+        canonicaltag={props.seo.canonicaltag}
+        language={props.lang === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/ar/news/${props.newsid}`}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/news/${props.newsid}`}
+          hrefLang={"en"}
+        />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/news/${props.newsid}`}
+          hrefLang="x-default"
+        />
+      </HeadComponent>
+
       {data && (
         <div>
           <div className={styles.newspage_container}>
@@ -197,7 +190,7 @@ const News = () => {
               <h6 className={styles.secondary_h1}>
                 Omran Group
               </h6>
-             
+
             </div>
           </div> */}
                 </div>
@@ -212,3 +205,40 @@ const News = () => {
 };
 
 export default News;
+export async function getStaticPaths() {
+  let path = [];
+
+  english.newssection.post.map((item) => {
+    path.push({
+      params: {
+        newsid: item.slug,
+      },
+    });
+    path.push({
+      params: {
+        newsid: item.slug,
+      },
+      locale: "ar",
+    });
+  });
+
+  return {
+    paths: path,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  const { params, locale } = context;
+  const lan = locale === "ar" ? arabic : english;
+  const seo = lan.seo.newsdetails[params.newsid];
+  const data = lan.newssection.post.find((item) => item.slug === params.newsid);
+  return {
+    props: {
+      data: data,
+      seo: seo,
+      lang: lan.language,
+      newis: params.newsid,
+    },
+  };
+}

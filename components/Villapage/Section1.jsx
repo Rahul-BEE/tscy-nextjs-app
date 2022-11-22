@@ -6,13 +6,11 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { BsArrowDownCircle } from "react-icons/bs";
 import Link from "next/link";
-const Section1 = () => {
+const Section1 = ({ data }) => {
   const lan = useLanguage();
   const router = useRouter();
   const { villaId } = router.query;
-  const data = lan.villaplansection.villas.find(
-    (villa) => villa.slug === villaId
-  );
+
   return (
     <div className={styles.app__villasection1planmain}>
       <div className={styles.poly1}>

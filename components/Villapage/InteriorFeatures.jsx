@@ -18,10 +18,8 @@ import { useRef } from "react";
 import SliderComponent from "./SliderComponent";
 import Image from "next/image";
 import Link from "next/link";
-const InteriorFeatures = () => {
+const InteriorFeatures = ({ data }) => {
   const lan = useLanguage();
-  const router = useRouter();
-  const { villaId } = router.query;
   const [open, setOpen] = useState(false);
   const [containerWidth, setContainerWidth] = useState(0);
   const [itemWidth, setItemWidth] = useState(100);
@@ -31,9 +29,6 @@ const InteriorFeatures = () => {
   );
   const carouselRef = useRef(null);
   const itemRef = useRef(null);
-  const data = lan.villaplansection.villas.find(
-    (villa) => villa.slug === villaId
-  );
 
   const starterAnimation = useAnimation();
 

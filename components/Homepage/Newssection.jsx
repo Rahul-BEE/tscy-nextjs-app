@@ -11,7 +11,6 @@ import { Col, Row } from "react-bootstrap";
 const Newssection = (props) => {
   const lan = useLanguage();
   const controls = useAnimation();
-  //console.log(props.pagename)
   const data = [
     {
       slug: lan.newssection.post[3].slug,

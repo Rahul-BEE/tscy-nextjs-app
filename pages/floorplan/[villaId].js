@@ -4,6 +4,8 @@ import {
   OtherVillas,
   PrimeLocation,
 } from "../../components";
+import english from "../../utils/english";
+import arabic from "../../utils/arabic";
 import Section1 from "../../components/Villapage/Section1";
 import CardSection from "../../components/Floorplan/CardsSection";
 import LocationFYV from "../../components/Floorplan/Location";
@@ -12,59 +14,90 @@ import styles from "../../styles/villapage.module.scss";
 import useLanguage from "../../utils/useLanguage";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-const Villa = () => {
-  const lan = useLanguage();
-  const router = useRouter();
-  const { villaId } = router.query;
-  const [villa, setVilla] = useState(villaId);
-  const data = lan.villaplansection.villas.find(
-    (villa) => villa.slug === villaId
-  );
-
-  useEffect(() => {
-    if (router) {
-      setVilla(router.query.villaId);
-    }
-  }, [router]);
+const Villa = (props) => {
   return (
     <>
-      {villa && (
-        <HeadComponent
-          title={lan.seo[villaId].title}
-          description={lan.seo[villaId].description}
-          og={lan.seo[villaId].og}
-          keyword={lan.seo[villaId].keyword}
-          canonicaltag={lan.seo[villaId].canonicaltag}
-          language={lan.language === 1 ? "en" : "ar"}>
-          <link
-            rel="alternate"
-            href={`https://www.wthesustainablecity-yiti.com/ar/floorplan/${villaId}`}
-            hrefLang={"ar"}
-          />
-          <link
-            rel="alternate"
-            href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
-            hrefLang={"en"}
-          />
-          <link
-            rel="alternate"
-            href={`https://www.thesustainablecity-yiti.com/floorplan/${villaId}`}
-            hrefLang="x-default"
-          />
-        </HeadComponent>
-      )}
+      <HeadComponent
+        title={props.seo.title}
+        description={props.seo.description}
+        og={props.seo.og}
+        keyword={props.seo.keyword}
+        canonicaltag={props.seo.canonicaltag}
+        language={props.lang === 1 ? "en" : "ar"}>
+        <link
+          rel="alternate"
+          href={`https://www.wthesustainablecity-yiti.com/ar/floorplan/${props.villaId}`}
+          hrefLang={"ar"}
+        />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/floorplan/${props.villaId}`}
+          hrefLang={"en"}
+        />
+        <link
+          rel="alternate"
+          href={`https://www.thesustainablecity-yiti.com/floorplan/${props.villaId}`}
+          hrefLang="x-default"
+        />
+      </HeadComponent>
 
       <div className={styles.villapagemain}>
-        <Section1 />
-        <Plans />
+        <Section1 data={props.data} />
+        <Plans data={props.data} />
         <CardSection page={true} />
-        <InteriorFeatures />
-        <PrimeLocation />
-        <OtherVillas />
-        <LocationFYV />
+        <InteriorFeatures data={props.data} />
+        <PrimeLocation data={props.data} />
+        <OtherVillas data={props.data} />
+        <LocationFYV data={props.data} />
       </div>
     </>
   );
 };
 
 export default Villa;
+
+export async function getStaticPaths() {
+  let path = [];
+  const villas = [
+    "courtyard-villa-3bedroom",
+    "courtyard-villa-4bedroom",
+    "garden-villa-4bedroom",
+  ];
+  for (const villa of villas) {
+    path.push({
+      params: {
+        villaId: villa,
+      },
+    });
+  }
+  for (const villa of villas) {
+    path.push({
+      params: {
+        villaId: villa,
+      },
+      locale: "ar",
+    });
+  }
+
+  return {
+    paths: path,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  const { params, locale } = context;
+  const lan = locale === "ar" ? arabic : english;
+  const seo = lan.seo[params.villaId];
+  const data = lan.villaplansection.villas.find(
+    (villa) => villa.slug === params.villaId
+  );
+  return {
+    props: {
+      data: data,
+      seo: seo,
+      lang: lan.language,
+      villaId: params.villaId,
+    },
+  };
+}

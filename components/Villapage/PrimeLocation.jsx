@@ -10,15 +10,12 @@ import Amenities from "./Amenities";
 import { useState } from "react";
 import { useAppContext } from "../../context/AppContext";
 
-const PrimeLocation = () => {
+const PrimeLocation = ({ data }) => {
   const { state, dispatch } = useAppContext();
   const lan = useLanguage();
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-  const { villaId } = router.query;
-  const data = lan.villaplansection.villas.find(
-    (villa) => villa.slug === villaId
-  );
+
   const setNewComponentWidth = useCallback(() => {
     if (window.innerWidth < 700) {
       setIsMobile(true);
