@@ -142,7 +142,10 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   return (
     <Modal
       show={show}
-      onHide={() => setshowmodal(false)}
+      onHide={() => {
+        setShowDropDown(false);
+        setshowmodal(false);
+      }}
       size="lg"
       centered
       dialogClassName={styles.dialogClassName}
