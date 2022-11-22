@@ -49,7 +49,10 @@ const Section1 = ({ data }) => {
                 {lan.commontext.registerinterest}
               </motion.button>
             </Link>
-            <Link href={"/brochure/Yiti Brochure.pdf"}>
+            <Link
+              href={
+                "https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf"
+              }>
               <a target={"_blank"}>
                 <p>
                   {lan.commontext.download} {lan.commontext.brochure}

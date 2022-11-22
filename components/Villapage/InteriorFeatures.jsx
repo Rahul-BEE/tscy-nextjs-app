@@ -193,7 +193,7 @@ const InteriorFeatures = ({ data }) => {
                     <button className={styles.btn1}>
                       {lan.commontext.registerinterest}
                     </button>
-                    <Link href="/brochure/Yiti Brochure.pdf">
+                    <Link href="https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf">
                       <a target="_blank" rel="noreferrer">
                         <button className={styles.btn2}>
                           {lan.commontext.download} {lan.commontext.brochure}

@@ -117,7 +117,7 @@ function Plans() {
                     </div>
                   </div>
                   {/* Button */}
-                  <Link href="/brochure/Villa Brochure Final.pdf">
+                  <Link href="https://thesustainablecity-yiti.com/brochure/Villa Brochure Final.pdf">
                     <a target={"_blank"} rel="noreferrer">
                       <motion.div
                         className={styles.dd_button}

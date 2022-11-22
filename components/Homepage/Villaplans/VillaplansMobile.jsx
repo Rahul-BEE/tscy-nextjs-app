@@ -152,9 +152,13 @@ function VillaplansMobile() {
       },
     });
     if (brochureDownload === 1) {
-      window.open("/brochure/Yiti Brochure.pdf");
+      window.open(
+        "https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf"
+      );
     } else if (brochureDownload === 2) {
-      window.open("/brochure/Villa Brochure Final.pdf");
+      window.open(
+        "https://thesustainablecity-yiti.com/brochure/Villa Brochure Final.pdf"
+      );
     } else {
       return;
     }
@@ -203,9 +207,13 @@ function VillaplansMobile() {
     }
     if (dataReceived) {
       if (id === 1) {
-        window.open("/brochure/Yiti Brochure.pdf");
+        window.open(
+          "https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf"
+        );
       } else if (id === 2) {
-        window.open("/brochure/Villa Brochure Final.pdf");
+        window.open(
+          "https://thesustainablecity-yiti.com/brochure/Villa Brochure Final.pdf"
+        );
       } else {
         setShowForm(true);
         return;
@@ -462,7 +470,10 @@ function VillaplansMobile() {
                 </div>
                 <p className={styles.heading}>{lan.commontext.thanksnote}</p>
                 <div className={styles.btncontainer}>
-                  <Link href={"/brochure/Yiti Brochure.pdf"}>
+                  <Link
+                    href={
+                      "https://thesustainablecity-yiti.com/brochure/Yiti Brochure.pdf"
+                    }>
                     <a target={"_blank"} rel="noreferrer">
                       <motion.div
                         onClick={() => handleClick({ id: 1, scroll: false })}
@@ -475,7 +486,10 @@ function VillaplansMobile() {
                       </motion.div>
                     </a>
                   </Link>
-                  <Link href={"/brochure/Villa Brochure Final.pdf"}>
+                  <Link
+                    href={
+                      "https://thesustainablecity-yiti.com/brochure/Villa Brochure Final.pdf"
+                    }>
                     <a target={"_blank"} rel="noreferrer">
                       <motion.div
                         onClick={() => handleClick({ id: 1, scroll: false })}
