@@ -100,14 +100,6 @@ const News = (props) => {
                               <TwitterIcon />
                             </TwitterShareButton>
                           </div>
-
-                          {/* <button className={styles.btn_blue}>
-                          <BiShare
-                            size={16}
-                            style={{ transform: "rotateY(180deg)" }}
-                          />
-                          {lan.commontext.share}
-                        </button> */}
                         </div>
                       </div>
 
@@ -168,31 +160,6 @@ const News = (props) => {
                       </div>
                     </div>
                   )}
-                  {/* <div>
-            <div>
-              <div className={styles.herodashed}></div>
-            </div>
-          </div> */}
-                  {/* <div className={styles.hero_secondry_box1}>
-            <div className={styles.secondrynews_box}>
-              <h6 >
-                Introduction
-              </h6>
-              <h6 className={styles.secondary_h1}>
-                News
-              </h6>
-              <h6 className={styles.secondary_h1}>
-                Democracy
-              </h6>
-              <h6 className={styles.secondary_h1}>
-                Your Highness Speech
-              </h6>
-              <h6 className={styles.secondary_h1}>
-                Omran Group
-              </h6>
-
-            </div>
-          </div> */}
                 </div>
               </div>
             </div>
@@ -233,12 +200,13 @@ export async function getStaticProps(context) {
   const lan = locale === "ar" ? arabic : english;
   const seo = lan.seo.newsdetails[params.newsid];
   const data = lan.newssection.post.find((item) => item.slug === params.newsid);
+  console.log(context);
   return {
     props: {
       data: data,
       seo: seo,
       lang: lan.language,
-      newis: params.newsid,
+      newsid: params.newsid,
     },
   };
 }
