@@ -14,7 +14,7 @@ const Joinus = () => {
         <h3>{data.joinus.title}</h3>
         <p>{data.joinus.desc}</p>
         <div className={styles.ctaContainer}>
-          <Link href={"/contact"}>
+          <Link href={"/contact-us"} passHref>
             <motion.button
               whileHover={{
                 scale: 1.02,
@@ -22,12 +22,14 @@ const Joinus = () => {
               {lan.commontext.contact}
             </motion.button>
           </Link>
-          <p>
-            {lan.commontext.registerinterest}
-            <span>
-              <BsArrowRightCircle />
-            </span>
-          </p>
+          <Link href={"/contact-us"} passHref>
+            <p>
+              {lan.commontext.registerinterest}
+              <span>
+                <BsArrowRightCircle />
+              </span>
+            </p>
+          </Link>
         </div>
         <div className={styles.layerblur} />
         <div className={styles.polygonpos}>

@@ -1,9 +1,11 @@
     .cardsSectionmain {
-        padding: 100px 220px 40px;
+        padding: 100px 10% 40px;
         background: linear-gradient(0deg, rgba(5, 141, 166, 0.1), rgba(5, 141, 166, 0.1)), #FFFFFF;
 
         .cardSectionInner {
             margin-bottom: 0;
+            max-width: 1272px;
+            margin-inline: auto;
         }
 
         .cardContainer {
