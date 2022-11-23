@@ -20,7 +20,8 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
   const customSelect = useRef(null);
-  const [fullname, setFullname] = useState("");
+  const [firstname, setfirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [leadfrom, setLeadFrom] = useState(
@@ -33,7 +34,7 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   const submitHandler = async () => {
     setError(false);
     let e = false;
-    if (fullname.trim().length < 1) {
+    if (firstname.trim().length < 1) {
       setError(true);
       setferror(true);
       e = true;
@@ -46,6 +47,13 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       e = true;
     } else {
       seteerror(false);
+    }
+    if (lastname.trim().length < 1) {
+      setError(true);
+      setlerror(true);
+      e = true;
+    } else {
+      setlerror(false);
     }
     if (phone.trim().length < 10) {
       setError(true);
@@ -66,7 +74,8 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       return;
     }
     const data = {
-      firstname: fullname,
+      firstname,
+      lastname,
       email,
       phone,
       leadfrom,
@@ -111,8 +120,13 @@ const RegsiterModal = ({ show, setshowmodal }) => {
         setperror(false);
         return;
       }
+
       case 4: {
         setherror(false);
+        return;
+      }
+      case 5: {
+        setlerror(false);
         return;
       }
       default: {
@@ -174,16 +188,30 @@ const RegsiterModal = ({ show, setshowmodal }) => {
             <div
               className={styles.formItem}
               data-error={ferror ? "true" : "false"}>
-              <label htmlFor="fullname">{data.fullname.title}</label>
+              <label htmlFor="firstname">{data.name.title}</label>
               <input
                 autoFocus={true}
                 type="text"
-                id="fullname"
+                id="firstname"
                 onFocus={() => onFocusFunc(1)}
                 className={ferror ? styles.error : ""}
-                placeholder={data.fullname.placeholder}
-                value={fullname}
-                onChange={(e) => setFullname(e.target.value)}></input>
+                placeholder={data.name.placeholder}
+                value={firstname}
+                onChange={(e) => setfirstname(e.target.value)}></input>
+            </div>
+            <div
+              className={styles.formItem}
+              data-error={lerror ? "true" : "false"}>
+              <label htmlFor="lastname">{data.lastname.title}</label>
+              <input
+                type="text"
+                id="lastname"
+                name="last_name"
+                onFocus={() => onFocusFunc(5)}
+                className={lerror ? styles.error : ""}
+                placeholder={data.lastname.placeholder}
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}></input>
             </div>
 
             <div
@@ -221,8 +249,9 @@ const RegsiterModal = ({ show, setshowmodal }) => {
                 searchNotFound={"No country found"}
               />
             </div>
+
             <div
-              className={styles.formItem}
+              className={`${styles.formItem} ${styles.grid_col_span2}`}
               data-error={herror ? "true" : "false"}>
               <label htmlFor="leadfrom">{data.leadfrom.title}</label>
               <motion.div
@@ -258,32 +287,6 @@ const RegsiterModal = ({ show, setshowmodal }) => {
                 </div>
               )}
             </div>
-            {/* <div className={styles.formItem}>
-              <label htmlFor="leadfrom">{data.leadfrom.title}</label>
-              <select
-                className={styles.selectcontent}
-                value={leadfrom}
-                id="registermodalselect"
-                style={{
-                  color: leadfrom === "" ? "#B5b5b5" : "#777777",
-                }}
-                onChange={(e) => setLeadFrom(e.target.value)}>
-                <option
-                  defaultValue={leadfrom}
-                  hidden
-                  className={`${styles.optionvalue} ${styles.optionselect1}`}>
-                  {data.leadfrom.placeholder}
-                </option>
-                {data.leadfrom.options.map((item, index) => (
-                  <option
-                    value={item}
-                    key={index}
-                    className={styles.optionvalue}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-            </div> */}
           </div>
         </form>
         <div className={styles.modalfooter}>

@@ -212,6 +212,14 @@
         }
     }
 
+    .grid_col_span2 {
+        grid-column: span 2;
+
+        @media (max-width:1224px) {
+            grid-column: auto;
+        }
+    }
+
     .buttonClass {
         border: none;
         box-shadow: none;
