@@ -222,7 +222,7 @@ const english = {
         name: "Sustainable mosque",
         icon: <Popmosque />,
         description:
-          "SEE Lab showcases renewable energy, technologies, indoor vertical farming, small-scale dairy farming, humidity harvesting, solid waste treatment, and smart mobility. SEE Lab also houses SEE Institute, a net zero carbon learning facility for professionals working in urban sustainability practices.",
+          "Imagine a mosque that is built from the ground up on a sustainable backbone that was designed specifically for the community that it serves. The Eco Mosque is a one-of-a-kind building that is entirely based on eco-friendly architecture and design.",
         details: {
           worshippers: "833 ",
         },
