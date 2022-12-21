@@ -275,14 +275,26 @@ const RegsiterModal = ({ show, setshowmodal }) => {
               {showDropDown && (
                 <div className={styles.customdropdown} data-dir={dropDirection}>
                   {data.leadfrom.options.map((item, index) => (
-                    <p
+                    <motion.p
                       key={index}
+                      whileHover={{
+                        backgroundColor: "#f5f5f5",
+                        transition: {
+                          type: "tween",
+                        },
+                      }}
+                      style={{
+                        margin: 0,
+                        padding: "10px",
+                        backgroundColor: "#ffffff",
+                        textTransform: "capitalize",
+                      }}
                       onClick={() => {
                         setLeadFrom(item);
                         setShowDropDown(false);
                       }}>
                       {item}
-                    </p>
+                    </motion.p>
                   ))}
                 </div>
               )}
