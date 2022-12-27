@@ -1486,6 +1486,14 @@ const english = {
           text: "Become a broker",
           link: "/contact-us?broker=true",
         },
+        {
+          text: "Privacy Policy",
+          link: "/privacy-policy",
+        },
+        {
+          text: "Cookie Policy",
+          link: "/cookie-policy",
+        },
       ],
     },
     {

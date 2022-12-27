@@ -403,3 +403,71 @@ a {
     rotate: 180deg;
   }
 }
+
+.consent-bannermain {
+  position: fixed;
+  width: 100%;
+  background: white;
+  bottom: 0;
+  z-index: 200;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0px -4px 16px rgba(120, 120, 120, 0.10);
+}
+
+.cookies-consent-banner {
+  color: #777777;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 400;
+  align-items: center;
+  gap: 3rem;
+  width: min-content;
+  margin-inline: auto;
+
+  @media (max-width:1224px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  p {
+    user-select: none;
+    margin: 0;
+    text-align: left;
+    width: 50vw;
+
+    @media (max-width:1224px) {
+      width: 100%;
+      text-align: left;
+
+    }
+  }
+
+  .btncontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .accept {
+      color: white;
+      background-color: #058da6;
+
+      @media (max-width:600px) {
+        font-size: 0.825rem;
+      }
+    }
+
+    .decline {
+      color: #058da6;
+      border: 1px #058da6 solid;
+      background-color: white;
+
+      @media (max-width:600px) {
+        font-size: 0.825rem;
+      }
+    }
+  }
+}

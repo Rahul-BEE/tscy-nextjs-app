@@ -14,10 +14,13 @@ import styles from "../styles/home.module.scss";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import useLanguage from "../utils/useLanguage";
+import Browsercompatibility from "../components/Homepage/BrowserCompatibility/Browsercompatibility";
 export default function Home() {
   const [language, setLanguage] = useState("en");
   const lan = useLanguage();
   const [showModal, setShowModal] = useState(false);
+  const [bshowModal, setBShowModal] = useState(false);
+
   const location = useRouter();
   const [isMobile, setisMobile] = useState(false);
   useEffect(() => {
@@ -38,6 +41,10 @@ export default function Home() {
     }, 5000);
   };
   useEffect(() => {
+    // const browser = navigator.userAgent;
+
+    // if (browser.indexOf("Firefox") !== -1) {
+    // }
     if (sessionStorage.getItem("modalshow")) {
       clearTimeout(modalTimer);
     } else {
@@ -103,7 +110,7 @@ export default function Home() {
 
       <main className={styles.app__home}>
         <RegisterModal show={showModal} setshowmodal={setShowModal} />
-
+        <Browsercompatibility show={bshowModal} setshowmodal={setBShowModal} />
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />

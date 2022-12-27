@@ -1534,6 +1534,14 @@ const arabic = {
           text: "كن وسيطاً عقاريا",
           link: "/contact-us?broker=true",
         },
+        {
+          text: "سياسة الخصوصية",
+          link: "/privacy-policy",
+        },
+        {
+          text: "سياسة ملفات الارتباط",
+          link: "/cookie-policy",
+        },
       ],
     },
     {
