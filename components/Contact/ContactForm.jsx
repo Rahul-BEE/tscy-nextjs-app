@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { useCallback } from "react";
 import sendEmail from "../../utils/emailservice";
 import { useRouter } from "next/router";
+import sendLead from "../../utils/salesforce";
 const ContactForm = ({ showDropDown, setShowDropDown }) => {
   const lan = useLanguage();
   const customSelect = useRef(null);
@@ -94,11 +95,11 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
     };
     // //email js
 
-    let result = await sendEmail({
-      data,
-      temmplate: 0,
-    });
-
+    // let result = await sendEmail({
+    //   data,
+    //   temmplate: 0,
+    // });
+    let result = await sendLead({ data });
     if (result) {
       setEmailSend(true);
       setLoading(false);

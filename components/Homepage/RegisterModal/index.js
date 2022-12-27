@@ -9,6 +9,7 @@ import { IoClose } from "react-icons/io5";
 import sendEmail from "../../../utils/emailservice";
 import { HiChevronDown } from "react-icons/hi";
 import TagManager from "react-gtm-module";
+import sendLead from "../../../utils/salesforce";
 const RegsiterModal = ({ show, setshowmodal }) => {
   const lan = useLanguage();
   const [error, setError] = useState(false);
@@ -81,11 +82,14 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       leadfrom,
     };
 
-    sendEmail({
-      data,
-      temmplate: 0,
-    });
+    // sendEmail({
+    //   data,
+    //   temmplate: 0,
+    // });
 
+    sendLead({
+      data,
+    });
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_from_modal",

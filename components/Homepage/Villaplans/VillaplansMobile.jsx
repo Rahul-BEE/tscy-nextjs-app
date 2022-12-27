@@ -21,6 +21,7 @@ import Info from "../../../public/Svg/homevillaplan/info.svg";
 import Loader from "../../Loader/Loader";
 import { useInView } from "react-intersection-observer";
 import TagManager from "react-gtm-module";
+import sendLead from "../../../utils/salesforce";
 const itemVariant = {
   visible: {
     x: 0,
@@ -132,7 +133,8 @@ function VillaplansMobile() {
       phone,
       leadfrom: "Website",
     };
-    let result = sendEmail({ data, temmplate: 0 });
+    // let result = sendEmail({ data, temmplate: 0 });
+    let result = sendLead({ data });
     if (result) {
       setLoading(false);
     } else {

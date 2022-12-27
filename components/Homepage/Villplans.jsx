@@ -21,6 +21,7 @@ import sendEmail from "../../utils/emailservice";
 import Info from "../../public/Svg/homevillaplan/info.svg";
 import { useInView } from "react-intersection-observer";
 import TagManager from "react-gtm-module";
+import sendLead from "../../utils/salesforce";
 const Villplans = () => {
   const { state, dispatch } = useAppContext();
   const lan = useLangage();
@@ -113,7 +114,8 @@ const Villplans = () => {
       phone,
       leadfrom: "Website",
     };
-    let result = sendEmail({ data, temmplate: 0 });
+    // let result = sendEmail({ data, temmplate: 0 });
+    let result = sendLead({ data });
     if (result) {
       setLoading(false);
     } else {
