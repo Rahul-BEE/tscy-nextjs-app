@@ -439,6 +439,18 @@ a {
     text-align: left;
     width: 50vw;
 
+    &:lang(ar) {
+      text-align: right;
+      font-size: 1rem;
+    }
+
+    span {
+      a {
+        color: #777777 !important;
+        text-decoration: underline;
+      }
+    }
+
     @media (max-width:1224px) {
       width: 100%;
       text-align: left;

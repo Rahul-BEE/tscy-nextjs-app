@@ -2101,9 +2101,10 @@ const arabic = {
     },
   },
   cookiebanner: {
-    text: "This site uses cookies to enhance your browsing experience. By continuing to use this site, you consent to the use of cookies.",
-    accept: "Accept",
-    decline: "Decline",
+    text: " هذا الموقع يستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك. بالاستمرار في استخدام هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط.",
+    readmore: "للمزيد من المعلومات ",
+    accept: "قبول",
+    decline: "رفض",
   },
   firefoxpopup: {
     title: "We have detected that you are using Firefox.",

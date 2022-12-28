@@ -6,6 +6,7 @@ import { hotjar } from "react-hotjar";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import useLanguage from "../utils/useLanguage";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   const [showBanner, setShowBanner] = useState(false);
@@ -42,7 +43,12 @@ function MyApp({ Component, pageProps }) {
       <div className="consent-bannermain">
         {showBanner && (
           <div className="cookies-consent-banner">
-            <p>{lan.cookiebanner.text}</p>
+            <p>
+              {lan.cookiebanner.text} &nbsp;
+              <span>
+                <Link href={"/cookie-policy"}>{lan.cookiebanner.readmore}</Link>
+              </span>
+            </p>
             <div className="btncontainer">
               <button onClick={handleAccept} className="accept">
                 {lan.cookiebanner.accept}
