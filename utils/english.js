@@ -1939,8 +1939,8 @@ const english = {
   },
   firefoxpopup: {
     title: "We have detected that you are using Firefox.",
-    text: "This website uses third party services for enhanced user experience,kindly follow the steps in the video as some features might not perform as expected.",
-    startmyjourney: "Start my journey!",
+    text: "Since firefox prevents submitting of forms with third-party services. Please disable enhanced tracking protection from the menu to submit this form.",
+    startmyjourney: "Continue my journey!",
   },
 };
 

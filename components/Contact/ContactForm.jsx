@@ -14,6 +14,8 @@ import { useCallback } from "react";
 import sendEmail from "../../utils/emailservice";
 import { useRouter } from "next/router";
 import sendLead from "../../utils/salesforce";
+import { useAppContext } from "../../context/AppContext";
+import Browsercompatibility from "../Homepage/BrowserCompatibility/Browsercompatibility";
 const ContactForm = ({ showDropDown, setShowDropDown }) => {
   const lan = useLanguage();
   const customSelect = useRef(null);
@@ -31,7 +33,7 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
   const [eerror, seteerror] = useState(false);
   const [perror, setperror] = useState(false);
   const [herror, setherror] = useState(false);
-
+  const { state, dispatch } = useAppContext();
   const router = useRouter();
   const social = router.query.social;
   const emailRegex =
@@ -104,6 +106,12 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
       setEmailSend(true);
       setLoading(false);
     } else {
+      if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        dispatch({
+          type: "showbmodal",
+          value: true,
+        });
+      }
       setEmailSend(false);
       setLoading(false);
     }
@@ -358,6 +366,7 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
           </div>
         </div>
       )}
+      <Browsercompatibility />
     </div>
   );
 };

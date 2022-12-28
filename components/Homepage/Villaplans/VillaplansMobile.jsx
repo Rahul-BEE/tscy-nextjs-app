@@ -143,6 +143,12 @@ function VillaplansMobile() {
       });
       setDataReceived(true);
     } else {
+      if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        dispatch({
+          type: "showbmodal",
+          value: true,
+        });
+      }
       setLoading(false);
     }
 

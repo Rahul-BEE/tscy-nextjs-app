@@ -17,11 +17,9 @@ import useLanguage from "../utils/useLanguage";
 import Browsercompatibility from "../components/Homepage/BrowserCompatibility/Browsercompatibility";
 import { useAppContext } from "../context/AppContext";
 export default function Home() {
-  const { state, dispatch } = useAppContext();
   const [language, setLanguage] = useState("en");
   const lan = useLanguage();
   const [showModal, setShowModal] = useState(false);
-  const [bshowModal, setBShowModal] = useState(false);
 
   const location = useRouter();
   const [isMobile, setisMobile] = useState(false);
@@ -37,40 +35,17 @@ export default function Home() {
   }, [location.pathname]);
 
   const modalTimer = function () {
-    console.log("hey i am called");
     setTimeout(() => {
       setShowModal(true);
       sessionStorage.setItem("modalshow", "true");
     }, 5000);
   };
 
-  const browserCompact = function () {
-    setTimeout(() => {
-      dispatch({
-        type: "showbmodal",
-        value: true,
-      });
-      sessionStorage.setItem("bmodalshow", "true");
-    }, 1000);
-  };
   useEffect(() => {
-    const browser = navigator.userAgent;
-    if (
-      browser.indexOf("Firefox") !== -1 &&
-      sessionStorage.getItem("bmodalshow") !== "true"
-    ) {
-      browserCompact();
+    if (sessionStorage.getItem("modalshow")) {
+      clearTimeout(modalTimer);
     } else {
-      dispatch({
-        type: "showbmodal",
-        value: false,
-      });
-      clearTimeout(browserCompact);
-      if (sessionStorage.getItem("modalshow")) {
-        clearTimeout(modalTimer);
-      } else {
-        modalTimer();
-      }
+      modalTimer();
     }
   }, []);
 

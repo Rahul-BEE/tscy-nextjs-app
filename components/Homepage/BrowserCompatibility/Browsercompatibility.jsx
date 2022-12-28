@@ -4,7 +4,7 @@ import Firefox from "../../../public/Svg/firefoxlogo.svg";
 import styles from "../../../styles/policies.module.scss";
 import useLanguage from "../../../utils/useLanguage";
 import { useAppContext } from "../../../context/AppContext";
-const Browsercompatibility = ({ modalTimer }) => {
+const Browsercompatibility = () => {
   const lan = useLanguage();
   const { state, dispatch } = useAppContext();
   return (
@@ -17,7 +17,6 @@ const Browsercompatibility = ({ modalTimer }) => {
           type: "showbmodal",
           value: false,
         });
-        modalTimer();
       }}>
       <Modal.Body className={styles.bmodalBody}>
         <div className={styles.bodyVideoContainer}>
@@ -51,7 +50,6 @@ const Browsercompatibility = ({ modalTimer }) => {
               type: "showbmodal",
               value: false,
             });
-            modalTimer();
           }}>
           {lan.firefoxpopup.startmyjourney}
         </p>

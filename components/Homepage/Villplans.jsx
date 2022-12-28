@@ -116,7 +116,6 @@ const Villplans = () => {
     };
     // let result = sendEmail({ data, temmplate: 0 });
     let result = await sendLead({ data });
-    console.log("result", result);
     if (result) {
       setLoading(false);
       dispatch({
@@ -125,6 +124,12 @@ const Villplans = () => {
       });
       setDataReceived(true);
     } else {
+      if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        dispatch({
+          type: "showbmodal",
+          value: true,
+        });
+      }
       setLoading(false);
     }
 

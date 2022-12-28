@@ -10,7 +10,6 @@ const sendLead = async ({ data }) => {
     );
     return true;
   } catch (error) {
-    alert(error);
     return false;
   }
 };
