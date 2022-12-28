@@ -19,12 +19,20 @@ body {
   color: $primary__color;
 
 
+
   &:lang(ar) {
     font-family: "Tajawal", sans-serif !important;
     direction: rtl !important;
     text-align: right !important;
   }
 
+
+
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
 }
 
 

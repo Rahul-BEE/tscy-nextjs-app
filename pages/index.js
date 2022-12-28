@@ -15,7 +15,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import useLanguage from "../utils/useLanguage";
 import Browsercompatibility from "../components/Homepage/BrowserCompatibility/Browsercompatibility";
+import { useAppContext } from "../context/AppContext";
 export default function Home() {
+  const { state, dispatch } = useAppContext();
   const [language, setLanguage] = useState("en");
   const lan = useLanguage();
   const [showModal, setShowModal] = useState(false);
@@ -44,7 +46,10 @@ export default function Home() {
 
   const browserCompact = function () {
     setTimeout(() => {
-      setBShowModal(true);
+      dispatch({
+        type: "showbmodal",
+        value: true,
+      });
       sessionStorage.setItem("bmodalshow", "true");
     }, 1000);
   };
@@ -56,7 +61,10 @@ export default function Home() {
     ) {
       browserCompact();
     } else {
-      setBShowModal(false);
+      dispatch({
+        type: "showbmodal",
+        value: false,
+      });
       clearTimeout(browserCompact);
       if (sessionStorage.getItem("modalshow")) {
         clearTimeout(modalTimer);
@@ -124,11 +132,7 @@ export default function Home() {
 
       <main className={styles.app__home}>
         <RegisterModal show={showModal} setshowmodal={setShowModal} />
-        <Browsercompatibility
-          show={bshowModal}
-          setshowmodal={setBShowModal}
-          modalTimer={modalTimer}
-        />
+        <Browsercompatibility modalTimer={modalTimer} />
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />

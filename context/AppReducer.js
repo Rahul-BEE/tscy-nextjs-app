@@ -5,6 +5,7 @@ export const initialState = {
     phone: "",
   },
   district: "",
+  showbModal: false,
 };
 export const AppReducer = (state, action) => {
   switch (action.type) {
@@ -27,6 +28,12 @@ export const AppReducer = (state, action) => {
       return {
         ...state,
         district: "",
+      };
+    }
+    case "showbmodal": {
+      return {
+        ...state,
+        showbModal: action.value,
       };
     }
   }

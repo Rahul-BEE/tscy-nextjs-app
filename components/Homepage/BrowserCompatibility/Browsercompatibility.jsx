@@ -2,14 +2,21 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Firefox from "../../../public/Svg/firefoxlogo.svg";
 import styles from "../../../styles/policies.module.scss";
-const Browsercompatibility = ({ show, setshowmodal, modalTimer }) => {
+import useLanguage from "../../../utils/useLanguage";
+import { useAppContext } from "../../../context/AppContext";
+const Browsercompatibility = ({ modalTimer }) => {
+  const lan = useLanguage();
+  const { state, dispatch } = useAppContext();
   return (
     <Modal
-      show={show}
+      show={state.showbModal}
       centered
       contentClassName={styles.bmodalContentClass}
       onHide={() => {
-        setshowmodal(false);
+        dispatch({
+          type: "showbmodal",
+          value: false,
+        });
         modalTimer();
       }}>
       <Modal.Body className={styles.bmodalBody}>
@@ -32,22 +39,21 @@ const Browsercompatibility = ({ show, setshowmodal, modalTimer }) => {
           </div>
         </div>
         <div className={styles.bodycontentContainer}>
-          <h5>We have detected that you are using Firefox.</h5>
-          <p>
-            This website uses third party services for enhanced user experience,
-            kindly follow the steps in the video as some features might not
-            perform as expected.
-          </p>
+          <h5>{lan.firefoxpopup.title}</h5>
+          <p>{lan.firefoxpopup.text}</p>
         </div>
       </Modal.Body>
       <Modal.Footer>
         <p
           className={styles.startmyjourney}
           onClick={() => {
-            setshowmodal(false);
+            dispatch({
+              type: "showbmodal",
+              value: false,
+            });
             modalTimer();
           }}>
-          Start my journey
+          {lan.firefoxpopup.startmyjourney}
         </p>
       </Modal.Footer>
     </Modal>
