@@ -14,7 +14,10 @@ function MyApp({ Component, pageProps }) {
     if (localStorage.getItem("acceptedCookies") === "true") {
       hotjar.initialize(3224277, 6);
       TagManager.initialize({ gtmId: "GTM-TSCHXJW" });
+      return;
     } else if (localStorage.getItem("acceptedCookies") === "false") {
+      window.hjSiteSettings = null;
+      window.google_tag_manager = null;
       return;
     } else {
       setShowBanner(true);
