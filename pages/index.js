@@ -35,20 +35,34 @@ export default function Home() {
   }, [location.pathname]);
 
   const modalTimer = function () {
+    console.log("hey i am called");
     setTimeout(() => {
       setShowModal(true);
       sessionStorage.setItem("modalshow", "true");
     }, 5000);
   };
-  useEffect(() => {
-    // const browser = navigator.userAgent;
 
-    // if (browser.indexOf("Firefox") !== -1) {
-    // }
-    if (sessionStorage.getItem("modalshow")) {
-      clearTimeout(modalTimer);
+  const browserCompact = function () {
+    setTimeout(() => {
+      setBShowModal(true);
+      sessionStorage.setItem("bmodalshow", "true");
+    }, 1000);
+  };
+  useEffect(() => {
+    const browser = navigator.userAgent;
+    if (
+      browser.indexOf("Firefox") !== -1 &&
+      sessionStorage.getItem("bmodalshow") !== "true"
+    ) {
+      browserCompact();
     } else {
-      modalTimer();
+      setBShowModal(false);
+      clearTimeout(browserCompact);
+      if (sessionStorage.getItem("modalshow")) {
+        clearTimeout(modalTimer);
+      } else {
+        modalTimer();
+      }
     }
   }, []);
 
@@ -110,7 +124,11 @@ export default function Home() {
 
       <main className={styles.app__home}>
         <RegisterModal show={showModal} setshowmodal={setShowModal} />
-        <Browsercompatibility show={bshowModal} setshowmodal={setBShowModal} />
+        <Browsercompatibility
+          show={bshowModal}
+          setshowmodal={setBShowModal}
+          modalTimer={modalTimer}
+        />
         <BannerSection />
         <SustainableFeatures />
         <Masterplan />

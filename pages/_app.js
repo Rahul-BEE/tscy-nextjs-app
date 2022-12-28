@@ -5,14 +5,17 @@ import { Header, Footer } from "../components";
 import { hotjar } from "react-hotjar";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
+import useLanguage from "../utils/useLanguage";
 
 function MyApp({ Component, pageProps }) {
   const [showBanner, setShowBanner] = useState(false);
+  const lan = useLanguage();
   useEffect(() => {
     if (localStorage.getItem("acceptedCookies") === "true") {
-      console.log("hi");
       hotjar.initialize(3224277, 6);
       TagManager.initialize({ gtmId: "GTM-TSCHXJW" });
+    } else if (localStorage.getItem("acceptedCookies") === "false") {
+      return;
     } else {
       setShowBanner(true);
     }
@@ -36,16 +39,13 @@ function MyApp({ Component, pageProps }) {
       <div className="consent-bannermain">
         {showBanner && (
           <div className="cookies-consent-banner">
-            <p>
-              This site uses cookies to enhance your browsing experience. By
-              continuing to use this site, you consent to the use of cookies.
-            </p>
+            <p>{lan.cookiebanner.text}</p>
             <div className="btncontainer">
               <button onClick={handleAccept} className="accept">
-                Accept
+                {lan.cookiebanner.accept}
               </button>
               <button onClick={handleDecline} className="decline">
-                Decline
+                {lan.cookiebanner.decline}
               </button>
             </div>
           </div>

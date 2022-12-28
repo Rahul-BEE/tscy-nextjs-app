@@ -13,3 +13,71 @@
         padding-inline: unset;
     }
 }
+
+.bmodalContentClass {
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .bmodalBody {
+        padding: 0;
+        margin: 0;
+
+
+        .bodyVideoContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .firefoxlogo {
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                svg {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+
+        .bodycontentContainer {
+            background: white;
+            padding-top: 50px;
+            padding-inline: 16px;
+            text-align: center;
+            color: #777777;
+
+            p,
+            h5 {
+
+                line-height: 1;
+                letter-spacing: 0.2px;
+            }
+
+            h5 {
+                font-size: 1.25rem;
+                font-weight: 500;
+                color: #4281EB;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                letter-spacing: unset;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    .startmyjourney {
+        font-size: 1rem;
+        cursor: pointer;
+        color: #4281EB;
+    }
+}

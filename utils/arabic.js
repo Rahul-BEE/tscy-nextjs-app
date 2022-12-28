@@ -2100,6 +2100,11 @@ const arabic = {
       },
     },
   },
+  cookiebanner: {
+    text: "This site uses cookies to enhance your browsing experience. By continuing to use this site, you consent to the use of cookies.",
+    accept: "Accept",
+    decline: "Decline",
+  },
 };
 
 export default arabic;
