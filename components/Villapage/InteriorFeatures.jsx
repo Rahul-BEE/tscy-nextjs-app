@@ -110,6 +110,7 @@ const InteriorFeatures = ({ data }) => {
     }
   };
   const carouselHandler2 = (id) => {
+    console.log(scrolledWidth, id);
     if (lan.language === 1) {
       if (
         id === "+" &&
@@ -117,15 +118,21 @@ const InteriorFeatures = ({ data }) => {
           carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
       ) {
         setScrolledWidth((prev) => prev + itemWidth);
+        setControlsColor([1, 1]);
         starterAnimation.start({
           x: -(scrolledWidth + itemWidth),
         });
       } else if (id === "-" && scrolledWidth > 5) {
+        setControlsColor([1, 1]);
         setScrolledWidth((prev) => prev - itemWidth);
         starterAnimation.start({
           x: -scrolledWidth + itemWidth,
         });
+      } else if (scrolledWidth === 0 && id === "-") {
+        setControlsColor([0.5, 1]);
+        return;
       } else {
+        setControlsColor([1, 0.5]);
         return;
       }
     } else {
@@ -134,6 +141,7 @@ const InteriorFeatures = ({ data }) => {
         starterAnimation.start({
           x: -(scrolledWidth + itemWidth),
         });
+        setControlsColor([1, 1]);
       } else if (
         id === "-" &&
         Math.abs(scrolledWidth) <
@@ -143,7 +151,13 @@ const InteriorFeatures = ({ data }) => {
         starterAnimation.start({
           x: -scrolledWidth + itemWidth,
         });
+        setControlsColor([1, 1]);
+      } else if (scrolledWidth === 0 && id === "+") {
+        setControlsColor([1, 0.5]);
+
+        return;
       } else {
+        setControlsColor([0.5, 1]);
         return;
       }
     }
@@ -218,9 +232,15 @@ const InteriorFeatures = ({ data }) => {
                   className={`${styles.interiorcontrols} ${styles.mobileControls}`}>
                   <IoChevronBackCircleOutline
                     onClick={() => carouselHandler2("-")}
+                    style={{
+                      opacity: controlsColor[0],
+                    }}
                   />
                   <IoChevronForwardCircleOutline
                     onClick={() => carouselHandler2("+")}
+                    style={{
+                      opacity: controlsColor[1],
+                    }}
                   />
                 </div>
               </motion.div>
