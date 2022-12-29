@@ -110,7 +110,7 @@ const InteriorFeatures = ({ data }) => {
     }
   };
   const carouselHandler2 = (id) => {
-    console.log(scrolledWidth, id);
+    console.log(parseFloat(scrolledWidth), id);
     if (lan.language === 1) {
       if (
         id === "+" &&
@@ -128,7 +128,7 @@ const InteriorFeatures = ({ data }) => {
         starterAnimation.start({
           x: -scrolledWidth + itemWidth,
         });
-      } else if (scrolledWidth === 0 && id === "-") {
+      } else if (parseInt(scrolledWidth) === 1 && id === "-") {
         setControlsColor([0.5, 1]);
         return;
       } else {
@@ -152,9 +152,8 @@ const InteriorFeatures = ({ data }) => {
           x: -scrolledWidth + itemWidth,
         });
         setControlsColor([1, 1]);
-      } else if (scrolledWidth === 0 && id === "+") {
+      } else if (scrolledWidth > 0 && id === "+") {
         setControlsColor([1, 0.5]);
-
         return;
       } else {
         setControlsColor([0.5, 1]);
