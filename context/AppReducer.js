@@ -3,6 +3,8 @@ export const initialState = {
     email: "",
     name: "",
     phone: "",
+    firstname: "",
+    lastname: "",
   },
   district: "",
   showbModal: false,

@@ -110,6 +110,7 @@ const Villplans = () => {
     setLoading(true);
     const data = {
       firstname: name,
+      lastname: "",
       email,
       phone,
       leadfrom: "Website",
@@ -120,7 +121,12 @@ const Villplans = () => {
       setLoading(false);
       dispatch({
         type: "updateuser",
-        value: data,
+        value: {
+          firstname,
+          lastname: "",
+          email,
+          phone,
+        },
       });
       setDataReceived(true);
     } else {

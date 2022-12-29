@@ -111,7 +111,6 @@ const Amenities = () => {
             </span>
           </div>
         </div>
-        {console.log("ss")}
         <div className={styles.amenitiescarousels} id="amenitiesdiv">
           {data && (
             <motion.div

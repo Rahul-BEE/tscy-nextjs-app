@@ -17,13 +17,14 @@ import sendLead from "../../utils/salesforce";
 import { useAppContext } from "../../context/AppContext";
 import Browsercompatibility from "../Homepage/BrowserCompatibility/Browsercompatibility";
 const ContactForm = ({ showDropDown, setShowDropDown }) => {
+  const { state, dispatch } = useAppContext();
   const lan = useLanguage();
   const customSelect = useRef(null);
   // const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstname, setFirstname] = useState(state.userdata.firstname);
+  const [lastname, setLastName] = useState(state.userdata.lastname);
+  const [email, setEmail] = useState(state.userdata.email);
   const [phone, setPhone] = useState("");
   const [emailSend, setEmailSend] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,6 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
   const [eerror, seteerror] = useState(false);
   const [perror, setperror] = useState(false);
   const [herror, setherror] = useState(false);
-  const { state, dispatch } = useAppContext();
   const router = useRouter();
   const social = router.query.social;
   const emailRegex =
@@ -131,7 +131,11 @@ const ContactForm = ({ showDropDown, setShowDropDown }) => {
     setEmail("");
     setLeadFrom(lan.contact.register.formdata.leadfrom.placeholder);
   };
-
+  useEffect(() => {
+    setFirstname(state.userdata.firstname);
+    setLastName(state.userdata.lastname);
+    setEmail(state.userdata.email);
+  }, [state]);
   const openSelectDrop = () => {
     setShowDropDown(!showDropDown);
   };

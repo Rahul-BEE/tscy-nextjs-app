@@ -91,7 +91,6 @@ const Masterplandetail = ({
         className={styles.masterplandetailinner}
         id="masterplanslideparent"
         key={track ? track : item}>
-        {console.log("direction", direction)}
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
             data-index={track !== null ? "true" : "false"}

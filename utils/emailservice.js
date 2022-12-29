@@ -14,11 +14,11 @@ const sendEmail = async ({ data, temmplate }) => {
     )
     .then(
       (result) => {
-        console.log("success");
+        // console.log("success");
         return true;
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
         return false;
       }
     );

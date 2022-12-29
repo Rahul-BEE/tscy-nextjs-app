@@ -74,7 +74,6 @@ const Newssection = (props) => {
         lastSlice: sliceNumber.lastSlice + 1,
       });
     } else {
-      console.log(sliceNumber);
       setSliceNumber({
         ...sliceNumber,
         firstSlice: 0,

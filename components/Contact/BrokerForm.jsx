@@ -10,12 +10,21 @@ import { BsArrowDownCircle } from "react-icons/bs";
 import Loader from "../Loader/Loader";
 import Link from "next/link";
 import TagManager from "react-gtm-module";
+import { useAppContext } from "../../context/AppContext";
+import { useEffect } from "react";
 const BrokerForm = () => {
+  const { state, dispatch } = useAppContext();
   const lan = useLanguage();
   const [select, setSelect] = useState(0);
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstname, setFirstname] = useState(
+    state.userdata.firstname ? state.userdata.firstname : ""
+  );
+  const [lastname, setLastName] = useState(
+    state.userdata.lastname ? state.userdata.lastname : ""
+  );
+  const [email, setEmail] = useState(
+    state.userdata.email ? state.userdata.email : ""
+  );
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [emailSend, setEmailSend] = useState(false);
@@ -136,6 +145,11 @@ const BrokerForm = () => {
     setEmail("");
     setLicense("");
   };
+  useEffect(() => {
+    setFirstname(state.userdata.firstname);
+    setLastName(state.userdata.lastname);
+    setEmail(state.userdata.email);
+  }, [state]);
   return (
     <div className={styles.contactform}>
       {data && (

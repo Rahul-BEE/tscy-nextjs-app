@@ -129,13 +129,6 @@ const InteriorFeatures = ({ data }) => {
         return;
       }
     } else {
-      console.log(id);
-      console.log(
-        scrolledWidth,
-        carouselRef.current?.scrollWidth,
-        carouselRef.current?.clientWidth,
-        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
-      );
       if (id === "+" && scrolledWidth < 0) {
         setScrolledWidth((prev) => prev + itemWidth);
         starterAnimation.start({

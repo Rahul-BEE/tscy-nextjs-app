@@ -37,10 +37,11 @@ export default function Home() {
   const modalTimer = function () {
     setTimeout(() => {
       setShowModal(true);
-      sessionStorage.setItem("modalshow", "true");
     }, 5000);
   };
-
+  const setModalShowinStorage = () => {
+    sessionStorage.setItem("modalshow", "true");
+  };
   useEffect(() => {
     if (sessionStorage.getItem("modalshow")) {
       clearTimeout(modalTimer);
@@ -106,7 +107,11 @@ export default function Home() {
       </HeadComponent>
 
       <main className={styles.app__home}>
-        <RegisterModal show={showModal} setshowmodal={setShowModal} />
+        <RegisterModal
+          show={showModal}
+          setshowmodal={setShowModal}
+          setSessionStorage={setModalShowinStorage}
+        />
         <Browsercompatibility modalTimer={modalTimer} />
         <BannerSection />
         <SustainableFeatures />

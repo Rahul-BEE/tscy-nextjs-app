@@ -6,11 +6,12 @@ import styles from "../../../styles/registermodal.module.scss";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { IoClose } from "react-icons/io5";
-import sendEmail from "../../../utils/emailservice";
+import { useAppContext } from "../../../context/AppContext";
 import { HiChevronDown } from "react-icons/hi";
 import TagManager from "react-gtm-module";
 import sendLead from "../../../utils/salesforce";
-const RegsiterModal = ({ show, setshowmodal }) => {
+const RegsiterModal = ({ show, setshowmodal, setSessionStorage }) => {
+  const { state, dispatch } = useAppContext();
   const lan = useLanguage();
   const [error, setError] = useState(false);
   const [ferror, setferror] = useState(false);
@@ -21,9 +22,9 @@ const RegsiterModal = ({ show, setshowmodal }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [dropDirection, setDropDirection] = useState("1");
   const customSelect = useRef(null);
-  const [firstname, setfirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstname, setfirstname] = useState(state.userdata.firstname);
+  const [lastname, setLastname] = useState(state.userdata.lastname);
+  const [email, setEmail] = useState(state.userdata.email);
   const [phone, setPhone] = useState("");
   const [leadfrom, setLeadFrom] = useState(
     lan.contact.register.formdata.leadfrom.placeholder
@@ -81,15 +82,31 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       phone,
       leadfrom,
     };
+    dispatch({
+      type: "updateuser",
+      value: {
+        firstname,
+        lastname,
+        email,
+        phone,
+      },
+    });
 
-    // sendEmail({
-    //   data,
-    //   temmplate: 0,
-    // });
-
-    sendLead({
+    let result = await sendLead({
       data,
     });
+
+    if (result) {
+      setshowmodal(false);
+      setSessionStorage();
+    } else {
+      if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        dispatch({
+          type: "showbmodal",
+          value: true,
+        });
+      }
+    }
     TagManager.dataLayer({
       dataLayer: {
         event: "register_interest_from_modal",
@@ -98,8 +115,6 @@ const RegsiterModal = ({ show, setshowmodal }) => {
         },
       },
     });
-
-    setshowmodal(false);
   };
 
   const selectOnFocus = () => {
@@ -157,12 +172,18 @@ const RegsiterModal = ({ show, setshowmodal }) => {
       window.removeEventListener("scroll", setDropDirectionNew);
     };
   }, []);
+  useEffect(() => {
+    setfirstname(state.userdata.firstname);
+    setLastname(state.userdata.lastname);
+    setEmail(state.userdata.email);
+  }, [state]);
   return (
     <Modal
       show={show}
       onHide={() => {
         setShowDropDown(false);
         setshowmodal(false);
+        setSessionStorage();
       }}
       size="lg"
       centered
@@ -179,7 +200,10 @@ const RegsiterModal = ({ show, setshowmodal }) => {
         <span
           className={styles.closebtn}
           id="registermodalclosebtn"
-          onClick={() => setshowmodal(false)}>
+          onClick={() => {
+            setshowmodal(false);
+            setSessionStorage();
+          }}>
           <IoClose />
         </span>
       </Modal.Header>

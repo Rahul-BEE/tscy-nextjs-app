@@ -139,7 +139,12 @@ function VillaplansMobile() {
       setLoading(false);
       dispatch({
         type: "updateuser",
-        value: data,
+        value: {
+          firstname,
+          lastname: "",
+          email,
+          phone,
+        },
       });
       setDataReceived(true);
     } else {

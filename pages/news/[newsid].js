@@ -200,7 +200,6 @@ export async function getStaticProps(context) {
   const lan = locale === "ar" ? arabic : english;
   const seo = lan.seo.newsdetails[params.newsid];
   const data = lan.newssection.post.find((item) => item.slug === params.newsid);
-  console.log(context);
   return {
     props: {
       data: data,
