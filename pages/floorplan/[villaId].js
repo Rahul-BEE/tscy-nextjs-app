@@ -13,6 +13,7 @@ import LocationFYV from "../../components/Floorplan/Location";
 import Plans from "../../components/Villapage/Plans";
 import styles from "../../styles/villapage.module.scss";
 import { useState } from "react";
+import Browsercompatibility from "../../components/Homepage/BrowserCompatibility/Browsercompatibility";
 const Villa = (props) => {
   const [showModal, setShowModal] = useState(false);
   return (
@@ -42,7 +43,11 @@ const Villa = (props) => {
       </HeadComponent>
 
       <div className={styles.villapagemain}>
-        <RegisterModal show={showModal} setshowmodal={setShowModal} />
+        <RegisterModal
+          show={showModal}
+          setshowmodal={setShowModal}
+          setSessionStorage={() => {}}
+        />
         <Section1 data={props.data} setShowModal={setShowModal} />
         <Plans data={props.data} />
         <CardSection page={true} />
@@ -50,6 +55,7 @@ const Villa = (props) => {
         <PrimeLocation data={props.data} />
         <OtherVillas data={props.data} />
         <LocationFYV data={props.data} />
+        <Browsercompatibility />
       </div>
     </>
   );

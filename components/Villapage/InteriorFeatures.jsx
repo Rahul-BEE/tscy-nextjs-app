@@ -110,7 +110,6 @@ const InteriorFeatures = ({ data }) => {
     }
   };
   const carouselHandler2 = (id) => {
-    console.log(id);
     if (lan.language === 1) {
       if (
         id === "+" &&
@@ -141,9 +140,6 @@ const InteriorFeatures = ({ data }) => {
       }
     } else {
       if (id === "+" && scrolledWidth < 0) {
-        console.log(
-          Number(scrolledWidth.toFixed(2)) + Number(itemWidth.toFixed(2))
-        );
         setScrolledWidth(
           (prev) => Number(prev.toFixed(2)) + Number(itemWidth.toFixed(2))
         );
@@ -179,12 +175,6 @@ const InteriorFeatures = ({ data }) => {
 
   return (
     <div className={styles.interiorfeaturesmain}>
-      {console.log(
-        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth,
-        carouselRef.current?.scrollWidth,
-        carouselRef.current?.clientWidth,
-        scrolledWidth
-      )}
       <div className={styles.interiorHeader}>
         <div>
           {/* <p className={`${styles.subHeading} sectionsubHeading`}>
