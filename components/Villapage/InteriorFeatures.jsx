@@ -110,25 +110,29 @@ const InteriorFeatures = ({ data }) => {
     }
   };
   const carouselHandler2 = (id) => {
-    console.log(parseFloat(scrolledWidth), id);
+    console.log(id);
     if (lan.language === 1) {
       if (
         id === "+" &&
         scrolledWidth <
           carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
       ) {
-        setScrolledWidth((prev) => prev + itemWidth);
+        setScrolledWidth(
+          (prev) => Number(prev.toFixed(2)) + Number(itemWidth.toFixed(2))
+        );
         setControlsColor([1, 1]);
         starterAnimation.start({
           x: -(scrolledWidth + itemWidth),
         });
       } else if (id === "-" && scrolledWidth > 5) {
         setControlsColor([1, 1]);
-        setScrolledWidth((prev) => prev - itemWidth);
+        setScrolledWidth(
+          (prev) => Number(prev.toFixed(2)) - Number(itemWidth.toFixed(2))
+        );
         starterAnimation.start({
           x: -scrolledWidth + itemWidth,
         });
-      } else if (parseInt(scrolledWidth) === 1 && id === "-") {
+      } else if (parseInt(scrolledWidth) <= 2 && id === "-") {
         setControlsColor([0.5, 1]);
         return;
       } else {
@@ -137,26 +141,37 @@ const InteriorFeatures = ({ data }) => {
       }
     } else {
       if (id === "+" && scrolledWidth < 0) {
-        setScrolledWidth((prev) => prev + itemWidth);
+        console.log(
+          Number(scrolledWidth.toFixed(2)) + Number(itemWidth.toFixed(2))
+        );
+        setScrolledWidth(
+          (prev) => Number(prev.toFixed(2)) + Number(itemWidth.toFixed(2))
+        );
+        setControlsColor([1, 1]);
         starterAnimation.start({
           x: -(scrolledWidth + itemWidth),
         });
-        setControlsColor([1, 1]);
       } else if (
         id === "-" &&
         Math.abs(scrolledWidth) <
           carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth
       ) {
-        setScrolledWidth((prev) => prev - itemWidth);
+        setScrolledWidth(
+          (prev) => Number(prev.toFixed(2)) - Number(itemWidth.toFixed(2))
+        );
+        setControlsColor([1, 1]);
         starterAnimation.start({
           x: -scrolledWidth + itemWidth,
         });
-        setControlsColor([1, 1]);
-      } else if (scrolledWidth > 0 && id === "+") {
-        setControlsColor([1, 0.5]);
+      } else if (
+        Math.abs(scrolledWidth) >
+          carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth &&
+        id === "-"
+      ) {
+        setControlsColor([0.5, 1]);
         return;
       } else {
-        setControlsColor([0.5, 1]);
+        setControlsColor([1, 0.5]);
         return;
       }
     }
@@ -164,6 +179,12 @@ const InteriorFeatures = ({ data }) => {
 
   return (
     <div className={styles.interiorfeaturesmain}>
+      {console.log(
+        carouselRef.current?.scrollWidth - carouselRef.current?.clientWidth,
+        carouselRef.current?.scrollWidth,
+        carouselRef.current?.clientWidth,
+        scrolledWidth
+      )}
       <div className={styles.interiorHeader}>
         <div>
           {/* <p className={`${styles.subHeading} sectionsubHeading`}>
