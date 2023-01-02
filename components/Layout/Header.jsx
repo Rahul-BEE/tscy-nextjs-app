@@ -216,7 +216,11 @@ const Header = () => {
             data-color={
               domYOffset || location.pathname !== "/" ? "#777" : "#fff"
             }
-            onClick={() => setShow(true)}
+            onClick={() => {
+              setShow(true);
+              document.getElementsByTagName("html")[0].style.overflowY =
+                "hidden";
+            }}
           />
         </button>
       </div>
@@ -228,7 +232,10 @@ const Header = () => {
       {show && (
         <MobileMenu
           show={show}
-          onHide={() => setShow(false)}
+          onHide={() => {
+            setShow(false);
+            document.getElementsByTagName("html")[0].style.overflowY = "unset";
+          }}
           handleLang={handelLanguageChange}
           currentLang={language}
         />
